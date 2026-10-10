@@ -1,0 +1,201 @@
+{
+  "_id": "BrmFpxllRXDkdvBl",
+  "name": "Purple Dragon Knight",
+  "type": "subclass",
+  "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Возвещайте о величии аметистовых драконов</em></p><p>Рыцари пурпурного дракона — это образцы доблести и лидерства, которые сотрудничают с аметистовыми драконами. Такие рыцари стремятся защищать невинных и вдохновлять других приключенцев на служение справедливости и свободе. Хотя изначально Орден пурпурного дракона был основан в Кормире, новых рекрутов набирают из любых регионов, где процветает рыцарство, включая Серебряные пределы, Дамар и Чессенту.</p><p>Персонажи этого подкласса являются особенными в ордене. В отличие от большинства рыцарей пурпурного дракона, которые сотрудничают со взрослыми аметистовыми драконами, персонаж рыцарь пурпурного дракона формирует псионическую связь с детёнышем аметистового дракона. Эта связь необратимо меняет и дракона, и рыцаря, позволяя дракону набирать силу вместе со своим рыцарем-партнёром.</p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Посланник рыцарь (ранее Посланник короны) перемещён на 3 уровень и позволяет выучить язык и накладывать Понимание языков ритуалом. Спутник пурпурный дракон — новое умение. Всадник дракона позволяет исцелять спутника Вторым дыханием и использовать его как средство передвижения. Объединяющий всплеск позволяет выбрать до 3 существ и даёт им возможность отступить. Аметистовое вознесение позволяет ездить на драконе без ограничений и атаковать вместе с ним. Неустанный командир даёт вам и дракону сопротивления.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "purple-dragon-knight",
+    "classIdentifier": "fighter",
+    "advancement": [
+      {
+        "_id": "ToGVUwUO2mgWLiYr",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.o4PgobjwDzIQPZPP",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.d8PFhPYqYvT7vE8Y",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "patGSrsYBDnrFbFE",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.qd5ooRXICo6CDUIl",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "mDE0FdXuuMJI8igd",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.9XjCAgDb8FaonoVN",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "5HaBFMc7eCAXkbWh",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.inpZEDFdPiWqt4Ek",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 15,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "yF3P1yCqQ4ypETfJ",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5jBrRwvBtGOxCbeg",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "cvQKhY50igjHAGzb",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 1,
+              "pool": [
+                "languages:*"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Посланник рыцарь: язык",
+        "hint": ""
+      },
+      {
+        "_id": "ZDY31XPIFPEB57mK",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplComprehend",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "ritual",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Посланник рыцарь: Понимание языков (ритуал)",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "UUMcxDdAeS7eYCd6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:purple-dragon-knight",
+      "originalName": "Purple Dragon Knight"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!BrmFpxllRXDkdvBl"
+}

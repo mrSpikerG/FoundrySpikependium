@@ -1,0 +1,159 @@
+{
+  "_id": "Ao8KANSf8OISTRP7",
+  "name": "Тату: Ускользающий зверь",
+  "type": "feat",
+  "img": "icons/creatures/mammals/humanoid-cat-skulking-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы тратите очко духа, чтобы применить Шквал ударов или Поступь ветра, вы можете потратить дополнительно 1 очко духа, чтобы частью этого бонусного действия наложить заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplMirrorImag]{Отражения}.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "tattoo-displacer-beast",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Мастер тату",
+    "prerequisites": {
+      "level": 17,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "FQekSYEletJ3nFaA": {
+        "_id": "FQekSYEletJ3nFaA",
+        "type": "cast",
+        "name": "",
+        "img": "icons/creatures/mammals/humanoid-cat-skulking-teal.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Частью Шквала ударов или Поступи ветра",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:monks-focus",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "wis",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplMirrorImag"
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "eJo0IFkqAEMQj7qT",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "tattoo:displacer-beast"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Ao8KANSf8OISTRP7"
+}

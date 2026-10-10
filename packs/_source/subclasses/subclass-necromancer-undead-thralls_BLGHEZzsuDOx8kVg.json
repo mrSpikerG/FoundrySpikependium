@@ -1,0 +1,155 @@
+{
+  "_id": "BLGHEZzsuDOx8kVg",
+  "name": "Неживые рабы",
+  "type": "feat",
+  "img": "icons/magic/death/undead-zombie-grave-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>У вас всегда подготовлено заклинание <em>Призыв духа нежити</em>, и вы можете один раз наложить его без траты ячейки заклинания. Каждый раз, накладывая это заклинание, вы можете изменить его так, чтобы его уровень был выше на 1.</p><p>Кроме того, когда вы накладываете заклинание школы некромантии ячейкой заклинания и оно создаёт или призывает нежить, эта нежить получает следующие эффекты:</p><p><strong>Стойкость нежити.</strong> Максимальное и текущее количество её хитов увеличивается на число, равное уровню потраченной ячейки заклинания + ваш модификатор Интеллекта, на время действия заклинания.</p><p><strong>Иссушающий удар.</strong> Каждый раз, когда нежить попадает по существу атакой, она наносит дополнительный урон некротической энергией, равный вашему модификатору Интеллекта (минимум 1).</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "undead-thralls",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Некромант",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "GvWHMTuK37ttLCy9": {
+        "_id": "GvWHMTuK37ttLCy9",
+        "type": "utility",
+        "name": "Призыв духа нежити (бесплатно)",
+        "img": "icons/magic/death/undead-zombie-grave-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "xmSLYnlr79W381Ju",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:necromancer:undead-thralls"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!BLGHEZzsuDOx8kVg"
+}

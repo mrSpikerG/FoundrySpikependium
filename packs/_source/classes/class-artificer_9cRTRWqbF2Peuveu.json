@@ -1,0 +1,769 @@
+{
+  "_id": "9cRTRWqbF2Peuveu",
+  "name": "Artificer",
+  "type": "class",
+  "img": "icons/tools/hand/hammer-and-nail.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Магический ремесленник и творец чудес.</em> Мастера созидания, изобретатели используют смекалку и магию, чтобы раскрывать невероятные возможности предметов. Они воспринимают магию как сложную систему, которую можно расшифровать и использовать в своих заклинаниях и изобретениях.</p><table><caption>Особенности изобретателя</caption><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Основная характеристика</strong></td><td>Интеллект</td></tr><tr><td><strong>Кость хитов</strong></td><td>к8 за каждый уровень изобретателя</td></tr><tr><td><strong>Хиты</strong></td><td>8 + мод. Телосложения на 1 уровне; 5 + мод. Телосложения за каждый уровень выше 1</td></tr><tr><td><strong>Владение спасбросками</strong></td><td>Телосложение и Интеллект</td></tr><tr><td><strong>Владение навыками</strong></td><td><em>Выберите 2:</em> Аркана, История, Проницательность, Медицина, Природа, Внимательность или Ловкость рук</td></tr><tr><td><strong>Владение оружием</strong></td><td>Простое оружие</td></tr><tr><td><strong>Владение инструментами</strong></td><td>Воровские инструменты, инструменты ремонтника и один тип инструментов ремесленника на ваш выбор</td></tr><tr><td><strong>Владение доспехами</strong></td><td>Лёгкие и средние доспехи и щиты</td></tr><tr><td><strong>Стартовое снаряжение</strong></td><td><em>Выберите А или Б:</em> (А) проклёпанный кожаный доспех, кинжал, воровские инструменты, набор исследователя подземелий и 16 зм; (Б) 150 зм</td></tr></tbody></table><h3>Становление изобретателем…</h3><p><strong>Как персонаж 1 уровня</strong></p><ul><li><p>Получите особенности из таблицы «Особенности изобретателя».</p></li><li><p>Получите умения изобретателя 1 уровня, которые перечислены в таблице «Умения изобретателя».</p></li></ul><p><strong>Как мультикласс</strong></p><ul><li><p>Получите следующие особенности изобретателя: кость хитов, владение инструментами ремонтника, владение одним навыком по вашему выбору из списка навыков изобретателя и владение лёгкими и средними доспехами и щитами.</p></li><li><p>Получите умения изобретателя 1 уровня. См. правила мультиклассирования в Книге игрока, чтобы определить доступные ячейки заклинаний, добавляя половину уровней изобретателя (округляя вверх).</p></li></ul><table><caption>Умения изобретателя</caption><thead><tr><th>Ур.</th><th>БМ</th><th>Умения класса</th><th>Чертежи</th><th>Маг. предметы</th><th>Заговоры</th><th>Подг. закл.</th><th>Ячейки 1–5</th></tr></thead><tbody><tr><td>1</td><td>+2</td><td>Магический мастеровой, Использование заклинаний</td><td>—</td><td>—</td><td>2</td><td>2</td><td>2 — — — —</td></tr><tr><td>2</td><td>+2</td><td>Копия магического предмета</td><td>4</td><td>2</td><td>2</td><td>3</td><td>2 — — — —</td></tr><tr><td>3</td><td>+2</td><td>Подкласс изобретателя</td><td>4</td><td>2</td><td>2</td><td>4</td><td>3 — — — —</td></tr><tr><td>4</td><td>+2</td><td>Улучшение характеристик</td><td>4</td><td>2</td><td>2</td><td>5</td><td>3 — — — —</td></tr><tr><td>5</td><td>+3</td><td>Умение подкласса</td><td>4</td><td>2</td><td>2</td><td>6</td><td>4 2 — — —</td></tr><tr><td>6</td><td>+3</td><td>Ремонтник магических предметов</td><td>5</td><td>3</td><td>2</td><td>6</td><td>4 2 — — —</td></tr><tr><td>7</td><td>+3</td><td>Проблеск гениальности</td><td>5</td><td>3</td><td>2</td><td>7</td><td>4 3 — — —</td></tr><tr><td>8</td><td>+3</td><td>Улучшение характеристик</td><td>5</td><td>3</td><td>2</td><td>7</td><td>4 3 — — —</td></tr><tr><td>9</td><td>+4</td><td>Умение подкласса</td><td>5</td><td>3</td><td>2</td><td>9</td><td>4 3 2 — —</td></tr><tr><td>10</td><td>+4</td><td>Адепт магических предметов</td><td>6</td><td>4</td><td>3</td><td>9</td><td>4 3 2 — —</td></tr><tr><td>11</td><td>+4</td><td>Хранящий заклинания предмет</td><td>6</td><td>4</td><td>3</td><td>10</td><td>4 3 3 — —</td></tr><tr><td>12</td><td>+4</td><td>Улучшение характеристик</td><td>6</td><td>4</td><td>3</td><td>10</td><td>4 3 3 — —</td></tr><tr><td>13</td><td>+5</td><td>—</td><td>6</td><td>4</td><td>3</td><td>11</td><td>4 3 3 1 —</td></tr><tr><td>14</td><td>+5</td><td>Знаток магических предметов</td><td>7</td><td>5</td><td>4</td><td>11</td><td>4 3 3 1 —</td></tr><tr><td>15</td><td>+5</td><td>Умение подкласса</td><td>7</td><td>5</td><td>4</td><td>12</td><td>4 3 3 2 —</td></tr><tr><td>16</td><td>+5</td><td>Улучшение характеристик</td><td>7</td><td>5</td><td>4</td><td>12</td><td>4 3 3 2 —</td></tr><tr><td>17</td><td>+6</td><td>—</td><td>7</td><td>5</td><td>4</td><td>14</td><td>4 3 3 3 1</td></tr><tr><td>18</td><td>+6</td><td>Мастер магических предметов</td><td>8</td><td>6</td><td>4</td><td>14</td><td>4 3 3 3 1</td></tr><tr><td>19</td><td>+6</td><td>Эпическая черта</td><td>8</td><td>6</td><td>4</td><td>15</td><td>4 3 3 3 2</td></tr><tr><td>20</td><td>+6</td><td>Душа изобретения</td><td>8</td><td>6</td><td>4</td><td>15</td><td>4 3 3 3 2</td></tr></tbody></table><aside class=\"notable\"><p><strong>Примечание дизайнера: обновление изобретателя.</strong> Магический мастеровой (1 уровень) даёт заговор Починка, а предметы, созданные этим умением, существуют до окончания продолжительного отдыха. Таблицы чертежей магических предметов пересмотрены; созданную волшебную палочку или оружие можно использовать как заклинательную фокусировку. Ремонтник магических предметов (6 уровень) позволяет перезаряжать предметы ячейками заклинаний и превращать один магический предмет в другой. Душа изобретения (20 уровень) позволяет уничтожать любое количество предметов ради восстановления хитов и делает Проблеск гениальности (7 уровень) надёжнее.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "1",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "artificer",
+    "levels": 1,
+    "hd": {
+      "denomination": "d8",
+      "spent": 0,
+      "additional": ""
+    },
+    "advancement": [
+      {
+        "_id": "xAEO2Erae2g1cuU4",
+        "type": "HitPoints",
+        "configuration": {},
+        "value": {},
+        "title": ""
+      },
+      {
+        "_id": "MRvab27aSGmwzJnT",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.60QDLcVmnuV3NYV5",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.9YWvdoMfI9AReCHS",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 1,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "b7BfA8uTufunFRsc",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.4ZyTEMjICYmnvUJ6",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "vt4RWWRKnH4XMIB6",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ihNhC8rfksdNq33d",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "zVfgVk2HvPBzcFhv",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.kkgXvrPgaBY0dMga",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "De9BAjOlFRmTP8Tu",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.oZoeGQGtUrMdPyRY",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "fKdAd53vZtK9cKF5",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.WFkPJ3QxtpYs9reN",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 11,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "2isr9dKxTzJUNueP",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.pj75LMOLwdrfp9QV",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "UKSey7wdkTZBPpuC",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.FFCZ5XsJEnGEdEzC",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "VV9CCBLVF057GFqr",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.vriPh1ur9Mc5hZtI",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 20,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "GCfMX0sPx5L0NUws",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 4,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "Mb1wjG7hCuw4e7QD",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 8,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "uTTPGsKswGNQDNXp",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 12,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "XNi2aX7ACspRz1PP",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 16,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "OelFEdptrQzVHEq2",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 19,
+        "title": "Эпическая черта",
+        "hint": "Вы получаете эпическую черту или другую черту по вашему выбору, требованиям которой вы соответствуете. Рекомендуется черта Дар устойчивости к энергиям."
+      },
+      {
+        "_id": "8z72nLbsCmGeCa9a",
+        "type": "Subclass",
+        "configuration": {},
+        "value": {
+          "document": null,
+          "uuid": null
+        },
+        "level": 3,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "9ejCQaqPaSMMKdiC",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "saves:con",
+            "saves:int"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Владение спасбросками",
+        "hint": "",
+        "classRestriction": "primary"
+      },
+      {
+        "_id": "2uE3Jw1XqaVXIeFM",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 2,
+              "pool": [
+                "skills:arc",
+                "skills:his",
+                "skills:ins",
+                "skills:med",
+                "skills:nat",
+                "skills:prc",
+                "skills:slt"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Владение навыками",
+        "hint": "",
+        "classRestriction": "primary"
+      },
+      {
+        "_id": "gKV638zgTobSSMjx",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 1,
+              "pool": [
+                "skills:arc",
+                "skills:his",
+                "skills:ins",
+                "skills:med",
+                "skills:nat",
+                "skills:prc",
+                "skills:slt"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Владение навыком (мультикласс)",
+        "hint": "",
+        "classRestriction": "secondary"
+      },
+      {
+        "_id": "tzscycUvtMMWkFYS",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "weapon:sim"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Владение оружием",
+        "hint": "",
+        "classRestriction": "primary"
+      },
+      {
+        "_id": "phVCVIKTFYkGxfzs",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "armor:lgt",
+            "armor:med",
+            "armor:shl"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Владение доспехами",
+        "hint": ""
+      },
+      {
+        "_id": "ZyAmXbhIAFtwolF2",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "tool:art:tinker"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Инструменты ремонтника",
+        "hint": ""
+      },
+      {
+        "_id": "zv6FZ7Vitgd5dT3p",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "tool:thief"
+          ],
+          "choices": [
+            {
+              "count": 1,
+              "pool": [
+                "tool:art:*"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Владение инструментами",
+        "hint": "",
+        "classRestriction": "primary"
+      },
+      {
+        "_id": "7HzT3lROdiIJC58n",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "max-prepared",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "1": {
+              "value": 2
+            },
+            "2": {
+              "value": 3
+            },
+            "3": {
+              "value": 4
+            },
+            "4": {
+              "value": 5
+            },
+            "5": {
+              "value": 6
+            },
+            "7": {
+              "value": 7
+            },
+            "9": {
+              "value": 9
+            },
+            "11": {
+              "value": 10
+            },
+            "13": {
+              "value": 11
+            },
+            "15": {
+              "value": 12
+            },
+            "17": {
+              "value": 14
+            },
+            "19": {
+              "value": 15
+            }
+          }
+        },
+        "value": {},
+        "title": "Подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "xQD0IeLAs6reYMv7",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "cantrips-known",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "1": {
+              "value": 2
+            },
+            "10": {
+              "value": 3
+            },
+            "14": {
+              "value": 4
+            }
+          }
+        },
+        "value": {},
+        "title": "Известные заговоры",
+        "hint": ""
+      },
+      {
+        "_id": "yMMyIkzX5IcN8lWb",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "plans",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "2": {
+              "value": 4
+            },
+            "6": {
+              "value": 5
+            },
+            "10": {
+              "value": 6
+            },
+            "14": {
+              "value": 7
+            },
+            "18": {
+              "value": 8
+            }
+          }
+        },
+        "value": {},
+        "title": "Известные чертежи",
+        "hint": ""
+      },
+      {
+        "_id": "q47BDdvJZRMqroLn",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "magic-items",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "2": {
+              "value": 2
+            },
+            "6": {
+              "value": 3
+            },
+            "10": {
+              "value": 4
+            },
+            "14": {
+              "value": 5
+            },
+            "18": {
+              "value": 6
+            }
+          }
+        },
+        "value": {},
+        "title": "Создаваемые магические предметы",
+        "hint": ""
+      },
+      {
+        "_id": "62lIHpFEbAoGu00J",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMending000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 1,
+        "title": "Магический мастеровой: Починка",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "artificer",
+      "ability": "int",
+      "preparation": {
+        "formula": "@scale.artificer.max-prepared"
+      }
+    },
+    "startingEquipment": [
+      {
+        "_id": "faefyaRWfhkMivUw",
+        "type": "OR",
+        "group": "",
+        "sort": 100000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "iGt4Z2ZMf0ODIDgr",
+        "type": "AND",
+        "group": "faefyaRWfhkMivUw",
+        "sort": 200000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "d0v0WDruIHauHvV6",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbarmStuddedLea",
+        "count": null,
+        "group": "iGt4Z2ZMf0ODIDgr",
+        "sort": 300000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "hqWyHCImLjgMloxl",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepDagger0000",
+        "count": null,
+        "group": "iGt4Z2ZMf0ODIDgr",
+        "sort": 301000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "PZ7i85DqkHOm384V",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbtulThievesToo",
+        "count": null,
+        "group": "iGt4Z2ZMf0ODIDgr",
+        "sort": 302000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "J06NkFZCK4hxbJ4u",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagDungeoneers",
+        "count": null,
+        "group": "iGt4Z2ZMf0ODIDgr",
+        "sort": 303000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "ICPGYdXRnCIf7EQ0",
+        "type": "currency",
+        "key": "gp",
+        "count": 16,
+        "group": "iGt4Z2ZMf0ODIDgr",
+        "sort": 390000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "OKLKqnFO00T9pJxi",
+        "type": "currency",
+        "key": "gp",
+        "count": 150,
+        "group": "faefyaRWfhkMivUw",
+        "sort": 400000,
+        "requiresProficiency": false
+      }
+    ],
+    "wealth": "150",
+    "primaryAbility": {
+      "value": [
+        "int"
+      ],
+      "all": true
+    },
+    "properties": []
+  },
+  "effects": [],
+  "folder": "TY2tUcD63gHrsjR2",
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "class:artificer",
+      "originalName": "Artificer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9cRTRWqbF2Peuveu"
+}

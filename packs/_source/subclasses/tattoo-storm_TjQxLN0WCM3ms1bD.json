@@ -1,0 +1,205 @@
+{
+  "_id": "TjQxLN0WCM3ms1bD",
+  "name": "Тату: Шторм",
+  "type": "feat",
+  "img": "icons/magic/lightning/bolt-cloud-sky-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете сопротивление одному из следующих типов урона на ваш выбор: холодный, электрический или звуковой. Каждый раз, когда вы заканчиваете короткий или продолжительный отдых или применяете своё умение Необычный метаболизм, вы можете изменить этот выбор.</p><p><em>Включите эффект выбранного типа урона.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "tattoo-storm",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Мастер тату",
+    "prerequisites": {
+      "level": 11,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "hskuerjnY7yTXTX0",
+      "name": "Сопротивление: холод",
+      "img": "icons/magic/lightning/bolt-cloud-sky-green.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "cold",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "YOticbd0q7UBzjgs"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!TjQxLN0WCM3ms1bD.hskuerjnY7yTXTX0"
+    },
+    {
+      "_id": "47uF6UBWXjZeNbId",
+      "name": "Сопротивление: электричество",
+      "img": "icons/magic/lightning/bolt-cloud-sky-green.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "lightning",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "sJXQwUcxQBcAFfTI"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!TjQxLN0WCM3ms1bD.47uF6UBWXjZeNbId"
+    },
+    {
+      "_id": "SG7U2jLDJLhsFieA",
+      "name": "Сопротивление: звук",
+      "img": "icons/magic/lightning/bolt-cloud-sky-green.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "thunder",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "r3QpJfPvtLdoo5tj"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!TjQxLN0WCM3ms1bD.SG7U2jLDJLhsFieA"
+    }
+  ],
+  "folder": "SEASZhJVYc5H2uB6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "tattoo:storm"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!TjQxLN0WCM3ms1bD"
+}

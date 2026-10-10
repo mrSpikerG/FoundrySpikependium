@@ -1,0 +1,150 @@
+{
+  "_id": "kozHDPDi1BA4XtgF",
+  "name": "Усиленное давление",
+  "type": "feat",
+  "img": "icons/magic/earth/strike-body-stone-crumble.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы накладываете заклинание @UUID[Compendium.spikependium.spells.Item.ZF0UYBp51cQYUyQt]{Телекинетическое давление}, вы можете потратить 1 псионическую кость, чтобы изменить заклинание: независимо от того, провалит или успешно выполнит спасбросок существо, его скорость сокращается наполовину до начала вашего следующего хода.</p><p>Кроме того, вы можете бросить потраченную псионическую кость и добавить выпавшее число к одному броску урона этого заклинания.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PU",
+      "page": "10",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "empowered-crush",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Кинетик",
+    "prerequisites": {
+      "level": 10,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "YOOIACAhCYaaHAdE": {
+        "_id": "YOOIACAhCYaaHAdE",
+        "type": "utility",
+        "name": "",
+        "img": "icons/magic/earth/strike-body-stone-crumble.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вы накладываете Телекинетическое давление",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:psionic-power",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "@scale.psion.die",
+          "name": "Дополнительный урон",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "4IFapScCZi5clRvT",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:psykinetic:empowered-crush"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!kozHDPDi1BA4XtgF"
+}

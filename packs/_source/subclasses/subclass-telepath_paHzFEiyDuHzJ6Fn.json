@@ -1,0 +1,267 @@
+{
+  "_id": "paHzFEiyDuHzJ6Fn",
+  "name": "Telepath",
+  "type": "subclass",
+  "img": "icons/magic/perception/eye-tendrils-web-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Проявляйте тактику в ландшафте разума</em></p><p>Телепаты — мастера ментальной магии. Они используют свои псионические силы во всех вопросах разума — будь то укрепление ментальной защиты союзников или скрытое проникновение в мысли других. Телепат может быть как оплотом псионической помощи, так и хитрым манипулятором.</p><p><em>Редакция из UA «Обновление псионика»; заменяет версию из UA «Псионик».</em></p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Внедрение в разум расходует только одну псионическую кость. Заклинания телепата обновлены. Отвлечение телепатией — новое умение. Оплот разума (ранее Усиленный режим защиты) больше не использует режимы. Мощь мыслей также увеличивает дальность телепатии. Путаница разумов не требует ячейки и позволяет выбирать поведение цели.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PU",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "telepath",
+    "classIdentifier": "psion",
+    "advancement": [
+      {
+        "_id": "NA33EVEXJHtIIcYW",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.EmVH2w8D3GIQp4Qi",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.kH8kWr9CZMciCXU9",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5BnqEIQBsjmdSx9Z",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "WeKUZE12LsCb6EMh",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.bFi2XDjnqTkj8Eso",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.jGOBXHxY6dB7IYoy",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "NIWNBtYhTtWLtCDu",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.4imEsxBnNHzqdvs7",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "2Zejbcj16dm05c70",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.NGh8Wy2WE9SYKIaS",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "KmdLz0nihBbLshFK",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplBane000000",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCommand000",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDetectThou",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMindSpike0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "mfQiHwsQELTIhafo",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCounterspe",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSlow000000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 5,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "07kkoXsN4VuQktlh",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCompulsion",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplConfusion0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 7,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "FchRVwHT3NAZAcBF",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplModifyMemo",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "e44DyyQ2iN9ADR5H",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:telepath",
+      "originalName": "Telepath"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!paHzFEiyDuHzJ6Fn"
+}

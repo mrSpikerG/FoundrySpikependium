@@ -1,0 +1,202 @@
+{
+  "_id": "PdOoSKjg5HCOAWjh",
+  "name": "Стихийное убежище",
+  "type": "feat",
+  "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваш Стихийный узел защищает вас от вреда. Вы получаете следующие эффекты.</p><p><strong>Стихийная защита.</strong> Пока вы находитесь в пределах своего узла, вы получаете бонус к КД, равный вашему модификатору Харизмы (минимум 1).</p><p><strong>Стихийная телепортация.</strong> Бонусным действием вы можете телепортироваться в свой узел или в ближайшее свободное пространство в пределах 5 футов от него. Вы можете применять этот эффект число раз, равное вашему модификатору Харизмы (минимум один раз), и восстанавливаете все потраченные применения, когда завершаете продолжительный отдых.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO2",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "elemental-sanctuary",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Покровитель первородный",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "max(1, @abilities.cha.mod)",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "XMTqU1LiMkcPlRd6": {
+        "_id": "XMTqU1LiMkcPlRd6",
+        "type": "teleport",
+        "name": "Телепортироваться в узел",
+        "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "teleport": {
+          "override": false,
+          "units": "ft",
+          "value": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "ROOzlQgpwv9kg9ES",
+      "name": "Стихийная защита (в узле)",
+      "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.bonus",
+            "value": "+ max(1, @abilities.cha.mod)",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "q1EzJIvFJdIMSHGv"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!PdOoSKjg5HCOAWjh.ROOzlQgpwv9kg9ES"
+    }
+  ],
+  "folder": "yBZU5L2AlXDJDZgv",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:primordial-patron:elemental-sanctuary"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!PdOoSKjg5HCOAWjh"
+}

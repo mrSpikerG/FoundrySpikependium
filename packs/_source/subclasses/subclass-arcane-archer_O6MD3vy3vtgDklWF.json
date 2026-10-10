@@ -1,0 +1,325 @@
+{
+  "_id": "O6MD3vy3vtgDklWF",
+  "name": "Arcane Archer",
+  "type": "subclass",
+  "img": "icons/skills/ranged/arrow-strike-glowing-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Зачаровывайте магией боеприпасы</em></p><p>Арканный лучник изучает уникальный эльфийский метод стрельбы из лука, который вплетает магию в атаки, создавая сверхъестественные эффекты. Первые арканные лучники сторожили свои общины, зорко высматривая опасности и используя пропитанные магией стрелы, чтобы побеждать монстров и захватчиков. Со временем представители других видов освоили мистические эльфийские приёмы сочетания магии с искусством стрельбы и расширили их использование на самые разные дальнобойные типы оружия, применяя эти таланты в жизни приключенца.</p><p><em>Редакция из UA «Арканное обновление»; заменяет версию из UA «Арканные подклассы».</em></p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Странствующий выстрел применяет ту же стрелу, но совершает новый бросок атаки. Магические боеприпасы — новое умение. Выстрел всегда наготове перенесён на 10 уровень и всегда восстанавливает одно применение. Арканный взрыв — новое умение, дополняющее умение Упорный. Мастерские выстрелы позволяют перемещаться и атаковать.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "arcane-archer",
+    "classIdentifier": "fighter",
+    "advancement": [
+      {
+        "_id": "cBWc3dAmpeMacXJA",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.0qqujIxRgbzJQhdz",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.7LdUjVR11ZOvHZxt",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "UoFhhaJhfckbLk8P",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.shG2fbVKKakLnHOj",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.gFQpEZ57DpYxlIBx",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "NwRjRVwQ8YUmOFTh",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.QCpPG3xnxVavwoxn",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "t2TULCmC63MhgOls",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.C1iygIjF0LzM0kUa",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 15,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "lug3ELPDPixTNH0R",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.SGLjFmFbVmUN07Vr",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "QyJr42BOUWBtSR3H",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "die",
+          "type": "dice",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "3": {
+              "number": 1,
+              "faces": 6,
+              "modifiers": []
+            },
+            "10": {
+              "number": 1,
+              "faces": 8,
+              "modifiers": []
+            },
+            "15": {
+              "number": 1,
+              "faces": 10,
+              "modifiers": []
+            },
+            "18": {
+              "number": 1,
+              "faces": 12,
+              "modifiers": []
+            }
+          }
+        },
+        "value": {},
+        "title": "Кость Арканного выстрела",
+        "hint": ""
+      },
+      {
+        "_id": "truGKyjU0Kzzrw5g",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": true,
+          "grants": [
+            "skills:arc",
+            "skills:nat"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Знания арканного лучника: навыки",
+        "hint": ""
+      },
+      {
+        "_id": "oCujpdXvHCF8ShvK",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 1
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDruidcraft"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPrestidigi"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 3,
+        "title": "Знания арканного лучника: заговор",
+        "hint": ""
+      },
+      {
+        "_id": "u3jBmpQTKMvWgfdd",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": true
+            },
+            "7": {
+              "count": 1,
+              "replacement": true
+            },
+            "10": {
+              "count": 1,
+              "replacement": true
+            },
+            "15": {
+              "count": 1,
+              "replacement": true
+            },
+            "18": {
+              "count": 1,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.ov9k03uxvQZ0W0Gf"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.AIOp5RANfQIf0PeH"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.wEaWLNHqH7ntOn2n"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.4SOb7HxmDaerNtUf"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.AA6SlWtbHRPPGK3n"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.aAQSMT4nNGYAgGm3"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.P032lxCJpduKgnsi"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.J6M86VR3ZovQ8SBe"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Варианты Арканного выстрела",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "UUMcxDdAeS7eYCd6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:arcane-archer",
+      "originalName": "Arcane Archer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!O6MD3vy3vtgDklWF"
+}

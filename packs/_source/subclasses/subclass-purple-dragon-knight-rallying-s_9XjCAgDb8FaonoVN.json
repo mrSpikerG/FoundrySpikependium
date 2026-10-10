@@ -1,0 +1,143 @@
+{
+  "_id": "9XjCAgDb8FaonoVN",
+  "name": "Объединяющий всплеск",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-unity-alliance.webp",
+  "system": {
+    "description": {
+      "value": "<p>Во время применения Всплеска действий вы можете выбрать до трёх союзников в пределах 30-футовой эманации, исходящей от вас. Каждый из этих союзников может реакцией совершить один из следующих вариантов:</p><p><strong>Наступление.</strong> Союзник совершает одну атаку оружием или безоружным ударом. Если вашим союзником является пурпурный дракон, то он может совершить одну атаку Разрывание.</p><p><strong>Отступление.</strong> Союзник перемещается на расстояние до половины своей скорости, не вызывая провоцированные атаки.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "rallying-surge",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Рыцарь пурпурного дракона",
+    "prerequisites": {
+      "level": 10,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "K0oKFBxRWcTYYWaO": {
+        "_id": "K0oKFBxRWcTYYWaO",
+        "type": "utility",
+        "name": "",
+        "img": "icons/skills/social/diplomacy-unity-alliance.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вы применяете Всплеск действий",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "30",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "3",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "mc9AE1viJ6NWUAyZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:purple-dragon-knight:rallying-surge"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9XjCAgDb8FaonoVN"
+}

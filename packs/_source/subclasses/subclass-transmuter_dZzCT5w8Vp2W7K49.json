@@ -1,0 +1,284 @@
+{
+  "_id": "dZzCT5w8Vp2W7K49",
+  "name": "Transmuter",
+  "type": "subclass",
+  "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Трансформируйте энергию и материю</em></p><p>Вы изучаете заклинания, изменяющие энергию и материю. Для вас мир — не неизменный объект, а крайне пластичная субстанция. Ваша магия даёт вам инструменты, чтобы стать кузнецом реальности.</p><p>Одни преобразователи — изобретатели-шутники, другие же с мрачной серьёзностью стремятся к божественной силе творить и разрушать миры.</p><p><em>Редакция из UA «Арканное обновление»; заменяет версию из UA «Арканные подклассы».</em></p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Камень преобразования даёт владение спасбросками Телосложения и может служить заклинательной фокусировкой. Чудесное изменение даёт эффекты для заклинания Смена обличья. Могущественный камень даёт новые варианты. Перевёртыш возвращается и меняет Полиморф на себя. Гений преобразования позволяет сохранить камень, потратив ячейку.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "transmuter",
+    "classIdentifier": "wizard",
+    "advancement": [
+      {
+        "_id": "xnbi6B6ZFDPnoda2",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.OunPPSdESIdCcKn6",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5Ah45s3Ee1o4ECAz",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.e1PwZH3oLm05Kcr4",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.vIJnVoRfxgM5qXjI",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "wpYPQgbjYnXhJInR",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.CVBZBWALHT9cxPl9",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "2usBUacDPbE85JmL",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.ihVv2UNzFza0sU2s",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Kg4SrUAFVdc0YzOo",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "gTT23kAEkQueVY5l",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.WkLMKo5zF50fblCV",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "z1VkysNc8aZcU5gv",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": false
+            },
+            "5": {
+              "count": 1
+            },
+            "7": {
+              "count": 1
+            },
+            "9": {
+              "count": 1
+            },
+            "11": {
+              "count": 1
+            },
+            "13": {
+              "count": 1
+            },
+            "15": {
+              "count": 1
+            },
+            "17": {
+              "count": 1
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:wizard"
+            ],
+            "level": "availableNoCantrips",
+            "school": [
+              "trs"
+            ]
+          },
+          "spell": null,
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Мастер преобразования: заклинания школы преобразования",
+        "hint": "Заклинания добавляются в книгу заклинаний волшебника."
+      },
+      {
+        "_id": "zRoaUKAucCNVGkJk",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplEnhanceAbi",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Чудесное изменение: Улучшение характеристики",
+        "hint": ""
+      },
+      {
+        "_id": "Fp8z5ImkfPsVoYYI",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplAlterSelf0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Разделение преобразования: Смена обличья",
+        "hint": ""
+      },
+      {
+        "_id": "dw6A2FS6ec0WZD9M",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPolymorph0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 10,
+        "title": "Перевёртыш: Полиморф",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "VwNWCqWJHxKbsTtM",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:transmuter",
+      "originalName": "Transmuter"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!dZzCT5w8Vp2W7K49"
+}

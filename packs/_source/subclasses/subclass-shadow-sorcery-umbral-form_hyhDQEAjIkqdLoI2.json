@@ -1,0 +1,377 @@
+{
+  "_id": "hyhDQEAjIkqdLoI2",
+  "name": "Мрачная форма",
+  "type": "feat",
+  "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+  "system": {
+    "description": {
+      "value": "<p>Бонусным действием вы принимаете мрачную форму, получая следующие эффекты на 1 минуту, пока не получите состояние недееспособный или пока не прекратите эффект (не требует действия). После применения этого умения вы не можете применять его снова, пока не завершите продолжительный отдых, если только не потратите 6 очков чародейства (не требует действия) для восстановления возможности применить его.</p><p><strong>Бестелесное перемещение.</strong> Вы можете перемещаться сквозь занятые пространства, как если бы это была труднопроходимая местность. Если вы завершаете ход в таком пространстве, то получаете 1к10 урона силовым полем.</p><p><strong>Теневая устойчивость.</strong> Вы получаете сопротивление ко всем типам урона, кроме силового поля и излучения.</p><p><strong>Сила могилы.</strong> Если бы ваши хиты упали до 0 и вы не умерли мгновенно, то вы можете совершить спасбросок Харизмы (Сл. 5 + половина полученного урона). При успехе ваши хиты вместо этого становятся равны тройному значению вашего уровня чародея.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "umbral-form",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Теневая магия",
+    "prerequisites": {
+      "level": 18,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "7CEoA7g2905fsHs6": {
+        "_id": "7CEoA7g2905fsHs6",
+        "type": "utility",
+        "name": "",
+        "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "T5WOaz2zBZUYai06"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "ehJ9dljglbxH75k1": {
+        "_id": "ehJ9dljglbxH75k1",
+        "type": "utility",
+        "name": "Применить (6 очков чародейства)",
+        "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "6",
+              "target": "feat:font-of-magic",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "T5WOaz2zBZUYai06"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "T5WOaz2zBZUYai06",
+      "name": "Мрачная форма",
+      "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "acid",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "AzlOvCUhrWIxVQye"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "bludgeoning",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "fqHx4QkvjJA2cNXL"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "cold",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ErId0e2CzFYu3n6s"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "fire",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "xbpEaBdwnmpw4xOT"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "lightning",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "aVB19GEuW33ns8w2"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "necrotic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "PRqCUue8lNEIhIK6"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "piercing",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "b5gjr7FQYyZsdD6Y"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "poison",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ZWlTPQF7B1sd5ZtV"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "psychic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "H1mSwljjSVM0vF0p"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "slashing",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "WDDwagErUpgUVRSt"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "thunder",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Kgbg6ip2RWC0dYmE"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!hyhDQEAjIkqdLoI2.T5WOaz2zBZUYai06"
+    }
+  ],
+  "folder": "1iJmrIy4EA6WHKor",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:shadow-sorcery:umbral-form"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hyhDQEAjIkqdLoI2"
+}

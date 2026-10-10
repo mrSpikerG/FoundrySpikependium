@@ -1,0 +1,409 @@
+{
+  "_id": "GmSn6luTZQpPp4k5",
+  "name": "Vestige Patron",
+  "type": "subclass",
+  "img": "icons/magic/holy/saint-glass-portrait-halo.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Овладейте силой умирающего бога</em></p><p>Ваш договор черпает силу умирающего бога — существа, которому когда-то поклонялись бесчисленные последователи, но которое теперь забыто и покинуто. Этот умирающий бог, известный как реликт, мог быть добрым, злым или странным и непостижимым, но теперь он стремится вернуть себе былую мощь. Реликт нуждается в вашей помощи — и готов поделиться с вами оставшейся силой.</p><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-MS",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "vestige",
+    "classIdentifier": "warlock",
+    "advancement": [
+      {
+        "_id": "qHaRpl2xOLZrJ4rL",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.bDsXYd8Jw4rdOXaA",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.bzjWYxnobytYMR4m",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "jkp2ZReQfsCyZU6B",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.dcml51mNxSW12K2y",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "YodfKFhHzxAckbCs",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.RjsBZoYPuH9tAgBZ",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "3HCFFwRKIESAazmM",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.xE3fpJcMz4KGjV1N",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "LJYMOsC1AEZcQJJ3",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 4,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplAid0000000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplBless00000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCureWounds"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLesserRest"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplBurningHan"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFaerieFire"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplScorchingR"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSeeInvisib"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCharmPerso"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDisguiseSe"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplInvisibili"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPasswithou"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGuidingBol"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMagicWeapo"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplShieldofFa"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSpiritualW"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Заклинания реликта (уровень колдуна 3)",
+        "hint": "Выберите заклинания выбранного домена (жизнь, свет, обман или война)."
+      },
+      {
+        "_id": "JikCsVq2x5HB0bbD",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "5": {
+              "count": 2,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMassHealin"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplRevivify00"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDaylight00"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFireball00"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplHypnoticPa"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplNondetecti"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSpiritGuar"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Заклинания реликта (уровень колдуна 5)",
+        "hint": "Выберите заклинания выбранного домена (жизнь, свет, обман или война)."
+      },
+      {
+        "_id": "cj9XcFrpeB17DA7E",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "7": {
+              "count": 2,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplAuraofLife"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDeathWard0"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplArcaneEye0"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplWallofFire"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplConfusion0"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDimensionD"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFireShield"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFreedomofM"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Заклинания реликта (уровень колдуна 7)",
+        "hint": "Выберите заклинания выбранного домена (жизнь, свет, обман или война)."
+      },
+      {
+        "_id": "qfxj6FH2ZVKgFGpF",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "9": {
+              "count": 2,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGreaterRes"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMassCureWo"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFlameStrik"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplScrying000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDominatePe"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplModifyMemo"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplHoldMonste"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Заклинания реликта (уровень колдуна 9)",
+        "hint": "Выберите заклинания выбранного домена (жизнь, свет, обман или война)."
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "n1QCliRvHCwNQff8",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:vestige-patron",
+      "originalName": "Vestige Patron"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!GmSn6luTZQpPp4k5"
+}

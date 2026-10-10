@@ -1,0 +1,210 @@
+{
+  "_id": "lCIR999zE8jWUUhB",
+  "name": "Ледяной исследователь",
+  "type": "feat",
+  "img": "icons/magic/water/strike-ice-blades.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Сопротивление морозу.</strong> Вы получаете сопротивление урону холодом.</p><p><strong>Полярные удары.</strong> Когда вы попадаете по существу оружием, вы можете нанести цели дополнительно 1к4 урона холодом. Этот дополнительный урон может быть нанесён только 1 раз за ход. Этот урон игнорирует сопротивление урону холодом. Когда вы достигаете 11 уровня следопыта, этот дополнительный урон увеличивается до 1к6.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "frigid-explorer",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Зимний странник",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "eSWbdkESDX7jBZt5": {
+        "_id": "eSWbdkESDX7jBZt5",
+        "type": "damage",
+        "name": "Полярные удары",
+        "img": "icons/magic/water/strike-ice-blades.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Попадание оружием, 1 раз за ход",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": true,
+                "formula": "@scale.winter-walker.polar-strikes"
+              },
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [
+                "cold"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "w87ZjM8LHO05e88h",
+      "name": "Сопротивление морозу",
+      "img": "icons/magic/water/heart-ice-freeze.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "cold",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "EsGPgbVGCfpaNqEL"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!lCIR999zE8jWUUhB.w87ZjM8LHO05e88h"
+    }
+  ],
+  "folder": "A0c07E4Bj0ac1pxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:winter-walker:frigid-explorer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!lCIR999zE8jWUUhB"
+}

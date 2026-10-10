@@ -1,0 +1,176 @@
+{
+  "_id": "P032lxCJpduKgnsi",
+  "name": "Ищущий выстрел",
+  "type": "feat",
+  "img": "icons/skills/ranged/arrow-strike-glowing-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы наделяете свой боеприпас способностью находить цель. Когда вы используете этот вариант, вы не совершаете бросок атаки. Вместо этого выберите одно существо, которое вы видели за последнюю минуту. Боеприпас устремляется к этому существу, при необходимости огибая углы и игнорируя укрытие на половину и на три четверти. Если цель находится в пределах максимальной дальности вашего оружия, то она должна совершить спасбросок Ловкости. В противном случае боеприпас исчезает, пролетев столько, сколько сможет. При провале цель получает урон, как если бы по ней попали, + дополнительный урон силовым полем, равный 2 броскам вашей кости Арканного выстрела, и вы узнаёте текущее местонахождение цели. При успехе цель получает только половину урона.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "arcane-shot-seeking",
+    "type": {
+      "value": "class",
+      "subtype": "arcaneShot"
+    },
+    "requirements": "Арканный лучник",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "vDCThPwqvPNekdWU": {
+        "_id": "vDCThPwqvPNekdWU",
+        "type": "save",
+        "name": "",
+        "img": "icons/skills/ranged/arrow-strike-glowing-teal.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вместо броска атаки",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:arcane-shot",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": true,
+                "formula": "2d@scale.arcane-archer.die.faces"
+              },
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "int",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "WFBGmk3FrZi2OT64",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "arcane-archer:shot:seeking"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!P032lxCJpduKgnsi"
+}

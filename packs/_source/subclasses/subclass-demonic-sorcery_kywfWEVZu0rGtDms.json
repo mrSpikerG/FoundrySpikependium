@@ -1,0 +1,274 @@
+{
+  "_id": "kywfWEVZu0rGtDms",
+  "name": "Demonic Sorcery",
+  "type": "subclass",
+  "img": "icons/creatures/unholy/demon-fire-horned-clawed.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Призывайте силы Бездны</em></p><p>Порочная магия демонов течёт через вас, делая вас проводником бесконечных слоёв Бездны и её ужасов.</p><p>Ваш дар может происходить от далёкого демонического происхождения, предначертанной встречи с демоном, который вас проклял, или соприкосновения с тёмным голодом Бездны.</p><p>Бездна — это план злобы и беспорядка, и этот хаос отзывается в вашей врождённой магии. Энергия Бездны извергается из вас, одновременно искажая ваше тело и окружающее пространство вместе с вашим чародейством.</p><table><caption>Проявления Бездны</caption><thead><tr><th>1к6</th><th>Проявление</th></tr></thead><tbody><tr><td>1</td><td>Бездны в виде разломов уродуют вашу плоть, открывая окна в огромное демоническое царство.</td></tr><tr><td>2</td><td>Насекомые извиваются у вас под кожей и выползают изо рта, носа и ушей.</td></tr><tr><td>3</td><td>Пласты обожжённой кожи слезают с вашего тела.</td></tr><tr><td>4</td><td>Ваша плоть пузырится и пенится, словно ядовитое болото.</td></tr><tr><td>5</td><td>Ваши пальцы и другие конечности меняют цвет, словно обмороженные.</td></tr><tr><td>6</td><td>У вас вырастает вторая голова (это не влияет на ваш статблок).</td></tr></tbody></table><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "demonic",
+    "classIdentifier": "sorcerer",
+    "advancement": [
+      {
+        "_id": "rnH5RwHcNH7xuD55",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.xOu3TOeLzD3JfORC",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.v9PLYXfskLvWGk9V",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.kxZa8HVOEAToLt2L",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "V3kuU9CWmpjbY2cZ",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.nyeucfLKUEUE2nkm",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "moHtfKKXKnsbnSKo",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.vSjwBEmZyxef9OYH",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "xwOaxz1BR532htxR",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDetectMagi",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplEntangle00",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMistyStep0",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSpiderClim",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "VMaWNlFgb4qPaAjN",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDispelMagi",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGaseousFor",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 5,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "mHT0NKH6fMJM5YFm",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplConfusion0",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplHallucinat",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 7,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "9GijZ0YLt8otgPCK",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplContactOth",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplHallow0000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "b2LEPVh4BofXg1jE",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "abyss-dice",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "3": {
+              "value": 1
+            },
+            "11": {
+              "value": 2
+            },
+            "16": {
+              "value": 3
+            }
+          }
+        },
+        "value": {},
+        "title": "Кости урона Ауры Бездны",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "dYpJHCOMdDo647Jz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:demonic-sorcery",
+      "originalName": "Demonic Sorcery"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!kywfWEVZu0rGtDms"
+}

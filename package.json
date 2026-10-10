@@ -1,0 +1,16 @@
+{
+  "name": "spikependium",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Сборка модуля Spikependium для Foundry VTT",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "validate": "node tools/validate.mjs",
+    "package": "node tools/build.mjs && node tools/validate.mjs && node tools/package.mjs"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.0",
+    "js-yaml": "^4.1.0"
+  }
+}

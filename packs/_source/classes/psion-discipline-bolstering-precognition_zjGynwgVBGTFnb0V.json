@@ -1,0 +1,150 @@
+{
+  "_id": "zjGynwgVBGTFnb0V",
+  "name": "Укрепляющее предвидение",
+  "type": "feat",
+  "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы накладываете заклинание псионика школы ограждения или прорицания, вы можете потратить одну псионическую кость. Бросьте кость и выберите существо, которое вы видите в пределах 60 футов (включая себя). До конца вашего следующего хода это существо получает бонус к следующему тесту к20, равный результату броска.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PU",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "discipline-bolstering-precognition",
+    "type": {
+      "value": "class",
+      "subtype": "psionicDiscipline"
+    },
+    "requirements": "Псионик",
+    "prerequisites": {
+      "level": 2,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "O3NIIqbs94EW93yz": {
+        "_id": "O3NIIqbs94EW93yz",
+        "type": "utility",
+        "name": "",
+        "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Заклинание ограждения или прорицания",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:psionic-power",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "@scale.psion.die",
+          "name": "Бонус к тесту к20",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "fk7PPMFWc9PyeGHH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "psion:discipline:bolstering-precognition"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!zjGynwgVBGTFnb0V"
+}

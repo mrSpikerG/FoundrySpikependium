@@ -1,0 +1,154 @@
+{
+  "_id": "qd5ooRXICo6CDUIl",
+  "name": "Всадник дракона",
+  "type": "feat",
+  "img": "icons/creatures/abilities/wings-birdlike-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы и ваш пурпурный дракон получаете следующие эффекты:</p><p><strong>Верховой дракон.</strong> Дракон вырастает до Среднего размера. Вы можете использовать дракона в качестве верхового животного, если вы Среднего размера или меньше, но если вы верхом на нём, то дракон падает в конце вашего хода, если он находится в воздухе и его удерживает только скорость полёта. На посадку или спешивание с дракона вам требуется всего 5 футов перемещения.</p><p><strong>Улучшенное дыхание гравитации.</strong> Дыхание гравитации дракона становится 30-футовым конусом. Если существо проваливает спасбросок против этого Дыхания гравитации, оно также получает 2к6 урона силовым полем.</p><p><strong>Общее Второе дыхание.</strong> Когда вы используете своё Второе дыхание, чтобы восстановить хиты, дракон также восстанавливает 1к6 + ваш уровень воина хитов и восстанавливает одно использование Дыхания гравитации.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "dragon-rider",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Рыцарь пурпурного дракона",
+    "prerequisites": {
+      "level": 7,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "gDoQgFidUTqvuekz": {
+        "_id": "gDoQgFidUTqvuekz",
+        "type": "heal",
+        "name": "Общее Второе дыхание",
+        "img": "icons/creatures/abilities/wings-birdlike-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вы используете Второе дыхание",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "number": 1,
+          "denomination": 6,
+          "bonus": "@classes.fighter.levels",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "mc9AE1viJ6NWUAyZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:purple-dragon-knight:dragon-rider"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!qd5ooRXICo6CDUIl"
+}

@@ -1,0 +1,293 @@
+{
+  "_id": "FFQWHvh0KzB8yEA4",
+  "name": "Реанимированный спутник",
+  "type": "feat",
+  "img": "icons/magic/death/undead-zombie-grave-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Используя инструменты ремонтника или другой тип ремесленных инструментов, которыми вы владеете, вы можете действием магия создать Реанимированного спутника (см. статблок), сочетающего силу некромантии и науки. Спутник появляется в незанятом пространстве в пределах 5 футов от вас. Вы определяете внешний вид спутника; ваш выбор не влияет на игровые характеристики спутника.</p><p>Спутник дружелюбен к вам и вашим союзникам и подчиняется вам. Он существует до окончания продолжительного отдыха или до тех пор, пока вы не совершите действие магия, чтобы отозвать его досрочно, после чего он безвредно распадается на груду внутренностей. Если вы умираете, хиты спутника мгновенно опускаются до 0 и он умирает (запуская свою особенность Взрыв при смерти).</p><p>После создания спутника вы не можете создать нового, пока не завершите продолжительный отдых или не потратите одну ячейку заклинаний, чтобы создать его. У вас может быть только один спутник одновременно, и вы не можете создать нового, пока текущий спутник присутствует.</p><p><strong>Спутник в бою.</strong> В бою спутник действует во время вашего хода. Он может перемещаться и использовать свою реакцию самостоятельно, но единственное действие, которое он предпринимает, — это действие уклонение, либо вы можете бонусным действием приказать ему совершить другое действие. Если вы находитесь в состоянии &Reference[incapacitated]{недееспособный}, то спутник действует самостоятельно и не ограничен действием уклонение.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "1",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "reanimated-companion",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Реаниматор",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "XXMtFDY3QBWDmBIH": {
+        "_id": "XXMtFDY3QBWDmBIH",
+        "type": "summon",
+        "name": "Создать спутника",
+        "img": "icons/magic/death/undead-zombie-grave-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "spec",
+          "special": "До окончания продолжительного отдыха",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@abilities.int.mod",
+          "hd": "",
+          "hp": "4 * @classes.artificer.levels",
+          "attackDamage": "@abilities.int.mod",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "zAAwGFSI4MDxg54j",
+            "count": "",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.KIBYknhjrTueZqO4",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": "",
+          "identifier": ""
+        }
+      },
+      "mPmSdWjqQAPXGPoG": {
+        "_id": "mPmSdWjqQAPXGPoG",
+        "type": "summon",
+        "name": "Создать спутника (ячейка)",
+        "img": "icons/magic/death/undead-zombie-grave-green.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "spec",
+          "special": "До окончания продолжительного отдыха",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@abilities.int.mod",
+          "hd": "",
+          "hp": "4 * @classes.artificer.levels",
+          "attackDamage": "@abilities.int.mod",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "6EPODNldugt95r4l",
+            "count": "",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.KIBYknhjrTueZqO4",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": "",
+          "identifier": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "eHErW5OEuv6qJLIr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:reanimator:reanimated-companion"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FFQWHvh0KzB8yEA4"
+}

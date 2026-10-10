@@ -1,0 +1,155 @@
+{
+  "_id": "2TZFxH3r83BHcaAe",
+  "name": "Духи дурного знамения",
+  "type": "feat",
+  "img": "icons/creatures/magical/spirit-undead-horned-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы можете накладывать <em>Призыв духа нежити</em> без материального компонента. Вы также можете наложить это заклинание один раз без траты ячейки заклинания и восстанавливаете эту возможность после продолжительного отдыха.</p><p>Каждый раз, когда вы начинаете накладывать это заклинание, вы можете изменить его так, чтобы оно не требовало концентрации. Если вы это делаете, то длительность заклинания становится 1 минута, и оно заканчивается досрочно, если вы наложите его снова.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "spirits-of-ill-omen",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Теневая магия",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "XotkCRWocfvEmdq1": {
+        "_id": "XotkCRWocfvEmdq1",
+        "type": "utility",
+        "name": "Бесплатное накладывание",
+        "img": "icons/creatures/magical/spirit-undead-horned-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "1iJmrIy4EA6WHKor",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:shadow-sorcery:spirits-of-ill-omen"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!2TZFxH3r83BHcaAe"
+}

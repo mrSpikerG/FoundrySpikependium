@@ -1,0 +1,144 @@
+{
+  "_id": "4ZyTEMjICYmnvUJ6",
+  "name": "Replicate Magic Item",
+  "type": "feat",
+  "img": "icons/sundries/documents/blueprint-recipe-alchemical.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы изучили магические чертежи, которые используете для создания магических предметов.</p><p><strong>Известные чертежи.</strong> Когда вы получаете это умение, выберите 4 чертежа из таблицы «Чертежи маг. предметов (уровень изобретателя 2+)» (описание предметов можно найти в Руководстве Мастера). Рекомендуются: @UUID[Compendium.dnd5e.equipment24.Item.dmgBagOfHolding0]{Сумка хранения}, Шапка подводного дыхания, @UUID[Compendium.dnd5e.equipment24.Item.dmgSendingStones]{Камни послания} и Волшебная палочка боевого мага +1. Каждый раз, когда вы получаете новый уровень изобретателя, вы можете заменить 1 из известных вам чертежей на новый, соответствующий вашему уровню.</p><p>Вы изучаете ещё 1 чертёж на выбор на уровнях изобретателя, указанных в колонке «Чертежи» таблицы «Умения изобретателя». При выборе нового чертежа вы можете взять его из любой таблицы «Чертежи маг. предметов», для которой соответствуете требованиям по уровню изобретателя.</p><p><strong>Создание предмета.</strong> После продолжительного отдыха вы можете создать 1 или 2 различных магических предмета, если у вас есть инструменты ремонтника. Каждый предмет основан на одном из известных вам чертежей для этого умения.</p><p>Если созданный предмет требует настройки, то вы можете настроиться на него сразу после его создания. Если вы решите настроиться позже, то вам придётся использовать обычный процесс настройки.</p><p>Когда вы достигаете определённых уровней изобретателя, указанных в колонке «Маг. предметы» таблицы «Умения изобретателя», количество магических предметов, которые вы можете создать после продолжительного отдыха, увеличивается. Каждый создаваемый предмет должен основываться на отдельном известном вам чертеже.</p><p>Если вы пытаетесь превысить максимальное количество магических предметов, то самый старый из предметов исчезает, а новый появляется.</p><table><caption>Чертежи маг. предметов (уровень изобретателя 2+)</caption><thead><tr><th>Чертёж магического предмета</th><th>Настройка</th></tr></thead><tbody><tr><td>Алхимический сосуд</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgBagOfHolding0]{Сумка хранения}</td><td>Нет</td></tr><tr><td>Шапка подводного дыхания</td><td>Нет</td></tr><tr><td>Обычный магический предмет, который не является зельем, свитком или проклятым (можно выбрать несколько раз, каждый раз — другой предмет; каждый предмет считается отдельным чертежом)</td><td>Вариативно</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgGogglesOfNigh]{Ночные очки}</td><td>Нет</td></tr><tr><td>Мультиинструмент (в этой UA)</td><td>Да</td></tr><tr><td>Самозарядный выстрел (в этой UA)</td><td>Да</td></tr><tr><td>Возвращающееся оружие (в этой UA)</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgRopeOfClimbin]{Верёвка лазания}</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgSendingStones]{Камни послания}</td><td>Нет</td></tr><tr><td>Щит +1</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgWandOfMagicDe]{Волшебная палочка обнаружения магии}</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgWandOfSecrets]{Волшебная палочка секретов}</td><td>Нет</td></tr><tr><td>Волшебная палочка боевого мага +1</td><td>Да</td></tr><tr><td>Оружие +1</td><td>Нет</td></tr><tr><td>Обмотки безоружной мощи</td><td>Нет</td></tr></tbody></table><p><strong>Длительность.</strong> Магический предмет, созданный с помощью этого умения, функционирует как нормальный магический предмет, за исключением того, что его магия не является постоянной. Когда вы умираете, магический предмет исчезает через 1к4 дня. Если вы заменяете изученный чертёж на новый, то все предметы, созданные по заменённому чертежу, мгновенно исчезают.</p><p>Если созданный вами предмет является контейнером, таким как Сумка хранения, и он исчезает, то его содержимое безопасно появляется в его пространстве и вокруг него.</p><p><strong>Заклинательная фокусировка.</strong> Вы можете использовать любую палочку или оружие, созданное с помощью этого умения, как заклинательную фокусировку вместо набора ремесленных инструментов.</p><table><caption>Чертежи маг. предметов (уровень изобретателя 6+)</caption><thead><tr><th>Чертёж магического предмета</th><th>Настройка</th></tr></thead><tbody><tr><td>Доспех +1</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgBootsOfElvenk]{Эльфийские сапоги}</td><td>Нет</td></tr><tr><td>Сапоги извилистого пути (в этой UA)</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgCloakOfElvenk]{Эльфийский плащ}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgCloakOfTheMan]{Плащ ската}</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgEyesOfCharmin]{Очки очарования}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgEyesOfMinuteS]{Очки детального зрения}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgGlovesOfThiev]{Перчатки воровства}</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgLanternOfReve]{Фонарь обнаружения}</td><td>Нет</td></tr><tr><td>Усилитель разума (в этой UA)</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgNecklaceOfAda]{Ожерелье адаптации}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgPipesOfHaunti]{Свирель ужаса}</td><td>Нет</td></tr><tr><td>Излучающее свет оружие (в этой UA)</td><td>Да</td></tr><tr><td>Отталкивающий щит (в этой UA)</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfSwimmin]{Кольцо плавания}</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfWaterWa]{Кольцо хождения по воде}</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgSentinelShiel]{Щит часового}</td><td>Нет</td></tr><tr><td>Закло-заправительное кольцо (в этой UA)</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgWandOfMagicMi]{Волшебная палочка снарядов}</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgWandOfWeb0000]{Волшебная палочка паутины}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgWeaponOfWarni]{Оружие предупреждения}</td><td>Да</td></tr></tbody></table><table><caption>Чертежи маг. предметов (уровень изобретателя 10+)</caption><thead><tr><th>Чертёж магического предмета</th><th>Настройка</th></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgArmorOfResist]{Доспех сопротивления}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgDaggerOfVenom]{Кинжал яда}</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgElvenChain000]{Эльфийская кольчуга}</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfFeather]{Кольцо падения пёрышком}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfJumping]{Кольцо прыжков}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfMindShi]{Кольцо защиты разума}</td><td>Да</td></tr><tr><td>Щит +2</td><td>Нет</td></tr><tr><td>Необычные кольцо или чудесный предмет, которые не являются проклятыми (можно выбрать несколько раз; каждый предмет считается отдельным чертежом)</td><td>Вариативно</td></tr><tr><td>Волшебная палочка боевого мага +2</td><td>Да</td></tr><tr><td>Оружие +2</td><td>Нет</td></tr><tr><td>Обмотки безоружной мощи +2</td><td>Нет</td></tr></tbody></table><table><caption>Чертежи маг. предметов (уровень изобретателя 14+)</caption><thead><tr><th>Чертёж магического предмета</th><th>Настройка</th></tr></thead><tbody><tr><td>Доспех +2</td><td>Нет</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgArrowcatching]{Ловящий стрелы щит}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgFlameTongue00]{Язык пламени}</td><td>Да</td></tr><tr><td>Редкие доспехи, кольцо, волшебная палочка, оружие или чудесный предмет, которые не являются проклятыми (можно выбрать несколько раз; каждый предмет считается отдельным чертежом)</td><td>Вариативно</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfFreeAct]{Кольцо свободных действий}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfProtect]{Кольцо защиты}</td><td>Да</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfTheRam0]{Кольцо тарана}</td><td>Да</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "replicate-magic-item",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Изобретатель",
+    "prerequisites": {
+      "level": 2,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "nC20Tw0eSXb6Co4h": {
+        "_id": "nC20Tw0eSXb6Co4h",
+        "type": "utility",
+        "name": "Создать предметы",
+        "img": "icons/sundries/documents/blueprint-recipe-alchemical.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "После продолжительного отдыха, с инструментами ремонтника",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "@scale.artificer.magic-items",
+          "name": "Предметов можно создать",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "DGewewqxCtOGJgyz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "artificer:replicate-magic-item",
+      "originalName": "Replicate Magic Item"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!4ZyTEMjICYmnvUJ6"
+}

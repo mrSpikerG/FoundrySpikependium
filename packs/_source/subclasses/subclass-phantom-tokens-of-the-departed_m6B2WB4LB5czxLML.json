@@ -1,0 +1,302 @@
+{
+  "_id": "m6B2WB4LB5czxLML",
+  "name": "Частица души усопшего",
+  "type": "feat",
+  "img": "icons/commodities/treasure/token-white-skull.webp",
+  "system": {
+    "description": {
+      "value": "<p>Духи мёртвых тянутся к вам, и отголоски их прошлых жизней волшебным образом проявляются в виде странных безделушек с резонансной силой.</p><p>Каждый раз, когда вы завершаете продолжительный отдых, вы получаете 2 безделушки души; каждая безделушка души — это Крошечный предмет (Мастер определяет форму безделушки или предлагает вам бросить по таблице «Безделушки» в Книге игрока). Эти безделушки существуют до окончания следующего продолжительного отдыха, после чего они распадаются. Если вы отдаляетесь от безделушки более чем на 30 футов, она мгновенно телепортируется к вам, появляясь где-то на вашем теле.</p><p>Количество безделушек души, которое вы получаете после продолжительного отдыха, увеличивается до 3 на 13 уровне плута и до 4 на 17 уровне.</p><p><strong>Использование безделушек души.</strong> Вы можете использовать безделушки души следующими способами:</p><p><strong>Погребальный звон.</strong> Когда вы наносите урон от Скрытой атаки в свой ход, вы можете потратить 1 безделушку души и немедленно применить Могильные вопли, не расходуя заряд этого умения. Потраченная безделушка разрушается.</p><p><strong>Жизненная сущность.</strong> Пока у вас есть хотя бы 1 безделушка души, вы совершаете спасброски от смерти и спасброски Телосложения с преимуществом.</p><p><strong>Вопрос духу.</strong> Вы можете совершить действие магия, чтобы потратить 1 безделушку души и немедленно наложить заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplAugury0000]{Гадание} без компонентов, используя Ловкость в качестве заклинательной характеристики. Потраченная безделушка разрушается.</p><p><strong>Восстановление безделушек души.</strong> Когда существо, которое вы видите в пределах 30 футов, умирает, вы можете реакцией восстановить 1 потраченную безделушку души.</p><p><em>Счётчик использований этого умения — ваши безделушки души.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "tokens-of-the-departed",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Фантом",
+    "prerequisites": {
+      "level": 9,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "@scale.phantom.trinkets",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "7iTDdhA9wBxtQsJC": {
+        "_id": "7iTDdhA9wBxtQsJC",
+        "type": "cast",
+        "name": "Вопрос духу",
+        "img": "icons/commodities/treasure/token-white-skull.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "dex",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": null,
+          "properties": [],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplAugury0000"
+        }
+      },
+      "Ll95abC2iCx13w54": {
+        "_id": "Ll95abC2iCx13w54",
+        "type": "utility",
+        "name": "Восстановить безделушку",
+        "img": "icons/commodities/treasure/token-white-skull.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Видимое существо в пределах 30 футов умирает",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "By1O8VlxV5APrKvr",
+      "name": "Жизненная сущность",
+      "img": "icons/magic/life/heart-cross-blue.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.death.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ZNq6HESO6laSGHEF"
+          },
+          {
+            "key": "system.abilities.con.save.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "kJ3l5VvBUaNsA8ZO"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Действует, пока у вас есть хотя бы 1 безделушка души.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!m6B2WB4LB5czxLML.By1O8VlxV5APrKvr"
+    }
+  ],
+  "folder": "zLRwQudULyzEFHUa",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:phantom:tokens-of-the-departed"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!m6B2WB4LB5czxLML"
+}

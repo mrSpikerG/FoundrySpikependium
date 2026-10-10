@@ -1,0 +1,166 @@
+{
+  "_id": "q0vh81xJvDnd8x6o",
+  "name": "Укрепляющая душа",
+  "type": "feat",
+  "img": "icons/magic/life/heart-cross-strong-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваш опыт выживания в суровых условиях позволяет вам укреплять не только себя, но и своих союзников. Когда вы заканчиваете короткий отдых, вы можете выбрать количество видимых вами существ, равное вашему модификатору Мудрости (минимум 1). Каждое выбранное существо восстанавливает 1к10 + ваш уровень следопыта хитов и получает преимущество на спасброски, чтобы избежать или прекратить состояние &Reference[frightened]{испуганный} в течение 1 часа.</p><p>После применения этого умения вы не можете применять его снова до завершения продолжительного отдыха.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "fortifying-soul",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Зимний странник",
+    "prerequisites": {
+      "level": 7,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "NtbSoBvFLAxUq8QO": {
+        "_id": "NtbSoBvFLAxUq8QO",
+        "type": "heal",
+        "name": "",
+        "img": "icons/magic/life/heart-cross-strong-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "По окончании короткого отдыха",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "max(1, @abilities.wis.mod)",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "number": 1,
+          "denomination": 10,
+          "bonus": "@classes.ranger.levels",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "A0c07E4Bj0ac1pxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:winter-walker:fortifying-soul"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!q0vh81xJvDnd8x6o"
+}

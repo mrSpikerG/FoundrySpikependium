@@ -1,0 +1,93 @@
+{
+  "_id": "5uIfplRBLosyGxK3",
+  "name": "Тату: Журавль",
+  "type": "feat",
+  "img": "icons/creatures/birds/raptor-hawk-flying.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplGuidance00]{Наставление}. Когда вы промахиваетесь по существу атакой от вашего Шквала ударов, вы получаете преимущество на следующий бросок атаки против этого существа до конца вашего следующего хода.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "tattoo-crane",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Мастер тату",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "Xy8hsJM8dDgVHEDk",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGuidance00",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "wis"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Заговор: Наставление",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "yskp7ojdoFG7TeyO",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "tattoo:crane"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!5uIfplRBLosyGxK3"
+}

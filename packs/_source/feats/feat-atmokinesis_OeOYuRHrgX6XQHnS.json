@@ -1,0 +1,158 @@
+{
+  "_id": "OeOYuRHrgX6XQHnS",
+  "name": "Atmokinesis",
+  "type": "feat",
+  "img": "icons/magic/lightning/bolt-strike-cloud-gray.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Электрический разряд.</strong> Один раз за ход, когда вы накладываете заклинание или попадаете по цели броском атаки и наносите дробящий, колющий, рубящий урон или урон психической энергией, вы можете изменить тип урона на урон электричеством.</p><p><strong>Псионический талант.</strong> Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplShockingGr]{Электрошок}. Кроме того, у вас всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplFogCloud00]{Туманное облако}. Вы можете 1 раз наложить его без траты ячейки заклинаний и восстанавливаете эту возможность после завершения продолжительного отдыха. Также вы можете накладывать это заклинание, используя любые доступные вам ячейки соответствующего уровня. При накладывании этих заклинаний они не требуют вербальных или материальных компонентов, а в качестве вашей заклинательной характеристики для них используется Интеллект, Мудрость или Харизма (выберите при выборе этой черты).</p><p>Когда вы достигаете 3 уровня, у вас также всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{Порыв ветра}, и вы можете накладывать его таким же образом.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PS",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "atmokinesis",
+    "type": {
+      "value": "feat",
+      "subtype": "wildTalent"
+    },
+    "requirements": "Нельзя иметь другую черту дикого таланта",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "rLgdS1OPnE3kFtRM",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplShockingGr",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Псионический талант: заговор",
+        "hint": ""
+      },
+      {
+        "_id": "K87H9NmquceWODhY",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFogCloud00",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Псионический талант",
+        "hint": ""
+      },
+      {
+        "_id": "AsJg1Qx1CsRAi5IF",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGustofWind",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Псионический талант (3 уровень)",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "ji2eZ8nAuWkNAlBh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:atmokinesis",
+      "originalName": "Atmokinesis"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!OeOYuRHrgX6XQHnS"
+}

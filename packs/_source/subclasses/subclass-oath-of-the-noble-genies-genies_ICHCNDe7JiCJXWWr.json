@@ -1,0 +1,111 @@
+{
+  "_id": "ICHCNDe7JiCJXWWr",
+  "name": "Величие джинна",
+  "type": "feat",
+  "img": "icons/magic/control/control-influence-crown-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p>Если вы не носите средние или тяжёлые доспехи, вы получаете бонус к вашему КД, равный вашему модификатору Харизмы (минимум +1).</p><p>Вы также получаете владение одним из следующих навыков на ваш выбор: Акробатика, Запугивание, Выступление или Убеждение.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "genies-splendor",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Клятва благородных джиннов",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "J8ldDHFiheWLHCxj",
+      "name": "Величие джинна (без средних и тяжёлых доспехов)",
+      "img": "icons/magic/control/control-influence-crown-gold.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.bonus",
+            "value": "+ max(1, @abilities.cha.mod)",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "oiJjcnSNMw9vZFXc"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Отключите этот эффект, если надеваете средние или тяжёлые доспехи.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ICHCNDe7JiCJXWWr.J8ldDHFiheWLHCxj"
+    }
+  ],
+  "folder": "sLMpFPgDxHNxaUYx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:oath-of-the-noble-genies:genies-splendor"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ICHCNDe7JiCJXWWr"
+}

@@ -1,0 +1,207 @@
+{
+  "_id": "Hth8bf3LPQt9auRV",
+  "name": "Mark of Healing",
+  "type": "feat",
+  "img": "icons/magic/life/heart-hand-gold-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Медицинская интуиция.</strong> Когда вы совершаете проверку Интеллекта (Набор травника) или Мудрости (Медицина), вы можете бросить 1к4 и добавить выпавшее число к проверке характеристики.</p><p><strong>Исцеляющее прикосновение.</strong> У вас всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{Лечение ран}. Вы можете накладывать это заклинание 1 раз без траты ячейки заклинаний и восстанавливаете такую возможность после короткого или продолжительного отдыха. Вы также можете накладывать это заклинание, используя любые доступные вам ячейки заклинаний. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этих заклинаний (выберите при выборе этой черты).</p><p>Когда вы достигаете 3 уровня, у вас также всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{Малое восстановление}, и вы можете накладывать его таким же образом.</p><p><strong>Заклинания метки.</strong> Если у вас есть умение Использование заклинаний или Магия договора, то заклинания из таблицы «Заклинания: Метка исцеления» добавляются в список заклинаний вашего умения.</p><table><caption>Заклинания: Метка исцеления</caption><thead><tr><th>Уровень заклинания</th><th>Заклинания</th></tr></thead><tbody><tr><td>1</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplFalseLife0]{Псевдожизнь}, @UUID[Compendium.dnd5e.spells24.Item.phbsplHealingWor]{Лечащее слово}</td></tr><tr><td>2</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneVigo]{Арканная регенерация}, @UUID[Compendium.dnd5e.spells24.Item.phbsplPrayerofHe]{Молебен лечения}</td></tr><tr><td>3</td><td><em>Аура живучести</em>, @UUID[Compendium.dnd5e.spells24.Item.phbsplMassHealin]{Множественное лечащее слово}</td></tr><tr><td>4</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplAuraofLife]{Аура жизни}, <em>Аура очищения</em></td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Высшее восстановление}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "mark-of-healing",
+    "type": {
+      "value": "feat",
+      "subtype": "dragonmark"
+    },
+    "requirements": "Кампания в Эберроне, нельзя иметь другую черту метки дракона",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "MLehAOeiZ1SSA5Rw": {
+        "_id": "MLehAOeiZ1SSA5Rw",
+        "type": "utility",
+        "name": "Медицинская интуиция",
+        "img": "icons/magic/life/heart-hand-gold-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d4",
+          "name": "Бонус к проверке",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "8RG39HjyRi5B8C6J",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCureWounds",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "sr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заклинания метки",
+        "hint": ""
+      },
+      {
+        "_id": "DIjpiFD1FohHiPTe",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLesserRest",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "sr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Заклинание метки (3 уровень)",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "tvzAq9WrCdkT5t83",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:healing",
+      "originalName": "Mark of Healing"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Hth8bf3LPQt9auRV"
+}

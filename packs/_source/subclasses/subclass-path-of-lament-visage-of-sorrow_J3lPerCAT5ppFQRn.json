@@ -1,0 +1,329 @@
+{
+  "_id": "J3lPerCAT5ppFQRn",
+  "name": "Облик скорби",
+  "type": "feat",
+  "img": "icons/magic/death/skull-flames-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы активируете свою ярость, вы можете наделить себя силой нежити. Вы получаете перечисленные ниже эффекты на 1 минуту или пока ваши хиты не опустятся до 0. Применив это умение, вы не сможете сделать это снова, пока не завершите продолжительный отдых.</p><p><strong>Иммунитеты.</strong> Вы получаете иммунитет к состояниям очарованный и испуганный. Если на момент, когда вы наделяете себя этой силой, вы очарованы или испуганы, то это состояние на вас оканчивается. Кроме того, вы не можете получать степени истощения.</p><p><strong>Вытягивающий жизнь удар.</strong> Когда существо проваливает свой спасбросок против вашего Ужасающего удара, оно получает 2к10 урона некротической энергией. Вы восстанавливаете хиты в количестве, равном нанесённому урону некротической энергией.</p><p><strong>Нежить.</strong> Ваш тип существа — нежить.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO2",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "visage-of-sorrow",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Путь скорби",
+    "prerequisites": {
+      "level": 14,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "vd22u3rPKxRvg9Hs": {
+        "_id": "vd22u3rPKxRvg9Hs",
+        "type": "utility",
+        "name": "",
+        "img": "icons/magic/death/skull-flames-white-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "При активации ярости",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "RzC3GJB60yy7vBAb"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "zgJ3sssVxxwcBsib": {
+        "_id": "zgJ3sssVxxwcBsib",
+        "type": "damage",
+        "name": "Вытягивающий жизнь удар",
+        "img": "icons/magic/death/skull-flames-white-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Провал спасброска от Ужасающего удара",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "RzC3GJB60yy7vBAb",
+      "name": "Облик скорби",
+      "img": "icons/magic/death/undead-ghost-scream-teal.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.ci.value",
+            "value": "charmed",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "BqYLpP0HB7FP8mLX"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "frightened",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "OTsVnFPuDTGlKOPa"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "exhaustion",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "s48gKH6WihzSGlOd"
+          },
+          {
+            "key": "system.details.type.value",
+            "value": "undead",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "rueHAGgU5Hs958CG"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!J3lPerCAT5ppFQRn.RzC3GJB60yy7vBAb"
+    }
+  ],
+  "folder": "8oZJ0j0LIQy27CY2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:path-of-lament:visage-of-sorrow"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!J3lPerCAT5ppFQRn"
+}

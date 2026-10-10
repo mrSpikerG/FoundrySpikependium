@@ -1,0 +1,453 @@
+{
+  "_id": "aj6zgDiWqflujp7q",
+  "name": "Форма вредителя",
+  "type": "feat",
+  "img": "icons/creatures/invertebrates/centipede-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Бонусным действием вы можете превратиться в рой крошечных вредителей среднего размера, таких как тараканы, личинки или крысы. Находясь в этой форме, вы сохраняете общий облик, личность, воспоминания и способность говорить; любое снаряжение, которое вы носите или несёте, не превращается вместе с вами, но вы можете продолжать использовать это снаряжение, находясь в этой форме. Ваш статблок остаётся прежним, кроме следующих изменений:</p><p><strong>Иммунитеты к состояниям.</strong> Вы получаете иммунитет к состояниям схваченный, парализованный, лежащий ничком и опутанный.</p><p><strong>Сопротивления урону.</strong> Вы получаете сопротивление к дробящему, колющему и рубящему урону.</p><p><strong>Перемещение.</strong> Вы можете входить в пространство другого существа и занимать его, и наоборот. Кроме того, вы получаете скорость лазания, равную вашей скорости, и можете лазать по сложным поверхностям (включая потолки) без необходимости совершать проверку характеристики.</p><p><strong>Чумные укусы.</strong> Каждый раз, когда вы входите в пространство врага, это существо получает урон, равный вашему модификатору Мудрости; этот урон может быть некротическим, колющим или ядовитым (на ваш выбор). Существо также получает этот урон, когда входит в ваше пространство или заканчивает там свой ход. Существо получает этот урон только один раз за ход.</p><p>Вы возвращаетесь в свою оригинальную форму, когда решаете завершить превращение (действие не требуется), когда получаете состояние недееспособный, когда умираете или через 10 минут.</p><p>Применив это умение, вы не можете применять его снова, пока не завершите продолжительный отдых, если только не потратите ячейку заклинаний 5 уровня или выше.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "vermin-form",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Домен эпидемии",
+    "prerequisites": {
+      "level": 17,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "0KG4lUUzeHp0nFVe": {
+        "_id": "0KG4lUUzeHp0nFVe",
+        "type": "utility",
+        "name": "",
+        "img": "icons/creatures/invertebrates/centipede-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "HZFGgLRQWNAO1I3n"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "ZBobgPti8se5Ux2J": {
+        "_id": "ZBobgPti8se5Ux2J",
+        "type": "utility",
+        "name": "Превратиться (ячейка 5+)",
+        "img": "icons/creatures/invertebrates/centipede-brown.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "5",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "HZFGgLRQWNAO1I3n"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "YzHjkdnKdednBZnj": {
+        "_id": "YzHjkdnKdednBZnj",
+        "type": "damage",
+        "name": "Чумные укусы",
+        "img": "icons/creatures/invertebrates/centipede-brown.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "1 раз за ход на существо",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": true,
+                "formula": "@abilities.wis.mod"
+              },
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [
+                "necrotic",
+                "piercing",
+                "poison"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "HZFGgLRQWNAO1I3n",
+      "name": "Форма вредителя",
+      "img": "icons/creatures/invertebrates/centipede-brown.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.ci.value",
+            "value": "grappled",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "tyRpdXrTH1K86tsJ"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "paralyzed",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ycFXKBQufONWYNwr"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "prone",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "UX0fPnoshHGIDv68"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "restrained",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "6I6QAxjdML4djvUR"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "bludgeoning",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "KevHNkmVqKkudm1T"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "piercing",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "zuTmUqZ5iwF3QNaw"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "slashing",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "xoDLWk9XGkTJns4u"
+          },
+          {
+            "key": "system.attributes.movement.speeds.climb",
+            "value": "@attributes.movement.speeds.walk",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "u0WwlscwUGjGIsBs"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!aj6zgDiWqflujp7q.HZFGgLRQWNAO1I3n"
+    }
+  ],
+  "folder": "H3KbCbjgiPUZZfR6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:pestilence-domain:vermin-form"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!aj6zgDiWqflujp7q"
+}

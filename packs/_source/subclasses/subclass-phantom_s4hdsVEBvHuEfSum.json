@@ -1,0 +1,160 @@
+{
+  "_id": "s4hdsVEBvHuEfSum",
+  "name": "Phantom",
+  "type": "subclass",
+  "img": "icons/creatures/magical/spirit-undead-ghost-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Примите смерть и обретите призрачную силу</em></p><p>Некоторые плуты идут по грани между жизнью и смертью, отправляя противников в могилу и скользя по миру незаметно, словно духи. В этом стремлении плут может обрести мистическую связь со смертью. Такой персонаж погружается в негативную энергию, наполняет свои удары смертоносной силой и крадёт знания у ушедших душ. Воровские гильдии высоко ценят таких плутов как мастеров сбора информации и шпионажа.</p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Могильные вопли используют количество применений, равное модификатору Ловкости. Частица души усопшего даёт безделушки души после каждого продолжительного отдыха. Голос смерти — новое умение для заклинания Разговор с мёртвыми. Друг смерти позволяет получить безделушку при броске инициативы, если у вас их нет.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "phantom",
+    "classIdentifier": "rogue",
+    "advancement": [
+      {
+        "_id": "14TsFFuqKpFTNwIN",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.6XvdmYHSBJZInkJU",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.OdRQJBIbxtqDC2hC",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "pM7gT7TO3yVtqdZ7",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.m6B2WB4LB5czxLML",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.MCoT3WW9nTLJjomF",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 9,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "nL7K2gasNkgfoYVm",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Fyqk0led0EwkC9s7",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 13,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "NGe2p3i8YW54bqji",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.UUvDEhBUX8SGpEhG",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 17,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "Hl7FGV5mYvJvocTt",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "trinkets",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "9": {
+              "value": 2
+            },
+            "13": {
+              "value": 3
+            },
+            "17": {
+              "value": 4
+            }
+          }
+        },
+        "value": {},
+        "title": "Безделушки души",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "Urwqy9O4b8nH0gb2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:phantom",
+      "originalName": "Phantom"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!s4hdsVEBvHuEfSum"
+}

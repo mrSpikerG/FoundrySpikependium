@@ -1,0 +1,207 @@
+{
+  "_id": "MtApBBkViovcgGH8",
+  "name": "Necromancer",
+  "type": "subclass",
+  "img": "icons/magic/death/skull-humanoid-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Властвуйте силами смерти и нежити</em></p><p>Вы исследуете космические силы жизни, смерти и нежити. Будучи некромантом, вы учитесь управлять энергией, которая оживляет всех существ. По мере роста вашего мастерства вы обучаетесь с помощью магии высасывать жизнь из существа, превращая его жизненную энергию в волшебную силу. Многие считают некромантов злобными или жуткими, хотя не все некроманты — злые. Тем не менее манипулирование жизнью и смертью считается табу во многих обществах.</p><p><em>Редакция из UA «Арканное обновление»; заменяет версию из UA «Арканные подклассы».</em></p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Книга заклинаний некромантии позволяет призывать скелета или зомби через Поиск фамильяра, а Мрачная жатва восстанавливает хиты нежити. Неживые рабы накладывают Призыв духа нежити и дают бонусы. Жатва нежити (ранее Тайны нежити) восстанавливает ваши хиты, когда уничтожается подконтрольная нежить. Повелитель смерти позволяет создавать всплески некротической энергии.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "necromancer",
+    "classIdentifier": "wizard",
+    "advancement": [
+      {
+        "_id": "rWzyjyIWCTo0bb08",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Bq7030VN7CwlkIFq",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.vR9AedQSVvXfI9Em",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "BwqJr2F0fBow0fdW",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.k8eIQAetJHprXSAp",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.BLGHEZzsuDOx8kVg",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "Zdb0MZg7TogGw7sL",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.OC3qZNX0kPh4bTkz",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "WBH8Scj9c1iH2S3i",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.hkJUb1yMPXYgBwes",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "dLvPxWCvix3SjxkH",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": false
+            },
+            "5": {
+              "count": 1
+            },
+            "7": {
+              "count": 1
+            },
+            "9": {
+              "count": 1
+            },
+            "11": {
+              "count": 1
+            },
+            "13": {
+              "count": 1
+            },
+            "15": {
+              "count": 1
+            },
+            "17": {
+              "count": 1
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:wizard"
+            ],
+            "level": "availableNoCantrips",
+            "school": [
+              "nec"
+            ]
+          },
+          "spell": null,
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Мастер некромантии: заклинания школы некромантии",
+        "hint": "Заклинания добавляются в книгу заклинаний волшебника."
+      },
+      {
+        "_id": "jyOc9AZRVknhWnVU",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFindFamili",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Фамильяр-нежить: Поиск фамильяра",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "VwNWCqWJHxKbsTtM",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:necromancer",
+      "originalName": "Necromancer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!MtApBBkViovcgGH8"
+}

@@ -1,0 +1,258 @@
+{
+  "_id": "vu5ypjXOcP42jJhN",
+  "name": "Greater Mark of Passage",
+  "type": "feat",
+  "img": "icons/skills/movement/figure-running-gray.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте одну характеристику по вашему выбору на 1, до максимума 20.</p><p><strong>Улучшенная интуиция.</strong> Когда вы используете умение Интуитивное движение от вашей черты Метка пути, вы можете бросать 1к6 вместо 1к4.</p><p><strong>Вдохновлённый путь.</strong> Когда вы накладываете заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{Туманный шаг}, вы можете модифицировать это заклинание так, чтобы перенести с собой одно добровольное существо, которого касаетесь. Это существо телепортируется в незанятое пространство по вашему выбору в пределах 5 футов от вашей точки назначения. После того как вы модифицировали заклинание этим способом, вы не можете сделать это снова, пока не завершите продолжительный отдых.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "13",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "greater-mark-of-passage",
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "4-й уровень и выше, черта Метка пути",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "DA4TQJj1XyCbbOUU": {
+        "_id": "DA4TQJj1XyCbbOUU",
+        "type": "utility",
+        "name": "Интуитивное движение (к6)",
+        "img": "icons/skills/movement/figure-running-gray.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d6",
+          "name": "Бонус к проверке",
+          "prompt": false,
+          "visible": true
+        }
+      },
+      "Vl0oFwi704F3L2mp": {
+        "_id": "Vl0oFwi704F3L2mp",
+        "type": "utility",
+        "name": "Вдохновлённый путь",
+        "img": "icons/skills/movement/figure-running-gray.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "QYxRkj9Qr8FjqHju",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "title": "Увеличение характеристики",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "21wCYGXSEhYEDGNW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:greater-passage",
+      "originalName": "Greater Mark of Passage"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!vu5ypjXOcP42jJhN"
+}

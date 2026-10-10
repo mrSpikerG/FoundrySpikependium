@@ -1,0 +1,143 @@
+{
+  "_id": "SGLjFmFbVmUN07Vr",
+  "name": "Мастерские выстрелы",
+  "type": "feat",
+  "img": "icons/skills/ranged/arrows-flying-triple-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы используете проворность в своём точном мастерстве стрелка. Когда существо, которое вы видите, промахивается по вам броском атаки, вы можете реакцией переместиться на расстояние до половины вашей скорости от атакующего без провоцированных атак. Затем вы можете совершить дальнобойную атаку против атакующего частью этой реакции, если он находится в пределах дистанции оружия.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "masterful-shots",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Арканный лучник",
+    "prerequisites": {
+      "level": 18,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "qkz4YDDoV07Shr2i": {
+        "_id": "qkz4YDDoV07Shr2i",
+        "type": "utility",
+        "name": "",
+        "img": "icons/skills/ranged/arrows-flying-triple-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Существо промахнулось по вам атакой",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "tVhxoIpl3csKGQMA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:arcane-archer:masterful-shots"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SGLjFmFbVmUN07Vr"
+}

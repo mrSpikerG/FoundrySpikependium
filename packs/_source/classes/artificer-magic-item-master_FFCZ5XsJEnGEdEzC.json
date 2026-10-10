@@ -1,0 +1,112 @@
+{
+  "_id": "FFCZ5XsJEnGEdEzC",
+  "name": "Magic Item Master",
+  "type": "feat",
+  "img": "icons/equipment/finger/ring-band-engraved-silver-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p>Теперь вы можете настроиться на 6 магических предмета одновременно вместо 3.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magic-item-master",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Изобретатель",
+    "prerequisites": {
+      "level": 18,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "lJAgCF5ro1cIGQEC",
+      "name": "Мастер магических предметов",
+      "img": "icons/equipment/finger/ring-band-engraved-silver-teal.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.attunement.max",
+            "value": "6",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "WhUjCP6K8dxwUewx"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!FFCZ5XsJEnGEdEzC.lJAgCF5ro1cIGQEC"
+    }
+  ],
+  "folder": "DGewewqxCtOGJgyz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "artificer:magic-item-master",
+      "originalName": "Magic Item Master"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FFCZ5XsJEnGEdEzC"
+}

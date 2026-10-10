@@ -1,0 +1,63 @@
+{
+  "_id": "xOu3TOeLzD3JfORC",
+  "name": "Заклинания демона",
+  "type": "feat",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы достигаете уровня чародея, указанного в таблице «Заклинания демона», эти заклинания считаются для вас всегда подготовленными.</p><table><caption>Заклинания демона</caption><thead><tr><th>Уровень чародея</th><th>Заклинания</th></tr></thead><tbody><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Обнаружение магии}, @UUID[Compendium.dnd5e.spells24.Item.phbsplEntangle00]{Опутывание}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{Туманный шаг}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSpiderClim]{Паук}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Рассеивание магии}, @UUID[Compendium.dnd5e.spells24.Item.phbsplGaseousFor]{Газообразная форма}</td></tr><tr><td>7</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplConfusion0]{Смятение}, @UUID[Compendium.dnd5e.spells24.Item.phbsplHallucinat]{Мираж}</td></tr><tr><td>9</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplContactOth]{Связь с иным планом}, @UUID[Compendium.dnd5e.spells24.Item.phbsplHallow0000]{Святилище}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "demonic-spells",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Демон",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "pgCeXnBqWhNr0a7W",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:demonic-sorcery:spells"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!xOu3TOeLzD3JfORC"
+}

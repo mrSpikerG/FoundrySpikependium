@@ -1,0 +1,93 @@
+{
+  "_id": "eSWiF5yBvXxOLcW5",
+  "name": "Тату: Бабочка",
+  "type": "feat",
+  "img": "icons/creatures/invertebrates/fly-wasp-mosquito-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplLight00000]{Свет}. Когда вы совершаете прыжок в высоту, вы можете применять свой модификатор Ловкости вместо модификатора Силы, чтобы определить высоту прыжка.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "tattoo-butterfly",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Мастер тату",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "1g7XW3paWxeNgxkX",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLight00000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "wis"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Заговор: Свет",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "yskp7ojdoFG7TeyO",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "tattoo:butterfly"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!eSWiF5yBvXxOLcW5"
+}

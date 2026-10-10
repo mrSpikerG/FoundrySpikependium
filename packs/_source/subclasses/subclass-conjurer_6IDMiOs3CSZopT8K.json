@@ -1,0 +1,189 @@
+{
+  "_id": "6IDMiOs3CSZopT8K",
+  "name": "Conjurer",
+  "type": "subclass",
+  "img": "icons/magic/movement/portal-vortex-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Шагайте через пространство и вызывайте существ из пустоты</em></p><p>Вы считаете расстояние и материю лишь гибкими рекомендациями, а не незыблемыми законами. Призыватели черпают силу магии, позволяющей мгновенно перемещать существ сквозь пространство и вызывать их, чтобы они сражались за вас.</p><p><em>Редакция из UA «Арканное обновление»; заменяет версию из UA «Арканные подклассы».</em></p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Безопасное перемещение применяется бонусным действием и имеет больше применений. Надёжный призыв даёт призванному существу сопротивление нескольким типам урона, пока у него есть временные хиты. Разделённые призывы — новое умение.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "conjurer",
+    "classIdentifier": "wizard",
+    "advancement": [
+      {
+        "_id": "ptaDadm2AbHlDb3h",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.tVUCc2nzbAiAtOEe",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.VxgSgyFFIWSy7RKf",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "zm3lvQSwXEeGO2P8",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5gXavmuoBXycvkQN",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.ZqH9zhuMnnADqE4R",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "FApHlFAaKwiSU967",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.OeB9SQAdwSsjPkIz",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "2A0GLBmqCRo1rIW5",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.q4JTB8rG19KLBvUN",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "rh2crnMHSpqAiviJ",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": false
+            },
+            "5": {
+              "count": 1
+            },
+            "7": {
+              "count": 1
+            },
+            "9": {
+              "count": 1
+            },
+            "11": {
+              "count": 1
+            },
+            "13": {
+              "count": 1
+            },
+            "15": {
+              "count": 1
+            },
+            "17": {
+              "count": 1
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:wizard"
+            ],
+            "level": "availableNoCantrips",
+            "school": [
+              "con"
+            ]
+          },
+          "spell": null,
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Мастер вызова: заклинания школы вызова",
+        "hint": "Заклинания добавляются в книгу заклинаний волшебника."
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "VwNWCqWJHxKbsTtM",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:conjurer",
+      "originalName": "Conjurer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!6IDMiOs3CSZopT8K"
+}

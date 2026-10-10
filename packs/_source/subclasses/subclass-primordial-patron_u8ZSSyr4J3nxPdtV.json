@@ -1,0 +1,443 @@
+{
+  "_id": "u8ZSSyr4J3nxPdtV",
+  "name": "Primordial Patron",
+  "type": "subclass",
+  "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Призывайте потомков стихийного хаоса</em></p><p>Ваш договор черпает силу из Внутренних планов, царств стихийных сил и строительных блоков мультивселенной. Колдуны этого договора выступают вестниками древних и разрушительных потомков воздуха, земли, огня и воды — таких как стихийные силы зла. Эти колдуны подготавливают путь к грядущему прибытию своих покровителей на Материальный план, создавая стихийные узлы — области, пропитанные энергией стихийных планов.</p><p>Когда вы выбираете этот подкласс, выберите стихию из таблицы «Первородные покровители», которая предлагает возможных покровителей и определяет тип урона для некоторых особенностей подкласса.</p><table><caption>Первородные покровители</caption><thead><tr><th>Стихия</th><th>Примеры покровителей</th><th>Тип урона</th></tr></thead><tbody><tr><td>Воздух</td><td>Акади, Ян-Си-Бин</td><td>Звуковой</td></tr><tr><td>Земля</td><td>Огремох, Грумбар</td><td>Кислотный</td></tr><tr><td>Огонь</td><td>Имикс, Коссут, Зааман Рул</td><td>Огненный</td></tr><tr><td>Вода</td><td>Истишиа, Ольгидра</td><td>Холодный</td></tr></tbody></table><p>Капризная природа союзов со стихиями распространяется и на ваш договор. Вы можете менять выбранную стихию (и вашего покровителя) каждый раз, когда получаете уровень.</p><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO2",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "primordial",
+    "classIdentifier": "warlock",
+    "advancement": [
+      {
+        "_id": "aYua5ciIr2VWkLBx",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.0KJnDIp0NLgvFuh8",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.PpVTdPnPXF4flPbZ",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.aURTvxDfGjPzvLoe",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "rAdoxuS50OgYbARE",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.PdOoSKjg5HCOAWjh",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "QmVlUoweaQJLXIm3",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.1wzR1F2eWLEXQwth",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "M28h1aMQ2NTFVXa4",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.xAPWDZeZ61txpADa",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "TmECG3P9sKQ2zO0d",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplChromaticO",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDarkvision",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "8XqO73J2oft3bCBE",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCommunewit",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "JWVvOxmVFLyjxB7l",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "node-dice",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "3": {
+              "value": 1
+            },
+            "6": {
+              "value": 2
+            },
+            "14": {
+              "value": 3
+            }
+          }
+        },
+        "value": {},
+        "title": "Кости урона узла",
+        "hint": ""
+      },
+      {
+        "_id": "YrlIBeLvG006thBa",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFeatherFal"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplShatter000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplEntangle00"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplKnock00000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplBurningHan"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplHeatMetal0"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplAlterSelf0"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplIceKnife00"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Заклинания стихии (3 уровень)",
+        "hint": "Выберите 2 заклинания вашей стихии."
+      },
+      {
+        "_id": "CCnucmT8mmslwSIr",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "5": {
+              "count": 1,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFly0000000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPlantGrowt"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFireball00"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplWaterWalk0"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Заклинание стихии (5 уровень)",
+        "hint": ""
+      },
+      {
+        "_id": "MWjQQeBLFKpEHpa9",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "7": {
+              "count": 1,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFreedomofM"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplVitriolicS"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplWallofFire"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplControlWat"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Заклинание стихии (7 уровень)",
+        "hint": ""
+      },
+      {
+        "_id": "PjD3H2p2FYXbblsS",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "9": {
+              "count": 1,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplWallofSton"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFlameStrik"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplConeofCold"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Заклинание стихии (9 уровень)",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "n1QCliRvHCwNQff8",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:primordial-patron",
+      "originalName": "Primordial Patron"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!u8ZSSyr4J3nxPdtV"
+}

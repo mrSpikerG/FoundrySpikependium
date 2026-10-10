@@ -1,0 +1,315 @@
+{
+  "_id": "RJBfvJvQC2r3GiTK",
+  "name": "Сказания Муншае",
+  "type": "feat",
+  "img": "icons/sundries/books/book-turquoise-moon.webp",
+  "system": {
+    "description": {
+      "value": "<p>Действием магия вы можете призвать силу народного сказания, наполняя себя первобытной магией, пока вы снова не используете это умение. Когда вы используете это умение, выберите одно из следующих сказаний; ваш выбор предоставляет вам определённые преимущества, пока эта магия активна.</p><p><strong>Сказание о жизни.</strong> Вы призываете сказание о жизненной силе и плодородной земле. Когда вы восстанавливаете хиты существу с помощью заклинания, вы можете потратить кость бардовского вдохновения и увеличить количество восстановленных хитов на число, равное броску этой кости. Вы можете делать это только один раз за ход.</p><p><strong>Сказание о сумерках.</strong> Вы призываете сказание о тайнах и секретах. Когда вы бонусным действием даёте существу кость бардовского вдохновения, вы можете совершить действие отход или засада частью этого бонусного действия.</p><p><strong>Сказание о веселье.</strong> Вы призываете сказание о веселье и хитроумии фей. Когда враг, которого вы видите в пределах 60 футов от себя, преуспевает в спасброске, вы можете реакцией потратить кость бардовского вдохновения. Существо должно бросить кость бардовского вдохновения и вычесть выпавшее число из результата спасброска, что может привести к его провалу.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "moonshae-tales",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Коллегия луны",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "0A2HjCGyJSm01qzo": {
+        "_id": "0A2HjCGyJSm01qzo",
+        "type": "utility",
+        "name": "Призвать сказание",
+        "img": "icons/sundries/books/book-turquoise-moon.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "perm",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "2fq76sGTCpepW60a": {
+        "_id": "2fq76sGTCpepW60a",
+        "type": "utility",
+        "name": "Сказание о жизни: бонус к лечению",
+        "img": "icons/sundries/books/book-turquoise-moon.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:bardic-inspiration",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "@scale.bard.inspiration",
+          "name": "Дополнительные хиты",
+          "prompt": false,
+          "visible": true
+        }
+      },
+      "JAw3Y709ZF4zAZg2": {
+        "_id": "JAw3Y709ZF4zAZg2",
+        "type": "utility",
+        "name": "Сказание о веселье: штраф к спасброску",
+        "img": "icons/sundries/books/book-turquoise-moon.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Враг в пределах 60 футов преуспел в спасброске",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:bardic-inspiration",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "enemy",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "@scale.bard.inspiration",
+          "name": "Вычесть из спасброска",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "aPwupyKDki5RfLGl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:college-of-the-moon:moonshae-tales"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!RJBfvJvQC2r3GiTK"
+}

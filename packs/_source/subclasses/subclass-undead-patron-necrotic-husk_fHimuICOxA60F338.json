@@ -1,0 +1,319 @@
+{
+  "_id": "fHimuICOxA60F338",
+  "name": "Облик нежити",
+  "type": "feat",
+  "img": "icons/magic/death/skeleton-eye-skull-glow-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваша связь с нежитью теперь пронизывает ваше тело. Вы получаете следующие эффекты:</p><p><strong>Устойчивость некротики.</strong> Вы получаете сопротивление урону некротической энергией. Пока вы в трансформации Облика ужаса, вы обладаете иммунитетом к урону некротической энергией.</p><p><strong>Нечестивое оживление.</strong> Если ваши хиты опускаются до 0 и вы не умираете мгновенно, то вы можете вызвать взрыв смертоносной энергии из вашего тела. Каждое существо на ваш выбор в пределах 30-футовой эманации от вас должно совершить спасбросок Телосложения против Сл. ваших заклинаний. При провале существо получает 2к10 + ваш уровень колдуна урона некротической энергией или половину этого урона при успехе. Затем ваше количество хитов становится равным 10, умноженному на ваш модификатор Харизмы (минимум 10 хитов), и вы получаете 1 степень истощения.</p><p>После применения этого эффекта вы не можете использовать его снова, пока не завершите короткий или продолжительный отдых.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "9",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "necrotic-husk",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Покровитель: Нежить",
+    "prerequisites": {
+      "level": 10,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "jNNyAAk8ecNZApVF": {
+        "_id": "jNNyAAk8ecNZApVF",
+        "type": "save",
+        "name": "Нечестивое оживление",
+        "img": "icons/magic/death/skeleton-eye-skull-glow-orange.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Ваши хиты опустились до 0",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "30",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "enemy",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "sr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 10,
+              "bonus": "@classes.warlock.levels",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      },
+      "uZFq9aS3jMzFwkY0": {
+        "_id": "uZFq9aS3jMzFwkY0",
+        "type": "heal",
+        "name": "Нечестивое оживление: хиты",
+        "img": "icons/magic/death/skeleton-eye-skull-glow-orange.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "max(10, 10 * @abilities.cha.mod)"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "bjmAfXAEw1qH3GBx",
+      "name": "Устойчивость некротики",
+      "img": "icons/magic/death/skeleton-eye-skull-glow-orange.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "necrotic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "CwxD3ClWd2mHGQzW"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!fHimuICOxA60F338.bjmAfXAEw1qH3GBx"
+    }
+  ],
+  "folder": "zMQzHuMejzwdRhaA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:undead-patron:necrotic-husk"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!fHimuICOxA60F338"
+}

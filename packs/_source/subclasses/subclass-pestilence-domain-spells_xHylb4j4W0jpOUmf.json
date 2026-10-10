@@ -1,0 +1,63 @@
+{
+  "_id": "xHylb4j4W0jpOUmf",
+  "name": "Заклинания домена эпидемии",
+  "type": "feat",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы достигаете уровня жреца, указанного в таблице «Заклинания домена эпидемии», эти заклинания считаются для вас всегда подготовленными.</p><table><caption>Заклинания домена эпидемии</caption><thead><tr><th>Уровень жреца</th><th>Заклинания</th></tr></thead><tbody><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectPois]{Обнаружение болезней и яда}, @UUID[Compendium.dnd5e.spells24.Item.phbsplProtection]{Защита от яда}, @UUID[Compendium.dnd5e.spells24.Item.phbsplRayofEnfee]{Луч слабости}, @UUID[Compendium.dnd5e.spells24.Item.phbsplRayofSickn]{Луч болезни}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplStinkingCl]{Зловонное облако}, @UUID[Compendium.dnd5e.spells24.Item.phbsplVampiricTo]{Прикосновение вампира}</td></tr><tr><td>7</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplBlight0000]{Усыхание}, @UUID[Compendium.dnd5e.spells24.Item.phbsplGiantInsec]{Гигантское насекомое}</td></tr><tr><td>9</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplContagion0]{Заражение}, @UUID[Compendium.dnd5e.spells24.Item.phbsplInsectPlag]{Нашествие насекомых}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "pestilence-spells",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Домен эпидемии",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "H3KbCbjgiPUZZfR6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:pestilence-domain:spells"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!xHylb4j4W0jpOUmf"
+}

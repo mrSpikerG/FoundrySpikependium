@@ -1,0 +1,204 @@
+{
+  "_id": "SAKuGqa6lWnDptbp",
+  "name": "Homunculus Servant",
+  "type": "spell",
+  "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: изобретатель.</em></p><p>Вы призываете особого гомункула в свободное пространство в пределах дистанции. Это существо использует статблок <strong>Гомункул слуга</strong>. Если у вас уже есть гомункул, созданный этим заклинанием, старый гомункул заменяется новым.</p><p>Вы определяете внешний вид гомункула, например, он может выглядеть как механическая птица, крылатые флаконы или миниатюрные оживлённые котлы.</p><p><strong>Бой.</strong> Гомункул дружественен для вас и ваших союзников. В бою он действует по вашей инициативе, но его ход начинается сразу после вашего. Он подчиняется вашим командам (действие не требуется). Если вы не отдаёте команд, то он выполняет действие уклонение и использует своё перемещение, чтобы избегать опасности.</p><p><strong>Накладывание более высокой ячейкой.</strong> Используйте уровень ячейки заклинания как уровень заклинания в статблоке.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "",
+    "activation": {
+      "type": "hour",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 2,
+    "materials": {
+      "value": "драгоценный камень или кристалл стоимостью 100+ зм, расходуемый заклинанием",
+      "consumed": true,
+      "cost": 100,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "ritual"
+    ],
+    "range": {
+      "value": "10",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "con",
+    "sourceItem": "",
+    "target": {
+      "affects": {
+        "type": "",
+        "count": "",
+        "choice": false,
+        "special": ""
+      },
+      "template": {
+        "type": "",
+        "size": "",
+        "units": "ft",
+        "contiguous": false,
+        "count": ""
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "remJ2ohGGw9a5oS1": {
+        "_id": "remJ2ohGGw9a5oS1",
+        "type": "summon",
+        "name": "Призыв гомункула",
+        "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "hour",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "",
+          "hd": "",
+          "hp": "5 * @item.level",
+          "attackDamage": "@item.level",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "zFA0EPTFlLEfYMrE",
+            "count": "",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.Dm0I9VgaND4bbbef",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": "",
+          "identifier": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "jzQHzwlAgBVmwkex",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:homunculus-servant",
+      "originalName": "Homunculus Servant"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SAKuGqa6lWnDptbp"
+}

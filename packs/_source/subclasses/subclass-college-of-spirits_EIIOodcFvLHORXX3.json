@@ -1,0 +1,189 @@
+{
+  "_id": "EIIOodcFvLHORXX3",
+  "name": "College of Spirits",
+  "type": "subclass",
+  "img": "icons/sundries/gaming/playing-cards-black.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Призывайте духов с той стороны</em></p><p>Используя оккультные атрибуты, барды из Коллегии духов призывают легендарных и давно умерших духов, чтобы вновь изменить мир. Но такие сущности капризны, и то, что бард вызывает, не всегда полностью поддаётся его контролю.</p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Направляющий шёпот и Духовная фокусировка объединены в умение Проводник, которое также даёт владение игральными картами. Духи с той стороны (ранее Сказания с той стороны) переработаны: эффекты мгновеннее, таблица обновлена. Усиленный проводник — новое умение, позволяющее накладывать и изменять заклинание Духовные стражи.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "spirits",
+    "classIdentifier": "bard",
+    "advancement": [
+      {
+        "_id": "9p8dPcWmObFLFIsO",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.yAvr91IXXSAgkAOo",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Orei1FaTcCFBDQwc",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "pMSDM6hTRm4PmOaS",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.upGMC6QrUu1phQOa",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "ngTrGvDEeS9xEi1h",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5QVqS1NvnL5Y3N3Q",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "gbONlqJW1x2kBWqD",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "tool:game:card"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Духовная фокусировка: игральные карты",
+        "hint": ""
+      },
+      {
+        "_id": "Nm083y7JE0dOX7TA",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGuidance00",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Направляющий шёпот: Наставление",
+        "hint": ""
+      },
+      {
+        "_id": "NOfohYe8mtFxfncK",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSpiritGuar",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 6,
+        "title": "Проявление духа: Духовные стражи",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "yG6Kp7VqRGjahsCC",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:college-of-spirits",
+      "originalName": "College of Spirits"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!EIIOodcFvLHORXX3"
+}

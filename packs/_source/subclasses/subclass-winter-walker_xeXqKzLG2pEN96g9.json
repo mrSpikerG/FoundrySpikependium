@@ -1,0 +1,296 @@
+{
+  "_id": "xeXqKzLG2pEN96g9",
+  "name": "Winter Walker",
+  "type": "subclass",
+  "img": "icons/magic/water/snowflake-ice-snow-white.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Переживите ужасы ледяных пустошей</em></p><p>Зимние странники оттачивают своё мастерство в суровых и замёрзших диких землях, таких как Долина ледяного ветра. Покрытые инеем, эти беспощадные следопыты охотятся на монстров арктических пустошей, со временем сами превращаясь в ледяные ужасы.</p><p>Более других следопытов Долины ледяного ветра зимние странники известны своим глубоким знанием паранормальных явлений, характерных для этих мест, включая скрытую магию павших городов Нетерила, эндемичных монстров, таких как йети и скальные кошки, а также растущую угрозу вторжений из Подземья.</p><p>В обмен на свою холодную прагматику, пугающую магию и знание региона эти зимние странники вызывают одновременно уважение и страх. Жители Десяти городов говорят, что частое столкновение зимних странников со злыми сущностями даёт им их устрашающие силы. В то время как многие регхедские кочевники верят, что духи природы наделяют зимних странников уникальным проклятием.</p><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "winter-walker",
+    "classIdentifier": "ranger",
+    "advancement": [
+      {
+        "_id": "6PDfbirPiy3DE07q",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.L0VlE1wYjHY0Ptd5",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.lCIR999zE8jWUUhB",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.MuI9nwS1ACfnCl3p",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "KXK4cFlpQxRhjXGa",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.q0vh81xJvDnd8x6o",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "12hJNa6b8C5EilNy",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.16VDiF1UP1SEzWRU",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 11,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "d0SfcEzoSCBpRQv8",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.kDygErtF2dCAdU1A",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 15,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "hmvNB1z0bZLJK1vx",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplIceKnife00",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "0lgHNKUQvQ6F7Es8",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPasswithou",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 5,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "AVcoZLQdb5cwAM7F",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplRemoveCurs",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "Cr5lWP9K4s8dpSK1",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplIceStorm00",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 13,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "03cQMIk1OHNO121I",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplConeofCold",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 17,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "jfm0RAUGlgxukBjQ",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "polar-strikes",
+          "type": "dice",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "3": {
+              "number": 1,
+              "faces": 4,
+              "modifiers": []
+            },
+            "11": {
+              "number": 1,
+              "faces": 6,
+              "modifiers": []
+            }
+          }
+        },
+        "value": {},
+        "title": "Полярные удары",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "vCl8GX3HCO05K1UI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:winter-walker",
+      "originalName": "Winter Walker"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!xeXqKzLG2pEN96g9"
+}

@@ -1,0 +1,229 @@
+{
+  "_id": "fEoEPK3GLxxR7Zz2",
+  "name": "Защитная связь",
+  "type": "feat",
+  "img": "icons/magic/control/energy-stream-link-large-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Действием магия вы можете потратить одно применение вашего Божественного канала, чтобы установить божественную связь с согласным существом в пределах 5 футов от вас. Связь длится один час или пока вы не получите состояние &Reference[unconscious]{бессознательный}. Если связанное существо находится в пределах вашей досягаемости и по нему попадают броском атаки, пока действует связь, то вы можете реакцией добавить ваш модификатор Харизмы (минимум +1) к КД этого существа, что может привести к промаху атаки.</p><p>Вы можете прекратить вашу божественную связь в любое время (действие не требуется). Если у вас уже есть божественная связь, когда вы создаёте новую, то предыдущая связь прекращается.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-MS",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "warding-bond",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Клятва чаростража",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "I3n0HUSrKynx2D1O": {
+        "_id": "I3n0HUSrKynx2D1O",
+        "type": "utility",
+        "name": "Установить связь",
+        "img": "icons/magic/control/energy-stream-link-large-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:channel-divinity-paladin",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "IdSPb7HZUIHJSvDp": {
+        "_id": "IdSPb7HZUIHJSvDp",
+        "type": "utility",
+        "name": "Защитить связанного",
+        "img": "icons/magic/control/energy-stream-link-large-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "По связанному существу в досягаемости попали атакой",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "max(1, @abilities.cha.mod)",
+          "name": "Бонус к КД",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "Upi6SZVPoWLHBKKt",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:oath-of-the-spellguard:warding-bond"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!fEoEPK3GLxxR7Zz2"
+}

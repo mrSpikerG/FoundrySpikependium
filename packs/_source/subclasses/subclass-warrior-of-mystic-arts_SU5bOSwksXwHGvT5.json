@@ -1,0 +1,226 @@
+{
+  "_id": "SU5bOSwksXwHGvT5",
+  "name": "Warrior of Mystic Arts",
+  "type": "subclass",
+  "img": "icons/magic/symbols/runes-star-orange-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Слияние искусств боя и мистики</em></p><p>Мастера мистических искусств используют магию, чтобы дополнять свои боевые навыки. Они направляют своё сверхъестественное сосредоточение, чтобы усиливать как магические, так и физические способности.</p><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-MS",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "mystic-arts",
+    "classIdentifier": "monk",
+    "advancement": [
+      {
+        "_id": "yNtW4JK0qKVipEzQ",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.tZskZilPYPKGakGF",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "pg8ZFK0WXQ2PI1am",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.YFoCxtn077fGxwfp",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.WLEz1PlWPK8wRgoj",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "6E96VZofTdoVvNpV",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.v60pzGCs3vS8MkLB",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 11,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "WoEHdB2AdRqlBsfG",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.xSsnqu6PBi6jufGK",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 17,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "qeVlfY2kvqw2Eib4",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "max-prepared",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "3": {
+              "value": 3
+            },
+            "4": {
+              "value": 4
+            },
+            "7": {
+              "value": 5
+            },
+            "8": {
+              "value": 6
+            },
+            "10": {
+              "value": 7
+            },
+            "11": {
+              "value": 8
+            },
+            "13": {
+              "value": 9
+            },
+            "14": {
+              "value": 10
+            },
+            "16": {
+              "value": 11
+            },
+            "19": {
+              "value": 12
+            },
+            "20": {
+              "value": 13
+            }
+          }
+        },
+        "value": {},
+        "title": "Подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "9HrgqiCyDlLDarkn",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": true
+            },
+            "10": {
+              "count": 1,
+              "replacement": true
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:sorcerer"
+            ],
+            "level": "0",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "wis"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Заговоры чародея",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "third",
+      "ability": "wis",
+      "preparation": {
+        "formula": "@scale.mystic-arts.max-prepared"
+      }
+    }
+  },
+  "effects": [],
+  "folder": "AFaBzmqZoBZxTATv",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:warrior-of-mystic-arts",
+      "originalName": "Warrior of Mystic Arts"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SU5bOSwksXwHGvT5"
+}

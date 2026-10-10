@@ -1,0 +1,226 @@
+{
+  "_id": "bFi2XDjnqTkj8Eso",
+  "name": "Оплот разума",
+  "type": "feat",
+  "img": "icons/magic/defensive/barrier-shield-dome-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>В начале своего хода вы можете потратить одну псионическую кость, чтобы укрепить свой разум и войти в состояние ментальной защиты. В течение следующих 10 минут вы получаете сопротивление к урону психической энергией, а также каждый раз, когда вы совершаете спасбросок Интеллекта, Мудрости или Харизмы, вы добавляете бросок своей псионической кости к результату спасброска. Этот бросок не расходует псионическую кость. Вы не можете применять этот эффект, если недееспособны.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PU",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "mental-bulwark",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Телепат",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "D7pwj9ED85P3ICxC": {
+        "_id": "D7pwj9ED85P3ICxC",
+        "type": "utility",
+        "name": "",
+        "img": "icons/magic/defensive/barrier-shield-dome-pink.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "turnStart",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:psionic-power",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "PXb85gRBbvH0p9lq"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "PXb85gRBbvH0p9lq",
+      "name": "Оплот разума",
+      "img": "icons/magic/defensive/barrier-shield-dome-pink.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "psychic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "FUKBWmrH5BnyVMuk"
+          },
+          {
+            "key": "system.abilities.int.save.roll.bonus",
+            "value": "+ @scale.psion.die",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Fa7aq3VrUEeYCCA8"
+          },
+          {
+            "key": "system.abilities.wis.save.roll.bonus",
+            "value": "+ @scale.psion.die",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "tS1evSs9yBYUFiyr"
+          },
+          {
+            "key": "system.abilities.cha.save.roll.bonus",
+            "value": "+ @scale.psion.die",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "2rwmF0sCtRKhiCsW"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!bFi2XDjnqTkj8Eso.PXb85gRBbvH0p9lq"
+    }
+  ],
+  "folder": "XSurnhDM76f6sLl5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:telepath:mental-bulwark"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!bFi2XDjnqTkj8Eso"
+}

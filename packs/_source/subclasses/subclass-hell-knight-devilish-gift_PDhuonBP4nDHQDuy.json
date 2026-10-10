@@ -1,0 +1,119 @@
+{
+  "_id": "PDhuonBP4nDHQDuy",
+  "name": "Дьявольский дар",
+  "type": "feat",
+  "img": "icons/magic/perception/eye-slit-red-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Как солдат на службе у представителей Девяти преисподних, вы получили силы исчадия. Вы получаете следующие эффекты.</p><p><strong>Дьявольское зрение.</strong> Вы можете нормально видеть при тусклом свете и во тьме (как магической, так и немагической) в пределах 120 футов от себя.</p><p><strong>Язык дьяволов.</strong> Вы знаете инфернальный, язык дьяволов. Если вы уже знаете инфернальный, то вы изучаете другой язык по своему выбору.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "devilish-gift",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Рыцарь ада",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "HqBEUne831QA9VB4",
+      "name": "Дьявольское зрение",
+      "img": "icons/magic/perception/eye-slit-red-orange.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.senses.ranges.darkvision",
+            "value": "120",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "tE7F6Xc5covuyvpv"
+          },
+          {
+            "key": "system.attributes.senses.special",
+            "value": "Дьявольское зрение 120 фт. (видит в магической тьме)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "nkQoFTmUHqSDlxiL"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!PDhuonBP4nDHQDuy.HqBEUne831QA9VB4"
+    }
+  ],
+  "folder": "P63sQnzKEzpp503n",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:hell-knight:devilish-gift"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!PDhuonBP4nDHQDuy"
+}

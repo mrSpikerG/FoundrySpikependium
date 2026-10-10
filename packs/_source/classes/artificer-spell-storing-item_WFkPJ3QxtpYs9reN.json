@@ -1,0 +1,156 @@
+{
+  "_id": "WFkPJ3QxtpYs9reN",
+  "name": "Spell-Storing Item",
+  "type": "feat",
+  "img": "icons/weapons/wands/wand-gem-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p>Каждый раз после продолжительного отдыха вы можете коснуться одного простого или воинского оружия либо одного предмета, который можно использовать в качестве заклинательной фокусировки, и вложить в него заклинание. Вы выбираете заклинание изобретателя 1, 2 или 3 уровня, которое имеет время накладывания «1 действие» и не требует расходуемого материального компонента (вам не обязательно иметь это заклинание среди подготовленных).</p><p>Держа этот предмет, существо может действием воспроизвести эффект заклинания из него, используя ваш модификатор заклинательной характеристики. Если для заклинания требуется концентрация, существо должно поддерживать её. После использования предмета для создания эффекта заклинания его нельзя использовать таким образом снова до начала следующего хода существа.</p><p>Заклинание остаётся в предмете до тех пор, пока оно не будет использовано количество раз, равное удвоенному значению вашего модификатора Интеллекта (минимум 2), или пока вы не используете это умение снова, чтобы вложить заклинание в предмет.</p><p><em>Счётчик использований этого умения отслеживает оставшиеся воспроизведения заклинания.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "spell-storing-item",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Изобретатель",
+    "prerequisites": {
+      "level": 11,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "max(2, 2 * @abilities.int.mod)",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "7OKJHJPt1P6UeI85": {
+        "_id": "7OKJHJPt1P6UeI85",
+        "type": "utility",
+        "name": "Воспроизвести заклинание",
+        "img": "icons/weapons/wands/wand-gem-teal.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "DGewewqxCtOGJgyz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "artificer:spell-storing-item",
+      "originalName": "Spell-Storing Item"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!WFkPJ3QxtpYs9reN"
+}

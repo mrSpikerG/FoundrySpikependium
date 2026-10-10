@@ -1,0 +1,211 @@
+{
+  "_id": "9CDDV9AMp4xZudgS",
+  "name": "Mark of Warding",
+  "type": "feat",
+  "img": "icons/sundries/misc/lock-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Интуиция хранителя.</strong> Когда вы совершаете проверку Интеллекта (Анализ) или проверку с использованием воровских инструментов, вы можете бросить 1к4 и добавить выпавшее число к проверке характеристики.</p><p><strong>Охранные чары и печати.</strong> У вас всегда подготовлены заклинания @UUID[Compendium.dnd5e.spells24.Item.phbsplAlarm00000]{Сигнал тревоги} и @UUID[Compendium.dnd5e.spells24.Item.phbsplMageArmor0]{Доспехи мага}. Вы можете накладывать каждое из этих заклинаний 1 раз без траты ячейки заклинаний. Вы восстанавливаете возможность таким образом накладывать их после продолжительного отдыха. Вы также можете накладывать эти заклинания, используя любые имеющиеся у вас ячейки заклинаний. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этих заклинаний (выберите при выборе этой черты).</p><p>Когда вы достигаете 3 уровня, у вас также всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneLock]{Волшебный замок}, и вы можете накладывать его таким же образом.</p><p><strong>Заклинания метки.</strong> Если у вас есть умение Использование заклинаний или Магия договора, то заклинания из таблицы «Заклинания: Метка охраны» добавляются в список заклинаний вашего умения.</p><table><caption>Заклинания: Метка охраны</caption><thead><tr><th>Уровень заклинания</th><th>Заклинания</th></tr></thead><tbody><tr><td>1</td><td><em>Доспех Агатиса</em>, @UUID[Compendium.dnd5e.spells24.Item.phbSanctuary0000]{Убежище}</td></tr><tr><td>2</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplKnock00000]{Стук}, @UUID[Compendium.dnd5e.spells24.Item.phbsplNystulsMag]{Нистулова ложная магия}</td></tr><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplGlyphofWar]{Охранные руны}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMagicCircl]{Магический круг}</td></tr><tr><td>4</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplLeomundsSe]{Леомундов потайной сундук}, @UUID[Compendium.dnd5e.spells24.Item.phbFaithfulHound]{Верный пёс Морденкайнена}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplAntilifeSh]{Преграда жизни}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "13",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "mark-of-warding",
+    "type": {
+      "value": "feat",
+      "subtype": "dragonmark"
+    },
+    "requirements": "Кампания в Эберроне, нельзя иметь другую черту метки дракона",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "Ww1p1ZD0Ko6QqyvR": {
+        "_id": "Ww1p1ZD0Ko6QqyvR",
+        "type": "utility",
+        "name": "Интуиция хранителя",
+        "img": "icons/sundries/misc/lock-steel-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d4",
+          "name": "Бонус к проверке",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "lact2tX58lA8SX2S",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplAlarm00000",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMageArmor0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заклинания метки",
+        "hint": ""
+      },
+      {
+        "_id": "kvb1lQ9EjfUaqT1Y",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplArcaneLock",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Заклинание метки (3 уровень)",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "tvzAq9WrCdkT5t83",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:warding",
+      "originalName": "Mark of Warding"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9CDDV9AMp4xZudgS"
+}

@@ -1,0 +1,179 @@
+{
+  "_id": "eobcW6vGdZV4tyiH",
+  "name": "Hell Knight",
+  "type": "subclass",
+  "img": "icons/magic/fire/flame-burning-skull-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Наносите адские раны и проклинайте врагов</em></p><p>Рыцари ада — поборники архидьяволов и других высокопоставленных исчадий Девяти преисподних, таких как камбионы и ночные карги. Вооружённые приёмами самых свирепых воинов Девяти преисподних, рыцари ада наносят инфернальные раны и сражаются с упорством дьявола.</p><p>Дьяволы и другие зловещие фигуры используют рыцарей ада, чтобы вершить свою волю по всей мультивселенной. Один рыцарь ада может служить солдатом на передовой Кровавой войны, тогда как другому может быть поручено карать существ, нарушающих инфернальные договоры или пытающихся избежать их последствий. Иные действуют как межпланарные охотники за головами, ускоряя путь порочных душ к реке Стикс.</p><table><caption>Стремления рыцаря ада</caption><thead><tr><th>1к6</th><th>Вы стали рыцарем ада, потому что вы…</th></tr></thead><tbody><tr><td>1</td><td>Желали сокровищ, которые могли даровать только Девять преисподних.</td></tr><tr><td>2</td><td>Жаждали силы за пределами смертных возможностей.</td></tr><tr><td>3</td><td>Заключили пари с дьяволом — и проиграли.</td></tr><tr><td>4</td><td>Пожертвовали своей душой, чтобы спасти кого-то другого.</td></tr><tr><td>5</td><td>Искали мести против врага, который глубоко вас обидел.</td></tr><tr><td>6</td><td>Были обмануты мелким шрифтом в инфернальном договоре.</td></tr></tbody></table><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "hell-knight",
+    "classIdentifier": "fighter",
+    "advancement": [
+      {
+        "_id": "Z1G5wsDSvHjm4TtF",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.PDhuonBP4nDHQDuy",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.UFUeR8HlPnn2uZ9o",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.9owTFSOad18RlpJg",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "FCrdXxzLg3ja1mNt",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5ddPx6mCpEyMg6dG",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Uey9MZ5SS6kNY58T",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "dWqNv9fDvOnzGewO",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.sce9VM2cXlaEtSHB",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "xuy40xpP2zKCIR9e",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.pz4GlHo56iJFBXJd",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.q0aHsfwrN1ZfNuWl",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 15,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "1CyP27KVgXoL3GKy",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.INoSFI561lFg0Aj8",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "ErBs6AmnBLcjTCvR",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": true,
+          "grants": [
+            "languages:exotic:infernal"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Язык дьяволов",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "UUMcxDdAeS7eYCd6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:hell-knight",
+      "originalName": "Hell Knight"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!eobcW6vGdZV4tyiH"
+}

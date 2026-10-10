@@ -1,0 +1,202 @@
+{
+  "_id": "vR9AedQSVvXfI9Em",
+  "name": "Книга заклинаний некромантии",
+  "type": "feat",
+  "img": "icons/sundries/books/book-purple-cross.webp",
+  "system": {
+    "description": {
+      "value": "<p>Тайны некромантии в вашей книге заклинаний даруют вам дополнительные силы. Вы получаете следующие преимущества:</p><p><strong>Сопротивление некротической энергии.</strong> Вы получаете сопротивление урону некротической энергией.</p><p><strong>Жуткая жатва.</strong> Когда вы накладываете заклинание школы некромантии ячейкой заклинания, вы можете выбрать одну нежить, которую видите в пределах 60 футов от себя. Она восстанавливает количество хитов, равное уровню использованной ячейки заклинания + ваш уровень волшебника.</p><p><strong>Фамильяр-нежить.</strong> Заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili]{Поиск фамильяра} появляется в вашей книге заклинаний. Когда вы накладываете это заклинание, вы можете выбрать одну из обычных форм для фамильяра или одну из следующих особых форм: скелет или зомби (см. приложение Б в Книге игрока для статблока фамильяра).</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "necromantic-spellbook",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Некромант",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "9bIYOi2huoCmeGGM": {
+        "_id": "9bIYOi2huoCmeGGM",
+        "type": "heal",
+        "name": "Жуткая жатва",
+        "img": "icons/sundries/books/book-purple-cross.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Заклинание некромантии с ячейкой (подставьте уровень ячейки)",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "@classes.wizard.levels"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "whvR9CI5wxwvPDG4",
+      "name": "Сопротивление некротической энергии",
+      "img": "icons/magic/death/skull-energy-light-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "necrotic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "rKtEKx9LX3SRA3Vu"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!vR9AedQSVvXfI9Em.whvR9CI5wxwvPDG4"
+    }
+  ],
+  "folder": "xmSLYnlr79W381Ju",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:necromancer:necromantic-spellbook"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!vR9AedQSVvXfI9Em"
+}

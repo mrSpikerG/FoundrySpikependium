@@ -1,0 +1,266 @@
+{
+  "_id": "3Q4upRDlm5jDeUwR",
+  "name": "Lich Ascension",
+  "type": "feat",
+  "img": "icons/magic/death/undead-skeleton-lich-armor.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваш путь к становлению личом завершён. Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте значение Интеллекта, Мудрости или Харизмы на 1, максимум до 20.</p><p><strong>Нежить.</strong> Ваш тип существа — нежить.</p><p><strong>Нечестивая анатомия.</strong> У вас есть сопротивление к некротическому урону и урону ядом. Вы не получаете степени истощения из-за обезвоживания, недоедания или удушья.</p><p><strong>Устрашающий взгляд.</strong> У вас всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{Ужас}, если оно ещё не подготовлено. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этого заклинания (выберите при выборе этой черты). Вы можете накладывать это заклинание без траты ячейки заклинаний количество раз, равное модификатору вашей заклинательной характеристики (минимум один раз), и восстанавливаете все потраченные применения после завершения продолжительного отдыха.</p><p><strong>Восстановление.</strong> Если вы умираете, то формируетесь заново через 1к10 дней, если у вас есть сосуд души и вас не вернули к жизни до этого. Вы получаете новое тело, появляясь со всеми своими хитами в ближайшем свободном пространстве в пределах 5 футов от вашего сосуда души.</p><p><em>В переводе черта подписана как «Черта пути рыцаря смерти» — по смыслу это черта пути лича.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "lich-ascension",
+    "type": {
+      "value": "feat",
+      "subtype": "villainousPath"
+    },
+    "requirements": "Уровень 12+, минимум две черты пути лича",
+    "prerequisites": {
+      "level": 12,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "l2yBuFsDU3c6UNXw": {
+        "_id": "l2yBuFsDU3c6UNXw",
+        "type": "utility",
+        "name": "Восстановление",
+        "img": "icons/magic/death/undead-skeleton-lich-armor.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вы умерли и у вас есть сосуд души",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d10",
+          "name": "Дней до восстановления",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "EP2f48LSYZBcfdy6",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [
+            "str",
+            "dex",
+            "con"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "title": "Увеличение характеристики",
+        "hint": ""
+      },
+      {
+        "_id": "0NmRHVU8E0kHsbxU",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFear000000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "max(1, @attributes.spell.mod)",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Ужас",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "B9VAMTmiuMaZAyXp",
+      "name": "Нечестивая анатомия",
+      "img": "icons/magic/death/skeleton-skull-soul-blue.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.details.type.value",
+            "value": "undead",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "LSYzHU3gOVmB5ZSP"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "necrotic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "hlj11snBv0cS69rB"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "poison",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "GDiHZz0Dgwo3HW8a"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!3Q4upRDlm5jDeUwR.B9VAMTmiuMaZAyXp"
+    }
+  ],
+  "folder": "ZcAzIyUqI9iJPp1F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:lich-ascension",
+      "originalName": "Lich Ascension"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!3Q4upRDlm5jDeUwR"
+}

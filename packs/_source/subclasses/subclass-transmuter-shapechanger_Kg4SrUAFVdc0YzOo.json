@@ -1,0 +1,155 @@
+{
+  "_id": "Kg4SrUAFVdc0YzOo",
+  "name": "Перевёртыш",
+  "type": "feat",
+  "img": "icons/creatures/abilities/wolf-heads-swirl-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>У вас всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplPolymorph0]{Полиморф}, и вы можете один раз накладывать его без траты ячейки заклинания. Вы восстанавливаете возможность накладывать его таким образом после завершения продолжительного отдыха.</p><p>Кроме того, когда вы накладываете это заклинание на себя, вы можете изменить его, чтобы получить следующие эффекты. Применив это умение, вы не можете сделать это снова, пока не завершите продолжительный отдых.</p><p><strong>Параметры статблока.</strong> Вы сохраняете свою личность, воспоминания и способность говорить. Также вы сохраняете показатели Интеллекта, Мудрости и Харизмы; умения класса; языки и черты.</p><p><strong>Преобразованные заклинания.</strong> Вы можете накладывать заклинания школы преобразования, находясь в превращении, кроме заклинаний, содержащих материальный компонент с указанной стоимостью или требующих расходования этого компонента.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "shapechanger",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Преобразователь",
+    "prerequisites": {
+      "level": 10,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "DZX3vvYNBluBP5KD": {
+        "_id": "DZX3vvYNBluBP5KD",
+        "type": "utility",
+        "name": "Изменить Полиморф на себя",
+        "img": "icons/creatures/abilities/wolf-heads-swirl-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "1YXg65j3VKIrhW88",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:transmuter:shapechanger"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Kg4SrUAFVdc0YzOo"
+}

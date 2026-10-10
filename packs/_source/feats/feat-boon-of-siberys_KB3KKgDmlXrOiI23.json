@@ -1,0 +1,167 @@
+{
+  "_id": "KB3KKgDmlXrOiI23",
+  "name": "Boon of Siberys",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-solid-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте одну характеристику по вашему выбору на 1, до максимума 30.</p><p><strong>Подготовка драконьих заклинаний.</strong> У вас всегда подготовлены заклинания из таблицы вашей черты метки дракона, если таковая имеется.</p><p><strong>Искажённая магия.</strong> Выберите одно заклинание любого уровня из списка заклинаний чародея или заклинание из таблицы «Драконьи метки Сибериса». Это заклинание всегда считается для вас подготовленным. Вы можете накладывать его один раз без траты ячейки заклинаний, и после короткого или продолжительного отдыха снова получаете такую возможность. Также вы можете накладывать это заклинание, используя любые имеющиеся у вас ячейки заклинаний. Интеллект, Мудрость или Харизма (выбирается при получении дара) является вашей заклинательной характеристикой для этого заклинания.</p><table><caption>Драконьи метки Сибериса</caption><thead><tr><th>Метка</th><th>Заклинание</th></tr></thead><tbody><tr><td>Обнаружения</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplTrueSeeing]{Истинное зрение}</td></tr><tr><td>Поиска</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplTeleport00]{Телепортация}</td></tr><tr><td>Укрощения</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplAnimalShap]{Превращение в животных}</td></tr><tr><td>Исцеления</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplRegenerate]{Регенерация}</td></tr><tr><td>Радушия</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHeroesFeas]{Пир героев}</td></tr><tr><td>Создания</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDemiplane0]{Демиплан}</td></tr><tr><td>Пути</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplPlaneShift]{Уход в иной план}</td></tr><tr><td>Письма</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplSymbol0000]{Знак}</td></tr><tr><td>Стража</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplMindBlank0]{Сокрытие разума}</td></tr><tr><td>Тени</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplProjectIma]{Проекция}</td></tr><tr><td>Шторма</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplControlWea]{Власть над погодой}</td></tr><tr><td>Охраны</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplMaze000000]{Лабиринт}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "16",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "boon-of-siberys",
+    "type": {
+      "value": "feat",
+      "subtype": "epicBoon"
+    },
+    "requirements": "19-й уровень и кампания в Эберроне",
+    "prerequisites": {
+      "level": 19,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "2abISjy0MZZ3N9aM",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [],
+          "recommendation": null,
+          "max": 30
+        },
+        "value": {},
+        "title": "Увеличение характеристики",
+        "hint": ""
+      },
+      {
+        "_id": "d3hqiZjm8gPILQxz",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "0": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplTrueSeeing"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplTeleport00"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplAnimalShap"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplRegenerate"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplHeroesFeas"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDemiplane0"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPlaneShift"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSymbol0000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMindBlank0"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplProjectIma"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplControlWea"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMaze000000"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "sr",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Искажённая магия",
+        "hint": "Можно также перетащить любое заклинание из списка чародея."
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "OxhJtGFKFCdrLPAZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:boon-of-siberys",
+      "originalName": "Boon of Siberys"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!KB3KKgDmlXrOiI23"
+}

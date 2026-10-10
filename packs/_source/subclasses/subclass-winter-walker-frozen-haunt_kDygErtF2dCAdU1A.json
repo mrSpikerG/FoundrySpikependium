@@ -1,0 +1,419 @@
+{
+  "_id": "kDygErtF2dCAdU1A",
+  "name": "Замороженный призрак",
+  "type": "feat",
+  "img": "icons/magic/water/snowflake-ice-blue-white.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы накладываете заклинание Метка охотника, вы можете принять призрачную снежную форму. Эта форма длится до окончания действия заклинания, и пока вы находитесь в этой форме, вы получаете следующие эффекты. После использования этого умения вы не можете использовать его снова до завершения продолжительного отдыха, если только не потратите ячейку заклинания 4 уровня или выше (действие не требуется).</p><p><strong>Замороженная душа.</strong> Вы получаете иммунитет к урону холодом. Когда вы впервые принимаете эту форму и в начале каждого вашего последующего хода каждое выбранное вами существо в радиусе 15 футов от вас получает 2к4 урона холодом.</p><p><strong>Частично бестелесный.</strong> Вы получаете иммунитет к состояниям схваченный, лежащий ничком и опутанный. Вы можете перемещаться сквозь существ и объекты, как если бы это была труднопроходимая местность, но вы получаете 1к10 урона силовым полем, если завершаете свой ход внутри существа или объекта. Если действие формы заканчивается, пока вы находитесь внутри существа или объекта, вы перемещаетесь в ближайшее свободное пространство.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "frozen-haunt",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Зимний странник",
+    "prerequisites": {
+      "level": 15,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "WfodL9UxVYr9fkCd": {
+        "_id": "WfodL9UxVYr9fkCd",
+        "type": "utility",
+        "name": "Принять форму",
+        "img": "icons/magic/water/snowflake-ice-blue-white.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вы накладываете Метку охотника",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "FD5x2VaYzUeMT0z9"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "rqucFn45x10wERn5": {
+        "_id": "rqucFn45x10wERn5",
+        "type": "utility",
+        "name": "Принять форму (ячейка 4+)",
+        "img": "icons/magic/water/snowflake-ice-blue-white.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "4",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "FD5x2VaYzUeMT0z9"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "xTtMCWrg1BO5ToN0": {
+        "_id": "xTtMCWrg1BO5ToN0",
+        "type": "damage",
+        "name": "Замороженная душа",
+        "img": "icons/magic/water/snowflake-ice-blue-white.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Начало вашего хода",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "15",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "enemy",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "cold"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "FD5x2VaYzUeMT0z9",
+      "name": "Замороженный призрак",
+      "img": "icons/magic/water/snowflake-ice-blue-white.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.di.value",
+            "value": "cold",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "aKqdYs1PYNfqkacz"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "grappled",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "zHXMUeJPsuEsAmXT"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "prone",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "UB55z8qT9CQzQBNc"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "restrained",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "upIedvQHD20Tk52D"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!kDygErtF2dCAdU1A.FD5x2VaYzUeMT0z9"
+    }
+  ],
+  "folder": "A0c07E4Bj0ac1pxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:winter-walker:frozen-haunt"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!kDygErtF2dCAdU1A"
+}

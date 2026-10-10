@@ -1,0 +1,143 @@
+{
+  "_id": "UFUeR8HlPnn2uZ9o",
+  "name": "Оружие инферно",
+  "type": "feat",
+  "img": "icons/magic/fire/dagger-rune-enchant-flame-strong-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы совершаете действие атака, вы можете наполнить одно оружие, которое держите, адским пламенем, превращая его в оружие инферно. Оно остаётся преобразованным таким образом 10 минут или пока вы не используете это умение снова, не умрёте или оружие не будет находиться дальше чем в 5 футах от вас в течение 1 минуты или более. Вы также можете завершить этот эффект раньше (действие не требуется).</p><p>Пока оружие преобразовано в оружие инферно, оно излучает тусклый свет в пределах 5 футов, и каждый раз, когда вы наносите урон этим оружием, оно может наносить урон огнём или свой обычный тип урона (на ваш выбор).</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "inferno-weapon",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Рыцарь ада",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "G50nUxXAzxHcr1AZ": {
+        "_id": "G50nUxXAzxHcr1AZ",
+        "type": "utility",
+        "name": "",
+        "img": "icons/magic/fire/dagger-rune-enchant-flame-strong-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "При действии атака",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "P63sQnzKEzpp503n",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:hell-knight:inferno-weapon"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!UFUeR8HlPnn2uZ9o"
+}

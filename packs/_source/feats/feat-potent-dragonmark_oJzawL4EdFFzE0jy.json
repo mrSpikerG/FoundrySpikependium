@@ -1,0 +1,182 @@
+{
+  "_id": "oJzawL4EdFFzE0jy",
+  "name": "Potent Dragonmark",
+  "type": "feat",
+  "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте одну характеристику, используемую для накладывания заклинаний вашей чертой метки дракона, на 1, до максимума 20.</p><p><strong>Подготовка драконьих заклинаний.</strong> У вас всегда подготовлены заклинания из таблицы вашей черты метки дракона, если таковая имеется.</p><p><strong>Драконья магия.</strong> У вас есть 1 ячейка заклинаний, которую можно использовать для накладывания заклинаний от вашей черты метки дракона. Уровень этой ячейки равен половине вашего уровня (округляется вверх), но не выше 5. Вы восстанавливаете израсходованную ячейку, когда завершаете короткий или продолжительный отдых. Вы можете использовать эту ячейку только для накладывания заклинаний, которые у вас подготовлены благодаря вашей черте метки дракона или умению «Подготовка драконьих заклинаний» этой черты.</p><p><em>Счётчик использований этой черты — ячейка драконьей магии.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "15",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "potent-dragonmark",
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "4-й уровень и выше, любая черта метки дракона",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "sr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "Svm78qFDjEdFnoTu": {
+        "_id": "Svm78qFDjEdFnoTu",
+        "type": "utility",
+        "name": "Ячейка драконьей магии",
+        "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "min(5, ceil(@details.level / 2))",
+          "name": "Уровень ячейки",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "eOOAQ1VxOiNpLx8B",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [
+            "str",
+            "dex"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "title": "Увеличение характеристики",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "21wCYGXSEhYEDGNW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:potent-dragonmark",
+      "originalName": "Potent Dragonmark"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!oJzawL4EdFFzE0jy"
+}

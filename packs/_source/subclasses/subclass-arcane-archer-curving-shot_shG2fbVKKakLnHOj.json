@@ -1,0 +1,143 @@
+{
+  "_id": "shG2fbVKKakLnHOj",
+  "name": "Странствующий выстрел",
+  "type": "feat",
+  "img": "icons/skills/ranged/arrow-flying-spiral-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы научились перенаправлять промахнувшийся выстрел на новую цель. Если вы совершаете бросок атаки оружием со свойством боеприпасы и промахиваетесь, то бонусным действием вы можете вызвать рикошет стрелы по новой цели сразу после промаха. Новая цель должна быть существом, которое вы видите, находящимся в пределах дистанции оружия и в пределах 60 футов от изначальной цели атаки. Совершите бросок атаки против новой цели.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "curving-shot",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Арканный лучник",
+    "prerequisites": {
+      "level": 7,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "8i04lc8XljLfOPxa": {
+        "_id": "8i04lc8XljLfOPxa",
+        "type": "utility",
+        "name": "",
+        "img": "icons/skills/ranged/arrow-flying-spiral-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "Промах атакой оружием с боеприпасами",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "tVhxoIpl3csKGQMA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:arcane-archer:curving-shot"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!shG2fbVKKakLnHOj"
+}

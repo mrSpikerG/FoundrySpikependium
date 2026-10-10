@@ -1,0 +1,184 @@
+{
+  "_id": "mr3UU5vagiiHF5Fj",
+  "name": "Death Knight Initiate",
+  "type": "feat",
+  "img": "icons/magic/death/skull-horned-worn-fire-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Рыцари смерти — это негодяи, дезертиры и опозоренные поборники, неживые воины, что идут к погибели, чтобы исполнить свои корыстные желания и утолить жажду крови.</p><p>Для завершения пути рыцаря смерти сначала возьмите черту Посвящённый рыцаря смерти, затем любую другую черту пути рыцаря смерти на ваш выбор. Наконец, когда вы достигнете 12 уровня или выше, возьмите черту Вознесение рыцаря смерти.</p><table><caption>Пути рыцаря смерти</caption><thead><tr><th>1к6</th><th>Вы пали, когда…</th></tr></thead><tbody><tr><td>1</td><td>Бросили своих спутников в бою.</td></tr><tr><td>2</td><td>Предали любимого человека.</td></tr><tr><td>3</td><td>Намеренно навредили невиновному.</td></tr><tr><td>4</td><td>Заключили договор со злобной сущностью, такой как повелитель демонов.</td></tr><tr><td>5</td><td>Оскорбили благого бога.</td></tr><tr><td>6</td><td>Нарушили клятву.</td></tr></tbody></table><p>Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте значение Силы или Харизмы на 1, максимум до 20.</p><p><strong>Единицы смерти.</strong> Ваша преданность пути рыцаря смерти даёт вам доступ к нечестивым силам нежити. Ваша способность применять такие силы представлена единицами смерти. У вас есть количество единиц смерти, равное вашему бонусу мастерства. Вы восстанавливаете все потраченные единицы смерти после завершения продолжительного отдыха.</p><p>Вы можете тратить единицы смерти, чтобы использовать определённые умения пути рыцаря смерти. Эта черта даёт вам одно такое умение: Удар ужаса.</p><p><strong>Удар ужаса.</strong> У вас всегда подготовлено заклинание <em>Гневная кара</em>. Харизма является вашей заклинательной характеристикой для этого заклинания. Вы можете накладывать его без траты ячейки заклинания, потратив 1 единицу смерти. Когда вы тратите единицы смерти, чтобы наложить заклинание Гневная кара, цель получает помеху на спасброски Мудрости, чтобы избежать или завершить эффект заклинания. Вы также можете накладывать это заклинание, используя любые имеющиеся у вас ячейки заклинаний.</p><p><em>Счётчик использований этой черты — ваши единицы смерти. Гневной кары нет в SRD — добавьте её из своей книги.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "death-knight-initiate",
+    "type": {
+      "value": "feat",
+      "subtype": "villainousPath"
+    },
+    "requirements": "4+ уровень, умение Оружейные приёмы",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "@prof",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "7ghRuvBf7vkEkcEZ": {
+        "_id": "7ghRuvBf7vkEkcEZ",
+        "type": "utility",
+        "name": "Удар ужаса (1 единица смерти)",
+        "img": "icons/magic/death/skull-horned-worn-fire-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "Наложение Гневной кары без ячейки",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "6LIQci545FagKR18",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [
+            "dex",
+            "con",
+            "int",
+            "wis"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "title": "Увеличение характеристики",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "K7wzV0Fs1L3GcdJg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:death-knight-initiate",
+      "originalName": "Death Knight Initiate"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!mr3UU5vagiiHF5Fj"
+}

@@ -1,0 +1,235 @@
+{
+  "_id": "os9LthflO0DtiAE8",
+  "name": "Undead Grasp",
+  "type": "feat",
+  "img": "icons/magic/death/hand-withered-gray.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте значение Интеллекта, Мудрости или Харизмы на 1, максимум до 20.</p><p><strong>Парализующее прикосновение.</strong> Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplChillTouch]{Леденящее прикосновение}. Если вы уже знаете его, то изучаете другой заговор на ваш выбор. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этого заклинания (выберите, когда выбираете эту черту).</p><p>Когда вы наносите урон заговором Леденящее прикосновение, вы можете потратить ячейку заклинаний 1+ уровня, чтобы попытаться парализовать цель. Цель получает дополнительно 1к10 некротического урона за каждый уровень потраченной ячейки заклинаний и должна преуспеть в спасброске Телосложения против вашей Сл. спасброска заклинаний, иначе она получает состояние &Reference[paralyzed]{парализованный} до начала вашего следующего хода.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "undead-grasp",
+    "type": {
+      "value": "feat",
+      "subtype": "villainousPath"
+    },
+    "requirements": "Черта Посвящённый лич",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "GNUf9rs2oE68MEXm": {
+        "_id": "GNUf9rs2oE68MEXm",
+        "type": "save",
+        "name": "",
+        "img": "icons/magic/death/hand-withered-gray.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Урон заговором Леденящее прикосновение",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "full",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "FdDaHlCAcAeHCloV",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [
+            "str",
+            "dex",
+            "con"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "title": "Увеличение характеристики",
+        "hint": ""
+      },
+      {
+        "_id": "EATu5aCzsmfXZuJP",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplChillTouch",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Леденящее прикосновение",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "ZcAzIyUqI9iJPp1F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:undead-grasp",
+      "originalName": "Undead Grasp"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!os9LthflO0DtiAE8"
+}

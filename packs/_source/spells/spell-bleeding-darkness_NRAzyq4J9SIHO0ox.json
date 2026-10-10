@@ -1,0 +1,249 @@
+{
+  "_id": "NRAzyq4J9SIHO0ox",
+  "name": "Bleeding Darkness",
+  "type": "spell",
+  "img": "icons/magic/unholy/orb-glowing-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: псионик, колдун, волшебник.</em></p><p>Вы создаёте чернильную пустоту с радиусом 10 футов в видимой точке, которая выше вас в пределах дистанции. Когда вы накладываете это заклинание, из сферы вырывается магическая тьма, заполняющая цилиндр радиусом 10 футов и высотой 40 футов, исходящий от сферы, до начала вашего следующего хода.</p><p>Этот цилиндр является труднопроходимой местностью, и свет (магический или обычный) не может осветить эту область.</p><p>Когда тьма появляется, каждое существо в области должно совершить спасбросок Телосложения. При провале существо получает 3к8 урона холодом и &Reference[blinded]{ослеплено} до конца своего следующего хода. Существо также совершает этот спасбросок, когда впервые за ход входит в область заклинания или заканчивает там свой ход. Существо совершает этот спасбросок не более одного раза за ход.</p><p>До окончания действия заклинания вы можете действием магия переместить сферу горизонтально на расстояние до 20 футов и заставить её снова изливать магическую тьму до начала вашего следующего хода.</p><p><strong>Накладывание более высокой ячейкой.</strong> Урон увеличивается на 1к8 за каждый уровень ячейки выше 3.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PU",
+      "page": "12",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 3,
+    "materials": {
+      "value": "фиал редких чернил стоимостью 50+ зм",
+      "consumed": false,
+      "cost": 50,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "range": {
+      "value": "60",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "evo",
+    "sourceItem": "",
+    "target": {
+      "affects": {
+        "type": "creature",
+        "count": "",
+        "choice": false,
+        "special": ""
+      },
+      "template": {
+        "type": "cylinder",
+        "size": "10",
+        "units": "ft",
+        "contiguous": false,
+        "count": ""
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "pn3rY90z4QAZxol6": {
+        "_id": "pn3rY90z4QAZxol6",
+        "type": "save",
+        "name": "",
+        "img": "icons/magic/unholy/orb-glowing-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": true
+        },
+        "effects": [
+          {
+            "_id": "ILSB4TaHcQhw3x1E"
+          }
+        ],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cylinder",
+            "size": "10",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "cold"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "ILSB4TaHcQhw3x1E",
+      "name": "Ослеплён (Кровоточащая тьма)",
+      "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>До конца своего следующего хода.</p>",
+      "origin": null,
+      "statuses": [
+        "blinded"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!NRAzyq4J9SIHO0ox.ILSB4TaHcQhw3x1E"
+    }
+  ],
+  "folder": "yt9MUC2qhvb6mmbr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:bleeding-darkness",
+      "originalName": "Bleeding Darkness"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!NRAzyq4J9SIHO0ox"
+}

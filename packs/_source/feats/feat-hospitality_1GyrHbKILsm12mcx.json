@@ -1,0 +1,211 @@
+{
+  "_id": "1GyrHbKILsm12mcx",
+  "name": "Mark of Hospitality",
+  "type": "feat",
+  "img": "icons/containers/kitchenware/stein-empty.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Вечное гостеприимство.</strong> Когда вы совершаете проверку Харизмы (Убеждение) или проверку с использованием инструментов повара или пивовара, вы можете бросить 1к4 и добавить выпавшее число к проверке характеристики.</p><p><strong>Магия трактирщика.</strong> Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplPrestidigi]{Фокусы}. Кроме того, у вас всегда подготовлены заклинания @UUID[Compendium.dnd5e.spells24.Item.phbsplPurifyFood]{Очищение пищи и питья} и @UUID[Compendium.dnd5e.spells24.Item.phbsplUnseenServ]{Невидимый слуга}. Вы можете накладывать каждое из этих заклинаний 1 раз без траты ячейки заклинаний. Вы восстанавливаете возможность таким образом накладывать их после продолжительного отдыха. Вы также можете накладывать эти заклинания, используя любые имеющиеся у вас ячейки заклинаний. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этих заклинаний (выберите при выборе этой черты).</p><p><strong>Заклинания метки.</strong> Если у вас есть умение Использование заклинаний или Магия договора, то заклинания из таблицы «Заклинания: Метка радушия» добавляются в список заклинаний вашего умения.</p><table><caption>Заклинания: Метка радушия</caption><thead><tr><th>Уровень заклинания</th><th>Заклинания</th></tr></thead><tbody><tr><td>1</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplGoodberry0]{Чудо-ягоды}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSleep00000]{Усыпление}</td></tr><tr><td>2</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplAid0000000]{Подмога}, @UUID[Compendium.dnd5e.spells24.Item.phbsplCalmEmotio]{Умиротворение}</td></tr><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplCreateFood]{Сотворение пищи и воды}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLeomundsTi]{Леомундова хижина}</td></tr><tr><td>4</td><td><em>Аура очищения</em>, @UUID[Compendium.dnd5e.spells24.Item.phbPrivateSanctu]{Кабинет Морденкайнена}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHallow0000]{Святилище}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "mark-of-hospitality",
+    "type": {
+      "value": "feat",
+      "subtype": "dragonmark"
+    },
+    "requirements": "Кампания в Эберроне, нельзя иметь другую черту метки дракона",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "9fvpBctkpWaYZdML": {
+        "_id": "9fvpBctkpWaYZdML",
+        "type": "utility",
+        "name": "Вечное гостеприимство",
+        "img": "icons/containers/kitchenware/stein-empty.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d4",
+          "name": "Бонус к проверке",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "YTsRz9oJXOGQkGDw",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPrestidigi",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заговор метки",
+        "hint": ""
+      },
+      {
+        "_id": "vACEJiy1V8NOzMqY",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPurifyFood",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplUnseenServ",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заклинания метки",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "tvzAq9WrCdkT5t83",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:hospitality",
+      "originalName": "Mark of Hospitality"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!1GyrHbKILsm12mcx"
+}

@@ -1,0 +1,168 @@
+// Проверка собранных исходников компендиумов (packs/_source) без запуска Foundry.
+// Запуск: npm run validate
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const SRC = path.join(ROOT, "packs/_source");
+const SRD = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/srd.json"), "utf8"));
+const ICONS = new Set(fs.readFileSync(path.join(ROOT, "tools/data/icons.txt"), "utf8").split(/\r?\n/).filter(Boolean));
+
+const ID = /^[A-Za-z0-9]{16}$/;
+const errors = [];
+const warnings = [];
+const err = (where, msg) => errors.push(`${where}: ${msg}`);
+const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
+
+// SRD-идентификаторы, на которые разрешено ссылаться.
+const srdIds = new Set([
+  ...Object.values(SRD.spells).map(s => `Compendium.dnd5e.spells24.Item.${s.id}`),
+  ...Object.values(SRD.items).map(s => `Compendium.dnd5e.equipment24.Item.${s.id}`),
+  ...["phbarmStuddedLea", "phbwepDagger0000", "phbtulThievesToo", "phbagDungeoneers", "phbwepSpear00000",
+    "phbwepLightCross", "phbamoBolts00000", "phbagCaseCrossbo"].map(id => `Compendium.dnd5e.equipment24.Item.${id}`)
+]);
+
+// Загрузка документов.
+const docs = new Map();      // uuid → doc
+const byPack = {};
+for ( const pack of fs.readdirSync(SRC) ) {
+  byPack[pack] = [];
+  for ( const file of fs.readdirSync(path.join(SRC, pack)) ) {
+    const data = JSON.parse(fs.readFileSync(path.join(SRC, pack, file), "utf8"));
+    byPack[pack].push({ file, data });
+  }
+}
+const TYPE = { classes: "Item", subclasses: "Item", feats: "Item", spells: "Item", items: "Item", creatures: "Actor", rules: "JournalEntry" };
+for ( const [pack, list] of Object.entries(byPack) ) {
+  const ids = new Set();
+  for ( const { file, data } of list ) {
+    if ( !ID.test(data._id) ) err(file, `некорректный _id «${data._id}»`);
+    if ( ids.has(data._id) ) err(file, `повтор _id ${data._id}`);
+    ids.add(data._id);
+    if ( !data._key ) err(file, "нет _key");
+    if ( !data._key?.startsWith("!folders!") ) docs.set(`Compendium.spikependium.${pack}.${TYPE[pack]}.${data._id}`, data);
+  }
+}
+
+// Проверки отдельного документа.
+function checkItem(where, item) {
+  const effectIds = new Set((item.effects ?? []).map(e => e._id));
+  for ( const e of item.effects ?? [] ) {
+    if ( !ID.test(e._id) ) err(where, `эффект с некорректным _id ${e._id}`);
+    for ( const c of e.system?.changes ?? [] ) if ( !ID.test(c._id) ) err(where, `изменение эффекта с некорректным _id`);
+    if ( e.img && !e.img.startsWith("modules/") && !ICONS.has(e.img) ) warn(where, `иконка эффекта не найдена: ${e.img}`);
+  }
+  const acts = item.system?.activities ?? {};
+  for ( const [k, a] of Object.entries(acts) ) {
+    if ( k !== a._id ) err(where, `ключ действия ${k} не совпадает с _id ${a._id}`);
+    if ( !ID.test(a._id) ) err(where, `действие с некорректным _id ${a._id}`);
+    for ( const e of a.effects ?? [] ) if ( !effectIds.has(e._id) ) err(where, `действие «${a.name}» ссылается на отсутствующий эффект ${e._id}`);
+    for ( const r of a.effects?.flatMap(e => e.riders?.activity ?? []) ?? [] ) if ( !acts[r] ) err(where, `наездник ${r} отсутствует среди действий`);
+    if ( a.type === "summon" ) for ( const p of a.profiles ) if ( !docs.has(p.uuid) ) err(where, `профиль призыва ссылается на неизвестный ${p.uuid}`);
+    if ( a.type === "cast" && !srdIds.has(a.spell.uuid) && !docs.has(a.spell.uuid) ) err(where, `cast ссылается на неизвестное заклинание ${a.spell.uuid}`);
+    if ( a.type === "transform" ) for ( const p of a.profiles ) if ( p.uuid && !docs.has(p.uuid) ) err(where, `превращение ссылается на неизвестного ${p.uuid}`);
+    for ( const t of a.consumption?.targets ?? [] ) if ( !["itemUses", "activityUses", "spellSlots", "hitDice", "attribute", "material"].includes(t.type) ) err(where, `неизвестный тип расхода ${t.type}`);
+  }
+  const advIds = new Set();
+  for ( const adv of item.system?.advancement ?? [] ) {
+    if ( !ID.test(adv._id) ) err(where, `продвижение с некорректным _id ${adv._id}`);
+    if ( advIds.has(adv._id) ) err(where, `повтор _id продвижения ${adv._id}`);
+    advIds.add(adv._id);
+    const uuids = [...(adv.configuration?.items ?? []), ...(adv.configuration?.pool ?? [])].map(i => i.uuid);
+    if ( adv.type === "ItemChoice" && !adv.configuration.pool.length && !adv.configuration.restriction.list.length && adv.configuration.type !== "spell" ) warn(where, `выбор «${adv.title}» без вариантов`);
+    if ( adv.type === "ItemGrant" && !adv.configuration.items.length ) err(where, `пустая выдача «${adv.title}»`);
+    for ( const u of uuids ) if ( !docs.has(u) && !srdIds.has(u) ) err(where, `продвижение «${adv.title}» ссылается на неизвестный ${u}`);
+  }
+  if ( item.img && !item.img.startsWith("modules/") && !ICONS.has(item.img) ) warn(where, `иконка не найдена: ${item.img}`);
+}
+
+function checkHtml(where, html) {
+  if ( typeof html !== "string" || !html ) return;
+  for ( const tag of ["p", "strong", "em", "table", "tr", "td", "th", "ul", "li", "h3", "aside"] ) {
+    const open = (html.match(new RegExp(`<${tag}[\\s>]`, "g")) ?? []).length;
+    const close = (html.match(new RegExp(`</${tag}>`, "g")) ?? []).length;
+    if ( open !== close ) err(where, `несбалансированный тег <${tag}>: ${open} открыт, ${close} закрыт`);
+  }
+  for ( const m of html.matchAll(/@UUID\[([^\]]+)\]/g) ) {
+    const u = m[1];
+    if ( u.startsWith("Compendium.spikependium.") && !docs.has(u.split(".").slice(0, 5).join(".")) ) err(where, `ссылка на неизвестный документ модуля ${u}`);
+    if ( u.startsWith("Compendium.dnd5e.") && !srdIds.has(u) ) err(where, `ссылка на неизвестный документ SRD ${u}`);
+  }
+  if ( /\*\*|\[\[|\]\]|<<|>>/.test(html) ) warn(where, "в HTML осталась необработанная разметка");
+}
+
+for ( const [pack, list] of Object.entries(byPack) ) {
+  const folderIds = new Set(list.filter(d => d.data._key.startsWith("!folders!")).map(d => d.data._id));
+  for ( const { file, data } of list ) {
+    const where = `${pack}/${file}`;
+    const raw = JSON.stringify(data);
+    if ( /"undefined"|NaN|\[object Object\]|@@REF/.test(raw) ) err(where, "в данных найдено undefined/NaN/[object Object]/@@REF");
+    if ( data.folder && !folderIds.has(data.folder) ) err(where, `папка ${data.folder} не найдена`);
+    if ( data._key.startsWith("!folders!") ) continue;
+    if ( TYPE[pack] === "Item" ) { checkItem(where, data); checkHtml(where, data.system?.description?.value); }
+    if ( TYPE[pack] === "Actor" ) {
+      for ( const it of data.items ?? [] ) { checkItem(`${where} → ${it.name}`, it); checkHtml(`${where} → ${it.name}`, it.system.description.value); }
+      checkHtml(where, data.system.details.biography.value);
+    }
+    if ( TYPE[pack] === "JournalEntry" ) {
+      for ( const p of data.pages ) {
+        checkHtml(`${where} → ${p.name}`, p.text?.content ?? p.system?.description?.value);
+        for ( const u of p.system?.spells ?? [] ) if ( !docs.has(u) && !srdIds.has(u) ) err(where, `список заклинаний: неизвестный ${u}`);
+      }
+    }
+  }
+}
+
+// Ссылки в формулах (@scale, @classes, @abilities и т. д.).
+{
+  const scales = new Set(["monk.die", "monk.focus", "bard.inspiration", "barbarian.rage-damage", "sorcerer.points", "cleric.channel-divinity", "paladin.channel-divinity"]);
+  for ( const list of Object.values(byPack) ) for ( const { data } of list ) {
+    if ( !["class", "subclass"].includes(data.type) ) continue;
+    for ( const adv of data.system.advancement ?? [] ) {
+      if ( adv.type === "ScaleValue" && adv.configuration.identifier ) scales.add(`${data.system.identifier}.${adv.configuration.identifier}`);
+    }
+  }
+  const CLASSES = new Set(["artificer", "psion", "barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"]);
+  const ABIL = new Set(["str", "dex", "con", "int", "wis", "cha"]);
+  const OK = [/^@prof$/, /^@scaling$/, /^@mod$/, /^@item\.(uses\.(spent|max|value)|level)$/, /^@attributes\.(spell\.mod|movement\.walk|hd\.\w+)$/, /^@details\.level$/];
+  const checkFormula = (where, formula) => {
+    if ( typeof formula !== "string" || !formula.includes("@") ) return;
+    for ( const m of formula.matchAll(/@[a-zA-Z][\w.-]*/g) ) {
+      const ref = m[0].replace(/\.$/, "");
+      let ok = OK.some(r => r.test(ref));
+      let mm;
+      if ( (mm = ref.match(/^@scale\.([\w-]+)\.([\w-]+)(?:\.(faces|number|die))?$/)) ) ok = scales.has(`${mm[1]}.${mm[2]}`);
+      else if ( (mm = ref.match(/^@classes\.([\w-]+)\.levels$/)) ) ok = CLASSES.has(mm[1]);
+      else if ( (mm = ref.match(/^@abilities\.(\w+)\.(mod|value)$/)) ) ok = ABIL.has(mm[1]);
+      if ( !ok ) err(where, `неизвестная ссылка в формуле: ${ref} (в «${formula}»)`);
+    }
+  };
+  const walkFormulas = (where, obj, path = "") => {
+    if ( obj === null || typeof obj !== "object" ) return;
+    for ( const [k, v] of Object.entries(obj) ) {
+      const p = path ? `${path}.${k}` : k;
+      if ( typeof v === "string" && /(formula|max|value|bonus|count|ac|hp|attackDamage|healing|scalingMax)$/.test(k) && !/description|text|content|name|label|changes/.test(p) ) checkFormula(`${where} [${p}]`, v);
+      else walkFormulas(where, v, p);
+    }
+  };
+  for ( const [pack, list] of Object.entries(byPack) ) for ( const { file, data } of list ) {
+    if ( data._key.startsWith("!folders!") ) continue;
+    const items = [data, ...(data.items ?? [])];
+    for ( const it of items ) {
+      if ( !it.system ) continue;
+      walkFormulas(`${pack}/${file} → ${it.name}`, { uses: it.system.uses, activities: it.system.activities, advancement: (it.system.advancement ?? []).map(a => a.configuration?.spell ?? {}) });
+      if ( it.system.spellcasting?.preparation?.formula ) checkFormula(`${pack}/${file}`, it.system.spellcasting.preparation.formula);
+    }
+  }
+}
+
+// Итог.
+const total = Object.values(byPack).reduce((n, l) => n + l.length, 0);
+console.log(`Проверено записей: ${total}`);
+if ( warnings.length ) console.log(`Предупреждения (${warnings.length}):\n  ${warnings.join("\n  ")}`);
+if ( errors.length ) {
+  console.error(`ОШИБКИ (${errors.length}):\n  ${errors.join("\n  ")}`);
+  process.exit(1);
+}
+console.log("Ошибок не найдено.");

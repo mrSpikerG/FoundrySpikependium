@@ -1,0 +1,502 @@
+{
+  "_id": "Ka5ZIzCo401FlpBk",
+  "name": "Radiant Weapon",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-gold-holy.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Оружие (любое простое или воинское), редкое (требуется настройка заклинателем).</em></p><p>Это магическое оружие даёт бонус +1 к броскам атаки и урона, совершённым с его помощью. Пока вы держите его, вы можете бонусным действием заставить его излучать яркий свет в радиусе 30 футов и тусклый свет на дополнительные 30 футов. Вы можете погасить свет бонусным действием.</p><p>Оружие имеет 4 заряда. Вы можете реакцией сразу после того, как по вам попали атакой, потратить 1 заряд оружия и заставить атакующего совершить спасбросок Телосложения со Сл. 15. При провале атакующий получает состояние &Reference[blinded]{ослеплённый} до конца своего следующего хода. Оружие восстанавливает 1к4 израсходованных зарядов ежедневно на рассвете.</p><p><em>Чтобы создать конкретное оружие, используйте действие «Зачаровать оружие» и выберите обычное оружие в инвентаре.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "9",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "",
+      "baseItem": ""
+    },
+    "ammunition": {},
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": 0,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        },
+        "bonus": ""
+      },
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      }
+    },
+    "magicalBonus": 1,
+    "properties": [
+      "mgc"
+    ],
+    "proficient": null,
+    "range": {
+      "value": null,
+      "long": null,
+      "reach": null,
+      "units": ""
+    },
+    "mastery": "",
+    "uses": {
+      "max": "4",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "formula",
+          "formula": "1d4"
+        }
+      ]
+    },
+    "activities": {
+      "F3Bh4v39AVeyj4Yl": {
+        "_id": "F3Bh4v39AVeyj4Yl",
+        "type": "enchant",
+        "name": "Зачаровать оружие",
+        "img": "icons/weapons/swords/sword-gold-holy.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "Zt2PVFUn7eBtBqUr",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [
+                "OSQw8gu0Cyils3z4",
+                "Vbh4a30N5ck9sszF"
+              ],
+              "effect": [],
+              "item": []
+            }
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "enchant": {
+          "identifier": ""
+        },
+        "restrictions": {
+          "allowMagical": false,
+          "categories": [],
+          "properties": [],
+          "type": "weapon"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      },
+      "OSQw8gu0Cyils3z4": {
+        "_id": "OSQw8gu0Cyils3z4",
+        "type": "utility",
+        "name": "Свет",
+        "img": "icons/magic/light/explosion-star-glow-yellow.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "perm",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "Vbh4a30N5ck9sszF": {
+        "_id": "Vbh4a30N5ck9sszF",
+        "type": "save",
+        "name": "Ослепляющая вспышка",
+        "img": "icons/magic/light/beam-rays-yellow.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Сразу после того, как по вам попали атакой",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "bonus": ""
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "Zt2PVFUn7eBtBqUr",
+      "name": "Излучающее свет оружие",
+      "img": "icons/weapons/swords/sword-gold-holy.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "{} (излучающее свет)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "CReGZp8AkTw8k7yF"
+          },
+          {
+            "key": "system.rarity",
+            "value": "rare",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "4QFRF1lUbVCdU8ve"
+          },
+          {
+            "key": "system.attunement",
+            "value": "required",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "3G10bBmqikBNXCYX"
+          },
+          {
+            "key": "system.magicalBonus",
+            "value": "1",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "m7UvYViMgBsRo5VR"
+          },
+          {
+            "key": "system.properties",
+            "value": "mgc",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "IoFApDBEUBQW8yY2"
+          },
+          {
+            "key": "system.description.value",
+            "value": "{}<p>@Embed[Compendium.spikependium.items.Item.Ka5ZIzCo401FlpBk caption=false]</p>",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "GaQMtmAkmShVWuQ4"
+          },
+          {
+            "key": "img",
+            "value": "icons/weapons/swords/sword-gold-holy",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ofQ8qGdAiLqpwoxW"
+          },
+          {
+            "key": "system.uses.max",
+            "value": "4",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "OBxLyVlweCRKG4sB"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!Ka5ZIzCo401FlpBk.Zt2PVFUn7eBtBqUr"
+    }
+  ],
+  "folder": "HyNCtrH5jnhW1Wps",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:radiant-weapon",
+      "originalName": "Radiant Weapon"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Ka5ZIzCo401FlpBk"
+}

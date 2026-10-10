@@ -1,0 +1,224 @@
+{
+  "_id": "EB942jJuMBXqFvHo",
+  "name": "Summon Astral Entity",
+  "type": "spell",
+  "img": "icons/magic/unholy/orb-swirling-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, колдун, чародей, псионик.</em></p><p>Вы взываете к духу псионики. Он проявляется в свободном пространстве, которое вы видите в пределах дистанции, и использует статблок <strong>Дух псионики</strong>. Когда вы накладываете это заклинание, выберите кристаллическую, эктоплазменную или призрачную сущность. Существо выглядит как астральная сущность выбранного типа, что определяет некоторые параметры его статблока. Существо исчезает, когда его хиты опускаются до 0 или когда заклинание заканчивается.</p><p>Существо является союзником вам и вашим союзникам. В бою оно использует ту же инициативу, что и вы, но действует сразу после вас. Оно подчиняется вашим устным приказам (действие не требуется). Если вы не даёте приказов, то оно использует действие уклонение и перемещается, чтобы избегать опасности.</p><p><strong>Накладывание более высокой ячейкой.</strong> Используйте уровень ячейки в качестве уровня заклинания в статблоке.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PS",
+      "page": "10",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "level": 3,
+    "materials": {
+      "value": "драгоценный камень или кристалл стоимостью не менее 300 зм",
+      "consumed": false,
+      "cost": 300,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "range": {
+      "value": "90",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "con",
+    "sourceItem": "",
+    "target": {
+      "affects": {
+        "type": "",
+        "count": "",
+        "choice": false,
+        "special": ""
+      },
+      "template": {
+        "type": "",
+        "size": "",
+        "units": "ft",
+        "contiguous": false,
+        "count": ""
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "jsKlbkoSby0nQe9z": {
+        "_id": "jsKlbkoSby0nQe9z",
+        "type": "summon",
+        "name": "Призыв",
+        "img": "icons/magic/unholy/orb-swirling-teal.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": false,
+          "concentration": true
+        },
+        "effects": [],
+        "range": {
+          "value": "90",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@item.level",
+          "hd": "",
+          "hp": "10 * (@item.level - 3)",
+          "attackDamage": "@item.level",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "WRG087eubtUTOCS7",
+            "count": "",
+            "name": "Кристаллическая сущность",
+            "uuid": "Compendium.spikependium.creatures.Actor.vAuSOoU0tegDH9Bj",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "Pg5e39auhPJyCY41",
+            "count": "",
+            "name": "Эктоплазменная сущность",
+            "uuid": "Compendium.spikependium.creatures.Actor.KG0DPTZKm0qcO3da",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "NhzzbLYeaJV7CODh",
+            "count": "",
+            "name": "Призрачная сущность",
+            "uuid": "Compendium.spikependium.creatures.Actor.T6A4Avc3HJO8b0Hu",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": "",
+          "identifier": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "yt9MUC2qhvb6mmbr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:summon-astral-entity",
+      "originalName": "Summon Astral Entity"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!EB942jJuMBXqFvHo"
+}

@@ -1,0 +1,245 @@
+{
+  "_id": "tVPc6srGBv5VKkay",
+  "name": "Ужасающее воздействие",
+  "type": "feat",
+  "img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваша форма титана несёт ещё большее опустошение. Вы получаете следующие эффекты.</p><p><strong>Стихийное разрывание.</strong> Каждый раз, когда вы попадаете атакой Разрывание вашей формы титана, вы можете сделать так, что она будет наносить урон кислотой, холодом, огнём, электричеством или звуком (на ваш выбор) вместо своего обычного типа урона.</p><p><strong>Ударная волна.</strong> Ваше превращение сотрясает всё вокруг. Сразу после того, как вы принимаете форму титана, или бонусным действием, потратив ячейку заклинаний 1+ уровня, пока вы находитесь в форме титана, вы можете создать ударную волну в пределах эманации с радиусом 15 футов, исходящей от вас. Каждое существо в этой эманации должно преуспеть в спасброске Телосложения против Сл. спасброска ваших заклинаний, иначе ложится ничком.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "dreadful-impact",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Круг титана",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "PmwNypf46FFaES33": {
+        "_id": "PmwNypf46FFaES33",
+        "type": "save",
+        "name": "Ударная волна",
+        "img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Сразу после принятия формы титана",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "15",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      },
+      "EtyjR5kptvzQ2zWO": {
+        "_id": "EtyjR5kptvzQ2zWO",
+        "type": "save",
+        "name": "Ударная волна (ячейка 1+)",
+        "img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "15",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "hBERaftDAfMYs7yF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:circle-of-the-titan:dreadful-impact"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!tVPc6srGBv5VKkay"
+}

@@ -1,0 +1,119 @@
+{
+  "_id": "8biYUB0gv1GckhqE",
+  "name": "Потусторонняя мука",
+  "type": "feat",
+  "img": "icons/magic/death/undead-ghosts-trio-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы черпаете силу из столь глубокой скорби, что она простирается за пределы мира живых. Вы получаете следующие эффекты.</p><p><strong>Смертельный вопль.</strong> Если цель проваливает спасбросок против вашего Вопля банши и её хиты равны удвоенному вашему уровню варвара или меньше, то её хиты опускаются до 0 вместо получения урона.</p><p><strong>Непроницаемая скорбь.</strong> Вы не можете быть одержимы.</p><p><strong>Сопротивление.</strong> Вы получаете сопротивление урону холодом и некротическому урону, пока ваша ярость активна.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO2",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "otherworldly-anguish",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Путь скорби",
+    "prerequisites": {
+      "level": 10,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "vSWxhL3ndC1PERli",
+      "name": "Сопротивление холоду и некротике (в ярости)",
+      "img": "icons/magic/death/undead-ghosts-trio-blue.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "cold",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "S7ifPeqGieXEdJSq"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "necrotic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "kTM8uCe3JzFZYExe"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!8biYUB0gv1GckhqE.vSWxhL3ndC1PERli"
+    }
+  ],
+  "folder": "8oZJ0j0LIQy27CY2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:path-of-lament:otherworldly-anguish"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!8biYUB0gv1GckhqE"
+}

@@ -1,0 +1,119 @@
+{
+  "_id": "rCBBybzOKu7BGEnm",
+  "name": "Глаза тьмы",
+  "type": "feat",
+  "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>У вас есть тёмное зрение в пределах 120 футов и слепое зрение в пределах 10 футов.</p><p>Кроме того, если накладываемое вами заклинание создаёт область тьмы, то вы можете видеть сквозь эту тьму как обычно.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "eyes-of-the-dark",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Теневая магия",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "gYjHDP8Or1T93QnR",
+      "name": "Глаза тьмы",
+      "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.senses.ranges.darkvision",
+            "value": "120",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ZkwjX5ACpC4bxqXj"
+          },
+          {
+            "key": "system.attributes.senses.ranges.blindsight",
+            "value": "10",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "QzQk6T895WiAxdJK"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!rCBBybzOKu7BGEnm.gYjHDP8Or1T93QnR"
+    }
+  ],
+  "folder": "1iJmrIy4EA6WHKor",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:shadow-sorcery:eyes-of-the-dark"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!rCBBybzOKu7BGEnm"
+}

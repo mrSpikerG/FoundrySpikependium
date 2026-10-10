@@ -1,0 +1,267 @@
+{
+  "_id": "2D8MxuDmm92912zK",
+  "name": "Mark of Sentinel",
+  "type": "feat",
+  "img": "icons/equipment/shield/heater-steel-sword-yellow-black.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Интуиция стража.</strong> Когда вы совершаете проверку Мудрости (Проницательность или Внимательность), вы можете бросить 1к4 и добавить выпавшее число к проверке характеристики.</p><p><strong>Щит хранителя.</strong> У вас всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{Щит}. Вы можете накладывать это заклинание 1 раз без траты ячейки заклинаний и восстанавливаете такую возможность после короткого или продолжительного отдыха. Вы также можете накладывать это заклинание, используя любые доступные вам ячейки заклинаний. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этих заклинаний (выберите при выборе этой черты).</p><p><strong>Бдительный защитник.</strong> Когда по видимому существу в пределах 5 футов от вас попадают атакой, вы можете реакцией поменяться с ним местами, и атака попадает по вам вместо него. После использования этого умения вы не можете применять его снова, пока не завершите продолжительный отдых.</p><p><strong>Заклинания метки.</strong> Если у вас есть умение Использование заклинаний или Магия договора, то заклинания из таблицы «Заклинания: Метка стража» добавляются в список заклинаний вашего умения.</p><table><caption>Заклинания: Метка стража</caption><thead><tr><th>Уровень заклинания</th><th>Заклинания</th></tr></thead><tbody><tr><td>1</td><td><em>Вызов на дуэль</em>, @UUID[Compendium.dnd5e.spells24.Item.phbsplShieldofFa]{Щит веры}</td></tr><tr><td>2</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplWardingBon]{Охраняющая связь}, @UUID[Compendium.dnd5e.spells24.Item.phbsplZoneofTrut]{Область истины}</td></tr><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{Контрзаклинание}, @UUID[Compendium.dnd5e.spells24.Item.phbProtectionFro]{Защита от энергии}</td></tr><tr><td>4</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDeathWard0]{Защита от смерти}, @UUID[Compendium.dnd5e.spells24.Item.phbsplGuardianof]{Страж веры}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplBigbysHand]{Длань Бигби}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "12",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "mark-of-sentinel",
+    "type": {
+      "value": "feat",
+      "subtype": "dragonmark"
+    },
+    "requirements": "Кампания в Эберроне, нельзя иметь другую черту метки дракона",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "nBp4Ze4CDAX8FyQb": {
+        "_id": "nBp4Ze4CDAX8FyQb",
+        "type": "utility",
+        "name": "Интуиция стража",
+        "img": "icons/equipment/shield/heater-steel-sword-yellow-black.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d4",
+          "name": "Бонус к проверке",
+          "prompt": false,
+          "visible": true
+        }
+      },
+      "tIDVcbZ4hC7dTkU1": {
+        "_id": "tIDVcbZ4hC7dTkU1",
+        "type": "utility",
+        "name": "Бдительный защитник",
+        "img": "icons/equipment/shield/heater-steel-sword-yellow-black.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "nOjPp31GZheW1XLR",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplShield0000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "sr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заклинания метки",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "tvzAq9WrCdkT5t83",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:sentinel",
+      "originalName": "Mark of Sentinel"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!2D8MxuDmm92912zK"
+}

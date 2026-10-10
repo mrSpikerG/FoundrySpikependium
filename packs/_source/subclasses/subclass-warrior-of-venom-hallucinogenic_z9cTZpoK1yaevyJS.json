@@ -1,0 +1,176 @@
+{
+  "_id": "z9cTZpoK1yaevyJS",
+  "name": "Галлюциногенное дыхание",
+  "type": "feat",
+  "img": "icons/magic/air/fog-gas-smoke-swirling-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда в свой ход вы совершаете действие атака, вы можете потратить 2 очка духа и заменить одну из своих атак выдохом галлюциногенных испарений в одно существо, которое вы видите в пределах 30 футов. Цель должна совершить спасбросок Телосложения. При провале цель получает урон ядом, равный трём броскам вашей кости боевых искусств, и получает состояние &Reference[frightened]{испуганный} на 1 минуту или до тех пор, пока цель не получит урон. Пока цель испугана, в каждый свой ход она совершает действие рывок и перемещается прочь от вас самым безопасным маршрутом, если ей есть куда перемещаться. При успешном спасброске существо получает только половину этого урона.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO2",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "hallucinogenic-breath",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Мастер яда",
+    "prerequisites": {
+      "level": 17,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "UFwsGsw293tkbtkt": {
+        "_id": "UFwsGsw293tkbtkt",
+        "type": "save",
+        "name": "",
+        "img": "icons/magic/air/fog-gas-smoke-swirling-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вместо одной атаки действия атака",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "2",
+              "target": "feat:monks-focus",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": true,
+                "formula": "3d@scale.monk.die.faces"
+              },
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [
+                "poison"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "wis",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "CPQm9EKmJAKTehCI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:warrior-of-venom:hallucinogenic-breath"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!z9cTZpoK1yaevyJS"
+}

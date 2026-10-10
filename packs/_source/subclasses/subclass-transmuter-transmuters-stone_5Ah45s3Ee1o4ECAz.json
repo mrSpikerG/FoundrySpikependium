@@ -1,0 +1,581 @@
+{
+  "_id": "5Ah45s3Ee1o4ECAz",
+  "name": "Камень преобразования",
+  "type": "feat",
+  "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>По завершении продолжительного отдыха вы можете создать камень преобразования, который существует, пока вы вновь не используете это умение. Камень является крошечным объектом, и вы можете применять его как заклинательную фокусировку волшебника.</p><p>Существо, держащее камень, получает владение спасбросками Телосложения и 1 из следующих эффектов (вы выбираете его при создании камня). Вы можете изменить выбранный эффект, когда накладываете заклинание школы преобразования ячейкой.</p><p><strong>Тёмное зрение.</strong> Носитель получает тёмное зрение в пределах 60 футов или увеличивает имеющееся тёмное зрение на 60 футов.</p><p><strong>Скорость.</strong> Скорость носителя увеличивается на 10 футов.</p><p><strong>Прочность.</strong> Носитель получает владение спасброском Телосложения.</p><p><strong>Сопротивляемость.</strong> Носитель получает сопротивление к урону кислотой, холодом, огнём, излучением, ядом или звуком (вы выбираете каждый раз, когда выбираете этот эффект).</p><p><em>Эффекты камня собраны на этом умении: включите выбранные. Владение спасбросками Телосложения включено по умолчанию. Если камень держит другое существо, перенесите эффекты на его лист.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "transmuters-stone",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Преобразователь",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "SRUgAsnmF2dgvBPS",
+      "name": "Камень: владение спасбросками Телосложения",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.proficient",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "zXvNSARMTqlPCnpg"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.SRUgAsnmF2dgvBPS"
+    },
+    {
+      "_id": "VaMypAmJs1vDiaNs",
+      "name": "Камень: тёмное зрение",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.senses.ranges.darkvision",
+            "value": "60",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "qMrMtISXUCFVLn7E"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.VaMypAmJs1vDiaNs"
+    },
+    {
+      "_id": "C08NSyTDbzi4oNas",
+      "name": "Камень: скорость +10",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.speeds.walk",
+            "value": "10",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "FClwXe32JXhD4Io7"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.C08NSyTDbzi4oNas"
+    },
+    {
+      "_id": "ce7R4niHMvujuv1r",
+      "name": "Камень: сопротивление (кислота)",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "acid",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "nNsB2jRtTkaTysWP"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.ce7R4niHMvujuv1r"
+    },
+    {
+      "_id": "3Sv9ViamBSCPckz8",
+      "name": "Камень: сопротивление (холод)",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "cold",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "D3Z0t61BLHeSH4ch"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.3Sv9ViamBSCPckz8"
+    },
+    {
+      "_id": "esw8imZeXkqvknto",
+      "name": "Камень: сопротивление (огонь)",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "fire",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "FYRt2US8mwIV3Ken"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.esw8imZeXkqvknto"
+    },
+    {
+      "_id": "DmzlVonlmfJE2zqz",
+      "name": "Камень: сопротивление (излучение)",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "radiant",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "8mdlsWIZmvNC7TXH"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.DmzlVonlmfJE2zqz"
+    },
+    {
+      "_id": "ilkAzQF1shORlqXp",
+      "name": "Камень: сопротивление (яд)",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "poison",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "GEtAv7sNf8RD1BO8"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.ilkAzQF1shORlqXp"
+    },
+    {
+      "_id": "oOOQFJCJZKwENfmm",
+      "name": "Камень: сопротивление (звук)",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "thunder",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "vmyd4uBQmfEvNQM5"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.oOOQFJCJZKwENfmm"
+    },
+    {
+      "_id": "srH8nHHbWEUCnuNh",
+      "name": "Камень: могучее телосложение",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.save.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "qGSBrZxlx7UGSedB"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.srH8nHHbWEUCnuNh"
+    },
+    {
+      "_id": "JUH4DZpqDURYLzH7",
+      "name": "Камень: чувство вибрации",
+      "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.senses.ranges.tremorsense",
+            "value": "30",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "RiDyCXP8mZ6mD5z5"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5Ah45s3Ee1o4ECAz.JUH4DZpqDURYLzH7"
+    }
+  ],
+  "folder": "1YXg65j3VKIrhW88",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:transmuter:transmuters-stone"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!5Ah45s3Ee1o4ECAz"
+}

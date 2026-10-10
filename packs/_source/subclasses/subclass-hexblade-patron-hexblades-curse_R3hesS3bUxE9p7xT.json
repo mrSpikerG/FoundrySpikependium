@@ -1,0 +1,335 @@
+{
+  "_id": "R3hesS3bUxE9p7xT",
+  "name": "Проклятье клинка",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-runed-glowing.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваш покровитель наделяет вас силой проклятья, способной ослаблять врагов. Бонусным действием выберите одно видимое существо в пределах 30 футов от себя. Цель проклята на 1 минуту; пока действует проклятье, вы получаете описанные ниже эффекты. Проклятье снимается раньше, если вы снова примените это умение, добровольно прекратите его (действие не требуется) или погибнете.</p><p>Вы можете использовать это умение количество раз, равное вашему модификатору Харизмы (минимум 1), и восстанавливаете все израсходованные применения после окончания продолжительного отдыха. Когда вы ячейкой заклинания накладываете заклинание, которое проклинает цель, вы можете применить Проклятье клинка как часть наложения этого заклинания вместо траты бонусного действия. В этом случае целью Проклятья клинка становится цель заклинания, а длительность Проклятья клинка равна либо 1 минуте, либо длительности заклинания — выбирается большее значение.</p><p><strong>Голодное проклятье.</strong> Когда хиты цели, поражённой вашим Проклятьем клинка, опускаются до 0, вы восстанавливаете 1к8 + ваш модификатор Харизмы хитов.</p><p><strong>Проклятый щит.</strong> Пока вы не носите доспехи и не держите щит, вы получаете бонус +2 к КД, находясь в пределах 10 футов от цели, поражённой вашим Проклятьем клинка.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AS",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "hexblades-curse",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Покровитель: Ведьмовской клинок",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "max(1, @abilities.cha.mod)",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "5cRYNmzht0yLi8nV": {
+        "_id": "5cRYNmzht0yLi8nV",
+        "type": "utility",
+        "name": "Проклясть",
+        "img": "icons/weapons/swords/sword-runed-glowing.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "CcL5URrnfGbHQW3P"
+          }
+        ],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "DUA4wHMnP2AvzG84": {
+        "_id": "DUA4wHMnP2AvzG84",
+        "type": "heal",
+        "name": "Голодное проклятье",
+        "img": "icons/weapons/swords/sword-runed-glowing.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Хиты проклятой цели опустились до 0",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "number": 1,
+          "denomination": 8,
+          "bonus": "@abilities.cha.mod",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "CcL5URrnfGbHQW3P",
+      "name": "Проклятье клинка",
+      "img": "icons/weapons/swords/sword-runed-glowing.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Проклята колдуном ведьмовского клинка. Броски атаки колдуна по цели критические при 19–20 (с 14 уровня).</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!R3hesS3bUxE9p7xT.CcL5URrnfGbHQW3P"
+    },
+    {
+      "_id": "yFRVqlvchY2LU7vQ",
+      "name": "Проклятый щит (+2 КД)",
+      "img": "icons/magic/defensive/shield-barrier-glowing-triangle-magenta.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.bonus",
+            "value": "+ 2",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ljkAVAkWBGWPpaaQ"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Включайте, пока вы без доспехов и щита в пределах 10 футов от проклятой цели.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!R3hesS3bUxE9p7xT.yFRVqlvchY2LU7vQ"
+    }
+  ],
+  "folder": "Me47Rfl5dG1ccywN",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:hexblade-patron:hexblades-curse"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!R3hesS3bUxE9p7xT"
+}

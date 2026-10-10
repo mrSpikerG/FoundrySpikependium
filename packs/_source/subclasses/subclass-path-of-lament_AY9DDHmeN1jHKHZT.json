@@ -1,0 +1,160 @@
+{
+  "_id": "AY9DDHmeN1jHKHZT",
+  "name": "Path of Lament",
+  "type": "subclass",
+  "img": "icons/magic/death/undead-ghost-scream-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Превратите страдание в сверхъестественную ярость</em></p><p>Варвары, идущие по пути скорби, превращают свои сожаления в смертоносное оружие и направляют свои глубочайшие печали в яростное действие. Движимые сверхъестественным горем, они получают от своей ярости дары из-за могилы.</p><p>Варвар может выбрать путь скорби, но куда чаще этот путь навязывается по несчастному случаю. В основе ярости варвара лежат тяжёлая травма и неутихающее горе — болезненные чувства, подпитываемые преследующими воспоминаниями, которые всплывают на поверхность в мгновения, наполненные адреналином.</p><table><caption>Происхождение пути скорби</caption><thead><tr><th>1к6</th><th>Ваша ярость началась, когда…</th></tr></thead><tbody><tr><td>1</td><td>Ваш погибший близкий восстал в виде чудовищной нежити.</td></tr><tr><td>2</td><td>Враги убили вашего питомца.</td></tr><tr><td>3</td><td>Вы (и только вы) спаслись из жестокого плена.</td></tr><tr><td>4</td><td>Вы нашли обугленные останки своей семьи.</td></tr><tr><td>5</td><td>Ваше решение привело к гибельному кораблекрушению.</td></tr><tr><td>6</td><td>Старейшины изгнали вас из дома.</td></tr></tbody></table><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO2",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "lament",
+    "classIdentifier": "barbarian",
+    "advancement": [
+      {
+        "_id": "OjBo1f1KKQuHIi2q",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.bqdzA7EDon6aTPmD",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "1fKFx1GxvIaxCDXs",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.p7Zus257fYRppZkf",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.IW98LPfJL5kpGivf",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "GV3aDUbGAuNVgsNO",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.8biYUB0gv1GckhqE",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "0af5XudlNLbViJZT",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.J3lPerCAT5ppFQRn",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "CiSI8jqw8l4MH4Nz",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSpeakwithD",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "wis"
+            ],
+            "method": "ritual",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 6,
+        "title": "Общение с мёртвыми (только ритуал)",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "18EoqmTixE5D34Bf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:path-of-lament",
+      "originalName": "Path of Lament"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!AY9DDHmeN1jHKHZT"
+}

@@ -1,0 +1,111 @@
+{
+  "_id": "Uey9MZ5SS6kNY58T",
+  "name": "Кованное в аду снаряжение",
+  "type": "feat",
+  "img": "icons/equipment/chest/breastplate-layered-steel-black.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваши доспехи и оружие воплощают адское вооружение, выкованное в огнях Авернуса, даруя вам следующие эффекты.</p><p><strong>Сопротивление огню.</strong> Пока вы носите доспехи или держите щит, вы получаете сопротивление к урону огнём.</p><p><strong>Нечестивый огонь.</strong> Урон от ваших атак оружием и умений воина игнорирует сопротивление к урону огнём.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "hellforged-gear",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Рыцарь ада",
+    "prerequisites": {
+      "level": 7,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "yJNSJB0e26KQBKXf",
+      "name": "Сопротивление огню (в доспехах или со щитом)",
+      "img": "icons/magic/fire/flame-burning-chain.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "fire",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "0X1Ud4kuKcANC5kl"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!Uey9MZ5SS6kNY58T.yJNSJB0e26KQBKXf"
+    }
+  ],
+  "folder": "P63sQnzKEzpp503n",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:hell-knight:hellforged-gear"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Uey9MZ5SS6kNY58T"
+}

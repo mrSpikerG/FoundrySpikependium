@@ -1,0 +1,167 @@
+{
+  "_id": "5la2HwnqPFAAzJES",
+  "name": "Elemental Overflow",
+  "type": "feat",
+  "img": "icons/magic/defensive/shield-barrier-flaming-diamond-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Требования: уровень колдуна 5+.</em></p><p>Выберите тип урона: кислотный, холодный, огненный, электрический или звуковой. Каждый раз, когда вы накладываете заклинание, наносящее выбранный тип урона, вы можете вызвать стихийную энергию, окутывающую вас до конца вашего следующего хода. Пока действует этот эффект, каждый раз, когда существо в пределах 5 футов от вас попадает по вам рукопашной атакой, это существо получает 1к4 урона выбранного типа.</p><p><strong>Многократное применение.</strong> Вы можете выбрать это воззвание более одного раза. Каждый раз, когда вы это делаете, выбирайте другой тип урона.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO2",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "elemental-overflow",
+    "type": {
+      "value": "class",
+      "subtype": "eldritchInvocation"
+    },
+    "requirements": "Колдун 5+ уровня",
+    "prerequisites": {
+      "level": 5,
+      "repeatable": true,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "4PzcWilaUs4SL3T5": {
+        "_id": "4PzcWilaUs4SL3T5",
+        "type": "damage",
+        "name": "Ответный урон",
+        "img": "icons/magic/defensive/shield-barrier-flaming-diamond-orange.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Существо в 5 футах попало по вам рукопашной атакой",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "acid",
+                "cold",
+                "fire",
+                "lightning",
+                "thunder"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "w1P5TBOozm5gTGNv",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "invocation:elemental-overflow",
+      "originalName": "Elemental Overflow"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!5la2HwnqPFAAzJES"
+}

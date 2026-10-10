@@ -1,0 +1,119 @@
+{
+  "_id": "5jBrRwvBtGOxCbeg",
+  "name": "Неустанный командир",
+  "type": "feat",
+  "img": "icons/magic/defensive/shield-barrier-flaming-pentagon-purple-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы и ваш пурпурный дракон получаете сопротивление урону силовым полем и психической энергией.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "relentless-commander",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Рыцарь пурпурного дракона",
+    "prerequisites": {
+      "level": 18,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "Gbl9VVNAt05H6eY3",
+      "name": "Неустанный командир",
+      "img": "icons/magic/defensive/shield-barrier-flaming-pentagon-purple-orange.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "force",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ee3z5bvenOscgNPa"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "psychic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "YUU43KGqNI0Qcm6c"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5jBrRwvBtGOxCbeg.Gbl9VVNAt05H6eY3"
+    }
+  ],
+  "folder": "mc9AE1viJ6NWUAyZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:purple-dragon-knight:relentless-commander"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!5jBrRwvBtGOxCbeg"
+}

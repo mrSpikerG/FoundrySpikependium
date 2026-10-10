@@ -1,0 +1,151 @@
+{
+  "_id": "tzYsYTJkxGnSJdQb",
+  "name": "Магический саботаж",
+  "type": "feat",
+  "img": "icons/magic/control/debuff-energy-snare-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие варианты Хитрого удара:</p><p><strong>Заклинательная восприимчивость (стоимость: 2к6).</strong> Цель получает помеху на следующий спасбросок, который она совершит против заклинания, до начала вашего следующего хода.</p><p><strong>Срыв заклинания (стоимость: 3к6).</strong> Магическая острота цели нарушена до начала вашего следующего хода. Каждый раз, когда цель накладывает заклинание в течение этого времени, она должна преуспеть в спасброске Интеллекта, иначе заклинание рассеивается без эффекта, а действие, бонусное действие или реакция, совершённые для его наложения, тратятся впустую. Если заклинание было наложено ячейкой заклинания, то ячейка не тратится.</p><p><strong>Кража сопротивления (стоимость: 2к6).</strong> Выберите один вид урона. Если цель имеет сопротивление этому виду урона, то до начала вашего следующего хода цель теряет это сопротивление, а вы получаете сопротивление к этому виду урона.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-MS",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magical-sabotage",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Похититель магии",
+    "prerequisites": {
+      "level": 9,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "GxNrHOfeeIGyOWql": {
+        "_id": "GxNrHOfeeIGyOWql",
+        "type": "save",
+        "name": "Срыв заклинания: спасбросок цели",
+        "img": "icons/magic/control/debuff-energy-snare-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Цель накладывает заклинание",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "dex",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "x9jG7Gfd6WYs3K76",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magic-stealer:magical-sabotage"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!tzYsYTJkxGnSJdQb"
+}

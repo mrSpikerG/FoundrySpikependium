@@ -1,0 +1,340 @@
+{
+  "_id": "q13TUs68841G2MoT",
+  "name": "Thought Form",
+  "type": "spell",
+  "img": "icons/creatures/magical/spirit-undead-ghost-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: псионик.</em></p><p>Вы на короткое время превращаетесь в псионического духа. До окончания заклинания вы получаете следующие преимущества:</p><p><strong>Призрачная форма.</strong> Вы получаете иммунитет к урону ядом и урону психической энергией, а также иммунитет к состоянию &Reference[exhaustion]{истощённый}.</p><p><strong>Бестелесное перемещение.</strong> Ваша скорость полёта составляет 60 футов, и вы можете парить. Вы можете перемещаться через занятые пространства, как если бы это была труднопроходимая местность. Если вы заканчиваете свой ход в таком пространстве, то получаете 1к10 урона силовым полем. Если заклинание оканчивается, пока вы находитесь в таком пространстве, вы перемещаетесь в последнее незанятое пространство, в котором находились.</p><p><strong>Псионная перезарядка.</strong> Совершая действие магия, вы можете коснуться существа (включая себя) и бросить 1к6. Существо восстанавливает 1 потраченную ячейку заклинания, уровень которой равен половине результата броска (округляя вверх) или меньше. После того как существо восстановило ячейку заклинания этим заклинанием, оно не может сделать это снова, пока не завершит продолжительный отдых.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PU",
+      "page": "15",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "",
+    "activation": {
+      "type": "bonus",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 6,
+    "materials": {
+      "value": "мозговое вещество в сосуде стоимостью 500+ зм",
+      "consumed": false,
+      "cost": 500,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "material",
+      "concentration"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "trs",
+    "sourceItem": "",
+    "target": {
+      "affects": {
+        "type": "",
+        "count": "",
+        "choice": false,
+        "special": ""
+      },
+      "template": {
+        "type": "",
+        "size": "",
+        "units": "ft",
+        "contiguous": false,
+        "count": ""
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "u2qOfn7lJRDtUp0H": {
+        "_id": "u2qOfn7lJRDtUp0H",
+        "type": "utility",
+        "name": "Принять форму",
+        "img": "icons/creatures/magical/spirit-undead-ghost-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": true
+        },
+        "effects": [
+          {
+            "_id": "RYZEUfk1CiSrVbqq"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "1YyQwiaooG9mCKYs": {
+        "_id": "1YyQwiaooG9mCKYs",
+        "type": "utility",
+        "name": "Псионная перезарядка",
+        "img": "icons/creatures/magical/spirit-undead-ghost-purple.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "touch",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "ceil(1d6 / 2)",
+          "name": "Максимальный уровень ячейки",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "RYZEUfk1CiSrVbqq",
+      "name": "Форма мысли",
+      "img": "icons/creatures/magical/spirit-undead-ghost-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.di.value",
+            "value": "poison",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "AmzKQFxlNVlIcD0H"
+          },
+          {
+            "key": "system.traits.di.value",
+            "value": "psychic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Kh6iAFnDRVQJ6Ahi"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "exhaustion",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "5EsqDnzIBTurC36U"
+          },
+          {
+            "key": "system.attributes.movement.speeds.fly",
+            "value": "60",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "3QRi1HlJdj3OWgNe"
+          },
+          {
+            "key": "system.attributes.movement.hover",
+            "value": "true",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "LT2AuP35VDumj7KK"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!q13TUs68841G2MoT.RYZEUfk1CiSrVbqq"
+    }
+  ],
+  "folder": "bwI1BAO8GjQlXHXg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:thought-form",
+      "originalName": "Thought Form"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!q13TUs68841G2MoT"
+}

@@ -1,0 +1,207 @@
+{
+  "_id": "Uep5oM05jCkpsxYP",
+  "name": "Mark of Making",
+  "type": "feat",
+  "img": "icons/tools/smithing/hammer-sledge-steel-grey.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Интуиция ремесленника.</strong> Когда вы совершаете проверку Интеллекта (Аркана) или проверку с использованием инструментов ремесленника, вы можете бросить 1к4 и добавить выпавшее число к проверке характеристики.</p><p><strong>Магия кузнеца.</strong> Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplMending000]{Починка}. У вас всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplMagicWeapo]{Магическое оружие}. Вы можете накладывать это заклинание 1 раз без траты ячейки заклинаний и восстанавливаете такую возможность после короткого или продолжительного отдыха. Вы также можете накладывать это заклинание, используя любые доступные вам ячейки заклинаний. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этих заклинаний (выберите при выборе этой черты).</p><p><strong>Заклинания метки.</strong> Если у вас есть умение Использование заклинаний или Магия договора, то заклинания из таблицы «Заклинания: Метка создания» добавляются в список заклинаний вашего умения.</p><table><caption>Заклинания: Метка создания</caption><thead><tr><th>Уровень заклинания</th><th>Заклинания</th></tr></thead><tbody><tr><td>1</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplIdentify00]{Опознание}, @UUID[Compendium.dnd5e.spells24.Item.phbsplTensersFlo]{Тензеров парящий диск}</td></tr><tr><td>2</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplContinualF]{Вечный огонь}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSpiritualW]{Божественное оружие}</td></tr><tr><td>3</td><td><em>Вызов шквала снарядов</em>, <em>Стихийное оружие</em></td></tr><tr><td>4</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplFabricate0]{Изготовление}, @UUID[Compendium.dnd5e.spells24.Item.phbsplStoneShape]{Изменение формы камня}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplCreation00]{Сотворение}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "mark-of-making",
+    "type": {
+      "value": "feat",
+      "subtype": "dragonmark"
+    },
+    "requirements": "Кампания в Эберроне, нельзя иметь другую черту метки дракона",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "ck2cS4oqSF49tlhs": {
+        "_id": "ck2cS4oqSF49tlhs",
+        "type": "utility",
+        "name": "Интуиция ремесленника",
+        "img": "icons/tools/smithing/hammer-sledge-steel-grey.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d4",
+          "name": "Бонус к проверке",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "qGCTEvQRcspaX55b",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMending000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заговор метки",
+        "hint": ""
+      },
+      {
+        "_id": "1ARJFyTFmbrVf4ft",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMagicWeapo",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "sr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заклинания метки",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "tvzAq9WrCdkT5t83",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:making",
+      "originalName": "Mark of Making"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Uep5oM05jCkpsxYP"
+}

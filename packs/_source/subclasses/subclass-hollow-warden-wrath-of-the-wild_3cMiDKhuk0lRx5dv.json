@@ -1,0 +1,282 @@
+{
+  "_id": "3cMiDKhuk0lRx5dv",
+  "name": "Гнев диких",
+  "type": "feat",
+  "img": "icons/magic/nature/tree-spirit-black.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы черпаете силу из древних и зловещих ужасов земли. Когда вы накладываете заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{Метка охотника}, вы трансформируетесь, получая следующие преимущества на время действия заклинания.</p><p><strong>Древняя броня.</strong> Вы получаете бонус к КД, равный вашему модификатору Мудрости (минимум +1). Ваше тело покрывается гнилой корой или звериной шкурой.</p><p><strong>Тревожная аура.</strong> Когда враг начинает свой ход в пределах 10-футовой эманации от вас, он должен совершить спасбросок Мудрости против вашей Сл. спасброска заклинаний. При провале он может в этот ход совершить либо действие, либо бонусное действие, но не оба. Ваша тень удлиняется и искажается вокруг вас, либо из вашего тела вырастают неестественные образования, такие как окровавленные рога или гнилые клыки.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "wrath-of-the-wilds",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Страж пустоты",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "TOMKIywRow6947Uy": {
+        "_id": "TOMKIywRow6947Uy",
+        "type": "utility",
+        "name": "Трансформация",
+        "img": "icons/magic/nature/tree-spirit-black.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вы накладываете Метку охотника",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "fZo74BkhgvtJcAsO"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "ecemB0adIQPJprFQ": {
+        "_id": "ecemB0adIQPJprFQ",
+        "type": "save",
+        "name": "Тревожная аура",
+        "img": "icons/magic/nature/tree-spirit-black.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Враг начинает ход в 10 футах от вас",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "enemy",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "fZo74BkhgvtJcAsO",
+      "name": "Гнев диких",
+      "img": "icons/magic/nature/tree-spirit-black.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.bonus",
+            "value": "+ max(1, @abilities.wis.mod)",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "wFsrCIsjlSwWEJBX"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Бонус к КД, тревожная аура в 10 футов. Действует, пока активна ваша Метка охотника.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!3cMiDKhuk0lRx5dv.fZo74BkhgvtJcAsO"
+    }
+  ],
+  "folder": "C9IkGWo36LYESs0h",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:hollow-warden:wrath-of-the-wilds"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!3cMiDKhuk0lRx5dv"
+}

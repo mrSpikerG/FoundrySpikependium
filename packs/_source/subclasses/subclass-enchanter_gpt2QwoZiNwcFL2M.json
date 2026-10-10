@@ -1,0 +1,243 @@
+{
+  "_id": "gpt2QwoZiNwcFL2M",
+  "name": "Enchanter",
+  "type": "subclass",
+  "img": "icons/magic/control/hypnosis-mesmerism-swirl.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Пленяйте и обольщайте других</em></p><p>Ваша магия туманит или пленит умы. Одни очарователи используют свои умения, чтобы поощрять мир и смягчать жестокость, а другие — ради эгоистичных целей. Большинство занимает промежуточное положение.</p><p><em>Редакция из UA «Арканное обновление»; заменяет версию из UA «Арканные подклассы».</em></p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Гипнотическое присутствие заменяет Раздражительное движение и использует концентрацию. Расщеплённое очарование доступно раньше (с 10 на 6 уровень). Инстинктивное очарование возвращается и превращает попадание в промах с возможностью перенаправить атаку. Ложные воспоминания позволяют нацеливать Изменение памяти на несколько существ.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "enchanter",
+    "classIdentifier": "wizard",
+    "advancement": [
+      {
+        "_id": "Enu42T25RALQJG6e",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.noC9EzHj3G4zUvCM",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.o8OvOTUguOnGgUxb",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.79TZD4jCIqv0mocj",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "Giixp2JsIRNeiWXF",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.gnA6SY6NZSbyCGBg",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "DjvwdeAZ6qrrNM2e",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.iGGKLEfQvA9ULHPR",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "Dpi4BIi3mWLOZQ3n",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.RcFZrhgxX3FgpDhN",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "EO1UfX4N7uXX9T6E",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": false
+            },
+            "5": {
+              "count": 1
+            },
+            "7": {
+              "count": 1
+            },
+            "9": {
+              "count": 1
+            },
+            "11": {
+              "count": 1
+            },
+            "13": {
+              "count": 1
+            },
+            "15": {
+              "count": 1
+            },
+            "17": {
+              "count": 1
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:wizard"
+            ],
+            "level": "availableNoCantrips",
+            "school": [
+              "enc"
+            ]
+          },
+          "spell": null,
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Мастер очарования: заклинания школы очарования",
+        "hint": "Заклинания добавляются в книгу заклинаний волшебника."
+      },
+      {
+        "_id": "CFfKsmSD0PxiLRax",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 1,
+              "pool": [
+                "skills:dec",
+                "skills:itm",
+                "skills:per"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Очаровательный собеседник: навык",
+        "hint": ""
+      },
+      {
+        "_id": "8CmQIw1BeAV4jY8r",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplModifyMemo",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 14,
+        "title": "Ложные воспоминания: Изменение памяти",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "VwNWCqWJHxKbsTtM",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:enchanter",
+      "originalName": "Enchanter"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!gpt2QwoZiNwcFL2M"
+}

@@ -1,0 +1,259 @@
+{
+  "_id": "hkJUb1yMPXYgBwes",
+  "name": "Повелитель смерти",
+  "type": "feat",
+  "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Запутанные ритуалы в вашей книге заклинаний даруют вам власть над силами смерти. Пока вы держите книгу заклинаний, вы получаете следующие эффекты:</p><p><strong>Поддержка нежити.</strong> Бонусным действием выберите любое количество нежити, которую вы создали или призвали заклинанием школы некромантии и которая находится в пределах 60 футов от вас. Каждое из выбранных существ получает временные хиты, равные вашему уровню волшебника. Существо не может получить временные хиты этим способом повторно в течение следующих 24 часов.</p><p><strong>Уничтожение нежити.</strong> Когда хиты нежити, которую вы видите, снижаются до 0, вы можете заставить её взорваться с уроном некротической энергией. Бросьте количество к6, равное половине её неистраченных костей хитов (округляется вверх, минимум 1к6), и сложите результат. Каждое существо в пределах эманации с радиусом 10 футов, исходящей от нежити, совершает спасбросок Ловкости. При провале цель получает урон некротической энергией, равный полученной сумме, и не может использовать реакции до начала своего следующего хода. При успехе цель получает половину этого урона.</p><p>Если вы применяете это умение на нежити, которая вам не подконтрольна, то вы должны применить реакцию и потратить ячейку заклинания 5 уровня или выше.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "death-lord",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Некромант",
+    "prerequisites": {
+      "level": 14,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "DvYXWpSCrMTnD8se": {
+        "_id": "DvYXWpSCrMTnD8se",
+        "type": "heal",
+        "name": "Поддержка нежити",
+        "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "@classes.wizard.levels"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "temphp"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      },
+      "3XkqcYRwtj3tcKKY": {
+        "_id": "3XkqcYRwtj3tcKKY",
+        "type": "save",
+        "name": "Уничтожение нежити",
+        "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Хиты нежити снизились до 0 (число к6 = половина её костей хитов)",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "10",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "xmSLYnlr79W381Ju",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:necromancer:death-lord"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hkJUb1yMPXYgBwes"
+}

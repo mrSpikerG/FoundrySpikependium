@@ -1,0 +1,205 @@
+{
+  "_id": "22CmOk2EwQTMlhyx",
+  "name": "Жуткая преданность",
+  "type": "feat",
+  "img": "icons/magic/death/skull-horned-white-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Выберите одного из троих мёртвых: Бэйн, Баал или Миркул. Вы получаете сопротивление одному типу урона и способность накладывать заговор, как указано в таблице ниже; вашей заклинательной характеристикой для этого заговора является Интеллект. После завершения продолжительного отдыха вы можете изменить свой выбор.</p><table><thead><tr><th>Бог</th><th>Тип урона</th><th>Заговор</th></tr></thead><tbody><tr><td>Бэйн</td><td>Психическая энергия</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]{Малая иллюзия}</td></tr><tr><td>Баал</td><td>Яд</td><td><em>Защита от оружия</em></td></tr><tr><td>Миркул</td><td>Некротическая энергия</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplChillTouch]{Леденящее прикосновение}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "dread-allegiance",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Наследник троих",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "7kSOtuPCPxRtUgAn",
+      "name": "Жуткая преданность: Бэйн",
+      "img": "icons/magic/death/skull-trio-badge-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "psychic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "QQDeRsDNlpsVKPGS"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Включите эффект выбранного божества и отключите остальные.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!22CmOk2EwQTMlhyx.7kSOtuPCPxRtUgAn"
+    },
+    {
+      "_id": "BjSkRKhzOog8Ofme",
+      "name": "Жуткая преданность: Баал",
+      "img": "icons/magic/death/skull-trio-badge-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "poison",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "GZYVb6uvOnjrlHUY"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Включите эффект выбранного божества и отключите остальные.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!22CmOk2EwQTMlhyx.BjSkRKhzOog8Ofme"
+    },
+    {
+      "_id": "h07RDbbUYRNNfKwq",
+      "name": "Жуткая преданность: Миркул",
+      "img": "icons/magic/death/skull-trio-badge-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "necrotic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ORrq7lPsvm0WEsz1"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Включите эффект выбранного божества и отключите остальные.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!22CmOk2EwQTMlhyx.h07RDbbUYRNNfKwq"
+    }
+  ],
+  "folder": "GioKOb9UiBzHe9Tc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:scion-of-the-three:dread-allegiance"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!22CmOk2EwQTMlhyx"
+}

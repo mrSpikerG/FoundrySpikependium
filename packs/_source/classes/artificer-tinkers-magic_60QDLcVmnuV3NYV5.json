@@ -1,0 +1,156 @@
+{
+  "_id": "60QDLcVmnuV3NYV5",
+  "name": "Tinker's Magic",
+  "type": "feat",
+  "img": "icons/tools/hand/wrench-steel.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplMending000]{Починка}.</p><p>Действием магия с применением инструментов ремонтника вы можете создать в незанятом пространстве в пределах 5 футов от себя 1 предмет из списка:</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td>Мелкие шарики</td><td>Сеть</td><td>Корзина</td></tr><tr><td>Масло</td><td>Спальник</td><td>Бумага</td></tr><tr><td>Колокольчик</td><td>Пергамент</td><td>Одеяло</td></tr><tr><td>Шест</td><td>Блок и лебёдка</td><td>Сумка</td></tr><tr><td>Ведро</td><td>Верёвка</td><td>Калтропы</td></tr><tr><td>Мешок</td><td>Свеча</td><td>Лопата</td></tr><tr><td>Лом</td><td>Бечёвка</td><td>Фляга</td></tr><tr><td>Трутница</td><td>Кувшин</td><td>Факел</td></tr><tr><td>Лампа</td><td>Флакон</td><td></td></tr></tbody></table><p>См. правила для этого предмета в Книге игрока. Предмет исчезает после того, как вы завершите продолжительный отдых.</p><p>Вы можете использовать это умение количество раз, равное вашему модификатору Интеллекта (минимум 1), и вы восстанавливаете все потраченные использования после продолжительного отдыха.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "tinkers-magic",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Изобретатель",
+    "prerequisites": {
+      "level": 1,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "max(1, @abilities.int.mod)",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "bUpZeRAXNownrr3Q": {
+        "_id": "bUpZeRAXNownrr3Q",
+        "type": "utility",
+        "name": "Создать предмет",
+        "img": "icons/tools/hand/wrench-steel.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "spec",
+          "special": "До окончания продолжительного отдыха",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "DGewewqxCtOGJgyz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "artificer:tinkers-magic",
+      "originalName": "Tinker's Magic"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!60QDLcVmnuV3NYV5"
+}

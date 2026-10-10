@@ -1,0 +1,163 @@
+{
+  "_id": "iGGKLEfQvA9ULHPR",
+  "name": "Инстинктивное очарование",
+  "type": "feat",
+  "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда существо в пределах 30 футов от вас, которое вы видите, попадает по вам броском атаки, вы можете реакцией заставить атакующего совершить спасбросок Мудрости против вашей Сл. спасброска заклинаний. При провале атака промахивается, и если в пределах досягаемости этой атаки есть другое существо, кроме атакующего, то атакующий направляет эту атаку на то существо, используя тот же бросок атаки. Если в пределах досягаемости несколько существ, то вы выбираете, какое станет целью.</p><p>После применения этой реакции вы не можете совершить это снова, пока не закончите продолжительный отдых. Вы также можете восстановить возможность её применения, наложив заклинание школы очарования ячейкой заклинаний.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "instinctive-charm",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Очарователь",
+    "prerequisites": {
+      "level": 10,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "PVvxpGYyR2ZTrXbG": {
+        "_id": "PVvxpGYyR2ZTrXbG",
+        "type": "save",
+        "name": "",
+        "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Существо в 30 футах попало по вам атакой",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "FgYDhCTpOkkHk2HX",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:enchanter:instinctive-charm"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!iGGKLEfQvA9ULHPR"
+}

@@ -1,0 +1,306 @@
+{
+  "_id": "oWVUrF7gwFSxQFFf",
+  "name": "Returning Weapon",
+  "type": "weapon",
+  "img": "icons/weapons/axes/axe-battle-black.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Оружие (любое простое или воинское со свойством метательное), необычное.</em></p><p>Это магическое оружие даёт бонус +1 к броскам атаки и урона, совершённым с его помощью, и возвращается в вашу руку сразу после использования для выполнения дальнобойной атаки.</p><p><em>Чтобы создать конкретное оружие, используйте действие «Зачаровать оружие» и выберите обычное метательное оружие.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "9",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "",
+      "baseItem": ""
+    },
+    "ammunition": {},
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": 0,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        },
+        "bonus": ""
+      },
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      }
+    },
+    "magicalBonus": 1,
+    "properties": [
+      "mgc"
+    ],
+    "proficient": null,
+    "range": {
+      "value": null,
+      "long": null,
+      "reach": null,
+      "units": ""
+    },
+    "mastery": "",
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "PPa1bG7kxUJGHQtX": {
+        "_id": "PPa1bG7kxUJGHQtX",
+        "type": "enchant",
+        "name": "Зачаровать оружие",
+        "img": "icons/weapons/axes/axe-battle-black.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "LLDqd4buJt6Rpnpu",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [],
+              "item": []
+            }
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "enchant": {
+          "identifier": ""
+        },
+        "restrictions": {
+          "allowMagical": false,
+          "categories": [],
+          "properties": [
+            "thr"
+          ],
+          "type": "weapon"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "LLDqd4buJt6Rpnpu",
+      "name": "Возвращающееся оружие",
+      "img": "icons/weapons/axes/axe-battle-black.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "{} (возвращающееся)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "JqqcTtjDTUvBdxDD"
+          },
+          {
+            "key": "system.rarity",
+            "value": "uncommon",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "RJkluCdPoB0VZWMl"
+          },
+          {
+            "key": "system.magicalBonus",
+            "value": "1",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Rwkjbh0StMoExiuf"
+          },
+          {
+            "key": "system.properties",
+            "value": "mgc",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "sEDZHXrZvgeyua1r"
+          },
+          {
+            "key": "system.description.value",
+            "value": "{}<p>@Embed[Compendium.spikependium.items.Item.oWVUrF7gwFSxQFFf caption=false]</p>",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "qfTO7owZyvNT1bov"
+          },
+          {
+            "key": "img",
+            "value": "icons/weapons/axes/axe-battle-black",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "JpNBPPqQhRJdDs4c"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!oWVUrF7gwFSxQFFf.LLDqd4buJt6Rpnpu"
+    }
+  ],
+  "folder": "HyNCtrH5jnhW1Wps",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:returning-weapon",
+      "originalName": "Returning Weapon"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!oWVUrF7gwFSxQFFf"
+}

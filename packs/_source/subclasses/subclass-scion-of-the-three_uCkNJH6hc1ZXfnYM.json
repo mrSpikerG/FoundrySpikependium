@@ -1,0 +1,179 @@
+{
+  "_id": "uCkNJH6hc1ZXfnYM",
+  "name": "Scion of the Three",
+  "type": "subclass",
+  "img": "icons/magic/death/skull-trio-badge-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Станьте жутким агентом зла</em></p><p>Наследник троих черпает силу у группы злобных богов, известных как Трое мёртвых: Бэйн, божество тирании; Баал, божество насилия и убийства; Миркул, божество смерти.</p><p>Некоторые плуты этого подкласса посвящают себя этим трём мрачным богам, а другие вынуждены идти по этому пути из-за проклятия. Так или иначе, сила наследника проявляется в виде различных оккультных даров, а также в пугающем мастерстве наносить удары и вселять ужас во врагов.</p><p>Наследники троих чаще всего встречаются во Вратах Балдура, где Трое мёртвых долгое время боролись за влияние над сердцами смертных. Подземные культы Бэйна, Баала и Миркула часто считают наследников троих своими наиболее полезными агентами. За пределами Врат Балдура светские воровские гильдии, такие как Тени Амна или гильдия Занатара в Глубоководье, могут с осторожностью нанимать наследников троих для выполнения особенно жестоких контрактов.</p><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "scion-of-the-three",
+    "classIdentifier": "rogue",
+    "advancement": [
+      {
+        "_id": "ZorJF2eLmvHTBYVw",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.iQxkLSJgRP8c6fdP",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.22CmOk2EwQTMlhyx",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "5A1SJ4gTkCCyZhya",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Wjc514z9D7DOQmIs",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 9,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "jDTY6BowlzO6OlkK",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.zMw1HohG4YAcv09U",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 13,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "s3S6cAmFBKOehFbC",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.wsFk95nLGTeYVqkn",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 17,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "d1jzHttYSxl9cihc",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMinorIllus"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplChillTouch"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 3,
+        "title": "Жуткая преданность: заговор",
+        "hint": "Бэйн — Малая иллюзия, Баал — Защита от оружия (нет в SRD, добавьте вручную), Миркул — Леденящее прикосновение."
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "Urwqy9O4b8nH0gb2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:scion-of-the-three",
+      "originalName": "Scion of the Three"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!uCkNJH6hc1ZXfnYM"
+}

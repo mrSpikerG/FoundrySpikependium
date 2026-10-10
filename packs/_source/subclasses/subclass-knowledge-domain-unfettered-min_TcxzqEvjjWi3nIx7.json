@@ -1,0 +1,111 @@
+{
+  "_id": "TcxzqEvjjWi3nIx7",
+  "name": "Освобождённый разум",
+  "type": "feat",
+  "img": "icons/magic/control/energy-stream-link-white.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете телепатию на расстояние до 60 футов. При использовании этой телепатии вы можете одновременно установить контакт с количеством существ, равным вашему модификатору Мудрости (минимум 1).</p><p>Кроме того, если результат вашей проверки Интеллекта меньше вашего значения Мудрости, то вы можете использовать это значение вместо результата.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "unfettered-mind",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Домен знаний",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "5NJMju7zpbCMqxNk",
+      "name": "Освобождённый разум",
+      "img": "icons/magic/control/energy-stream-link-white.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.languages.communication.telepathy.value",
+            "value": "60",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "c0RDBO8LjBBRH65p"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!TcxzqEvjjWi3nIx7.5NJMju7zpbCMqxNk"
+    }
+  ],
+  "folder": "dyI5bByyDSoAWANX",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:knowledge-domain:unfettered-mind"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!TcxzqEvjjWi3nIx7"
+}

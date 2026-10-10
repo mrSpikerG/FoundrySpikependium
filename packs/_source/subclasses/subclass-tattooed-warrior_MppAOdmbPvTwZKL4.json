@@ -1,0 +1,293 @@
+{
+  "_id": "MppAOdmbPvTwZKL4",
+  "name": "Warrior of the Tattoos",
+  "type": "subclass",
+  "img": "icons/magic/symbols/rune-sigil-black-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Улучшайте себя магическими татуировками</em></p><p>Черпая вдохновение из различных традиций нанесения узоров на тело, распространённых по всей мультивселенной, татуированные воины умеют пользоваться силой магии, заключённой в их магических татуировках. По мере роста в воинском мастерстве и проникновении в суть мира эти монахи получают новые татуировки. Они могут изменять форму своих рисунков, открывая широкий набор физических и магических эффектов, чтобы одолеть врагов.</p><p><em>Редакция из UA «Арканное обновление»; заменяет версию из UA «Арканные подклассы».</em></p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Мастер тату переработан: татуировки теперь дают умения вместо заклинаний. Тату животных по-прежнему дают заговор и положительный эффект. Тату неба позволяют использовать очки духа вне боя. Тату природы дают сопротивление, которое можно менять. Тату монстра переработаны.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "tattooed-warrior",
+    "classIdentifier": "monk",
+    "advancement": [
+      {
+        "_id": "IsRIRyJU3LlMSpdA",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.GQOcT3b1ED3h7dD5",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.knr7COwC0DeLNBLG",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "DuFDkUMeDkuaSBQH",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.snMp66oEBgSDsqG2",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "bMtwldA3UNH1kJ5C",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.cLFH3GnX616nBSRB",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 11,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "e8ZdWcLeCJCHFVnS",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.XDyY6ix8EGpF4Y0H",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 17,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "I2zTZ55R8JXIDX3v",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.OFqfO0IFGL1CmP66"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.eSWiF5yBvXxOLcW5"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5uIfplRBLosyGxK3"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.YTp4gcmg54sGJqwW"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.MkB4iLqm7LeAuprD"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Тату животных",
+        "hint": ""
+      },
+      {
+        "_id": "vpWwGRNSXUfNfQhW",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "6": {
+              "count": 1,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.WAdJNid43IVhSYFL"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.jWqkZqRz5gfJ9x7N"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.KVAQ95cSqy2vaSBF"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Тату неба",
+        "hint": ""
+      },
+      {
+        "_id": "dzFlu7Nm5lEfWZgm",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "11": {
+              "count": 1,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.TjQxLN0WCM3ms1bD"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.SzUEXy1rqTcWzFjI"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Тату природы",
+        "hint": ""
+      },
+      {
+        "_id": "8RMZjfL7EBr12zfF",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "17": {
+              "count": 1,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.ZHYxfDD58CJm9VIZ"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.7UTnSKmmeKL61MQB"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Ao8KANSf8OISTRP7"
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.f4ErgiSeEP36CPuj"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Тату монстра",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "AFaBzmqZoBZxTATv",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:tattooed-warrior",
+      "originalName": "Warrior of the Tattoos"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!MppAOdmbPvTwZKL4"
+}

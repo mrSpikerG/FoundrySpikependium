@@ -1,0 +1,111 @@
+{
+  "_id": "jGOBXHxY6dB7IYoy",
+  "name": "Мощь мыслей",
+  "type": "feat",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы обладаете телепатией на расстоянии до 60 футов. Кроме того, вы добавляете ваш модификатор Интеллекта к урону, наносимому любым заговором псионика.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PU",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "thought-power",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Телепат",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "jwST5SClxeOlCn4E",
+      "name": "Телепатия 60 футов",
+      "img": "icons/magic/control/hypnosis-mesmerism-eye-tan.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.languages.communication.telepathy.value",
+            "value": "60",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "nnOH1hM9hvFyy6z5"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!jGOBXHxY6dB7IYoy.jwST5SClxeOlCn4E"
+    }
+  ],
+  "folder": "XSurnhDM76f6sLl5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:telepath:thought-power"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!jGOBXHxY6dB7IYoy"
+}

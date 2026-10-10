@@ -1,0 +1,111 @@
+{
+  "_id": "pBlL5aniY1uFUZcG",
+  "name": "Очиститель токсинов",
+  "type": "feat",
+  "img": "icons/consumables/potions/potion-tube-corked-tied-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваше тело может фильтровать яд. Вы получаете иммунитет к урону ядом. Каждый раз, когда вы подвергаетесь урону ядом, ваши варианты отравления оружия наносят дополнительный урон ядом, равный одному броску вашей кости боевых искусств, и вы не можете снова получить этот эффект до конца вашего следующего хода. Кроме того, каждый раз, когда вы проглатываете яд, вы восстанавливаете количество хитов, равное одному броску вашей кости боевых искусств.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO2",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "toxin-purifier",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Мастер яда",
+    "prerequisites": {
+      "level": 11,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "sy59JSRJHtS00JOX",
+      "name": "Иммунитет к яду",
+      "img": "icons/consumables/potions/potion-tube-corked-tied-green.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.di.value",
+            "value": "poison",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Df9zbIEt2G1V0nDh"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!pBlL5aniY1uFUZcG.sy59JSRJHtS00JOX"
+    }
+  ],
+  "folder": "CPQm9EKmJAKTehCI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:warrior-of-venom:toxin-purifier"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!pBlL5aniY1uFUZcG"
+}

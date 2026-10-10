@@ -1,0 +1,63 @@
+{
+  "_id": "LzofFBDkMB0RRXc5",
+  "name": "Заклинания домена знаний",
+  "type": "feat",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы достигаете уровня жреца, указанного в таблице «Заклинания домена знаний», эти заклинания считаются для вас всегда подготовленными.</p><table><caption>Заклинания домена знаний</caption><thead><tr><th>Уровень жреца</th><th>Заклинания</th></tr></thead><tbody><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{Приказ}, @UUID[Compendium.dnd5e.spells24.Item.phbsplComprehend]{Понимание языков}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Обнаружение магии}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{Обнаружение мыслей}, @UUID[Compendium.dnd5e.spells24.Item.phbsplIdentify00]{Опознание}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{Пронзание разума}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Рассеивание магии}, @UUID[Compendium.dnd5e.spells24.Item.phbsplNondetecti]{Необнаружимость}, @UUID[Compendium.dnd5e.spells24.Item.phbsplTongues000]{Языки}</td></tr><tr><td>7</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneEye0]{Магический глаз}, @UUID[Compendium.dnd5e.spells24.Item.phbsplBanishment]{Изгнание}, @UUID[Compendium.dnd5e.spells24.Item.phbsplConfusion0]{Смятение}</td></tr><tr><td>9</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplLegendLore]{Знание легенд}, @UUID[Compendium.dnd5e.spells24.Item.phbsplScrying000]{Наблюдение}, <em>Синаптический разряд</em></td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "knowledge-spells",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Домен знаний",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "dyI5bByyDSoAWANX",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:knowledge-domain:spells"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!LzofFBDkMB0RRXc5"
+}

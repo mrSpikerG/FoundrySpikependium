@@ -1,0 +1,143 @@
+{
+  "_id": "er3aHYW0WkqloLRA",
+  "name": "Покров предка",
+  "type": "feat",
+  "img": "icons/equipment/back/cape-layered-violet-white-swirl.webp",
+  "system": {
+    "description": {
+      "value": "<p>Защита вашего предка отклоняет вредную магию от вас. Пока действует ваше умение Врождённое чародейство, вы получаете преимущество на спасброски против заклинаний. Один раз за применение Врождённого чародейства, когда вы проваливаете спасбросок против заклинания, вы можете вместо этого выбрать успех.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AS",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "ancestral-mantle",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Мощь предка",
+    "prerequisites": {
+      "level": 18,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "X58eYc3mbKZAdcLi": {
+        "_id": "X58eYc3mbKZAdcLi",
+        "type": "utility",
+        "name": "",
+        "img": "icons/equipment/back/cape-layered-violet-white-swirl.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Провал спасброска против заклинания, раз за Врождённое чародейство",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "wrwC49EqQ9SEpyvR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:ancestral-might:ancestral-mantle"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!er3aHYW0WkqloLRA"
+}

@@ -1,0 +1,195 @@
+{
+  "_id": "byFkd2DVIkK3OqQx",
+  "name": "Атлас приключенца",
+  "type": "feat",
+  "img": "icons/tools/navigation/map-marked-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Каждый раз, когда вы заканчиваете продолжительный отдых, держа инструменты картографа, вы можете использовать их, чтобы создать набор магических карт, коснувшись как минимум двух существ (одним из которых можете быть вы сами), но не более чем 1 + ваш модификатор Интеллекта (минимум 2 существа).</p><p>Каждое выбранное существо получает магическую карту, которая остаётся нечитаемой для всех остальных. Эти карты существуют, пока вы не умрёте или не используете это умение снова, при этом все ранее созданные карты немедленно исчезают.</p><p>Пока цель носит карту, она получает следующие преимущества:</p><p><strong>Осведомлённость.</strong> Цель добавляет 1к4 к своим броскам инициативы.</p><p><strong>Позиционирование.</strong> Цель знает местоположение всех остальных владельцев карт, находящихся на том же плане. При накладывании заклинания или создании эффекта, требующего видимости цели, владелец карты может выбрать другого владельца карты в пределах дистанции заклинания или эффекта, даже если он его не видит.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "adventurers-atlas",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Картограф",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "eJA3b5Ea5OHHCXKo": {
+        "_id": "eJA3b5Ea5OHHCXKo",
+        "type": "utility",
+        "name": "Создать карты",
+        "img": "icons/tools/navigation/map-marked-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "По окончании продолжительного отдыха",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "AjmNbCHV1XJlYcqx"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "touch",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "max(2, 1 + @abilities.int.mod)",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "AjmNbCHV1XJlYcqx",
+      "name": "Атлас приключенца: осведомлённость",
+      "img": "icons/tools/navigation/map-marked-green.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.init.roll.bonus",
+            "value": "1d4",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "CjjoPXBg9P6O5lat"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Пока вы носите магическую карту: +1к4 к броскам инициативы; вы знаете местоположение остальных владельцев карт на том же плане.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!byFkd2DVIkK3OqQx.AjmNbCHV1XJlYcqx"
+    }
+  ],
+  "folder": "tNL8ECDXvPZkXvha",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:cartographer:adventurers-atlas"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!byFkd2DVIkK3OqQx"
+}

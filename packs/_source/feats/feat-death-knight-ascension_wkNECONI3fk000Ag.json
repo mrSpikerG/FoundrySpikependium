@@ -1,0 +1,289 @@
+{
+  "_id": "wkNECONI3fk000Ag",
+  "name": "Death Knight Ascension",
+  "type": "feat",
+  "img": "icons/magic/death/undead-skeleton-lich-armor.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваш путь к становлению рыцарем смерти завершён. Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте значение Силы или Харизмы на 1, максимум до 20.</p><p><strong>Нежить.</strong> Ваш тип существа — нежить.</p><p><strong>Нечестивая анатомия.</strong> У вас есть сопротивление к некротическому урону и урону ядом. Вы не получаете степени истощения из-за обезвоживания, недоедания или удушья.</p><p><strong>Сфера адского пламени.</strong> Действием магия вы можете потратить от 1 до 5 единиц смерти, чтобы метнуть сферу чистого адского пламени в точку, которую видите в пределах 120 футов. Каждое существо в сфере с радиусом 20 футов с центром в выбранной точке совершает спасбросок Ловкости (Сл. = 8 + ваш модификатор Харизмы + ваш БМ). При провале цель получает 2к6 урона огнём и 2к6 некротического урона за каждую потраченную единицу смерти. При успешном спасброске цель получает половину урона.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "9",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "death-knight-ascension",
+    "type": {
+      "value": "feat",
+      "subtype": "villainousPath"
+    },
+    "requirements": "Уровень 12+, минимум две черты пути рыцаря смерти",
+    "prerequisites": {
+      "level": 12,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "i4G4qiDFcUFzjWpg": {
+        "_id": "i4G4qiDFcUFzjWpg",
+        "type": "save",
+        "name": "",
+        "img": "icons/magic/death/undead-skeleton-lich-armor.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:death-knight-initiate",
+              "scaling": {
+                "mode": "amount",
+                "formula": ""
+              }
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": "4"
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "120",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "sphere",
+            "size": "20",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 2,
+                "formula": ""
+              }
+            },
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 2,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "cha",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "PjBkzKfjHj2D8WhM",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [
+            "dex",
+            "con",
+            "int",
+            "wis"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "title": "Увеличение характеристики",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "Psu8hvKiFe06Z4gR",
+      "name": "Нечестивая анатомия",
+      "img": "icons/magic/death/skeleton-skull-soul-blue.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.details.type.value",
+            "value": "undead",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "UuOgRSSRSaR5HZBf"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "necrotic",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "fmjXGoNEwKqv2Y9t"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "poison",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "L30KXWv6x20CQUHW"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!wkNECONI3fk000Ag.Psu8hvKiFe06Z4gR"
+    }
+  ],
+  "folder": "K7wzV0Fs1L3GcdJg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:death-knight-ascension",
+      "originalName": "Death Knight Ascension"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!wkNECONI3fk000Ag"
+}

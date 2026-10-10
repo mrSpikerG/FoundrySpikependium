@@ -1,0 +1,386 @@
+{
+  "_id": "d8PFhPYqYvT7vE8Y",
+  "name": "Спутник пурпурный дракон",
+  "type": "feat",
+  "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы связаны с детёнышем аметистового дракона, который служит вашим спутником и использует статблок <strong>Спутник пурпурный дракон</strong>. Этот дракон дружелюбен к вам и вашим союзникам и подчиняется вашим командам.</p><p><strong>Дракон в бою.</strong> В бою дракон действует во время вашего хода. Он может передвигаться и использовать свою реакцию самостоятельно, но единственное действие, которое он выполняет, — это действие уклонение, если вы не прикажете ему бонусным действием выполнить действие из его статблока или какое-то другое действие. Если вы находитесь в состоянии &Reference[incapacitated]{недееспособный}, то дракон действует самостоятельно и не ограничивается действием уклонение.</p><p><strong>Воскрешение дракона.</strong> Если дракон погиб в течение последнего часа, то вы можете действием магия коснуться дракона и потратить одно использование вашего умения Второе дыхание. Дракон возвращается к жизни через 1 минуту с полностью восстановленными хитами. В противном случае вы можете провести 1-часовую церемонию, чтобы воскресить дракона; эта церемония может быть проведена частью короткого или продолжительного отдыха.</p><p><em>В исходном переводе это умение ошибочно озаглавлено «Магия разума».</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "purple-dragon-companion",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Рыцарь пурпурного дракона",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "Ar6CGvGyE0Sa1479": {
+        "_id": "Ar6CGvGyE0Sa1479",
+        "type": "summon",
+        "name": "Призвать дракона",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@abilities.int.mod",
+          "hd": "",
+          "hp": "5 * @classes.fighter.levels",
+          "attackDamage": "@abilities.int.mod",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "Ura9fzLeCAJ6Bsoj",
+            "count": "",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.BhyG6dQ7WX7ui14f",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": "",
+          "identifier": ""
+        }
+      },
+      "9DpwAPudJLagoVnB": {
+        "_id": "9DpwAPudJLagoVnB",
+        "type": "summon",
+        "name": "Воскрешение (Второе дыхание)",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:second-wind",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "touch",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@abilities.int.mod",
+          "hd": "",
+          "hp": "5 * @classes.fighter.levels",
+          "attackDamage": "@abilities.int.mod",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "C0dEiuaDOMSMJviT",
+            "count": "",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.BhyG6dQ7WX7ui14f",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": "",
+          "identifier": ""
+        }
+      },
+      "jQaQy8lS05OQjrtJ": {
+        "_id": "jQaQy8lS05OQjrtJ",
+        "type": "summon",
+        "name": "Воскрешение (1-часовая церемония)",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "hour",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@abilities.int.mod",
+          "hd": "",
+          "hp": "5 * @classes.fighter.levels",
+          "attackDamage": "@abilities.int.mod",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "PgUsycUfYdSfA3st",
+            "count": "",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.BhyG6dQ7WX7ui14f",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": "",
+          "identifier": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "mc9AE1viJ6NWUAyZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:purple-dragon-knight:purple-dragon-companion"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!d8PFhPYqYvT7vE8Y"
+}

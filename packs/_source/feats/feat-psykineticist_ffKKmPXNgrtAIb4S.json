@@ -1,0 +1,219 @@
+{
+  "_id": "ffKKmPXNgrtAIb4S",
+  "name": "Psykineticist",
+  "type": "feat",
+  "img": "icons/skills/movement/feet-winged-boots-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Пси-ускорение.</strong> Когда вы совершаете действие рывок, вы можете увеличить свою скорость на 10 футов до начала вашего следующего хода. Вы можете применять этот эффект количество раз, равное вашему бонусу мастерства, и восстанавливаете все потраченные применения после завершения продолжительного отдыха.</p><p><strong>Псионический талант.</strong> Вы знаете заговор @UUID[Compendium.spikependium.spells.Item.rk8LC2lauSYBqxUU]{Ментальный бросок}. Кроме того, у вас всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplThunderwav]{Волна грома}. Вы можете 1 раз наложить его без траты ячейки заклинаний и восстанавливаете эту возможность после завершения продолжительного отдыха. Также вы можете накладывать это заклинание, используя любые доступные вам ячейки соответствующего уровня. При накладывании этих заклинаний они не требуют вербальных или материальных компонентов, а в качестве вашей заклинательной характеристики для них используется Интеллект, Мудрость или Харизма (выберите при выборе этой черты).</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PS",
+      "page": "13",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "psykineticist",
+    "type": {
+      "value": "feat",
+      "subtype": "wildTalent"
+    },
+    "requirements": "Нельзя иметь другую черту дикого таланта",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "@prof",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "l07p5CDnWeF87as2": {
+        "_id": "l07p5CDnWeF87as2",
+        "type": "utility",
+        "name": "Пси-ускорение",
+        "img": "icons/skills/movement/feet-winged-boots-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "3uqdoivHtKEH3InM",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.rk8LC2lauSYBqxUU",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Псионический талант: заговор",
+        "hint": ""
+      },
+      {
+        "_id": "N3EP4eJFdSU6wX5N",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplThunderwav",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Псионический талант",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "ji2eZ8nAuWkNAlBh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:psykineticist",
+      "originalName": "Psykineticist"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ffKKmPXNgrtAIb4S"
+}

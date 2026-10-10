@@ -1,0 +1,230 @@
+{
+  "_id": "k8D9I8Ifip4VVPK2",
+  "name": "Enemies Abound",
+  "type": "spell",
+  "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: колдун, чародей, псионик, бард, волшебник.</em></p><p>Вы выбираете существо, которое видите в пределах дистанции. Цель должна совершить спасбросок Интеллекта. При провале цель &Reference[frightened]{испугана} на всё время действия заклинания.</p><p>Пока цель испугана, она теряет способность отличать друзей от врагов и подвергается следующим эффектам:</p><ul><li><p>Цель воспринимает всех существ, которых видит, как врагов.</p></li><li><p>Каждый раз, когда цель выбирает существо, отличное от себя, для атаки, заклинания или другого действия, она должна выбирать случайным образом среди существ, которых видит в пределах дистанции этого действия.</p></li><li><p>Цель должна совершать провоцированные атаки каждый раз, когда имеет такую возможность.</p></li></ul><p>Каждый раз, когда цель получает урон, она совершает новый спасбросок Интеллекта. При успешном спасброске действие заклинания оканчивается.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PU",
+      "page": "13",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 3,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "range": {
+      "value": "120",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "enc",
+    "sourceItem": "",
+    "target": {
+      "affects": {
+        "type": "",
+        "count": "",
+        "choice": false,
+        "special": ""
+      },
+      "template": {
+        "type": "",
+        "size": "",
+        "units": "ft",
+        "contiguous": false,
+        "count": ""
+      }
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "wd3ORQnv1CDL1Gl4": {
+        "_id": "wd3ORQnv1CDL1Gl4",
+        "type": "save",
+        "name": "",
+        "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": true
+        },
+        "effects": [
+          {
+            "_id": "suobCr0gZyoWBPvN"
+          }
+        ],
+        "range": {
+          "value": "120",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "suobCr0gZyoWBPvN",
+      "name": "Везде враги",
+      "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Не отличает друзей от врагов; выбирает цели случайно; совершает все возможные провоцированные атаки. После получения урона повторяет спасбросок Интеллекта.</p>",
+      "origin": null,
+      "statuses": [
+        "frightened"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!k8D9I8Ifip4VVPK2.suobCr0gZyoWBPvN"
+    }
+  ],
+  "folder": "yt9MUC2qhvb6mmbr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:enemies-abound",
+      "originalName": "Enemies Abound"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!k8D9I8Ifip4VVPK2"
+}

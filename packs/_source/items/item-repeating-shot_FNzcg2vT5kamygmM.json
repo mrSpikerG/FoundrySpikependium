@@ -1,0 +1,314 @@
+{
+  "_id": "FNzcg2vT5kamygmM",
+  "name": "Repeating Shot",
+  "type": "weapon",
+  "img": "icons/weapons/crossbows/crossbow-loaded-black.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Оружие (любое простое или воинское со свойством боеприпасы), необычное (требуется настройка).</em></p><p>Это магическое оружие даёт бонус +1 к броскам атаки и урона при использовании для дальнобойной атаки, а также игнорирует свойство перезарядка, если оно имеется.</p><p>Если оружию не хватает боеприпасов, то оно создаёт их само, автоматически производя 1 магический боеприпас, когда владелец совершает дальнобойную атаку с его помощью. Созданный боеприпас исчезает сразу после того, как попадает или промахивается по цели.</p><p><em>Чтобы создать конкретное оружие, используйте действие «Зачаровать оружие» и выберите обычное оружие со свойством боеприпасы.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-EB",
+      "page": "9",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "",
+      "baseItem": ""
+    },
+    "ammunition": {},
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": 0,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        },
+        "bonus": ""
+      },
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        }
+      }
+    },
+    "magicalBonus": 1,
+    "properties": [
+      "mgc"
+    ],
+    "proficient": null,
+    "range": {
+      "value": null,
+      "long": null,
+      "reach": null,
+      "units": ""
+    },
+    "mastery": "",
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "9RCZKrDFiiIpQfTw": {
+        "_id": "9RCZKrDFiiIpQfTw",
+        "type": "enchant",
+        "name": "Зачаровать оружие",
+        "img": "icons/weapons/crossbows/crossbow-loaded-black.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "r3RchGQDX2uTlE6T",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [],
+              "item": []
+            }
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "enchant": {
+          "identifier": ""
+        },
+        "restrictions": {
+          "allowMagical": false,
+          "categories": [],
+          "properties": [
+            "amm"
+          ],
+          "type": "weapon"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "r3RchGQDX2uTlE6T",
+      "name": "Самозарядный выстрел",
+      "img": "icons/weapons/crossbows/crossbow-loaded-black.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "{} (самозарядное)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "eepJ3DiL8loMfivG"
+          },
+          {
+            "key": "system.rarity",
+            "value": "uncommon",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "FXJNb0STK6cjE8ti"
+          },
+          {
+            "key": "system.attunement",
+            "value": "required",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "6Lm1PDHwchojMEEt"
+          },
+          {
+            "key": "system.magicalBonus",
+            "value": "1",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "vDOlcCD5K4A9lx7W"
+          },
+          {
+            "key": "system.properties",
+            "value": "mgc",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "NGu6IlgrusnCX5m5"
+          },
+          {
+            "key": "system.description.value",
+            "value": "{}<p>@Embed[Compendium.spikependium.items.Item.FNzcg2vT5kamygmM caption=false]</p>",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "THF5DuFAsvtBY0k9"
+          },
+          {
+            "key": "img",
+            "value": "icons/weapons/crossbows/crossbow-loaded-black",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "uiaSeUICMFgfH1kF"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!FNzcg2vT5kamygmM.r3RchGQDX2uTlE6T"
+    }
+  ],
+  "folder": "HyNCtrH5jnhW1Wps",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:repeating-shot",
+      "originalName": "Repeating Shot"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FNzcg2vT5kamygmM"
+}

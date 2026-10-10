@@ -1,0 +1,188 @@
+{
+  "_id": "9w5BThXCUChDHq8G",
+  "name": "Mind Whisperer",
+  "type": "feat",
+  "img": "icons/magic/control/energy-stream-link-spiral-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Ограниченная телепатия.</strong> Действием магия выберите 1 видимое существо в пределах 120 футов. Вы устанавливаете телепатическую связь с этим существом. В течение 1 часа вы и выбранное существо можете телепатически общаться друг с другом, находясь в пределах 120 футов друг от друга. Для понимания необходимо мысленно использовать язык, известный собеседнику.</p><p>После применения этого эффекта вы не можете применять его снова, пока не завершите короткий или продолжительный отдых.</p><p><strong>Псионический талант.</strong> Вы знаете заговор <em>Расщепление разума</em>. Кроме того, у вас всегда подготовлено заклинание @UUID[Compendium.dnd5e.spells24.Item.phbsplDissonantW]{Диссонирующий шёпот}. Вы можете 1 раз наложить его без траты ячейки заклинаний и восстанавливаете эту возможность после завершения продолжительного отдыха. Также вы можете накладывать это заклинание, используя любые доступные вам ячейки соответствующего уровня. При накладывании этих заклинаний они не требуют вербальных или материальных компонентов, а в качестве вашей заклинательной характеристики для них используется Интеллект, Мудрость или Харизма (выберите при выборе этой черты).</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-PS",
+      "page": "12",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "mind-whisperer",
+    "type": {
+      "value": "feat",
+      "subtype": "wildTalent"
+    },
+    "requirements": "Нельзя иметь другую черту дикого таланта",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "HmWalZc4E3npCMrC": {
+        "_id": "HmWalZc4E3npCMrC",
+        "type": "utility",
+        "name": "Ограниченная телепатия",
+        "img": "icons/magic/control/energy-stream-link-spiral-teal.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "120",
+          "units": "ft",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "sr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "0eJEVzpowUHOxAEU",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDissonantW",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Псионический талант",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "ji2eZ8nAuWkNAlBh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:mind-whisperer",
+      "originalName": "Mind Whisperer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9w5BThXCUChDHq8G"
+}

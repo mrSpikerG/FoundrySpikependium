@@ -1,0 +1,198 @@
+{
+  "_id": "9uj2izOTHiPr1vwr",
+  "name": "Древняя выносливость",
+  "type": "feat",
+  "img": "icons/magic/nature/tree-roots-glow-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы полностью проникаетесь древней силой леса, получая следующие эффекты:</p><p><strong>Неослабевающая охота.</strong> Если ваши хиты опускаются до 0 в трансформации от умения Гнев диких и вы не умираете мгновенно, то вы можете потратить ячейку заклинания 4 уровня или выше (не требует действия). Вместо этого ваши хиты становятся равны 5, умноженным на уровень потраченной ячейки заклинания.</p><p><strong>Вневременность.</strong> Вы имеете иммунитет к состоянию &Reference[exhaustion]{истощённый}.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "ancient-endurance",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Страж пустоты",
+    "prerequisites": {
+      "level": 15,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "zdFRWJNT6dAXUTOU": {
+        "_id": "zdFRWJNT6dAXUTOU",
+        "type": "utility",
+        "name": "Неослабевающая охота",
+        "img": "icons/magic/nature/tree-roots-glow-yellow.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Ваши хиты опустились до 0 в трансформации",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "4",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "5 * (4 + @scaling)",
+          "name": "Хиты",
+          "prompt": false,
+          "visible": true
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "6Ba1NOq5KcIIqK14",
+      "name": "Вневременность",
+      "img": "icons/magic/time/hourglass-tilted-glowing-gold.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.ci.value",
+            "value": "exhaustion",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "eCAgReWLFlzkSdGB"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!9uj2izOTHiPr1vwr.6Ba1NOq5KcIIqK14"
+    }
+  ],
+  "folder": "C9IkGWo36LYESs0h",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:hollow-warden:ancient-endurance"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!9uj2izOTHiPr1vwr"
+}

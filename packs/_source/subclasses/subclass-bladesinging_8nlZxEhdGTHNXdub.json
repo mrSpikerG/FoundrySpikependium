@@ -1,0 +1,185 @@
+{
+  "_id": "8nlZxEhdGTHNXdub",
+  "name": "Bladesinger",
+  "type": "subclass",
+  "img": "icons/skills/melee/sword-twirl-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Владейте мечом и магией в элегантном тандеме</em></p><p>Песнь клинка — это школа волшебства, сочетающая фехтование и танец. В бою певцы клинка используют серию сложных, изящных манёвров, которые отражают удары врага и позволяют направить магию в разрушительные атаки и изощрённую защиту. Многие, кто наблюдал за работой певца клинка, вспоминают это как одно из самых прекрасных впечатлений в своей жизни: великолепный танец, сопровождаемый звоном поющего клинка.</p><p>Искусство песни клинка тесно связано с древними эльфийскими обществами, которые первыми овладели этим мастерством и дали ему название. Даже сегодня большинство певцов клинка происходят из старых эльфийских королевств, таких как Кормантир, или из неэльфийских обществ, которые разделяют земли и историю с эльфами, таких как Серебряные пределы. Откуда бы ни происходили эти мастера, они известны тем, что путешествуют по всем землям, помогая простым людям и совершая героические поступки. Немногие общины встречают прибытие певца клинка иначе, чем как добрый знак.</p><aside class=\"notable\"><p><strong>Примечание дизайнера.</strong> Песнь клинка теперь позволяет использовать модификатор Интеллекта для бросков атаки и урона, а количество использований связано с модификатором Интеллекта. Тренировка войны и песни даёт владение навыком из списка, а оружие можно использовать как фокусировку. Песнь победы позволяет совершить атаку оружием бонусным действием после наложения заклинания действием.</p></aside><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "10",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "bladesinging",
+    "classIdentifier": "wizard",
+    "advancement": [
+      {
+        "_id": "8XXALQPhH3ySQQEB",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.aOz7HJveJ7ltjAdE",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.yqpXFw86IKoBVRgN",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "XbTmqhHmcw8VhlOs",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.o4XBREdJYsPEGD3c",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "IxRcj0oYiixQrK5k",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.lYxpntizbAaQQGPw",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "L2XmmwAIYqSejO3x",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.syPNqPv4BfuD0sVF",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "NcN9f5hIxZckKjYy",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "weapon:mar:battleaxe",
+            "weapon:mar:flail",
+            "weapon:mar:longsword",
+            "weapon:mar:morningstar",
+            "weapon:mar:rapier",
+            "weapon:mar:scimitar",
+            "weapon:mar:shortsword",
+            "weapon:mar:trident",
+            "weapon:mar:warhammer",
+            "weapon:mar:warpick",
+            "weapon:mar:whip"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Тренировка войны и песни: оружие",
+        "hint": ""
+      },
+      {
+        "_id": "p80R0g5plVwuL2xf",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 1,
+              "pool": [
+                "skills:acr",
+                "skills:ath",
+                "skills:prf",
+                "skills:per"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Тренировка войны и песни: навык",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "VwNWCqWJHxKbsTtM",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:bladesinging",
+      "originalName": "Bladesinger"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!8nlZxEhdGTHNXdub"
+}

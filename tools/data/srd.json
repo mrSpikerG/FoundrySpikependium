@@ -1,0 +1,5741 @@
+{
+ "spells": {
+  "Alarm": {
+   "id": "phbsplAlarm00000",
+   "level": 1,
+   "school": "abj",
+   "img": "icons/tools/instruments/bell-gold.webp"
+  },
+  "Animal Friendship": {
+   "id": "phbsplAnimalFrie",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/creatures/abilities/paw-glowing-yellow.webp"
+  },
+  "Bane": {
+   "id": "phbsplBane000000",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/magic/control/voodoo-doll-pain-damage-pink.webp"
+  },
+  "Bless": {
+   "id": "phbsplBless00000",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp"
+  },
+  "Burning Hands": {
+   "id": "phbsplBurningHan",
+   "level": 1,
+   "school": "evo",
+   "img": "icons/magic/fire/blast-jet-stream-embers-red.webp"
+  },
+  "Charm Person": {
+   "id": "phbsplCharmPerso",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/magic/control/hypnosis-mesmerism-eye.webp"
+  },
+  "Chromatic Orb": {
+   "id": "phbsplChromaticO",
+   "level": 1,
+   "school": "evo",
+   "img": "icons/magic/light/explosion-star-small-teal-purple.webp"
+  },
+  "Color Spray": {
+   "id": "phbsplColorSpray",
+   "level": 1,
+   "school": "ill",
+   "img": "icons/magic/light/hand-sparks-smoke-green.webp"
+  },
+  "Command": {
+   "id": "phbsplCommand000",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/magic/sonic/scream-wail-shout-teal.webp"
+  },
+  "Comprehend Languages": {
+   "id": "phbsplComprehend",
+   "level": 1,
+   "school": "div",
+   "img": "icons/sundries/documents/document-writing-pink.webp"
+  },
+  "Create or Destroy Water": {
+   "id": "phbsplCreateorDe",
+   "level": 1,
+   "school": "trs",
+   "img": "icons/magic/water/water-hand.webp"
+  },
+  "Cure Wounds": {
+   "id": "phbsplCureWounds",
+   "level": 1,
+   "school": "abj",
+   "img": "icons/magic/nature/leaf-drip-light-green.webp"
+  },
+  "Detect Evil and Good": {
+   "id": "phbsplDetectEvil",
+   "level": 1,
+   "school": "div",
+   "img": "icons/magic/perception/eye-ringed-green.webp"
+  },
+  "Detect Magic": {
+   "id": "phbsplDetectMagi",
+   "level": 1,
+   "school": "div",
+   "img": "icons/magic/symbols/runes-carved-stone-green.webp"
+  },
+  "Detect Poison and Disease": {
+   "id": "phbsplDetectPois",
+   "level": 1,
+   "school": "div",
+   "img": "icons/skills/toxins/poison-bottle-open-fire-purple.webp"
+  },
+  "Disguise Self": {
+   "id": "phbsplDisguiseSe",
+   "level": 1,
+   "school": "ill",
+   "img": "icons/equipment/head/mask-carved-bird-grey-pink.webp"
+  },
+  "Dissonant Whispers": {
+   "id": "phbsplDissonantW",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/magic/sonic/projectile-sound-rings-wave.webp"
+  },
+  "Divine Favor": {
+   "id": "phbsplDivineFavo",
+   "level": 1,
+   "school": "trs",
+   "img": "icons/skills/melee/weapons-crossed-swords-yellow-teal.webp"
+  },
+  "Divine Smite": {
+   "id": "phbsplDivineSmit",
+   "level": 1,
+   "school": "evo",
+   "img": "icons/skills/melee/strike-flail-destructive-yellow.webp"
+  },
+  "Ensnaring Strike": {
+   "id": "phbsplEnsnaringS",
+   "level": 1,
+   "school": "con",
+   "img": "icons/magic/nature/root-vines-grow-brown.webp"
+  },
+  "Entangle": {
+   "id": "phbsplEntangle00",
+   "level": 1,
+   "school": "con",
+   "img": "icons/magic/nature/root-vine-entangle-foot-green.webp"
+  },
+  "Expeditious Retreat": {
+   "id": "phbsplExpeditiou",
+   "level": 1,
+   "school": "trs",
+   "img": "icons/skills/movement/feet-winged-boots-brown.webp"
+  },
+  "Faerie Fire": {
+   "id": "phbsplFaerieFire",
+   "level": 1,
+   "school": "evo",
+   "img": "icons/magic/fire/projectile-meteor-salvo-strong-pink.webp"
+  },
+  "False Life": {
+   "id": "phbsplFalseLife0",
+   "level": 1,
+   "school": "nec",
+   "img": "icons/skills/wounds/injury-stapled-flesh-tan.webp"
+  },
+  "Feather Fall": {
+   "id": "phbsplFeatherFal",
+   "level": 1,
+   "school": "trs",
+   "img": "icons/commodities/materials/feather-blue-glowing.webp"
+  },
+  "Find Familiar": {
+   "id": "phbsplFindFamili",
+   "level": 1,
+   "school": "con",
+   "img": "icons/creatures/mammals/spirit-deer-herd-blue.webp"
+  },
+  "Floating Disk": {
+   "id": "phbsplTensersFlo",
+   "level": 1,
+   "school": "con",
+   "img": "icons/magic/light/circle-window-clock-blue.webp"
+  },
+  "Fog Cloud": {
+   "id": "phbsplFogCloud00",
+   "level": 1,
+   "school": "con",
+   "img": "icons/magic/air/fog-gas-smoke-dense-white.webp"
+  },
+  "Goodberry": {
+   "id": "phbsplGoodberry0",
+   "level": 1,
+   "school": "con",
+   "img": "icons/consumables/fruit/berries-hanging-red.webp"
+  },
+  "Grease": {
+   "id": "phbsplGrease0000",
+   "level": 1,
+   "school": "con",
+   "img": "icons/commodities/materials/liquid-purple.webp"
+  },
+  "Guiding Bolt": {
+   "id": "phbsplGuidingBol",
+   "level": 1,
+   "school": "evo",
+   "img": "icons/magic/light/projectile-flare-blue.webp"
+  },
+  "Healing Word": {
+   "id": "phbsplHealingWor",
+   "level": 1,
+   "school": "abj",
+   "img": "icons/magic/life/cross-beam-green.webp"
+  },
+  "Hellish Rebuke": {
+   "id": "phbsplHellishReb",
+   "level": 1,
+   "school": "evo",
+   "img": "icons/magic/fire/flame-burning-skeleton-explosion.webp"
+  },
+  "Heroism": {
+   "id": "phbsplHeroism000",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/magic/holy/saint-glass-portrait-halo.webp"
+  },
+  "Hex": {
+   "id": "phbsplHex0000000",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/magic/symbols/star-yellow.webp"
+  },
+  "Hideous Laughter": {
+   "id": "phbsplTashasHide",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/magic/control/fear-fright-white.webp"
+  },
+  "Hunter's Mark": {
+   "id": "phbsplHuntersMar",
+   "level": 1,
+   "school": "div",
+   "img": "icons/skills/targeting/crosshair-scope-sniper-green.webp"
+  },
+  "Ice Knife": {
+   "id": "phbsplIceKnife00",
+   "level": 1,
+   "school": "con",
+   "img": "icons/magic/water/projectile-ice-shard.webp"
+  },
+  "Identify": {
+   "id": "phbsplIdentify00",
+   "level": 1,
+   "school": "div",
+   "img": "icons/tools/scribal/magnifying-glass.webp"
+  },
+  "Illusory Script": {
+   "id": "phbsplIllusorySc",
+   "level": 1,
+   "school": "ill",
+   "img": "icons/sundries/documents/document-letter-blue.webp"
+  },
+  "Inflict Wounds": {
+   "id": "phbsplInflictWou",
+   "level": 1,
+   "school": "nec",
+   "img": "icons/skills/wounds/injury-pain-body-orange.webp"
+  },
+  "Jump": {
+   "id": "phbsplJump000000",
+   "level": 1,
+   "school": "trs",
+   "img": "icons/creatures/mammals/deer-movement-leap-green.webp"
+  },
+  "Longstrider": {
+   "id": "phbsplLongstride",
+   "level": 1,
+   "school": "trs",
+   "img": "icons/equipment/feet/boots-leather-laced-brown.webp"
+  },
+  "Mage Armor": {
+   "id": "phbsplMageArmor0",
+   "level": 1,
+   "school": "abj",
+   "img": "icons/equipment/head/hat-pointed-buckle-leather-purple.webp"
+  },
+  "Magic Missile": {
+   "id": "phbsplMagicMissi",
+   "level": 1,
+   "school": "evo",
+   "img": "icons/magic/light/projectiles-pink-purple.webp"
+  },
+  "Protection from Evil and Good": {
+   "id": "phbEvilAndGoodPr",
+   "level": 1,
+   "school": "abj",
+   "img": "icons/magic/symbols/fleur-de-lis-yellow.webp"
+  },
+  "Purify Food and Drink": {
+   "id": "phbsplPurifyFood",
+   "level": 1,
+   "school": "trs",
+   "img": "icons/tools/cooking/pot-camping-iron-black.webp"
+  },
+  "Ray of Sickness": {
+   "id": "phbsplRayofSickn",
+   "level": 1,
+   "school": "nec",
+   "img": "icons/magic/unholy/beam-impact-green.webp"
+  },
+  "Sanctuary": {
+   "id": "phbSanctuary0000",
+   "level": 1,
+   "school": "abj",
+   "img": "icons/magic/defensive/shield-barrier-deflect-gold.webp"
+  },
+  "Searing Smite": {
+   "id": "phbsplSearingSmi",
+   "level": 1,
+   "school": "evo",
+   "img": "icons/weapons/hammers/hammer-double-glowing-yellow.webp"
+  },
+  "Shield of Faith": {
+   "id": "phbsplShieldofFa",
+   "level": 1,
+   "school": "abj",
+   "img": "icons/magic/holy/barrier-shield-winged-cross.webp"
+  },
+  "Shield": {
+   "id": "phbsplShield0000",
+   "level": 1,
+   "school": "abj",
+   "img": "icons/equipment/shield/heater-crystal-blue.webp"
+  },
+  "Silent Image": {
+   "id": "phbsplSilentImag",
+   "level": 1,
+   "school": "ill",
+   "img": "icons/magic/light/explosion-star-glow-silhouette.webp"
+  },
+  "Sleep": {
+   "id": "phbsplSleep00000",
+   "level": 1,
+   "school": "enc",
+   "img": "icons/magic/control/hypnosis-mesmerism-pendulum.webp"
+  },
+  "Speak with Animals": {
+   "id": "phbsplSpeakwithA",
+   "level": 1,
+   "school": "div",
+   "img": "icons/creatures/mammals/dog-husky-white-blue.webp"
+  },
+  "Thunderwave": {
+   "id": "phbsplThunderwav",
+   "level": 1,
+   "school": "evo",
+   "img": "icons/magic/sonic/explosion-shock-wave-teal.webp"
+  },
+  "Unseen Servant": {
+   "id": "phbsplUnseenServ",
+   "level": 1,
+   "school": "con",
+   "img": "icons/creatures/magical/humanoid-silhouette-aliens-green.webp"
+  },
+  "Acid Arrow": {
+   "id": "phbsplMelfsAcidA",
+   "level": 2,
+   "school": "evo",
+   "img": "icons/skills/ranged/arrow-flying-poisoned-green.webp"
+  },
+  "Aid": {
+   "id": "phbsplAid0000000",
+   "level": 2,
+   "school": "abj",
+   "img": "icons/magic/life/cross-flared-green.webp"
+  },
+  "Alter Self": {
+   "id": "phbsplAlterSelf0",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/magic/control/silhouette-hold-change-green.webp"
+  },
+  "Animal Messenger": {
+   "id": "phbsplAnimalMess",
+   "level": 2,
+   "school": "enc",
+   "img": "icons/creatures/mammals/rabbit-movement-glowing-green.webp"
+  },
+  "Arcane Lock": {
+   "id": "phbsplArcaneLock",
+   "level": 2,
+   "school": "abj",
+   "img": "icons/sundries/misc/lock-steel-blue.webp"
+  },
+  "Arcane Vigor": {
+   "id": "phbsplArcaneVigo",
+   "level": 2,
+   "school": "abj",
+   "img": "icons/magic/life/cross-embers-glow-yellow-purple.webp"
+  },
+  "Arcanist's Magic Aura": {
+   "id": "phbsplNystulsMag",
+   "level": 2,
+   "school": "ill",
+   "img": "icons/commodities/cloth/cloth-rolls-cmy.webp"
+  },
+  "Augury": {
+   "id": "phbsplAugury0000",
+   "level": 2,
+   "school": "div",
+   "img": "icons/sundries/gaming/playing-cards-black.webp"
+  },
+  "Barkskin": {
+   "id": "phbsplBarkskin00",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/magic/nature/thorns-hand-glow-green.webp"
+  },
+  "Blindness/Deafness": {
+   "id": "phbsplBlindnessD",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/equipment/head/crown-thorns-gold.webp"
+  },
+  "Blur": {
+   "id": "phbsplBlur000000",
+   "level": 2,
+   "school": "ill",
+   "img": "icons/magic/control/silhouette-hold-change-blue.webp"
+  },
+  "Calm Emotions": {
+   "id": "phbsplCalmEmotio",
+   "level": 2,
+   "school": "enc",
+   "img": "icons/magic/sonic/explosion-shock-sound-wave.webp"
+  },
+  "Continual Flame": {
+   "id": "phbsplContinualF",
+   "level": 2,
+   "school": "evo",
+   "img": "icons/magic/light/torch-fire-orange.webp"
+  },
+  "Darkness": {
+   "id": "phbsplDarkness00",
+   "level": 2,
+   "school": "evo",
+   "img": "icons/magic/unholy/orb-rays-blue.webp"
+  },
+  "Darkvision": {
+   "id": "phbsplDarkvision",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/magic/perception/eye-winged-pink.webp"
+  },
+  "Detect Thoughts": {
+   "id": "phbsplDetectThou",
+   "level": 2,
+   "school": "div",
+   "img": "icons/skills/social/diplomacy-handshake-yellow.webp"
+  },
+  "Dragon's Breath": {
+   "id": "phbsplDragonsBre",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/creatures/abilities/dragon-fire-breath-orange.webp"
+  },
+  "Enhance Ability": {
+   "id": "phbsplEnhanceAbi",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/skills/social/intimidation-impressing.webp"
+  },
+  "Enlarge/Reduce": {
+   "id": "phbsplEnlargeRed",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/consumables/mushrooms/mushroom-spotted-red.webp"
+  },
+  "Enthrall": {
+   "id": "phbsplEnthrall00",
+   "level": 2,
+   "school": "enc",
+   "img": "icons/skills/trades/music-singing-voice-blue.webp"
+  },
+  "Find Steed": {
+   "id": "phbsplFindSteed0",
+   "level": 2,
+   "school": "con",
+   "img": "icons/commodities/claws/claw-blue-grey.webp"
+  },
+  "Find Traps": {
+   "id": "phbsplFindTraps0",
+   "level": 2,
+   "school": "div",
+   "img": "icons/commodities/tech/antenna-powered-purple.webp"
+  },
+  "Flame Blade": {
+   "id": "phbsplFlameBlade",
+   "level": 2,
+   "school": "evo",
+   "img": "icons/weapons/daggers/dagger-glowing-white.webp"
+  },
+  "Flaming Sphere": {
+   "id": "phbsplFlamingSph",
+   "level": 2,
+   "school": "con",
+   "img": "icons/magic/fire/flame-burning-earth-yellow.webp"
+  },
+  "Gentle Repose": {
+   "id": "phbsplGentleRepo",
+   "level": 2,
+   "school": "nec",
+   "img": "icons/magic/death/hand-withered-gray.webp"
+  },
+  "Gust of Wind": {
+   "id": "phbsplGustofWind",
+   "level": 2,
+   "school": "evo",
+   "img": "icons/magic/air/air-wave-gust-blue.webp"
+  },
+  "Heat Metal": {
+   "id": "phbsplHeatMetal0",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/magic/fire/flame-burning-chain.webp"
+  },
+  "Hold Person": {
+   "id": "phbsplHoldPerson",
+   "level": 2,
+   "school": "enc",
+   "img": "icons/magic/control/encase-creature-humanoid-hold.webp"
+  },
+  "Invisibility": {
+   "id": "phbsplInvisibili",
+   "level": 2,
+   "school": "ill",
+   "img": "icons/creatures/magical/spirit-undead-ghost-purple.webp"
+  },
+  "Knock": {
+   "id": "phbsplKnock00000",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/sundries/misc/lock-open-yellow.webp"
+  },
+  "Lesser Restoration": {
+   "id": "phbsplLesserRest",
+   "level": 2,
+   "school": "abj",
+   "img": "icons/magic/holy/prayer-hands-glowing-yellow-green.webp"
+  },
+  "Levitate": {
+   "id": "phbsplLevitate00",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/magic/light/orbs-firefly-hand-yellow.webp"
+  },
+  "Locate Animals or Plants": {
+   "id": "phbsplLocateAnim",
+   "level": 2,
+   "school": "div",
+   "img": "icons/magic/nature/leaf-juggle-humanoid-green.webp"
+  },
+  "Locate Object": {
+   "id": "phbsplLocateObje",
+   "level": 2,
+   "school": "div",
+   "img": "icons/tools/navigation/map-marked-gold.webp"
+  },
+  "Magic Mouth": {
+   "id": "phbsplMagicMouth",
+   "level": 2,
+   "school": "ill",
+   "img": "icons/creatures/abilities/mouth-teeth-tongue-purple.webp"
+  },
+  "Magic Weapon": {
+   "id": "phbsplMagicWeapo",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/skills/melee/sword-engraved-glow-purple.webp"
+  },
+  "Mind Spike": {
+   "id": "phbsplMindSpike0",
+   "level": 2,
+   "school": "div",
+   "img": "icons/magic/unholy/beam-ringed-impact-purple.webp"
+  },
+  "Mirror Image": {
+   "id": "phbsplMirrorImag",
+   "level": 2,
+   "school": "ill",
+   "img": "icons/magic/defensive/illusion-evasion-echo-purple.webp"
+  },
+  "Misty Step": {
+   "id": "phbsplMistyStep0",
+   "level": 2,
+   "school": "con",
+   "img": "icons/magic/lightning/orb-ball-spiral-blue.webp"
+  },
+  "Moonbeam": {
+   "id": "phbsplMoonbeam00",
+   "level": 2,
+   "school": "evo",
+   "img": "icons/magic/light/beam-rays-yellow-blue-large.webp"
+  },
+  "Pass without Trace": {
+   "id": "phbsplPasswithou",
+   "level": 2,
+   "school": "abj",
+   "img": "icons/creatures/mammals/humanoid-cat-skulking-teal.webp"
+  },
+  "Phantasmal Force": {
+   "id": "phbPhantasmalFor",
+   "level": 2,
+   "school": "ill",
+   "img": "icons/creatures/magical/spirit-undead-winged-ghost.webp"
+  },
+  "Prayer of Healing": {
+   "id": "phbsplPrayerofHe",
+   "level": 2,
+   "school": "abj",
+   "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp"
+  },
+  "Protection from Poison": {
+   "id": "phbsplProtection",
+   "level": 2,
+   "school": "abj",
+   "img": "icons/skills/toxins/cup-glass-poisoned-held.webp"
+  },
+  "Ray of Enfeeblement": {
+   "id": "phbsplRayofEnfee",
+   "level": 2,
+   "school": "nec",
+   "img": "icons/magic/lightning/bolt-strike-beam-purple.webp"
+  },
+  "Rope Trick": {
+   "id": "phbsplRopeTrick0",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/sundries/survival/rope-wrapped-purple.webp"
+  },
+  "Scorching Ray": {
+   "id": "phbsplScorchingR",
+   "level": 2,
+   "school": "evo",
+   "img": "icons/magic/fire/projectiles-salvo-trio-orange.webp"
+  },
+  "See Invisibility": {
+   "id": "phbsplSeeInvisib",
+   "level": 2,
+   "school": "div",
+   "img": "icons/magic/perception/orb-eye-scrying.webp"
+  },
+  "Shatter": {
+   "id": "phbsplShatter000",
+   "level": 2,
+   "school": "evo",
+   "img": "icons/magic/sonic/projectile-shock-wave-blue.webp"
+  },
+  "Shining Smite": {
+   "id": "phbsplShiningSmi",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/skills/melee/strike-sword-dagger-runes-yellow.webp"
+  },
+  "Silence": {
+   "id": "phbsplSilence000",
+   "level": 2,
+   "school": "ill",
+   "img": "icons/magic/control/debuff-chains-orb-movement-blue.webp"
+  },
+  "Spider Climb": {
+   "id": "phbsplSpiderClim",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/creatures/invertebrates/spider-pink-purple.webp"
+  },
+  "Spike Growth": {
+   "id": "phbsplSpikeGrowt",
+   "level": 2,
+   "school": "trs",
+   "img": "icons/creatures/abilities/stinger-spine-horn-blood.webp"
+  },
+  "Spiritual Weapon": {
+   "id": "phbsplSpiritualW",
+   "level": 2,
+   "school": "evo",
+   "img": "icons/weapons/axes/axe-double-gold.webp"
+  },
+  "Suggestion": {
+   "id": "phbsplSuggestion",
+   "level": 2,
+   "school": "enc",
+   "img": "icons/magic/control/mouth-smile-deception-purple.webp"
+  },
+  "Warding Bond": {
+   "id": "phbsplWardingBon",
+   "level": 2,
+   "school": "abj",
+   "img": "icons/magic/movement/abstract-ribbons-red-orange.webp"
+  },
+  "Web": {
+   "id": "phbsplWeb0000000",
+   "level": 2,
+   "school": "con",
+   "img": "icons/creatures/webs/web-spider-casting-caught-purple.webp"
+  },
+  "Zone of Truth": {
+   "id": "phbsplZoneofTrut",
+   "level": 2,
+   "school": "enc",
+   "img": "icons/skills/social/diplomacy-unity-alliance.webp"
+  },
+  "Animate Dead": {
+   "id": "phbsplAnimateDea",
+   "level": 3,
+   "school": "nec",
+   "img": "icons/magic/death/undead-zombie-grave-green.webp"
+  },
+  "Beacon of Hope": {
+   "id": "phbsplBeaconofHo",
+   "level": 3,
+   "school": "abj",
+   "img": "icons/magic/holy/chalice-glowing-gold.webp"
+  },
+  "Bestow Curse": {
+   "id": "phbsplBestowCurs",
+   "level": 3,
+   "school": "nec",
+   "img": "icons/magic/unholy/hands-praying-fire-green.webp"
+  },
+  "Blink": {
+   "id": "phbsplBlink00000",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/magic/unholy/hand-marked-pink.webp"
+  },
+  "Call Lightning": {
+   "id": "phbsplCallLightn",
+   "level": 3,
+   "school": "con",
+   "img": "icons/magic/lightning/bolt-strike-cloud-gray.webp"
+  },
+  "Clairvoyance": {
+   "id": "phbsplClairvoyan",
+   "level": 3,
+   "school": "div",
+   "img": "icons/magic/perception/third-eye-blue-red.webp"
+  },
+  "Conjure Animals": {
+   "id": "phbsplConjureAni",
+   "level": 3,
+   "school": "con",
+   "img": "icons/creatures/abilities/wolf-heads-swirl-purple.webp"
+  },
+  "Counterspell": {
+   "id": "phbsplCounterspe",
+   "level": 3,
+   "school": "abj",
+   "img": "icons/magic/unholy/hands-circle-light-green.webp"
+  },
+  "Create Food and Water": {
+   "id": "phbsplCreateFood",
+   "level": 3,
+   "school": "con",
+   "img": "icons/tools/cooking/bowl-steaming-brown.webp"
+  },
+  "Daylight": {
+   "id": "phbsplDaylight00",
+   "level": 3,
+   "school": "evo",
+   "img": "icons/magic/light/orb-beams-green.webp"
+  },
+  "Dispel Magic": {
+   "id": "phbsplDispelMagi",
+   "level": 3,
+   "school": "abj",
+   "img": "icons/skills/melee/sword-damaged-broken-purple.webp"
+  },
+  "Fear": {
+   "id": "phbsplFear000000",
+   "level": 3,
+   "school": "ill",
+   "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp"
+  },
+  "Fireball": {
+   "id": "phbsplFireball00",
+   "level": 3,
+   "school": "evo",
+   "img": "icons/magic/fire/barrier-shield-explosion-yellow.webp"
+  },
+  "Fly": {
+   "id": "phbsplFly0000000",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/creatures/birds/songbird-yellow-flying.webp"
+  },
+  "Gaseous Form": {
+   "id": "phbsplGaseousFor",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/magic/air/air-smoke-casting.webp"
+  },
+  "Glyph of Warding": {
+   "id": "phbsplGlyphofWar",
+   "level": 3,
+   "school": "abj",
+   "img": "icons/magic/symbols/triangle-glowing-green.webp"
+  },
+  "Haste": {
+   "id": "phbsplHaste00000",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/magic/time/clock-spinning-gold-pink.webp"
+  },
+  "Hypnotic Pattern": {
+   "id": "phbsplHypnoticPa",
+   "level": 3,
+   "school": "ill",
+   "img": "icons/magic/control/hypnosis-mesmerism-swirl.webp"
+  },
+  "Lightning Bolt": {
+   "id": "phbsplLightningB",
+   "level": 3,
+   "school": "evo",
+   "img": "icons/magic/lightning/bolt-strike-blue.webp"
+  },
+  "Magic Circle": {
+   "id": "phbsplMagicCircl",
+   "level": 3,
+   "school": "abj",
+   "img": "icons/magic/symbols/ring-circle-smoke-blue.webp"
+  },
+  "Major Image": {
+   "id": "phbsplMajorImage",
+   "level": 3,
+   "school": "ill",
+   "img": "icons/magic/light/orbs-smoke-pink.webp"
+  },
+  "Mass Healing Word": {
+   "id": "phbsplMassHealin",
+   "level": 3,
+   "school": "abj",
+   "img": "icons/magic/life/heart-area-circle-red-green.webp"
+  },
+  "Meld into Stone": {
+   "id": "phbsplMeldintoSt",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/magic/earth/barrier-stone-pillar-purple.webp"
+  },
+  "Nondetection": {
+   "id": "phbsplNondetecti",
+   "level": 3,
+   "school": "abj",
+   "img": "icons/magic/perception/hand-eye-fire-blue.webp"
+  },
+  "Phantom Steed": {
+   "id": "phbsplPhantomSte",
+   "level": 3,
+   "school": "ill",
+   "img": "icons/creatures/mammals/deer-antlers-glowing-blue.webp"
+  },
+  "Plant Growth": {
+   "id": "phbsplPlantGrowt",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/magic/nature/plant-sproud-hands-dirt-green.webp"
+  },
+  "Protection from Energy": {
+   "id": "phbProtectionFro",
+   "level": 3,
+   "school": "abj",
+   "img": "icons/magic/symbols/cog-shield-white-blue.webp"
+  },
+  "Remove Curse": {
+   "id": "phbsplRemoveCurs",
+   "level": 3,
+   "school": "abj",
+   "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp"
+  },
+  "Revivify": {
+   "id": "phbsplRevivify00",
+   "level": 3,
+   "school": "nec",
+   "img": "icons/magic/holy/chalice-glowing-gold-water.webp"
+  },
+  "Sending": {
+   "id": "phbsplSending000",
+   "level": 3,
+   "school": "div",
+   "img": "icons/skills/social/diplomacy-writing-letter.webp"
+  },
+  "Sleet Storm": {
+   "id": "phbsplSleetStorm",
+   "level": 3,
+   "school": "con",
+   "img": "icons/magic/water/projectile-icecicles-salvo.webp"
+  },
+  "Slow": {
+   "id": "phbsplSlow000000",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/magic/time/clock-stopwatch-white-blue.webp"
+  },
+  "Speak with Dead": {
+   "id": "phbsplSpeakwithD",
+   "level": 3,
+   "school": "nec",
+   "img": "icons/magic/death/undead-ghost-scream-teal.webp"
+  },
+  "Speak with Plants": {
+   "id": "phbsplSpeakwithP",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/magic/nature/tree-animated-smile.webp"
+  },
+  "Spirit Guardians": {
+   "id": "phbsplSpiritGuar",
+   "level": 3,
+   "school": "con",
+   "img": "icons/magic/light/orb-hands-humanoid-yellow.webp"
+  },
+  "Stinking Cloud": {
+   "id": "phbsplStinkingCl",
+   "level": 3,
+   "school": "con",
+   "img": "icons/magic/air/fog-gas-smoke-dense-green.webp"
+  },
+  "Tiny Hut": {
+   "id": "phbsplLeomundsTi",
+   "level": 3,
+   "school": "evo",
+   "img": "icons/environment/settlement/hut.webp"
+  },
+  "Tongues": {
+   "id": "phbsplTongues000",
+   "level": 3,
+   "school": "div",
+   "img": "icons/environment/settlement/pyramid.webp"
+  },
+  "Vampiric Touch": {
+   "id": "phbsplVampiricTo",
+   "level": 3,
+   "school": "nec",
+   "img": "icons/magic/unholy/hand-claw-fire-blue.webp"
+  },
+  "Water Breathing": {
+   "id": "phbsplWaterBreat",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/magic/water/bubbles-air-water-blue.webp"
+  },
+  "Water Walk": {
+   "id": "phbsplWaterWalk0",
+   "level": 3,
+   "school": "trs",
+   "img": "icons/creatures/amphibians/frog-water-teal.webp"
+  },
+  "Wind Wall": {
+   "id": "phbsplWindWall00",
+   "level": 3,
+   "school": "evo",
+   "img": "icons/magic/air/wind-tornado-funnel-damage-blue.webp"
+  },
+  "Arcane Eye": {
+   "id": "phbsplArcaneEye0",
+   "level": 4,
+   "school": "div",
+   "img": "icons/magic/perception/eye-slit-pink.webp"
+  },
+  "Aura of Life": {
+   "id": "phbsplAuraofLife",
+   "level": 4,
+   "school": "abj",
+   "img": "icons/magic/holy/meditation-chi-focus-blue.webp"
+  },
+  "Banishment": {
+   "id": "phbsplBanishment",
+   "level": 4,
+   "school": "abj",
+   "img": "icons/magic/unholy/barrier-fire-pink.webp"
+  },
+  "Black Tentacles": {
+   "id": "phbsplEvardsBlac",
+   "level": 4,
+   "school": "con",
+   "img": "icons/creatures/tentacles/tentacles-suctioncups-pink.webp"
+  },
+  "Blight": {
+   "id": "phbsplBlight0000",
+   "level": 4,
+   "school": "nec",
+   "img": "icons/magic/unholy/strike-body-life-soul-green.webp"
+  },
+  "Charm Monster": {
+   "id": "phbsplCharmMonst",
+   "level": 4,
+   "school": "enc",
+   "img": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp"
+  },
+  "Compulsion": {
+   "id": "phbsplCompulsion",
+   "level": 4,
+   "school": "enc",
+   "img": "icons/skills/wounds/anatomy-organ-brain-pink-red.webp"
+  },
+  "Confusion": {
+   "id": "phbsplConfusion0",
+   "level": 4,
+   "school": "enc",
+   "img": "icons/magic/symbols/question-stone-yellow.webp"
+  },
+  "Conjure Minor Elementals": {
+   "id": "phbsplConjureMin",
+   "level": 4,
+   "school": "con",
+   "img": "icons/creatures/magical/spirit-fire-orange.webp"
+  },
+  "Conjure Woodland Beings": {
+   "id": "phbsplConjureWoo",
+   "level": 4,
+   "school": "con",
+   "img": "icons/magic/nature/instrument-recorder-leaves.webp"
+  },
+  "Control Water": {
+   "id": "phbsplControlWat",
+   "level": 4,
+   "school": "trs",
+   "img": "icons/magic/water/pseudopod-swirl-blue.webp"
+  },
+  "Death Ward": {
+   "id": "phbsplDeathWard0",
+   "level": 4,
+   "school": "abj",
+   "img": "icons/magic/death/skull-horned-worn-fire-blue.webp"
+  },
+  "Dimension Door": {
+   "id": "phbsplDimensionD",
+   "level": 4,
+   "school": "con",
+   "img": "icons/environment/wilderness/portal.webp"
+  },
+  "Divination": {
+   "id": "phbsplDivination",
+   "level": 4,
+   "school": "div",
+   "img": "icons/magic/perception/orb-crystal-ball-scrying.webp"
+  },
+  "Dominate Beast": {
+   "id": "phbsplDominateBe",
+   "level": 4,
+   "school": "enc",
+   "img": "icons/creatures/mammals/bull-horns-eyes-glowin-orange.webp"
+  },
+  "Fabricate": {
+   "id": "phbsplFabricate0",
+   "level": 4,
+   "school": "trs",
+   "img": "icons/skills/trades/construction-mason-stonecutter-sculpture.webp"
+  },
+  "Faithful Hound": {
+   "id": "phbFaithfulHound",
+   "level": 4,
+   "school": "con",
+   "img": "icons/creatures/abilities/wolf-howl-moon-purple.webp"
+  },
+  "Fire Shield": {
+   "id": "phbsplFireShield",
+   "level": 4,
+   "school": "evo",
+   "img": "icons/equipment/shield/heater-stone-orange.webp"
+  },
+  "Freedom of Movement": {
+   "id": "phbsplFreedomofM",
+   "level": 4,
+   "school": "abj",
+   "img": "icons/magic/water/elemental-water.webp"
+  },
+  "Giant Insect": {
+   "id": "phbsplGiantInsec",
+   "level": 4,
+   "school": "con",
+   "img": "icons/creatures/invertebrates/bee-yellow.webp"
+  },
+  "Greater Invisibility": {
+   "id": "phbsplGreaterInv",
+   "level": 4,
+   "school": "ill",
+   "img": "icons/creatures/magical/spirit-undead-ghost-blue.webp"
+  },
+  "Guardian of Faith": {
+   "id": "phbsplGuardianof",
+   "level": 4,
+   "school": "con",
+   "img": "icons/magic/holy/barrier-shield-winged-blue.webp"
+  },
+  "Hallucinatory Terrain": {
+   "id": "phbsplHallucinat",
+   "level": 4,
+   "school": "ill",
+   "img": "icons/environment/wilderness/terrain-river-road-gray.webp"
+  },
+  "Ice Storm": {
+   "id": "phbsplIceStorm00",
+   "level": 4,
+   "school": "evo",
+   "img": "icons/magic/water/projectile-ice-chunks-salvo.webp"
+  },
+  "Locate Creature": {
+   "id": "phbsplLocateCrea",
+   "level": 4,
+   "school": "div",
+   "img": "icons/tools/navigation/map-marked-green.webp"
+  },
+  "Phantasmal Killer": {
+   "id": "phbsplPhantasmal",
+   "level": 4,
+   "school": "ill",
+   "img": "icons/magic/death/undead-ghosts-trio-blue.webp"
+  },
+  "Polymorph": {
+   "id": "phbsplPolymorph0",
+   "level": 4,
+   "school": "trs",
+   "img": "icons/creatures/amphibians/frog-confused-green-blue.webp"
+  },
+  "Private Sanctum": {
+   "id": "phbPrivateSanctu",
+   "level": 4,
+   "school": "abj",
+   "img": "icons/environment/wilderness/cave-entrance-dwarven-hill.webp"
+  },
+  "Resilient Sphere": {
+   "id": "phbsplOtilukesRe",
+   "level": 4,
+   "school": "abj",
+   "img": "icons/commodities/gems/pearl-swirl-teal.webp"
+  },
+  "Secret Chest": {
+   "id": "phbsplLeomundsSe",
+   "level": 4,
+   "school": "con",
+   "img": "icons/containers/chest/chest-simple-box-gold-brown.webp"
+  },
+  "Stone Shape": {
+   "id": "phbsplStoneShape",
+   "level": 4,
+   "school": "trs",
+   "img": "icons/commodities/stone/ore-pile-white.webp"
+  },
+  "Stoneskin": {
+   "id": "phbsplStoneskin0",
+   "level": 4,
+   "school": "trs",
+   "img": "icons/magic/defensive/armor-stone-skin.webp"
+  },
+  "Vitriolic Sphere": {
+   "id": "phbsplVitriolicS",
+   "level": 4,
+   "school": "evo",
+   "img": "icons/magic/acid/orb-bubble-smoke-drip.webp"
+  },
+  "Wall of Fire": {
+   "id": "phbsplWallofFire",
+   "level": 4,
+   "school": "evo",
+   "img": "icons/magic/fire/flame-burning-fence.webp"
+  },
+  "Animate Objects": {
+   "id": "phbsplAnimateObj",
+   "level": 5,
+   "school": "trs",
+   "img": "icons/commodities/tech/tube-chamber-lightning.webp"
+  },
+  "Antilife Shell": {
+   "id": "phbsplAntilifeSh",
+   "level": 5,
+   "school": "abj",
+   "img": "icons/magic/unholy/silhouette-light-fire-blue.webp"
+  },
+  "Arcane Hand": {
+   "id": "phbsplBigbysHand",
+   "level": 5,
+   "school": "evo",
+   "img": "icons/magic/earth/strike-fist-stone.webp"
+  },
+  "Awaken": {
+   "id": "phbsplAwaken0000",
+   "level": 5,
+   "school": "trs",
+   "img": "icons/magic/nature/root-vines-face-glow-green.webp"
+  },
+  "Cloudkill": {
+   "id": "phbsplCloudkill0",
+   "level": 5,
+   "school": "con",
+   "img": "icons/magic/acid/dissolve-pool-bubbles.webp"
+  },
+  "Commune with Nature": {
+   "id": "phbsplCommunewit",
+   "level": 5,
+   "school": "div",
+   "img": "icons/magic/nature/tree-spirit-glow-black-yellow.webp"
+  },
+  "Commune": {
+   "id": "phbsplCommune000",
+   "level": 5,
+   "school": "div",
+   "img": "icons/tools/laboratory/bowl-liquid-orange.webp"
+  },
+  "Cone of Cold": {
+   "id": "phbsplConeofCold",
+   "level": 5,
+   "school": "evo",
+   "img": "icons/magic/air/wind-tornado-wall-blue.webp"
+  },
+  "Conjure Elemental": {
+   "id": "phbsplConjureEle",
+   "level": 5,
+   "school": "con",
+   "img": "icons/creatures/magical/spirit-mischief-fire-ice-blue.webp"
+  },
+  "Contact Other Plane": {
+   "id": "phbsplContactOth",
+   "level": 5,
+   "school": "div",
+   "img": "icons/creatures/magical/spirit-fear-energy-pink.webp"
+  },
+  "Contagion": {
+   "id": "phbsplContagion0",
+   "level": 5,
+   "school": "nec",
+   "img": "icons/magic/acid/dissolve-vomit-green-brown.webp"
+  },
+  "Creation": {
+   "id": "phbsplCreation00",
+   "level": 5,
+   "school": "ill",
+   "img": "icons/magic/unholy/orb-hands-pink.webp"
+  },
+  "Dispel Evil and Good": {
+   "id": "phbsplDispelEvil",
+   "level": 5,
+   "school": "abj",
+   "img": "icons/magic/holy/yin-yang-balance-symbol.webp"
+  },
+  "Dominate Person": {
+   "id": "phbsplDominatePe",
+   "level": 5,
+   "school": "enc",
+   "img": "icons/magic/control/control-influence-puppet.webp"
+  },
+  "Dream": {
+   "id": "phbsplDream00000",
+   "level": 5,
+   "school": "ill",
+   "img": "icons/magic/control/sleep-bubble-purple.webp"
+  },
+  "Flame Strike": {
+   "id": "phbsplFlameStrik",
+   "level": 5,
+   "school": "evo",
+   "img": "icons/magic/fire/beam-jet-stream-embers.webp"
+  },
+  "Geas": {
+   "id": "phbsplGeas000000",
+   "level": 5,
+   "school": "enc",
+   "img": "icons/equipment/head/hat-pointed-leather-black-glowing.webp"
+  },
+  "Greater Restoration": {
+   "id": "phbsplGreaterRes",
+   "level": 5,
+   "school": "abj",
+   "img": "icons/magic/life/heart-hand-gold-green-light.webp"
+  },
+  "Hallow": {
+   "id": "phbsplHallow0000",
+   "level": 5,
+   "school": "abj",
+   "img": "icons/magic/symbols/star-inverted-yellow.webp"
+  },
+  "Hold Monster": {
+   "id": "phbsplHoldMonste",
+   "level": 5,
+   "school": "enc",
+   "img": "icons/magic/control/encase-creature-monster-hold.webp"
+  },
+  "Insect Plague": {
+   "id": "phbsplInsectPlag",
+   "level": 5,
+   "school": "con",
+   "img": "icons/creatures/invertebrates/wasp-swarm-attack.webp"
+  },
+  "Legend Lore": {
+   "id": "phbsplLegendLore",
+   "level": 5,
+   "school": "div",
+   "img": "icons/sundries/books/book-red-exclamation.webp"
+  },
+  "Mass Cure Wounds": {
+   "id": "phbsplMassCureWo",
+   "level": 5,
+   "school": "abj",
+   "img": "icons/magic/life/cross-area-circle-green-white.webp"
+  },
+  "Mislead": {
+   "id": "phbsplMislead000",
+   "level": 5,
+   "school": "ill",
+   "img": "icons/magic/control/fear-fright-mask-orange.webp"
+  },
+  "Modify Memory": {
+   "id": "phbsplModifyMemo",
+   "level": 5,
+   "school": "enc",
+   "img": "icons/sundries/documents/document-letter-blue.webp"
+  },
+  "Passwall": {
+   "id": "phbsplPasswall00",
+   "level": 5,
+   "school": "trs",
+   "img": "icons/environment/wilderness/arch-stone.webp"
+  },
+  "Planar Binding": {
+   "id": "phbsplPlanarBind",
+   "level": 5,
+   "school": "abj",
+   "img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp"
+  },
+  "Raise Dead": {
+   "id": "phbsplRaiseDead0",
+   "level": 5,
+   "school": "nec",
+   "img": "icons/magic/death/skull-fire-white-yellow.webp"
+  },
+  "Reincarnate": {
+   "id": "phbsplReincarnat",
+   "level": 5,
+   "school": "nec",
+   "img": "icons/creatures/magical/spirit-undead-horned-blue.webp"
+  },
+  "Scrying": {
+   "id": "phbsplScrying000",
+   "level": 5,
+   "school": "div",
+   "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp"
+  },
+  "Seeming": {
+   "id": "phbsplSeeming000",
+   "level": 5,
+   "school": "ill",
+   "img": "icons/equipment/head/mask-wooden-feathered-blue.webp"
+  },
+  "Summon Dragon": {
+   "id": "phbsplSummonDrag",
+   "level": 5,
+   "school": "con",
+   "img": "icons/creatures/abilities/dragon-breath-purple.webp"
+  },
+  "Telekinesis": {
+   "id": "phbsplTelekinesi",
+   "level": 5,
+   "school": "trs",
+   "img": "icons/magic/unholy/hand-grasping-green.webp"
+  },
+  "Telepathic Bond": {
+   "id": "phbsplRarysTelep",
+   "level": 5,
+   "school": "div",
+   "img": "icons/skills/social/diplomacy-handshake-gray.webp"
+  },
+  "Teleportation Circle": {
+   "id": "phbsplTeleportat",
+   "level": 5,
+   "school": "con",
+   "img": "icons/magic/symbols/runes-carved-stone-yellow.webp"
+  },
+  "Tree Stride": {
+   "id": "phbsplTreeStride",
+   "level": 5,
+   "school": "con",
+   "img": "icons/magic/nature/tree-spirit-blue.webp"
+  },
+  "Wall of Force": {
+   "id": "phbsplWallofForc",
+   "level": 5,
+   "school": "evo",
+   "img": "icons/magic/defensive/barrier-shield-dome-deflect-blue.webp"
+  },
+  "Wall of Stone": {
+   "id": "phbsplWallofSton",
+   "level": 5,
+   "school": "evo",
+   "img": "icons/environment/settlement/city-wall.webp"
+  },
+  "Blade Barrier": {
+   "id": "phbsplBladeBarri",
+   "level": 6,
+   "school": "evo",
+   "img": "icons/magic/defensive/shield-barrier-blades-teal.webp"
+  },
+  "Chain Lightning": {
+   "id": "phbsplChainLight",
+   "level": 6,
+   "school": "evo",
+   "img": "icons/magic/lightning/bolt-strike-sparks-teal.webp"
+  },
+  "Circle of Death": {
+   "id": "phbsplCircleofDe",
+   "level": 6,
+   "school": "nec",
+   "img": "icons/magic/death/skull-horned-goat-pentagram-red.webp"
+  },
+  "Conjure Fey": {
+   "id": "phbsplConjureFey",
+   "level": 6,
+   "school": "con",
+   "img": "icons/creatures/magical/spirit-poison-smoke-green.webp"
+  },
+  "Contingency": {
+   "id": "phbsplContingenc",
+   "level": 6,
+   "school": "abj",
+   "img": "icons/magic/time/hourglass-tilted-glowing-gold.webp"
+  },
+  "Create Undead": {
+   "id": "phbsplCreateUnde",
+   "level": 6,
+   "school": "nec",
+   "img": "icons/magic/death/skull-flames-white-blue.webp"
+  },
+  "Disintegrate": {
+   "id": "phbsplDisintegra",
+   "level": 6,
+   "school": "trs",
+   "img": "icons/magic/unholy/hand-claw-fire-green.webp"
+  },
+  "Eyebite": {
+   "id": "phbsplEyebite000",
+   "level": 6,
+   "school": "nec",
+   "img": "icons/skills/wounds/injury-eyes-blood-red.webp"
+  },
+  "Find the Path": {
+   "id": "phbsplFindthePat",
+   "level": 6,
+   "school": "div",
+   "img": "icons/tools/navigation/spyglass-telescope-brass-blue.webp"
+  },
+  "Flesh to Stone": {
+   "id": "phbsplFleshtoSto",
+   "level": 6,
+   "school": "trs",
+   "img": "icons/magic/earth/strike-body-stone-crumble.webp"
+  },
+  "Forbiddance": {
+   "id": "phbsplForbiddanc",
+   "level": 6,
+   "school": "abj",
+   "img": "icons/magic/symbols/squares-3d-green.webp"
+  },
+  "Freezing Sphere": {
+   "id": "phbsplOtilukesFr",
+   "level": 6,
+   "school": "evo",
+   "img": "icons/magic/water/projectile-ice-snowball.webp"
+  },
+  "Globe of Invulnerability": {
+   "id": "phbsplGlobeofInv",
+   "level": 6,
+   "school": "abj",
+   "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp"
+  },
+  "Guards and Wards": {
+   "id": "phbsplGuardsandW",
+   "level": 6,
+   "school": "abj",
+   "img": "icons/environment/settlement/stone-stairs.webp"
+  },
+  "Harm": {
+   "id": "phbsplHarm000000",
+   "level": 6,
+   "school": "nec",
+   "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp"
+  },
+  "Heal": {
+   "id": "phbsplHeal000000",
+   "level": 6,
+   "school": "abj",
+   "img": "icons/magic/life/heart-glowing-red.webp"
+  },
+  "Heroes' Feast": {
+   "id": "phbsplHeroesFeas",
+   "level": 6,
+   "school": "con",
+   "img": "icons/consumables/food/cooked-hock-glowing-orange.webp"
+  },
+  "Instant Summons": {
+   "id": "phbsplDrawmijsIn",
+   "level": 6,
+   "school": "con",
+   "img": "icons/commodities/gems/gem-fragments-turquoise.webp"
+  },
+  "Irresistible Dance": {
+   "id": "phbsplOttosIrres",
+   "level": 6,
+   "school": "enc",
+   "img": "icons/magic/control/voodoo-doll-pain-damage-green.webp"
+  },
+  "Magic Jar": {
+   "id": "phbsplMagicJar00",
+   "level": 6,
+   "school": "nec",
+   "img": "icons/containers/kitchenware/jug-bottle-clay-brown-gold-blue.webp"
+  },
+  "Mass Suggestion": {
+   "id": "phbsplMassSugges",
+   "level": 6,
+   "school": "enc",
+   "img": "icons/environment/people/charge.webp"
+  },
+  "Move Earth": {
+   "id": "phbsplMoveEarth0",
+   "level": 6,
+   "school": "trs",
+   "img": "icons/tools/hand/shovel-spade-steel-blue.webp"
+  },
+  "Planar Ally": {
+   "id": "phbsplPlanarAlly",
+   "level": 6,
+   "school": "con",
+   "img": "icons/creatures/magical/spirit-undead-ghost-tan-teal.webp"
+  },
+  "Programmed Illusion": {
+   "id": "phbsplProgrammed",
+   "level": 6,
+   "school": "ill",
+   "img": "icons/magic/symbols/cog-glowing-green.webp"
+  },
+  "Sunbeam": {
+   "id": "phbsplSunbeam000",
+   "level": 6,
+   "school": "evo",
+   "img": "icons/magic/light/beam-rays-orange-large.webp"
+  },
+  "Transport via Plants": {
+   "id": "phbsplTransportv",
+   "level": 6,
+   "school": "con",
+   "img": "icons/magic/nature/tree-spirit-green.webp"
+  },
+  "True Seeing": {
+   "id": "phbsplTrueSeeing",
+   "level": 6,
+   "school": "div",
+   "img": "icons/magic/perception/eye-slit-orange.webp"
+  },
+  "Wall of Ice": {
+   "id": "phbsplWallofIce0",
+   "level": 6,
+   "school": "evo",
+   "img": "icons/magic/water/barrier-ice-wall-snow.webp"
+  },
+  "Wall of Thorns": {
+   "id": "phbsplWallofThor",
+   "level": 6,
+   "school": "con",
+   "img": "icons/magic/nature/root-vine-entwined-thorns.webp"
+  },
+  "Wind Walk": {
+   "id": "phbsplWindWalk00",
+   "level": 6,
+   "school": "trs",
+   "img": "icons/magic/air/wind-weather-snow-gusts.webp"
+  },
+  "Word of Recall": {
+   "id": "phbsplWordofReca",
+   "level": 6,
+   "school": "con",
+   "img": "icons/magic/movement/portal-vortex-orange.webp"
+  },
+  "Arcane Sword": {
+   "id": "phbswdMordenkain",
+   "level": 7,
+   "school": "evo",
+   "img": "icons/weapons/swords/sword-flanged-lightning.webp"
+  },
+  "Conjure Celestial": {
+   "id": "phbsplConjureCel",
+   "level": 7,
+   "school": "con",
+   "img": "icons/magic/symbols/star-rising-purple.webp"
+  },
+  "Delayed Blast Fireball": {
+   "id": "phbsplDelayedBla",
+   "level": 7,
+   "school": "evo",
+   "img": "icons/magic/fire/explosion-flame-blue.webp"
+  },
+  "Divine Word": {
+   "id": "phbsplDivineWord",
+   "level": 7,
+   "school": "evo",
+   "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp"
+  },
+  "Etherealness": {
+   "id": "phbsplEtherealne",
+   "level": 7,
+   "school": "con",
+   "img": "icons/magic/air/wind-vortex-swirl-purple.webp"
+  },
+  "Finger of Death": {
+   "id": "phbsplFingerofDe",
+   "level": 7,
+   "school": "nec",
+   "img": "icons/magic/unholy/hand-light-pink.webp"
+  },
+  "Fire Storm": {
+   "id": "phbsplFireStorm0",
+   "level": 7,
+   "school": "evo",
+   "img": "icons/magic/fire/projectile-wave-yellow.webp"
+  },
+  "Forcecage": {
+   "id": "phbsplForcecage0",
+   "level": 7,
+   "school": "evo",
+   "img": "icons/magic/control/silhouette-hold-beam-blue.webp"
+  },
+  "Magnificent Mansion": {
+   "id": "phbMagnificentMa",
+   "level": 7,
+   "school": "con",
+   "img": "icons/environment/settlement/house-manor.webp"
+  },
+  "Mirage Arcane": {
+   "id": "phbsplMirageArca",
+   "level": 7,
+   "school": "ill",
+   "img": "icons/environment/wilderness/terrain-forest-gray.webp"
+  },
+  "Plane Shift": {
+   "id": "phbsplPlaneShift",
+   "level": 7,
+   "school": "con",
+   "img": "icons/skills/targeting/target-glowing-yellow.webp"
+  },
+  "Prismatic Spray": {
+   "id": "phbsplPrismaticS",
+   "level": 7,
+   "school": "evo",
+   "img": "icons/magic/light/beams-strike-blue.webp"
+  },
+  "Project Image": {
+   "id": "phbsplProjectIma",
+   "level": 7,
+   "school": "ill",
+   "img": "icons/creatures/magical/construct-golem-stone-blue.webp"
+  },
+  "Regenerate": {
+   "id": "phbsplRegenerate",
+   "level": 7,
+   "school": "trs",
+   "img": "icons/magic/life/cross-explosion-burst-green.webp"
+  },
+  "Resurrection": {
+   "id": "phbsplResurrecti",
+   "level": 7,
+   "school": "nec",
+   "img": "icons/magic/death/skeleton-skull-soul-blue.webp"
+  },
+  "Reverse Gravity": {
+   "id": "phbsplReverseGra",
+   "level": 7,
+   "school": "trs",
+   "img": "icons/magic/control/sihouette-hold-beam-green.webp"
+  },
+  "Sequester": {
+   "id": "phbsplSequester0",
+   "level": 7,
+   "school": "trs",
+   "img": "icons/containers/chest/chest-reinforced-box-brown.webp"
+  },
+  "Simulacrum": {
+   "id": "phbsplSimulacrum",
+   "level": 7,
+   "school": "ill",
+   "img": "icons/magic/water/ice-snowman.webp"
+  },
+  "Symbol": {
+   "id": "phbsplSymbol0000",
+   "level": 7,
+   "school": "abj",
+   "img": "icons/magic/symbols/rune-sigil-green-purple.webp"
+  },
+  "Teleport": {
+   "id": "phbsplTeleport00",
+   "level": 7,
+   "school": "con",
+   "img": "icons/skills/movement/arrows-up-trio-red.webp"
+  },
+  "Animal Shapes": {
+   "id": "phbsplAnimalShap",
+   "level": 8,
+   "school": "trs",
+   "img": "icons/creatures/mammals/goat-horned-blue.webp"
+  },
+  "Antimagic Field": {
+   "id": "phbsplAntimagicF",
+   "level": 8,
+   "school": "abj",
+   "img": "icons/magic/light/orb-container-orange.webp"
+  },
+  "Antipathy/Sympathy": {
+   "id": "phbsplAntipathyS",
+   "level": 8,
+   "school": "enc",
+   "img": "icons/magic/control/control-influence-rally-purple.webp"
+  },
+  "Befuddlement": {
+   "id": "phbsplBefuddleme",
+   "level": 8,
+   "school": "enc",
+   "img": "icons/skills/trades/academics-investigation-puzzles.webp"
+  },
+  "Clone": {
+   "id": "phbsplClone00000",
+   "level": 8,
+   "school": "nec",
+   "img": "icons/commodities/tech/metal-blue.webp"
+  },
+  "Control Weather": {
+   "id": "phbsplControlWea",
+   "level": 8,
+   "school": "trs",
+   "img": "icons/magic/air/weather-clouds-rainbow.webp"
+  },
+  "Demiplane": {
+   "id": "phbsplDemiplane0",
+   "level": 8,
+   "school": "con",
+   "img": "icons/environment/wilderness/mine-interior-dungeon-door.webp"
+  },
+  "Dominate Monster": {
+   "id": "phbsplDominateMo",
+   "level": 8,
+   "school": "enc",
+   "img": "icons/magic/control/hypnosis-mesmerism-watch.webp"
+  },
+  "Earthquake": {
+   "id": "phbsplEarthquake",
+   "level": 8,
+   "school": "trs",
+   "img": "icons/magic/earth/barrier-stone-brown-green.webp"
+  },
+  "Glibness": {
+   "id": "phbsplGlibness00",
+   "level": 8,
+   "school": "enc",
+   "img": "icons/skills/social/peace-luck-insult.webp"
+  },
+  "Holy Aura": {
+   "id": "phbsplHolyAura00",
+   "level": 8,
+   "school": "abj",
+   "img": "icons/magic/life/ankh-shadow-green.webp"
+  },
+  "Incendiary Cloud": {
+   "id": "phbsplIncendiary",
+   "level": 8,
+   "school": "con",
+   "img": "icons/magic/fire/beam-jet-stream-spiral-yellow.webp"
+  },
+  "Maze": {
+   "id": "phbsplMaze000000",
+   "level": 8,
+   "school": "con",
+   "img": "icons/creatures/mammals/bull-horns-eyes-glowin-orange.webp"
+  },
+  "Mind Blank": {
+   "id": "phbsplMindBlank0",
+   "level": 8,
+   "school": "abj",
+   "img": "icons/sundries/books/book-open-purple.webp"
+  },
+  "Power Word Stun": {
+   "id": "phbsplPowerWordS",
+   "level": 8,
+   "school": "enc",
+   "img": "icons/magic/unholy/strike-body-life-soul-purple.webp"
+  },
+  "Sunburst": {
+   "id": "phbsplSunburst00",
+   "level": 8,
+   "school": "evo",
+   "img": "icons/magic/nature/symbol-sun-yellow.webp"
+  },
+  "Tsunami": {
+   "id": "phbsplTsunami000",
+   "level": 8,
+   "school": "con",
+   "img": "icons/magic/water/wave-water-blue.webp"
+  },
+  "Astral Projection": {
+   "id": "phbsplAstralProj",
+   "level": 9,
+   "school": "nec",
+   "img": "icons/magic/light/orbs-hand-gray.webp"
+  },
+  "Foresight": {
+   "id": "phbsplForesight0",
+   "level": 9,
+   "school": "div",
+   "img": "icons/magic/symbols/circle-ouroboros.webp"
+  },
+  "Gate": {
+   "id": "phbsplGate000000",
+   "level": 9,
+   "school": "con",
+   "img": "icons/magic/symbols/circled-gem-pink.webp"
+  },
+  "Imprisonment": {
+   "id": "phbsplImprisonme",
+   "level": 9,
+   "school": "abj",
+   "img": "icons/magic/control/debuff-chains-shackles-movement-purple.webp"
+  },
+  "Mass Heal": {
+   "id": "phbsplMassHeal00",
+   "level": 9,
+   "school": "abj",
+   "img": "icons/magic/life/heart-shadow-red.webp"
+  },
+  "Meteor Swarm": {
+   "id": "phbsplMeteorSwar",
+   "level": 9,
+   "school": "evo",
+   "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp"
+  },
+  "Power Word Heal": {
+   "id": "phbsplPowerWordH",
+   "level": 9,
+   "school": "enc",
+   "img": "icons/magic/life/heart-red-blue.webp"
+  },
+  "Power Word Kill": {
+   "id": "phbsplPowerWordK",
+   "level": 9,
+   "school": "enc",
+   "img": "icons/magic/death/projectile-skull-flaming-yellow.webp"
+  },
+  "Prismatic Wall": {
+   "id": "phbsplPrismaticW",
+   "level": 9,
+   "school": "abj",
+   "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp"
+  },
+  "Shapechange": {
+   "id": "phbsplShapechang",
+   "level": 9,
+   "school": "trs",
+   "img": "icons/magic/unholy/hand-fire-skeleton-pink.webp"
+  },
+  "Storm of Vengeance": {
+   "id": "phbsplStormofVen",
+   "level": 9,
+   "school": "con",
+   "img": "icons/magic/lightning/bolt-cloud-sky-white.webp"
+  },
+  "Time Stop": {
+   "id": "phbsplTimeStop00",
+   "level": 9,
+   "school": "trs",
+   "img": "icons/magic/time/hourglass-yellow-green.webp"
+  },
+  "True Polymorph": {
+   "id": "phbsplTruePolymo",
+   "level": 9,
+   "school": "trs",
+   "img": "icons/creatures/slimes/slime-giant-face-eyes.webp"
+  },
+  "True Resurrection": {
+   "id": "phbsplTrueResurr",
+   "level": 9,
+   "school": "nec",
+   "img": "icons/magic/life/ankh-gold-blue.webp"
+  },
+  "Weird": {
+   "id": "phbsplWeird00000",
+   "level": 9,
+   "school": "ill",
+   "img": "icons/magic/control/fear-fright-jackolantern-yellow.webp"
+  },
+  "Wish": {
+   "id": "phbsplWish000000",
+   "level": 9,
+   "school": "con",
+   "img": "icons/magic/symbols/star-solid-gold.webp"
+  },
+  "Acid Splash": {
+   "id": "phbsplAcidSplash",
+   "level": 0,
+   "school": "evo",
+   "img": "icons/magic/acid/dissolve-drip-droplet-smoke.webp"
+  },
+  "Chill Touch": {
+   "id": "phbsplChillTouch",
+   "level": 0,
+   "school": "nec",
+   "img": "icons/magic/unholy/strike-hand-glow-pink.webp"
+  },
+  "Dancing Lights": {
+   "id": "phbsplDancingLig",
+   "level": 0,
+   "school": "ill",
+   "img": "icons/magic/light/light-candles-lit-white.webp"
+  },
+  "Druidcraft": {
+   "id": "phbsplDruidcraft",
+   "level": 0,
+   "school": "trs",
+   "img": "icons/magic/nature/plant-seed-hands-glow-yellow.webp"
+  },
+  "Eldritch Blast": {
+   "id": "phbsplEldritchBl",
+   "level": 0,
+   "school": "evo",
+   "img": "icons/magic/lightning/projectiles-tendril-salvo-pink.webp"
+  },
+  "Elementalism": {
+   "id": "phbsplElementali",
+   "level": 0,
+   "school": "trs",
+   "img": "icons/magic/nature/leaf-hand-green.webp"
+  },
+  "Fire Bolt": {
+   "id": "phbsplFireBolt00",
+   "level": 0,
+   "school": "evo",
+   "img": "icons/magic/fire/projectile-fireball-orange-green.webp"
+  },
+  "Guidance": {
+   "id": "phbsplGuidance00",
+   "level": 0,
+   "school": "div",
+   "img": "icons/sundries/lights/candle-lit-angelic.webp"
+  },
+  "Light": {
+   "id": "phbsplLight00000",
+   "level": 0,
+   "school": "evo",
+   "img": "icons/sundries/lights/candle-pillar-lit-yellow.webp"
+  },
+  "Mage Hand": {
+   "id": "phbsplMageHand00",
+   "level": 0,
+   "school": "con",
+   "img": "icons/magic/light/hand-sparks-smoke-teal.webp"
+  },
+  "Mending": {
+   "id": "phbsplMending000",
+   "level": 0,
+   "school": "trs",
+   "img": "icons/commodities/metal/barstock-broken-steel.webp"
+  },
+  "Message": {
+   "id": "phbsplMessage000",
+   "level": 0,
+   "school": "trs",
+   "img": "icons/sundries/documents/envelope-sealed-red-brown.webp"
+  },
+  "Minor Illusion": {
+   "id": "phbsplMinorIllus",
+   "level": 0,
+   "school": "ill",
+   "img": "icons/sundries/gaming/playing-cards.webp"
+  },
+  "Poison Spray": {
+   "id": "phbsplPoisonSpra",
+   "level": 0,
+   "school": "nec",
+   "img": "icons/magic/acid/pouring-gas-smoke-liquid.webp"
+  },
+  "Prestidigitation": {
+   "id": "phbsplPrestidigi",
+   "level": 0,
+   "school": "trs",
+   "img": "icons/weapons/wands/wand-star-white.webp"
+  },
+  "Produce Flame": {
+   "id": "phbsplProduceFla",
+   "level": 0,
+   "school": "con",
+   "img": "icons/magic/light/hand-sparks-glow-yellow.webp"
+  },
+  "Ray of Frost": {
+   "id": "phbsplRayofFrost",
+   "level": 0,
+   "school": "evo",
+   "img": "icons/magic/water/projectile-icecicle-glowing.webp"
+  },
+  "Resistance": {
+   "id": "phbsplResistance",
+   "level": 0,
+   "school": "abj",
+   "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp"
+  },
+  "Sacred Flame": {
+   "id": "phbsplSacredFlam",
+   "level": 0,
+   "school": "evo",
+   "img": "icons/magic/fire/projectile-embers-orange.webp"
+  },
+  "Shillelagh": {
+   "id": "phbsplShillelagh",
+   "level": 0,
+   "school": "trs",
+   "img": "icons/magic/nature/root-vine-coiled-crook.webp"
+  },
+  "Shocking Grasp": {
+   "id": "phbsplShockingGr",
+   "level": 0,
+   "school": "evo",
+   "img": "icons/magic/lightning/claws-unarmed-strike-teal.webp"
+  },
+  "Sorcerous Burst": {
+   "id": "phbsplSorcerousB",
+   "level": 0,
+   "school": "evo",
+   "img": "icons/magic/lightning/bolt-strike-embers-teal.webp"
+  },
+  "Spare the Dying": {
+   "id": "phbsplSparetheDy",
+   "level": 0,
+   "school": "nec",
+   "img": "icons/magic/death/hand-undead-skeleton-fire-pink.webp"
+  },
+  "Starry Wisp": {
+   "id": "phbsplStarryWisp",
+   "level": 0,
+   "school": "evo",
+   "img": "icons/magic/light/orb-hand-green.webp"
+  },
+  "Thaumaturgy": {
+   "id": "phbsplThaumaturg",
+   "level": 0,
+   "school": "trs",
+   "img": "icons/environment/people/cleric-orange.webp"
+  },
+  "True Strike": {
+   "id": "phbsplTrueStrike",
+   "level": 0,
+   "school": "div",
+   "img": "icons/magic/unholy/hand-weapon-glow-black-green.webp"
+  },
+  "Vicious Mockery": {
+   "id": "phbsplViciousMoc",
+   "level": 0,
+   "school": "enc",
+   "img": "icons/magic/control/fear-fright-monster-grin-green.webp"
+  }
+ },
+ "items": {
+  "Adamantine Armor": {
+   "id": "dmgAdamantineArm",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/chest/breastplate-layered-leather-blue.webp",
+   "attune": ""
+  },
+  "Animated Shield": {
+   "id": "dmgAnimatedShiel",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/skills/melee/shield-block-gray-yellow.webp",
+   "attune": "required"
+  },
+  "Armor of Invulnerability": {
+   "id": "dmgArmorOfInvuln",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/chest/breastplate-collared-steel.webp",
+   "attune": "required"
+  },
+  "Armor of Resistance": {
+   "id": "dmgArmorOfResist",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/chest/breastplate-layered-gold.webp",
+   "attune": "required"
+  },
+  "Armor of Vulnerability": {
+   "id": "dmgArmorOfVulner",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/chest/breastplate-layered-gilded-black.webp",
+   "attune": "required"
+  },
+  "Arrow-Catching Shield": {
+   "id": "dmgArrowcatching",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/skills/melee/shield-block-fire-orange.webp",
+   "attune": "required"
+  },
+  "Demon Armor": {
+   "id": "dmgDemonArmor000",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/chest/breastplate-layered-leather-green.webp",
+   "attune": "required"
+  },
+  "Dragon Scale Mail": {
+   "id": "dmgDragonScaleMa",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/chest/breastplate-banded-steel.webp",
+   "attune": "required"
+  },
+  "Dwarven Plate": {
+   "id": "dmgDwarvenPlate0",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/chest/breastplate-layered-steel-green.webp",
+   "attune": ""
+  },
+  "Elven Chain": {
+   "id": "dmgElvenChain000",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/back/mantle-collared-green.webp",
+   "attune": ""
+  },
+  "Glamoured Studded Leather": {
+   "id": "dmgGlamouredStud",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/chest/breastplate-rivited-red.webp",
+   "attune": ""
+  },
+  "Mithral Armor": {
+   "id": "dmgMithralArmor0",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/chest/breastplate-gorget-steel.webp",
+   "attune": ""
+  },
+  "Plate Armor of Etherealness": {
+   "id": "dmgPlateArmorOfE",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/chest/breastplate-collared-steel.webp",
+   "attune": "required"
+  },
+  "Sentinel Shield": {
+   "id": "dmgSentinelShiel",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/shield/targe-copper-eye.webp",
+   "attune": ""
+  },
+  "Shield of Missile Attraction": {
+   "id": "dmgShieldOfMissi",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/shield/kite-decorative-steel-claws.webp",
+   "attune": "required"
+  },
+  "Shield of the Cavalier": {
+   "id": "dmgShieldOfTheCa",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/shield/pavise-wooden-wings-blue-white.webp",
+   "attune": "required"
+  },
+  "Spellguard Shield": {
+   "id": "dmgSpellguardShi",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/shield/kite-wooden-sigil-purple.webp",
+   "attune": "required"
+  },
+  "Ammunition of Slaying": {
+   "id": "dmgSlayingAmmuni",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/weapons/ammunition/arrow-broadhead-glowing-orange.webp",
+   "attune": ""
+  },
+  "Bag of Beans": {
+   "id": "dmgBagOfBeans000",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/containers/bags/coinpouch-simple-leather-tan.webp",
+   "attune": ""
+  },
+  "Bead of Force": {
+   "id": "dmgBeadOfForce00",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/commodities/gems/pearl-purple-dark.webp",
+   "attune": ""
+  },
+  "Candle of Invocation": {
+   "id": "dmgCandleOfInvoc",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/sundries/lights/candle-unlit-yellow.webp",
+   "attune": "required"
+  },
+  "Dust of Disappearance": {
+   "id": "dmgDustOfDisappe",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/magic/water/bubbles-air-water-light.webp",
+   "attune": ""
+  },
+  "Dust of Dryness": {
+   "id": "dmgDustOfDryness",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/commodities/materials/bowl-powder-gold.webp",
+   "attune": ""
+  },
+  "Dust of Sneezing and Choking": {
+   "id": "dmgDustOfSneezin",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/magic/water/bubbles-air-water-light.webp",
+   "attune": ""
+  },
+  "Elemental Gem": {
+   "id": "dmgElementalGem0",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/commodities/gems/gem-rough-rose-teal.webp",
+   "attune": ""
+  },
+  "Elemental Gem (Blue Sapphire)": {
+   "id": "dmgBlueElemental",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/commodities/gems/gem-rough-rose-teal.webp",
+   "attune": ""
+  },
+  "Elemental Gem (Emerald)": {
+   "id": "dmgEmeraldElemen",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/commodities/gems/gem-rough-cushion-green.webp",
+   "attune": ""
+  },
+  "Elemental Gem (Red Corundum)": {
+   "id": "dmgRedElementalG",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/commodities/gems/gem-rough-cushion-red.webp",
+   "attune": ""
+  },
+  "Elemental Gem (Yellow Diamond)": {
+   "id": "dmgYellowElement",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/commodities/gems/gem-faceted-octagon-yellow.webp",
+   "attune": ""
+  },
+  "Feather Token (Anchor)": {
+   "id": "dmgAnchorQuaalsF",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/commodities/materials/feather-blue.webp",
+   "attune": ""
+  },
+  "Feather Token (Bird)": {
+   "id": "dmgBirdQuaalsFea",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/commodities/materials/feather-yellow.webp",
+   "attune": ""
+  },
+  "Feather Token (Fan)": {
+   "id": "dmgFanQuaalsFeat",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/commodities/materials/feather-colored-red.webp",
+   "attune": ""
+  },
+  "Feather Token (Swan Boat)": {
+   "id": "dmgSwanBoatQuaal",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/commodities/materials/feather-blue-grey.webp",
+   "attune": ""
+  },
+  "Feather Token (Tree)": {
+   "id": "dmgTreeQuaalsFea",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/commodities/materials/feather-colored-green.webp",
+   "attune": ""
+  },
+  "Feather Token (Whip)": {
+   "id": "dmgWhipQuaalsFea",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/commodities/materials/feather-colored-blue.webp",
+   "attune": ""
+  },
+  "Oil of Etherealness": {
+   "id": "dmgOilOfEthereal",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+   "attune": ""
+  },
+  "Oil of Sharpness": {
+   "id": "dmgOilOfSharpnes",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/consumables/potions/vial-ornet-silver-black.webp",
+   "attune": ""
+  },
+  "Oil of Slipperiness": {
+   "id": "dmgOilOfSlipperi",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/bottle-circular-corked-labeled-green.webp",
+   "attune": ""
+  },
+  "Elixir of Health": {
+   "id": "dmgElixirOfHealt",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/potion-flask-corked-shiny-red.webp",
+   "attune": ""
+  },
+  "Potion of Healing (Greater)": {
+   "id": "dmgGreaterPotion",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+   "attune": ""
+  },
+  "Potion of Healing (Superior)": {
+   "id": "dmgSuperiorPotio",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+   "attune": ""
+  },
+  "Potion of Healing (Supreme)": {
+   "id": "dmgSupremePotion",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/consumables/potions/potion-flask-stopped-red.webp",
+   "attune": ""
+  },
+  "Potion of Healing": {
+   "id": "dmgPotionOfHeali",
+   "type": "consumable",
+   "rarity": "common",
+   "img": "icons/consumables/potions/potion-tube-corked-red.webp",
+   "attune": ""
+  },
+  "Philter of Love": {
+   "id": "dmgPhilterOfLove",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/potion-bottle-corked-labeled-red.webp",
+   "attune": ""
+  },
+  "Potion of Animal Friendship": {
+   "id": "dmgPotionOfAnima",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/potion-jar-corked-orange.webp",
+   "attune": ""
+  },
+  "Potion of Clairvoyance": {
+   "id": "dmgPotionOfClair",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+   "attune": ""
+  },
+  "Potion of Climbing": {
+   "id": "dmgPotionOfClimb",
+   "type": "consumable",
+   "rarity": "common",
+   "img": "icons/consumables/potions/potion-vial-corked-labeled-purple.webp",
+   "attune": ""
+  },
+  "Potion of Diminution": {
+   "id": "dmgPotionOfDimin",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+   "attune": ""
+  },
+  "Potion of Flying": {
+   "id": "dmgPotionOfFlyin",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/consumables/potions/potion-bottle-corked-white.webp",
+   "attune": ""
+  },
+  "Potion of Gaseous Form": {
+   "id": "dmgPotionOfGaseo",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+   "attune": ""
+  },
+  "Potion of Growth": {
+   "id": "dmgPotionOfGrowt",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+   "attune": ""
+  },
+  "Potion of Heroism": {
+   "id": "dmgPotionOfHeroi",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-conical-bubbling-blue.webp",
+   "attune": ""
+  },
+  "Potion of Invisibility": {
+   "id": "dmgPotionOfInvis",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+   "attune": ""
+  },
+  "Potion of Invulnerability": {
+   "id": "dmgPotionOfInvul",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/potion-bottle-labeled-medicine-capped-red-black.webp",
+   "attune": ""
+  },
+  "Potion of Longevity": {
+   "id": "dmgPotionOfLonge",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/consumables/potions/potion-flask-corked-shiny-red.webp",
+   "attune": ""
+  },
+  "Potion of Mind Reading": {
+   "id": "dmgPotionOfMindR",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+   "attune": ""
+  },
+  "Potion of Poison": {
+   "id": "dmgPotionOfPoiso",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/potion-bottle-skull-label-poison-teal.webp",
+   "attune": ""
+  },
+  "Potion of Resistance": {
+   "id": "dmgPotionOfResis",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/potion-bottle-labeled-medicine-capped-red-black.webp",
+   "attune": ""
+  },
+  "Potion of Speed": {
+   "id": "dmgPotionOfSpeed",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/consumables/potions/potion-bottle-corked-stopper-yellow.webp",
+   "attune": ""
+  },
+  "Potion of Vitality": {
+   "id": "dmgPotionOfVital",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/consumables/potions/potion-flask-corled-pink-red.webp",
+   "attune": ""
+  },
+  "Potion of Water Breathing": {
+   "id": "dmgPotionOfWater",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/potion-bottle-corked-labeled-green.webp",
+   "attune": ""
+  },
+  "Potion of Giant Strength (Cloud)": {
+   "id": "dmgCloudPotionOf",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/consumables/potions/bottle-round-corked-blue.webp",
+   "attune": ""
+  },
+  "Potion of Giant Strength (Fire)": {
+   "id": "dmgFirePotionOfG",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+   "attune": ""
+  },
+  "Potion of Giant Strength (Frost)": {
+   "id": "dmgFrostPotionOf",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-round-corked-blue.webp",
+   "attune": ""
+  },
+  "Potion of Giant Strength (Hill)": {
+   "id": "dmgHillPotionOfG",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+   "attune": ""
+  },
+  "Potion of Giant Strength (Stone)": {
+   "id": "dmgStonePotionOf",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+   "attune": ""
+  },
+  "Potion of Giant Strength (Storm)": {
+   "id": "dmgStormPotionOf",
+   "type": "consumable",
+   "rarity": "legendary",
+   "img": "icons/consumables/potions/bottle-bulb-corked-labeled-blue.webp",
+   "attune": ""
+  },
+  "Spell Scroll, 1st Level": {
+   "id": "dmgSpellScroll1s",
+   "type": "consumable",
+   "rarity": "common",
+   "img": "icons/sundries/scrolls/scroll-bound-black-tan.webp",
+   "attune": ""
+  },
+  "Spell Scroll, 2nd Level": {
+   "id": "dmgSpellScroll2n",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/sundries/scrolls/scroll-bound-blue-tan.webp",
+   "attune": ""
+  },
+  "Spell Scroll, 3rd Level": {
+   "id": "dmgSpellScroll3r",
+   "type": "consumable",
+   "rarity": "uncommon",
+   "img": "icons/sundries/scrolls/scroll-bound-orange-tan.webp",
+   "attune": ""
+  },
+  "Spell Scroll, 4th Level": {
+   "id": "dmgSpellScroll4t",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/sundries/scrolls/scroll-bound-sealed-brown-grey.webp",
+   "attune": ""
+  },
+  "Spell Scroll, 5th Level": {
+   "id": "dmgSpellScroll5t",
+   "type": "consumable",
+   "rarity": "rare",
+   "img": "icons/sundries/scrolls/scroll-bound-sealed-black-red.webp",
+   "attune": ""
+  },
+  "Spell Scroll, 6th Level": {
+   "id": "dmgSpellScroll6t",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/sundries/scrolls/scroll-bound-sealed-orange.webp",
+   "attune": ""
+  },
+  "Spell Scroll, 7th Level": {
+   "id": "dmgSpellScroll7t",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/sundries/scrolls/scroll-bound-sealed-black-orange.webp",
+   "attune": ""
+  },
+  "Spell Scroll, 8th Level": {
+   "id": "dmgSpellScroll8t",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/sundries/scrolls/scroll-bound-gold.webp",
+   "attune": ""
+  },
+  "Spell Scroll, 9th Level": {
+   "id": "dmgSpellScroll9t",
+   "type": "consumable",
+   "rarity": "legendary",
+   "img": "icons/sundries/scrolls/scroll-bound-ruby-red.webp",
+   "attune": ""
+  },
+  "Spell Scroll, Cantrip": {
+   "id": "dmgSpellScrollCa",
+   "type": "consumable",
+   "rarity": "common",
+   "img": "icons/sundries/scrolls/scroll-bound-white-tan.webp",
+   "attune": ""
+  },
+  "Sovereign Glue": {
+   "id": "dmgSovereignGlue",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/consumables/drinks/tea-jug-gourd-brown.webp",
+   "attune": ""
+  },
+  "Universal Solvent": {
+   "id": "dmgUniversalSolv",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/consumables/potions/potion-bottle-corked-white.webp",
+   "attune": ""
+  },
+  "Bag of Devouring": {
+   "id": "dmgBagOfDevourin",
+   "type": "container",
+   "rarity": "veryRare",
+   "img": "icons/containers/bags/pack-engraved-leather-tan.webp",
+   "attune": ""
+  },
+  "Bag of Holding": {
+   "id": "dmgBagOfHolding0",
+   "type": "container",
+   "rarity": "uncommon",
+   "img": "icons/containers/bags/pack-engraved-leather-tan.webp",
+   "attune": ""
+  },
+  "Efficient Quiver": {
+   "id": "dmgQuiverOfEhlon",
+   "type": "container",
+   "rarity": "uncommon",
+   "img": "icons/containers/ammunition/arrows-quiver-brown-grey.webp",
+   "attune": ""
+  },
+  "Folding Boat": {
+   "id": "dmgFoldingBoat00",
+   "type": "container",
+   "rarity": "rare",
+   "img": "icons/environment/settlement/ship.webp",
+   "attune": ""
+  },
+  "Amulet of Health": {
+   "id": "dmgAmuletOfHealt",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/neck/pendant-faceted-red.webp",
+   "attune": "required"
+  },
+  "Amulet of Proof against Detection and Location": {
+   "id": "dmgAmuletOfProof",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/neck/pendant-faceted-blue.webp",
+   "attune": "required"
+  },
+  "Amulet of the Planes": {
+   "id": "dmgAmuletOfThePl",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/neck/pendant-faceted-green.webp",
+   "attune": "required"
+  },
+  "Apparatus of the Crab": {
+   "id": "dmgApparatusOfKw",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/containers/barrels/barrel-walnut-steel-brown.webp",
+   "attune": ""
+  },
+  "Gray Bag of Tricks": {
+   "id": "dmgBagOfTricks00",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/containers/bags/coinpouch-leather-grey.webp",
+   "attune": ""
+  },
+  "Rust Bag of Tricks": {
+   "id": "dmgRustBagofTric",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/containers/bags/sack-simple-leather-tan.webp",
+   "attune": ""
+  },
+  "Tan Bag of Tricks": {
+   "id": "dmgTanBagofTrick",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/containers/bags/sack-twisted-leather-red.webp",
+   "attune": ""
+  },
+  "Bead of Nourishment": {
+   "id": "dmgBeadOfNourish",
+   "type": "consumable",
+   "rarity": "common",
+   "img": "icons/equipment/neck/necklace-simple-mushroom-red.webp",
+   "attune": ""
+  },
+  "Belt of Dwarvenkind": {
+   "id": "dmgBeltOfDwarven",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/waist/belt-armored-steel.webp",
+   "attune": "required"
+  },
+  "Belt of Giant Strength (cloud)": {
+   "id": "dmgcloBeltofGian",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/waist/belt-buckle-spiral-blue.webp",
+   "attune": "required"
+  },
+  "Belt of Giant Strength (fire)": {
+   "id": "dmgfirBeltofGian",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/waist/belt-coiled-leather-steel.webp",
+   "attune": "required"
+  },
+  "Belt of Giant Strength (frost)": {
+   "id": "dmgfroBeltofGian",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/waist/belt-buckle-gold-blue.webp",
+   "attune": "required"
+  },
+  "Belt of Giant Strength (hill)": {
+   "id": "dmghilBeltofGian",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/waist/belt-buckle-arrow-brown.webp",
+   "attune": "required"
+  },
+  "Belt of Giant Strength (stone)": {
+   "id": "dmgstoBeltofGian",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/waist/belt-armored-steel.webp",
+   "attune": "required"
+  },
+  "Belt of Giant Strength (storm)": {
+   "id": "dmgstmBeltofGian",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/waist/belt-thick-gemmed-gold-blue.webp",
+   "attune": "required"
+  },
+  "Boots of Elvenkind": {
+   "id": "dmgBootsOfElvenk",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/feet/boots-pointed-cloth-green.webp",
+   "attune": ""
+  },
+  "Boots of Levitation": {
+   "id": "dmgBootsOfLevita",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/feet/boots-armored-steel-purple.webp",
+   "attune": "required"
+  },
+  "Boots of Speed": {
+   "id": "dmgBootsOfSpeed0",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/feet/boots-leather-green.webp",
+   "attune": "required"
+  },
+  "Boots of Striding and Springing": {
+   "id": "dmgBootsOfStridi",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/feet/boots-collared-leather-brown.webp",
+   "attune": "required"
+  },
+  "Boots of the Winterlands": {
+   "id": "dmgBootsOfTheWin",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/feet/boots-leather-banded-furred.webp",
+   "attune": "required"
+  },
+  "Bowl of Commanding Water Elementals": {
+   "id": "dmgBowlOfCommand",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/materials/bowl-liquid-white.webp",
+   "attune": ""
+  },
+  "Bracers of Archery": {
+   "id": "dmgBracersOfArch",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/wrist/bracer-banded-leather.webp",
+   "attune": "required"
+  },
+  "Bracers of Defense": {
+   "id": "dmgBracersOfDefe",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/wrist/bracer-yellow-fancy.webp",
+   "attune": "required"
+  },
+  "Brazier of Commanding Fire Elementals": {
+   "id": "dmgBrazierOfComm",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/tools/laboratory/bowl-liquid-orange.webp",
+   "attune": ""
+  },
+  "Brooch of Shielding": {
+   "id": "dmgBroochOfShiel",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/neck/pendant-bronze-gem-blue.webp",
+   "attune": "required"
+  },
+  "Broom of Flying": {
+   "id": "dmgBroomOfFlying",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/tools/hand/broom-straw-brown.webp",
+   "attune": "required"
+  },
+  "Cape of the Mountebank": {
+   "id": "dmgCapeOfTheMoun",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/head/hood-cloth-trimmed-pink-gold.webp",
+   "attune": ""
+  },
+  "Carpet of Flying": {
+   "id": "dmgCarpetOfFlyin",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
+   "attune": ""
+  },
+  "Censer of Controlling Air Elementals": {
+   "id": "dmgCenserOfContr",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/treasure/goblet-worn-gold.webp",
+   "attune": ""
+  },
+  "Chime of Opening": {
+   "id": "dmgChimeOfOpenin",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/tech/pipe-cylinder.webp",
+   "attune": ""
+  },
+  "Circlet of Blasting": {
+   "id": "dmgCircletOfBlas",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/finger/ring-cabochon-notched-gold-green.webp",
+   "attune": ""
+  },
+  "Cloak of Arachnida": {
+   "id": "dmgCloakOfArachn",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/back/mantle-collared-black.webp",
+   "attune": "required"
+  },
+  "Cloak of Displacement": {
+   "id": "dmgCloakOfDispla",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/back/cloak-brown-accent-brown-layered-collared-fur.webp",
+   "attune": "required"
+  },
+  "Cloak of Elvenkind": {
+   "id": "dmgCloakOfElvenk",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/back/cloak-collared-feathers-green.webp",
+   "attune": "required"
+  },
+  "Cloak of Invisibility": {
+   "id": "dmgCloakOfInvisi",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/back/cloak-hooded-blue.webp",
+   "attune": "required"
+  },
+  "Cloak of Protection": {
+   "id": "dmgCloakOfProtec",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/back/cloak-heavy-fur-blue.webp",
+   "attune": "required"
+  },
+  "Cloak of the Bat": {
+   "id": "dmgCloakOfTheBat",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/back/cloak-layered-tattered-purple.webp",
+   "attune": "required"
+  },
+  "Cloak of the Manta Ray": {
+   "id": "dmgCloakOfTheMan",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/head/hood-cloth-teal-gold.webp",
+   "attune": "required"
+  },
+  "Crystal Ball of Mind Reading": {
+   "id": "dmgMindReadingCr",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/commodities/materials/glass-orb-blue-gold.webp",
+   "attune": "required"
+  },
+  "Crystal Ball of Telepathy": {
+   "id": "dmgTelepathyCrys",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/commodities/treasure/crystal-ball-blue-purple.webp",
+   "attune": "required"
+  },
+  "Crystal Ball of True Seeing": {
+   "id": "dmgTrueSeeingCry",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/tools/laboratory/alembic-glass-ball-blue.webp",
+   "attune": ""
+  },
+  "Crystal Ball": {
+   "id": "dmgCrystalBall00",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/materials/glass-orb.webp",
+   "attune": "required"
+  },
+  "Cube of Force": {
+   "id": "dmgCubeOfForce00",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/sundries/gaming/dice-runed-brown.webp",
+   "attune": "required"
+  },
+  "Cubic Gate": {
+   "id": "dmgCubicGate0000",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/commodities/treasure/puzzle-box-glowing-blue.webp",
+   "attune": ""
+  },
+  "Decanter of Endless Water": {
+   "id": "dmgDecanterOfEnd",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/consumables/potions/potion-flask-corked-blue.webp",
+   "attune": ""
+  },
+  "Deck of Illusions": {
+   "id": "dmgDeckOfIllusio",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/sundries/gaming/playing-cards-black.webp",
+   "attune": ""
+  },
+  "Dimensional Shackles": {
+   "id": "dmgDimensionalSh",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
+   "attune": ""
+  },
+  "Dragon Orb": {
+   "id": "dmgOrbOfDragonki",
+   "type": "equipment",
+   "rarity": "artifact",
+   "img": "icons/commodities/gems/pearl-storm.webp",
+   "attune": "required"
+  },
+  "Efreeti Bottle": {
+   "id": "dmgEfreetiBottle",
+   "type": "consumable",
+   "rarity": "veryRare",
+   "img": "icons/consumables/potions/potion-flask-corked-orange.webp",
+   "attune": ""
+  },
+  "Eversmoking Bottle": {
+   "id": "dmgEversmokingBo",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/commodities/tech/smoke-bomb-purple.webp",
+   "attune": ""
+  },
+  "Eyes of Charming": {
+   "id": "dmgEyesOfCharmin",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/tools/scribal/spectacles-glasses.webp",
+   "attune": "required"
+  },
+  "Eyes of Minute Seeing": {
+   "id": "dmgEyesOfMinuteS",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/tools/scribal/spectacles-glasses.webp",
+   "attune": ""
+  },
+  "Eyes of the Eagle": {
+   "id": "dmgEyesOfTheEagl",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/head/goggles-leather-blue.webp",
+   "attune": ""
+  },
+  "Bronze Griffon": {
+   "id": "dmgFwpBronzeGrif",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/bones/hurn-curved-yellow.webp",
+   "attune": ""
+  },
+  "Ebony Fly": {
+   "id": "dmgFwpEbonyFlyRa",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/biological/legs-insect-brown.webp",
+   "attune": ""
+  },
+  "Golden Lions": {
+   "id": "dmgFwpGoldenLion",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/claws/claw-bear-brown-grey.webp",
+   "attune": ""
+  },
+  "Ivory Goats": {
+   "id": "dmgFwpIvoryGoats",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/bones/horn-curved-worn-brown.webp",
+   "attune": ""
+  },
+  "Marble Elephant": {
+   "id": "dmgFwpMarbleElep",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/bones/horn-worn-white.webp",
+   "attune": ""
+  },
+  "Obsidian Steed": {
+   "id": "dmgFwpObsidianSt",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/bones/hooves-cloven-brown.webp",
+   "attune": ""
+  },
+  "Onyx Dog": {
+   "id": "dmgFwpOnyxDogRar",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/sundries/misc/pet-collar-red.webp",
+   "attune": ""
+  },
+  "Serpentine Owl": {
+   "id": "dmgFwpSerpentine",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/materials/feather-white.webp",
+   "attune": ""
+  },
+  "Silver Raven": {
+   "id": "dmgFwpSilverRave",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/commodities/materials/feather-blue-grey.webp",
+   "attune": ""
+  },
+  "Gauntlets of Ogre Power": {
+   "id": "dmgGauntletsOfOg",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/hand/gauntlet-armored-steel-grey.webp",
+   "attune": "required"
+  },
+  "Gem of Brightness": {
+   "id": "dmgGemOfBrightne",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/commodities/gems/gem-faceted-octagon-yellow.webp",
+   "attune": ""
+  },
+  "Gem of Seeing": {
+   "id": "dmgGemOfSeeing00",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/gems/gem-rough-rose-teal.webp",
+   "attune": "required"
+  },
+  "Gloves of Missile Snaring": {
+   "id": "dmgGlovesOfMissi",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/hand/glove-tooled-leather-blue.webp",
+   "attune": "required"
+  },
+  "Gloves of Swimming and Climbing": {
+   "id": "dmgGlovesOfSwimm",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/hand/glove-cuffed-leather-purple.webp",
+   "attune": "required"
+  },
+  "Gloves of Thievery": {
+   "id": "dmgGlovesOfThiev",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/hand/glove-tooled-leather-red-purple.webp",
+   "attune": ""
+  },
+  "Goggles of Night": {
+   "id": "dmgGogglesOfNigh",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/head/goggles-leather-blue.webp",
+   "attune": ""
+  },
+  "Hat of Disguise": {
+   "id": "dmgHatOfDisguise",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/head/hat-belted-simple.webp",
+   "attune": "required"
+  },
+  "Hat of Many Spells": {
+   "id": "dmgHatOfManySpel",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/head/hat-pointed-leather-purple.webp",
+   "attune": "required"
+  },
+  "Headband of Intellect": {
+   "id": "dmgHeadbandOfInt",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/finger/ring-cabochon-silver-gold-red.webp",
+   "attune": "required"
+  },
+  "Helm of Brilliance": {
+   "id": "dmgHelmOfBrillia",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/head/helm-norman-engraved.webp",
+   "attune": "required"
+  },
+  "Helm of Comprehending Languages": {
+   "id": "dmgHelmOfCompreh",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/head/helm-spangen-ridged.webp",
+   "attune": ""
+  },
+  "Helm of Telepathy": {
+   "id": "dmgHelmOfTelepat",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/head/helm-spangen.webp",
+   "attune": "required"
+  },
+  "Helm of Teleportation": {
+   "id": "dmgHelmOfTelepor",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/head/helm-norman-horned-gold.webp",
+   "attune": "required"
+  },
+  "Horn of Blasting": {
+   "id": "dmgHornOfBlastin",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/tools/instruments/flute-simple-wood.webp",
+   "attune": ""
+  },
+  "Brass Horn of Valhalla": {
+   "id": "dmgBrassHornOfVa",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/tools/instruments/flute-simple-wood.webp",
+   "attune": ""
+  },
+  "Bronze Horn of Valhalla": {
+   "id": "dmgBronzeHornOfV",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/tools/instruments/flute-simple-wood.webp",
+   "attune": ""
+  },
+  "Iron Horn of Valhalla": {
+   "id": "dmgIronHornOfVal",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/tools/instruments/flute-simple-wood.webp",
+   "attune": ""
+  },
+  "Silver Horn of Valhalla": {
+   "id": "dmgSilverHornOfV",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/tools/instruments/flute-simple-wood.webp",
+   "attune": ""
+  },
+  "Horseshoes of a Zephyr": {
+   "id": "dmgHorseshoesOfA",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/tools/smithing/horsehoe-worn-steel-grey.webp",
+   "attune": ""
+  },
+  "Horseshoes of Speed": {
+   "id": "dmgHorseshoesOfS",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/tools/smithing/horseshoe-steel-blue.webp",
+   "attune": ""
+  },
+  "Instant Fortress": {
+   "id": "dmgDaernsInstant",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/treasure/token-engraved-blue.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Absorption": {
+   "id": "dmgAbsorptionIou",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Agility": {
+   "id": "dmgAgilityIounSt",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/gems/gem-rough-cushion-red.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Awareness": {
+   "id": "dmgAwarenessIoun",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/gems/gem-rough-cushion-blue.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Fortitude": {
+   "id": "dmgFortitudeIoun",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/gems/gem-rough-cushion-purple-pink.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Greater Absorption": {
+   "id": "dmgGreaterAbsorp",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/commodities/stone/ore-pile-green.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Insight": {
+   "id": "dmgInsightIounSt",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/stone/ore-pile-teal.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Intellect": {
+   "id": "dmgIntellectIoun",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/stone/ore-pile-red.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Leadership": {
+   "id": "dmgLeadershipIou",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/stone/ore-pile-purple.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Mastery": {
+   "id": "dmgMasteryIounSt",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/commodities/gems/gem-rough-cushion-green.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Protection": {
+   "id": "dmgProtectionIou",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/gems/gem-rough-ball-purple.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Regeneration": {
+   "id": "dmgRegnerationIo",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/commodities/stone/rock-chunk-pumice-white.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Reserve": {
+   "id": "dmgReserveIounSt",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/gems/gem-rough-cushion-purple-pink.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Strength": {
+   "id": "dmgStrengthIounS",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/gems/gem-rough-cushion-blue.webp",
+   "attune": "required"
+  },
+  "Ioun Stone of Sustenance": {
+   "id": "dmgSustenanceIou",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/stone/geode-raw-brown.webp",
+   "attune": "required"
+  },
+  "Iron Bands": {
+   "id": "dmgIronBandsOfBi",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/metal/clasp-steel-braid.webp",
+   "attune": ""
+  },
+  "Iron Flask": {
+   "id": "dmgIronFlask0000",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+   "attune": ""
+  },
+  "Lantern of Revealing": {
+   "id": "dmgLanternOfReve",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+   "attune": ""
+  },
+  "Mantle of Spell Resistance": {
+   "id": "dmgMantleOfSpell",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/back/cape-layered-violet-white-swirl.webp",
+   "attune": "required"
+  },
+  "Manual of Bodily Health": {
+   "id": "dmgManualOfBodil",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/sundries/books/book-red-square.webp",
+   "attune": ""
+  },
+  "Manual of Gainful Exercise": {
+   "id": "dmgManualOfGainf",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/sundries/books/book-symbol-axe-brown.webp",
+   "attune": ""
+  },
+  "Manual of Golems": {
+   "id": "dmgManualOfGolem",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/sundries/books/book-eye-purple.webp",
+   "attune": ""
+  },
+  "Manual of Quickness of Action": {
+   "id": "dmgManualOfQuick",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/sundries/books/book-symbol-lightning-silver-blue.webp",
+   "attune": ""
+  },
+  "Marvelous Pigments": {
+   "id": "dmgNolzursMarvel",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/commodities/materials/powder-red-green-yellow.webp",
+   "attune": ""
+  },
+  "Medallion of Thoughts": {
+   "id": "dmgMedallionOfTh",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/neck/pendant-bronze-gem-blue.webp",
+   "attune": "required"
+  },
+  "Mirror of Life Trapping": {
+   "id": "dmgMirrorOfLifeT",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/magic/air/wind-vortex-swirl-purple.webp",
+   "attune": ""
+  },
+  "Mysterious Deck": {
+   "id": "dmgDeckOfManyThi",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/sundries/gaming/rune-card.webp",
+   "attune": ""
+  },
+  "Necklace of Adaptation": {
+   "id": "dmgNecklaceOfAda",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/neck/amulet-carved-stone-spiral-blue.webp",
+   "attune": "required"
+  },
+  "Necklace of Fireballs": {
+   "id": "dmgNecklaceOfFir",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/neck/pendant-faceted-red.webp",
+   "attune": ""
+  },
+  "Necklace of Prayer Beads": {
+   "id": "dmgNecklaceOfPra",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/neck/necklace-runed-white-red.webp",
+   "attune": "required"
+  },
+  "Pearl of Power": {
+   "id": "dmgPearlOfPower0",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/commodities/gems/pearl-blue-gold.webp",
+   "attune": "required"
+  },
+  "Periapt of Health": {
+   "id": "dmgPeriaptOfHeal",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/neck/pendant-faceted-red.webp",
+   "attune": "required"
+  },
+  "Periapt of Proof against Poison": {
+   "id": "dmgPeriaptOfProo",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/neck/necklace-hook-brown.webp",
+   "attune": "required"
+  },
+  "Periapt of Wound Closure": {
+   "id": "dmgPeriaptOfWoun",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/neck/pendant-faceted-blue.webp",
+   "attune": "required"
+  },
+  "Pipes of Haunting": {
+   "id": "dmgPipesOfHaunti",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/tools/instruments/flute-simple-wood.webp",
+   "attune": ""
+  },
+  "Pipes of the Sewers": {
+   "id": "dmgPipesOfTheSew",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/tools/instruments/flute-simple-wood.webp",
+   "attune": "required"
+  },
+  "Portable Hole": {
+   "id": "dmgPortableHole0",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/creatures/eyes/void-single-black-purple.webp",
+   "attune": ""
+  },
+  "Air Ring of Elemental Command": {
+   "id": "dmgAirRingOfElem",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/finger/ring-cabochon-silver-gold-red.webp",
+   "attune": "required"
+  },
+  "Earth Ring of Elemental Command": {
+   "id": "dmgEarthRingOfEl",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+   "attune": "required"
+  },
+  "Fire Ring of Elemental Command": {
+   "id": "dmgFireRingOfEle",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/finger/ring-inlay-red.webp",
+   "attune": "required"
+  },
+  "Ring of Animal Influence": {
+   "id": "dmgRingOfAnimalI",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/finger/ring-cabochon-gold-orange.webp",
+   "attune": ""
+  },
+  "Ring of Djinni Summoning": {
+   "id": "dmgRingOfDjinniS",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/finger/ring-faceted-gold-purple.webp",
+   "attune": "required"
+  },
+  "Ring of Elemental Command": {
+   "id": "dmgRingOfElement",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+   "attune": "required"
+  },
+  "Ring of Evasion": {
+   "id": "dmgRingOfEvasion",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/finger/ring-eye-silver-green.webp",
+   "attune": "required"
+  },
+  "Ring of Feather Falling": {
+   "id": "dmgRingOfFeather",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/finger/ring-cabochon-silver-gold-red.webp",
+   "attune": "required"
+  },
+  "Ring of Free Action": {
+   "id": "dmgRingOfFreeAct",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/finger/ring-shield-silver.webp",
+   "attune": "required"
+  },
+  "Ring of Invisibility": {
+   "id": "dmgRingOfInvisib",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/finger/ring-eye-gold-red.webp",
+   "attune": "required"
+  },
+  "Ring of Jumping": {
+   "id": "dmgRingOfJumping",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/finger/ring-winged-gold-blue.webp",
+   "attune": "required"
+  },
+  "Ring of Mind Shielding": {
+   "id": "dmgRingOfMindShi",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/finger/ring-cabochon-gold-purple.webp",
+   "attune": "required"
+  },
+  "Ring of Protection": {
+   "id": "dmgRingOfProtect",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/finger/ring-cabochon-silver-gold-red.webp",
+   "attune": "required"
+  },
+  "Ring of Regeneration": {
+   "id": "dmgRingOfRegener",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/finger/ring-faceted-gold-purple.webp",
+   "attune": "required"
+  },
+  "Ring of Resistance": {
+   "id": "dmgRingOfResista",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/finger/ring-faceted-gold-purple.webp",
+   "attune": ""
+  },
+  "Ring of Shooting Stars": {
+   "id": "dmgRingOfShootin",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/finger/ring-cabochon-gold-orange.webp",
+   "attune": "required"
+  },
+  "Ring of Spell Storing": {
+   "id": "dmgRingOfSpellSt",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/finger/ring-cabochon-silver-gold-red.webp",
+   "attune": "required"
+  },
+  "Ring of Spell Turning": {
+   "id": "dmgRingOfSpellTu",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+   "attune": "required"
+  },
+  "Ring of Swimming": {
+   "id": "dmgRingOfSwimmin",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/finger/ring-shell-white-blue.webp",
+   "attune": ""
+  },
+  "Ring of Telekinesis": {
+   "id": "dmgRingOfTelekin",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/finger/ring-inlay-red.webp",
+   "attune": "required"
+  },
+  "Ring of the Ram": {
+   "id": "dmgRingOfTheRam0",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+   "attune": "required"
+  },
+  "Ring of Three Wishes": {
+   "id": "dmgRingOfThreeWi",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/finger/ring-cabochon-gold-purple.webp",
+   "attune": ""
+  },
+  "Ring of Warmth": {
+   "id": "dmgRingOfWarmth0",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/finger/ring-cabochon-gold-orange.webp",
+   "attune": "required"
+  },
+  "Ring of Water Walking": {
+   "id": "dmgRingOfWaterWa",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/finger/ring-faceted-gold-purple.webp",
+   "attune": ""
+  },
+  "Ring of X-ray Vision": {
+   "id": "dmgRingOfXrayVis",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/finger/ring-eye-silver-green.webp",
+   "attune": "required"
+  },
+  "Water Ring of Elemental Command": {
+   "id": "dmgWaterRingOfEl",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/finger/ring-cabochon-gold-purple.webp",
+   "attune": "required"
+  },
+  "Robe of Eyes": {
+   "id": "dmgRobeOfEyes000",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/head/hood-red.webp",
+   "attune": "required"
+  },
+  "Robe of Scintillating Colors": {
+   "id": "dmgRobeOfScintil",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/chest/robe-layered-red.webp",
+   "attune": "required"
+  },
+  "Robe of Stars": {
+   "id": "dmgRobeOfStars00",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/equipment/back/cloak-plain-blue.webp",
+   "attune": "required"
+  },
+  "Robe of the Archmagi": {
+   "id": "dmgRobeOfTheArch",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/back/cloak-plain-white.webp",
+   "attune": "required"
+  },
+  "Robe of Useful Items": {
+   "id": "dmgRobeOfUsefulI",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/back/cloak-simple-tan.webp",
+   "attune": ""
+  },
+  "Immovable Rod": {
+   "id": "dmgImmovableRod0",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/commodities/tech/pipe-lead-closed.webp",
+   "attune": ""
+  },
+  "Rod of Absorption": {
+   "id": "dmgRodOfAbsorpti",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/weapons/wands/wand-carved-fire.webp",
+   "attune": "required"
+  },
+  "Rod of Alertness": {
+   "id": "dmgRodOfAlertnes",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/weapons/maces/mace-round-steel.webp",
+   "attune": "required"
+  },
+  "Rod of Lordly Might": {
+   "id": "dmgRodOfLordlyMi",
+   "type": "weapon",
+   "rarity": "legendary",
+   "img": "icons/weapons/staves/staff-ornate-gold-jeweled.webp",
+   "attune": "required"
+  },
+  "Rod of Resurrection": {
+   "id": "dmgRodOfResurrec",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/weapons/staves/staff-spiked-grey.webp",
+   "attune": "required"
+  },
+  "Rod of Rulership": {
+   "id": "dmgRodOfRulershi",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/weapons/staves/staff-ornate-orb-steel-red.webp",
+   "attune": "required"
+  },
+  "Rod of Security": {
+   "id": "dmgRodOfSecurity",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/weapons/maces/mace-round-ornate-purple.webp",
+   "attune": ""
+  },
+  "Rope of Climbing": {
+   "id": "dmgRopeOfClimbin",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/sundries/survival/rope-wrapped-red.webp",
+   "attune": ""
+  },
+  "Rope of Entanglement": {
+   "id": "dmgRopeOfEntangl",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/sundries/survival/rope-wrapped-purple.webp",
+   "attune": ""
+  },
+  "Scarab of Protection": {
+   "id": "dmgScarabOfProte",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/environment/creatures/bug-larva-orange.webp",
+   "attune": "required"
+  },
+  "Sending Stones": {
+   "id": "dmgSendingStones",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/commodities/gems/pearl-rough-white.webp",
+   "attune": ""
+  },
+  "Slippers of Spider Climbing": {
+   "id": "dmgSlippersOfSpi",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/equipment/feet/boots-leather-black.webp",
+   "attune": "required"
+  },
+  "Sphere of Annihilation": {
+   "id": "dmgSphereOfAnnih",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/magic/unholy/orb-beam-pink.webp",
+   "attune": ""
+  },
+  "Stone of Controlling Earth Elementals": {
+   "id": "dmgStoneOfContro",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/commodities/stone/engraved-symbol-water-grey.webp",
+   "attune": ""
+  },
+  "Stone of Good Luck (Luckstone)": {
+   "id": "dmgStoneOfGoodLu",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/commodities/gems/gem-rough-rectangle-red.webp",
+   "attune": "required"
+  },
+  "Talisman of Pure Good": {
+   "id": "dmgTalismanOfPur",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/equipment/neck/amulet-geometric-blue-yellow.webp",
+   "attune": "required"
+  },
+  "Talisman of the Sphere": {
+   "id": "dmgTalismanOfThe",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/commodities/treasure/brooch-jeweled-pink.webp",
+   "attune": "required"
+  },
+  "Talisman of Ultimate Evil": {
+   "id": "dmgTalismanOfUlt",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/magic/death/skull-horned-goat-pentagram-red.webp",
+   "attune": "required"
+  },
+  "Tome of Clear Thought": {
+   "id": "dmgTomeOfClearTh",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/sundries/books/book-symbol-triangle-silver-blue.webp",
+   "attune": ""
+  },
+  "Tome of Leadership and Influence": {
+   "id": "dmgTomeOfLeaders",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/sundries/books/book-symbol-triangle-silver-purple.webp",
+   "attune": ""
+  },
+  "Tome of Understanding": {
+   "id": "dmgTomeOfUnderst",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/sundries/books/book-turquoise-moon.webp",
+   "attune": ""
+  },
+  "Wand of Binding": {
+   "id": "dmgWandOfBinding",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/weapons/wands/wand-skull-feathers.webp",
+   "attune": "required"
+  },
+  "Wand of Enemy Detection": {
+   "id": "dmgWandOfEnemyDe",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/weapons/wands/wand-simple-eye.webp",
+   "attune": "required"
+  },
+  "Wand of Fear": {
+   "id": "dmgWandOfFear000",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/weapons/staves/staff-animal-skull-horned.webp",
+   "attune": "required"
+  },
+  "Wand of Fireballs": {
+   "id": "dmgWandOfFirebal",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/weapons/staves/staff-obsidian.webp",
+   "attune": "required"
+  },
+  "Wand of Lightning Bolts": {
+   "id": "dmgWandOfLightni",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/weapons/staves/staff-ornate-jeweled-blue.webp",
+   "attune": "required"
+  },
+  "Wand of Magic Detection": {
+   "id": "dmgWandOfMagicDe",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/weapons/wands/wand-gem-purple.webp",
+   "attune": ""
+  },
+  "Wand of Magic Missiles": {
+   "id": "dmgWandOfMagicMi",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/weapons/wands/wand-gem-pink.webp",
+   "attune": ""
+  },
+  "Wand of Paralysis": {
+   "id": "dmgWandOfParalys",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/weapons/wands/wand-gem-violet.webp",
+   "attune": "required"
+  },
+  "Wand of Polymorph": {
+   "id": "dmgWandOfPolymor",
+   "type": "equipment",
+   "rarity": "veryRare",
+   "img": "icons/weapons/wands/wand-gem-red.webp",
+   "attune": "required"
+  },
+  "Wand of Secrets": {
+   "id": "dmgWandOfSecrets",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/weapons/staves/staff-ornate-orb-steel-red.webp",
+   "attune": ""
+  },
+  "Wand of Web": {
+   "id": "dmgWandOfWeb0000",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/weapons/staves/staff-crescent-purple.webp",
+   "attune": "required"
+  },
+  "Wand of Wonder": {
+   "id": "dmgWandOfWonder0",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/weapons/wands/wand-totem.webp",
+   "attune": "required"
+  },
+  "Well of Many Worlds": {
+   "id": "dmgWellOfManyWor",
+   "type": "equipment",
+   "rarity": "legendary",
+   "img": "icons/magic/movement/portal-vortex-orange.webp",
+   "attune": ""
+  },
+  "Wind Fan": {
+   "id": "dmgWindFan000000",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/commodities/treasure/trinket-wing-white.webp",
+   "attune": ""
+  },
+  "Winged Boots": {
+   "id": "dmgWingedBoots00",
+   "type": "equipment",
+   "rarity": "uncommon",
+   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+   "attune": "required"
+  },
+  "Wings of Flying": {
+   "id": "dmgWingsOfFlying",
+   "type": "equipment",
+   "rarity": "rare",
+   "img": "icons/equipment/back/cloak-layered-white.webp",
+   "attune": "required"
+  },
+  "Clawed Gauntlet": {
+   "id": "dmgClawedGauntle",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/fist/claw-gauntlet-gray.webp",
+   "attune": ""
+  },
+  "Berserker Axe": {
+   "id": "dmgBerserkerAxe0",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/axes/axe-battle-skull-black.webp",
+   "attune": "required"
+  },
+  "Dagger of Venom": {
+   "id": "dmgDaggerOfVenom",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/daggers/dagger-double-skull-pink.webp",
+   "attune": ""
+  },
+  "Dancing Sword": {
+   "id": "dmgDancingSword0",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/skills/melee/sword-twirl-orange.webp",
+   "attune": "required"
+  },
+  "Defender": {
+   "id": "dmgDefender00000",
+   "type": "weapon",
+   "rarity": "legendary",
+   "img": "icons/weapons/swords/greatsword-guard-jewel-green.webp",
+   "attune": "required"
+  },
+  "Dragon Slayer": {
+   "id": "dmgDragonSlayer0",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/swords/sword-jeweled-red.webp",
+   "attune": ""
+  },
+  "Dwarven Thrower": {
+   "id": "dmgDwarvenThrowe",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/hammers/hammer-double-engraved-gold.webp",
+   "attune": "required"
+  },
+  "Energy Bow": {
+   "id": "dmgEnergyBow0000",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/bows/longbow-gold-pink.webp",
+   "attune": "required"
+  },
+  "Flame Tongue": {
+   "id": "dmgFlameTongue00",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/swords/greatsword-crossguard-flanged-red.webp",
+   "attune": "required"
+  },
+  "Frost Brand": {
+   "id": "dmgFrostBrand000",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/swords/greatsword-flamberge.webp",
+   "attune": "required"
+  },
+  "Giant Slayer": {
+   "id": "dmgGiantSlayer00",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/hammers/hammer-double-engraved-gold.webp",
+   "attune": ""
+  },
+  "Hammer of Thunderbolts": {
+   "id": "dmgHammerOfThund",
+   "type": "weapon",
+   "rarity": "legendary",
+   "img": "icons/weapons/hammers/hammer-double-glowing-yellow.webp",
+   "attune": "required"
+  },
+  "Holy Avenger": {
+   "id": "dmgHolyAvenger00",
+   "type": "weapon",
+   "rarity": "legendary",
+   "img": "icons/weapons/swords/greatsword-guard-gem-blue.webp",
+   "attune": "required"
+  },
+  "Javelin of Lightning": {
+   "id": "dmgJavelinOfLigh",
+   "type": "weapon",
+   "rarity": "uncommon",
+   "img": "icons/weapons/polearms/spear-barbed-silver.webp",
+   "attune": ""
+  },
+  "Luck Blade": {
+   "id": "dmgLuckBlade0000",
+   "type": "weapon",
+   "rarity": "legendary",
+   "img": "icons/weapons/swords/sword-guard-worn-gold.webp",
+   "attune": "required"
+  },
+  "Mace of Disruption": {
+   "id": "dmgMaceOfDisrupt",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/maces/shortmace-ornate-gold.webp",
+   "attune": "required"
+  },
+  "Mace of Smiting": {
+   "id": "dmgMaceOfSmiting",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/maces/mace-studded-steel.webp",
+   "attune": ""
+  },
+  "Mace of Terror": {
+   "id": "dmgMaceOfTerror0",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/maces/mace-spiked-skull.webp",
+   "attune": "required"
+  },
+  "Nine Lives Stealer": {
+   "id": "dmgNineLivesStea",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/swords/greatsword-flamberge.webp",
+   "attune": "required"
+  },
+  "Oathbow": {
+   "id": "dmgOathbow000000",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/bows/longbow-recurve-leather-red.webp",
+   "attune": "required"
+  },
+  "Quarterstaff of the Acrobat": {
+   "id": "dmgQuarterstaffO",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/staves/staff-simple-wrapped.webp",
+   "attune": "required"
+  },
+  "Scimitar of Speed": {
+   "id": "dmgScimitarOfSpe",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/swords/scimitar-guard-red.webp",
+   "attune": "required"
+  },
+  "Sun Blade": {
+   "id": "dmgSunBlade00000",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/commodities/treasure/sceptre-jeweled-gold.webp",
+   "attune": "required"
+  },
+  "Sword of Life Stealing": {
+   "id": "dmgSwordOfLifeSt",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/swords/sword-guard-worn.webp",
+   "attune": "required"
+  },
+  "Sword of Sharpness": {
+   "id": "dmgSwordOfSharpn",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/swords/scimitar-guard-wood.webp",
+   "attune": "required"
+  },
+  "Sword of Wounding": {
+   "id": "dmgSwordOfWoundi",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/skills/melee/strike-sword-blood-red.webp",
+   "attune": "required"
+  },
+  "Thunderous Greatclub": {
+   "id": "dmgThunderousGre",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/clubs/club-spiked-glowing.webp",
+   "attune": "required"
+  },
+  "Trident of Fish Command": {
+   "id": "dmgTridentOfFish",
+   "type": "weapon",
+   "rarity": "uncommon",
+   "img": "icons/weapons/polearms/trident-ice-blue.webp",
+   "attune": "required"
+  },
+  "Vicious Weapon": {
+   "id": "dmgViciousWeapon",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/sickles/sickle-hooked-silver.webp",
+   "attune": ""
+  },
+  "Vorpal Sword": {
+   "id": "dmgVorpalSword00",
+   "type": "weapon",
+   "rarity": "legendary",
+   "img": "icons/weapons/swords/scimitar-guard-gold.webp",
+   "attune": "required"
+  },
+  "Weapon of Warning": {
+   "id": "dmgWeaponOfWarni",
+   "type": "weapon",
+   "rarity": "uncommon",
+   "img": "icons/weapons/hammers/hammer-double-engraved-ruby.webp",
+   "attune": "required"
+  },
+  "Staff of Charming": {
+   "id": "dmgStaffOfCharmi",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/staves/staff-ornate-green.webp",
+   "attune": "required"
+  },
+  "Staff of Fire": {
+   "id": "dmgStaffOfFire00",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/staves/staff-ornate-red.webp",
+   "attune": "required"
+  },
+  "Staff of Frost": {
+   "id": "dmgStaffOfFrost0",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/staves/staff-ornate-blue.webp",
+   "attune": "required"
+  },
+  "Staff of Healing": {
+   "id": "dmgStaffOfHealin",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/staves/staff-ornate-cross.webp",
+   "attune": "required"
+  },
+  "Staff of Power": {
+   "id": "dmgStaffOfPower0",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/staves/staff-ornate-banded-purple.webp",
+   "attune": "required"
+  },
+  "Staff of Striking": {
+   "id": "dmgStaffOfStriki",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/staves/staff-ornate-purple.webp",
+   "attune": "required"
+  },
+  "Staff of Swarming Insects": {
+   "id": "dmgStaffOfSwarmi",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/staves/staff-spiked.webp",
+   "attune": "required"
+  },
+  "Staff of the Magi": {
+   "id": "dmgStaffOfTheMag",
+   "type": "weapon",
+   "rarity": "legendary",
+   "img": "icons/weapons/staves/staff-ornate-eye.webp",
+   "attune": "required"
+  },
+  "Staff of the Python": {
+   "id": "dmgStaffOfThePyt",
+   "type": "weapon",
+   "rarity": "uncommon",
+   "img": "icons/weapons/staves/staff-metal-mask.webp",
+   "attune": "required"
+  },
+  "Staff of the Woodlands": {
+   "id": "dmgStaffOfTheWoo",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/staves/staff-nature-spiral.webp",
+   "attune": "required"
+  },
+  "Staff of Thunder and Lightning": {
+   "id": "dmgStaffOfThunde",
+   "type": "weapon",
+   "rarity": "veryRare",
+   "img": "icons/weapons/staves/staff-ornate-teal.webp",
+   "attune": "required"
+  },
+  "Staff of Withering": {
+   "id": "dmgStaffOfWither",
+   "type": "weapon",
+   "rarity": "rare",
+   "img": "icons/weapons/staves/staff-animal-skull-bull.webp",
+   "attune": "required"
+  }
+ },
+ "classFeatures": {
+  "Barbarian (barbarian)": {
+   "id": "phbbrbBarbarian0",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/barbarian.webp",
+   "identifier": "barbarian"
+  },
+  "Brutal Strike (class-features)": {
+   "id": "phbbrbBrutalStri",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-axe-blood-red.webp",
+   "identifier": "brutal-strike"
+  },
+  "Danger Sense (class-features)": {
+   "id": "phbbrbDangerSens",
+   "type": "feat",
+   "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+   "identifier": "danger-sense"
+  },
+  "Epic Boon (class-features)": {
+   "id": "phbwzdEpicBoon00",
+   "type": "feat",
+   "img": "icons/magic/control/debuff-energy-hold-green.webp",
+   "identifier": "epic-boon"
+  },
+  "Extra Attack (class-features)": {
+   "id": "phbrgrExtraAttac",
+   "type": "feat",
+   "img": "icons/skills/melee/spear-tips-triple-orange.webp",
+   "identifier": "extra-attack"
+  },
+  "Fast Movement (class-features)": {
+   "id": "phbbrbFastMoveme",
+   "type": "feat",
+   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+   "identifier": "fast-movement"
+  },
+  "Feral Instinct (class-features)": {
+   "id": "phbbrbFeralInsti",
+   "type": "feat",
+   "img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
+   "identifier": "feral-instinct"
+  },
+  "Improved Brutal Strike (2) (class-features)": {
+   "id": "phbbrbImp2Brutal",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-axe-blood-red.webp",
+   "identifier": "improved-brutal-strike-2"
+  },
+  "Improved Brutal Strike (class-features)": {
+   "id": "phbbrbImpBrutalS",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-axe-blood-red.webp",
+   "identifier": "improved-brutal-strike"
+  },
+  "Indomitable Might (class-features)": {
+   "id": "phbbrbIndomitabl",
+   "type": "feat",
+   "img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+   "identifier": "indomitable-might"
+  },
+  "Instinctive Pounce (class-features)": {
+   "id": "phbbrbInstinctiv",
+   "type": "feat",
+   "img": "icons/creatures/mammals/wolf-shadow-black.webp",
+   "identifier": "instinctive-pounce"
+  },
+  "Persistent Rage (class-features)": {
+   "id": "phbbrbPersistent",
+   "type": "feat",
+   "img": "icons/skills/social/intimidation-impressing.webp",
+   "identifier": "persistent-rage"
+  },
+  "Primal Champion (class-features)": {
+   "id": "phbbrbPrimalCham",
+   "type": "feat",
+   "img": "icons/magic/control/sihouette-hold-beam-green.webp",
+   "identifier": "primal-champion"
+  },
+  "Primal Knowledge (class-features)": {
+   "id": "phbbrbPrimalKnow",
+   "type": "feat",
+   "img": "icons/creatures/birds/raptor-owl-flying-moon.webp",
+   "identifier": "primal-knowledge"
+  },
+  "Rage (class-features)": {
+   "id": "phbbrbRage000000",
+   "type": "feat",
+   "img": "icons/creatures/abilities/mouth-teeth-human.webp",
+   "identifier": "rage"
+  },
+  "Reckless Attack (class-features)": {
+   "id": "phbbrbRecklessAt",
+   "type": "feat",
+   "img": "icons/skills/melee/blade-tips-triple-bent-white.webp",
+   "identifier": "reckless-attack"
+  },
+  "Relentless Rage (class-features)": {
+   "id": "phbbrbRelentless",
+   "type": "feat",
+   "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+   "identifier": "relentless-rage"
+  },
+  "Unarmed Strike (class-features)": {
+   "id": "phbmnkUnarmedStr",
+   "type": "weapon",
+   "img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+   "identifier": "unarmed-strike"
+  },
+  "Unarmored Defense (class-features)": {
+   "id": "phbmnkUnarmoredD",
+   "type": "feat",
+   "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+   "identifier": "unarmored-defense"
+  },
+  "Weapon Mastery (class-features)": {
+   "id": "phbrgeWeaponMast",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-sword-steel-yellow.webp",
+   "identifier": "weapon-mastery"
+  },
+  "Path of the Berserker (barbarian)": {
+   "id": "phbbrbBerserker0",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/berserker.webp",
+   "identifier": "berserker"
+  },
+  "Frenzy (path-of-the-berserker)": {
+   "id": "phbbrbFrenzy0000",
+   "type": "feat",
+   "img": "icons/skills/melee/blood-slash-foam-red.webp",
+   "identifier": "frenzy"
+  },
+  "Intimidating Presence (path-of-the-berserker)": {
+   "id": "phbbrbIntimidati",
+   "type": "feat",
+   "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+   "identifier": "intimidating-presence"
+  },
+  "Mindless Rage (path-of-the-berserker)": {
+   "id": "phbbrbMindlessRa",
+   "type": "feat",
+   "img": "icons/magic/fire/flame-burning-eye.webp",
+   "identifier": "mindless-rage"
+  },
+  "Retaliation (path-of-the-berserker)": {
+   "id": "phbbrbRetaliatio",
+   "type": "feat",
+   "img": "icons/skills/melee/weapons-crossed-swords-yellow.webp",
+   "identifier": "retaliation"
+  },
+  "Bard (bard)": {
+   "id": "phbbrdBard000000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/bard.webp",
+   "identifier": "bard"
+  },
+  "Bardic Inspiration (class-features)": {
+   "id": "phbbrdBardicInsp",
+   "type": "feat",
+   "img": "icons/magic/light/orbs-firefly-hand-yellow.webp",
+   "identifier": "bardic-inspiration"
+  },
+  "Countercharm (class-features)": {
+   "id": "phbbrdCountercha",
+   "type": "feat",
+   "img": "icons/skills/trades/music-singing-voice-blue.webp",
+   "identifier": "countercharm"
+  },
+  "Expertise (class-features)": {
+   "id": "phbrgeExpertise0",
+   "type": "feat",
+   "img": "icons/magic/symbols/chevron-elipse-circle-blue.webp",
+   "identifier": "expertise"
+  },
+  "Font of Inspiration (class-features)": {
+   "id": "phbbrdFontOfInsp",
+   "type": "feat",
+   "img": "icons/magic/light/hand-sparks-glow-yellow.webp",
+   "identifier": "font-of-inspiration"
+  },
+  "Jack of All Trades (class-features)": {
+   "id": "phbbrdJackOfAllT",
+   "type": "feat",
+   "img": "icons/skills/trades/academics-investigation-puzzles.webp",
+   "identifier": "jack-of-all-trades"
+  },
+  "Magical Secrets (class-features)": {
+   "id": "phbbrdMagicalSec",
+   "type": "feat",
+   "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+   "identifier": "magical-secrets"
+  },
+  "Spellcasting (class-features)": {
+   "id": "phbwzdSpellcasti",
+   "type": "feat",
+   "img": "icons/magic/fire/explosion-embers-orange.webp",
+   "identifier": "spellcasting"
+  },
+  "Superior Inspiration (class-features)": {
+   "id": "phbbrdSuperiorIn",
+   "type": "feat",
+   "img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+   "identifier": "superior-inspiration"
+  },
+  "Words of Creation (class-features)": {
+   "id": "phbbrdWordsOfCre",
+   "type": "feat",
+   "img": "icons/magic/life/heart-area-circle-red-green.webp",
+   "identifier": "words-of-creation"
+  },
+  "College of Lore (bard)": {
+   "id": "phbbrdLore000000",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/lore.webp",
+   "identifier": "lore"
+  },
+  "Bonus Proficiencies (lore)": {
+   "id": "phbbrdBonusProfi",
+   "type": "feat",
+   "img": "icons/commodities/tech/cog-bronze.webp",
+   "identifier": "bonus-proficiencies"
+  },
+  "Cutting Words (lore)": {
+   "id": "phbbrdCuttingWor",
+   "type": "feat",
+   "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+   "identifier": "cutting-words"
+  },
+  "Magical Discoveries (lore)": {
+   "id": "phbbrdMagicalDis",
+   "type": "feat",
+   "img": "icons/sundries/books/book-tooled-eye-gold-red.webp",
+   "identifier": "magical-discoveries"
+  },
+  "Peerless Skill (lore)": {
+   "id": "phbbrdPeerlessSk",
+   "type": "feat",
+   "img": "icons/commodities/treasure/medal-ribbon-gold-blue.webp",
+   "identifier": "peerless-skill"
+  },
+  "Blessed Strikes: Divine Strike (class-features)": {
+   "id": "phbDivineStrike0",
+   "type": "feat",
+   "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+   "identifier": "blessed-strikes-divine-strike"
+  },
+  "Blessed Strikes: Potent Spellcasting (class-features)": {
+   "id": "phbClcPotentSpel",
+   "type": "feat",
+   "img": "icons/magic/life/cross-yellow-green.webp",
+   "identifier": "blessed-strikes-potent-spellcasting"
+  },
+  "Blessed Strikes (class-features)": {
+   "id": "phbclcBlessedStr",
+   "type": "feat",
+   "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+   "identifier": "blessed-strikes"
+  },
+  "Channel Divinity (class-features)": {
+   "id": "phbpdnChannelDiv",
+   "type": "feat",
+   "img": "icons/magic/fire/projectile-wave-arrow.webp",
+   "identifier": "channel-divinity-paladin"
+  },
+  "Divine Intervention (class-features)": {
+   "id": "phbclcDivineInte",
+   "type": "feat",
+   "img": "icons/magic/light/beam-rays-yellow-blue-small.webp",
+   "identifier": "divine-intervention"
+  },
+  "Divine Order: Protector (class-features)": {
+   "id": "phbDivineOrderPr",
+   "type": "feat",
+   "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+   "identifier": "divine-order-protector"
+  },
+  "Divine Order: Thaumaturge (class-features)": {
+   "id": "phbDivineOrderTh",
+   "type": "feat",
+   "img": "icons/magic/life/ankh-shadow-green.webp",
+   "identifier": "divine-order-thaumaturge"
+  },
+  "Divine Order (class-features)": {
+   "id": "phbclcDivineOrde",
+   "type": "feat",
+   "img": "icons/magic/light/explosion-star-glow-blue-purple.webp",
+   "identifier": "divine-order"
+  },
+  "Greater Divine Intervention (class-features)": {
+   "id": "phbclcGreaterDiv",
+   "type": "feat",
+   "img": "icons/magic/light/beam-rays-yellow-blue.webp",
+   "identifier": "greater-divine-intervention"
+  },
+  "Improved Blessed Strikes (class-features)": {
+   "id": "phbclcImprovedBl",
+   "type": "feat",
+   "img": "icons/magic/holy/prayer-hands-glowing-yellow-white.webp",
+   "identifier": "improved-blessed-strikes"
+  },
+  "Sear Undead (class-features)": {
+   "id": "phbclcSearUndead",
+   "type": "feat",
+   "img": "icons/magic/fire/flame-burning-skeleton-explosion.webp",
+   "identifier": "sear-undead"
+  },
+  "Cleric (cleric)": {
+   "id": "phbclcCleric0000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/cleric.webp",
+   "identifier": "cleric"
+  },
+  "Life Domain (cleric)": {
+   "id": "phbclcLifeDomain",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/life.webp",
+   "identifier": "life"
+  },
+  "Blessed Healer (life-domain)": {
+   "id": "phbclcBlessedHea",
+   "type": "feat",
+   "img": "icons/magic/life/heart-cross-strong-flame-purple-orange.webp",
+   "identifier": "blessed-healer"
+  },
+  "Disciple of Life (life-domain)": {
+   "id": "phbclcDiscipleOf",
+   "type": "feat",
+   "img": "icons/magic/life/cross-beam-green.webp",
+   "identifier": "disciple-of-life"
+  },
+  "Life Domain Spells (life-domain)": {
+   "id": "phbclcLifeSpells",
+   "type": "feat",
+   "img": "icons/magic/life/cross-flared-green.webp",
+   "identifier": "life-domain-spells"
+  },
+  "Preserve Life (life-domain)": {
+   "id": "phbclcPreserveLi",
+   "type": "feat",
+   "img": "icons/magic/life/heart-hand-gold-green.webp",
+   "identifier": "preserve-life"
+  },
+  "Supreme Healing (life-domain)": {
+   "id": "phbclcSupremeHea",
+   "type": "feat",
+   "img": "icons/magic/life/heart-area-circle-red-green.webp",
+   "identifier": "supreme-healing"
+  },
+  "Circle of the Land (druid)": {
+   "id": "phbdrdCirland000",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/land.webp",
+   "identifier": "land"
+  },
+  "Archdruid (class-features)": {
+   "id": "phbdrdArchdruid0",
+   "type": "feat",
+   "img": "icons/magic/nature/root-vines-face-glow-green.webp",
+   "identifier": "archdruid"
+  },
+  "Beast Spells (class-features)": {
+   "id": "phbdrdBeastSpell",
+   "type": "feat",
+   "img": "icons/creatures/mammals/elk-moose-marked-green.webp",
+   "identifier": "beast-spells"
+  },
+  "Druidic (class-features)": {
+   "id": "phbdrdDruidic000",
+   "type": "feat",
+   "img": "icons/commodities/treasure/token-runed-circle-green.webp",
+   "identifier": "druidic"
+  },
+  "Elemental Fury: Potent Spellcasting (class-features)": {
+   "id": "phbFuryPotentSpe",
+   "type": "feat",
+   "img": "icons/magic/nature/leaf-rune-glow-green.webp",
+   "identifier": "elemental-fury-potent-spellcasting"
+  },
+  "Elemental Fury: Primal Strike (class-features)": {
+   "id": "phbFuryPrimalStr",
+   "type": "feat",
+   "img": "icons/magic/nature/hand-weapon-wood-bark-brown.webp",
+   "identifier": "elemental-fury-primal-strike"
+  },
+  "Elemental Fury (class-features)": {
+   "id": "phbdrdElementalF",
+   "type": "feat",
+   "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+   "identifier": "elemental-fury"
+  },
+  "Improved Elemental Fury (class-features)": {
+   "id": "phbdrdImprovedEl",
+   "type": "feat",
+   "img": "icons/magic/nature/leaf-arrowheads-glow-green.webp",
+   "identifier": "improved-elemental-fury"
+  },
+  "Primal Order: Magician (class-features)": {
+   "id": "phbPrimalOrderMa",
+   "type": "feat",
+   "img": "icons/magic/nature/leaf-hand-green.webp",
+   "identifier": "primal-order-magician"
+  },
+  "Primal Order: Warden (class-features)": {
+   "id": "phbPrimalOrderWa",
+   "type": "feat",
+   "img": "icons/magic/nature/barrier-shield-wood-vines.webp",
+   "identifier": "primal-order-warden"
+  },
+  "Primal Order (class-features)": {
+   "id": "phbdrdPrimalOrde",
+   "type": "feat",
+   "img": "icons/magic/nature/leaf-juggle-humanoid-green.webp",
+   "identifier": "primal-order"
+  },
+  "Wild Companion (class-features)": {
+   "id": "phbdrdWildCompan",
+   "type": "feat",
+   "img": "icons/creatures/mammals/spirit-deer-herd-blue.webp",
+   "identifier": "wild-companion"
+  },
+  "Wild Resurgence (class-features)": {
+   "id": "phbdrdWildResurg",
+   "type": "feat",
+   "img": "icons/magic/life/cross-worn-green.webp",
+   "identifier": "wild-resurgence"
+  },
+  "Wild Shape (class-features)": {
+   "id": "phbdrdWildShape0",
+   "type": "feat",
+   "img": "icons/creatures/mammals/bull-horns-eyes-glowin-orange.webp",
+   "identifier": "wild-shape"
+  },
+  "Druid (druid)": {
+   "id": "phbdrdDruid00000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/druid.webp",
+   "identifier": "druid"
+  },
+  "Circle of the Land Spells (circle-of-land)": {
+   "id": "phbdrdLandSpells",
+   "type": "feat",
+   "img": "icons/magic/nature/leaf-glow-triple-green.webp",
+   "identifier": "circle-of-the-land-spells"
+  },
+  "Land's Aid (circle-of-land)": {
+   "id": "phbdrdLandsAid00",
+   "type": "feat",
+   "img": "icons/magic/nature/root-vines-grow-brown.webp",
+   "identifier": "lands-aid"
+  },
+  "Natural Recovery (circle-of-land)": {
+   "id": "phbdrdNaturalRec",
+   "type": "feat",
+   "img": "icons/magic/control/sihouette-hold-beam-green.webp",
+   "identifier": "natural-recovery"
+  },
+  "Nature's Sanctuary (circle-of-land)": {
+   "id": "phbdrdNaturesSan",
+   "type": "feat",
+   "img": "icons/magic/nature/vines-thorned-curled-glow-green.webp",
+   "identifier": "natures-sanctuary"
+  },
+  "Nature's Ward (circle-of-land)": {
+   "id": "phbdrdNaturesWar",
+   "type": "feat",
+   "img": "icons/magic/nature/root-vine-caduceus-healing.webp",
+   "identifier": "natures-ward"
+  },
+  "Champion (fighter)": {
+   "id": "phbftrChampion00",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/champion.webp",
+   "identifier": "champion"
+  },
+  "Action Surge (class-features)": {
+   "id": "phbftrActionSurg",
+   "type": "feat",
+   "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+   "identifier": "action-surge"
+  },
+  "Fighting Style (class-features)": {
+   "id": "phbrgrFightingSt",
+   "type": "feat",
+   "img": "icons/skills/melee/hand-grip-staff-blue.webp",
+   "identifier": "fighting-style"
+  },
+  "Indomitable (class-features)": {
+   "id": "phbftrIndomitabl",
+   "type": "feat",
+   "img": "icons/skills/melee/shield-block-fire-orange.webp",
+   "identifier": "indomitable"
+  },
+  "Second Wind (class-features)": {
+   "id": "phbftrSecondWind",
+   "type": "feat",
+   "img": "icons/magic/life/cross-worn-green.webp",
+   "identifier": "second-wind"
+  },
+  "Studied Attacks (class-features)": {
+   "id": "phbftrStudiedAtt",
+   "type": "feat",
+   "img": "icons/skills/melee/sword-engraved-glow-purple.webp",
+   "identifier": "studied-attacks"
+  },
+  "Tactical Master (class-features)": {
+   "id": "phbftrTacticalMa",
+   "type": "feat",
+   "img": "icons/sundries/documents/blueprint-axe.webp",
+   "identifier": "tactical-master"
+  },
+  "Tactical Mind (class-features)": {
+   "id": "phbftrTacticalMi",
+   "type": "feat",
+   "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+   "identifier": "tactical-mind"
+  },
+  "Tactical Shift (class-features)": {
+   "id": "phbftrTacticalSh",
+   "type": "feat",
+   "img": "icons/magic/movement/chevrons-down-yellow.webp",
+   "identifier": "tactical-shift"
+  },
+  "Three Extra Attacks (class-features)": {
+   "id": "phbftrThreeExtra",
+   "type": "feat",
+   "img": "icons/skills/melee/strikes-sword-scimitar.webp",
+   "identifier": "three-extra-attacks"
+  },
+  "Two Extra Attacks (class-features)": {
+   "id": "phbftrTwoExtraAt",
+   "type": "feat",
+   "img": "icons/skills/melee/swords-parry-block-yellow.webp",
+   "identifier": "two-extra-attacks"
+  },
+  "Fighter (fighter)": {
+   "id": "phbftrFighter000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/fighter.webp",
+   "identifier": "fighter"
+  },
+  "Additional Fighting Style (champion)": {
+   "id": "phbftrAdditional",
+   "type": "feat",
+   "img": "icons/skills/melee/hand-grip-staff-yellow-brown.webp",
+   "identifier": "additional-fighting-style"
+  },
+  "Heroic Warrior (champion)": {
+   "id": "phbftrHeroicWarr",
+   "type": "feat",
+   "img": "icons/skills/melee/unarmed-punch-fist.webp",
+   "identifier": "heroic-warrior"
+  },
+  "Improved Critical (champion)": {
+   "id": "phbftrImprovedCr",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-sword-dagger-runes-gray.webp",
+   "identifier": "improved-critical"
+  },
+  "Remarkable Athlete (champion)": {
+   "id": "phbftrRemarkable",
+   "type": "feat",
+   "img": "icons/magic/control/buff-strength-muscle-damage.webp",
+   "identifier": "remarkable-athlete"
+  },
+  "Superior Critical (champion)": {
+   "id": "phbftrSuperiorCr",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-sword-dagger-runes-red.webp",
+   "identifier": "superior-critical"
+  },
+  "Survivor (champion)": {
+   "id": "phbftrSurvivor00",
+   "type": "feat",
+   "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+   "identifier": "survivor"
+  },
+  "Acrobatic Movement (class-features)": {
+   "id": "phbmnkAcrobaticM",
+   "type": "feat",
+   "img": "icons/skills/movement/arrow-upward-yellow.webp",
+   "identifier": "acrobatic-movement"
+  },
+  "Body and Mind (class-features)": {
+   "id": "phbmnkBodyAndMin",
+   "type": "feat",
+   "img": "icons/magic/perception/third-eye-blue-red.webp",
+   "identifier": "body-and-mind"
+  },
+  "Deflect Attacks (class-features)": {
+   "id": "phbmnkDeflectAtt",
+   "type": "feat",
+   "img": "icons/skills/ranged/arrow-flying-white-blue.webp",
+   "identifier": "deflect-attacks"
+  },
+  "Deflect Energy (class-features)": {
+   "id": "phbmnkDeflectEne",
+   "type": "feat",
+   "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
+   "identifier": "deflect-energy"
+  },
+  "Disciplined Survivor (class-features)": {
+   "id": "phbmnkDiscipline",
+   "type": "feat",
+   "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+   "identifier": "disciplined-survivor"
+  },
+  "Empowered Strikes (class-features)": {
+   "id": "phbmnkEmpoweredS",
+   "type": "feat",
+   "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+   "identifier": "empowered-strikes"
+  },
+  "Evasion (class-features)": {
+   "id": "phbrgeEvasion000",
+   "type": "feat",
+   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+   "identifier": "evasion"
+  },
+  "Heightened Focus (class-features)": {
+   "id": "phbmnkHeightened",
+   "type": "feat",
+   "img": "icons/skills/movement/arrows-up-trio-red.webp",
+   "identifier": "heightened-focus"
+  },
+  "Martial Arts (class-features)": {
+   "id": "phbmnkMartialArt",
+   "type": "feat",
+   "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+   "identifier": "martial-arts"
+  },
+  "Monk's Focus (class-features)": {
+   "id": "phbmnkMonksFocus",
+   "type": "feat",
+   "img": "icons/creatures/eyes/human-single-brown.webp",
+   "identifier": "monks-focus"
+  },
+  "Perfect Focus (class-features)": {
+   "id": "phbmnkPerfectFoc",
+   "type": "feat",
+   "img": "icons/creatures/eyes/humanoid-single-blind.webp",
+   "identifier": "perfect-focus"
+  },
+  "Slow Fall (class-features)": {
+   "id": "phbmnkSlowFall00",
+   "type": "feat",
+   "img": "icons/magic/control/silhouette-fall-slip-prone.webp",
+   "identifier": "slow-fall"
+  },
+  "Stunning Strike (class-features)": {
+   "id": "phbmnkStunningSt",
+   "type": "feat",
+   "img": "icons/skills/melee/unarmed-punch-fist-blue.webp",
+   "identifier": "stunning-strike"
+  },
+  "Superior Defense (class-features)": {
+   "id": "phbmnkSuperiorDe",
+   "type": "feat",
+   "img": "icons/magic/defensive/shield-barrier-blue.webp",
+   "identifier": "superior-defense"
+  },
+  "Unarmored Movement (class-features)": {
+   "id": "phbmnkUnarmoredM",
+   "type": "feat",
+   "img": "icons/skills/movement/figure-running-gray.webp",
+   "identifier": "unarmored-movement"
+  },
+  "Uncanny Metabolism (class-features)": {
+   "id": "phbmnkUncannyMet",
+   "type": "feat",
+   "img": "icons/magic/life/cross-area-circle-green-white.webp",
+   "identifier": "uncanny-metabolism"
+  },
+  "Monk (monk)": {
+   "id": "phbmnkMonk000000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/monk.webp",
+   "identifier": "monk"
+  },
+  "Fleet Step (warrior-of-the-open-hand)": {
+   "id": "phbmnkFleetStep0",
+   "type": "feat",
+   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+   "identifier": "fleet-step"
+  },
+  "Open Hand Technique (warrior-of-the-open-hand)": {
+   "id": "phbmnkOpenHandTe",
+   "type": "feat",
+   "img": "icons/magic/unholy/strike-hand-glow-pink.webp",
+   "identifier": "open-hand-technique"
+  },
+  "Quivering Palm (warrior-of-the-open-hand)": {
+   "id": "phbmnkQuiveringP",
+   "type": "feat",
+   "img": "icons/magic/unholy/hand-marked-pink.webp",
+   "identifier": "quivering-palm"
+  },
+  "Wholeness of Body (warrior-of-the-open-hand)": {
+   "id": "phbmnkWholenessO",
+   "type": "feat",
+   "img": "icons/magic/life/heart-glowing-red.webp",
+   "identifier": "wholeness-of-body"
+  },
+  "Warrior of the Open Hand (monk)": {
+   "id": "phbmnkOpenHandWa",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/open-hand.webp",
+   "identifier": "hand"
+  },
+  "Abjure Foes (class-features)": {
+   "id": "phbpdnAbjureFoes",
+   "type": "feat",
+   "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+   "identifier": "abjure-foes"
+  },
+  "Aura Expansion (class-features)": {
+   "id": "phbpdnAuraExpans",
+   "type": "feat",
+   "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+   "identifier": "aura-expansion"
+  },
+  "Aura of Courage (class-features)": {
+   "id": "phbpdnCourageAur",
+   "type": "feat",
+   "img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
+   "identifier": "aura-of-courage"
+  },
+  "Aura of Protection (class-features)": {
+   "id": "phbpdnProtection",
+   "type": "feat",
+   "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
+   "identifier": "aura-of-protection"
+  },
+  "Blessed Warrior (class-features)": {
+   "id": "phbfstBlessedWar",
+   "type": "feat",
+   "img": "icons/skills/melee/sword-winged-holy-orange.webp",
+   "identifier": "blessed-warrior"
+  },
+  "Faithful Steed (class-features)": {
+   "id": "phbpdnFaithfulSt",
+   "type": "feat",
+   "img": "icons/environment/creatures/horse-brown.webp",
+   "identifier": "faithful-steed"
+  },
+  "Lay on Hands (class-features)": {
+   "id": "phbpdnLayOnHands",
+   "type": "feat",
+   "img": "icons/magic/light/orbs-firefly-hand-yellow.webp",
+   "identifier": "lay-on-hands"
+  },
+  "Paladin's Smite (class-features)": {
+   "id": "phbpdnPaladinsSm",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-flail-destructive-yellow.webp",
+   "identifier": "paladins-smite"
+  },
+  "Radiant Strikes (class-features)": {
+   "id": "phbpdnRadiantStr",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-sword-dagger-runes-yellow.webp",
+   "identifier": "radiant-strikes"
+  },
+  "Restoring Touch (class-features)": {
+   "id": "phbpdnRestoringT",
+   "type": "feat",
+   "img": "icons/magic/light/hand-sparks-glow-yellow.webp",
+   "identifier": "restoring-touch"
+  },
+  "Oath of Devotion (paladin)": {
+   "id": "phbpdnOathOfDevo",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/devotion.webp",
+   "identifier": "devotion"
+  },
+  "Paladin (paladin)": {
+   "id": "phbpdnPaladin000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/paladin.webp",
+   "identifier": "paladin"
+  },
+  "Aura of Devotion (oath-of-devotion)": {
+   "id": "phbpdnDevotionAu",
+   "type": "feat",
+   "img": "icons/magic/life/heart-glowing-red.webp",
+   "identifier": "aura-of-devotion"
+  },
+  "Holy Nimbus (oath-of-devotion)": {
+   "id": "phbpdnHolyNimbus",
+   "type": "feat",
+   "img": "icons/magic/light/explosion-star-glow-blue-purple.webp",
+   "identifier": "holy-nimbus"
+  },
+  "Oath of Devotion Spells (oath-of-devotion)": {
+   "id": "phbpdnDevotionSp",
+   "type": "feat",
+   "img": "icons/magic/symbols/circled-gem-pink.webp",
+   "identifier": "oath-of-devotion-spells"
+  },
+  "Sacred Weapon (oath-of-devotion)": {
+   "id": "phbpdnSacredWeap",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-weapons-orange.webp",
+   "identifier": "sacred-weapon"
+  },
+  "Smite of Protection (oath-of-devotion)": {
+   "id": "phbpdnSmiteOfPro",
+   "type": "feat",
+   "img": "icons/magic/symbols/cog-shield-white-blue.webp",
+   "identifier": "smite-of-protection"
+  },
+  "Deft Explorer (class-features)": {
+   "id": "phbrgrDeftExplor",
+   "type": "feat",
+   "img": "icons/tools/navigation/map-chart-tan.webp",
+   "identifier": "deft-explorer"
+  },
+  "Druidic Warrior (class-features)": {
+   "id": "phbfstDruidicWar",
+   "type": "feat",
+   "img": "icons/magic/nature/root-vines-face-glow-green.webp",
+   "identifier": "druidic-warrior"
+  },
+  "Favored Enemy (class-features)": {
+   "id": "phbrgrFavoredEne",
+   "type": "feat",
+   "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+   "identifier": "favored-enemy"
+  },
+  "Feral Senses (class-features)": {
+   "id": "phbrgrFeralSense",
+   "type": "feat",
+   "img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
+   "identifier": "feral-senses"
+  },
+  "Foe Slayer (class-features)": {
+   "id": "phbrgrFoeSlayer0",
+   "type": "feat",
+   "img": "icons/skills/targeting/crosshair-triple-strike-orange.webp",
+   "identifier": "foe-slayer"
+  },
+  "Nature's Veil (class-features)": {
+   "id": "phbrgrNaturesVei",
+   "type": "feat",
+   "img": "icons/magic/nature/leaf-armor-scale-green.webp",
+   "identifier": "natures-veil"
+  },
+  "Precise Hunter (class-features)": {
+   "id": "phbrgrPreciseHun",
+   "type": "feat",
+   "img": "icons/skills/targeting/target-strike-triple-blue.webp",
+   "identifier": "precise-hunter"
+  },
+  "Relentless Hunter (class-features)": {
+   "id": "phbrgrRelentless",
+   "type": "feat",
+   "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+   "identifier": "relentless-hunter"
+  },
+  "Roving (class-features)": {
+   "id": "phbrgrRoving0000",
+   "type": "feat",
+   "img": "icons/skills/movement/feet-winged-sandals-tan.webp",
+   "identifier": "roving"
+  },
+  "Tireless (class-features)": {
+   "id": "phbrgrTireless00",
+   "type": "feat",
+   "img": "icons/magic/life/cross-worn-green.webp",
+   "identifier": "tireless"
+  },
+  "Hunter (ranger)": {
+   "id": "phbrgrHunter0000",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/hunter.webp",
+   "identifier": "hunter"
+  },
+  "Ranger (ranger)": {
+   "id": "phbrgrRanger0000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/ranger.webp",
+   "identifier": "ranger"
+  },
+  "Defensive Tactics (hunter)": {
+   "id": "phbrgrDefensiveT",
+   "type": "feat",
+   "img": "icons/skills/melee/shield-block-gray-yellow.webp",
+   "identifier": "defensive-tactics"
+  },
+  "Hunter's Lore (hunter)": {
+   "id": "phbrgrHuntersLor",
+   "type": "feat",
+   "img": "icons/creatures/eyes/humanoid-single-blind.webp",
+   "identifier": "hunters-lore"
+  },
+  "Hunter's Prey (hunter)": {
+   "id": "phbrgrHuntersPre",
+   "type": "feat",
+   "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+   "identifier": "hunters-prey"
+  },
+  "Superior Hunter's Defense (hunter)": {
+   "id": "phbrgrSuperiorDe",
+   "type": "feat",
+   "img": "icons/magic/lightning/fist-unarmed-strike-blue-green.webp",
+   "identifier": "superior-hunters-defense"
+  },
+  "Superior Hunter's Prey (hunter)": {
+   "id": "phbrgrSuperiorHu",
+   "type": "feat",
+   "img": "icons/skills/ranged/arrows-flying-triple-blue.webp",
+   "identifier": "superior-hunters-prey"
+  },
+  "Cunning Action (class-features)": {
+   "id": "phbrgeCunningAct",
+   "type": "feat",
+   "img": "icons/skills/movement/figure-running-gray.webp",
+   "identifier": "cunning-action"
+  },
+  "Cunning Strike (class-features)": {
+   "id": "phbrgeCunningStr",
+   "type": "feat",
+   "img": "icons/skills/melee/blade-tip-acid-poison-green.webp",
+   "identifier": "cunning-strike"
+  },
+  "Devious Strikes (class-features)": {
+   "id": "phbrgeDeviousStr",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-sword-stabbed-brown.webp",
+   "identifier": "devious-strikes"
+  },
+  "Elusive (class-features)": {
+   "id": "phbrgeElusive000",
+   "type": "feat",
+   "img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+   "identifier": "elusive"
+  },
+  "Improved Cunning Strike (class-features)": {
+   "id": "phbrgeImprovedCu",
+   "type": "feat",
+   "img": "icons/skills/melee/blade-tip-smoke-green.webp",
+   "identifier": "improved-cunning-strike"
+  },
+  "Reliable Talent (class-features)": {
+   "id": "phbrgeReliableTa",
+   "type": "feat",
+   "img": "icons/skills/ranged/target-bullseye-arrow-glowing.webp",
+   "identifier": "reliable-talent"
+  },
+  "Slippery Mind (class-features)": {
+   "id": "phbrgeSlipperyMi",
+   "type": "feat",
+   "img": "icons/magic/perception/third-eye-blue-red.webp",
+   "identifier": "slippery-mind"
+  },
+  "Sneak Attack (class-features)": {
+   "id": "phbrgeSneakAttac",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-dagger-white-orange.webp",
+   "identifier": "sneak-attack"
+  },
+  "Steady Aim (class-features)": {
+   "id": "phbrgeSteadyAim0",
+   "type": "feat",
+   "img": "icons/skills/ranged/arrow-flying-spiral-blue.webp",
+   "identifier": "steady-aim"
+  },
+  "Stroke of Luck (class-features)": {
+   "id": "phbrgeStrokeOfLu",
+   "type": "feat",
+   "img": "icons/commodities/flowers/clover.webp",
+   "identifier": "stroke-of-luck"
+  },
+  "Thieves' Cant (class-features)": {
+   "id": "phbrgeThievesCan",
+   "type": "feat",
+   "img": "icons/sundries/documents/document-symbol-eye.webp",
+   "identifier": "thieves-cant"
+  },
+  "Uncanny Dodge (class-features)": {
+   "id": "phbrgeUncannyDod",
+   "type": "feat",
+   "img": "icons/skills/movement/feet-winged-sandals-tan.webp",
+   "identifier": "uncanny-dodge"
+  },
+  "Rogue (rogue)": {
+   "id": "phbrgeRogue00000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/rogue.webp",
+   "identifier": "rogue"
+  },
+  "Fast Hands (thief)": {
+   "id": "phbrgeFastHands0",
+   "type": "feat",
+   "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+   "identifier": "fast-hands"
+  },
+  "Second-Story Work (thief)": {
+   "id": "phbrgeSecondstor",
+   "type": "feat",
+   "img": "icons/environment/settlement/stone-stairs.webp",
+   "identifier": "second-story-work"
+  },
+  "Supreme Sneak (thief)": {
+   "id": "phbrgeSupremeSne",
+   "type": "feat",
+   "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+   "identifier": "supreme-sneak"
+  },
+  "Thief's Reflexes (thief)": {
+   "id": "phbrgeThiefsRefl",
+   "type": "feat",
+   "img": "icons/magic/symbols/symbol-lightning-bolt.webp",
+   "identifier": "thiefs-reflexes"
+  },
+  "Use Magic Device (thief)": {
+   "id": "phbrgeUseMagicDe",
+   "type": "feat",
+   "img": "icons/sundries/documents/blueprint-magical.webp",
+   "identifier": "use-magic-device"
+  },
+  "Thief (rogue)": {
+   "id": "phbrgeThief00000",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/thief.webp",
+   "identifier": "thief"
+  },
+  "Arcane Apotheosis (class-features)": {
+   "id": "phbscrArcaneApot",
+   "type": "feat",
+   "img": "icons/magic/symbols/circled-gem-pink.webp",
+   "identifier": "arcane-apotheosis"
+  },
+  "Font of Magic (class-features)": {
+   "id": "phbscrFontOfMagi",
+   "type": "feat",
+   "img": "icons/magic/light/hand-sparks-glow-yellow.webp",
+   "identifier": "font-of-magic"
+  },
+  "Innate Sorcery (class-features)": {
+   "id": "phbscrInnateSorc",
+   "type": "feat",
+   "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+   "identifier": "innate-sorcery"
+  },
+  "Metamagic (class-features)": {
+   "id": "phbscrMetamagic0",
+   "type": "feat",
+   "img": "icons/magic/unholy/orb-colllecting-energy-green.webp",
+   "identifier": "metamagic"
+  },
+  "Sorcerous Restoration (class-features)": {
+   "id": "phbscrSorcerousR",
+   "type": "feat",
+   "img": "icons/magic/life/cross-beam-green.webp",
+   "identifier": "sorcerous-restoration"
+  },
+  "Sorcery Incarnate (class-features)": {
+   "id": "phbscrSorceryInc",
+   "type": "feat",
+   "img": "icons/magic/life/cross-area-circle-green-white.webp",
+   "identifier": "sorcery-incarnate"
+  },
+  "Draconic Sorcery (sorcerer)": {
+   "id": "phbscrDraconicSo",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/draconic.webp",
+   "identifier": "draconic"
+  },
+  "Careful Spell (metamagic-options)": {
+   "id": "phbmmoCarefulSpe",
+   "type": "feat",
+   "img": "icons/magic/nature/beam-hand-leaves-green.webp",
+   "identifier": "careful-spell"
+  },
+  "Distant Spell (metamagic-options)": {
+   "id": "phbmmoDistantSpe",
+   "type": "feat",
+   "img": "icons/skills/targeting/target-strike-triple-blue.webp",
+   "identifier": "distant-spell"
+  },
+  "Empowered Spell (metamagic-options)": {
+   "id": "phbmmoEmpoweredS",
+   "type": "feat",
+   "img": "icons/magic/air/wind-tornado-wall-blue.webp",
+   "identifier": "empowered-spell"
+  },
+  "Extended Spell (metamagic-options)": {
+   "id": "phbmmoExtendedSp",
+   "type": "feat",
+   "img": "icons/magic/time/hourglass-brown-orange.webp",
+   "identifier": "extended-spell"
+  },
+  "Heightened Spell (metamagic-options)": {
+   "id": "phbmmoHeightened",
+   "type": "feat",
+   "img": "icons/magic/fire/explosion-mushroom-nuke-orange.webp",
+   "identifier": "heightened-spell"
+  },
+  "Quickened Spell (metamagic-options)": {
+   "id": "phbmmoQuickenedS",
+   "type": "feat",
+   "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+   "identifier": "quickened-spell"
+  },
+  "Seeking Spell (metamagic-options)": {
+   "id": "phbmmoSeekingSpe",
+   "type": "feat",
+   "img": "icons/tools/navigation/compass-brass-blue-red.webp",
+   "identifier": "seeking-spell"
+  },
+  "Subtle Spell (metamagic-options)": {
+   "id": "phbmmoSubtleSpel",
+   "type": "feat",
+   "img": "icons/creatures/slimes/slime-movement-swirling-blue.webp",
+   "identifier": "subtle-spell"
+  },
+  "Transmuted Spell (metamagic-options)": {
+   "id": "phbmmoTransmuted",
+   "type": "feat",
+   "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+   "identifier": "transmuted-spell"
+  },
+  "Twinned Spell (metamagic-options)": {
+   "id": "phbmmoTwinnedSpe",
+   "type": "feat",
+   "img": "icons/magic/lightning/bolts-forked-large-orange.webp",
+   "identifier": "twinned-spell"
+  },
+  "Sorcerer (sorcerer)": {
+   "id": "phbscrSorcerer00",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/sorcerer.webp",
+   "identifier": "sorcerer"
+  },
+  "Draconic Resilience (draconic-sorcery)": {
+   "id": "phbscrDraconicRe",
+   "type": "feat",
+   "img": "icons/creatures/claws/claw-scaled-red.webp",
+   "identifier": "draconic-resilience"
+  },
+  "Draconic Spells (draconic-sorcery)": {
+   "id": "phbscrDraconicSp",
+   "type": "feat",
+   "img": "icons/magic/symbols/mask-metal-silver-white.webp",
+   "identifier": "draconic-spells"
+  },
+  "Dragon Companion (draconic-sorcery)": {
+   "id": "phbscrDragonComp",
+   "type": "feat",
+   "img": "icons/creatures/abilities/dragon-fire-breath-orange.webp",
+   "identifier": "dragon-companion"
+  },
+  "Dragon Wings (draconic-sorcery)": {
+   "id": "phbscrDragonWing",
+   "type": "feat",
+   "img": "icons/creatures/abilities/wing-batlike-white-blue.webp",
+   "identifier": "dragon-wings"
+  },
+  "Elemental Affinity (draconic-sorcery)": {
+   "id": "phbscrElementalA",
+   "type": "feat",
+   "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+   "identifier": "elemental-affinity"
+  },
+  "Contact Patron (class-features)": {
+   "id": "phbwlkContactPat",
+   "type": "feat",
+   "img": "icons/creatures/mammals/bat-giant-tattered-purple.webp",
+   "identifier": "contact-patron"
+  },
+  "Eldritch Invocations (class-features)": {
+   "id": "phbwlkEldritchIn",
+   "type": "feat",
+   "img": "icons/sundries/lights/candles-lit-red-evil.webp",
+   "identifier": "eldritch-invocations"
+  },
+  "Eldritch Master (class-features)": {
+   "id": "phbwlkEldritchMa",
+   "type": "feat",
+   "img": "icons/magic/lightning/orb-ball-purple.webp",
+   "identifier": "eldritch-master"
+  },
+  "Magical Cunning (class-features)": {
+   "id": "phbwlkMagicalCun",
+   "type": "feat",
+   "img": "icons/magic/unholy/hands-circle-light-green.webp",
+   "identifier": "magical-cunning"
+  },
+  "Mystic Arcanum (class-features)": {
+   "id": "phbwlkMysticArca",
+   "type": "feat",
+   "img": "icons/magic/unholy/hand-marked-pink.webp",
+   "identifier": "mystic-arcanum"
+  },
+  "Pact Magic (class-features)": {
+   "id": "phbwlkPactMagic0",
+   "type": "feat",
+   "img": "icons/skills/wounds/injury-hand-blood-red.webp",
+   "identifier": "pact-magic"
+  },
+  "Agonizing Blast (eldritch-invocation-options)": {
+   "id": "phbinvAgonizingB",
+   "type": "feat",
+   "img": "icons/magic/acid/projectile-stream-bubbles.webp",
+   "identifier": "agonizing-blast"
+  },
+  "Armor of Shadows (eldritch-invocation-options)": {
+   "id": "phbinvArmorofSha",
+   "type": "feat",
+   "img": "icons/magic/control/control-influence-rally-purple.webp",
+   "identifier": "armor-of-shadows"
+  },
+  "Ascendant Step (eldritch-invocation-options)": {
+   "id": "phbinvAscendantS",
+   "type": "feat",
+   "img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
+   "identifier": "ascendant-step"
+  },
+  "Book of Shadows (eldritch-invocation-options)": {
+   "id": "phbwlkBookOfShad",
+   "type": "weapon",
+   "img": "icons/sundries/books/book-black-grey.webp",
+   "identifier": "book-of-shadows"
+  },
+  "Devil's Sight (eldritch-invocation-options)": {
+   "id": "phbinvDevilsSigh",
+   "type": "feat",
+   "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+   "identifier": "devils-sight"
+  },
+  "Devouring Blade (eldritch-invocation-options)": {
+   "id": "phbinvDevouringB",
+   "type": "feat",
+   "img": "icons/skills/melee/blood-slash-foam-red.webp",
+   "identifier": "devouring-blade"
+  },
+  "Eldritch Mind (eldritch-invocation-options)": {
+   "id": "phbinvEldritchMi",
+   "type": "feat",
+   "img": "icons/magic/unholy/silhouette-robe-evil-power.webp",
+   "identifier": "eldritch-mind"
+  },
+  "Eldritch Smite (eldritch-invocation-options)": {
+   "id": "phbinvEldritchSm",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-axe-energy-pink.webp",
+   "identifier": "eldritch-smite"
+  },
+  "Eldritch Spear (eldritch-invocation-options)": {
+   "id": "phbinvEldritchSp",
+   "type": "feat",
+   "img": "icons/weapons/ammunition/arrowhead-glowing-blue.webp",
+   "identifier": "eldritch-spear"
+  },
+  "Fiendish Vigor (eldritch-invocation-options)": {
+   "id": "phbinvFiendishVi",
+   "type": "feat",
+   "img": "icons/magic/death/undead-zombie-grave-green.webp",
+   "identifier": "fiendish-vigor"
+  },
+  "Gaze of Two Minds (eldritch-invocation-options)": {
+   "id": "phbinvGazeofTwoM",
+   "type": "feat",
+   "img": "icons/magic/perception/third-eye-blue-red.webp",
+   "identifier": "gaze-of-two-minds"
+  },
+  "Gift of the Depths (eldritch-invocation-options)": {
+   "id": "phbinvGiftoftheD",
+   "type": "feat",
+   "img": "icons/magic/water/water-elemental-blue-teeth.webp",
+   "identifier": "gift-of-the-depths"
+  },
+  "Gift of the Protectors (eldritch-invocation-options)": {
+   "id": "phbinvGiftoftheP",
+   "type": "feat",
+   "img": "icons/sundries/books/book-open-red.webp",
+   "identifier": "gift-of-the-protectors"
+  },
+  "Investment of the Chain Master (eldritch-invocation-options)": {
+   "id": "phbinvInvestment",
+   "type": "feat",
+   "img": "icons/magic/control/debuff-chains-orb-movement-blue.webp",
+   "identifier": "investment-of-the-chain-master"
+  },
+  "Lessons of the First Ones (eldritch-invocation-options)": {
+   "id": "phbinvLessonsoft",
+   "type": "feat",
+   "img": "icons/creatures/magical/humanoid-giant-forest-blue.webp",
+   "identifier": "lessons-of-the-first-ones"
+  },
+  "Lifedrinker (eldritch-invocation-options)": {
+   "id": "phbinvLifedrinke",
+   "type": "feat",
+   "img": "icons/skills/melee/strike-sword-blood-red.webp",
+   "identifier": "lifedrinker"
+  },
+  "Mask of Many Faces (eldritch-invocation-options)": {
+   "id": "phbinvMaskofMany",
+   "type": "feat",
+   "img": "icons/creatures/magical/spirit-undead-masked-blue.webp",
+   "identifier": "mask-of-many-faces"
+  },
+  "Master of Myriad Forms (eldritch-invocation-options)": {
+   "id": "phbinvMasterofMy",
+   "type": "feat",
+   "img": "icons/creatures/abilities/cougar-pounce-stalk-black.webp",
+   "identifier": "master-of-myriad-forms"
+  },
+  "Misty Visions (eldritch-invocation-options)": {
+   "id": "phbinvMistyVisio",
+   "type": "feat",
+   "img": "icons/magic/air/air-burst-spiral-teal-green.webp",
+   "identifier": "misty-visions"
+  },
+  "One with Shadows (eldritch-invocation-options)": {
+   "id": "phbinvOnewithSha",
+   "type": "feat",
+   "img": "icons/magic/unholy/silhouette-robe-evil-power.webp",
+   "identifier": "one-with-shadows"
+  },
+  "Otherworldly Leap (eldritch-invocation-options)": {
+   "id": "phbinvOtherworld",
+   "type": "feat",
+   "img": "icons/creatures/mammals/deer-movement-leap-green.webp",
+   "identifier": "otherworldly-leap"
+  },
+  "Pact of the Blade (eldritch-invocation-options)": {
+   "id": "phbinvPactBlade0",
+   "type": "feat",
+   "img": "icons/skills/melee/weapons-crossed-swords-teal.webp",
+   "identifier": "pact-of-the-blade"
+  },
+  "Pact of the Chain (eldritch-invocation-options)": {
+   "id": "phbinvPactChain0",
+   "type": "feat",
+   "img": "icons/magic/control/debuff-chains-shackle-movement-red.webp",
+   "identifier": "pact-of-the-chain"
+  },
+  "Pact of the Tome (eldritch-invocation-options)": {
+   "id": "phbinvPactTome00",
+   "type": "feat",
+   "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+   "identifier": "pact-of-the-tome"
+  },
+  "Repelling Blast (eldritch-invocation-options)": {
+   "id": "phbinvRepellingB",
+   "type": "feat",
+   "img": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
+   "identifier": "repelling-blast"
+  },
+  "Thirsting Blade (eldritch-invocation-options)": {
+   "id": "phbinvThirstingB",
+   "type": "feat",
+   "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+   "identifier": "thirsting-blade"
+  },
+  "Visions of Distant Realms (eldritch-invocation-options)": {
+   "id": "phbinvVisionsOfD",
+   "type": "feat",
+   "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+   "identifier": "visions-of-distant-realms"
+  },
+  "Whispers of the Grave (eldritch-invocation-options)": {
+   "id": "phbinvWhispersOf",
+   "type": "feat",
+   "img": "icons/magic/death/undead-ghost-scream-teal.webp",
+   "identifier": "whispers-of-the-grave"
+  },
+  "Witch Sight (eldritch-invocation-options)": {
+   "id": "phbinvWitchSight",
+   "type": "feat",
+   "img": "icons/magic/perception/eye-tendrils-web-purple.webp",
+   "identifier": "witch-sight"
+  },
+  "Fiend Patron (warlock)": {
+   "id": "phbwlkFiendPatro",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/fiend.webp",
+   "identifier": "fiend"
+  },
+  "Dark One's Blessing (fiend-patron)": {
+   "id": "phbwlkDarkOnesBl",
+   "type": "feat",
+   "img": "icons/magic/life/heart-cross-strong-purple-orange.webp",
+   "identifier": "dark-ones-blessing"
+  },
+  "Dark One's Own Luck (fiend-patron)": {
+   "id": "phbwlkDarkOnesOw",
+   "type": "feat",
+   "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+   "identifier": "dark-ones-own-luck"
+  },
+  "Fiend Spells (fiend-patron)": {
+   "id": "phbwlkFiendSpell",
+   "type": "feat",
+   "img": "icons/magic/control/encase-creature-monster-hold.webp",
+   "identifier": "fiend-spells"
+  },
+  "Fiendish Resilience (fiend-patron)": {
+   "id": "phbwlkFiendishRe",
+   "type": "feat",
+   "img": "icons/magic/defensive/armor-stone-skin.webp",
+   "identifier": "fiendish-resilience"
+  },
+  "Hurl Through Hell (fiend-patron)": {
+   "id": "phbwlkHurlThroug",
+   "type": "feat",
+   "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+   "identifier": "hurl-through-hell"
+  },
+  "Warlock (warlock)": {
+   "id": "phbwlkWarlock000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/warlock.webp",
+   "identifier": "warlock"
+  },
+  "Arcane Recovery (class-features)": {
+   "id": "phbwzdArcaneReco",
+   "type": "feat",
+   "img": "icons/magic/earth/explosion-lava-stone-green.webp",
+   "identifier": "arcane-recovery"
+  },
+  "Memorize Spell (class-features)": {
+   "id": "phbwzdMemorizeSp",
+   "type": "feat",
+   "img": "icons/sundries/documents/blueprint-magical.webp",
+   "identifier": "memorize-spell"
+  },
+  "Ritual Adept (class-features)": {
+   "id": "phbwzdRitualAdep",
+   "type": "feat",
+   "img": "icons/sundries/scrolls/scroll-yellow-teal.webp",
+   "identifier": "ritual-adept"
+  },
+  "Scholar (class-features)": {
+   "id": "phbwzdScholar000",
+   "type": "feat",
+   "img": "icons/sundries/books/book-purple-cross.webp",
+   "identifier": "scholar"
+  },
+  "Signature Spells (class-features)": {
+   "id": "phbwzdSignatureS",
+   "type": "feat",
+   "img": "icons/magic/fire/projectile-wave-arrow.webp",
+   "identifier": "signature-spells"
+  },
+  "Spell Mastery (class-features)": {
+   "id": "phbwzdSpellMaste",
+   "type": "feat",
+   "img": "icons/magic/unholy/beam-impact-purple.webp",
+   "identifier": "spell-mastery"
+  },
+  "Evoker (wizard)": {
+   "id": "phbwzdEvoker0000",
+   "type": "subclass",
+   "img": "systems/dnd5e/icons/classes/evoker.webp",
+   "identifier": "evoker"
+  },
+  "Empowered Evocation (evoker)": {
+   "id": "phbwzdEmpoweredE",
+   "type": "feat",
+   "img": "icons/magic/fire/explosion-mushroom-nuke-orange.webp",
+   "identifier": "empowered-evocation"
+  },
+  "Evocation Savant (evoker)": {
+   "id": "phbwzdEvocationS",
+   "type": "feat",
+   "img": "icons/magic/fire/barrier-wall-explosion-orange.webp",
+   "identifier": "evocation-savant"
+  },
+  "Overchannel (evoker)": {
+   "id": "phbwzdOverchanne",
+   "type": "feat",
+   "img": "icons/magic/acid/projectile-faceted-glob.webp",
+   "identifier": "overchannel"
+  },
+  "Potent Cantrip (evoker)": {
+   "id": "phbwzdPotentCant",
+   "type": "feat",
+   "img": "icons/magic/earth/projectiles-fire-stone-salvo.webp",
+   "identifier": "potent-cantrip"
+  },
+  "Sculpt Spells (evoker)": {
+   "id": "phbwzdSculptSpel",
+   "type": "feat",
+   "img": "icons/creatures/slimes/slime-movement-dripping-pseudopods-green.webp",
+   "identifier": "sculpt-spells"
+  },
+  "Wizard (wizard)": {
+   "id": "phbwzdWizard0000",
+   "type": "class",
+   "img": "systems/dnd5e/icons/classes/wizard.webp",
+   "identifier": "wizard"
+  }
+ },
+ "imgs": {}
+}

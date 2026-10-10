@@ -1,0 +1,314 @@
+{
+  "_id": "bDsXYd8Jw4rdOXaA",
+  "name": "Спутник реликт",
+  "type": "feat",
+  "img": "icons/magic/holy/angel-winged-humanoid-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Реликт проявляется для помощи вам и черпает силу из вашего договора. Он использует статблок <strong>Спутник реликт</strong> и является небожителем, исчадием или нежитью (выберите, когда получаете это умение). Вы определяете, как выглядит реликт, но независимо от формы реликт несёт черты, указывающие на его сверхъестественное происхождение. Например, вы можете решить, что ваш реликт — это огромный парящий череп, покрытый знаками, круг светящихся рун или постоянно меняющаяся абстрактная форма. Реликт дружественен к вам и вашим союзникам и подчиняется вашим командам. Он исчезает, если вы умираете.</p><p><strong>Реликт в бою.</strong> В бою реликт действует в ваш ход. Он может перемещаться и совершать реакции самостоятельно, но единственное доступное ему действие — уклонение, если вы не потратите бонусное действие в свой ход, приказывая ему совершить одно из действий из его статблока или любое другое действие. Когда вы совершаете действие атака, вы также можете потратить одну из своих атак, приказывая реликту совершить действие Удар реликта. Если вы недееспособны, реликт может совершать любое действие, не ограничиваясь уклонением.</p><p><strong>Исчезновение реликта.</strong> Когда у реликта оказывается 0 хитов, он исчезает. Вы можете потратить одну минуту, проводя магическую церемонию, чтобы вновь призвать реликта; он появляется с максимальным количеством хитов в свободном пространстве в пределах 5 футов от вас.</p><p>Действием магия вы можете временно отправить реликта в карманное измерение. Действием магия, пока реликт отправлен, вы можете вернуть его, и он появится в свободном пространстве в пределах 30 футов от вас. Когда у реликта оказывается 0 хитов или он отправлен в карманное измерение, он оставляет на месте всё, что нёс или носил.</p><p>Каждый раз, когда вы завершаете продолжительный отдых, вы можете призвать реликта в новой форме, и он появляется в свободном пространстве в пределах 5 футов от вас. Вы выбираете его внешний вид и указываете, является ли он небожителем, исчадием или нежитью. Если реликт уже проявлен с помощью этого умения, то его форма изменяется на новую.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-MS",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "vestige-companion",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Покровитель реликт",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "bG67zHh7Ntnw9qKp": {
+        "_id": "bG67zHh7Ntnw9qKp",
+        "type": "summon",
+        "name": "Призвать реликта",
+        "img": "icons/magic/holy/angel-winged-humanoid-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "minute",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@abilities.cha.mod",
+          "hd": "",
+          "hp": "4 * @classes.warlock.levels",
+          "attackDamage": "@abilities.cha.mod",
+          "saveDamage": "",
+          "healing": "@abilities.cha.mod"
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "gw8N6HH8PBwgUebF",
+            "count": "",
+            "name": "Небожитель",
+            "uuid": "Compendium.spikependium.creatures.Actor.ygdgcDsAyn9Cyfee",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "Ku8A5CmPIzkjHbmz",
+            "count": "",
+            "name": "Исчадие",
+            "uuid": "Compendium.spikependium.creatures.Actor.IpgOEVZ6ks2N1zdt",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "RbZc2F0RLRx56Skc",
+            "count": "",
+            "name": "Нежить",
+            "uuid": "Compendium.spikependium.creatures.Actor.AJDrnK3LLsKHkyBG",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": "",
+          "identifier": ""
+        }
+      },
+      "kUEdPFMFUoHcrJ9w": {
+        "_id": "kUEdPFMFUoHcrJ9w",
+        "type": "summon",
+        "name": "Новая форма (после отдыха)",
+        "img": "icons/magic/holy/angel-winged-humanoid-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "По окончании продолжительного отдыха",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@abilities.cha.mod",
+          "hd": "",
+          "hp": "4 * @classes.warlock.levels",
+          "attackDamage": "@abilities.cha.mod",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [],
+        "creatureTypes": [],
+        "match": {
+          "attacks": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "Sb4oz63HCCnlwBg3",
+            "count": "",
+            "name": "Небожитель",
+            "uuid": "Compendium.spikependium.creatures.Actor.ygdgcDsAyn9Cyfee",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "izGWV4HX5BVCF7MV",
+            "count": "",
+            "name": "Исчадие",
+            "uuid": "Compendium.spikependium.creatures.Actor.IpgOEVZ6ks2N1zdt",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "hX4QgXE6CJTaE5Ap",
+            "count": "",
+            "name": "Нежить",
+            "uuid": "Compendium.spikependium.creatures.Actor.AJDrnK3LLsKHkyBG",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": "",
+          "identifier": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "MxAyC15ZEHxg9LpA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:vestige-patron:vestige-companion"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!bDsXYd8Jw4rdOXaA"
+}

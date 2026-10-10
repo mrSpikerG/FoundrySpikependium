@@ -1,0 +1,153 @@
+{
+  "_id": "A55gkG9Q8cGnyCoq",
+  "name": "Warrior of Venom",
+  "type": "subclass",
+  "img": "icons/skills/toxins/poison-bottle-corked-fire-green.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Направляйте источник внутренней токсичности</em></p><p>Мастера яда оскверняют токсинами себя изнутри, чтобы стать воплощением яда. За годы сосредоточения и изучения яда во всех его формах эти монахи учатся использовать собственную токсичность, чтобы ослаблять и отравлять врагов. Контакт с воином яда — даже малейшее прикосновение или одна-единственная капля крови — может быть столь же смертоносным, как укус гадюки.</p><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO2",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "venom",
+    "classIdentifier": "monk",
+    "advancement": [
+      {
+        "_id": "sY75pe4LXSZIVaaO",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Re5t3P8JBoaf0Nsa",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.BRpJzCssqNvPRRU1",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "fJDv0HqcEcfgPzdH",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.L37Rp8pBw81Rzckc",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "Pxc7Tp11JqBkPujK",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.pBlL5aniY1uFUZcG",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.x5q5eat91OCas2II",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 11,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "VbJjVc9pCXrRLR5R",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.z9cTZpoK1yaevyJS",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 17,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "V7559hCjHdYaNpzE",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "tool:pois"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Мощный арсенал: набор отравителя",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "AFaBzmqZoBZxTATv",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:warrior-of-venom",
+      "originalName": "Warrior of Venom"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!A55gkG9Q8cGnyCoq"
+}

@@ -1,0 +1,111 @@
+{
+  "_id": "6XbnBzBPQHkRaMhm",
+  "name": "Предания предка",
+  "type": "feat",
+  "img": "icons/sundries/books/book-worn-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы используете силу своей личности, чтобы направлять знания своего предка. Когда вы совершаете проверку Интеллекта, вы получаете бонус к проверке, равный вашему модификатору Харизмы (минимум +1).</p><p>Вы также получаете владение одним из этих навыков на ваш выбор: Аркана, История, Анализ, Природа или Религия.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AS",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "ancestral-lore",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Мощь предка",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "PpYrDAPOkbSKnzUN",
+      "name": "Предания предка",
+      "img": "icons/sundries/books/book-worn-brown.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.int.check.roll.bonus",
+            "value": "+ max(1, @abilities.cha.mod)",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "DrNyoZbvGrCPqZCY"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!6XbnBzBPQHkRaMhm.PpYrDAPOkbSKnzUN"
+    }
+  ],
+  "folder": "wrwC49EqQ9SEpyvR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:ancestral-might:ancestral-lore"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!6XbnBzBPQHkRaMhm"
+}

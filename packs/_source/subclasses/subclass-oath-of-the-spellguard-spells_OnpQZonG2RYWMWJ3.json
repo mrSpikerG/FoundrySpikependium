@@ -1,0 +1,63 @@
+{
+  "_id": "OnpQZonG2RYWMWJ3",
+  "name": "Заклинания чаростража",
+  "type": "feat",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы достигаете уровня паладина, указанного в таблице «Заклинания клятвы чаростража», эти заклинания считаются для вас всегда подготовленными.</p><table><caption>Заклинания клятвы чаростража</caption><thead><tr><th>Уровень паладина</th><th>Заклинания</th></tr></thead><tbody><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{Обнаружение магии}, @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{Щит}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplSeeInvisib]{Видение невидимого}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSilence000]{Тишина}</td></tr><tr><td>9</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{Контрзаклинание}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Рассеивание магии}</td></tr><tr><td>13</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplFreedomofM]{Свобода перемещения}, @UUID[Compendium.dnd5e.spells24.Item.phbsplOtilukesRe]{Отилюков упругий шар}</td></tr><tr><td>17</td><td><em>Круг силы</em>, @UUID[Compendium.dnd5e.spells24.Item.phbsplHallow0000]{Святилище}</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-MS",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "spellguard-spells",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Клятва чаростража",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "Upi6SZVPoWLHBKKt",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:oath-of-the-spellguard:spells"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!OnpQZonG2RYWMWJ3"
+}

@@ -1,0 +1,164 @@
+{
+  "_id": "MOwefPaXpD8eZrH4",
+  "name": "Гниль и жестокость",
+  "type": "feat",
+  "img": "icons/magic/nature/root-vine-thorned-fire-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваша преданность древним существам леса изменяет вас ещё сильнее. Находясь в трансформации от умения Гнев диких, вы получаете следующие дополнительные эффекты:</p><p><strong>Зловещая аура.</strong> Когда существо проваливает спасбросок против вашей Тревожной ауры, оно также получает урон некротической энергией, ядом или психической энергией (на ваш выбор), равный вашему уровню следопыта. Этот урон игнорирует сопротивление.</p><p><strong>Удушающие корни.</strong> Когда вы попадаете по существу броском атаки оружием, вы можете активировать оружейный приём Изнурение или Замедление в дополнение к другому оружейному приёму, который вы применяете с этим оружием.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-HS",
+      "page": "5",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "rot-and-ruin",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Страж пустоты",
+    "prerequisites": {
+      "level": 11,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "DvHqI92KOqKrJqGx": {
+        "_id": "DvHqI92KOqKrJqGx",
+        "type": "damage",
+        "name": "Зловещая аура",
+        "img": "icons/magic/nature/root-vine-thorned-fire-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Существо провалило спасбросок Тревожной ауры",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": true,
+                "formula": "@classes.ranger.levels"
+              },
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [
+                "necrotic",
+                "poison",
+                "psychic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "C9IkGWo36LYESs0h",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:hollow-warden:rot-and-ruin"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!MOwefPaXpD8eZrH4"
+}

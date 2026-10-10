@@ -1,0 +1,164 @@
+{
+  "_id": "zMw1HohG4YAcv09U",
+  "name": "Аура злобы",
+  "type": "feat",
+  "img": "icons/magic/unholy/energy-smoke-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы излучаете зловещую силу, связанную с одним из Троих мёртвых. В начале каждого вашего хода каждое существо на ваш выбор в пределах 10-футовой эманации, исходящей от вас, получает урон, равный вашему модификатору Интеллекта (минимум 1); тип урона соответствует типу сопротивления, предоставляемому вашим выбором в умении Жуткая преданность. Урон, наносимый этой аурой, игнорирует сопротивление.</p><p>Аура становится неактивной, если вы находитесь в состоянии &Reference[incapacitated]{недееспособный}.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "aura-of-malevolence",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Наследник троих",
+    "prerequisites": {
+      "level": 13,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "F44sYf7EZbW0JMw8": {
+        "_id": "F44sYf7EZbW0JMw8",
+        "type": "damage",
+        "name": "",
+        "img": "icons/magic/unholy/energy-smoke-pink.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Начало вашего хода",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "10",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "enemy",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": true,
+                "formula": "max(1, @abilities.int.mod)"
+              },
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [
+                "psychic",
+                "poison",
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "GioKOb9UiBzHe9Tc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:scion-of-the-three:aura-of-malevolence"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!zMw1HohG4YAcv09U"
+}

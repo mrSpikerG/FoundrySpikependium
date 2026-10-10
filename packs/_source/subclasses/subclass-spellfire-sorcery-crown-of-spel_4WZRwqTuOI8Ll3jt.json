@@ -1,0 +1,305 @@
+{
+  "_id": "4WZRwqTuOI8Ll3jt",
+  "name": "Корона волшебного огня",
+  "type": "feat",
+  "img": "icons/magic/fire/flame-burning-eye.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы можете бонусным действием получить следующие эффекты на 1 минуту. После применения этого бонусного действия вы не можете применить его снова, пока не завершите продолжительный отдых, если только вы не потратите 7 очков чародейства (действие не требуется), чтобы восстановить возможность его применить.</p><p><strong>Сжигание жизненной силы.</strong> Один раз за ход, когда по вам попадают броском атаки, вы можете потратить любое количество костей хитов (максимум равен вашему модификатору Харизмы, минимум — 1). Бросьте потраченные кости и уменьшите полученный урон от этой атаки на сумму, равную выпавшему значению + ваш уровень чародея.</p><p><strong>Полёт.</strong> Вы получаете скорость полёта 60 футов и можете парить.</p><p><strong>Избежание заклинаний.</strong> Если вы подверглись воздействию заклинания или магического эффекта, которые позволяют совершить спасбросок, чтобы получить только половину урона, то вы вместо этого не получаете урон при успешном спасброске и только половину урона при провале. Вы не можете использовать это умение, если находитесь в состоянии &Reference[incapacitated]{недееспособный}.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-FR",
+      "page": "9",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "crown-of-spellfire",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Волшебный огонь",
+    "prerequisites": {
+      "level": 18,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "hL3m7m54WmOwEa87": {
+        "_id": "hL3m7m54WmOwEa87",
+        "type": "utility",
+        "name": "",
+        "img": "icons/magic/fire/flame-burning-eye.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "LQIUTFOHkHxs8x0r"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "NhPMbE1fb90egb8g": {
+        "_id": "NhPMbE1fb90egb8g",
+        "type": "utility",
+        "name": "Применить (7 очков чародейства)",
+        "img": "icons/magic/fire/flame-burning-eye.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "7",
+              "target": "feat:font-of-magic",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "LQIUTFOHkHxs8x0r"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "LQIUTFOHkHxs8x0r",
+      "name": "Корона волшебного огня",
+      "img": "icons/magic/fire/flame-burning-eye.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.speeds.fly",
+            "value": "60",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "RMoHOeCtGSndRfyB"
+          },
+          {
+            "key": "system.attributes.movement.hover",
+            "value": "true",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "tgkPkvI6yavBFGac"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!4WZRwqTuOI8Ll3jt.LQIUTFOHkHxs8x0r"
+    }
+  ],
+  "folder": "rwufxCHZ5GiPGyIl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:spellfire-sorcery:crown-of-spellfire"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!4WZRwqTuOI8Ll3jt"
+}

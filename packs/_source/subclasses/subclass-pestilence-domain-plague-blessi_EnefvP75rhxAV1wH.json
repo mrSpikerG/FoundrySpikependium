@@ -1,0 +1,237 @@
+{
+  "_id": "EnefvP75rhxAV1wH",
+  "name": "Благословение чумы",
+  "type": "feat",
+  "img": "icons/magic/air/fog-gas-smoke-swirling-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Действием магия вы можете показать свой священный символ и потратить одно применение Божественного канала, чтобы проявить иссушающую чуму в эманации с радиусом 5 футов, окружающей вас или одно согласное существо, которого вы касаетесь, на 1 минуту. Она заканчивается раньше, если вы прекращаете её (действие не требуется), проявляете её снова или получаете состояние &Reference[incapacitated]{недееспособный}.</p><p>Каждое выбранное вами существо, которое начинает свой ход в эманации, должно преуспеть в спасброске Телосложения против Сл. спасброска ваших заклинаний, иначе получает одну степень истощения. Это умение не может увеличить степень истощения существа выше значения, равного вашему модификатору Мудрости (минимум 1 степень истощения). Например, если у вас значение Мудрости 16 (+3), то это умение не может увеличить степень истощения существа выше 3.</p><p>Чума, распространяемая этим умением, проявляется с определённым симптомом. Выберите его из таблицы «Симптомы чумы» или определите случайно.</p><table><caption>Симптомы чумы</caption><thead><tr><th>1к6</th><th>Пока существо заражено, оно…</th></tr></thead><tbody><tr><td>1</td><td>Лишено всех цветов и выглядит в монохромных серых тонах.</td></tr><tr><td>2</td><td>Осыпается металлическими хлопьями цвета ржавчины и скрипит при движении.</td></tr><tr><td>3</td><td>Выделяет зловонную слизь.</td></tr><tr><td>4</td><td>Окружено облаком жужжащих насекомых.</td></tr><tr><td>5</td><td>Пускает грибы или другую растительность из своей плоти.</td></tr><tr><td>6</td><td>Покрыто светящимися гнойниками.</td></tr></tbody></table>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "2",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "plague-blessing",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Домен эпидемии",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "mbVyBXka0eP6sqn4": {
+        "_id": "mbVyBXka0eP6sqn4",
+        "type": "utility",
+        "name": "Проявить чуму",
+        "img": "icons/magic/air/fog-gas-smoke-swirling-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:channel-divinity-cleric",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "5",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d6",
+          "name": "Симптом",
+          "prompt": false,
+          "visible": true
+        }
+      },
+      "XSaD9NRbpEOWWz7C": {
+        "_id": "XSaD9NRbpEOWWz7C",
+        "type": "save",
+        "name": "Спасбросок от чумы",
+        "img": "icons/magic/air/fog-gas-smoke-swirling-green.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Существо начинает ход в эманации",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "H3KbCbjgiPUZZfR6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:pestilence-domain:plague-blessing"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!EnefvP75rhxAV1wH"
+}

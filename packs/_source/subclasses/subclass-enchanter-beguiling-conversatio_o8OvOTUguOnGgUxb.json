@@ -1,0 +1,111 @@
+{
+  "_id": "o8OvOTUguOnGgUxb",
+  "name": "Очаровательный собеседник",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p>Каждый раз, когда вы совершаете проверку Харизмы, вы получаете бонус к проверке, равный вашему модификатору Интеллекта (минимум +1).</p><p>Вы также получаете владение 1 из следующих навыков на ваш выбор: Обман, Запугивание или Убеждение.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "UA-AU",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "beguiling-conversationalist",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Очарователь",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "0QUVWuA3aCzYoDb5",
+      "name": "Очаровательный собеседник",
+      "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.cha.check.roll.bonus",
+            "value": "+ max(1, @abilities.int.mod)",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "zJWFVqgrGDvnTPbP"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!o8OvOTUguOnGgUxb.0QUVWuA3aCzYoDb5"
+    }
+  ],
+  "folder": "FgYDhCTpOkkHk2HX",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:enchanter:beguiling-conversationalist"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!o8OvOTUguOnGgUxb"
+}
