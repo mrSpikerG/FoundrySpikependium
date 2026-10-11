@@ -106,10 +106,15 @@
           "requireMagic": false
         },
         "roll": {
-          "formula": "@scale.artificer.magic-items",
-          "name": "Предметов можно создать",
+          "formula": "",
+          "name": "",
           "prompt": false,
-          "visible": true
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "forge": "replicate"
+          }
         }
       }
     },

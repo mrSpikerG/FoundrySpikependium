@@ -197,7 +197,8 @@ export function define() {
       },
       {
         id: "whispers-of-the-dead", level: 3, name: "Шёпот мёртвых", img: "icons/magic/death/skeleton-skull-soul-blue",
-        desc: "Каждый раз, когда вы завершаете короткий или продолжительный отдых, вы можете выбрать одно владение навыком или инструментом, которым вы не владеете, и получить владение им, поскольку присутствующий призрак делится с вами своими знаниями. Вы теряете это владение, когда вновь используете это умение, чтобы выбрать другое владение."
+        desc: "Каждый раз, когда вы завершаете короткий или продолжительный отдых, вы можете выбрать одно владение навыком или инструментом, которым вы не владеете, и получить владение им, поскольку присутствующий призрак делится с вами своими знаниями. Вы теряете это владение, когда вновь используете это умение, чтобы выбрать другое владение.",
+        acts: [utility("phantom:whispers", { name: "Выбрать знание призрака", activation: "special", condition: "После завершения короткого или продолжительного отдыха" })]
       },
       {
         id: "tokens-of-the-departed", level: 9, name: "Частица души усопшего", img: "icons/commodities/treasure/token-white-skull",
@@ -299,7 +300,7 @@ export function define() {
   // --- Покровитель: Нежить (колдун) -----------------------------------------
   const dread = effect("undead:form-of-dread", {
     name: "Облик ужаса", img: "icons/magic/death/skull-horned-worn-fire-blue", transfer: false, seconds: 60,
-    changes: [change("system.traits.ci.value", "frightened")]
+    changes: [change("system.traits.ci.value", "frightened")], flags: { spikependium: { endsOnIncapacitated: true } }
   });
   makeSubclass({
     key: "subclass:undead-patron", cls: "Колдун", clsGen: "колдуна", classIdentifier: "warlock",

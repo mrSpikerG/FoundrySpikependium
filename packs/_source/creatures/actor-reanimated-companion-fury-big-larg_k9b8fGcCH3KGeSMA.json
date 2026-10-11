@@ -183,7 +183,7 @@
       "img": "icons/magic/death/skull-energy-light-purple.webp",
       "system": {
         "description": {
-          "value": "<p>Спутник взрывается при смерти. <em>Спасбросок Ловкости:</em> Сл. равна вашей Сл. спасброска, каждое существо в пределах 10-футовой эманации от спутника. <em>Провал:</em> [[/damage 2d6 type=necrotic]]{2к6} урона некротической энергией ([[/r 4d6]]{4к6} с 15 уровня изобретателя).</p><h3>Действия</h3><ul><li>[[/item activity=ouJq9QTnoBzasU2E]]{Применить} · [[/damage activity=ouJq9QTnoBzasU2E]]{Бросок урона} · [[/save activity=ouJq9QTnoBzasU2E]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "value": "<p>Спутник взрывается при смерти. <em>Спасбросок Ловкости:</em> Сл. равна вашей Сл. спасброска, каждое существо в пределах 10-футовой эманации от спутника. <em>Провал:</em> [[/damage 2d6 type=necrotic]]{2к6} урона некротической энергией ([[/r 4d6]]{4к6} с 15 уровня изобретателя). Крупный: можете добавить модификатор Интеллекта создателя к урону взрыва; выбор доступен в окне броска урона.</p><h3>Действия</h3><ul><li>[[/item activity=ouJq9QTnoBzasU2E]]{Применить} · [[/damage activity=ouJq9QTnoBzasU2E]]{Бросок урона} · [[/save activity=ouJq9QTnoBzasU2E]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -314,6 +314,11 @@
                 "formula": ""
               },
               "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "companionAction": "death-explosion"
+              }
             }
           }
         },
@@ -407,7 +412,7 @@
       "img": "icons/magic/death/hand-withered-gray.webp",
       "system": {
         "description": {
-          "value": "<p><em>Рукопашная атака:</em> бонус равен вашему модификатору атаки заклинанием, досягаемость 5 фт. <em>Попадание:</em> [[/r 1d4+2]]{1к4 + 2} + ваш модификатор Интеллекта урона некротической энергией, и цель не может совершать провоцированные атаки до начала своего следующего хода. При попадании можно отбросить цель размера Большой или меньше на 10 футов.</p><h3>Действия</h3><ul><li>[[/item activity=8FKHvTEMzK92yKo4]]{Атаковать} · [[/damage activity=8FKHvTEMzK92yKo4]]{Бросок урона}</li><li>[[/item activity=8I7DzW0U2d8CuWql]]{Ярость: второй удар} · [[/damage activity=8I7DzW0U2d8CuWql]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "value": "<p><em>Рукопашная атака:</em> бонус равен вашему модификатору атаки заклинанием, досягаемость 5 фт. <em>Попадание:</em> [[/r 1d4+2]]{1к4 + 2} + ваш модификатор Интеллекта урона некротической энергией, и цель не может совершать провоцированные атаки до начала своего следующего хода. При попадании можно отбросить цель размера Большой или меньше на расстояние до 10 футов от спутника. После попадания появляется выбор расстояния; 0 или закрытие окна пропускает толчок.</p><h3>Действия</h3><ul><li>[[/item activity=8FKHvTEMzK92yKo4]]{Атаковать} · [[/damage activity=8FKHvTEMzK92yKo4]]{Бросок урона}</li><li>[[/item activity=8I7DzW0U2d8CuWql]]{Ярость: второй удар} · [[/damage activity=8I7DzW0U2d8CuWql]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -466,7 +471,11 @@
               "override": false,
               "concentration": false
             },
-            "effects": [],
+            "effects": [
+              {
+                "_id": "WhVStqtfvQiffom6"
+              }
+            ],
             "range": {
               "value": "5",
               "units": "ft",
@@ -576,7 +585,11 @@
               "override": false,
               "concentration": false
             },
-            "effects": [],
+            "effects": [
+              {
+                "_id": "WhVStqtfvQiffom6"
+              }
+            ],
             "range": {
               "value": "5",
               "units": "ft",
@@ -660,7 +673,50 @@
         "advancement": [],
         "enchant": {}
       },
-      "effects": [],
+      "effects": [
+        {
+          "_id": "WhVStqtfvQiffom6",
+          "name": "Ужасающий удар: нет провоцированных атак",
+          "img": "icons/magic/death/hand-withered-gray.webp",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": "targetStart",
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "noOpportunityAttacks": true
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!k9b8fGcCH3KGeSMA.wtvvNxYhFHODW4Qg.WhVStqtfvQiffom6"
+        }
+      ],
       "folder": null,
       "sort": 300000,
       "ownership": {

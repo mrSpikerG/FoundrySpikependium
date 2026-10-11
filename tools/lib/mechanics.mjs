@@ -2,6 +2,15 @@
 import { change, effect, makeId } from "./core.mjs";
 
 const STOP = [change("system.attributes.movement.multiplier", 0, "override")];
+const TURN_LIMITS = new Map([
+  ...["banishing", "beguiling", "bursting", "enfeebling", "grasping", "piercing", "seeking", "shadow"]
+    .map(id => [`arcane-archer:shot:${id}`, { group: "arcane-shot" }]),
+  ["spellfire:bolstering", { group: "spellfire-burst", ownTurn: true }],
+  ["spellfire:radiant", { group: "spellfire-burst", ownTurn: true }],
+  ["demonic:whip", { group: "abyssal-rupture", ownTurn: true }],
+  ["demonic:carapace", { group: "abyssal-rupture", ownTurn: true }],
+  ["moon:tales:life", {}], ["spirits:power", {}], ["hollow-warden:ravenous", {}], ["lich:soul-drain", {}]
+].map(([key, rule]) => [makeId(`activity:${key}`), rule]));
 // Явные эффекты из правил UA; упоминание состояния в описании само по себе не означает его наложение.
 export const ACTIVITY_EFFECTS = {
   "arcane-archer:shot:banishing": { statuses: ["incapacitated"], expiry: "targetEnd", changes: STOP },
@@ -9,8 +18,8 @@ export const ACTIVITY_EFFECTS = {
   "arcane-archer:shot:enfeebling": { statuses: ["poisoned"], expiry: "targetEnd" },
   "arcane-archer:shot:grasping": { statuses: ["restrained"], expiry: "sourceStart" },
   "arcane-archer:shot:shadow": { statuses: ["blinded"], expiry: "targetEnd" },
-  "enchanter:hypnotic": { statuses: ["charmed", "incapacitated"], seconds: 60, changes: STOP, flags: { spikependium: { endsOnDamage: true } } },
-  "enchanter:hypnotic:slot": { statuses: ["charmed", "incapacitated"], seconds: 60, changes: STOP, flags: { spikependium: { endsOnDamage: true } } },
+  "enchanter:hypnotic": { statuses: ["charmed", "incapacitated"], seconds: 60, changes: STOP, flags: { spikependium: { endsOnDamage: true, endsOutside: 10 } } },
+  "enchanter:hypnotic:slot": { statuses: ["charmed", "incapacitated"], seconds: 60, changes: STOP, flags: { spikependium: { endsOnDamage: true, endsOutside: 10 } } },
   "magic-stealer:interrupt": { statuses: ["stunned"], expiry: "targetStart" },
   "lament:wail": { statuses: ["deafened"], seconds: 60 },
   "lament:terrify": { statuses: ["frightened"], expiry: "sourceStart" },
@@ -83,10 +92,51 @@ function enrichItem(item) {
     acts.push(forward);
   }
   for (const a of acts) {
-    if (/раз в ход|раз за ход|1\s*\/\s*ход/i.test(`${a.activation.condition} ${a.name}`)) {
+    if (a._id === makeId("activity:phantom:whispers")) {
+      a.flags ??= {};
+      a.flags.spikependium ??= {};
+      a.flags.spikependium.whispers = true;
+    }
+    const forge = new Map([["artificer:tinkers-magic:create", "mundane"], ["artificer:replicate-magic-item:create", "replicate"],
+      ["artificer:soul-of-artifice:cheat-death", "sacrifice"],
+      ["artificer:spell-storing-item:use", "store-spell"],
+      ...["charge", "drain", "transmute"].map(mode => [`artificer:magic-item-tinker:${mode}`, mode])]);
+    for (const [key, mode] of forge) if (a._id === makeId(`activity:${key}`)) {
+      a.flags ??= {};
+      a.flags.spikependium ??= {};
+      a.flags.spikependium.forge = mode;
+    }
+    if (["metamorph:weaver:defense", "metamorph:weaver:defense:long", "metamorph:greater:form"].some(key => a._id === makeId(`activity:${key}`))) {
+      a.flags ??= {};
+      a.flags.spikependium ??= {};
+      a.flags.spikependium.requiresMutable = true;
+    }
+    if (["reanimator:command", "pdk:command", "vestige:command", "vestige:command:attack"].some(key => a._id === makeId(`activity:${key}`))) {
+      a.flags ??= {};
+      a.flags.spikependium ??= {};
+      a.flags.spikependium.companionAction = "command";
+    }
+    if (a._id === makeId("activity:actor:reanimated:explosion")) {
+      a.flags ??= {};
+      a.flags.spikependium ??= {};
+      a.flags.spikependium.companionAction = "death-explosion";
+    }
+    if (a._id === makeId("activity:reanimator:transfer-life")) {
+      a.flags ??= {};
+      a.flags.spikependium ??= {};
+      a.flags.spikependium.companionAction = "transfer-life";
+    }
+    if (a._id === makeId("activity:aberrant:surge") || a._id === makeId("activity:greater-aberrant:inspiration")) {
+      a.flags ??= {};
+      a.flags.spikependium ??= {};
+      a.flags.spikependium.hitDieOutcome = a._id === makeId("activity:aberrant:surge") ? "surge" : "inspiration";
+    }
+    const limit = TURN_LIMITS.get(a._id);
+    if (limit || /раз в ход|раз за ход|1\s*\/\s*ход/i.test(`${a.activation.condition} ${a.name}`)) {
       a.flags ??= {};
       a.flags.spikependium ??= {};
       a.flags.spikependium.oncePerTurn = true;
+      Object.assign(a.flags.spikependium, limit);
     }
     const rule = EFFECT_BY_ACTIVITY.get(a._id);
     if (!rule) continue;

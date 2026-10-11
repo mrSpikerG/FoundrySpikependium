@@ -112,7 +112,9 @@ function checkItem(where, item) {
     if ( adv.type === "ItemChoice" && !adv.configuration.pool.length && !adv.configuration.restriction.list.length && adv.configuration.type !== "spell" ) warn(where, `выбор «${adv.title}» без вариантов`);
     const dragonTable = ["potent-dragonmark", "boon-of-siberys"].includes(item.system.identifier)
       && adv.title === "Подготовка драконьих заклинаний" && adv.configuration.optional;
-    if ( adv.type === "ItemGrant" && !adv.configuration.items.length && !dragonTable ) err(where, `пустая выдача «${adv.title}»`);
+    const abilities = adv.configuration?.spell?.ability ?? [];
+    const abilityChoice = new Set(abilities).size > 1 && abilities.every(a => ["str", "dex", "con", "int", "wis", "cha"].includes(a));
+    if ( adv.type === "ItemGrant" && !adv.configuration.items.length && !dragonTable && !abilityChoice ) err(where, `пустая выдача «${adv.title}»`);
     for ( const u of uuids ) if ( !docs.has(u) && !srdIds.has(u) ) err(where, `продвижение «${adv.title}» ссылается на неизвестный ${u}`);
   }
   if ( item.img && !item.img.startsWith("modules/") && !ICONS.has(item.img) ) warn(where, `иконка не найдена: ${item.img}`);

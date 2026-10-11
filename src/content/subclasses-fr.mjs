@@ -162,7 +162,8 @@ export function define() {
         acts: [
           summon("pdk:companion", [comp], { name: "Призвать дракона", activation: "special", ...dragonSummon }),
           summon("pdk:companion:revive", [comp], { name: "Воскрешение (Второе дыхание)", activation: "action", touch: true, consume: [useItem("feat:second-wind")], ...dragonSummon }),
-          summon("pdk:companion:ritual", [comp], { name: "Воскрешение (1-часовая церемония)", activation: "hour", ...dragonSummon })
+          summon("pdk:companion:ritual", [comp], { name: "Воскрешение (1-часовая церемония)", activation: "hour", ...dragonSummon }),
+          utility("pdk:command", { name: "Приказать дракону", activation: "bonus" })
         ]
       },
       {

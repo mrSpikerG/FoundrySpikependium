@@ -5,7 +5,7 @@
   "img": "icons/magic/death/skeleton-skull-soul-blue.webp",
   "system": {
     "description": {
-      "value": "<p>Каждый раз, когда вы завершаете короткий или продолжительный отдых, вы можете выбрать одно владение навыком или инструментом, которым вы не владеете, и получить владение им, поскольку присутствующий призрак делится с вами своими знаниями. Вы теряете это владение, когда вновь используете это умение, чтобы выбрать другое владение.</p>",
+      "value": "<p>Каждый раз, когда вы завершаете короткий или продолжительный отдых, вы можете выбрать одно владение навыком или инструментом, которым вы не владеете, и получить владение им, поскольку присутствующий призрак делится с вами своими знаниями. Вы теряете это владение, когда вновь используете это умение, чтобы выбрать другое владение.</p><h3>Действия</h3><ul><li>[[/item activity=v0lv6SAkNAzgyNAg]]{Выбрать знание призрака}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -32,7 +32,92 @@
       "spent": 0,
       "recovery": []
     },
-    "activities": {},
+    "activities": {
+      "v0lv6SAkNAzgyNAg": {
+        "_id": "v0lv6SAkNAzgyNAg",
+        "type": "utility",
+        "name": "Выбрать знание призрака",
+        "img": "icons/magic/death/skeleton-skull-soul-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "После завершения короткого или продолжительного отдыха",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "whispers": true
+          }
+        }
+      }
+    },
     "properties": [],
     "advancement": [],
     "enchant": {}

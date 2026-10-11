@@ -157,6 +157,9 @@ export function define() {
   const wound = status("hell-knight:wound", "Инфернальная рана", "icons/skills/wounds/blood-drip-droplet-red", [], {
     seconds: 60, description: "<p>В начале каждого своего хода получает 1к6 урона огнём. Длится 1 минуту, пока цель не восстановит хиты или пока существо в 5 футах не потратит действие, чтобы остановить кровотечение.</p>"
   });
+  const stygian = status("hell-knight:stygian", "Стигийская гангрена: нет реакций", "icons/magic/water/snowflake-ice-blue-white", [], {
+    expiry: "targetStart", flags: { spikependium: { noReactions: true } }, description: "<p>Нельзя совершать реакции до начала следующего хода.</p>"
+  });
   makeSubclass({
     key: "subclass:hell-knight", cls: "Воин", clsGen: "воина", classIdentifier: "fighter",
     name: "Рыцарь ада", en: "Hell Knight", identifier: "hell-knight", book: VO, page: 6,
@@ -185,13 +188,13 @@ export function define() {
         ]
       },
       {
-        id: "advanced-wounds", level: 7, name: "Продвинутые раны", img: "icons/skills/wounds/injury-pain-body-orange",
+        id: "advanced-wounds", level: 7, name: "Продвинутые раны", img: "icons/skills/wounds/injury-pain-body-orange", effects: [stygian],
         desc: "Когда вы бросаете свою кость раны и выбрасываете 6, вы можете применить один из следующих эффектов.\n\n**Гноение Минауроса.** Из раны извергается едкий гной. Каждое существо в пределах эманации с радиусом 5 футов, исходящей от цели, получает урон кислотой, равный вашему модификатору Телосложения, а цель получает состояние <<poisoned|отравленный>> до начала своего следующего хода.\n\n**Разрыв Кании.** Рана разрывается всплеском энергии магии. Цель получает урон силовым полем, равный вашему модификатору Телосложения.\n\n**Стигийская гангрена.** Из раны распространяется инфернальный иней. Цель получает урон холодом, равный вашему модификатору Телосложения, и не может совершать реакции до начала своего следующего хода.",
         acts: [
           damage("hell-knight:minauros", { name: "Гноение Минауроса", activation: "special", condition: "На кости раны выпало 6", template: { type: "radius", size: 5 }, affects: "creature", damage: [dmg("@abilities.con.mod", "acid")] }),
           utility("hell-knight:minauros:poison", { name: "Гноение Минауроса: отравить цель раны", activation: "special", condition: "На кости раны выпало 6; только цель раны", count: 1, affects: "creature" }),
           damage("hell-knight:cania", { name: "Разрыв Кании", activation: "special", condition: "На кости раны выпало 6", count: 1, affects: "creature", damage: [dmg("@abilities.con.mod", "force")] }),
-          damage("hell-knight:stygian", { name: "Стигийская гангрена", activation: "special", condition: "На кости раны выпало 6", count: 1, affects: "creature", damage: [dmg("@abilities.con.mod", "cold")] })
+          damage("hell-knight:stygian", { name: "Стигийская гангрена", activation: "special", condition: "На кости раны выпало 6", count: 1, affects: "creature", damage: [dmg("@abilities.con.mod", "cold")], effects: [stygian._id] })
         ]
       },
       {
@@ -323,7 +326,7 @@ export function define() {
   // ======================================================================
   // Мастер яда (монах)
   // ======================================================================
-  const slowing = status("venom:slowing", "Замедляющий токсин", "icons/skills/toxins/poison-bottle-corked-fire-green", [], { description: "<p>Скорость уменьшена вдвое, нет реакций, в свой ход — либо действие, либо бонусное действие.</p>" });
+  const slowing = status("venom:slowing", "Замедляющий токсин", "icons/skills/toxins/poison-bottle-corked-fire-green", [], { expiry: "sourceStart", flags: { spikependium: { noReactions: true } }, description: "<p>Скорость уменьшена вдвое, нет реакций, в свой ход — либо действие, либо бонусное действие.</p>" });
   const touch = status("venom:touch", "Токсичное касание", "icons/skills/toxins/cup-glass-poisoned-held", ["poisoned"], { seconds: 60, description: "<p>Отравлен на 1 минуту; дополнительно — опьянение (очарован), усыпление (бессознательный) или сыворотка правды.</p>" });
   makeSubclass({
     key: "subclass:warrior-of-venom", cls: "Монах", clsGen: "монаха", classIdentifier: "monk",

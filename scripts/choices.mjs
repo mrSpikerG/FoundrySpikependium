@@ -1,4 +1,10 @@
 import { DRAGONMARK_TABLES } from "./generated.mjs";
+import { hitDieChoices } from "./resources.mjs";
+import { appendForgeFields } from "./forge.mjs";
+import { appendTinkerFields } from "./tinker.mjs";
+import { appendStorageFields } from "./storage.mjs";
+import { appendLifeTransferFields, isLifeTransfer } from "./companions.mjs";
+import { findingEnhancement } from "./dragonmark-finding.mjs";
 
 export function dragonSlot(activity) {
   const baseLevel = activity.item._source?.system.level ?? activity.item.system.level;
@@ -35,13 +41,43 @@ export function restorationPlan(actor, selection = {}) {
 export function prepareChoiceDialog(activity, config, dialog) {
   const restoration = activity.item.flags.spikependium?.key === "feat:arcane-restoration";
   const dragon = dragonSlot(activity);
-  if (!restoration && !dragon) return;
+  const hitDice = activity.consumption?.targets.some(t => t.type === "hitDice");
+  const forge = !!activity.flags?.spikependium?.forge;
+  const life = isLifeTransfer(activity);
+  const finding = findingEnhancement(activity)?.resource.uses.value > 0;
+  const guidance = activity.item.flags.spikependium?.key === "artificer:flash-of-genius"
+    && (activity.actor.classes.artificer?.system.levels ?? 0) >= 20 && activity.actor.items.some(i => i.system.attuned);
+  if (!restoration && !dragon && !hitDice && !forge && !guidance && !life && !finding) return;
+  config.spikependium = { ...config.spikependium, usageChoice: true };
+  if (life || (forge && activity.flags.spikependium.forge !== "charge")) config.scaling = 0;
+  const normalConsumption = structuredClone(config.consume);
+  const normalCauseResources = config.cause?.resources;
+  const normalScaling = config.scaling;
   const Base = dialog.applicationClass;
   dialog.configure = true;
   dialog.applicationClass = class extends Base {
     async _prepareConsumptionContext(context, options) {
       context = await super._prepareConsumptionContext(context, options);
-      const { BooleanField, NumberField } = foundry.data.fields;
+      if (life) context = appendLifeTransferFields(activity, this.config, context);
+      if (forge) {
+        context = appendTinkerFields(activity, this.config, context);
+        context = await appendForgeFields(activity, this.config, context);
+        context = await appendStorageFields(activity, this.config, context);
+      }
+      const { BooleanField, NumberField, StringField } = foundry.data.fields;
+      if (finding) context.fields.push({ field: new BooleanField({ label: "Улучшенный поиск",
+        hint: "Расходуется применение усиленной метки: выбранная цель не получает преимуществ невидимости на время концентрации. Выберите одну видимую цель до открытия окна." }),
+        input: context.inputs.createCheckboxInput, name: "spikependium.improvedFinding", value: this.config.spikependium?.improvedFinding ?? false });
+      if (guidance) context.fields.push({ field: new BooleanField({ label: "С бонусом проверка или спасбросок всё равно провален",
+        hint: "Магическое руководство сохраняет использование Проблеска гениальности; реакция остаётся потраченной." }),
+        input: context.inputs.createCheckboxInput, name: "spikependium.flashFailure", value: this.config.spikependium?.flashFailure ?? false });
+      if (hitDice) {
+        const choices = hitDieChoices(this.actor);
+        context.fields.push({ field: new StringField({ label: "Кость хитов", required: true, blank: false,
+          choices: Object.fromEntries(choices.map(c => [c.value, c.label])) }),
+          name: "spikependium.hitDie",
+          value: this.config.spikependium?.hitDie ?? choices[0]?.value });
+      }
       if (restoration) {
         for (const [key, slot] of Object.entries(this.actor.system.spells)) {
           const level = key === "pact" ? slot.level : Number(key.slice(5));
@@ -71,6 +107,10 @@ export function prepareChoiceDialog(activity, config, dialog) {
         data.scaling = dragon.level - this.item._source.system.level;
         data.consume = { ...(typeof data.consume === "object" ? data.consume : {}), spellSlot: false, resources: false };
         if (this.config.cause) data.cause = { ...data.cause, resources: false };
+      } else if (dragon && this.config.spikependium?.dragonSlot) {
+        data.consume = normalConsumption;
+        if (this.config.cause) data.cause = { ...data.cause, resources: normalCauseResources };
+        if (data.scaling == null) data.scaling = normalScaling;
       }
       return data;
     }

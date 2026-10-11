@@ -343,7 +343,11 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "Rq0A2Ao03MByLrTE"
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -416,6 +420,48 @@
     "enchant": {}
   },
   "effects": [
+    {
+      "_id": "Rq0A2Ao03MByLrTE",
+      "name": "Стигийская гангрена: нет реакций",
+      "img": "icons/magic/water/snowflake-ice-blue-white.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetStart",
+        "expired": false
+      },
+      "description": "<p>Нельзя совершать реакции до начала следующего хода.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "noReactions": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5ddPx6mCpEyMg6dG.Rq0A2Ao03MByLrTE"
+    },
     {
       "_id": "puoRZCeBNU37Echo",
       "name": "Гноение Минауроса: отравить цель раны",

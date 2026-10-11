@@ -75,6 +75,8 @@ export function define() {
   });
 
   // --- Спутник реликт (три вида) --------------------------------------------
+  const curse = effect("vestige:curse", { name: "Проклятое воззвание", transfer: false, seconds: 60,
+    img: "icons/magic/unholy/hand-marked-pink", flags: { spikependium: { vestigeCurse: {} } } });
   const vestige = (key, variant, en, type, dr, dmgType, img, power) => npc({
     key, name: `Спутник реликт (${variant})`, en: `Vestige Companion (${en})`, book: "UA-MS", page: 5, folder: fComp, img,
     size: "sm", creatureType: type, alignment: "Нейтральный", ac: 13, hp: 4, hpFormula: "1d6",
@@ -89,13 +91,14 @@ export function define() {
           attack(`${key}:strike:melee`, { name: "Рукопашная", activation: "action", range: 5, attackType: "melee", classification: "spell", damage: [dmg("1d6 + 3", dmgType[0])] }),
           attack(`${key}:strike:ranged`, { name: "Дальнобойная", activation: "action", range: 60, attackType: "ranged", classification: "spell", damage: [dmg("1d6 + 3", dmgType[0])] })
         ] },
-      { name: `Божественная сила: ${power.name} (1/день)`, img: power.img, uses: uses(1, LR), desc: power.desc, acts: [power.act] }
+      { name: `Божественная сила: ${power.name} (1/день)`, img: power.img, uses: uses(1, LR), desc: power.desc, acts: [power.act], effects: power.effects ?? [] }
     ]
   });
   vestige("actor:vestige-undead", "нежить", "Undead", "undead", "necrotic", ["necrotic", "некротической энергией"], "icons/magic/death/skull-energy-light-purple", {
     name: "Проклятое воззвание", img: "icons/magic/unholy/hand-marked-pink",
+    effects: [curse],
     desc: "*Бонусное действие.* Реликт накладывает проклятье на видимое существо в пределах 30 футов от реликта на 1 минуту. Пока цель проклята, она совершает атаки по вам и реликту с помехой.",
-    act: utility("actor:vestige-undead:power", { activation: "bonus", range: 30, count: 1, affects: "creature", duration: "minute", durationValue: 1, consume: [useSelf()] })
+    act: utility("actor:vestige-undead:power", { activation: "bonus", range: 30, count: 1, affects: "creature", duration: "minute", durationValue: 1, consume: [useSelf()], effects: [curse._id] })
   });
   vestige("actor:vestige-fiend", "исчадие", "Fiend", "fiend", "fire", ["fire", "огнём"], "icons/magic/fire/flame-burning-skull-orange", {
     name: "Дьявольская замена", img: "icons/magic/movement/portal-vortex-orange",

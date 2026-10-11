@@ -116,6 +116,11 @@
           "requireIdentification": false,
           "requireMagic": false
         },
+        "flags": {
+          "spikependium": {
+            "requiresMutable": true
+          }
+        },
         "profiles": [],
         "settings": null,
         "transform": {
@@ -207,6 +212,11 @@
           "requireAttunement": false,
           "requireIdentification": false,
           "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "requiresMutable": true
+          }
         },
         "profiles": [],
         "settings": null,
@@ -324,7 +334,8 @@
             "phase": "initial",
             "_id": "JOEgwiCQCCu8jbuR"
           }
-        ]
+        ],
+        "conditions": "{\"k\":\"spikependium.mutableActive\",\"v\":true}"
       },
       "disabled": false,
       "transfer": false,
@@ -338,7 +349,11 @@
       "origin": null,
       "statuses": [],
       "tint": "#ffffff",
-      "flags": {},
+      "flags": {
+        "spikependium": {
+          "endsWithMutable": true
+        }
+      },
       "sort": 0,
       "start": null,
       "showIcon": 1,
@@ -385,7 +400,11 @@
       "origin": null,
       "statuses": [],
       "tint": "#ffffff",
-      "flags": {},
+      "flags": {
+        "spikependium": {
+          "endsWithMutable": true
+        }
+      },
       "sort": 0,
       "start": null,
       "showIcon": 1,

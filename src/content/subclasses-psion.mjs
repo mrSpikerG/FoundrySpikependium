@@ -15,11 +15,14 @@ export function define() {
   // --- Метаморф -------------------------------------------------------------
   const mutable = effect("metamorph:mutable:effect", {
     name: "Изменчивая форма", img: "icons/magic/nature/root-vine-entangled-hand", transfer: false, seconds: 60,
+    flags: { spikependium: { mutableForm: true } },
     changes: [change("system.attributes.movement.speeds.walk", 5)],
     description: "<p>Досягаемость +5 футов, скорость +5 футов; заклинания с дистанцией «касание» и временем «действие» можно накладывать на дистанции до 10 футов.</p>"
   });
   const weaver = effect("metamorph:weaver:effect", {
     name: "Ткач плоти: органическая защита", img: "icons/skills/wounds/injury-stitched-flesh-red", transfer: false, seconds: 60,
+    flags: { spikependium: { endsWithMutable: true } },
+    conditions: { k: "spikependium.mutableActive", v: true },
     changes: [change("system.attributes.ac.bonus", "+ 2")]
   });
   const mutableLong = effect("metamorph:mutable:long", { ...mutable, changes: mutable.system.changes, seconds: 600 });
@@ -37,6 +40,11 @@ export function define() {
     effect("metamorph:flexibility", { name: "Неестественная гибкость", transfer: false, seconds: 600,
       changes: [change("system.attributes.ac.bonus", "+ 1")] })
   ];
+  for (const e of greaterForms) {
+    e.flags.spikependium = { endsWithMutable: true };
+    e.system.conditions = JSON.stringify([...(e.system.conditions ? [JSON.parse(e.system.conditions)] : []),
+      { k: "spikependium.mutableActive", v: true }]);
+  }
   makeSubclass({
     ...base, key: "subclass:metamorph", name: "Метаморф", en: "Metamorph", identifier: "metamorph",
     img: "icons/skills/wounds/injury-stitched-flesh-red", spellsGen: "метаморфа",

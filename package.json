@@ -1,14 +1,14 @@
 {
   "name": "spikependium",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.37.0",
   "type": "module",
   "description": "Сборка модуля Spikependium для Foundry VTT",
   "scripts": {
     "build": "node tools/build.mjs",
     "validate": "node tools/validate.mjs",
-    "test": "node tools/test.mjs",
-    "package": "node tools/build.mjs && node tools/validate.mjs && node tools/test.mjs && node tools/package.mjs"
+    "test": "node tools/test.mjs && node tools/test-push.mjs && node tools/test-vestige.mjs && node tools/test-pocket.mjs && node tools/test-vestige-forms.mjs && node tools/test-vestige-powers.mjs && node tools/test-vestige-swap.mjs && node tools/test-dragonmark-rolls.mjs && node tools/test-dragonmark-detection.mjs && node tools/test-dragonmark-storm.mjs && node tools/test-dragonmark-finding.mjs && node tools/test-dragonmark-hospitality.mjs && node tools/test-dragonmark-warding.mjs && node tools/test-dragonmark-shadow.mjs && node tools/test-dragonmark-passage.mjs && node tools/test-dragonmark-making.mjs && node tools/test-dragonmark-movement.mjs && node tools/test-reactions.mjs && node tools/test-dragonmark-handling.mjs",
+    "package": "node tools/build.mjs && node tools/validate.mjs && npm run test && node tools/package.mjs"
   },
   "devDependencies": {
     "@foundryvtt/foundryvtt-cli": "^3.0.0",

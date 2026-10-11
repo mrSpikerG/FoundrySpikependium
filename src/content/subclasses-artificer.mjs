@@ -157,7 +157,8 @@ export function define() {
           }),
           summon("reanimator:companion-slot", reanimatedProfiles, {
             ...summonOpts, name: "Создать спутника (ячейка)", consume: [useSlot(1)], scaling: true
-          })
+          }),
+          utility("reanimator:command", { name: "Приказать спутнику", activation: "bonus" })
         ]
       },
       {

@@ -6,10 +6,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
-import { MODULE_ID, BOOKS, getMissingIcons, getMissingRefs } from "./lib/core.mjs";
+import { MODULE_ID, BOOKS, getMissingIcons, getMissingRefs, ARTIFICER_CATALOG } from "./lib/core.mjs";
 import { PACKS, REGISTRY, FOLDERS, EN_NAMES, uuidOf } from "./lib/docs.mjs";
 import { enrichDocument } from "./lib/mechanics.mjs";
 import { DRAGONMARK_TABLES } from "../src/content/feats.mjs";
+import { BLUEPRINTS } from "../src/content/artificer.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = ["spells", "spells-psion-update", "creatures", "creatures-2", "artificer", "psion", "subclasses-artificer",
@@ -99,6 +100,9 @@ fs.writeFileSync(path.join(ROOT, "scripts/generated.mjs"),
   + `export const SPELL_LISTS = ${JSON.stringify(spellLists, null, 2)};\n\n`
   + `export const WILD_TALENTS = ${JSON.stringify(wildTalents, null, 2)};\n\n`
   + `export const DRAGONMARK_TABLES = ${JSON.stringify(DRAGONMARK_TABLES, null, 2)};\n\n`
+  + `export const BLUEPRINTS = ${JSON.stringify(BLUEPRINTS.map(p => ({ ...p, blueprintUuid: uuidOf(p.key), uuid: p.moduleKey ? uuidOf(p.moduleKey) : p.uuid })), null, 2)};\n\n`
+  + `export const TINKER_ITEMS = ${JSON.stringify(ARTIFICER_CATALOG.mundane, null, 2)};\n\n`
+  + `export const FORGE_BASES = ${JSON.stringify(ARTIFICER_CATALOG.bases, null, 2)};\n\n`
   + `export const SOURCE_BOOKS = ${JSON.stringify(BOOKS, null, 2)};\n`);
 
 /* -------------------------------------------- */

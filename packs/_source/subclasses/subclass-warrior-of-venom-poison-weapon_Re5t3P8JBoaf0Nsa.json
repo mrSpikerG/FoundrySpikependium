@@ -319,14 +319,18 @@
       "duration": {
         "value": null,
         "units": "seconds",
-        "expiry": null,
+        "expiry": "sourceStart",
         "expired": false
       },
       "description": "<p>Скорость уменьшена вдвое, нет реакций, в свой ход — либо действие, либо бонусное действие.</p>",
       "origin": null,
       "statuses": [],
       "tint": "#ffffff",
-      "flags": {},
+      "flags": {
+        "spikependium": {
+          "noReactions": true
+        }
+      },
       "sort": 0,
       "start": null,
       "showIcon": 1,

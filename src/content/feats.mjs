@@ -189,10 +189,13 @@ function defineMarks() {
       desc: `Вы получаете следующие эффекты:\n\n**Увеличение характеристики.** Увеличьте одну характеристику по вашему выбору на 1, до максимума 20.\n\n**Улучшенная интуиция.** Когда вы используете умение ${m.intuition[0]} от вашей черты ${m.ru}, вы можете бросать 1к6 вместо 1к4.\n\n${para(m.greater)}`,
       acts: [
         utility(`greater:${m.id}:intuition`, { name: `${m.intuition[0]} (к6)`, activation: "special", roll: "1d6", rollName: "Бонус к проверке", img: m.img }),
-        utility(`greater:${m.id}:mod`, { name: m.greater[0], activation: "special",
-          ...(["handling", "healing", "making", "scribing", "sentinel"].includes(m.id) ? {} : { usesMax: 1, usesRecovery: [LR], consume: [{ type: "activityUses", value: "1", target: "", scaling: {} }] }) })
+        ...(m.id === "healing" ? [] : [utility(`greater:${m.id}:mod`, { name: m.greater[0], activation: "special",
+          ...(["handling", "scribing", "sentinel"].includes(m.id) ? {} : { usesMax: 1, usesRecovery: [LR], consume: [{ type: "activityUses", value: "1", target: "", scaling: {} }] }) })])
       ],
-      advancement: [advASI(`greater:${m.id}:asi`, undefined, { points: 1, cap: 1, max: 20, title: "Увеличение характеристики" })]
+      advancement: [advASI(`greater:${m.id}:asi`, undefined, { points: 1, cap: 1, max: 20, title: "Увеличение характеристики" }),
+        ...(m.id === "hospitality" ? [advItemGrant("greater:hospitality:ability", 0, [], { title: "Характеристика улучшенного радушия",
+          hint: "Один раз выберите Интеллект, Мудрость или Харизму. Временные хиты радушия равны бонусу мастерства + модификатору выбранной характеристики.",
+          spell: spellConfig({ abilities: MENTAL }) })] : [])]
     });
   }
 

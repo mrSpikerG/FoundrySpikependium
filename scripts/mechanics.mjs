@@ -1,4 +1,6 @@
 import { WILD_TALENTS, DRAGONMARK_TABLES } from "./generated.mjs";
+import { noOpportunityAttacks } from "./opportunity.mjs";
+import { hasStormFlight, stormFlightSpeed } from "./dragonmark-storm.mjs";
 
 export function conditionalState(actor, data) {
   const armor = actor.items.filter(i => i.type === "equipment" && i.system.equipped
@@ -6,18 +8,36 @@ export function conditionalState(actor, data) {
   const tokens = actor.items.find(i => i.flags.spikependium?.key === "subclass:phantom:tokens-of-the-departed");
   const maximum = Number(data.scale?.phantom?.trinkets ?? tokens?.system.uses.max ?? 0);
   return { unarmored: !armor.length, lightArmorAllowed: !armor.some(i => i.system.type.value !== "light"),
-    hasSoulToken: !!tokens && maximum > tokens.system.uses.spent };
+    noOpportunityAttacks: noOpportunityAttacks(actor),
+    hasSoulToken: !!tokens && maximum > tokens.system.uses.spent,
+    mutableActive: (actor.effects ?? []).some(e => e.flags.spikependium?.mutableForm && !e.disabled && !e.duration.expired),
+    ...(hasStormFlight(actor) ? { stormFlightSpeed: stormFlightSpeed(actor) } : {}) };
 }
 
 export function applyTurnLimit(activity, config, message, updates, combat = game.combat) {
   if (!activity.flags?.spikependium?.oncePerTurn || !combat?.started) return;
+  if (activity.transform?.mode === "form" && activity.transform.formless && config.transform?.profile === "") return;
+  if (activity.flags.spikependium.ownTurn && combat.combatant?.actor?.uuid !== activity.actor.uuid) {
+    ui.notifications.warn("Это действие можно использовать только в свой ход.");
+    return false;
+  }
   const turn = `${combat.id}:${combat.round}:${combat.turn}`;
-  const key = `${activity.item.id}${activity.id}`;
+  const key = activity.flags.spikependium.group ?? `${activity.item.id}${activity.id}`;
   if (activity.actor.flags.spikependium?.turnUses?.[key] === turn) {
     ui.notifications.warn("Это действие уже использовано в текущем ходу.");
     return false;
   }
   updates.actor[`flags.spikependium.turnUses.${key}`] = turn;
+}
+
+export function prepareUpdatedSpell(item, data) {
+  if (item.type !== "spell" || item.system.sourceItem !== "feat:lich-ascension") return;
+  const ability = data["system.ability"] ?? data.system?.ability;
+  if (!["int", "wis", "cha"].includes(ability)) return;
+  const maximum = data["system.uses.max"] ?? data.system?.uses?.max ?? item._source.system.uses.max;
+  if (!/^max\(1, @(attributes\.spell|abilities\.(int|wis|cha))\.mod\)$/.test(maximum)) return;
+  if (data.system?.uses) data.system.uses.max = `max(1, @abilities.${ability}.mod)`;
+  else data["system.uses.max"] = `max(1, @abilities.${ability}.mod)`;
 }
 
 export function prepareGrantedSpell(item, data) {
@@ -86,9 +106,21 @@ export function prepareFormConsumption(activity, config) {
     && activity.transform.formless && config.transform?.profile === "") config.consume = false;
 }
 
+export function validateMutableForm(activity, config) {
+  if (!activity.flags.spikependium?.requiresMutable) return true;
+  if (activity.transform?.formless && config.transform?.profile === "") return true;
+  return activity.actor.effects.some(e => e.flags.spikependium?.mutableForm && !e.disabled && !e.duration.expired);
+}
+
 export function radiantLightUpdate(token, itemUuid, bright = 30, dim = 60) {
   const previous = token.flags.spikependium?.radiantLight;
-  if (previous) return { "light.bright": previous.light.bright, "light.dim": previous.light.dim, "flags.spikependium.-=radiantLight": null };
+  if (previous) {
+    const items = previous.items ?? [previous.itemUuid];
+    const remaining = items.includes(itemUuid) ? items.filter(id => id !== itemUuid) : [...items, itemUuid];
+    if (!remaining.length) return { "light.bright": previous.light.bright, "light.dim": previous.light.dim, "flags.spikependium.-=radiantLight": null };
+    return { "light.bright": Math.max(token.light.bright, bright), "light.dim": Math.max(token.light.dim, dim),
+      "flags.spikependium.radiantLight": { ...previous, items: remaining } };
+  }
   return {
     "light.bright": Math.max(token.light.bright, bright), "light.dim": Math.max(token.light.dim, dim),
     "flags.spikependium.radiantLight": { itemUuid, light: token.light.toObject() }

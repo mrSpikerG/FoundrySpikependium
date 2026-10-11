@@ -1,4 +1,7 @@
 // Дополнения к стандартному призыву dnd5e 6: правила спутников из UA.
+const VESTIGE_POWERS = new Set(["662KdJM55taoeTAL", "rD9bLz1LEKGMNjZ9", "74BTP7gJ0HYZzihk"]);
+export const isVestigePower = item => [...(item.system.activities?.values() ?? [])].some(a => VESTIGE_POWERS.has(a.id ?? a._id));
+
 export function hasReanimatedCompanion(activity, scenes) {
   if (activity.item.flags.spikependium?.key !== "subclass:reanimator:reanimated-companion") return false;
   return [...scenes].some(scene => [...scene.tokens].some(token => token.actor?.system.attributes.hp.value > 0
@@ -19,6 +22,11 @@ export function prepareSummon(activity, profile, config) {
   const key = config.actor.flags.spikependium?.key;
   const caster = activity.actor;
   const updates = config.actorUpdates;
+  if (key?.startsWith("actor:reanimated-companion")) {
+    updates["flags.spikependium.createdLongRest"] = caster.flags?.spikependium?.longRest ?? "";
+    updates["flags.spikependium.companionLevel"] = caster.classes.artificer?.system.levels ?? 0;
+    updates["flags.spikependium.companionInt"] = caster.system.abilities.int.mod;
+  }
   const prof = caster.system.attributes.prof;
   const level = id => caster.classes[id]?.system.levels ?? 0;
   let checkBonus;
@@ -52,7 +60,7 @@ export function prepareSummon(activity, profile, config) {
       for (const act of acts) if (act.type === "save" && act.damage.parts.length) {
         const parts = act.toObject().damage.parts;
         if (level("artificer") >= 15) parts[0].number = 4;
-        if (key.includes(":big-")) parts[0].bonus = String(caster.system.abilities.int.mod);
+        if (key.includes(":big-")) parts[0].bonus = "";
         itemUpdate(item)[`system.activities.${act.id}.damage.parts`] = parts;
       }
       for (const act of acts) if (act.type === "damage") {
@@ -61,8 +69,11 @@ export function prepareSummon(activity, profile, config) {
         itemUpdate(item)[`system.activities.${act.id}.damage.parts`] = parts;
       }
     }
-    if (key?.startsWith("actor:vestige-") && level("warlock") >= 6 && item.system.uses.max) {
+    if (key?.startsWith("actor:vestige-") && level("warlock") >= 6 && isVestigePower(item)) {
       itemUpdate(item)["system.uses.recovery"] = [{ period: "sr", type: "recoverAll" }];
+    }
+    if (key?.startsWith("actor:vestige-") && isVestigePower(item) && caster.flags?.spikependium?.vestigePowerSpent != null) {
+      itemUpdate(item)["system.uses.spent"] = caster.flags.spikependium.vestigePowerSpent;
     }
   }
   if (key === "actor:purple-dragon-companion") {

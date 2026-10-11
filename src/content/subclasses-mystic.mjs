@@ -157,7 +157,7 @@ export function define() {
     { uuid: ref("actor:vestige-fiend"), name: "Исчадие" },
     { uuid: ref("actor:vestige-undead"), name: "Нежить" }
   ];
-  const vestigeSummon = { ability: "cha", identifier: "warlock", minLevel: 3, hd: "@classes.warlock.levels - 1", healing: "@abilities.cha.mod", ac: "@abilities.cha.mod", hp: "4 * @classes.warlock.levels", attackDamage: "@abilities.cha.mod" };
+  const vestigeSummon = { ability: "cha", identifier: "warlock", minLevel: 3, range: 5, hd: "@classes.warlock.levels - 1", healing: "@abilities.cha.mod", ac: "@abilities.cha.mod", hp: "4 * @classes.warlock.levels", attackDamage: "@abilities.cha.mod" };
   const DOMAINS = {
     3: ["Помощь", "Благословение", "Лечение ран", "Малое восстановление", "Огненные ладони", "Огонь фей", "Палящий луч", "Видение невидимого", "Очарование личности", "Маскировка", "Невидимость", "Бесследное передвижение", "Направляющий снаряд", "Магическое оружие", "Щит веры", "Божественное оружие"],
     5: ["Множественное лечащее слово", "Низшее воскрешение", "Дневной свет", "Огненный шар", "Гипнотический узор", "Необнаружимость", "Мантия крестоносца", "Духовные стражи"],
@@ -166,6 +166,7 @@ export function define() {
   };
   const aura = effect("vestige:aura", {
     name: "Аура силы реликта", img: "icons/magic/holy/barrier-shield-winged-blue", transfer: false,
+    flags: { spikependium: { vestigeAura: {} } }, conditions: { k: "spikependium.vestigeAuraActive", v: true },
     changes: [change("system.traits.dr.value", "necrotic"), change("system.traits.dr.value", "fire"), change("system.traits.dr.value", "radiant"), change("system.traits.ci.value", "charmed"), change("system.traits.ci.value", "frightened")]
   });
   makeSubclass({
@@ -185,7 +186,11 @@ export function define() {
         desc: "Реликт проявляется для помощи вам и черпает силу из вашего договора. Он использует статблок **Спутник реликт** и является небожителем, исчадием или нежитью (выберите, когда получаете это умение). Вы определяете, как выглядит реликт, но независимо от формы реликт несёт черты, указывающие на его сверхъестественное происхождение. Например, вы можете решить, что ваш реликт — это огромный парящий череп, покрытый знаками, круг светящихся рун или постоянно меняющаяся абстрактная форма. Реликт дружественен к вам и вашим союзникам и подчиняется вашим командам. Он исчезает, если вы умираете.\n\n**Реликт в бою.** В бою реликт действует в ваш ход. Он может перемещаться и совершать реакции самостоятельно, но единственное доступное ему действие — уклонение, если вы не потратите бонусное действие в свой ход, приказывая ему совершить одно из действий из его статблока или любое другое действие. Когда вы совершаете действие атака, вы также можете потратить одну из своих атак, приказывая реликту совершить действие Удар реликта. Если вы недееспособны, реликт может совершать любое действие, не ограничиваясь уклонением.\n\n**Исчезновение реликта.** Когда у реликта оказывается 0 хитов, он исчезает. Вы можете потратить одну минуту, проводя магическую церемонию, чтобы вновь призвать реликта; он появляется с максимальным количеством хитов в свободном пространстве в пределах 5 футов от вас.\n\nДействием магия вы можете временно отправить реликта в карманное измерение. Действием магия, пока реликт отправлен, вы можете вернуть его, и он появится в свободном пространстве в пределах 30 футов от вас. Когда у реликта оказывается 0 хитов или он отправлен в карманное измерение, он оставляет на месте всё, что нёс или носил.\n\nКаждый раз, когда вы завершаете продолжительный отдых, вы можете призвать реликта в новой форме, и он появляется в свободном пространстве в пределах 5 футов от вас. Вы выбираете его внешний вид и указываете, является ли он небожителем, исчадием или нежитью. Если реликт уже проявлен с помощью этого умения, то его форма изменяется на новую.",
         acts: [
           summon("vestige:summon", vestiges, { name: "Призвать реликта", activation: "minute", activationValue: 1, ...vestigeSummon, healing: "@abilities.cha.mod" }),
-          summon("vestige:summon:rest", vestiges, { name: "Новая форма (после отдыха)", activation: "special", condition: "По окончании продолжительного отдыха", ...vestigeSummon })
+          summon("vestige:summon:rest", vestiges, { name: "Новая форма (после отдыха)", activation: "special", condition: "По окончании продолжительного отдыха", ...vestigeSummon }),
+          utility("vestige:command", { name: "Приказать реликту", activation: "bonus" }),
+          utility("vestige:pocket:dismiss", { name: "Отправить в карманное измерение", activation: "action" }),
+          utility("vestige:pocket:return", { name: "Вернуть из карманного измерения", activation: "action", range: 30 }),
+          utility("vestige:command:attack", { name: "Приказать Удар реликта вместо атаки", activation: "special", condition: "Вместо одной атаки вашего действия Атака" })
         ]
       },
       {
@@ -200,8 +205,7 @@ export function define() {
         id: "aura-of-power", page: 6, level: 10, name: "Аура силы", img: "icons/magic/holy/barrier-shield-winged-blue", effects: [aura],
         desc: "Ваш спутник реликт увеличивает свою магическую мощь. Действием магия вы можете заставить реликта проявить ауру в эманации с радиусом 30 футов, исходящей от реликта. Аура длится количество часов, равное вашему модификатору Харизмы, или пока реликт не исчезнет или не будет временно отправлен в карманное измерение. Вы, реликт и ваши союзники внутри ауры получаете сопротивление некротическому урону, урону огнём и урону излучением, а также получаете иммунитет к состояниям очарованный и испуганный. Проявив эту ауру, вы не можете применить её снова, пока не завершите продолжительный отдых.\n\nКроме того, когда ваши хиты опускаются до 0, пока вы внутри ауры, вместо этого вы изменяете свои хиты на число, равное вашему уровню колдуна + ваш модификатор Харизмы. Затем реликт отправляется в карманное измерение и не может вернуться, пока вы не завершите продолжительный отдых.",
         acts: [
-          utility("vestige:aura", { name: "Проявить ауру", activation: "action", template: { type: "radius", size: 30 }, affects: "ally", duration: "hour", durationValue: "max(1, @abilities.cha.mod)", usesMax: 1, usesRecovery: [LR], consume: [useActivity()], effects: [aura._id] }),
-          heal("vestige:aura:save", { name: "Спасение от смерти в ауре", activation: "special", condition: "Ваши хиты опустились до 0 в ауре", self: true, formula: "@classes.warlock.levels + @abilities.cha.mod" })
+          utility("vestige:aura", { name: "Проявить ауру", activation: "action", template: { type: "radius", size: 30 }, affects: "ally", duration: "hour", durationValue: "max(0, @abilities.cha.mod)", usesMax: 1, usesRecovery: [LR], consume: [useActivity()], effects: [aura._id] })
         ]
       },
       {

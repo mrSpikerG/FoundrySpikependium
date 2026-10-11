@@ -1,15 +1,16 @@
 // UA 2024 «Обновление Эберрона»: класс Изобретатель.
 import {
   utility, effect, change, uses, LR, useSelf, useActivity, useSlot,
-  advScale, advTrait, advItemGrant, advItemChoice, spellConfig
+  advScale, advTrait, advItemGrant, advItemChoice, spellConfig, ARTIFICER_CATALOG
 } from "../../tools/lib/core.mjs";
 import {
-  classItem, feature, folder, md, table, itemLink, spellUuid, startingEquipmentAB
+  classItem, feature, folder, md, table, itemLink, spellUuid, startingEquipmentAB, ref
 } from "../../tools/lib/docs.mjs";
 
 const BOOK = "UA-EB";
 const F = () => folder("classes", "Изобретатель/Умения класса");
 const REQ = "Изобретатель";
+export const BLUEPRINTS = ARTIFICER_CATALOG.plans.map(plan => ({ ...plan, key: `artificer:blueprint:${plan.id}` }));
 
 /** Таблица чертежей магических предметов. */
 function plansTable(level, rows) {
@@ -19,6 +20,14 @@ function plansTable(level, rows) {
 
 export function define() {
   folder("classes", "Изобретатель", { sort: 1000, color: "#7a4b1f" });
+  const blueprintFolder = folder("classes", "Изобретатель/Чертежи");
+  for (const plan of BLUEPRINTS) {
+    const item = feature({ key: plan.key, folder: blueprintFolder, book: BOOK, page: plan.minimum >= 14 ? 5 : 4, level: plan.minimum,
+      name: `Чертёж: ${plan.name}`, en: `Blueprint: ${plan.en}`, subtype: "magicBlueprint", identifier: `blueprint-${plan.id}`,
+      img: plan.img ?? "icons/sundries/documents/blueprint-recipe-alchemical", requirements: `Изобретатель ${plan.minimum}+`,
+      html: `<p>Изученный чертёж для умения Копия магического предмета. Предмет: @UUID[${plan.moduleKey ? ref(plan.moduleKey) : plan.uuid}]{${plan.name}}.</p>` });
+    item.flags.spikependium.blueprint = { ...plan, uuid: plan.moduleKey ? ref(plan.moduleKey) : plan.uuid };
+  }
 
   // --- Умения класса -------------------------------------------------------
   feature({
@@ -127,7 +136,6 @@ export function define() {
       ]),
     acts: [utility("artificer:replicate-magic-item:create", {
       name: "Создать предметы", activation: "special", condition: "После продолжительного отдыха, с инструментами ремонтника",
-      roll: "@scale.artificer.magic-items", rollName: "Предметов можно создать"
     })]
   });
 
@@ -192,7 +200,7 @@ export function define() {
     key: "artificer:spell-storing-item", folder: F(), book: BOOK, page: 5, level: 11, requirements: REQ,
     name: "Хранящий заклинания предмет", en: "Spell-Storing Item", identifier: "spell-storing-item",
     img: "icons/weapons/wands/wand-gem-teal",
-    uses: uses("max(2, 2 * @abilities.int.mod)", LR),
+    uses: uses(1, LR),
     desc: `
 Каждый раз после продолжительного отдыха вы можете коснуться одного простого или воинского оружия либо одного предмета, который можно использовать в качестве заклинательной фокусировки, и вложить в него заклинание. Вы выбираете заклинание изобретателя 1, 2 или 3 уровня, которое имеет время накладывания «1 действие» и не требует расходуемого материального компонента (вам не обязательно иметь это заклинание среди подготовленных).
 
@@ -200,9 +208,9 @@ export function define() {
 
 Заклинание остаётся в предмете до тех пор, пока оно не будет использовано количество раз, равное удвоенному значению вашего модификатора Интеллекта (минимум 2), или пока вы не используете это умение снова, чтобы вложить заклинание в предмет.
 
-*Счётчик использований этого умения отслеживает оставшиеся воспроизведения заклинания.*`,
+*Вложение учитывается на этом умении; оставшиеся воспроизведения отслеживаются отдельным действием на выбранном предмете.*`,
     acts: [utility("artificer:spell-storing-item:use", {
-      name: "Воспроизвести заклинание", activation: "action", consume: [useSelf()]
+      name: "Вложить заклинание", activation: "special", condition: "После продолжительного отдыха, касаясь оружия или фокусировки", consume: [useSelf()]
     })]
   });
 
@@ -326,7 +334,11 @@ export function define() {
       advScale("artificer:plans", "plans", "Известные чертежи", "number", { 2: 4, 6: 5, 10: 6, 14: 7, 18: 8 }),
       advScale("artificer:magic-items", "magic-items", "Создаваемые магические предметы", "number", { 2: 2, 6: 3, 10: 4, 14: 5, 18: 6 })
     ],
-    extraAdvancement: [advItemChoice("artificer:cantrip-choice", null, {
+    extraAdvancement: [advItemChoice("artificer:blueprints", null, {
+      title: "Изученные чертежи", type: "feat", restrictType: "class", restrictSubtype: "magicBlueprint", allowDrops: false,
+      pool: BLUEPRINTS.map(p => ref(p.key)), choices: Object.fromEntries(Array.from({ length: 19 }, (_, i) => i + 2)
+        .map(level => [level, { count: level === 2 ? 4 : [6, 10, 14, 18].includes(level) ? 1 : 0, replacement: level > 2 }]))
+    }), advItemChoice("artificer:cantrip-choice", null, {
       title: "Заговоры изобретателя", type: "spell", list: ["class:artificer"], spellLevel: "0",
       choices: { 1: { count: 2, replacement: true }, 10: { count: 1, replacement: true }, 14: { count: 1, replacement: true } },
       spell: spellConfig({ abilities: ["int"], always: false })

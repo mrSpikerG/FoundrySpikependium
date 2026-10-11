@@ -61,6 +61,8 @@ export function define() {
   });
 
   // --- Реанимированный спутник ---------------------------------------------
+  const strikeRestriction = effect("reanimated:strike:no-opportunity", { name: "Ужасающий удар: нет провоцированных атак",
+    img: "icons/magic/death/hand-withered-gray", transfer: false, expiry: "targetStart", flags: { spikependium: { noOpportunityAttacks: true } } });
   const reanimated = {
     key: "actor:reanimated-companion", name: "Реанимированный спутник", en: "Reanimated Companion",
     book: "UA-HS", page: 2, folder: fComp, img: "icons/magic/death/hand-dirt-undead-zombie",
@@ -76,8 +78,9 @@ export function define() {
       { name: "Поглощение электричества", img: "icons/magic/lightning/bolt-strike-blue",
         desc: "Каждый раз, когда спутник подвергается урону электричеством, он восстанавливает количество хитов, равное урону электричеством." },
       { name: "Ужасающий удар", img: "icons/magic/death/hand-withered-gray",
+        effects: [strikeRestriction],
         desc: "*Рукопашная атака:* бонус равен вашему модификатору атаки заклинанием, досягаемость 5 фт. *Попадание:* 1к4 + 2 + ваш модификатор Интеллекта урона некротической энергией, и цель не может совершать провоцированные атаки до начала своего следующего хода.",
-        acts: [attack("actor:reanimated:strike", { activation: "action", range: 5, attackType: "melee", classification: "spell", damage: [dmg("1d4 + 2", "necrotic")] })] }
+        acts: [attack("actor:reanimated:strike", { activation: "action", range: 5, attackType: "melee", classification: "spell", damage: [dmg("1d4 + 2", "necrotic")], effects: [strikeRestriction._id] })] }
     ]
   };
   npc(reanimated);
@@ -92,14 +95,15 @@ export function define() {
     if (body.startsWith("big-")) {
       variant.size = body === "big-large" ? "lg" : "med";
       variant.tokenSize = body === "big-large" ? 2 : 1;
-      variant.items[2].desc += " При попадании можно отбросить цель размера Большой или меньше на 10 футов.";
+      variant.items[0].desc += " Крупный: можете добавить модификатор Интеллекта создателя к урону взрыва; выбор доступен в окне броска урона.";
+      variant.items[2].desc += " При попадании можно отбросить цель размера Большой или меньше на расстояние до 10 футов от спутника. После попадания появляется выбор расстояния; 0 или закрытие окна пропускает толчок.";
     }
     if (body === "thin") {
       variant.movement = { walk: 45, climb: 45 };
-      const fear = effect("reanimated:thin:fear", { name: "Испуг спутника", transfer: false, statuses: ["frightened"], expiry: "turnStart" });
+      const fear = effect("reanimated:thin:fear", { name: "Испуг спутника", transfer: false, statuses: ["frightened"], expiry: "targetStart" });
       variant.items.push({ name: "Тощий: пугающая эманация", effects: [fear],
         desc: "В начале хода выбранного существа в пределах 10 футов: спасбросок Мудрости, при провале испуг до начала его следующего хода. Спутник лазает по потолкам без проверки.",
-        acts: [save("reanimated:thin:fear", { activation: "special", range: 10, count: 1, affects: "creature", ability: "wis", effects: [{ _id: fear._id, onSave: false }] })] });
+        acts: [save("reanimated:thin:fear", { activation: "turnStart", condition: "В начале хода выбранного существа в эманации", range: 10, count: 1, affects: "creature", ability: "wis", effects: [{ _id: fear._id, onSave: false }] })] });
     }
     if (body === "wet") {
       variant.movement.swim = 30;
@@ -108,10 +112,9 @@ export function define() {
     }
     if (arcane === "fury") variant.items[2].acts.push(attack("reanimated:fury:second", {
       name: "Ярость: второй удар", activation: "special", condition: "Получен приказ выполнить Ужасающий удар", range: 5,
-      attackType: "melee", classification: "spell", damage: [dmg("1d4 + 2", "necrotic")]
+      attackType: "melee", classification: "spell", damage: [dmg("1d4 + 2", "necrotic")], effects: [strikeRestriction._id]
     }));
-    else variant.items.push({ name: "Магический проводник", desc: "Заклинания можно накладывать из пространства спутника, используя собственные чувства. Раз в ход: бонус к одному броску урона заклинания изобретателя школы воплощения или некромантии, если создатель находится в пределах 120 футов.",
-      acts: [damage("reanimated:conduit:bonus", { activation: "special", condition: "Раз в ход, урон воплощения или некромантии изобретателя; создатель в пределах 120 футов", damage: [dmg("0")] })] });
+    else variant.items.push({ name: "Магический проводник", desc: "Заклинания можно накладывать из пространства спутника, используя собственные чувства. Раз в ход: бонус к одному броску урона заклинания изобретателя школы воплощения или некромантии, если создатель находится в пределах 120 футов. Бонус выбирается в штатном окне урона заклинания хозяина." });
     npc(variant);
   }
 

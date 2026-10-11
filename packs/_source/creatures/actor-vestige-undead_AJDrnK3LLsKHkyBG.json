@@ -591,7 +591,11 @@
               "override": true,
               "concentration": false
             },
-            "effects": [],
+            "effects": [
+              {
+                "_id": "vBCsQaJimSSW549k"
+              }
+            ],
             "range": {
               "value": "30",
               "units": "ft",
@@ -644,7 +648,50 @@
         "advancement": [],
         "enchant": {}
       },
-      "effects": [],
+      "effects": [
+        {
+          "_id": "vBCsQaJimSSW549k",
+          "name": "Проклятое воззвание",
+          "img": "icons/magic/unholy/hand-marked-pink.webp",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": 60,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "vestigeCurse": {}
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!AJDrnK3LLsKHkyBG.7SUZfwnri5JEwvX0.vBCsQaJimSSW549k"
+        }
+      ],
       "folder": null,
       "sort": 300000,
       "ownership": {

@@ -10,6 +10,7 @@ export const SYSTEM_VERSION = "6.0.6";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const SRD = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/srd.json"), "utf8"));
+export const ARTIFICER_CATALOG = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/artificer-catalog.json"), "utf8"));
 const ICONS = new Set(fs.readFileSync(path.join(ROOT, "tools/data/icons.txt"), "utf8").split(/\r?\n/).filter(Boolean));
 
 /* -------------------------------------------- */

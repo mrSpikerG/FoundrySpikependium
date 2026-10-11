@@ -315,6 +315,11 @@
                 "formula": ""
               },
               "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "companionAction": "death-explosion"
+              }
             }
           }
         },
@@ -467,7 +472,11 @@
               "override": false,
               "concentration": false
             },
-            "effects": [],
+            "effects": [
+              {
+                "_id": "WhVStqtfvQiffom6"
+              }
+            ],
             "range": {
               "value": "5",
               "units": "ft",
@@ -577,7 +586,11 @@
               "override": false,
               "concentration": false
             },
-            "effects": [],
+            "effects": [
+              {
+                "_id": "WhVStqtfvQiffom6"
+              }
+            ],
             "range": {
               "value": "5",
               "units": "ft",
@@ -661,7 +674,50 @@
         "advancement": [],
         "enchant": {}
       },
-      "effects": [],
+      "effects": [
+        {
+          "_id": "WhVStqtfvQiffom6",
+          "name": "Ужасающий удар: нет провоцированных атак",
+          "img": "icons/magic/death/hand-withered-gray.webp",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": "targetStart",
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "noOpportunityAttacks": true
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!CSBKgt9PLT8Xpbi2.fo2WG3TMFtqMq03a.WhVStqtfvQiffom6"
+        }
+      ],
       "folder": null,
       "sort": 300000,
       "ownership": {
@@ -723,9 +779,9 @@
             "img": "icons/svg/upgrade.svg",
             "sort": 100000,
             "activation": {
-              "type": "special",
-              "value": null,
-              "condition": "",
+              "type": "turnStart",
+              "value": 1,
+              "condition": "В начале хода выбранного существа в эманации",
               "override": true
             },
             "consumption": {
@@ -827,7 +883,7 @@
           "duration": {
             "value": null,
             "units": "seconds",
-            "expiry": "turnStart",
+            "expiry": "targetStart",
             "expired": false
           },
           "description": "",
