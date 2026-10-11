@@ -44,12 +44,21 @@ export function prepareGrantedSpell(item, data) {
   if (item.type !== "spell") return;
   const source = data.system?.sourceItem ?? item.system.sourceItem;
   const ability = data.system?.ability ?? item.system.ability;
+  if (source === "subclass:spirits" && (data.system?.identifier ?? item.system.identifier) === "guidance")
+    item.updateSource({ "system.range.value": 60, "system.range.units": "ft" });
   if (source === "feat:lich-ascension" && ["int", "wis", "cha"].includes(ability)
     && (data.system?.uses?.max ?? item.system.uses.max) === "max(1, @attributes.spell.mod)")
     item.updateSource({ "system.uses.max": `max(1, @abilities.${ability}.mod)` });
   if (!WILD_TALENTS.includes(source)) return;
   const properties = data.system?.properties ?? [...item.system.properties];
   item.updateSource({ "system.properties": properties.filter(p => !["vocal", "material"].includes(p)) });
+}
+
+export function prepareSpiritsGuidance(activity) {
+  if (activity?.item?.type !== "spell" || activity.item.system.identifier !== "guidance"
+    || activity.item.system.sourceItem !== "subclass:spirits" || activity.item.flags.spikependium?.storedSpell) return;
+  // Existing granted copies keep their document; override the activity's effective range at use time.
+  activity.updateSource({ "range.value": "60", "range.units": "ft", "range.override": true });
 }
 
 export function prepareFeatSave(activity) {

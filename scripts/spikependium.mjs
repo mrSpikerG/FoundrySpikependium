@@ -1,7 +1,7 @@
 // Spikependium — интеграция с системой dnd5e и модулем Babele.
 import { SPELL_LISTS, SOURCE_BOOKS } from "./generated.mjs";
 import { prepareSummon, canRefuel, hasReanimatedCompanion } from "./summons.mjs";
-import { prepareFeatSave, preparePactUsage, prepareGrantedSpell, prepareAbilityAdvancement, prepareFormConsumption, toggleRadiantLight, conditionalState, applyTurnLimit, prepareUpdatedSpell, validateMutableForm } from "./mechanics.mjs";
+import { prepareFeatSave, preparePactUsage, prepareGrantedSpell, prepareSpiritsGuidance, prepareAbilityAdvancement, prepareFormConsumption, toggleRadiantLight, conditionalState, applyTurnLimit, prepareUpdatedSpell, validateMutableForm } from "./mechanics.mjs";
 import { prepareChoiceDialog, applyChoiceConsumption } from "./choices.mjs";
 import { prepareAuraCondition, refreshSceneAuras, endEffectsOnDamage, endSceneEffects, applySelfEffects } from "./effects.mjs";
 import { prepareResourceUpdates, postHitDieDamage, limitRestoration, showResourceConsumption } from "./resources.mjs";
@@ -13,7 +13,7 @@ import { canUseConduitActivity, recordConduitCast, prepareConduitRoll, finalizeC
 import { prepareWhispersDialog, chooseWhispersAfterRest, describeWhispers } from "./whispers.mjs";
 import { chooseThinFear, syncThinFear, thinEffectChanges, prepareThinSave } from "./thin.mjs";
 import { recordStrikeHits, applyStrikeHits, prepareOpportunityRoll, validateOpportunityRoll } from "./opportunity.mjs";
-import { registerPushMovement, recordBigPush, chooseBigPush } from "./push.mjs";
+import { registerPushMovement, recordBigPush, chooseBigPush, bigPushSnapshots } from "./push.mjs";
 import { canUseVestigePocket, canSummonVestige, canConsumeVestigeSummon, handleVestigePocket, endDeadOwnerPockets } from "./pocket.mjs";
 import { canUseVestigeAura, recordVestigeAuraUsage, activateVestigeAura, vestigeAuraUsageToken, validateVestigeAuraTemplate, attachVestigeAuraTemplate, vestigeAuraEffectChanges, prepareVestigeAuraCondition, recordVestigeSurvival, finishVestigeSurvival, upgradeVestigeAuraEffects, endExpiredVestigeAuras } from "./vestige-aura.mjs";
 import { canUseVestigeRestForm, recordVestigeFormConfig, prepareVestigeRestConfig, placeVestigeRestForm, createVestigeRestForm, finishVestigeForms, resumeVestigeFormRequests, offerVestigeFormAfterRest, canModifyVestigeForm, rememberVestigeType, endDeletedVestigeForm } from "./vestige-forms.mjs";
@@ -43,18 +43,46 @@ import { canUseMovementModifier, prepareMovementDialog, captureMovementTarget, r
   applyMovementCast, resumeMovementCasts, movementMarkCost, refreshMovementMarks } from "./dragonmark-movement.mjs";
 import { canUseReaction, reactionUse, recordReaction, recordReactionConsumption, reactionDeltaLabel, finishReaction, resumeReactions } from "./reactions.mjs";
 import { registerHandlingMovement, canUseHandlingModifier, recordHandlingHits, chooseHandling, isHandlingAttack, validateHandlingAttack,
-  handlingRollAttack, resumeHandling, handlingFalling, handlingMovementCost } from "./dragonmark-handling.mjs";
+  handlingRollAttack, resumeHandling, handlingFalling, handlingMovementCost, handlingHits } from "./dragonmark-handling.mjs";
+import { registerGuardianMovement, canUseGuardian, prepareGuardianDialog, recordGuardianAttack, chooseGuardian, resumeGuardian,
+  guardianApplyDamage, guardianCardDamage } from "./dragonmark-guardian.mjs";
+import { captureAttackDamage, guardianEvaluatedTargets, guardianRecords } from "./attack-source.mjs";
+import { wetHitSnapshots } from "./companions.mjs";
+import { strikeHitSnapshots } from "./opportunity.mjs";
+import { prepareHollowConcentration, hollowArmorSuppression } from "./hollow-warden.mjs";
 
 const MODULE_ID = "spikependium";
+Hooks.on("dnd5e.preBeginConcentrating", prepareHollowConcentration);
 
 Hooks.once("init", registerHandlingMovement);
+Hooks.once("init", registerGuardianMovement);
+Hooks.on("dnd5e.preUseActivity", prepareGuardianDialog);
+Hooks.on("dnd5e.preActivityConsumption", canUseGuardian);
+Hooks.on("preCreateChatMessage", recordGuardianAttack);
+for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => resumeGuardian().catch(error => {
+  console.error("Spikependium: продолжение Защитника", error);
+  ui.notifications.error("Обмен Защитника не завершён. Проверьте токены и карточку расхода перед применением урона.");
+}));
 Hooks.on("dnd5e.preUseActivity", canUseHandlingModifier);
 Hooks.on("dnd5e.preActivityConsumption", canUseHandlingModifier);
 Hooks.on("preCreateChatMessage", recordHandlingHits);
-Hooks.on("createChatMessage", message => chooseHandling(message).catch(error => {
-  console.error("Spikependium: Улучшенное укрощение", error);
-  ui.notifications.error("Не удалось закончить реакцию животного. Проверьте карточку расхода и оба токена; действие автоматически не повторяется.");
-}));
+Hooks.on("createChatMessage", async message => {
+  if (message.type !== "attack") return;
+  try {
+    await chooseGuardian(message);
+    if (guardianRecords(message).some(r => ["prompted", "moving", "stopped"].includes(r.state))) return;
+    if (game.user.isActiveGM && guardianRecords(message).some(r => r.state === "done"))
+      await message.update({ "flags.spikependium.handlingHits": handlingHits(message), "flags.spikependium.wetHits": wetHitSnapshots(message),
+        "flags.spikependium.strikeHits": strikeHitSnapshots(message), "flags.spikependium.bigPushHits": bigPushSnapshots(message) });
+    await chooseHandling(message);
+    await triggerWetResponses(message);
+    await applyStrikeHits(message);
+    await chooseBigPush(message);
+  } catch (error) {
+    console.error("Spikependium: последствия попадания", error);
+    ui.notifications.error("Не удалось завершить реакцию или последствия попадания. Проверьте карточку расхода и токены перед применением урона; автоматического повтора нет.");
+  }
+});
 Hooks.on("dnd5e.preRollAttackV2", validateHandlingAttack);
 Hooks.on("dnd5e.postAttackRollConfiguration", (_rolls, config) => validateHandlingAttack(config));
 for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => resumeHandling().catch(error => console.error("Spikependium: продолжение Укрощения", error)));
@@ -244,6 +272,7 @@ Hooks.on("dnd5e.restCompleted", (actor, result, config) => {
   });
 });
 Hooks.on("preCreateItem", prepareGrantedSpell);
+Hooks.on("dnd5e.preUseActivity", prepareSpiritsGuidance);
 Hooks.on("preUpdateItem", prepareUpdatedSpell);
 Hooks.on("dnd5e.preAdvancementManagerRender", prepareAbilityAdvancement);
 Hooks.on("dnd5e.preAdvancementManagerRender", prepareBlueprintAdvancement);
@@ -297,11 +326,8 @@ Hooks.on("dnd5e.preCreateMeasuredTemplate", validateVestigeAuraTemplate);
 Hooks.on("dnd5e.createMeasuredTemplate", attachVestigeAuraTemplate);
 Hooks.on("preCreateChatMessage", canCreateCompanionMessage);
 Hooks.on("preCreateChatMessage", recordWetHits);
-Hooks.on("createChatMessage", triggerWetResponses);
 Hooks.on("preCreateChatMessage", recordStrikeHits);
-Hooks.on("createChatMessage", applyStrikeHits);
 Hooks.on("preCreateChatMessage", recordBigPush);
-Hooks.on("createChatMessage", chooseBigPush);
 Hooks.on("createChatMessage", handleVestigePocket);
 Hooks.on("createChatMessage", activateVestigeAura);
 Hooks.on("createChatMessage", message => createVestigeRestForm(message).catch(error => {
@@ -446,12 +472,18 @@ Hooks.once("init", () => {
   }
   libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype._prepareSpellcasting", addDrainedSlots, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.calculateDamage", calculateCompanionDamage, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.applyDamage", guardianApplyDamage, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.ChatMessage.documentClass.prototype.applyChatCardDamage", guardianCardDamage, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.ChatMessage.dataModels.attack.prototype.evaluatedTargets", guardianEvaluatedTargets, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.attack.documentClass.prototype.rollDamage", captureAttackDamage, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Dice.DamageRoll.build", finishConduitRoll, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Dice.D20Roll.buildEvaluate", function(wrapped, ...args) {
     return consumeMakingAttack.call(this, (...forward) => consumeFortitudeSave.call(this, wrapped, ...forward), ...args);
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.enchant.documentClass.prototype.applyEnchantment", applyMakingEnchantment, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.ActiveEffect.documentClass.prototype.isSuppressed", makingSuppression, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.ActiveEffect.documentClass.prototype.isSuppressed", function(wrapped, ...args) {
+    return hollowArmorSuppression.call(this, (...forward) => makingSuppression.call(this, wrapped, ...forward), ...args);
+  }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ActiveEffect.documentClass.applyChange", makingEffectChange, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Combatant.documentClass.prototype.getInitiativeRoll", combatantDetectionInitiative, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.applyActiveEffects", function(wrapped, ...args) {

@@ -1,4 +1,5 @@
 import { incapacitated, tokensDistance } from "./effects.mjs";
+import { guardianTarget, guardianRecords } from "./attack-source.mjs";
 import { dropVestigeGear } from "./vestige.mjs";
 import { endVestigeAura, pendingVestigeForm } from "./pocket.mjs";
 
@@ -80,11 +81,13 @@ export function validateExplosionBonus(rolls, config) {
 
 export function attackHitTargets(message) {
   if (message.type !== "attack") return [];
+  if (guardianRecords(message).some(r => ["prompted", "moving", "stopped"].includes(r.state))) return [];
   const hits = [];
   for (const [index, roll] of message.rolls.entries()) {
     if (!(roll instanceof CONFIG.Dice.D20Roll) || !roll._evaluated) continue;
-    for (const target of message.system.targets) {
-      if (!Number.isFinite(target.ac) || (!roll.isCritical && (roll.isFumble || roll.total < target.ac))) continue;
+    for (const original of message.system.targets) {
+      const target = guardianTarget(message, original, index);
+      if (target === original && (!Number.isFinite(target.ac) || (!roll.isCritical && (roll.isFumble || roll.total < target.ac)))) continue;
       const token = target.token ? fromUuidSync(target.token) : null;
       if (token?.actor) hits.push({ index, target, token });
     }

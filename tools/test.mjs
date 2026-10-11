@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { cast, summon, utility, useSlot, makeId } from "./lib/core.mjs";
 import { prepareSummon, canRefuel, hasReanimatedCompanion } from "../scripts/summons.mjs";
-import { prepareGrantedSpell, prepareFeatSave, preparePactUsage, prepareAbilityAdvancement, prepareFormConsumption, radiantLightUpdate, conditionalState, applyTurnLimit, prepareUpdatedSpell } from "../scripts/mechanics.mjs";
+import { prepareGrantedSpell, prepareSpiritsGuidance, prepareFeatSave, preparePactUsage, prepareAbilityAdvancement, prepareFormConsumption, radiantLightUpdate, conditionalState, applyTurnLimit, prepareUpdatedSpell } from "../scripts/mechanics.mjs";
 import { dragonSlot, restorationPlan, prepareChoiceDialog, applyChoiceConsumption } from "../scripts/choices.mjs";
 import { DRAGONMARK_TABLES } from "../scripts/generated.mjs";
 import { auraActive, endEffectsOnDamage, endedEffects, tokenDistance, applySelfEffects } from "../scripts/effects.mjs";
@@ -124,6 +124,17 @@ prepareGrantedSpell(granted, { system: { sourceItem: "class:wizard", properties:
 assert.equal(spellChanges, null);
 prepareGrantedSpell(granted, { system: { sourceItem: "feat:lich-ascension", ability: "cha", uses: { max: "max(1, @attributes.spell.mod)" } } });
 assert.deepEqual(spellChanges, { "system.uses.max": "max(1, @abilities.cha.mod)" });
+spellChanges = null;
+prepareGrantedSpell(granted, { system: { sourceItem: "subclass:spirits", identifier: "guidance" } });
+assert.deepEqual(spellChanges, { "system.range.value": 60, "system.range.units": "ft" });
+for (const [source, identifier, stored] of [["subclass:spirits", "guidance", false], ["class:bard", "guidance", false],
+  ["subclass:spirits", "light", false], ["subclass:spirits", "guidance", true]]) {
+  let updated;
+  prepareSpiritsGuidance({ item: { type: "spell", system: { sourceItem: source, identifier }, flags: { spikependium: { storedSpell: stored } } },
+    updateSource: data => { updated = data; } });
+  assert.deepEqual(updated, source === "subclass:spirits" && identifier === "guidance" && !stored
+    ? { "range.value": "60", "range.units": "ft", "range.override": true } : undefined);
+}
 let saveChanges;
 prepareFeatSave({ type: "save", item: { flags: { spikependium: { key: "feat:undead-grasp" } }, system: {
   advancement: [{ type: "ItemGrant", value: { ability: "wis" } }]
