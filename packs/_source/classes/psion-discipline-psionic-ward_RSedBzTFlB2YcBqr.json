@@ -5,7 +5,7 @@
   "img": "icons/magic/defensive/shield-barrier-glowing-triangle-magenta.webp",
   "system": {
     "description": {
-      "value": "<p>В начале своего хода вы можете потратить 1 псионическую кость. До начала вашего следующего хода вы получаете иммунитет к состояниям &Reference[charmed]{очарованный} и &Reference[frightened]{испуганный}, а также преимущество на спасброски Интеллекта. Если в момент применения этой дисциплины вы очарованы или испуганы, то эти состояния прекращаются.</p><p>Когда вы применяете Псионическое ограждение, вы также можете применить другую псионическую дисциплину в этот ход.</p>",
+      "value": "<p>В начале своего хода вы можете потратить 1 псионическую кость. До начала вашего следующего хода вы получаете иммунитет к состояниям &Reference[charmed]{очарованный} и &Reference[frightened]{испуганный}, а также преимущество на спасброски Интеллекта. Если в момент применения этой дисциплины вы очарованы или испуганы, то эти состояния прекращаются.</p><p>Когда вы применяете Псионическое ограждение, вы также можете применить другую псионическую дисциплину в этот ход.</p><h3>Действия</h3><ul><li>[[/item activity=oKV7ZJ8SF1zFDBAZ]]{Изменить форму}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -35,7 +35,7 @@
     "activities": {
       "oKV7ZJ8SF1zFDBAZ": {
         "_id": "oKV7ZJ8SF1zFDBAZ",
-        "type": "utility",
+        "type": "transform",
         "name": "",
         "img": "icons/magic/defensive/shield-barrier-glowing-triangle-magenta.webp",
         "sort": 100000,
@@ -71,7 +71,11 @@
           "override": true,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "PR3gxSfOdV6qC7nS"
+          }
+        ],
         "range": {
           "value": "",
           "units": "self",
@@ -112,11 +116,13 @@
           "requireIdentification": false,
           "requireMagic": false
         },
-        "roll": {
-          "formula": "",
-          "name": "",
-          "prompt": false,
-          "visible": false
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
         }
       }
     },
@@ -124,7 +130,71 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "PR3gxSfOdV6qC7nS",
+      "name": "Псионическое ограждение",
+      "img": "icons/magic/defensive/shield-barrier-glowing-triangle-magenta.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.ci.value",
+            "value": "charmed",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "KwHUSF3LRED01ggH"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "frightened",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "8aRSEOrCcFG3rpAx"
+          },
+          {
+            "key": "system.abilities.int.save.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "N6XuLiLUYo66hDvz"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceStart",
+        "expired": false
+      },
+      "description": "<p>В начале своего хода вы можете потратить 1 псионическую кость. До начала вашего следующего хода вы получаете иммунитет к состояниям &Reference[charmed]{очарованный} и &Reference[frightened]{испуганный}, а также преимущество на спасброски Интеллекта. Если в момент применения этой дисциплины вы очарованы или испуганы, то эти состояния прекращаются.</p><p>Когда вы применяете Псионическое ограждение, вы также можете применить другую псионическую дисциплину в этот ход.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!RSedBzTFlB2YcBqr.PR3gxSfOdV6qC7nS"
+    }
+  ],
   "folder": "fk7PPMFWc9PyeGHH",
   "sort": 0,
   "ownership": {

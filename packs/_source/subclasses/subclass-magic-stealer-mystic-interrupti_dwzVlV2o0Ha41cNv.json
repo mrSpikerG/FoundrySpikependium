@@ -5,7 +5,7 @@
   "img": "icons/magic/control/hypnosis-mesmerism-swirl.webp",
   "system": {
     "description": {
-      "value": "<p>Когда вы применяете Усиленную скрытую атаку, вы можете заставить цель совершить спасбросок Телосложения (Сл. = 8 + ваш модификатор Ловкости + ваш БМ). При провале заклинание рассеивается без эффекта, а цель получает состояние &Reference[stunned]{ошеломлённый} до начала своего следующего хода.</p>",
+      "value": "<p>Когда вы применяете Усиленную скрытую атаку, вы можете заставить цель совершить спасбросок Телосложения (Сл. = 8 + ваш модификатор Ловкости + ваш БМ). При провале заклинание рассеивается без эффекта, а цель получает состояние &Reference[stunned]{ошеломлённый} до начала своего следующего хода.</p><h3>Действия</h3><ul><li>[[/item activity=pDVaZcH1ppieC2k0]]{Применить} · [[/save activity=pDVaZcH1ppieC2k0]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -64,7 +64,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "qLc5lPX5HxOwIULe",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -125,7 +130,48 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "qLc5lPX5HxOwIULe",
+      "name": "Мистическое прерывание",
+      "img": "icons/magic/control/hypnosis-mesmerism-swirl.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetStart",
+        "expired": false
+      },
+      "description": "<p>Когда вы применяете Усиленную скрытую атаку, вы можете заставить цель совершить спасбросок Телосложения (Сл. = 8 + ваш модификатор Ловкости + ваш БМ). При провале заклинание рассеивается без эффекта, а цель получает состояние &Reference[stunned]{ошеломлённый} до начала своего следующего хода.</p>",
+      "origin": null,
+      "statuses": [
+        "stunned"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!dwzVlV2o0Ha41cNv.qLc5lPX5HxOwIULe"
+    }
+  ],
   "folder": "x9jG7Gfd6WYs3K76",
   "sort": 0,
   "ownership": {

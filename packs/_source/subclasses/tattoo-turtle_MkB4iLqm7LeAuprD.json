@@ -5,7 +5,7 @@
   "img": "icons/commodities/biological/shell-tan.webp",
   "system": {
     "description": {
-      "value": "<p>Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplSparetheDy]{Уход за умирающим}. Когда вы тратите 1 очко духа для применения Терпеливой обороны, вы получаете бонус +1 к КД до начала вашего следующего хода.</p>",
+      "value": "<p>Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplSparetheDy]{Уход за умирающим}. Когда вы тратите 1 очко духа для применения Терпеливой обороны, вы получаете бонус +1 к КД до начала вашего следующего хода.</p><h3>Действия</h3><ul><li>[[/item activity=2f73ZxWIAcaevORF]]{Изменить форму}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -35,7 +35,7 @@
     "activities": {
       "2f73ZxWIAcaevORF": {
         "_id": "2f73ZxWIAcaevORF",
-        "type": "utility",
+        "type": "transform",
         "name": "",
         "img": "icons/commodities/biological/shell-tan.webp",
         "sort": 100000,
@@ -109,11 +109,13 @@
           "requireIdentification": false,
           "requireMagic": false
         },
-        "roll": {
-          "formula": "",
-          "name": "",
-          "prompt": false,
-          "visible": false
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
         }
       }
     },
@@ -174,7 +176,7 @@
       "duration": {
         "value": null,
         "units": "seconds",
-        "expiry": null,
+        "expiry": "sourceStart",
         "expired": false
       },
       "description": "",

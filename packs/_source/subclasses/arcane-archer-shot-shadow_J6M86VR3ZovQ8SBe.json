@@ -5,7 +5,7 @@
   "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Ваша магия застилает взор противника тенями. Существо, по которому вы попали, получает дополнительный урон психической энергией, равный 1 броску вашей кости Арканного выстрела, и должно преуспеть в спасброске Мудрости, иначе получит состояние &Reference[blinded]{ослеплённый} до конца своего следующего хода.</p>",
+      "value": "<p>Ваша магия застилает взор противника тенями. Существо, по которому вы попали, получает дополнительный урон психической энергией, равный 1 броску вашей кости Арканного выстрела, и должно преуспеть в спасброске Мудрости, иначе получит состояние &Reference[blinded]{ослеплённый} до конца своего следующего хода.</p><h3>Действия</h3><ul><li>[[/item activity=HReCudb9hDtADHcN]]{Применить} · [[/damage activity=HReCudb9hDtADHcN]]{Бросок урона} · [[/save activity=HReCudb9hDtADHcN]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -71,7 +71,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "vD41fZyHKigWL7ap",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -113,7 +118,7 @@
           "requireMagic": false
         },
         "damage": {
-          "onSave": "none",
+          "onSave": "full",
           "parts": [
             {
               "custom": {
@@ -150,7 +155,48 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "vD41fZyHKigWL7ap",
+      "name": "Теневой выстрел",
+      "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetEnd",
+        "expired": false
+      },
+      "description": "<p>Ваша магия застилает взор противника тенями. Существо, по которому вы попали, получает дополнительный урон психической энергией, равный 1 броску вашей кости Арканного выстрела, и должно преуспеть в спасброске Мудрости, иначе получит состояние &Reference[blinded]{ослеплённый} до конца своего следующего хода.</p>",
+      "origin": null,
+      "statuses": [
+        "blinded"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!J6M86VR3ZovQ8SBe.vD41fZyHKigWL7ap"
+    }
+  ],
   "folder": "WFBGmk3FrZi2OT64",
   "sort": 0,
   "ownership": {

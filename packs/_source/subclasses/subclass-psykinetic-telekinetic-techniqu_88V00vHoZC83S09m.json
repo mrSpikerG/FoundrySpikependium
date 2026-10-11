@@ -5,7 +5,7 @@
   "img": "icons/magic/air/air-burst-spiral-teal-green.webp",
   "system": {
     "description": {
-      "value": "<p>Когда вы применяете Телекинетический толчок, вы можете бросить 1к4 и применить выпавшее значение вместо траты псионической кости.</p><p>Кроме того, когда цель проваливает спасбросок против вашего Телекинетического толчка, вы можете наложить на цель один из следующих эффектов:</p><p><strong>Ускорение.</strong> Скорость цели увеличивается на 10 футов до начала вашего следующего хода.</p><p><strong>Дезориентация.</strong> Цель не может совершать провоцированные атаки до начала своего следующего хода.</p><p><strong>Телекинетический снаряд.</strong> Цель получает урон силовым полем, равный выпавшему значению на псионической кости.</p>",
+      "value": "<p>Когда вы применяете Телекинетический толчок, вы можете бросить [[/r 1d4]]{1к4} и применить выпавшее значение вместо траты псионической кости.</p><p>Кроме того, когда цель проваливает спасбросок против вашего Телекинетического толчка, вы можете наложить на цель один из следующих эффектов:</p><p><strong>Ускорение.</strong> Скорость цели увеличивается на 10 футов до начала вашего следующего хода.</p><p><strong>Дезориентация.</strong> Цель не может совершать провоцированные атаки до начала своего следующего хода.</p><p><strong>Телекинетический снаряд.</strong> Цель получает урон силовым полем, равный выпавшему значению на псионической кости.</p><h3>Действия</h3><ul><li>[[/item activity=kIKAkRMFA7z3BGrW]]{Толчок: 1к4 вместо кости}</li><li>[[/item activity=FyoBchS3mWjZzmzy]]{Ускорение цели}</li><li>[[/item activity=LMmx6sabJTMvNWr1]]{Телекинетический снаряд} · [[/damage activity=LMmx6sabJTMvNWr1]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -112,10 +112,10 @@
           "visible": true
         }
       },
-      "LMmx6sabJTMvNWr1": {
-        "_id": "LMmx6sabJTMvNWr1",
-        "type": "damage",
-        "name": "Телекинетический снаряд",
+      "FyoBchS3mWjZzmzy": {
+        "_id": "FyoBchS3mWjZzmzy",
+        "type": "utility",
+        "name": "Ускорение цели",
         "img": "icons/magic/air/air-burst-spiral-teal-green.webp",
         "sort": 200000,
         "activation": {
@@ -134,6 +134,89 @@
         },
         "description": {
           "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "Kfek80kBzleeopJx"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "LMmx6sabJTMvNWr1": {
+        "_id": "LMmx6sabJTMvNWr1",
+        "type": "damage",
+        "name": "Телекинетический снаряд",
+        "img": "icons/magic/air/air-burst-spiral-teal-green.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Цель провалила спасбросок от Телекинетического толчка",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": true,
+            "max": "@scale.psion.die.faces"
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "Урон равен ранее выпавшему результату кости толчка. В поле усиления укажите этот результат; новая кость не бросается.",
           "value": ""
         },
         "duration": {
@@ -193,7 +276,7 @@
             {
               "custom": {
                 "enabled": true,
-                "formula": "@scale.psion.die"
+                "formula": "1 + @scaling"
               },
               "number": null,
               "denomination": null,
@@ -215,7 +298,55 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "Kfek80kBzleeopJx",
+      "name": "Ускорение цели",
+      "img": "icons/magic/air/air-burst-spiral-teal-green.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.speeds.walk",
+            "value": "10",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "KK3P66oqqF1LytwR"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceStart",
+        "expired": false
+      },
+      "description": "<p>Когда вы применяете Телекинетический толчок, вы можете бросить [[/r 1d4]]{1к4} и применить выпавшее значение вместо траты псионической кости.</p><p>Кроме того, когда цель проваливает спасбросок против вашего Телекинетического толчка, вы можете наложить на цель один из следующих эффектов:</p><p><strong>Ускорение.</strong> Скорость цели увеличивается на 10 футов до начала вашего следующего хода.</p><p><strong>Дезориентация.</strong> Цель не может совершать провоцированные атаки до начала своего следующего хода.</p><p><strong>Телекинетический снаряд.</strong> Цель получает урон силовым полем, равный выпавшему значению на псионической кости.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!88V00vHoZC83S09m.Kfek80kBzleeopJx"
+    }
+  ],
   "folder": "4IFapScCZi5clRvT",
   "sort": 0,
   "ownership": {

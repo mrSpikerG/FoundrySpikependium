@@ -5,7 +5,7 @@
   "img": "icons/magic/control/control-influence-crown-gold.webp",
   "system": {
     "description": {
-      "value": "<p>Лик вашего предка внушает благоговение или ужас. Пока действует ваше умение Врождённое чародейство, вас окружает магическая эманация с радиусом 5 футов. Каждый раз, когда существо, которое вы видите, входит в эту эманацию или заканчивает там свой ход, вы можете заставить его совершить спасбросок Харизмы. При провале цель получает состояние &Reference[prone]{лежащий ничком} или &Reference[frightened]{испуганный} (на ваш выбор) до конца вашего следующего хода. Существо совершает этот спасбросок не более 1 раза за ход.</p>",
+      "value": "<p>Лик вашего предка внушает благоговение или ужас. Пока действует ваше умение Врождённое чародейство, вас окружает магическая эманация с радиусом 5 футов. Каждый раз, когда существо, которое вы видите, входит в эту эманацию или заканчивает там свой ход, вы можете заставить его совершить спасбросок Харизмы. При провале цель получает состояние &Reference[prone]{лежащий ничком} или &Reference[frightened]{испуганный} (на ваш выбор) до конца вашего следующего хода. Существо совершает этот спасбросок не более 1 раза за ход.</p><h3>Действия</h3><ul><li>[[/item activity=ws4pAPX068jqYICR]]{Величие предка: сбить с ног} · [[/save activity=ws4pAPX068jqYICR]]{Спасбросок цели}</li><li>[[/item activity=ZYH9rZIgq0QDzvkK]]{Величие предка: испугать} · [[/save activity=ZYH9rZIgq0QDzvkK]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -36,7 +36,7 @@
       "ws4pAPX068jqYICR": {
         "_id": "ws4pAPX068jqYICR",
         "type": "save",
-        "name": "",
+        "name": "Величие предка: сбить с ног",
         "img": "icons/magic/control/control-influence-crown-gold.webp",
         "sort": 100000,
         "activation": {
@@ -64,7 +64,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "qhrD6Du6aDtdmBLF",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -114,7 +119,99 @@
             "cha"
           ],
           "dc": {
-            "calculation": "spellcasting",
+            "calculation": "cha",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      },
+      "ZYH9rZIgq0QDzvkK": {
+        "_id": "ZYH9rZIgq0QDzvkK",
+        "type": "save",
+        "name": "Величие предка: испугать",
+        "img": "icons/magic/control/control-influence-crown-gold.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Существо входит в эманацию 5 футов или заканчивает в ней ход",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "9DjfHv0bcfove6cj",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "cha"
+          ],
+          "dc": {
+            "calculation": "cha",
             "formula": ""
           },
           "bonus": ""
@@ -125,7 +222,88 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "qhrD6Du6aDtdmBLF",
+      "name": "Величие предка: сбить с ног",
+      "img": "icons/magic/control/control-influence-crown-gold.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceEnd",
+        "expired": false
+      },
+      "description": "<p>Лик вашего предка внушает благоговение или ужас. Пока действует ваше умение Врождённое чародейство, вас окружает магическая эманация с радиусом 5 футов. Каждый раз, когда существо, которое вы видите, входит в эту эманацию или заканчивает там свой ход, вы можете заставить его совершить спасбросок Харизмы. При провале цель получает состояние &Reference[prone]{лежащий ничком} или &Reference[frightened]{испуганный} (на ваш выбор) до конца вашего следующего хода. Существо совершает этот спасбросок не более 1 раза за ход.</p>",
+      "origin": null,
+      "statuses": [
+        "prone"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!lYuYs1i8yUFdJ5Qq.qhrD6Du6aDtdmBLF"
+    },
+    {
+      "_id": "9DjfHv0bcfove6cj",
+      "name": "Величие предка: испугать",
+      "img": "icons/magic/control/control-influence-crown-gold.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceEnd",
+        "expired": false
+      },
+      "description": "<p>Лик вашего предка внушает благоговение или ужас. Пока действует ваше умение Врождённое чародейство, вас окружает магическая эманация с радиусом 5 футов. Каждый раз, когда существо, которое вы видите, входит в эту эманацию или заканчивает там свой ход, вы можете заставить его совершить спасбросок Харизмы. При провале цель получает состояние &Reference[prone]{лежащий ничком} или &Reference[frightened]{испуганный} (на ваш выбор) до конца вашего следующего хода. Существо совершает этот спасбросок не более 1 раза за ход.</p>",
+      "origin": null,
+      "statuses": [
+        "frightened"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!lYuYs1i8yUFdJ5Qq.9DjfHv0bcfove6cj"
+    }
+  ],
   "folder": "wrwC49EqQ9SEpyvR",
   "sort": 0,
   "ownership": {

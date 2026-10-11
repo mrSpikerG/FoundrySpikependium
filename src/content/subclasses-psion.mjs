@@ -1,7 +1,7 @@
 // Подклассы псионика: Метаморф, Кинетик, Телепат (UA «Обновление псионика») и Искажатель (UA «Псионик» —
 // по словам разработчиков, не нуждается в повторном тесте и остаётся в прежней редакции).
 import {
-  utility, save, attack, heal, damage, teleport, cast, dmg, effect, change, LR, useItem, useActivity
+  utility, save, attack, heal, damage, teleport, cast, form, dmg, effect, change, LR, useItem, useActivity
 } from "../../tools/lib/core.mjs";
 import { spellUuid } from "../../tools/lib/docs.mjs";
 import { makeSubclass } from "./_subclass.mjs";
@@ -22,6 +22,21 @@ export function define() {
     name: "Ткач плоти: органическая защита", img: "icons/skills/wounds/injury-stitched-flesh-red", transfer: false, seconds: 60,
     changes: [change("system.attributes.ac.bonus", "+ 2")]
   });
+  const mutableLong = effect("metamorph:mutable:long", { ...mutable, changes: mutable.system.changes, seconds: 600 });
+  const weaverLong = effect("metamorph:weaver:long", { ...weaver, changes: weaver.system.changes, seconds: 600 });
+  const greaterForms = [
+    ...["acid", "bludgeoning", "cold", "fire", "lightning", "piercing", "poison", "slashing", "thunder"].map((type, i) =>
+      effect(`metamorph:epidermis:${type}`, { name: `Каменный эпидермис: ${["кислота", "дробящий", "холод", "огонь", "электричество", "колющий", "яд", "рубящий", "звук"][i]}`,
+        img: "icons/magic/defensive/armor-stone-skin", transfer: false, seconds: 600,
+        changes: [change("system.attributes.concentration.roll.mode", 1), change("system.traits.dr.value", type)] })),
+    effect("metamorph:stride", { name: "Совершенный шаг (без доспеха)", transfer: false, seconds: 600,
+      conditions: { k: "spikependium.unarmored", v: true },
+      changes: [change("system.attributes.movement.speeds.climb", "@attributes.movement.speeds.walk", "override"),
+        change("system.attributes.movement.speeds.swim", "@attributes.movement.speeds.walk", "override")],
+      description: "<p>Без доспеха: лазание и плавание равны обычной скорости; Рывок доступен бонусным действием. При надевании доспеха эффект подавляется автоматически.</p>" }),
+    effect("metamorph:flexibility", { name: "Неестественная гибкость", transfer: false, seconds: 600,
+      changes: [change("system.attributes.ac.bonus", "+ 1")] })
+  ];
   makeSubclass({
     ...base, key: "subclass:metamorph", name: "Метаморф", en: "Metamorph", identifier: "metamorph",
     img: "icons/skills/wounds/injury-stitched-flesh-red", spellsGen: "метаморфа",
@@ -37,7 +52,7 @@ export function define() {
     features: [
       {
         id: "mutable-form", level: 3, name: "Изменчивая форма", img: "icons/magic/nature/root-vine-entangled-hand",
-        effects: [mutable],
+        effects: [mutable, mutableLong],
         desc: `
 Бонусным действием вы можете потратить 1 псионическую кость, чтобы псионически растянуть свои конечности на 1 минуту. Бросьте потраченную псионическую кость и получите количество временных хитов, равное результату броска + ваш модификатор Интеллекта (минимум 1). Кроме того, вы получаете следующие эффекты:
 
@@ -48,7 +63,10 @@ export function define() {
 **Касание.** Когда вы накладываете заклинание с дистанцией «касание» и временем накладывания «действие», вы можете увеличить дистанцию заклинания до 10 футов.`,
         acts: [heal("metamorph:mutable", {
           activation: "bonus", self: true, temp: true, consume: [PSI()], duration: "minute", durationValue: 1,
-          formula: `${DIE} + max(1, @abilities.int.mod)`, effects: [mutable._id]
+          identifier: "psion", maxLevel: 9, formula: `${DIE} + max(1, @abilities.int.mod)`, effects: [mutable._id]
+        }), heal("metamorph:mutable:long", {
+          name: "Изменчивая форма (10+ уровень)", activation: "bonus", self: true, temp: true, consume: [PSI()], duration: "minute", durationValue: 10,
+          identifier: "psion", minLevel: 10, formula: `${DIE} + max(1, @abilities.int.mod)`, effects: [mutableLong._id]
         })]
       },
       {
@@ -76,15 +94,19 @@ export function define() {
       },
       {
         id: "flesh-weaver", level: 6, name: "Ткач плоти", img: "icons/magic/life/heart-cross-strong-flame-purple-orange",
-        effects: [weaver],
+        effects: [weaver, weaverLong],
         desc: "Когда вы применяете Изменчивую форму, вы можете потратить дополнительную псионическую кость, чтобы получить следующие эффекты, пока действует это умение:\n\n**Органическая защита.** Вы получаете бонус +2 к КД.\n\n**Усиленное исцеление.** Когда вы накладываете ячейкой заклинание, которое восстанавливает хиты одному или нескольким существам, вы можете потратить одну псионическую кость, бросить её и добавить выпавшее число к количеству восстановленных хитов.",
         acts: [
-          utility("metamorph:weaver:defense", { name: "Органическая защита", activation: "special", condition: "При применении Изменчивой формы", self: true, consume: [PSI()], duration: "minute", durationValue: 1, effects: [weaver._id] }),
+          utility("metamorph:weaver:defense", { name: "Органическая защита", activation: "special", condition: "При применении Изменчивой формы", self: true, consume: [PSI()], duration: "minute", durationValue: 1, identifier: "psion", maxLevel: 9, effects: [weaver._id] }),
+          utility("metamorph:weaver:defense:long", { name: "Органическая защита (10+ уровень)", activation: "special", condition: "При применении Изменчивой формы", self: true, consume: [PSI()], duration: "minute", durationValue: 10, identifier: "psion", minLevel: 10, effects: [weaverLong._id] }),
           utility("metamorph:weaver:healing", { name: "Усиленное исцеление", activation: "special", condition: "Заклинание лечения, наложенное ячейкой", consume: [PSI()], roll: DIE, rollName: "Дополнительное лечение" })
         ]
       },
       {
         id: "greater-mutable-form", page: 9, level: 10, name: "Лучшая изменчивая форма", img: "icons/magic/control/silhouette-hold-change-green",
+        effects: greaterForms,
+        acts: [form("metamorph:greater:form", { name: "Выбрать улучшение Изменчивой формы", activation: "special", condition: "При применении Изменчивой формы", duration: "minute", durationValue: 10, effects: greaterForms.map(e => e._id) }),
+          utility("metamorph:greater:dash", { name: "Рывок: Совершенный шаг", activation: "bonus", self: true, condition: "Совершенный шаг активен, вы не носите доспех" })],
         desc: `
 Когда вы применяете Изменчивую форму, её длительность увеличивается до 10 минут, и вы получаете 1 из следующих эффектов на ваш выбор. Эффект действует до окончания Изменчивой формы.
 
@@ -190,7 +212,8 @@ export function define() {
 **Телекинетический снаряд.** Цель получает урон силовым полем, равный выпавшему значению на псионической кости.`,
         acts: [
           utility("psykinetic:d4-push", { name: "Толчок: 1к4 вместо кости", activation: "special", roll: "5 * 1d4", rollName: "Футов" }),
-          damage("psykinetic:missile", { name: "Телекинетический снаряд", activation: "special", condition: "Цель провалила спасбросок от Телекинетического толчка", count: 1, affects: "creature", damage: [dmg(DIE, "force")] })
+          utility("psykinetic:acceleration", { name: "Ускорение цели", activation: "special", condition: "Цель провалила спасбросок от Телекинетического толчка", count: 1, affects: "creature" }),
+          damage("psykinetic:missile", { name: "Телекинетический снаряд", activation: "special", condition: "Цель провалила спасбросок от Телекинетического толчка", count: 1, affects: "creature", damage: [dmg("1 + @scaling", "force")], scaling: true, scalingMax: "@scale.psion.die.faces", flavor: "Урон равен ранее выпавшему результату кости толчка. В поле усиления укажите этот результат; новая кость не бросается." })
         ]
       },
       {

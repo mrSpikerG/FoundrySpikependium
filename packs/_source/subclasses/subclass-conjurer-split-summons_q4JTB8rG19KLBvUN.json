@@ -5,7 +5,7 @@
   "img": "icons/magic/control/silhouette-hold-change-blue.webp",
   "system": {
     "description": {
-      "value": "<p>Когда вы накладываете заклинание <em>Призыв духа аберрации</em>, <em>Призыв духа конструкта</em>, @UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{Призыв духа дракона}, <em>Призыв духа элементаля</em> или <em>Призыв духа феи</em> ячейкой заклинания, вы можете изменить заклинание так, чтобы оно призывало двух существ вместо одного. Каждое существо одного вида использует статблок и правила, указанные в заклинании, и проявляется в разных свободных клетках на ваш выбор в пределах дистанции заклинания, но хиты призванных существ уменьшаются вдвое. Если вы теряете концентрацию на заклинании, то оба существа исчезают.</p><p>Один раз применив это умение для изменения заклинания таким образом, вы должны завершить продолжительный отдых, прежде чем сможете сделать это снова. Вы также можете восстановить возможность применить его, потратив ячейку заклинания 5 уровня или выше (действие не требуется).</p>",
+      "value": "<p>Когда вы накладываете заклинание <em>Призыв духа аберрации</em>, <em>Призыв духа конструкта</em>, @UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{Призыв духа дракона}, <em>Призыв духа элементаля</em> или <em>Призыв духа феи</em> ячейкой заклинания, вы можете изменить заклинание так, чтобы оно призывало двух существ вместо одного. Каждое существо одного вида использует статблок и правила, указанные в заклинании, и проявляется в разных свободных клетках на ваш выбор в пределах дистанции заклинания, но хиты призванных существ уменьшаются вдвое. Если вы теряете концентрацию на заклинании, то оба существа исчезают.</p><p>Один раз применив это умение для изменения заклинания таким образом, вы должны завершить продолжительный отдых, прежде чем сможете сделать это снова. Вы также можете восстановить возможность применить его, потратив ячейку заклинания 5 уровня или выше (действие не требуется).</p><h3>Действия</h3><ul><li>[[/item activity=Dwdc1eH7eLwTo75U]]{Использовать}</li><li>[[/item activity=pbJZLmgjIEnr8X15]]{Восстановить применение (ячейка 5+)}</li><li>[[/item activity=g2bAQh3R7qPhWlAt]]{Восстановить применение (ячейка 5+) (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -28,9 +28,14 @@
       "items": []
     },
     "uses": {
-      "max": "",
+      "max": "1",
       "spent": 0,
-      "recovery": []
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
     },
     "activities": {
       "Dwdc1eH7eLwTo75U": {
@@ -48,100 +53,9 @@
         "consumption": {
           "targets": [
             {
-              "type": "activityUses",
+              "type": "itemUses",
               "value": "1",
               "target": "",
-              "scaling": {}
-            }
-          ],
-          "scaling": {
-            "allowed": false,
-            "max": ""
-          },
-          "spellSlot": true
-        },
-        "description": {
-          "chatFlavor": "",
-          "value": ""
-        },
-        "duration": {
-          "value": "",
-          "units": "inst",
-          "special": "",
-          "override": false,
-          "concentration": false
-        },
-        "effects": [],
-        "range": {
-          "value": "",
-          "units": "",
-          "special": "",
-          "override": false
-        },
-        "target": {
-          "template": {
-            "count": "",
-            "contiguous": false,
-            "type": "",
-            "size": "",
-            "width": "",
-            "height": "",
-            "units": "ft"
-          },
-          "affects": {
-            "count": "",
-            "type": "",
-            "choice": false,
-            "special": ""
-          },
-          "prompt": true,
-          "override": false
-        },
-        "uses": {
-          "spent": 0,
-          "recovery": [
-            {
-              "period": "lr",
-              "type": "recoverAll"
-            }
-          ],
-          "max": "1"
-        },
-        "visibility": {
-          "identifier": "",
-          "level": {
-            "min": null,
-            "max": null
-          },
-          "requireAttunement": false,
-          "requireIdentification": false,
-          "requireMagic": false
-        },
-        "roll": {
-          "formula": "",
-          "name": "",
-          "prompt": false,
-          "visible": false
-        }
-      },
-      "pbJZLmgjIEnr8X15": {
-        "_id": "pbJZLmgjIEnr8X15",
-        "type": "utility",
-        "name": "Применить (ячейка 5+)",
-        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
-        "sort": 200000,
-        "activation": {
-          "type": "special",
-          "value": null,
-          "condition": "",
-          "override": true
-        },
-        "consumption": {
-          "targets": [
-            {
-              "type": "spellSlots",
-              "value": "1",
-              "target": "5",
               "scaling": {}
             }
           ],
@@ -208,6 +122,155 @@
           "name": "",
           "prompt": false,
           "visible": false
+        }
+      },
+      "pbJZLmgjIEnr8X15": {
+        "_id": "pbJZLmgjIEnr8X15",
+        "type": "utility",
+        "name": "Восстановить применение (ячейка 5+)",
+        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "5",
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": "5"
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "g2bAQh3R7qPhWlAt": {
+        "_id": "g2bAQh3R7qPhWlAt",
+        "type": "forward",
+        "name": "Восстановить применение (ячейка 5+) (Магия договора)",
+        "sort": 200001,
+        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+        "activity": {
+          "id": "pbJZLmgjIEnr8X15"
+        },
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 9,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 5
+            }
+          }
         }
       }
     },

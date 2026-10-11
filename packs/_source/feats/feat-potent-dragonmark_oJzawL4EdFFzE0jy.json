@@ -25,7 +25,21 @@
     "prerequisites": {
       "level": 4,
       "repeatable": false,
-      "items": []
+      "items": [
+        "feat:aberrant-dragonmark",
+        "feat:mark-of-detection",
+        "feat:mark-of-finding",
+        "feat:mark-of-handling",
+        "feat:mark-of-healing",
+        "feat:mark-of-hospitality",
+        "feat:mark-of-making",
+        "feat:mark-of-passage",
+        "feat:mark-of-scribing",
+        "feat:mark-of-sentinel",
+        "feat:mark-of-shadow",
+        "feat:mark-of-storm",
+        "feat:mark-of-warding"
+      ]
     },
     "uses": {
       "max": "1",
@@ -37,94 +51,7 @@
         }
       ]
     },
-    "activities": {
-      "Svm78qFDjEdFnoTu": {
-        "_id": "Svm78qFDjEdFnoTu",
-        "type": "utility",
-        "name": "Ячейка драконьей магии",
-        "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
-        "sort": 100000,
-        "activation": {
-          "type": "special",
-          "value": null,
-          "condition": "",
-          "override": true
-        },
-        "consumption": {
-          "targets": [
-            {
-              "type": "itemUses",
-              "value": "1",
-              "target": "",
-              "scaling": {}
-            }
-          ],
-          "scaling": {
-            "allowed": false,
-            "max": ""
-          },
-          "spellSlot": true
-        },
-        "description": {
-          "chatFlavor": "",
-          "value": ""
-        },
-        "duration": {
-          "value": "",
-          "units": "inst",
-          "special": "",
-          "override": false,
-          "concentration": false
-        },
-        "effects": [],
-        "range": {
-          "value": "",
-          "units": "",
-          "special": "",
-          "override": false
-        },
-        "target": {
-          "template": {
-            "count": "",
-            "contiguous": false,
-            "type": "",
-            "size": "",
-            "width": "",
-            "height": "",
-            "units": "ft"
-          },
-          "affects": {
-            "count": "",
-            "type": "",
-            "choice": false,
-            "special": ""
-          },
-          "prompt": true,
-          "override": false
-        },
-        "uses": {
-          "spent": 0,
-          "recovery": [],
-          "max": ""
-        },
-        "visibility": {
-          "identifier": "",
-          "level": {
-            "min": null,
-            "max": null
-          },
-          "requireAttunement": false,
-          "requireIdentification": false,
-          "requireMagic": false
-        },
-        "roll": {
-          "formula": "min(5, ceil(@details.level / 2))",
-          "name": "Уровень ячейки",
-          "prompt": false,
-          "visible": true
-        }
-      }
-    },
+    "activities": {},
     "properties": [],
     "advancement": [
       {
@@ -150,7 +77,33 @@
         },
         "value": {},
         "title": "Увеличение характеристики",
-        "hint": ""
+        "hint": "Повышается только характеристика заклинаний вашей метки. Сначала добавьте исходную метку и завершите выбор её заклинательной характеристики. Для меток из сторонних модулей проверьте допустимый выбор вручную."
+      },
+      {
+        "_id": "xiXTFDN8TaEY0wka",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [],
+          "optional": true,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Подготовка драконьих заклинаний",
+        "hint": "Заклинания таблицы вашей исходной метки. Отсутствующие в SRD добавьте из своей книги."
       }
     ],
     "enchant": {}

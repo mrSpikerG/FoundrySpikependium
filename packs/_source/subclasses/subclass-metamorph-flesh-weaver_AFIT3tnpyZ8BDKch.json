@@ -5,7 +5,7 @@
   "img": "icons/magic/life/heart-cross-strong-flame-purple-orange.webp",
   "system": {
     "description": {
-      "value": "<p>Когда вы применяете Изменчивую форму, вы можете потратить дополнительную псионическую кость, чтобы получить следующие эффекты, пока действует это умение:</p><p><strong>Органическая защита.</strong> Вы получаете бонус +2 к КД.</p><p><strong>Усиленное исцеление.</strong> Когда вы накладываете ячейкой заклинание, которое восстанавливает хиты одному или нескольким существам, вы можете потратить одну псионическую кость, бросить её и добавить выпавшее число к количеству восстановленных хитов.</p>",
+      "value": "<p>Когда вы применяете Изменчивую форму, вы можете потратить дополнительную псионическую кость, чтобы получить следующие эффекты, пока действует это умение:</p><p><strong>Органическая защита.</strong> Вы получаете бонус +2 к КД.</p><p><strong>Усиленное исцеление.</strong> Когда вы накладываете ячейкой заклинание, которое восстанавливает хиты одному или нескольким существам, вы можете потратить одну псионическую кость, бросить её и добавить выпавшее число к количеству восстановленных хитов.</p><h3>Действия</h3><ul><li>[[/item activity=EEDVk12QdqRd1nJN]]{Органическая защита}</li><li>[[/item activity=MQ61HTbye2vFYnjy]]{Органическая защита (10+ уровень)}</li><li>[[/item activity=DKaWjJ2aPq2dKndF]]{Усиленное исцеление}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -35,7 +35,7 @@
     "activities": {
       "EEDVk12QdqRd1nJN": {
         "_id": "EEDVk12QdqRd1nJN",
-        "type": "utility",
+        "type": "transform",
         "name": "Органическая защита",
         "img": "icons/magic/life/heart-cross-strong-flame-purple-orange.webp",
         "sort": 100000,
@@ -107,20 +107,114 @@
           "max": ""
         },
         "visibility": {
-          "identifier": "",
+          "identifier": "psion",
           "level": {
             "min": null,
+            "max": 9
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      },
+      "MQ61HTbye2vFYnjy": {
+        "_id": "MQ61HTbye2vFYnjy",
+        "type": "transform",
+        "name": "Органическая защита (10+ уровень)",
+        "img": "icons/magic/life/heart-cross-strong-flame-purple-orange.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "При применении Изменчивой формы",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:psionic-power",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "3yhmDMsiuGWhbxhT"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "psion",
+          "level": {
+            "min": 10,
             "max": null
           },
           "requireAttunement": false,
           "requireIdentification": false,
           "requireMagic": false
         },
-        "roll": {
-          "formula": "",
-          "name": "",
-          "prompt": false,
-          "visible": false
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
         }
       },
       "DKaWjJ2aPq2dKndF": {
@@ -128,7 +222,7 @@
         "type": "utility",
         "name": "Усиленное исцеление",
         "img": "icons/magic/life/heart-cross-strong-flame-purple-orange.webp",
-        "sort": 200000,
+        "sort": 300000,
         "activation": {
           "type": "special",
           "value": null,
@@ -261,6 +355,53 @@
         "lastModifiedBy": null
       },
       "_key": "!items.effects!AFIT3tnpyZ8BDKch.DYnZyA9IDPwjyrAH"
+    },
+    {
+      "_id": "3yhmDMsiuGWhbxhT",
+      "name": "Ткач плоти: органическая защита",
+      "img": "icons/skills/wounds/injury-stitched-flesh-red.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.bonus",
+            "value": "+ 2",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "nwSWEk2YfAgXdDHg"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!AFIT3tnpyZ8BDKch.3yhmDMsiuGWhbxhT"
     }
   ],
   "folder": "kjuRK00hb4CqlFUu",

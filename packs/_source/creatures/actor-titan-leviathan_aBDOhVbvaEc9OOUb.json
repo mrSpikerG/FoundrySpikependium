@@ -106,7 +106,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>КД</strong> 10 + ваш модификатор Мудрости.</p><p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> в этой форме равны вашему значению Мудрости — <em>в Foundry выставьте их вручную после превращения</em>. Интеллект, Мудрость и Харизма сохраняются; Телосложение выставьте равным исходному вручную. Размер: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>",
+        "value": "<p><strong>КД</strong> 10 + ваш модификатор Мудрости.</p><p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> автоматически равны вашей Мудрости благодаря эффекту формы. Телосложение, Интеллект, Мудрость и Харизма сохраняются. Размер выбирается при превращении: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>",
         "public": ""
       },
       "alignment": "Мировоззрение не меняется",
@@ -239,7 +239,7 @@
       "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
       "system": {
         "description": {
-          "value": "<p><em>Спасбросок Телосложения:</em> Сл. равна вашей Сл. спасброска заклинаний, существо на ваш выбор, когда начинает свой ход в пределах эманации с радиусом 10 футов, исходящей от вас. <em>Провал:</em> 2к4 урона ядом, и цель отравлена до начала своего следующего хода.</p>",
+          "value": "<p><em>Спасбросок Телосложения:</em> Сл. равна вашей Сл. спасброска заклинаний, существо на ваш выбор, когда начинает свой ход в пределах эманации с радиусом 10 футов, исходящей от вас. <em>Провал:</em> [[/damage 2d4 type=poison]]{2к4} урона ядом, и цель отравлена до начала своего следующего хода.</p><h3>Действия</h3><ul><li>[[/item activity=VNBgTkrCREw2pBtg]]{Применить} · [[/damage activity=VNBgTkrCREw2pBtg]]{Бросок урона} · [[/save activity=VNBgTkrCREw2pBtg]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -298,7 +298,12 @@
               "override": false,
               "concentration": false
             },
-            "effects": [],
+            "effects": [
+              {
+                "_id": "2aRcEHO0XSPXM3ir",
+                "onSave": false
+              }
+            ],
             "range": {
               "value": "",
               "units": "",
@@ -330,9 +335,9 @@
               "max": ""
             },
             "visibility": {
-              "identifier": "",
+              "identifier": "druid",
               "level": {
-                "min": null,
+                "min": 10,
                 "max": null
               },
               "requireAttunement": false,
@@ -377,7 +382,48 @@
         "advancement": [],
         "enchant": {}
       },
-      "effects": [],
+      "effects": [
+        {
+          "_id": "2aRcEHO0XSPXM3ir",
+          "name": "Токсичное зловоние (уровень друида 10+)",
+          "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": "targetStart",
+            "expired": false
+          },
+          "description": "<p><em>Спасбросок Телосложения:</em> Сл. равна вашей Сл. спасброска заклинаний, существо на ваш выбор, когда начинает свой ход в пределах эманации с радиусом 10 футов, исходящей от вас. <em>Провал:</em> [[/damage 2d4 type=poison]]{2к4} урона ядом, и цель отравлена до начала своего следующего хода.</p>",
+          "origin": null,
+          "statuses": [
+            "poisoned"
+          ],
+          "tint": "#ffffff",
+          "flags": {},
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!aBDOhVbvaEc9OOUb.sEWiMQ3EI3JoZsDD.2aRcEHO0XSPXM3ir"
+        }
+      ],
       "folder": null,
       "sort": 200000,
       "ownership": {
@@ -463,7 +509,7 @@
       "img": "icons/creatures/claws/claw-curved-jagged-gray.webp",
       "system": {
         "description": {
-          "value": "<p><em>Рукопашная атака:</em> бонус равен вашему модификатору атаки заклинанием, досягаемость 10 фт. <em>Попадание:</em> 1к8 + ваш модификатор Мудрости дробящего урона.</p>",
+          "value": "<p><em>Рукопашная атака:</em> бонус равен вашему модификатору атаки заклинанием, досягаемость 10 фт. <em>Попадание:</em> [[/r 1d8]]{1к8} + ваш модификатор Мудрости дробящего урона.</p><h3>Действия</h3><ul><li>[[/item activity=AegMvJE21GQRAsiX]]{Атаковать} · [[/damage activity=AegMvJE21GQRAsiX]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -633,7 +679,7 @@
       "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
       "system": {
         "description": {
-          "value": "<p><em>Триггер:</em> вы получаете урон. <em>Ответ:</em> вы тратите ячейку заклинания 1+ уровня и выпускаете чернильное облако, которое заполняет куб со стороной 15 футов с центром на вас, после чего вы перемещаетесь вплоть до своей скорости. Куб является сильно заслонённой местностью. Он длится 1 минуту или пока сильное течение или ветер (например, созданный заклинанием Порыв ветра) не рассеет его.</p>",
+          "value": "<p><em>Триггер:</em> вы получаете урон. <em>Ответ:</em> вы тратите ячейку заклинания 1+ уровня и выпускаете чернильное облако, которое заполняет куб со стороной 15 футов с центром на вас, после чего вы перемещаетесь вплоть до своей скорости. Куб является сильно заслонённой местностью. Он длится 1 минуту или пока сильное течение или ветер (например, созданный заклинанием Порыв ветра) не рассеет его.</p><h3>Действия</h3><ul><li>[[/item activity=nXNwHun3BjOe0H09]]{Использовать}</li><li>[[/item activity=dCE7bcqGLS3bRN7v]]{Чернильное облако (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -679,12 +725,15 @@
                   "type": "spellSlots",
                   "value": "1",
                   "target": "1",
-                  "scaling": {}
+                  "scaling": {
+                    "mode": "level",
+                    "formula": ""
+                  }
                 }
               ],
               "scaling": {
-                "allowed": false,
-                "max": ""
+                "allowed": true,
+                "max": "9"
               },
               "spellSlot": true
             },
@@ -746,6 +795,54 @@
               "prompt": false,
               "visible": false
             }
+          },
+          "dCE7bcqGLS3bRN7v": {
+            "_id": "dCE7bcqGLS3bRN7v",
+            "type": "forward",
+            "name": "Чернильное облако (Магия договора)",
+            "sort": 100001,
+            "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+            "activity": {
+              "id": "nXNwHun3BjOe0H09"
+            },
+            "activation": {
+              "type": "reaction",
+              "value": 1,
+              "condition": "Вы получаете урон",
+              "override": false
+            },
+            "consumption": {
+              "spellSlot": false,
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "spells.pact.value",
+                  "value": "1",
+                  "scaling": {}
+                }
+              ]
+            },
+            "visibility": {
+              "identifier": "warlock",
+              "level": {
+                "min": 1,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "flags": {
+              "spikependium": {
+                "pact": {
+                  "minimum": 1
+                }
+              }
+            }
           }
         },
         "properties": [],
@@ -773,7 +870,63 @@
       "_key": "!actors.items!aBDOhVbvaEc9OOUb.MeyzHXdWdpzdiSSC"
     }
   ],
-  "effects": [],
+  "effects": [
+    {
+      "_id": "V6UQhynSx5hYeu4q",
+      "name": "Характеристики титана",
+      "img": "icons/creatures/tentacles/tentacles-octopus-black-pink.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.value",
+            "value": "@abilities.wis.value",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "qpQCtJycTFZh5XiQ"
+          },
+          {
+            "key": "system.abilities.dex.value",
+            "value": "@abilities.wis.value",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Ct9XRA8MRrQrSWTV"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.effects!aBDOhVbvaEc9OOUb.V6UQhynSx5hYeu4q"
+    }
+  ],
   "folder": "hVWaqnDXVg7pUNNY",
   "sort": 0,
   "ownership": {

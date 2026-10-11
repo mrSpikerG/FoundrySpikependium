@@ -5,7 +5,7 @@
   "img": "icons/skills/wounds/injury-pain-body-orange.webp",
   "system": {
     "description": {
-      "value": "<p>Когда вы бросаете свою кость раны и выбрасываете 6, вы можете применить один из следующих эффектов.</p><p><strong>Гноение Минауроса.</strong> Из раны извергается едкий гной. Каждое существо в пределах эманации с радиусом 5 футов, исходящей от цели, получает урон кислотой, равный вашему модификатору Телосложения, а цель получает состояние &Reference[poisoned]{отравленный} до начала своего следующего хода.</p><p><strong>Разрыв Кании.</strong> Рана разрывается всплеском энергии магии. Цель получает урон силовым полем, равный вашему модификатору Телосложения.</p><p><strong>Стигийская гангрена.</strong> Из раны распространяется инфернальный иней. Цель получает урон холодом, равный вашему модификатору Телосложения, и не может совершать реакции до начала своего следующего хода.</p>",
+      "value": "<p>Когда вы бросаете свою кость раны и выбрасываете 6, вы можете применить один из следующих эффектов.</p><p><strong>Гноение Минауроса.</strong> Из раны извергается едкий гной. Каждое существо в пределах эманации с радиусом 5 футов, исходящей от цели, получает урон кислотой, равный вашему модификатору Телосложения, а цель получает состояние &Reference[poisoned]{отравленный} до начала своего следующего хода.</p><p><strong>Разрыв Кании.</strong> Рана разрывается всплеском энергии магии. Цель получает урон силовым полем, равный вашему модификатору Телосложения.</p><p><strong>Стигийская гангрена.</strong> Из раны распространяется инфернальный иней. Цель получает урон холодом, равный вашему модификатору Телосложения, и не может совершать реакции до начала своего следующего хода.</p><h3>Действия</h3><ul><li>[[/item activity=xPk45VXxnO3TUSmT]]{Гноение Минауроса} · [[/damage activity=xPk45VXxnO3TUSmT]]{Бросок урона}</li><li>[[/item activity=H74kdIZJmO6g6G0T]]{Гноение Минауроса: отравить цель раны}</li><li>[[/item activity=ON4hBteIDhRXYIuB]]{Разрыв Кании} · [[/damage activity=ON4hBteIDhRXYIuB]]{Бросок урона}</li><li>[[/item activity=wsrr07TNGiu2YAEN]]{Стигийская гангрена} · [[/damage activity=wsrr07TNGiu2YAEN]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -131,12 +131,95 @@
           ]
         }
       },
+      "H74kdIZJmO6g6G0T": {
+        "_id": "H74kdIZJmO6g6G0T",
+        "type": "utility",
+        "name": "Гноение Минауроса: отравить цель раны",
+        "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "На кости раны выпало 6; только цель раны",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "puoRZCeBNU37Echo"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
       "ON4hBteIDhRXYIuB": {
         "_id": "ON4hBteIDhRXYIuB",
         "type": "damage",
         "name": "Разрыв Кании",
         "img": "icons/skills/wounds/injury-pain-body-orange.webp",
-        "sort": 200000,
+        "sort": 300000,
         "activation": {
           "type": "special",
           "value": null,
@@ -234,7 +317,7 @@
         "type": "damage",
         "name": "Стигийская гангрена",
         "img": "icons/skills/wounds/injury-pain-body-orange.webp",
-        "sort": 300000,
+        "sort": 400000,
         "activation": {
           "type": "special",
           "value": null,
@@ -332,7 +415,48 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "puoRZCeBNU37Echo",
+      "name": "Гноение Минауроса: отравить цель раны",
+      "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetStart",
+        "expired": false
+      },
+      "description": "<p>Когда вы бросаете свою кость раны и выбрасываете 6, вы можете применить один из следующих эффектов.</p><p><strong>Гноение Минауроса.</strong> Из раны извергается едкий гной. Каждое существо в пределах эманации с радиусом 5 футов, исходящей от цели, получает урон кислотой, равный вашему модификатору Телосложения, а цель получает состояние &Reference[poisoned]{отравленный} до начала своего следующего хода.</p><p><strong>Разрыв Кании.</strong> Рана разрывается всплеском энергии магии. Цель получает урон силовым полем, равный вашему модификатору Телосложения.</p><p><strong>Стигийская гангрена.</strong> Из раны распространяется инфернальный иней. Цель получает урон холодом, равный вашему модификатору Телосложения, и не может совершать реакции до начала своего следующего хода.</p>",
+      "origin": null,
+      "statuses": [
+        "poisoned"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5ddPx6mCpEyMg6dG.puoRZCeBNU37Echo"
+    }
+  ],
   "folder": "P63sQnzKEzpp503n",
   "sort": 0,
   "ownership": {

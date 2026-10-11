@@ -1,0 +1,953 @@
+{
+  "_id": "7kom7eJYwryOd00h",
+  "name": "Leviathan (Gargantuan)",
+  "type": "npc",
+  "img": "icons/creatures/tentacles/tentacles-octopus-black-pink.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 16,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 16,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calcs": [],
+        "flat": 10,
+        "override": null,
+        "formulas": [
+          {
+            "formula": "10 + @abilities.wis.mod",
+            "label": "Естественный доспех",
+            "armored": null,
+            "shielded": null
+          }
+        ]
+      },
+      "hp": {
+        "value": 1,
+        "max": 1,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": ""
+      },
+      "movement": {
+        "speeds": {
+          "walk": "40",
+          "swim": "40"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": 60,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "wis"
+    },
+    "details": {
+      "biography": {
+        "value": "<p><strong>КД</strong> 10 + ваш модификатор Мудрости.</p><p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> автоматически равны вашей Мудрости благодаря эффекту формы. Телосложение, Интеллект, Мудрость и Харизма сохраняются. Размер выбирается при превращении: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>",
+        "public": ""
+      },
+      "alignment": "Мировоззрение не меняется",
+      "type": {
+        "value": "monstrosity",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0,
+      "habitat": {
+        "custom": "",
+        "value": []
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "traits": {
+      "size": "grg",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": "ваше знание языков не изменяется",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "UA-VO",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Левиафан (Громадный)",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": 1,
+    "texture": {
+      "src": "icons/creatures/tentacles/tentacles-octopus-black-pink.webp"
+    },
+    "width": 4,
+    "height": 4
+  },
+  "items": [
+    {
+      "_id": "5mh4PwVei7cHJV2i",
+      "name": "Амфибия",
+      "type": "feat",
+      "img": "icons/magic/water/bubbles-air-water-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>Вы можете дышать воздухом и водой.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "UA-VO",
+          "page": "4",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7kom7eJYwryOd00h.5mh4PwVei7cHJV2i"
+    },
+    {
+      "_id": "pa74xmWKRH7kQfXq",
+      "name": "Токсичное зловоние (уровень друида 10+)",
+      "type": "feat",
+      "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
+      "system": {
+        "description": {
+          "value": "<p><em>Спасбросок Телосложения:</em> Сл. равна вашей Сл. спасброска заклинаний, существо на ваш выбор, когда начинает свой ход в пределах эманации с радиусом 10 футов, исходящей от вас. <em>Провал:</em> [[/damage 2d4 type=poison]]{2к4} урона ядом, и цель отравлена до начала своего следующего хода.</p><h3>Действия</h3><ul><li>[[/item activity=VNBgTkrCREw2pBtg]]{Применить} · [[/damage activity=VNBgTkrCREw2pBtg]]{Бросок урона} · [[/save activity=VNBgTkrCREw2pBtg]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "UA-VO",
+          "page": "4",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "VNBgTkrCREw2pBtg": {
+            "_id": "VNBgTkrCREw2pBtg",
+            "type": "save",
+            "name": "",
+            "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "special",
+              "value": null,
+              "condition": "Существо начинает ход в 10 футах",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "2aRcEHO0XSPXM3ir",
+                "onSave": false
+              }
+            ],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "radius",
+                "size": "10",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "enemy",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "druid",
+              "level": {
+                "min": 10,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 2,
+                  "denomination": 4,
+                  "bonus": "",
+                  "types": [
+                    "poison"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": [
+                "con"
+              ],
+              "dc": {
+                "calculation": "spellcasting",
+                "formula": ""
+              },
+              "bonus": ""
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "2aRcEHO0XSPXM3ir",
+          "name": "Токсичное зловоние (уровень друида 10+)",
+          "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": "targetStart",
+            "expired": false
+          },
+          "description": "<p><em>Спасбросок Телосложения:</em> Сл. равна вашей Сл. спасброска заклинаний, существо на ваш выбор, когда начинает свой ход в пределах эманации с радиусом 10 футов, исходящей от вас. <em>Провал:</em> [[/damage 2d4 type=poison]]{2к4} урона ядом, и цель отравлена до начала своего следующего хода.</p>",
+          "origin": null,
+          "statuses": [
+            "poisoned"
+          ],
+          "tint": "#ffffff",
+          "flags": {},
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!7kom7eJYwryOd00h.pa74xmWKRH7kQfXq.2aRcEHO0XSPXM3ir"
+        }
+      ],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7kom7eJYwryOd00h.pa74xmWKRH7kQfXq"
+    },
+    {
+      "_id": "3dd84Qrr2OcXcVFX",
+      "name": "Мультиатака (уровень друида 5+)",
+      "type": "feat",
+      "img": "icons/skills/melee/weapons-crossed-swords-white-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>Вы совершаете две атаки Разрывание.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "UA-VO",
+          "page": "4",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7kom7eJYwryOd00h.3dd84Qrr2OcXcVFX"
+    },
+    {
+      "_id": "MdL0R0FQyg9DmBOq",
+      "name": "Разрывание",
+      "type": "feat",
+      "img": "icons/creatures/claws/claw-curved-jagged-gray.webp",
+      "system": {
+        "description": {
+          "value": "<p><em>Рукопашная атака:</em> бонус равен вашему модификатору атаки заклинанием, досягаемость 10 фт. <em>Попадание:</em> [[/r 1d8]]{1к8} + ваш модификатор Мудрости дробящего урона.</p><h3>Действия</h3><ul><li>[[/item activity=AegMvJE21GQRAsiX]]{Атаковать} · [[/damage activity=AegMvJE21GQRAsiX]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "UA-VO",
+          "page": "4",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "AegMvJE21GQRAsiX": {
+            "_id": "AegMvJE21GQRAsiX",
+            "type": "attack",
+            "name": "",
+            "img": "icons/creatures/claws/claw-curved-jagged-gray.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "wis",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "spell"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 1,
+                  "denomination": 8,
+                  "bonus": "@abilities.wis.mod",
+                  "types": [
+                    "bludgeoning"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7kom7eJYwryOd00h.MdL0R0FQyg9DmBOq"
+    },
+    {
+      "_id": "N3E6KdtKCLJdtGJ7",
+      "name": "Чернильное облако",
+      "type": "feat",
+      "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+      "system": {
+        "description": {
+          "value": "<p><em>Триггер:</em> вы получаете урон. <em>Ответ:</em> вы тратите ячейку заклинания 1+ уровня и выпускаете чернильное облако, которое заполняет куб со стороной 15 футов с центром на вас, после чего вы перемещаетесь вплоть до своей скорости. Куб является сильно заслонённой местностью. Он длится 1 минуту или пока сильное течение или ветер (например, созданный заклинанием Порыв ветра) не рассеет его.</p><h3>Действия</h3><ul><li>[[/item activity=nXNwHun3BjOe0H09]]{Использовать}</li><li>[[/item activity=dCE7bcqGLS3bRN7v]]{Чернильное облако (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "UA-VO",
+          "page": "4",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "nXNwHun3BjOe0H09": {
+            "_id": "nXNwHun3BjOe0H09",
+            "type": "utility",
+            "name": "",
+            "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "reaction",
+              "value": 1,
+              "condition": "Вы получаете урон",
+              "override": true
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "spellSlots",
+                  "value": "1",
+                  "target": "1",
+                  "scaling": {
+                    "mode": "level",
+                    "formula": ""
+                  }
+                }
+              ],
+              "scaling": {
+                "allowed": true,
+                "max": "9"
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "special": "",
+              "override": true,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "cube",
+                "size": "15",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          },
+          "dCE7bcqGLS3bRN7v": {
+            "_id": "dCE7bcqGLS3bRN7v",
+            "type": "forward",
+            "name": "Чернильное облако (Магия договора)",
+            "sort": 100001,
+            "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+            "activity": {
+              "id": "nXNwHun3BjOe0H09"
+            },
+            "activation": {
+              "type": "reaction",
+              "value": 1,
+              "condition": "Вы получаете урон",
+              "override": false
+            },
+            "consumption": {
+              "spellSlot": false,
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "spells.pact.value",
+                  "value": "1",
+                  "scaling": {}
+                }
+              ]
+            },
+            "visibility": {
+              "identifier": "warlock",
+              "level": {
+                "min": 1,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "flags": {
+              "spikependium": {
+                "pact": {
+                  "minimum": 1
+                }
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7kom7eJYwryOd00h.N3E6KdtKCLJdtGJ7"
+    }
+  ],
+  "effects": [
+    {
+      "_id": "NHMQPUGuDxTsWNcF",
+      "name": "Характеристики титана",
+      "img": "icons/creatures/tentacles/tentacles-octopus-black-pink.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.value",
+            "value": "@abilities.wis.value",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "a47dS5AQYze1O423"
+          },
+          {
+            "key": "system.abilities.dex.value",
+            "value": "@abilities.wis.value",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "1HkCSgc9rkGJIQ6A"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.effects!7kom7eJYwryOd00h.NHMQPUGuDxTsWNcF"
+    }
+  ],
+  "folder": "hVWaqnDXVg7pUNNY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:titan-leviathan-gargantuan",
+      "originalName": "Leviathan (Gargantuan)"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!7kom7eJYwryOd00h"
+}

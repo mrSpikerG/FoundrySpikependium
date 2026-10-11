@@ -5,7 +5,7 @@
   "img": "icons/magic/control/debuff-energy-hold-levitate-pink.webp",
   "system": {
     "description": {
-      "value": "<p>Ваша магия временно изолирует цель на безопасном демиплане. Существо, по которому вы попали, получает дополнительный урон психической энергией, равный 1 броску вашей кости Арканного выстрела, и должно преуспеть в спасброске Харизмы, иначе будет изгнано. Пока оно изгнано, существо имеет состояние &Reference[incapacitated]{недееспособный} и скорость 0. В конце своего следующего хода цель вновь появляется в покинутом ею месте или, если то место занято, в ближайшем свободном пространстве.</p>",
+      "value": "<p>Ваша магия временно изолирует цель на безопасном демиплане. Существо, по которому вы попали, получает дополнительный урон психической энергией, равный 1 броску вашей кости Арканного выстрела, и должно преуспеть в спасброске Харизмы, иначе будет изгнано. Пока оно изгнано, существо имеет состояние &Reference[incapacitated]{недееспособный} и скорость 0. В конце своего следующего хода цель вновь появляется в покинутом ею месте или, если то место занято, в ближайшем свободном пространстве.</p><h3>Действия</h3><ul><li>[[/item activity=1KplUNZAEAKCLMrz]]{Применить} · [[/damage activity=1KplUNZAEAKCLMrz]]{Бросок урона} · [[/save activity=1KplUNZAEAKCLMrz]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -71,7 +71,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "3x1RanvBTBcsA1UT",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -113,7 +118,7 @@
           "requireMagic": false
         },
         "damage": {
-          "onSave": "none",
+          "onSave": "full",
           "parts": [
             {
               "custom": {
@@ -150,7 +155,57 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "3x1RanvBTBcsA1UT",
+      "name": "Изгоняющий выстрел",
+      "img": "icons/magic/control/debuff-energy-hold-levitate-pink.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.multiplier",
+            "value": "0",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "BjLAnxUnzAEvn2bZ"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetEnd",
+        "expired": false
+      },
+      "description": "<p>Ваша магия временно изолирует цель на безопасном демиплане. Существо, по которому вы попали, получает дополнительный урон психической энергией, равный 1 броску вашей кости Арканного выстрела, и должно преуспеть в спасброске Харизмы, иначе будет изгнано. Пока оно изгнано, существо имеет состояние &Reference[incapacitated]{недееспособный} и скорость 0. В конце своего следующего хода цель вновь появляется в покинутом ею месте или, если то место занято, в ближайшем свободном пространстве.</p>",
+      "origin": null,
+      "statuses": [
+        "incapacitated"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ov9k03uxvQZ0W0Gf.3x1RanvBTBcsA1UT"
+    }
+  ],
   "folder": "WFBGmk3FrZi2OT64",
   "sort": 0,
   "ownership": {

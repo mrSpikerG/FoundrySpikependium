@@ -5,7 +5,7 @@
   "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
   "system": {
     "description": {
-      "value": "<p>Бонусным действием вы магически расширяете своё сознание, чтобы увидеть возможности будущего. В течение 1 часа вы получаете преимущество на тесты к20. После применения этого умения вы не можете применить его снова до завершения продолжительного отдыха. Вы также можете восстановить использование этого умения, потратив ячейку заклинаний 6 уровня или выше (не требует действия).</p>",
+      "value": "<p>Бонусным действием вы магически расширяете своё сознание, чтобы увидеть возможности будущего. В течение 1 часа вы получаете преимущество на тесты к20. После применения этого умения вы не можете применить его снова до завершения продолжительного отдыха. Вы также можете восстановить использование этого умения, потратив ячейку заклинаний 6 уровня или выше (не требует действия).</p><h3>Действия</h3><ul><li>[[/item activity=Cb5M1wBsmNT5WVmb]]{Изменить форму}</li><li>[[/item activity=gIWbNPBjWPXILPOS]]{Восстановить применение (ячейка 6+)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -28,14 +28,19 @@
       "items": []
     },
     "uses": {
-      "max": "",
+      "max": "1",
       "spent": 0,
-      "recovery": []
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
     },
     "activities": {
       "Cb5M1wBsmNT5WVmb": {
         "_id": "Cb5M1wBsmNT5WVmb",
-        "type": "utility",
+        "type": "transform",
         "name": "",
         "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
         "sort": 100000,
@@ -48,7 +53,7 @@
         "consumption": {
           "targets": [
             {
-              "type": "activityUses",
+              "type": "itemUses",
               "value": "1",
               "target": "",
               "scaling": {}
@@ -103,13 +108,8 @@
         },
         "uses": {
           "spent": 0,
-          "recovery": [
-            {
-              "period": "lr",
-              "type": "recoverAll"
-            }
-          ],
-          "max": "1"
+          "recovery": [],
+          "max": ""
         },
         "visibility": {
           "identifier": "",
@@ -121,22 +121,24 @@
           "requireIdentification": false,
           "requireMagic": false
         },
-        "roll": {
-          "formula": "",
-          "name": "",
-          "prompt": false,
-          "visible": false
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
         }
       },
       "gIWbNPBjWPXILPOS": {
         "_id": "gIWbNPBjWPXILPOS",
         "type": "utility",
-        "name": "Применить (ячейка 6+)",
+        "name": "Восстановить применение (ячейка 6+)",
         "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
         "sort": 200000,
         "activation": {
-          "type": "bonus",
-          "value": 1,
+          "type": "special",
+          "value": null,
           "condition": "",
           "override": true
         },
@@ -146,12 +148,21 @@
               "type": "spellSlots",
               "value": "1",
               "target": "6",
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
               "scaling": {}
             }
           ],
           "scaling": {
-            "allowed": false,
-            "max": ""
+            "allowed": true,
+            "max": "4"
           },
           "spellSlot": true
         },
@@ -160,22 +171,18 @@
           "value": ""
         },
         "duration": {
-          "value": "1",
-          "units": "hour",
+          "value": "",
+          "units": "inst",
           "special": "",
-          "override": true,
+          "override": false,
           "concentration": false
         },
-        "effects": [
-          {
-            "_id": "tNxZBjqMQstHEXMw"
-          }
-        ],
+        "effects": [],
         "range": {
           "value": "",
-          "units": "self",
+          "units": "",
           "special": "",
-          "override": true
+          "override": false
         },
         "target": {
           "template": {
@@ -188,13 +195,13 @@
             "units": "ft"
           },
           "affects": {
-            "count": "1",
-            "type": "self",
+            "count": "",
+            "type": "",
             "choice": false,
             "special": ""
           },
           "prompt": true,
-          "override": true
+          "override": false
         },
         "uses": {
           "spent": 0,

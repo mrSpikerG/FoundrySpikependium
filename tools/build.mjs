@@ -8,6 +8,8 @@ import { fileURLToPath } from "node:url";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { MODULE_ID, BOOKS, getMissingIcons, getMissingRefs } from "./lib/core.mjs";
 import { PACKS, REGISTRY, FOLDERS, EN_NAMES, uuidOf } from "./lib/docs.mjs";
+import { enrichDocument } from "./lib/mechanics.mjs";
+import { DRAGONMARK_TABLES } from "../src/content/feats.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = ["spells", "spells-psion-update", "creatures", "creatures-2", "artificer", "psion", "subclasses-artificer",
@@ -44,7 +46,7 @@ for ( const pack of Object.keys(PACKS) ) fs.mkdirSync(path.join(SRC, pack), { re
 const slug = s => s.toLowerCase().replace(/[^a-z0-9а-яё]+/gi, "-").replace(/^-|-$/g, "").slice(0, 40);
 
 for ( const [key, { pack, doc }] of REGISTRY ) {
-  const data = resolveRefs(doc);
+  const data = enrichDocument(resolveRefs(doc));
   // Базовое имя — оригинальное английское (Babele переводит его на русский), если оно известно.
   const en = data.flags?.[MODULE_ID]?.originalName;
   if ( en ) data.name = en;
@@ -86,13 +88,17 @@ for ( const [pack, cfg] of Object.entries(PACKS) ) {
 /* -------------------------------------------- */
 
 const spellLists = [];
+const wildTalents = [];
 for ( const [key, { doc }] of REGISTRY ) {
+  if (doc.system?.type?.subtype === "wildTalent") wildTalents.push(`feat:${doc.system.identifier}`);
   if ( !doc.pages ) continue;
   doc.pages.forEach(p => { if ( p.type === "spells" ) spellLists.push(`${uuidOf(key)}.JournalEntryPage.${p._id}`); });
 }
 fs.writeFileSync(path.join(ROOT, "scripts/generated.mjs"),
   `// Файл создаётся сборщиком (tools/build.mjs). Не редактируйте вручную.\n`
   + `export const SPELL_LISTS = ${JSON.stringify(spellLists, null, 2)};\n\n`
+  + `export const WILD_TALENTS = ${JSON.stringify(wildTalents, null, 2)};\n\n`
+  + `export const DRAGONMARK_TABLES = ${JSON.stringify(DRAGONMARK_TABLES, null, 2)};\n\n`
   + `export const SOURCE_BOOKS = ${JSON.stringify(BOOKS, null, 2)};\n`);
 
 /* -------------------------------------------- */

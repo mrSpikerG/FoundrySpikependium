@@ -106,7 +106,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>КД</strong> 8 + ваш модификатор Мудрости.</p><p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> в этой форме равны вашему значению Мудрости — <em>в Foundry выставьте их вручную после превращения</em>. Интеллект, Мудрость и Харизма сохраняются; Телосложение выставьте равным исходному вручную. Размер: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>",
+        "value": "<p><strong>КД</strong> 8 + ваш модификатор Мудрости.</p><p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> автоматически равны вашей Мудрости благодаря эффекту формы. Телосложение, Интеллект, Мудрость и Харизма сохраняются. Размер выбирается при превращении: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>",
         "public": ""
       },
       "alignment": "Мировоззрение не меняется",
@@ -357,7 +357,7 @@
       "img": "icons/creatures/claws/claw-curved-jagged-gray.webp",
       "system": {
         "description": {
-          "value": "<p><em>Рукопашная атака:</em> бонус равен вашему модификатору атаки заклинанием, досягаемость 10 фт. <em>Попадание:</em> 1к8 + ваш модификатор Мудрости колющего урона.</p>",
+          "value": "<p><em>Рукопашная атака:</em> бонус равен вашему модификатору атаки заклинанием, досягаемость 10 фт. <em>Попадание:</em> [[/r 1d8]]{1к8} + ваш модификатор Мудрости колющего урона.</p><h3>Действия</h3><ul><li>[[/item activity=80ncnAmAojxPBbXI]]{Атаковать} · [[/damage activity=80ncnAmAojxPBbXI]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -527,7 +527,7 @@
       "img": "icons/magic/nature/plant-seed-hands-glow-yellow.webp",
       "system": {
         "description": {
-          "value": "<p>Вы тратите ячейку заклинания 1+ уровня и испускаете облако целительной пыльцы, которое может восстановить 2к8 + 5 × уровень потраченной ячейки заклинания хитов. Выберите любое число существ в пределах 15 футов от себя и распределите эти хиты между ними.</p>",
+          "value": "<p>Вы тратите ячейку заклинания 1+ уровня и испускаете облако целительной пыльцы, которое может восстановить [[/r 2d8+5]]{2к8 + 5} × уровень потраченной ячейки заклинания хитов. Выберите любое число существ в пределах 15 футов от себя и распределите эти хиты между ними.</p><h3>Действия</h3><ul><li>[[/item activity=YfAIWNnxHFY87NOL]]{Лечение} · [[/heal activity=YfAIWNnxHFY87NOL]]{Бросок лечения}</li><li>[[/item activity=axWCGG2oD3IDdOOp]]{Бодрящая пыльца (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -573,12 +573,15 @@
                   "type": "spellSlots",
                   "value": "1",
                   "target": "1",
-                  "scaling": {}
+                  "scaling": {
+                    "mode": "level",
+                    "formula": ""
+                  }
                 }
               ],
               "scaling": {
                 "allowed": true,
-                "max": ""
+                "max": "9"
               },
               "spellSlot": true
             },
@@ -651,6 +654,54 @@
                 "formula": ""
               }
             }
+          },
+          "axWCGG2oD3IDdOOp": {
+            "_id": "axWCGG2oD3IDdOOp",
+            "type": "forward",
+            "name": "Бодрящая пыльца (Магия договора)",
+            "sort": 100001,
+            "img": "icons/magic/nature/plant-seed-hands-glow-yellow.webp",
+            "activity": {
+              "id": "YfAIWNnxHFY87NOL"
+            },
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "spellSlot": false,
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "spells.pact.value",
+                  "value": "1",
+                  "scaling": {}
+                }
+              ]
+            },
+            "visibility": {
+              "identifier": "warlock",
+              "level": {
+                "min": 1,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "flags": {
+              "spikependium": {
+                "pact": {
+                  "minimum": 1
+                }
+              }
+            }
           }
         },
         "properties": [],
@@ -678,7 +729,63 @@
       "_key": "!actors.items!DkzrLWLhDzIM0orW.0rs8sLOT5mMLMEZm"
     }
   ],
-  "effects": [],
+  "effects": [
+    {
+      "_id": "WB6wkxKkmsczeWqC",
+      "name": "Характеристики титана",
+      "img": "icons/creatures/invertebrates/wasp-swarm-attack.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.value",
+            "value": "@abilities.wis.value",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "oMEUE6KQMLsh3wT6"
+          },
+          {
+            "key": "system.abilities.dex.value",
+            "value": "@abilities.wis.value",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "C6BA17E1ZPo5zT3Z"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.effects!DkzrLWLhDzIM0orW.WB6wkxKkmsczeWqC"
+    }
+  ],
   "folder": "hVWaqnDXVg7pUNNY",
   "sort": 0,
   "ownership": {

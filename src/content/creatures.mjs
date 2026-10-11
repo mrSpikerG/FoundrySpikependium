@@ -1,5 +1,5 @@
 // Существа: призываемые заклинаниями и спутники подклассов.
-import { attack, save, utility, dmg, uses, useSelf } from "../../tools/lib/core.mjs";
+import { attack, save, utility, damage, effect, dmg, uses, useSelf } from "../../tools/lib/core.mjs";
 import { npc, folder } from "../../tools/lib/docs.mjs";
 
 const FOUNDRY_NOTE = "<p><em>Примечание для Foundry: значения, зависящие от уровня заклинания или уровня персонажа, подставляются действием призыва автоматически.</em></p>";
@@ -61,7 +61,7 @@ export function define() {
   });
 
   // --- Реанимированный спутник ---------------------------------------------
-  npc({
+  const reanimated = {
     key: "actor:reanimated-companion", name: "Реанимированный спутник", en: "Reanimated Companion",
     book: "UA-HS", page: 2, folder: fComp, img: "icons/magic/death/hand-dirt-undead-zombie",
     size: "sm", creatureType: "undead", alignment: "Нейтральный", ac: 10, hp: 4, hpFormula: "1d6",
@@ -79,7 +79,41 @@ export function define() {
         desc: "*Рукопашная атака:* бонус равен вашему модификатору атаки заклинанием, досягаемость 5 фт. *Попадание:* 1к4 + 2 + ваш модификатор Интеллекта урона некротической энергией, и цель не может совершать провоцированные атаки до начала своего следующего хода.",
         acts: [attack("actor:reanimated:strike", { activation: "action", range: 5, attackType: "melee", classification: "spell", damage: [dmg("1d4 + 2", "necrotic")] })] }
     ]
-  });
+  };
+  npc(reanimated);
+  for (const arcane of ["conduit", "fury"]) for (const body of ["", "big-medium", "big-large", "thin", "wet"]) {
+    const labels = { conduit: "Магический проводник", fury: "Ярость", "big-medium": "Крупный: Средний",
+      "big-large": "Крупный: Большой", thin: "Тощий", wet: "Влажный" };
+    const variant = structuredClone(reanimated);
+    variant.key += `:${arcane}${body ? `:${body}` : ""}`;
+    variant.name += ` (${[arcane, body].filter(Boolean).map(v => labels[v]).join("; ")})`;
+    delete variant.en;
+    variant.page = 2;
+    if (body.startsWith("big-")) {
+      variant.size = body === "big-large" ? "lg" : "med";
+      variant.tokenSize = body === "big-large" ? 2 : 1;
+      variant.items[2].desc += " При попадании можно отбросить цель размера Большой или меньше на 10 футов.";
+    }
+    if (body === "thin") {
+      variant.movement = { walk: 45, climb: 45 };
+      const fear = effect("reanimated:thin:fear", { name: "Испуг спутника", transfer: false, statuses: ["frightened"], expiry: "turnStart" });
+      variant.items.push({ name: "Тощий: пугающая эманация", effects: [fear],
+        desc: "В начале хода выбранного существа в пределах 10 футов: спасбросок Мудрости, при провале испуг до начала его следующего хода. Спутник лазает по потолкам без проверки.",
+        acts: [save("reanimated:thin:fear", { activation: "special", range: 10, count: 1, affects: "creature", ability: "wis", effects: [{ _id: fear._id, onSave: false }] })] });
+    }
+    if (body === "wet") {
+      variant.movement.swim = 30;
+      variant.items.push({ name: "Влажный: кислотный ответ", desc: "Попавшее по спутнику существо в пределах 10 футов получает урон кислотой, равный модификатору Интеллекта создателя.",
+        acts: [damage("reanimated:wet:acid", { activation: "special", range: 10, count: 1, affects: "creature", damage: [dmg("0", "acid")] })] });
+    }
+    if (arcane === "fury") variant.items[2].acts.push(attack("reanimated:fury:second", {
+      name: "Ярость: второй удар", activation: "special", condition: "Получен приказ выполнить Ужасающий удар", range: 5,
+      attackType: "melee", classification: "spell", damage: [dmg("1d4 + 2", "necrotic")]
+    }));
+    else variant.items.push({ name: "Магический проводник", desc: "Заклинания можно накладывать из пространства спутника, используя собственные чувства. Раз в ход: бонус к одному броску урона заклинания изобретателя школы воплощения или некромантии, если создатель находится в пределах 120 футов.",
+      acts: [damage("reanimated:conduit:bonus", { activation: "special", condition: "Раз в ход, урон воплощения или некромантии изобретателя; создатель в пределах 120 футов", damage: [dmg("0")] })] });
+    npc(variant);
+  }
 
   // --- Дух псионики (три сущности) -----------------------------------------
   const spiritBase = (key, variant, o) => npc({

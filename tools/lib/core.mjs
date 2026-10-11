@@ -116,6 +116,7 @@ export const useItem = (target, n = 1) => ({ type: "itemUses", value: String(n),
 export const useActivity = (n = 1) => ({ type: "activityUses", value: String(n), target: "", scaling: {} });
 /** Расход ячейки заклинания определённого уровня (минимального). */
 export const useSlot = (level, n = 1) => ({ type: "spellSlots", value: String(n), target: String(level), scaling: {} });
+export const usePact = (n = 1) => ({ type: "attribute", value: String(n), target: "spells.pact.value", scaling: {} });
 /** Расход костей хитов. */
 export const useHitDice = (n = 1) => ({ type: "hitDice", value: String(n), target: "smallest", scaling: {} });
 /** Расход очков чародейства (ресурс умения «Источник магии»). */
@@ -160,6 +161,7 @@ export function dmg(formula, ...rest) {
  */
 function activityBase(type, key, o = {}) {
   const activation = o.activation ?? "";
+  const slot = o.consume?.find(t => t.type === "spellSlots" && Number(t.value) > 0);
   const timed = activation && !["special", ""].includes(activation);
   const template = o.template ?? {};
   const rangeUnits = o.rangeUnits ?? (o.range ? "ft" : (o.self ? "self" : (o.touch ? "touch" : "")));
@@ -174,8 +176,10 @@ function activityBase(type, key, o = {}) {
       condition: o.condition ?? "", override: o.activation != null || o.condition != null
     },
     consumption: {
-      targets: o.consume ?? [],
-      scaling: { allowed: !!o.scaling, max: o.scalingMax ?? "" },
+      targets: (o.consume ?? []).map(t => t.type === "spellSlots" && Number(t.value) > 0
+        ? { ...t, scaling: { mode: "level", formula: "" } } : t),
+      // Диалог dnd5e показывает приращение + 1, а не само приращение.
+      scaling: { allowed: !!o.scaling || !!slot, max: o.scalingMax ?? (slot ? String(10 - Number(slot.target)) : "") },
       spellSlot: o.spellSlot ?? true
     },
     description: { chatFlavor: o.flavor ?? "", value: "" },
@@ -199,7 +203,7 @@ function activityBase(type, key, o = {}) {
     },
     uses: { spent: 0, recovery: o.usesRecovery ?? [], max: o.usesMax != null ? String(o.usesMax) : "" },
     visibility: {
-      identifier: "", level: { min: o.minLevel ?? null, max: o.maxLevel ?? null },
+      identifier: o.identifier ?? "", level: { min: o.minLevel ?? null, max: o.maxLevel ?? null },
       requireAttunement: !!o.requireAttunement, requireIdentification: false, requireMagic: !!(o.requireMagic ?? o.requireAttunement)
     }
   };
@@ -210,6 +214,13 @@ export function utility(key, o = {}) {
     ...activityBase("utility", key, o),
     roll: { formula: o.roll ?? "", name: o.rollName ?? "", prompt: false, visible: !!o.roll }
   };
+}
+
+export function check(key, o = {}) {
+  return { ...activityBase("check", key, o), check: {
+    ability: o.ability ?? "", associated: o.associated ?? [], bonus: o.bonus ?? "",
+    dc: { calculation: "", formula: o.dc ?? "" }, visible: true
+  } };
 }
 
 export function save(key, o = {}) {
@@ -257,6 +268,11 @@ export function teleport(key, o = {}) {
     ...activityBase("teleport", key, { self: true, ...o }),
     teleport: { override: false, units: "ft", value: String(o.distance ?? "") }
   };
+}
+
+export function form(key, o = {}) {
+  return { ...activityBase("transform", key, { self: true, ...o }), profiles: [], settings: null,
+    transform: { mode: "form", formless: true, customize: false, preset: "" } };
 }
 
 export function cast(key, spellUuid, o = {}) {
@@ -326,7 +342,8 @@ export function effect(key, o = {}) {
     name: o.name,
     img: icon(o.img ?? "icons/svg/upgrade.svg"),
     type: "base",
-    system: { changes: (o.changes ?? []).map((c, i) => ({ ...c, _id: makeId(`change:${key}:${i}`) })) },
+    system: { changes: (o.changes ?? []).map((c, i) => ({ ...c, _id: makeId(`change:${key}:${i}`) })),
+      ...(o.conditions ? { conditions: JSON.stringify(o.conditions) } : {}) },
     disabled: !!o.disabled,
     transfer: o.transfer ?? true,
     duration: {

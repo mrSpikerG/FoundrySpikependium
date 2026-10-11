@@ -1,6 +1,6 @@
 // Черты: метки дракона (UA «Обновление Эберрона») и дикие таланты (UA «Псионик»).
 import {
-  utility, effect, change, uses, LR, useSelf, useHitDice,
+  utility, effect, change, uses, LR, useSelf, useItem, useHitDice,
   advItemGrant, advItemChoice, advASI, spellConfig
 } from "../../tools/lib/core.mjs";
 import { feat, folder, md, spellTable, spellUuid } from "../../tools/lib/docs.mjs";
@@ -123,6 +123,11 @@ const MARKS = [
 ];
 
 const para = ([title, text]) => `**${title}.** ${text}`;
+export const DRAGONMARK_TABLES = Object.fromEntries(MARKS.map(m => [
+  `mark-of-${m.id}`, [...new Set(Object.values(m.table).flat().map(spellUuid).filter(Boolean))]
+]));
+const tableGrant = key => advItemGrant(key, 0, [], { title: "Подготовка драконьих заклинаний", optional: true,
+  spell: spellConfig({ abilities: MENTAL }), hint: "Заклинания таблицы вашей исходной метки. Отсутствующие в SRD добавьте из своей книги." });
 
 function defineMarks() {
   const fMarks = folder("feats", "Метки дракона", { sort: 1000, color: "#5c3d1f" });
@@ -180,10 +185,12 @@ function defineMarks() {
       key: `feat:greater-${m.id}`, folder: fGreater, book: EB, page: m.greaterPage, name: `Усиленная ${m.ru.charAt(0).toLowerCase()}${m.ru.slice(1)}`,
       en: `Greater ${m.en}`, img: m.img, subtype: "general", identifier: `greater-mark-of-${m.id}`, level: 4,
       requirements: `4-й уровень и выше, черта ${m.ru}`,
+      prerequisiteItems: [`feat:mark-of-${m.id}`],
       desc: `Вы получаете следующие эффекты:\n\n**Увеличение характеристики.** Увеличьте одну характеристику по вашему выбору на 1, до максимума 20.\n\n**Улучшенная интуиция.** Когда вы используете умение ${m.intuition[0]} от вашей черты ${m.ru}, вы можете бросать 1к6 вместо 1к4.\n\n${para(m.greater)}`,
       acts: [
         utility(`greater:${m.id}:intuition`, { name: `${m.intuition[0]} (к6)`, activation: "special", roll: "1d6", rollName: "Бонус к проверке", img: m.img }),
-        utility(`greater:${m.id}:mod`, { name: m.greater[0], activation: "special", usesMax: 1, usesRecovery: [LR], consume: [{ type: "activityUses", value: "1", target: "", scaling: {} }] })
+        utility(`greater:${m.id}:mod`, { name: m.greater[0], activation: "special",
+          ...(["handling", "healing", "making", "scribing", "sentinel"].includes(m.id) ? {} : { usesMax: 1, usesRecovery: [LR], consume: [{ type: "activityUses", value: "1", target: "", scaling: {} }] }) })
       ],
       advancement: [advASI(`greater:${m.id}:asi`, undefined, { points: 1, cap: 1, max: 20, title: "Увеличение характеристики" })]
     });
@@ -194,9 +201,11 @@ function defineMarks() {
     key: "feat:greater-aberrant", folder: fGreater, book: EB, page: 13, name: "Усиленная аберрантная метка", en: "Greater Aberrant Mark",
     img: "icons/magic/unholy/hand-marked-pink", subtype: "general", identifier: "greater-aberrant-mark", level: 4,
     requirements: "4-й уровень и выше, черта Аберрантная метка дракона",
+    prerequisiteItems: ["feat:aberrant-dragonmark"],
     uses: uses("max(1, @abilities.con.mod)", LR),
     desc: "Вы получаете следующие эффекты:\n\n**Увеличение характеристики.** Увеличьте свой показатель Телосложения на 1, до максимума 20.\n\n**Улучшенная интуиция.** Когда вы используете умение Аберрантная стойкость от вашей черты Аберрантная метка дракона, вы можете бросать 1к6 вместо 1к4.\n\n**Метка вдохновения.** Когда вы накладываете заговор, вы можете потратить одну из ваших костей хитов и бросить её. Вы получаете временные хиты, равные выпавшему числу, а одно существо по вашему выбору в пределах 30 футов от вас (кроме вас) получает урон силовым полем, равный выпавшему числу.\n\nВы можете использовать этот эффект количество раз, равное вашему модификатору Телосложения (минимум 1 раз), и восстанавливаете все израсходованные использования после продолжительного отдыха.",
-    acts: [utility("greater-aberrant:inspiration", { name: "Метка вдохновения", activation: "special", condition: "Вы накладываете заговор", consume: [useSelf(), useHitDice()] })],
+    acts: [utility("greater-aberrant:inspiration", { name: "Метка вдохновения", activation: "special", condition: "Вы накладываете заговор", consume: [useSelf(), useHitDice()] }),
+      utility("greater-aberrant:fortitude", { name: "Аберрантная стойкость (к6)", activation: "special", condition: "Спасбросок Телосложения", consume: [useItem("feat:aberrant-dragonmark")], roll: "1d6", rollName: "Бонус к спасброску" })],
     advancement: [advASI("greater-aberrant:asi", undefined, { points: 0, fixed: { con: 1 }, cap: 1, max: 20, title: "Увеличение Телосложения" })]
   });
 
@@ -205,10 +214,11 @@ function defineMarks() {
     key: "feat:potent-dragonmark", folder: fGreater, book: EB, page: 15, name: "Мощная метка дракона", en: "Potent Dragonmark",
     img: "icons/magic/symbols/rune-sigil-red-orange", subtype: "general", identifier: "potent-dragonmark", level: 4,
     requirements: "4-й уровень и выше, любая черта метки дракона",
+    prerequisiteItems: ["feat:aberrant-dragonmark", ...MARKS.map(m => `feat:mark-of-${m.id}`)],
     uses: uses(1, { period: "sr", type: "recoverAll" }),
     desc: "Вы получаете следующие эффекты:\n\n**Увеличение характеристики.** Увеличьте одну характеристику, используемую для накладывания заклинаний вашей чертой метки дракона, на 1, до максимума 20.\n\n**Подготовка драконьих заклинаний.** У вас всегда подготовлены заклинания из таблицы вашей черты метки дракона, если таковая имеется.\n\n**Драконья магия.** У вас есть 1 ячейка заклинаний, которую можно использовать для накладывания заклинаний от вашей черты метки дракона. Уровень этой ячейки равен половине вашего уровня (округляется вверх), но не выше 5. Вы восстанавливаете израсходованную ячейку, когда завершаете короткий или продолжительный отдых. Вы можете использовать эту ячейку только для накладывания заклинаний, которые у вас подготовлены благодаря вашей черте метки дракона или умению «Подготовка драконьих заклинаний» этой черты.\n\n*Счётчик использований этой черты — ячейка драконьей магии.*",
-    acts: [utility("potent:slot", { name: "Ячейка драконьей магии", activation: "special", consume: [useSelf()], roll: "min(5, ceil(@details.level / 2))", rollName: "Уровень ячейки" })],
-    advancement: [advASI("potent:asi", undefined, { points: 1, cap: 1, max: 20, locked: ["str", "dex"], title: "Увеличение характеристики" })]
+    acts: [],
+    advancement: [advASI("potent:asi", undefined, { points: 1, cap: 1, max: 20, locked: ["str", "dex"], title: "Увеличение характеристики", hint: "Повышается только характеристика заклинаний вашей метки. Сначала добавьте исходную метку и завершите выбор её заклинательной характеристики. Для меток из сторонних модулей проверьте допустимый выбор вручную." }), tableGrant("potent:table")]
   });
 
   // Дар Сибериса.
@@ -224,6 +234,7 @@ function defineMarks() {
       }, ["Метка", "Заклинание"]),
     advancement: [
       advASI("siberys:asi", undefined, { points: 1, cap: 1, max: 30, title: "Увеличение характеристики" }),
+      tableGrant("siberys:table"),
       advItemChoice("siberys:spell", 0, {
         title: "Искажённая магия", type: "spell", choices: { 0: { count: 1, replacement: false } },
         pool: ["Истинное зрение", "Телепортация", "Превращение в животных", "Регенерация", "Пир героев", "Демиплан", "Уход в иной план", "Знак", "Сокрытие разума", "Проекция", "Власть над погодой", "Лабиринт"].map(spellUuid).filter(Boolean),

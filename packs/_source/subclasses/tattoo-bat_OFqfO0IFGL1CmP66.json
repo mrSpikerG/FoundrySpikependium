@@ -5,7 +5,7 @@
   "img": "icons/creatures/abilities/wing-batlike-white-blue.webp",
   "system": {
     "description": {
-      "value": "<p>Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplDancingLig]{Пляшущие огоньки}. Когда вы тратите 1 очко духа для применения Терпеливой обороны или Поступи ветра, вы получаете слепое зрение в пределах 10 футов на 1 минуту.</p>",
+      "value": "<p>Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplDancingLig]{Пляшущие огоньки}. Когда вы тратите 1 очко духа для применения Терпеливой обороны или Поступи ветра, вы получаете слепое зрение в пределах 10 футов на 1 минуту.</p><h3>Действия</h3><ul><li>[[/item activity=LCI2z9HahlOfkiS4]]{Изменить форму}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -35,7 +35,7 @@
     "activities": {
       "LCI2z9HahlOfkiS4": {
         "_id": "LCI2z9HahlOfkiS4",
-        "type": "utility",
+        "type": "transform",
         "name": "",
         "img": "icons/creatures/abilities/wing-batlike-white-blue.webp",
         "sort": 100000,
@@ -109,11 +109,13 @@
           "requireIdentification": false,
           "requireMagic": false
         },
-        "roll": {
-          "formula": "",
-          "name": "",
-          "prompt": false,
-          "visible": false
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
         }
       }
     },

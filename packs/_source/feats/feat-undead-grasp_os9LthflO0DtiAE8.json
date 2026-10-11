@@ -5,7 +5,7 @@
   "img": "icons/magic/death/hand-withered-gray.webp",
   "system": {
     "description": {
-      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте значение Интеллекта, Мудрости или Харизмы на 1, максимум до 20.</p><p><strong>Парализующее прикосновение.</strong> Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplChillTouch]{Леденящее прикосновение}. Если вы уже знаете его, то изучаете другой заговор на ваш выбор. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этого заклинания (выберите, когда выбираете эту черту).</p><p>Когда вы наносите урон заговором Леденящее прикосновение, вы можете потратить ячейку заклинаний 1+ уровня, чтобы попытаться парализовать цель. Цель получает дополнительно 1к10 некротического урона за каждый уровень потраченной ячейки заклинаний и должна преуспеть в спасброске Телосложения против вашей Сл. спасброска заклинаний, иначе она получает состояние &Reference[paralyzed]{парализованный} до начала вашего следующего хода.</p>",
+      "value": "<p>Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте значение Интеллекта, Мудрости или Харизмы на 1, максимум до 20.</p><p><strong>Парализующее прикосновение.</strong> Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplChillTouch]{Леденящее прикосновение}. Если вы уже знаете его, то изучаете другой заговор на ваш выбор. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этого заклинания (выберите, когда выбираете эту черту).</p><p>Когда вы наносите урон заговором Леденящее прикосновение, вы можете потратить ячейку заклинаний 1+ уровня, чтобы попытаться парализовать цель. Цель получает дополнительно [[/r 1d10]]{1к10} некротического урона за каждый уровень потраченной ячейки заклинаний и должна преуспеть в спасброске Телосложения против вашей Сл. спасброска заклинаний, иначе она получает состояние &Reference[paralyzed]{парализованный} до начала вашего следующего хода.</p><h3>Действия</h3><ul><li>[[/item activity=GNUf9rs2oE68MEXm]]{Применить} · [[/damage activity=GNUf9rs2oE68MEXm]]{Бросок урона} · [[/save activity=GNUf9rs2oE68MEXm]]{Спасбросок цели}</li><li>[[/item activity=YiIVcQsmRtBO5wvu]]{Хватка нежити (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -51,12 +51,15 @@
               "type": "spellSlots",
               "value": "1",
               "target": "1",
-              "scaling": {}
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
             }
           ],
           "scaling": {
             "allowed": true,
-            "max": ""
+            "max": "9"
           },
           "spellSlot": true
         },
@@ -71,7 +74,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "UEvQKN31srfBzio1",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -144,6 +152,54 @@
           },
           "bonus": ""
         }
+      },
+      "YiIVcQsmRtBO5wvu": {
+        "_id": "YiIVcQsmRtBO5wvu",
+        "type": "forward",
+        "name": "Хватка нежити (Магия договора)",
+        "sort": 100001,
+        "img": "icons/magic/death/hand-withered-gray.webp",
+        "activity": {
+          "id": "GNUf9rs2oE68MEXm"
+        },
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Урон заговором Леденящее прикосновение",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 1,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 1
+            }
+          }
+        }
       }
     },
     "properties": [],
@@ -208,7 +264,48 @@
     ],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "UEvQKN31srfBzio1",
+      "name": "Хватка нежити",
+      "img": "icons/magic/death/hand-withered-gray.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceStart",
+        "expired": false
+      },
+      "description": "<p>Вы получаете следующие эффекты:</p><p><strong>Увеличение характеристики.</strong> Увеличьте значение Интеллекта, Мудрости или Харизмы на 1, максимум до 20.</p><p><strong>Парализующее прикосновение.</strong> Вы знаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplChillTouch]{Леденящее прикосновение}. Если вы уже знаете его, то изучаете другой заговор на ваш выбор. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для этого заклинания (выберите, когда выбираете эту черту).</p><p>Когда вы наносите урон заговором Леденящее прикосновение, вы можете потратить ячейку заклинаний 1+ уровня, чтобы попытаться парализовать цель. Цель получает дополнительно [[/r 1d10]]{1к10} некротического урона за каждый уровень потраченной ячейки заклинаний и должна преуспеть в спасброске Телосложения против вашей Сл. спасброска заклинаний, иначе она получает состояние &Reference[paralyzed]{парализованный} до начала вашего следующего хода.</p>",
+      "origin": null,
+      "statuses": [
+        "paralyzed"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!os9LthflO0DtiAE8.UEvQKN31srfBzio1"
+    }
+  ],
   "folder": "ZcAzIyUqI9iJPp1F",
   "sort": 0,
   "ownership": {

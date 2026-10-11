@@ -5,7 +5,7 @@
   "img": "icons/magic/control/silhouette-hold-change-green.webp",
   "system": {
     "description": {
-      "value": "<p>Когда вы применяете Изменчивую форму, её длительность увеличивается до 10 минут, и вы получаете 1 из следующих эффектов на ваш выбор. Эффект действует до окончания Изменчивой формы.</p><p><strong>Каменный эпидермис.</strong> Вы получаете преимущество на спасброски Телосложения для поддержания концентрации. Кроме того, выберите 1 из следующих типов урона: кислотный, дробящий, холодный, огненный, электрический, колющий, ядовитый, рубящий или звуковой. Вы получаете сопротивление выбранному типу урона.</p><p><strong>Совершенный шаг.</strong> Пока вы не носите доспех, вы можете совершать действие рывок бонусным действием, а также получаете скорость лазания и скорость плавания, равные вашей обычной скорости.</p><p><strong>Неестественная гибкость.</strong> Вы получаете бонус +1 к КД, а ваше тело, включая всё снаряжение, становится гибким. Вы можете передвигаться через любое пространство шириной не менее 1 дюйма, а также можете потратить 5 футов перемещения, чтобы освободиться от немагических оков или прекратить состояние &Reference[grappled]{схваченный}.</p>",
+      "value": "<p>Когда вы применяете Изменчивую форму, её длительность увеличивается до 10 минут, и вы получаете 1 из следующих эффектов на ваш выбор. Эффект действует до окончания Изменчивой формы.</p><p><strong>Каменный эпидермис.</strong> Вы получаете преимущество на спасброски Телосложения для поддержания концентрации. Кроме того, выберите 1 из следующих типов урона: кислотный, дробящий, холодный, огненный, электрический, колющий, ядовитый, рубящий или звуковой. Вы получаете сопротивление выбранному типу урона.</p><p><strong>Совершенный шаг.</strong> Пока вы не носите доспех, вы можете совершать действие рывок бонусным действием, а также получаете скорость лазания и скорость плавания, равные вашей обычной скорости.</p><p><strong>Неестественная гибкость.</strong> Вы получаете бонус +1 к КД, а ваше тело, включая всё снаряжение, становится гибким. Вы можете передвигаться через любое пространство шириной не менее 1 дюйма, а также можете потратить 5 футов перемещения, чтобы освободиться от немагических оков или прекратить состояние &Reference[grappled]{схваченный}.</p><h3>Действия</h3><ul><li>[[/item activity=tXirhbPZXJ7a4137]]{Выбрать улучшение Изменчивой формы}</li><li>[[/item activity=HsZVAnNGeXWI1vGU]]{Рывок: Совершенный шаг}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -32,12 +32,806 @@
       "spent": 0,
       "recovery": []
     },
-    "activities": {},
+    "activities": {
+      "tXirhbPZXJ7a4137": {
+        "_id": "tXirhbPZXJ7a4137",
+        "type": "transform",
+        "name": "Выбрать улучшение Изменчивой формы",
+        "img": "icons/magic/control/silhouette-hold-change-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "При применении Изменчивой формы",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "aAIhAaVixfwAb8yb"
+          },
+          {
+            "_id": "Dkhd2fzlu9ZwTTXW"
+          },
+          {
+            "_id": "PU605rYhpzhdBHsJ"
+          },
+          {
+            "_id": "NysiC1wd7Sy9a6Dt"
+          },
+          {
+            "_id": "2vX4TfAiAjvsdu8f"
+          },
+          {
+            "_id": "X5B30zIIryMW7Dio"
+          },
+          {
+            "_id": "401CcOfvOaUL6hC0"
+          },
+          {
+            "_id": "vpFBY15xwYQX3iZ2"
+          },
+          {
+            "_id": "7HnieWyhQnKTG0Md"
+          },
+          {
+            "_id": "xZGp5UPAm2quyViL"
+          },
+          {
+            "_id": "CZg1zZgBEgqtX8ra"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      },
+      "HsZVAnNGeXWI1vGU": {
+        "_id": "HsZVAnNGeXWI1vGU",
+        "type": "utility",
+        "name": "Рывок: Совершенный шаг",
+        "img": "icons/magic/control/silhouette-hold-change-green.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "Совершенный шаг активен, вы не носите доспех",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
     "properties": [],
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "aAIhAaVixfwAb8yb",
+      "name": "Каменный эпидермис: кислота",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "y7V9o5ZtNlzP8EV9"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "acid",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "w4J6gnc6Gha2vorm"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.aAIhAaVixfwAb8yb"
+    },
+    {
+      "_id": "Dkhd2fzlu9ZwTTXW",
+      "name": "Каменный эпидермис: дробящий",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "hhimWCjCgHlXM310"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "bludgeoning",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "HPDkJaTYNA3Z0M2t"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.Dkhd2fzlu9ZwTTXW"
+    },
+    {
+      "_id": "PU605rYhpzhdBHsJ",
+      "name": "Каменный эпидермис: холод",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "cJ6zkwImE7hcBTr4"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "cold",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "RsDUAYMbcNK3iaK8"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.PU605rYhpzhdBHsJ"
+    },
+    {
+      "_id": "NysiC1wd7Sy9a6Dt",
+      "name": "Каменный эпидермис: огонь",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "tTLJDxuzvtgk5j3i"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "fire",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ymE7KahVCKpHBtEu"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.NysiC1wd7Sy9a6Dt"
+    },
+    {
+      "_id": "2vX4TfAiAjvsdu8f",
+      "name": "Каменный эпидермис: электричество",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "wi0EZ2KQLvJjkWOX"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "lightning",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "73eixTWTWo5DzbRM"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.2vX4TfAiAjvsdu8f"
+    },
+    {
+      "_id": "X5B30zIIryMW7Dio",
+      "name": "Каменный эпидермис: колющий",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ZJCIaNR4RhanUOwu"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "piercing",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "efHM8PGpeTwnGzuS"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.X5B30zIIryMW7Dio"
+    },
+    {
+      "_id": "401CcOfvOaUL6hC0",
+      "name": "Каменный эпидермис: яд",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "5kgaCHloZ7QhOeJO"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "poison",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "okyVv4VNgumy6qOI"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.401CcOfvOaUL6hC0"
+    },
+    {
+      "_id": "vpFBY15xwYQX3iZ2",
+      "name": "Каменный эпидермис: рубящий",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "K1cioL99R4bqJE3g"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "slashing",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "tpO5E1FzoOzZPb3z"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.vpFBY15xwYQX3iZ2"
+    },
+    {
+      "_id": "7HnieWyhQnKTG0Md",
+      "name": "Каменный эпидермис: звук",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "IhGH6YXPJ3yBzcEw"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "thunder",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "fiHSFYJNnvOLr6Sn"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.7HnieWyhQnKTG0Md"
+    },
+    {
+      "_id": "xZGp5UPAm2quyViL",
+      "name": "Совершенный шаг (без доспеха)",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.speeds.climb",
+            "value": "@attributes.movement.speeds.walk",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "RXrBzRPXBtqNgdq4"
+          },
+          {
+            "key": "system.attributes.movement.speeds.swim",
+            "value": "@attributes.movement.speeds.walk",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "VnkjMtBo66Z1y0iv"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.unarmored\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Без доспеха: лазание и плавание равны обычной скорости; Рывок доступен бонусным действием. При надевании доспеха эффект подавляется автоматически.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.xZGp5UPAm2quyViL"
+    },
+    {
+      "_id": "CZg1zZgBEgqtX8ra",
+      "name": "Неестественная гибкость",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.bonus",
+            "value": "+ 1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "romJyrrb54D3M3pl"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!O6U4tVupcXVzP87C.CZg1zZgBEgqtX8ra"
+    }
+  ],
   "folder": "kjuRK00hb4CqlFUu",
   "sort": 0,
   "ownership": {

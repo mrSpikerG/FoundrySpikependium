@@ -1,8 +1,8 @@
 // Существа из «Злодейских опций» (формы титана) и «Мистических подклассов» (спутник реликт).
-import { attack, save, heal, utility, dmg, uses, LR, useSlot, useSelf } from "../../tools/lib/core.mjs";
+import { attack, save, heal, utility, damage, dmg, effect, change, uses, LR, useSlot, useSelf } from "../../tools/lib/core.mjs";
 import { npc, folder } from "../../tools/lib/docs.mjs";
 
-const TITAN_NOTE = "<p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> в этой форме равны вашему значению Мудрости — <em>в Foundry выставьте их вручную после превращения</em>. Интеллект, Мудрость и Харизма сохраняются; Телосложение выставьте равным исходному вручную. Размер: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>";
+const TITAN_NOTE = "<p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> автоматически равны вашей Мудрости благодаря эффекту формы. Телосложение, Интеллект, Мудрость и Харизма сохраняются. Размер выбирается при превращении: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>";
 
 export function define() {
   const fForms = folder("creatures", "Формы титана", { sort: 3000 });
@@ -14,26 +14,36 @@ export function define() {
     acts: [attack(key, { activation: "action", range: 10, ability: "wis", attackType: "melee", classification: "spell", damage: [dmg("1d8 + @abilities.wis.mod", type)] })]
   });
   const multi = { name: "Мультиатака (уровень друида 5+)", img: "icons/skills/melee/weapons-crossed-swords-white-blue", desc: "Вы совершаете две атаки Разрывание." };
-  const titan = (key, name, en, img, o) => npc({
-    key, name, en, book: "UA-VO", page: o.page, folder: fForms, img, size: "lg", creatureType: "monstrosity", alignment: "Мировоззрение не меняется",
+  const titan = (key, name, en, img, o) => {
+    for (const [size, suffix, ru, eng, tokenSize] of [
+      ["lg", "", "", "", 2], ["huge", "-huge", " (Огромный)", " (Huge)", 3],
+      ["grg", "-gargantuan", " (Громадный)", " (Gargantuan)", 4]
+    ]) npc({
+    key: key + suffix, name: name + ru, en: en + eng, book: "UA-VO", page: o.page, folder: fForms, img, size, creatureType: "monstrosity", alignment: "Мировоззрение не меняется",
     ac: o.ac, acFormula: `${o.ac} + @abilities.wis.mod`, hp: 1,
     movement: { walk: 40, ...o.movement }, abilities: { str: 16, dex: 16, con: 10, int: 10, wis: 10, cha: 10 },
     senses: { darkvision: 60 }, languagesCustom: "ваше знание языков не изменяется", spellcasting: "wis",
-    bio: `<p><strong>КД</strong> ${o.ac} + ваш модификатор Мудрости.</p>${TITAN_NOTE}`, tokenSize: 2,
+    bio: `<p><strong>КД</strong> ${o.ac} + ваш модификатор Мудрости.</p>${TITAN_NOTE}`, tokenSize,
+    effects: [effect(`${key}${suffix}:abilities`, { name: "Характеристики титана", img,
+      changes: [change("system.abilities.str.value", "@abilities.wis.value", "override"), change("system.abilities.dex.value", "@abilities.wis.value", "override")] })],
     items: o.items
   });
+  };
 
   titan("actor:titan-behemoth", "Бегемот", "Behemoth", "icons/creatures/abilities/bull-head-horns-glowing", {
     page: 4, ac: 11, movement: { climb: 40 },
     items: [
       { name: "Ярость (уровень друида 10+)", img: "icons/creatures/abilities/bull-head-horns-glowing",
         desc: "Когда вы впервые в ход входите в пространство врага, размер которого меньше вашего минимум на один, это существо подвергается следующему эффекту: *Спасбросок Силы:* Сл. равна вашей Сл. спасброска заклинаний. *Провал:* цель ложится ничком. Если у цели уже есть состояние лежащий ничком, то вместо этого она получает 2к6 дробящего урона.",
-        acts: [save("actor:behemoth:rampage", { activation: "special", condition: "Первый вход в пространство меньшего врага за ход", count: 1, affects: "creature", ability: "str" })] },
+        acts: [
+          save("actor:behemoth:rampage", { name: "Сбить с ног", activation: "special", condition: "Первый вход в пространство меньшего врага за ход", count: 1, affects: "creature", ability: "str", minLevel: 10, identifier: "druid" }),
+          damage("actor:behemoth:rampage:prone", { name: "Ярость: цель уже лежит ничком", activation: "special", count: 1, affects: "creature", minLevel: 10, identifier: "druid", damage: [dmg("2d6", "bludgeoning")] })
+        ] },
       { name: "Осадное чудовище", img: "icons/environment/settlement/watchtower-stone", desc: "Вы наносите двойной урон объектам и строениям." },
       multi, rend("actor:behemoth:rend", "slashing"),
       { name: "Раскалённое дыхание", img: "icons/magic/fire/beam-jet-stream-embers",
         desc: "Вы тратите ячейку заклинаний 1+ уровня. *Спасбросок Ловкости:* Сл. равна вашей Сл. спасброска заклинаний, каждое существо в линии шириной 5 футов и длиной 60 футов. *Провал:* 2к8 за каждый уровень потраченной ячейки + ваш модификатор Мудрости урона излучением. *Успех:* половина урона.",
-        acts: [save("actor:behemoth:breath", { activation: "action", template: { type: "line", size: 60 }, affects: "creature", ability: "dex", consume: [useSlot(1)], scaling: true, damage: [dmg("2d8 + @abilities.wis.mod", "radiant", { scale: 2 })], onSave: "half" })] }
+        acts: [save("actor:behemoth:breath", { activation: "action", template: { type: "line", size: 60, width: 5 }, affects: "creature", ability: "dex", consume: [useSlot(1)], scaling: true, damage: [dmg("2d8 + @abilities.wis.mod", "radiant", { scale: 2 })], onSave: "half" })] }
     ]
   });
 
@@ -43,7 +53,7 @@ export function define() {
       { name: "Амфибия", img: "icons/magic/water/bubbles-air-water-blue", desc: "Вы можете дышать воздухом и водой." },
       { name: "Токсичное зловоние (уровень друида 10+)", img: "icons/magic/air/fog-gas-smoke-dense-green",
         desc: "*Спасбросок Телосложения:* Сл. равна вашей Сл. спасброска заклинаний, существо на ваш выбор, когда начинает свой ход в пределах эманации с радиусом 10 футов, исходящей от вас. *Провал:* 2к4 урона ядом, и цель отравлена до начала своего следующего хода.",
-        acts: [save("actor:leviathan:stench", { activation: "special", condition: "Существо начинает ход в 10 футах", template: { type: "radius", size: 10 }, affects: "enemy", ability: "con", damage: [dmg("2d4", "poison")], onSave: "none" })] },
+        acts: [save("actor:leviathan:stench", { activation: "special", condition: "Существо начинает ход в 10 футах", template: { type: "radius", size: 10 }, affects: "enemy", ability: "con", minLevel: 10, identifier: "druid", damage: [dmg("2d4", "poison")], onSave: "none" })] },
       multi, rend("actor:leviathan:rend", "bludgeoning"),
       { name: "Чернильное облако", img: "icons/magic/air/fog-gas-smoke-dense-gray",
         desc: "*Триггер:* вы получаете урон. *Ответ:* вы тратите ячейку заклинания 1+ уровня и выпускаете чернильное облако, которое заполняет куб со стороной 15 футов с центром на вас, после чего вы перемещаетесь вплоть до своей скорости. Куб является сильно заслонённой местностью. Он длится 1 минуту или пока сильное течение или ветер (например, созданный заклинанием Порыв ветра) не рассеет его.",

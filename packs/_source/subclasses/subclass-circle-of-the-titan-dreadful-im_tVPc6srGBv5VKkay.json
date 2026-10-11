@@ -5,7 +5,7 @@
   "img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
   "system": {
     "description": {
-      "value": "<p>Ваша форма титана несёт ещё большее опустошение. Вы получаете следующие эффекты.</p><p><strong>Стихийное разрывание.</strong> Каждый раз, когда вы попадаете атакой Разрывание вашей формы титана, вы можете сделать так, что она будет наносить урон кислотой, холодом, огнём, электричеством или звуком (на ваш выбор) вместо своего обычного типа урона.</p><p><strong>Ударная волна.</strong> Ваше превращение сотрясает всё вокруг. Сразу после того, как вы принимаете форму титана, или бонусным действием, потратив ячейку заклинаний 1+ уровня, пока вы находитесь в форме титана, вы можете создать ударную волну в пределах эманации с радиусом 15 футов, исходящей от вас. Каждое существо в этой эманации должно преуспеть в спасброске Телосложения против Сл. спасброска ваших заклинаний, иначе ложится ничком.</p>",
+      "value": "<p>Ваша форма титана несёт ещё большее опустошение. Вы получаете следующие эффекты.</p><p><strong>Стихийное разрывание.</strong> Каждый раз, когда вы попадаете атакой Разрывание вашей формы титана, вы можете сделать так, что она будет наносить урон кислотой, холодом, огнём, электричеством или звуком (на ваш выбор) вместо своего обычного типа урона.</p><p><strong>Ударная волна.</strong> Ваше превращение сотрясает всё вокруг. Сразу после того, как вы принимаете форму титана, или бонусным действием, потратив ячейку заклинаний 1+ уровня, пока вы находитесь в форме титана, вы можете создать ударную волну в пределах эманации с радиусом 15 футов, исходящей от вас. Каждое существо в этой эманации должно преуспеть в спасброске Телосложения против Сл. спасброска ваших заклинаний, иначе ложится ничком.</p><h3>Действия</h3><ul><li>[[/item activity=PmwNypf46FFaES33]]{Ударная волна} · [[/save activity=PmwNypf46FFaES33]]{Спасбросок цели}</li><li>[[/item activity=EtyjR5kptvzQ2zWO]]{Ударная волна (ячейка 1+)} · [[/save activity=EtyjR5kptvzQ2zWO]]{Спасбросок цели}</li><li>[[/item activity=sg6giSCAdL6DaQIf]]{Ударная волна (ячейка 1+) (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -64,7 +64,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "4PDiHGWOaEWolTUo",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -114,7 +119,7 @@
             "con"
           ],
           "dc": {
-            "calculation": "spellcasting",
+            "calculation": "wis",
             "formula": ""
           },
           "bonus": ""
@@ -138,12 +143,15 @@
               "type": "spellSlots",
               "value": "1",
               "target": "1",
-              "scaling": {}
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
             }
           ],
           "scaling": {
-            "allowed": false,
-            "max": ""
+            "allowed": true,
+            "max": "9"
           },
           "spellSlot": true
         },
@@ -158,7 +166,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "MAfTuMwDS12J26ZF",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -208,10 +221,58 @@
             "con"
           ],
           "dc": {
-            "calculation": "spellcasting",
+            "calculation": "wis",
             "formula": ""
           },
           "bonus": ""
+        }
+      },
+      "sg6giSCAdL6DaQIf": {
+        "_id": "sg6giSCAdL6DaQIf",
+        "type": "forward",
+        "name": "Ударная волна (ячейка 1+) (Магия договора)",
+        "sort": 200001,
+        "img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+        "activity": {
+          "id": "EtyjR5kptvzQ2zWO"
+        },
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 1,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 1
+            }
+          }
         }
       }
     },
@@ -219,7 +280,88 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "4PDiHGWOaEWolTUo",
+      "name": "Ударная волна",
+      "img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Ваша форма титана несёт ещё большее опустошение. Вы получаете следующие эффекты.</p><p><strong>Стихийное разрывание.</strong> Каждый раз, когда вы попадаете атакой Разрывание вашей формы титана, вы можете сделать так, что она будет наносить урон кислотой, холодом, огнём, электричеством или звуком (на ваш выбор) вместо своего обычного типа урона.</p><p><strong>Ударная волна.</strong> Ваше превращение сотрясает всё вокруг. Сразу после того, как вы принимаете форму титана, или бонусным действием, потратив ячейку заклинаний 1+ уровня, пока вы находитесь в форме титана, вы можете создать ударную волну в пределах эманации с радиусом 15 футов, исходящей от вас. Каждое существо в этой эманации должно преуспеть в спасброске Телосложения против Сл. спасброска ваших заклинаний, иначе ложится ничком.</p>",
+      "origin": null,
+      "statuses": [
+        "prone"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!tVPc6srGBv5VKkay.4PDiHGWOaEWolTUo"
+    },
+    {
+      "_id": "MAfTuMwDS12J26ZF",
+      "name": "Ударная волна (ячейка 1+)",
+      "img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Ваша форма титана несёт ещё большее опустошение. Вы получаете следующие эффекты.</p><p><strong>Стихийное разрывание.</strong> Каждый раз, когда вы попадаете атакой Разрывание вашей формы титана, вы можете сделать так, что она будет наносить урон кислотой, холодом, огнём, электричеством или звуком (на ваш выбор) вместо своего обычного типа урона.</p><p><strong>Ударная волна.</strong> Ваше превращение сотрясает всё вокруг. Сразу после того, как вы принимаете форму титана, или бонусным действием, потратив ячейку заклинаний 1+ уровня, пока вы находитесь в форме титана, вы можете создать ударную волну в пределах эманации с радиусом 15 футов, исходящей от вас. Каждое существо в этой эманации должно преуспеть в спасброске Телосложения против Сл. спасброска ваших заклинаний, иначе ложится ничком.</p>",
+      "origin": null,
+      "statuses": [
+        "prone"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!tVPc6srGBv5VKkay.MAfTuMwDS12J26ZF"
+    }
+  ],
   "folder": "hBERaftDAfMYs7yF",
   "sort": 0,
   "ownership": {

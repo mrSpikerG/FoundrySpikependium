@@ -1,6 +1,6 @@
 // UA 2025 «Подклассы Забытых королевств».
 import {
-  utility, save, heal, damage, teleport, cast, summon, dmg, effect, change, uses, LR,
+  utility, save, heal, damage, teleport, cast, summon, form, dmg, effect, change, uses, LR,
   useSelf, useItem, useActivity, useSlot, useSorcery, advTrait, advItemGrant, advItemChoice, advScale, spellConfig
 } from "../../tools/lib/core.mjs";
 import { ref, spellUuid } from "../../tools/lib/docs.mjs";
@@ -118,11 +118,12 @@ export function define() {
       },
       {
         id: "divine-foresight", level: 17, name: "Божественное предвидение", img: "icons/magic/perception/orb-crystal-ball-scrying-blue",
+        uses: uses(1, LR),
         effects: [foresight],
         desc: "Бонусным действием вы магически расширяете своё сознание, чтобы увидеть возможности будущего. В течение 1 часа вы получаете преимущество на тесты к20. После применения этого умения вы не можете применить его снова до завершения продолжительного отдыха. Вы также можете восстановить использование этого умения, потратив ячейку заклинаний 6 уровня или выше (не требует действия).",
         acts: [
-          utility("knowledge:foresight", { activation: "bonus", self: true, duration: "hour", durationValue: 1, usesMax: 1, usesRecovery: [LR], consume: [useActivity()], effects: [foresight._id] }),
-          utility("knowledge:foresight:slot", { name: "Применить (ячейка 6+)", activation: "bonus", self: true, duration: "hour", durationValue: 1, consume: [useSlot(6)], effects: [foresight._id] })
+          utility("knowledge:foresight", { activation: "bonus", self: true, duration: "hour", durationValue: 1, consume: [useSelf()], effects: [foresight._id] }),
+          utility("knowledge:foresight:slot", { name: "Восстановить применение (ячейка 6+)", activation: "special", consume: [useSlot(6), useSelf(-1)] })
         ]
       }
     ]
@@ -204,6 +205,12 @@ export function define() {
   });
 
   // --- Клятва благородных джиннов (паладин) --------------------------------
+  const shielding = ["acid", "cold", "fire", "lightning", "thunder"].map((type, i) => effect(`genies:shielding:${type}`, {
+    name: `Аура стихийной защиты: ${["кислота", "холод", "огонь", "электричество", "звук"][i]}`, transfer: false,
+    changes: [change("system.traits.dr.value", type)],
+    flags: { spikependium: { aura: type } }, conditions: { k: "spikependium.auraActive", v: true },
+    description: "<p>Сопротивление выбранных союзников автоматически подавляется вне Ауры защиты, при смене стихии или недееспособности владельца.</p>"
+  }));
   const heir = effect("genies:heir", {
     name: "Благородный наследник", img: "icons/magic/air/wind-tornado-cyclone-purple-pink", transfer: false, seconds: 600,
     changes: [change("system.attributes.movement.speeds.fly", 60, "upgrade"), change("system.attributes.movement.hover", "true", "override")]
@@ -248,11 +255,15 @@ export function define() {
         effects: [effect("genies:splendor", {
           name: "Величие джинна (без средних и тяжёлых доспехов)", img: "icons/magic/control/control-influence-crown-gold",
           changes: [change("system.attributes.ac.bonus", "+ max(1, @abilities.cha.mod)")],
-          description: "<p>Отключите этот эффект, если надеваете средние или тяжёлые доспехи.</p>"
+          conditions: { k: "spikependium.lightArmorAllowed", v: true },
+          description: "<p>Эффект автоматически подавляется в средних и тяжёлых доспехах.</p>"
         })]
       },
       {
         id: "aura-of-elemental-shielding", level: 7, name: "Аура стихийной защиты", img: "icons/magic/defensive/shield-barrier-flaming-diamond-blue-yellow",
+        effects: shielding,
+        acts: [form("genies:shielding:self", { name: "Выбрать стихию ауры для себя", activation: "special", condition: "Начало вашего хода", effects: shielding.map(e => e._id) }),
+          ...shielding.map((e, i) => utility(`genies:shielding:ally:${i}`, { name: `${e.name} — союзникам`, activation: "special", affects: "ally", condition: "Союзники находятся в Ауре защиты; предыдущий тип сопротивления снят", effects: [e._id] }))],
         desc: "Выберите один из следующих типов урона: кислотный, холодный, огненный, электрический или звуковой. Вы и ваши союзники получаете сопротивление этому типу урона, находясь в вашей Ауре защиты.\n\nВ начале каждого вашего хода вы можете изменить тип урона, на который влияет это умение, на один из других доступных вариантов (не требует действия)."
       },
       {
@@ -263,6 +274,7 @@ export function define() {
       },
       {
         id: "noble-scion", level: 20, name: "Благородный наследник", img: "icons/magic/air/wind-tornado-cyclone-purple-pink",
+        uses: uses(1, LR),
         effects: [heir],
         desc: `
 Бонусным действием вы получаете следующие эффекты на 10 минут или до тех пор, пока не прекратите их (не требует действия). После использования этого умения вы не можете использовать его снова до завершения продолжительного отдыха. Вы также можете восстановить использование, потратив ячейку заклинания 5 уровня (не требует действия).
@@ -271,8 +283,8 @@ export function define() {
 
 **Малое желание.** Когда вы или союзник в вашей Ауре защиты проваливаете тест к20, вы можете реакцией сделать эту проверку успешной.`,
         acts: [
-          utility("genies:heir", { activation: "bonus", self: true, duration: "minute", durationValue: 10, usesMax: 1, usesRecovery: [LR], consume: [useActivity()], effects: [heir._id] }),
-          utility("genies:heir:slot", { name: "Применить (ячейка 5)", activation: "bonus", self: true, duration: "minute", durationValue: 10, consume: [useSlot(5)], effects: [heir._id] }),
+          utility("genies:heir", { activation: "bonus", self: true, duration: "minute", durationValue: 10, consume: [useSelf()], effects: [heir._id] }),
+          utility("genies:heir:slot", { name: "Восстановить применение (ячейка 5+)", activation: "special", consume: [useSlot(5), useSelf(-1)] }),
           utility("genies:lesser-wish", { name: "Малое желание", activation: "reaction", condition: "Вы или союзник в Ауре защиты провалили тест к20" })
         ]
       }

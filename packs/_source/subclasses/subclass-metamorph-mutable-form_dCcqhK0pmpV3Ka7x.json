@@ -5,7 +5,7 @@
   "img": "icons/magic/nature/root-vine-entangled-hand.webp",
   "system": {
     "description": {
-      "value": "<p>Бонусным действием вы можете потратить 1 псионическую кость, чтобы псионически растянуть свои конечности на 1 минуту. Бросьте потраченную псионическую кость и получите количество временных хитов, равное результату броска + ваш модификатор Интеллекта (минимум 1). Кроме того, вы получаете следующие эффекты:</p><p><strong>Досягаемость.</strong> Ваша досягаемость увеличивается на 5 футов.</p><p><strong>Скорость.</strong> Ваша скорость увеличивается на 5 футов.</p><p><strong>Касание.</strong> Когда вы накладываете заклинание с дистанцией «касание» и временем накладывания «действие», вы можете увеличить дистанцию заклинания до 10 футов.</p>",
+      "value": "<p>Бонусным действием вы можете потратить 1 псионическую кость, чтобы псионически растянуть свои конечности на 1 минуту. Бросьте потраченную псионическую кость и получите количество временных хитов, равное результату броска + ваш модификатор Интеллекта (минимум 1). Кроме того, вы получаете следующие эффекты:</p><p><strong>Досягаемость.</strong> Ваша досягаемость увеличивается на 5 футов.</p><p><strong>Скорость.</strong> Ваша скорость увеличивается на 5 футов.</p><p><strong>Касание.</strong> Когда вы накладываете заклинание с дистанцией «касание» и временем накладывания «действие», вы можете увеличить дистанцию заклинания до 10 футов.</p><h3>Действия</h3><ul><li>[[/item activity=ADDbhIPnQ4IlsKAA]]{Лечение} · [[/heal activity=ADDbhIPnQ4IlsKAA]]{Бросок лечения}</li><li>[[/item activity=lNjvSUfA6H5zz4Zm]]{Изменчивая форма (10+ уровень)} · [[/heal activity=lNjvSUfA6H5zz4Zm]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -107,9 +107,110 @@
           "max": ""
         },
         "visibility": {
-          "identifier": "",
+          "identifier": "psion",
           "level": {
             "min": null,
+            "max": 9
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "@scale.psion.die + max(1, @abilities.int.mod)"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "temphp"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      },
+      "lNjvSUfA6H5zz4Zm": {
+        "_id": "lNjvSUfA6H5zz4Zm",
+        "type": "heal",
+        "name": "Изменчивая форма (10+ уровень)",
+        "img": "icons/magic/nature/root-vine-entangled-hand.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:psionic-power",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "NFi8cQNJJ4LVeVNo"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "psion",
+          "level": {
+            "min": 10,
             "max": null
           },
           "requireAttunement": false,
@@ -186,6 +287,53 @@
         "lastModifiedBy": null
       },
       "_key": "!items.effects!dCcqhK0pmpV3Ka7x.q1Lx4bdKYs1NXk7X"
+    },
+    {
+      "_id": "NFi8cQNJJ4LVeVNo",
+      "name": "Изменчивая форма",
+      "img": "icons/magic/nature/root-vine-entangled-hand.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.speeds.walk",
+            "value": "5",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "NSrsFCUCKbayTnaE"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Досягаемость +5 футов, скорость +5 футов; заклинания с дистанцией «касание» и временем «действие» можно накладывать на дистанции до 10 футов.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!dCcqhK0pmpV3Ka7x.NFi8cQNJJ4LVeVNo"
     }
   ],
   "folder": "kjuRK00hb4CqlFUu",

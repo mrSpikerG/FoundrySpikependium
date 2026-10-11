@@ -5,7 +5,7 @@
   "img": "icons/magic/death/undead-zombie-grave-green.webp",
   "system": {
     "description": {
-      "value": "<p>Используя инструменты ремонтника или другой тип ремесленных инструментов, которыми вы владеете, вы можете действием магия создать Реанимированного спутника (см. статблок), сочетающего силу некромантии и науки. Спутник появляется в незанятом пространстве в пределах 5 футов от вас. Вы определяете внешний вид спутника; ваш выбор не влияет на игровые характеристики спутника.</p><p>Спутник дружелюбен к вам и вашим союзникам и подчиняется вам. Он существует до окончания продолжительного отдыха или до тех пор, пока вы не совершите действие магия, чтобы отозвать его досрочно, после чего он безвредно распадается на груду внутренностей. Если вы умираете, хиты спутника мгновенно опускаются до 0 и он умирает (запуская свою особенность Взрыв при смерти).</p><p>После создания спутника вы не можете создать нового, пока не завершите продолжительный отдых или не потратите одну ячейку заклинаний, чтобы создать его. У вас может быть только один спутник одновременно, и вы не можете создать нового, пока текущий спутник присутствует.</p><p><strong>Спутник в бою.</strong> В бою спутник действует во время вашего хода. Он может перемещаться и использовать свою реакцию самостоятельно, но единственное действие, которое он предпринимает, — это действие уклонение, либо вы можете бонусным действием приказать ему совершить другое действие. Если вы находитесь в состоянии &Reference[incapacitated]{недееспособный}, то спутник действует самостоятельно и не ограничен действием уклонение.</p>",
+      "value": "<p>Используя инструменты ремонтника или другой тип ремесленных инструментов, которыми вы владеете, вы можете действием магия создать Реанимированного спутника (см. статблок), сочетающего силу некромантии и науки. Спутник появляется в незанятом пространстве в пределах 5 футов от вас. Вы определяете внешний вид спутника; ваш выбор не влияет на игровые характеристики спутника.</p><p>Спутник дружелюбен к вам и вашим союзникам и подчиняется вам. Он существует до окончания продолжительного отдыха или до тех пор, пока вы не совершите действие магия, чтобы отозвать его досрочно, после чего он безвредно распадается на груду внутренностей. Если вы умираете, хиты спутника мгновенно опускаются до 0 и он умирает (запуская свою особенность Взрыв при смерти).</p><p>После создания спутника вы не можете создать нового, пока не завершите продолжительный отдых или не потратите одну ячейку заклинаний, чтобы создать его. У вас может быть только один спутник одновременно, и вы не можете создать нового, пока текущий спутник присутствует.</p><p><strong>Спутник в бою.</strong> В бою спутник действует во время вашего хода. Он может перемещаться и использовать свою реакцию самостоятельно, но единственное действие, которое он предпринимает, — это действие уклонение, либо вы можете бонусным действием приказать ему совершить другое действие. Если вы находитесь в состоянии &Reference[incapacitated]{недееспособный}, то спутник действует самостоятельно и не ограничен действием уклонение.</p><h3>Действия</h3><ul><li>[[/item activity=XXMtFDY3QBWDmBIH]]{Создать спутника}</li><li>[[/item activity=mPmSdWjqQAPXGPoG]]{Создать спутника (ячейка)}</li><li>[[/item activity=MBMPD4F4TH62eNLB]]{Создать спутника (ячейка) (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -143,7 +143,127 @@
             "cr": "",
             "types": [],
             "level": {
-              "min": null,
+              "min": 3,
+              "max": 4
+            }
+          },
+          {
+            "_id": "KuMJZzS0GqJJfTVc",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.dZuETBWxEPSJvybV",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 5,
+              "max": 8
+            }
+          },
+          {
+            "_id": "E1dCWl3Ztk7MJBR6",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.6455DyTtROdXVUeJ",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "jSxSNtICDhNFXRxP",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.fDP2Jcq4EqvYpASr",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "AkQWFYnNs3AZfH52",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.oEyK8oj9zt1lAG88",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "CGp8QIQBCo2cUGhc",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.Aa4iPkV5qSryUASj",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "pJ52Z75hFOMDmFqy",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.xkaDNEcsMl8ZnvXl",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 5,
+              "max": 8
+            }
+          },
+          {
+            "_id": "SErEEsY19458CAhn",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.u6HFX2PB1QULHbUM",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "hKgwCh9z9EoHP5Js",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.k9b8fGcCH3KGeSMA",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "B2A0d0AN4QM1LXTF",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.CSBKgt9PLT8Xpbi2",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "BphM4LtSaA3lLJUV",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.zhRv6h25wgNQ1mek",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
               "max": null
             }
           }
@@ -171,12 +291,15 @@
               "type": "spellSlots",
               "value": "1",
               "target": "1",
-              "scaling": {}
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
             }
           ],
           "scaling": {
             "allowed": true,
-            "max": ""
+            "max": "9"
           },
           "spellSlot": true
         },
@@ -258,7 +381,127 @@
             "cr": "",
             "types": [],
             "level": {
-              "min": null,
+              "min": 3,
+              "max": 4
+            }
+          },
+          {
+            "_id": "hMCJPyifT6bzL7AO",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.dZuETBWxEPSJvybV",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 5,
+              "max": 8
+            }
+          },
+          {
+            "_id": "l34lWvTmFfPT9vC0",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.6455DyTtROdXVUeJ",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "Qd1yuRiuhckOjRie",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.fDP2Jcq4EqvYpASr",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "MwySjTPj1NmvqHj5",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.oEyK8oj9zt1lAG88",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "NzU02DlDCNOkOHFw",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.Aa4iPkV5qSryUASj",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "C3RzA4YROrxmhUJg",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.xkaDNEcsMl8ZnvXl",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 5,
+              "max": 8
+            }
+          },
+          {
+            "_id": "vQoBYPYiWyMYt2SD",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.u6HFX2PB1QULHbUM",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "Prq1UdJ59xkGtrPj",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.k9b8fGcCH3KGeSMA",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "nE3n0xGcK7OvDhmY",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.CSBKgt9PLT8Xpbi2",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
+              "max": null
+            }
+          },
+          {
+            "_id": "Fzj0iGd8OyfGsikU",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.zhRv6h25wgNQ1mek",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": 9,
               "max": null
             }
           }
@@ -266,6 +509,54 @@
         "summon": {
           "prompt": true,
           "mode": ""
+        }
+      },
+      "MBMPD4F4TH62eNLB": {
+        "_id": "MBMPD4F4TH62eNLB",
+        "type": "forward",
+        "name": "Создать спутника (ячейка) (Магия договора)",
+        "sort": 200001,
+        "img": "icons/magic/death/undead-zombie-grave-green.webp",
+        "activity": {
+          "id": "mPmSdWjqQAPXGPoG"
+        },
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 1,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 1
+            }
+          }
         }
       }
     },

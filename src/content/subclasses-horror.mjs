@@ -220,7 +220,7 @@ export function define() {
 **Восстановление безделушек души.** Когда существо, которое вы видите в пределах 30 футов, умирает, вы можете реакцией восстановить 1 потраченную безделушку души.
 
 *Счётчик использований этого умения — ваши безделушки души.*`,
-        effects: [effect("phantom:life-essence", { name: "Жизненная сущность", img: "icons/magic/life/heart-cross-blue", changes: [change("system.attributes.death.roll.mode", 1), change("system.abilities.con.save.roll.mode", 1)], description: "<p>Действует, пока у вас есть хотя бы 1 безделушка души.</p>" })],
+        effects: [effect("phantom:life-essence", { name: "Жизненная сущность", img: "icons/magic/life/heart-cross-blue", changes: [change("system.attributes.death.roll.mode", 1), change("system.abilities.con.save.roll.mode", 1)], conditions: { k: "spikependium.hasSoulToken", v: true }, description: "<p>Действует, пока у вас есть хотя бы 1 безделушка души.</p>" })],
         acts: [
           ...(augury ? [cast("phantom:question-spirit", augury, { name: "Вопрос духу", activation: "action", spellSlot: false, properties: [], ability: "dex", consume: [useSelf()] })] : []),
           utility("phantom:recover-token", { name: "Восстановить безделушку", activation: "reaction", condition: "Видимое существо в пределах 30 футов умирает", consume: [{ type: "itemUses", value: "-1", target: "", scaling: {} }] })

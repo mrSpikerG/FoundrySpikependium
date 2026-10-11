@@ -5,7 +5,7 @@
   "img": "icons/magic/nature/tree-roots-glow-yellow.webp",
   "system": {
     "description": {
-      "value": "<p>Вы полностью проникаетесь древней силой леса, получая следующие эффекты:</p><p><strong>Неослабевающая охота.</strong> Если ваши хиты опускаются до 0 в трансформации от умения Гнев диких и вы не умираете мгновенно, то вы можете потратить ячейку заклинания 4 уровня или выше (не требует действия). Вместо этого ваши хиты становятся равны 5, умноженным на уровень потраченной ячейки заклинания.</p><p><strong>Вневременность.</strong> Вы имеете иммунитет к состоянию &Reference[exhaustion]{истощённый}.</p>",
+      "value": "<p>Вы полностью проникаетесь древней силой леса, получая следующие эффекты:</p><p><strong>Неослабевающая охота.</strong> Если ваши хиты опускаются до 0 в трансформации от умения Гнев диких и вы не умираете мгновенно, то вы можете потратить ячейку заклинания 4 уровня или выше (не требует действия). Вместо этого ваши хиты становятся равны 5, умноженным на уровень потраченной ячейки заклинания.</p><p><strong>Вневременность.</strong> Вы имеете иммунитет к состоянию &Reference[exhaustion]{истощённый}.</p><h3>Действия</h3><ul><li>[[/item activity=zdFRWJNT6dAXUTOU]]{Неослабевающая охота}</li><li>[[/item activity=gkEfwcrtaiSM5o2l]]{Неослабевающая охота (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -51,12 +51,15 @@
               "type": "spellSlots",
               "value": "1",
               "target": "4",
-              "scaling": {}
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
             }
           ],
           "scaling": {
             "allowed": true,
-            "max": ""
+            "max": "6"
           },
           "spellSlot": true
         },
@@ -117,6 +120,54 @@
           "name": "Хиты",
           "prompt": false,
           "visible": true
+        }
+      },
+      "gkEfwcrtaiSM5o2l": {
+        "_id": "gkEfwcrtaiSM5o2l",
+        "type": "forward",
+        "name": "Неослабевающая охота (Магия договора)",
+        "sort": 100001,
+        "img": "icons/magic/nature/tree-roots-glow-yellow.webp",
+        "activity": {
+          "id": "zdFRWJNT6dAXUTOU"
+        },
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Ваши хиты опустились до 0 в трансформации",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 7,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 4
+            }
+          }
         }
       }
     },

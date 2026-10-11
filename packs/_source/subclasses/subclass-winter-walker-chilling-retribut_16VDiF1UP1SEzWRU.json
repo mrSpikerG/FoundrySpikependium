@@ -5,7 +5,7 @@
   "img": "icons/magic/water/projectile-icecicle-glowing.webp",
   "system": {
     "description": {
-      "value": "<p>Когда существо попадает по вам броском атаки, вы можете реакцией заставить это существо совершить спасбросок Мудрости против Сл. ваших заклинаний. При провале цель получает состояние &Reference[frightened]{испуганный} до конца вашего следующего хода. Пока цель испугана, её скорость становится равной 0 футов.</p><p>Вы можете использовать эту реакцию количество раз, равное вашему модификатору Мудрости (минимум 1), и восстанавливаете все израсходованные использования после завершения продолжительного отдыха.</p>",
+      "value": "<p>Когда существо попадает по вам броском атаки, вы можете реакцией заставить это существо совершить спасбросок Мудрости против Сл. ваших заклинаний. При провале цель получает состояние &Reference[frightened]{испуганный} до конца вашего следующего хода. Пока цель испугана, её скорость становится равной 0 футов.</p><p>Вы можете использовать эту реакцию количество раз, равное вашему модификатору Мудрости (минимум 1), и восстанавливаете все израсходованные использования после завершения продолжительного отдыха.</p><h3>Действия</h3><ul><li>[[/item activity=7vJfEIU89QeJp7Cf]]{Применить} · [[/save activity=7vJfEIU89QeJp7Cf]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -76,7 +76,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "SzbJ9wtyoQuDdr0U",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -126,7 +131,7 @@
             "wis"
           ],
           "dc": {
-            "calculation": "spellcasting",
+            "calculation": "wis",
             "formula": ""
           },
           "bonus": ""
@@ -137,7 +142,57 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "SzbJ9wtyoQuDdr0U",
+      "name": "Ледяное возмездие",
+      "img": "icons/magic/water/projectile-icecicle-glowing.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.multiplier",
+            "value": "0",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "dh3gEJJQizngSKi3"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceEnd",
+        "expired": false
+      },
+      "description": "<p>Когда существо попадает по вам броском атаки, вы можете реакцией заставить это существо совершить спасбросок Мудрости против Сл. ваших заклинаний. При провале цель получает состояние &Reference[frightened]{испуганный} до конца вашего следующего хода. Пока цель испугана, её скорость становится равной 0 футов.</p><p>Вы можете использовать эту реакцию количество раз, равное вашему модификатору Мудрости (минимум 1), и восстанавливаете все израсходованные использования после завершения продолжительного отдыха.</p>",
+      "origin": null,
+      "statuses": [
+        "frightened"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!16VDiF1UP1SEzWRU.SzbJ9wtyoQuDdr0U"
+    }
+  ],
   "folder": "A0c07E4Bj0ac1pxm",
   "sort": 0,
   "ownership": {

@@ -5,7 +5,7 @@
   "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
   "system": {
     "description": {
-      "value": "<p>Когда вы применяете Дикую форму, вы можете принять форму титана, выбрав один из статблоков: <strong>Бегемот</strong>, <strong>Левиафан</strong> или <strong>Инсектоид</strong> (компендиум «Существа и спутники», папка «Формы титана»). Вы можете накладывать заклинания из таблицы «Заклинания круга титана», находясь в форме титана.</p><p>Вы сами определяете, как выглядит ваша форма титана. Бросьте кость по таблице «Облик титана» или выберите вариант из неё.</p><table><caption>Облик титана</caption><thead><tr><th>1к4</th><th>Бегемот</th><th>Левиафан</th><th>Инсектоид</th></tr></thead><tbody><tr><td>1</td><td>Блестящая чешуя</td><td>Множество щупалец</td><td>Радужные крылья</td></tr><tr><td>2</td><td>Несколько голов</td><td>Полупрозрачная слизь</td><td>Фасеточные глаза</td></tr><tr><td>3</td><td>Рептильный хвост</td><td>Рот миноги</td><td>Хитиновые рога</td></tr><tr><td>4</td><td>Шерсть, как у примата</td><td>Змеиное тело</td><td>Светящийся хитин</td></tr></tbody></table><p><em>Действие «Принять форму титана» расходует применение Дикой формы и превращает вас в выбранного титана; временные хиты (2 × уровень друида) выдаются при превращении. После превращения выставьте Силу и Ловкость равными исходной Мудрости, восстановите исходное Телосложение. Размер: Большой, либо Огромный с 10 уровня, либо Громадный с 14 уровня.</em></p>",
+      "value": "<p>Когда вы применяете Дикую форму, вы можете принять форму титана, выбрав один из статблоков: <strong>Бегемот</strong>, <strong>Левиафан</strong> или <strong>Инсектоид</strong> (компендиум «Существа и спутники», папка «Формы титана»). Вы можете накладывать заклинания из таблицы «Заклинания круга титана», находясь в форме титана.</p><p>Вы сами определяете, как выглядит ваша форма титана. Бросьте кость по таблице «Облик титана» или выберите вариант из неё.</p><table><caption>Облик титана</caption><thead><tr><th>[[/r 1d4]]{1к4}</th><th>Бегемот</th><th>Левиафан</th><th>Инсектоид</th></tr></thead><tbody><tr><td>1</td><td>Блестящая чешуя</td><td>Множество щупалец</td><td>Радужные крылья</td></tr><tr><td>2</td><td>Несколько голов</td><td>Полупрозрачная слизь</td><td>Фасеточные глаза</td></tr><tr><td>3</td><td>Рептильный хвост</td><td>Рот миноги</td><td>Хитиновые рога</td></tr><tr><td>4</td><td>Шерсть, как у примата</td><td>Змеиное тело</td><td>Светящийся хитин</td></tr></tbody></table><p><em>Действие «Принять форму титана» расходует применение Дикой формы и превращает вас в выбранного титана; временные хиты (2 × уровень друида) выдаются при превращении. После превращения выставьте Силу и Ловкость равными исходной Мудрости, восстановите исходное Телосложение. Размер: Большой, либо Огромный с 10 уровня, либо Громадный с 14 уровня.</em></p><h3>Действия</h3><ul><li>[[/item activity=ur7yhgCazKK06Tuo]]{Принять форму титана}</li><li>[[/item activity=7HrKUGASM812DpS4]]{Временные хиты формы} · [[/heal activity=7HrKUGASM812DpS4]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -103,7 +103,7 @@
           "max": ""
         },
         "visibility": {
-          "identifier": "",
+          "identifier": "druid",
           "level": {
             "min": null,
             "max": null
@@ -116,39 +116,117 @@
           {
             "_id": "SGNHuYPq0JrWQBAT",
             "cr": "",
-            "name": "Бегемот",
+            "name": "Бегемот (Большой)",
             "uuid": "Compendium.spikependium.creatures.Actor.8s7fBGLOHhvDr67F",
             "sizes": [],
             "types": [],
             "movement": [],
             "level": {
-              "min": null,
+              "min": 3,
               "max": null
             }
           },
           {
             "_id": "dIW7CrHhBVthytTn",
             "cr": "",
-            "name": "Левиафан",
-            "uuid": "Compendium.spikependium.creatures.Actor.aBDOhVbvaEc9OOUb",
+            "name": "Бегемот (Огромный)",
+            "uuid": "Compendium.spikependium.creatures.Actor.qXgSvTKMU4rV6otR",
             "sizes": [],
             "types": [],
             "movement": [],
             "level": {
-              "min": null,
+              "min": 10,
               "max": null
             }
           },
           {
             "_id": "vs04P2GVOPg0fZ2v",
             "cr": "",
-            "name": "Инсектоид",
+            "name": "Бегемот (Громадный)",
+            "uuid": "Compendium.spikependium.creatures.Actor.4jmNdUpLommccHBc",
+            "sizes": [],
+            "types": [],
+            "movement": [],
+            "level": {
+              "min": 14,
+              "max": null
+            }
+          },
+          {
+            "_id": "bljOUATAbl04Qbit",
+            "cr": "",
+            "name": "Левиафан (Большой)",
+            "uuid": "Compendium.spikependium.creatures.Actor.aBDOhVbvaEc9OOUb",
+            "sizes": [],
+            "types": [],
+            "movement": [],
+            "level": {
+              "min": 3,
+              "max": null
+            }
+          },
+          {
+            "_id": "iosuEwK8rurppXRX",
+            "cr": "",
+            "name": "Левиафан (Огромный)",
+            "uuid": "Compendium.spikependium.creatures.Actor.CSsaqRLgMhJh69In",
+            "sizes": [],
+            "types": [],
+            "movement": [],
+            "level": {
+              "min": 10,
+              "max": null
+            }
+          },
+          {
+            "_id": "08U32D4Ojv4TAPzt",
+            "cr": "",
+            "name": "Левиафан (Громадный)",
+            "uuid": "Compendium.spikependium.creatures.Actor.7kom7eJYwryOd00h",
+            "sizes": [],
+            "types": [],
+            "movement": [],
+            "level": {
+              "min": 14,
+              "max": null
+            }
+          },
+          {
+            "_id": "ljI0XW8RbYmwSOYb",
+            "cr": "",
+            "name": "Инсектоид (Большой)",
             "uuid": "Compendium.spikependium.creatures.Actor.DkzrLWLhDzIM0orW",
             "sizes": [],
             "types": [],
             "movement": [],
             "level": {
-              "min": null,
+              "min": 3,
+              "max": null
+            }
+          },
+          {
+            "_id": "Rb9A22t0qngVoVH7",
+            "cr": "",
+            "name": "Инсектоид (Огромный)",
+            "uuid": "Compendium.spikependium.creatures.Actor.5dAb0iu4vyE3VECp",
+            "sizes": [],
+            "types": [],
+            "movement": [],
+            "level": {
+              "min": 10,
+              "max": null
+            }
+          },
+          {
+            "_id": "YnDkcDW2OCFiFIFe",
+            "cr": "",
+            "name": "Инсектоид (Громадный)",
+            "uuid": "Compendium.spikependium.creatures.Actor.HvNFOmn3RnG1nE0L",
+            "sizes": [],
+            "types": [],
+            "movement": [],
+            "level": {
+              "min": 14,
               "max": null
             }
           }
@@ -169,6 +247,7 @@
             "hp",
             "languages",
             "mental",
+            "physical",
             "tempHP"
           ],
           "merge": [
@@ -184,7 +263,7 @@
           "transformTokens": true
         },
         "transform": {
-          "customize": true,
+          "customize": false,
           "formless": false,
           "mode": "",
           "preset": ""

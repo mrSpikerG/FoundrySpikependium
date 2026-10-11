@@ -5,7 +5,7 @@
   "img": "icons/magic/defensive/shield-barrier-blades-teal.webp",
   "system": {
     "description": {
-      "value": "<p>Когда вы получаете урон, пока ваша Песнь клинка активна, вы можете реакцией потратить одну ячейку заклинания и уменьшить полученный урон на величину, равную пятикратному уровню потраченной ячейки заклинания.</p>",
+      "value": "<p>Когда вы получаете урон, пока ваша Песнь клинка активна, вы можете реакцией потратить одну ячейку заклинания и уменьшить полученный урон на величину, равную пятикратному уровню потраченной ячейки заклинания.</p><h3>Действия</h3><ul><li>[[/item activity=2GJtala5jPhugeqn]]{Использовать}</li><li>[[/item activity=X73aDetrWNS7piFC]]{Песнь защиты (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -51,12 +51,15 @@
               "type": "spellSlots",
               "value": "1",
               "target": "1",
-              "scaling": {}
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
             }
           ],
           "scaling": {
             "allowed": true,
-            "max": ""
+            "max": "9"
           },
           "spellSlot": true
         },
@@ -117,6 +120,54 @@
           "name": "Снижение урона",
           "prompt": false,
           "visible": true
+        }
+      },
+      "X73aDetrWNS7piFC": {
+        "_id": "X73aDetrWNS7piFC",
+        "type": "forward",
+        "name": "Песнь защиты (Магия договора)",
+        "sort": 100001,
+        "img": "icons/magic/defensive/shield-barrier-blades-teal.webp",
+        "activity": {
+          "id": "2GJtala5jPhugeqn"
+        },
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Вы получаете урон, Песнь клинка активна",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 1,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 1
+            }
+          }
         }
       }
     },

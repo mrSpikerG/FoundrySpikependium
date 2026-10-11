@@ -5,7 +5,7 @@
   "img": "icons/magic/nature/root-vine-entangled-humanoid.webp",
   "system": {
     "description": {
-      "value": "<p>Ваш боеприпас создаёт цепкие кусты вокруг цели. Существо, по которому вы попали, получает дополнительный рубящий урон, равный 1 броску вашей кости Арканного выстрела, и должно преуспеть в спасброске Силы, иначе получает состояние &Reference[restrained]{опутанный} до начала вашего следующего хода. Цель или существо в пределах её досягаемости может действием совершить проверку Силы (Атлетика) против вашей Сл. Арканного выстрела, чтобы удалить кусты и прекратить состояние опутанный.</p>",
+      "value": "<p>Ваш боеприпас создаёт цепкие кусты вокруг цели. Существо, по которому вы попали, получает дополнительный рубящий урон, равный 1 броску вашей кости Арканного выстрела, и должно преуспеть в спасброске Силы, иначе получает состояние &Reference[restrained]{опутанный} до начала вашего следующего хода. Цель или существо в пределах её досягаемости может действием совершить проверку Силы (Атлетика) против вашей Сл. Арканного выстрела, чтобы удалить кусты и прекратить состояние опутанный.</p><h3>Действия</h3><ul><li>[[/item activity=BlSAG5eyLdpupoLN]]{Применить} · [[/damage activity=BlSAG5eyLdpupoLN]]{Бросок урона} · [[/save activity=BlSAG5eyLdpupoLN]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -71,7 +71,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "e12nADoP8FTSSBGN",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -113,7 +118,7 @@
           "requireMagic": false
         },
         "damage": {
-          "onSave": "none",
+          "onSave": "full",
           "parts": [
             {
               "custom": {
@@ -150,7 +155,48 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "e12nADoP8FTSSBGN",
+      "name": "Сжимающий выстрел",
+      "img": "icons/magic/nature/root-vine-entangled-humanoid.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceStart",
+        "expired": false
+      },
+      "description": "<p>Ваш боеприпас создаёт цепкие кусты вокруг цели. Существо, по которому вы попали, получает дополнительный рубящий урон, равный 1 броску вашей кости Арканного выстрела, и должно преуспеть в спасброске Силы, иначе получает состояние &Reference[restrained]{опутанный} до начала вашего следующего хода. Цель или существо в пределах её досягаемости может действием совершить проверку Силы (Атлетика) против вашей Сл. Арканного выстрела, чтобы удалить кусты и прекратить состояние опутанный.</p>",
+      "origin": null,
+      "statuses": [
+        "restrained"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!AA6SlWtbHRPPGK3n.e12nADoP8FTSSBGN"
+    }
+  ],
   "folder": "WFBGmk3FrZi2OT64",
   "sort": 0,
   "ownership": {

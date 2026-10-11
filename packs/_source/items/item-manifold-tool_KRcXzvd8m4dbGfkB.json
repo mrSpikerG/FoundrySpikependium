@@ -1,11 +1,11 @@
 {
   "_id": "KRcXzvd8m4dbGfkB",
   "name": "Manifold Tool",
-  "type": "equipment",
+  "type": "tool",
   "img": "icons/tools/hand/wrench-steel.webp",
   "system": {
     "description": {
-      "value": "<p><em>Чудесный предмет, обычный (требуется настройка).</em></p><p>Этот инструмент принимает форму гаечного ключа, отвёртки или другого простого инструмента. Действием магия вы можете коснуться предмета и преобразовать его в выбранные вами инструменты ремесленника. В какой бы форме ни находился этот инструмент, вы владеете им при использовании.</p><p><em>Цена: ориентир по редкости из правил 2024 года; в UA цена не указана. Вес оценочный: 1 фунт для исходной формы простого ручного инструмента (например, гаечного ключа). Вес в UA не указан; при смене формы на комплект ремесленных инструментов измените вес по его записи в правилах 2024.</em></p>",
+      "value": "<p><em>Чудесный предмет, обычный (требуется настройка).</em></p><p>Этот инструмент принимает форму гаечного ключа, отвёртки или другого простого инструмента. Действием магия вы можете коснуться предмета и преобразовать его в выбранные вами инструменты ремесленника. В какой бы форме ни находился этот инструмент, вы владеете им при использовании.</p><p><strong>В Foundry.</strong> Настройтесь на предмет и отметьте его используемым. Действие «Преобразовать» предлагает 17 ремесленных форм: меняются название, тип инструмента, вес и владение. «Проверка инструмента» создаёт стандартную кнопку проверки выбранного инструмента. Исходная ручная форма использует Интеллект с бонусом мастерства; нужную характеристику можно выбрать в окне броска. Повторное применение того же зачарования возвращает исходную форму.</p><p><em>Цена: ориентир по редкости из правил 2024 года; в UA цена не указана. Вес оценочный: 1 фунт для исходной формы простого ручного инструмента (например, гаечного ключа). Вес в UA не указан; вес выбранного комплекта ремесленных инструментов подставляется из его записи SRD 2024.</em></p><h3>Действия</h3><ul><li>[[/item activity=9EuID6iALueVcXMn]]{Преобразовать}</li><li>[[/item activity=USjqegqqiJ5Ko3nl]]{Проверка инструмента}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -35,25 +35,13 @@
     "attunement": "required",
     "attuned": false,
     "equipped": false,
-    "armor": {
-      "value": null,
-      "magicalBonus": null,
-      "dex": null
-    },
-    "hp": {
-      "value": null,
-      "max": null,
-      "dt": null,
-      "conditions": ""
-    },
     "type": {
-      "value": "wondrous",
+      "value": "art",
       "baseItem": ""
     },
     "properties": [
       "mgc"
     ],
-    "strength": null,
     "proficient": null,
     "uses": {
       "max": "",
@@ -63,7 +51,7 @@
     "activities": {
       "9EuID6iALueVcXMn": {
         "_id": "9EuID6iALueVcXMn",
-        "type": "utility",
+        "type": "enchant",
         "name": "Преобразовать",
         "img": "icons/tools/hand/wrench-steel.webp",
         "sort": 100000,
@@ -92,7 +80,246 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "flj3YdN6mMsrDPgs",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "H5023e3MI9eF4AZw"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "snkaUSLB0zieCDPe",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "XDw6RA7cmDmQR2rE"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "YSkNAE22b3ei7jY8",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "3YuIaJXwYt51x14X"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "On0DR5iYeTcNoEvj",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "9GnzpSeWQCT8vEWo"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "Ap30w58hFvKxVCDF",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "Q4FGzFBTJfUG3pbP"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "xUMEifghg5XP4OpQ",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "JXUk7GW3rKgRTKmM"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "IZTI5fYe1jZHVaWW",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "pCf2KmVQa2RI47aE"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "VyBW5Fm4jcDeVKUk",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "pzfYyen0XAqh9R9X"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "dSu5XeSaNvvGpskI",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "RXoBMStaPARIBSlu"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "kYd4OBoN4vNo4crz",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "F38u31223a5nsEwg"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "YoMzXCMd9A4lnzeF",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "sINtc7DW1rs2YNrM"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "uW6DUO4yA6QxniIL",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "Dqo7FGisLkzbTC3d"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "KbEN5LMMFj6mUXb7",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "MHTb2gxnk21krQIA"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "cSjfsjDcFIhUvmoa",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "4l8GH4Gto21VsM7n"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "blgiIN43gGcIyCAh",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "ond6Or9H9F5OTVow"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "DKpEMnu5zAVusR1e",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "1G0KaPkNWqzv5MLv"
+              ],
+              "item": []
+            }
+          },
+          {
+            "_id": "tteNzFte0K3QuDIW",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [
+                "EYoQAIaG1tjLY3Jy"
+              ],
+              "item": []
+            }
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -123,6 +350,90 @@
           "recovery": [],
           "max": ""
         },
+        "enchant": {
+          "self": true
+        },
+        "restrictions": {
+          "allowMagical": true,
+          "categories": [
+            "art"
+          ],
+          "properties": [],
+          "type": "tool"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": true,
+          "requireIdentification": false,
+          "requireMagic": true
+        }
+      },
+      "USjqegqqiJ5Ko3nl": {
+        "_id": "USjqegqqiJ5Ko3nl",
+        "type": "check",
+        "name": "Проверка инструмента",
+        "img": "icons/tools/hand/wrench-steel.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
         "visibility": {
           "identifier": "",
           "level": {
@@ -133,16 +444,2166 @@
           "requireIdentification": false,
           "requireMagic": true
         },
-        "roll": {
-          "formula": "",
-          "name": "",
-          "prompt": false,
-          "visible": false
+        "check": {
+          "ability": "int",
+          "associated": [],
+          "bonus": "@prof",
+          "dc": {
+            "calculation": "",
+            "formula": ""
+          },
+          "visible": true
         }
       }
-    }
+    },
+    "ability": "",
+    "bonus": "",
+    "chatFlavor": ""
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "flj3YdN6mMsrDPgs",
+      "name": "Припасы алхимика",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (припасы алхимика)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "BADIFR6prjmC5Ikq"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "alchemist",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "VFNBIfTBggBwujOB"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "8",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "D5EhbXWnuiBtQXIW"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "2A50wdvSXBwKG6ti"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "QPvbHg8SK6HJDgAG"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.flj3YdN6mMsrDPgs"
+    },
+    {
+      "_id": "snkaUSLB0zieCDPe",
+      "name": "Припасы пивовара",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (припасы пивовара)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "e1t1LbnTMou9CEOQ"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "brewer",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "DnhVVrhrE0TwSrXT"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "9",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "gzTH7tBUEYugeoyC"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "zhfhWIXb2I3Sle62"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "9cHtwbocltbEsISM"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.snkaUSLB0zieCDPe"
+    },
+    {
+      "_id": "YSkNAE22b3ei7jY8",
+      "name": "Припасы каллиграфа",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (припасы каллиграфа)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "6HY1u6nRtBoly2KT"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "calligrapher",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "jkZ5F8Y4YNtsZGOU"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "5",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "tEvaOYKhnwCdpXPh"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "UmF2UbqY4xYLeqd5"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "1rk31HhiQaIY85HU"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.YSkNAE22b3ei7jY8"
+    },
+    {
+      "_id": "On0DR5iYeTcNoEvj",
+      "name": "Инструменты плотника",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты плотника)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "RXL1BcoFeSSRErhj"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "carpenter",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "FPTMqqWqCwTSehao"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "6",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "OH1nEzBkXxMOzr64"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "7meWnSo7SsE3QypK"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "k0K3t3pNF10FstpO"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.On0DR5iYeTcNoEvj"
+    },
+    {
+      "_id": "Ap30w58hFvKxVCDF",
+      "name": "Инструменты картографа",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты картографа)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "7xD9zHYb6cfOXDnN"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "cartographer",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "f3TRPZSZCoOHXEFW"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "6",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ABeZwaJSW4ZRyea8"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "0kDcRPm4fqywRNVq"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "X0guxt9uDUDiee9h"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.Ap30w58hFvKxVCDF"
+    },
+    {
+      "_id": "xUMEifghg5XP4OpQ",
+      "name": "Инструменты сапожника",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты сапожника)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "wLCD2ZyKexOmlpoJ"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "cobbler",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Un4sxFL8nq7Wqbjp"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "5",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "HS0wHHQn2ZQQDaJQ"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "486rWNhYJSauaBhV"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "iMBOZELN2R0Ujewe"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.xUMEifghg5XP4OpQ"
+    },
+    {
+      "_id": "IZTI5fYe1jZHVaWW",
+      "name": "Принадлежности повара",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (принадлежности повара)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "oc6yb2MI0sxm54HP"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "cook",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "nFsPuGLlkirMI0Wk"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "8",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "zYgwQoRi2yp5PFCG"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "GOgKM97Kal9G7wGH"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "OBEroFbsg4532iXa"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.IZTI5fYe1jZHVaWW"
+    },
+    {
+      "_id": "VyBW5Fm4jcDeVKUk",
+      "name": "Инструменты стеклодува",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты стеклодува)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "I96wmGRFwZMVf0fb"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "glassblower",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "JWrjFZZyFa85tAuX"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "5",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "SV4KlX7d1RjdM1LM"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ogpgHAFbYdGnySsK"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "SudGl48bbMpnVPKc"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.VyBW5Fm4jcDeVKUk"
+    },
+    {
+      "_id": "dSu5XeSaNvvGpskI",
+      "name": "Инструменты ювелира",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты ювелира)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "17aPwJGfQyrbwp6N"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "jeweler",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "1zhjwMOr1vkf6KZM"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "2",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "3yVrJxDhk1UT0bG1"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "47wouZmtPp75H8Dp"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "dfWtBFSwC2vnvhWy"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.dSu5XeSaNvvGpskI"
+    },
+    {
+      "_id": "kYd4OBoN4vNo4crz",
+      "name": "Инструменты кожевника",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты кожевника)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "PAtwNmrdn25fXhKb"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "leatherworker",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "AaRFPzKmlvCm3LhZ"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "5",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "0EIgLuaGeMPBwSfh"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "FxARhdogtS6cUkVK"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "TK4mjPiPMo5RwsZ9"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.kYd4OBoN4vNo4crz"
+    },
+    {
+      "_id": "YoMzXCMd9A4lnzeF",
+      "name": "Инструменты каменщика",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты каменщика)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "LalJRsjeAyyCCtFl"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "mason",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Cj0zOUAE2V0j5OJi"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "8",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "CsmXH9i8ftiawyF4"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Csn5kGlICdc2VCw2"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "KNxe7n2I5ds6ncMw"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.YoMzXCMd9A4lnzeF"
+    },
+    {
+      "_id": "uW6DUO4yA6QxniIL",
+      "name": "Припасы художника",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (припасы художника)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "HVJUOr3riogkLGVu"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "painter",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Z5Bf6ML1Vlck63O0"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "5",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "UNMCeONQRiVJYGFE"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "4mbATMXVNI9gPP76"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "RfHcajeLavNZ02TC"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.uW6DUO4yA6QxniIL"
+    },
+    {
+      "_id": "KbEN5LMMFj6mUXb7",
+      "name": "Инструменты гончара",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты гончара)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "6kc2gz3IzrPiArDO"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "potter",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "okNMkDgTm597nHuG"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "3",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "S18A4cLKd1gk3r4d"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "gBVWMnlHKmGV9X2Q"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "AkxvQ7RCVOSgHSGS"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.KbEN5LMMFj6mUXb7"
+    },
+    {
+      "_id": "cSjfsjDcFIhUvmoa",
+      "name": "Инструменты кузнеца",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты кузнеца)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "4d4Xm6bBtzeDBqwG"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "smith",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "m5TZz1zV8A0AYdaU"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "8",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "X7aRLY8pir25MUbR"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "YFr0rEyOH8jnZj1G"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "sDJshmd40zySme4n"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.cSjfsjDcFIhUvmoa"
+    },
+    {
+      "_id": "blgiIN43gGcIyCAh",
+      "name": "Инструменты ремонтника",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты ремонтника)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "j6qzPtXqQ4v4fHND"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "tinker",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "0yAMttIAHVRPZW2R"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "10",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "FMHYXtpd6d3vieHD"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Nnt9MbHltR5ceB72"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "bOinMAqBu2eGMyLW"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.blgiIN43gGcIyCAh"
+    },
+    {
+      "_id": "DKpEMnu5zAVusR1e",
+      "name": "Инструменты ткача",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты ткача)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "2cZQC4QjUAskDLNW"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "weaver",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "be9moAcpIcqfeu6m"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "5",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "kkKUxD7jQhk0LCFW"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "o77cYWRoGvdJ7ZNu"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Bn2zVEGVkiWS2HvA"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.DKpEMnu5zAVusR1e"
+    },
+    {
+      "_id": "tteNzFte0K3QuDIW",
+      "name": "Инструменты резчика по дереву",
+      "img": "icons/tools/hand/wrench-steel.webp",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "name",
+            "value": "Мультиинструмент (инструменты резчика по дереву)",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "pay9nCHpryGh9P0H"
+          },
+          {
+            "key": "system.type.baseItem",
+            "value": "woodcarver",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "CjvkG3rrqFBaGiDh"
+          },
+          {
+            "key": "system.weight.value",
+            "value": "5",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "HCGrpBweeFcjkChn"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.ability",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "EXMCjAeutEEa9QcB"
+          },
+          {
+            "key": "system.activities.USjqegqqiJ5Ko3nl.check.bonus",
+            "value": "",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "kiwuzTFChyR0NDcm"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.tteNzFte0K3QuDIW"
+    },
+    {
+      "_id": "H5023e3MI9eF4AZw",
+      "name": "Мультиинструмент: Припасы алхимика",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.alchemist.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "bGufH9dPmO4ASOdU"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.H5023e3MI9eF4AZw"
+    },
+    {
+      "_id": "XDw6RA7cmDmQR2rE",
+      "name": "Мультиинструмент: Припасы пивовара",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.brewer.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "2wVLKLHv78wYqZin"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.XDw6RA7cmDmQR2rE"
+    },
+    {
+      "_id": "3YuIaJXwYt51x14X",
+      "name": "Мультиинструмент: Припасы каллиграфа",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.calligrapher.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "k7HuqCoaQyGfQCcv"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.3YuIaJXwYt51x14X"
+    },
+    {
+      "_id": "9GnzpSeWQCT8vEWo",
+      "name": "Мультиинструмент: Инструменты плотника",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.carpenter.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "3FUMwcGKHmpcxrdc"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.9GnzpSeWQCT8vEWo"
+    },
+    {
+      "_id": "Q4FGzFBTJfUG3pbP",
+      "name": "Мультиинструмент: Инструменты картографа",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.cartographer.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Gddpi5929fKUgv2R"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.Q4FGzFBTJfUG3pbP"
+    },
+    {
+      "_id": "JXUk7GW3rKgRTKmM",
+      "name": "Мультиинструмент: Инструменты сапожника",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.cobbler.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "CSsQzs2QAQwPb7Cb"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.JXUk7GW3rKgRTKmM"
+    },
+    {
+      "_id": "pCf2KmVQa2RI47aE",
+      "name": "Мультиинструмент: Принадлежности повара",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.cook.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "lnmW4SQdQGozutcM"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.pCf2KmVQa2RI47aE"
+    },
+    {
+      "_id": "pzfYyen0XAqh9R9X",
+      "name": "Мультиинструмент: Инструменты стеклодува",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.glassblower.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "3DOkvKKkTqvsUkCp"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.pzfYyen0XAqh9R9X"
+    },
+    {
+      "_id": "RXoBMStaPARIBSlu",
+      "name": "Мультиинструмент: Инструменты ювелира",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.jeweler.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "bEPyL2dJpcJHrAyS"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.RXoBMStaPARIBSlu"
+    },
+    {
+      "_id": "F38u31223a5nsEwg",
+      "name": "Мультиинструмент: Инструменты кожевника",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.leatherworker.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "t7DxtJNqHZSrBllT"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.F38u31223a5nsEwg"
+    },
+    {
+      "_id": "sINtc7DW1rs2YNrM",
+      "name": "Мультиинструмент: Инструменты каменщика",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.mason.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "L4j7QuoMOgKR4GqG"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.sINtc7DW1rs2YNrM"
+    },
+    {
+      "_id": "Dqo7FGisLkzbTC3d",
+      "name": "Мультиинструмент: Припасы художника",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.painter.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "U8iQXa7cGoz2FnFe"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.Dqo7FGisLkzbTC3d"
+    },
+    {
+      "_id": "MHTb2gxnk21krQIA",
+      "name": "Мультиинструмент: Инструменты гончара",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.potter.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "1eB9130EM9roTKRP"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.MHTb2gxnk21krQIA"
+    },
+    {
+      "_id": "4l8GH4Gto21VsM7n",
+      "name": "Мультиинструмент: Инструменты кузнеца",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.smith.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "EzOpoBWIt3UQxv5l"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.4l8GH4Gto21VsM7n"
+    },
+    {
+      "_id": "ond6Or9H9F5OTVow",
+      "name": "Мультиинструмент: Инструменты ремонтника",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.tinker.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "4LVtXSPlCAZb4PzC"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.ond6Or9H9F5OTVow"
+    },
+    {
+      "_id": "1G0KaPkNWqzv5MLv",
+      "name": "Мультиинструмент: Инструменты ткача",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.weaver.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "xVYIEjB4B3hAl49a"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.1G0KaPkNWqzv5MLv"
+    },
+    {
+      "_id": "EYoQAIaG1tjLY3Jy",
+      "name": "Мультиинструмент: Инструменты резчика по дереву",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.tools.woodcarver.value",
+            "value": "1",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ZtVJcTEqTSdspWOI"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!KRcXzvd8m4dbGfkB.EYoQAIaG1tjLY3Jy"
+    }
+  ],
   "folder": "HyNCtrH5jnhW1Wps",
   "sort": 0,
   "ownership": {
@@ -152,6 +2613,30 @@
     "spikependium": {
       "key": "item:manifold-tool",
       "originalName": "Manifold Tool"
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": [
+          "H5023e3MI9eF4AZw",
+          "XDw6RA7cmDmQR2rE",
+          "3YuIaJXwYt51x14X",
+          "9GnzpSeWQCT8vEWo",
+          "Q4FGzFBTJfUG3pbP",
+          "JXUk7GW3rKgRTKmM",
+          "pCf2KmVQa2RI47aE",
+          "pzfYyen0XAqh9R9X",
+          "RXoBMStaPARIBSlu",
+          "F38u31223a5nsEwg",
+          "sINtc7DW1rs2YNrM",
+          "Dqo7FGisLkzbTC3d",
+          "MHTb2gxnk21krQIA",
+          "4l8GH4Gto21VsM7n",
+          "ond6Or9H9F5OTVow",
+          "1G0KaPkNWqzv5MLv",
+          "EYoQAIaG1tjLY3Jy"
+        ]
+      }
     }
   },
   "_stats": {

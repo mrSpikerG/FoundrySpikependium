@@ -1,5 +1,10 @@
 // Дополнения к стандартному призыву dnd5e 6: правила спутников из UA.
-// shortcut: выбор модификаций реаниматора и контроль единственного спутника ручные; автоматизировать при наличии сценарных тестов Foundry.
+export function hasReanimatedCompanion(activity, scenes) {
+  if (activity.item.flags.spikependium?.key !== "subclass:reanimator:reanimated-companion") return false;
+  return [...scenes].some(scene => [...scene.tokens].some(token => token.actor?.system.attributes.hp.value > 0
+    && token.actor.flags.dnd5e?.summon?.origin === activity.item.uuid
+    && token.actor.flags.spikependium?.key?.startsWith("actor:reanimated-companion")));
+}
 export function canRefuel(activity) {
   if (activity.item.flags.spikependium?.key !== "item:spell-refueling-ring") return true;
   const target = activity.consumption.targets.find(t => t.type === "spellSlots" || t.target === "spells.pact.value");
@@ -43,10 +48,16 @@ export function prepareSummon(activity, profile, config) {
         if (improved !== (level("fighter") >= 7)) update[`system.activities.-=${act.id}`] = null;
       }
     }
-    if (key === "actor:reanimated-companion" && level("artificer") >= 15) {
-      for (const act of acts) if (act.type === "save") {
+    if (key?.startsWith("actor:reanimated-companion")) {
+      for (const act of acts) if (act.type === "save" && act.damage.parts.length) {
         const parts = act.toObject().damage.parts;
-        parts[0].number = 4;
+        if (level("artificer") >= 15) parts[0].number = 4;
+        if (key.includes(":big-")) parts[0].bonus = String(caster.system.abilities.int.mod);
+        itemUpdate(item)[`system.activities.${act.id}.damage.parts`] = parts;
+      }
+      for (const act of acts) if (act.type === "damage") {
+        const parts = act.toObject().damage.parts;
+        parts[0].custom.formula = String(caster.system.abilities.int.mod);
         itemUpdate(item)[`system.activities.${act.id}.damage.parts`] = parts;
       }
     }

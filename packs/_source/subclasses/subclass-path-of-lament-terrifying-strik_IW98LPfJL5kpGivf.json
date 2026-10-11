@@ -5,7 +5,7 @@
   "img": "icons/magic/control/fear-fright-white.webp",
   "system": {
     "description": {
-      "value": "<p>Один раз за ход, когда вы попадаете по существу броском атаки, основанным на Силе, пока ваша ярость активна, вы можете попытаться напугать цель. Цель должна преуспеть в спасброске Мудрости (Сл. 8 + ваш модификатор Телосложения + ваш бонус мастерства), иначе она получает состояние &Reference[frightened]{испуганный} до начала вашего следующего хода.</p>",
+      "value": "<p>Один раз за ход, когда вы попадаете по существу броском атаки, основанным на Силе, пока ваша ярость активна, вы можете попытаться напугать цель. Цель должна преуспеть в спасброске Мудрости (Сл. 8 + ваш модификатор Телосложения + ваш бонус мастерства), иначе она получает состояние &Reference[frightened]{испуганный} до начала вашего следующего хода.</p><h3>Действия</h3><ul><li>[[/item activity=dFg07rn7Yi5i8Ndp]]{Применить} · [[/save activity=dFg07rn7Yi5i8Ndp]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -64,7 +64,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "KMy1jz0YBVEJHhbC",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -118,6 +123,11 @@
             "formula": ""
           },
           "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "oncePerTurn": true
+          }
         }
       }
     },
@@ -125,7 +135,48 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "KMy1jz0YBVEJHhbC",
+      "name": "Ужасающий удар",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceStart",
+        "expired": false
+      },
+      "description": "<p>Один раз за ход, когда вы попадаете по существу броском атаки, основанным на Силе, пока ваша ярость активна, вы можете попытаться напугать цель. Цель должна преуспеть в спасброске Мудрости (Сл. 8 + ваш модификатор Телосложения + ваш бонус мастерства), иначе она получает состояние &Reference[frightened]{испуганный} до начала вашего следующего хода.</p>",
+      "origin": null,
+      "statuses": [
+        "frightened"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!IW98LPfJL5kpGivf.KMy1jz0YBVEJHhbC"
+    }
+  ],
   "folder": "8oZJ0j0LIQy27CY2",
   "sort": 0,
   "ownership": {

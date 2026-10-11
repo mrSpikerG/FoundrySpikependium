@@ -5,7 +5,7 @@
   "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
   "system": {
     "description": {
-      "value": "<p>Ваши чарующие слова и завораживающий взгляд могут увлечь другое существо. Действием магия выберите одно существо, которое вы видите в пределах 10 футов от себя. Если цель может вас видеть или слышать, то она должна преуспеть в спасброске Мудрости против вашей Сл. спасброска заклинаний, иначе получит состояние &Reference[charmed]{очарованный} на 1 минуту, пока не закончится ваша концентрация, пока цель не окажется дальше 10 футов от вас, пока цель не сможет ни видеть, ни слышать вас или пока цель не получит урон.</p><p>Пока цель находится в состоянии очарованный таким образом, она получает состояние &Reference[incapacitated]{недееспособный}, и её скорость равна 0.</p><p>Применив это умение, вы не можете применить его снова, пока не завершите продолжительный отдых. Вы также можете восстановить возможность его применения, потратив ячейку заклинания 1 уровня или выше (действие не требуется).</p><p><em>В переводе перед этим умением сохранился текст прежнего умения «Раздражительное движение», которое по примечанию дизайнера заменено Гипнотическим присутствием.</em></p>",
+      "value": "<p>Ваши чарующие слова и завораживающий взгляд могут увлечь другое существо. Действием магия выберите одно существо, которое вы видите в пределах 10 футов от себя. Если цель может вас видеть или слышать, то она должна преуспеть в спасброске Мудрости против вашей Сл. спасброска заклинаний, иначе получит состояние &Reference[charmed]{очарованный} на 1 минуту, пока не закончится ваша концентрация, пока цель не окажется дальше 10 футов от вас, пока цель не сможет ни видеть, ни слышать вас или пока цель не получит урон.</p><p>Пока цель находится в состоянии очарованный таким образом, она получает состояние &Reference[incapacitated]{недееспособный}, и её скорость равна 0.</p><p>Применив это умение, вы не можете применить его снова, пока не завершите продолжительный отдых. Вы также можете восстановить возможность его применения, потратив ячейку заклинания 1 уровня или выше (действие не требуется).</p><p><em>В переводе перед этим умением сохранился текст прежнего умения «Раздражительное движение», которое по примечанию дизайнера заменено Гипнотическим присутствием.</em></p><h3>Действия</h3><ul><li>[[/item activity=ZRJBWcE7uaaySv94]]{Применить} · [[/save activity=ZRJBWcE7uaaySv94]]{Спасбросок цели}</li><li>[[/item activity=0k0jnK1mlOlUkUFH]]{Применить (ячейка 1+)} · [[/save activity=0k0jnK1mlOlUkUFH]]{Спасбросок цели}</li><li>[[/item activity=tHwp4XUYO6IUkeMc]]{Применить (ячейка 1+) (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -71,7 +71,12 @@
           "override": true,
           "concentration": true
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "hcpjNdqYFsm9unkS",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "10",
           "units": "ft",
@@ -126,7 +131,7 @@
             "wis"
           ],
           "dc": {
-            "calculation": "spellcasting",
+            "calculation": "int",
             "formula": ""
           },
           "bonus": ""
@@ -150,12 +155,15 @@
               "type": "spellSlots",
               "value": "1",
               "target": "1",
-              "scaling": {}
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
             }
           ],
           "scaling": {
-            "allowed": false,
-            "max": ""
+            "allowed": true,
+            "max": "9"
           },
           "spellSlot": true
         },
@@ -170,7 +178,12 @@
           "override": true,
           "concentration": true
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "OOWTtF57zP19KGYo",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "10",
           "units": "ft",
@@ -220,10 +233,58 @@
             "wis"
           ],
           "dc": {
-            "calculation": "spellcasting",
+            "calculation": "int",
             "formula": ""
           },
           "bonus": ""
+        }
+      },
+      "tHwp4XUYO6IUkeMc": {
+        "_id": "tHwp4XUYO6IUkeMc",
+        "type": "forward",
+        "name": "Применить (ячейка 1+) (Магия договора)",
+        "sort": 200001,
+        "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+        "activity": {
+          "id": "0k0jnK1mlOlUkUFH"
+        },
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 1,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 1
+            }
+          }
         }
       }
     },
@@ -231,7 +292,116 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "hcpjNdqYFsm9unkS",
+      "name": "Гипнотическое присутствие",
+      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.multiplier",
+            "value": "0",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "qUAJMAnz1hKupqZF"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Ваши чарующие слова и завораживающий взгляд могут увлечь другое существо. Действием магия выберите одно существо, которое вы видите в пределах 10 футов от себя. Если цель может вас видеть или слышать, то она должна преуспеть в спасброске Мудрости против вашей Сл. спасброска заклинаний, иначе получит состояние &Reference[charmed]{очарованный} на 1 минуту, пока не закончится ваша концентрация, пока цель не окажется дальше 10 футов от вас, пока цель не сможет ни видеть, ни слышать вас или пока цель не получит урон.</p><p>Пока цель находится в состоянии очарованный таким образом, она получает состояние &Reference[incapacitated]{недееспособный}, и её скорость равна 0.</p><p>Применив это умение, вы не можете применить его снова, пока не завершите продолжительный отдых. Вы также можете восстановить возможность его применения, потратив ячейку заклинания 1 уровня или выше (действие не требуется).</p><p><em>В переводе перед этим умением сохранился текст прежнего умения «Раздражительное движение», которое по примечанию дизайнера заменено Гипнотическим присутствием.</em></p>",
+      "origin": null,
+      "statuses": [
+        "charmed",
+        "incapacitated"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "endsOnDamage": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!79TZD4jCIqv0mocj.hcpjNdqYFsm9unkS"
+    },
+    {
+      "_id": "OOWTtF57zP19KGYo",
+      "name": "Применить (ячейка 1+)",
+      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.multiplier",
+            "value": "0",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "nG89fZOKylRKcMqt"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Ваши чарующие слова и завораживающий взгляд могут увлечь другое существо. Действием магия выберите одно существо, которое вы видите в пределах 10 футов от себя. Если цель может вас видеть или слышать, то она должна преуспеть в спасброске Мудрости против вашей Сл. спасброска заклинаний, иначе получит состояние &Reference[charmed]{очарованный} на 1 минуту, пока не закончится ваша концентрация, пока цель не окажется дальше 10 футов от вас, пока цель не сможет ни видеть, ни слышать вас или пока цель не получит урон.</p><p>Пока цель находится в состоянии очарованный таким образом, она получает состояние &Reference[incapacitated]{недееспособный}, и её скорость равна 0.</p><p>Применив это умение, вы не можете применить его снова, пока не завершите продолжительный отдых. Вы также можете восстановить возможность его применения, потратив ячейку заклинания 1 уровня или выше (действие не требуется).</p><p><em>В переводе перед этим умением сохранился текст прежнего умения «Раздражительное движение», которое по примечанию дизайнера заменено Гипнотическим присутствием.</em></p>",
+      "origin": null,
+      "statuses": [
+        "charmed",
+        "incapacitated"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "endsOnDamage": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!79TZD4jCIqv0mocj.OOWTtF57zP19KGYo"
+    }
+  ],
   "folder": "FgYDhCTpOkkHk2HX",
   "sort": 0,
   "ownership": {

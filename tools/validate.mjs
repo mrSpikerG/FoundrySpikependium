@@ -62,6 +62,8 @@ function checkItem(where, item) {
     if ( e.img && !e.img.startsWith("modules/") && !ICONS.has(e.img) ) warn(where, `иконка эффекта не найдена: ${e.img}`);
   }
   const acts = item.system?.activities ?? {};
+  for (const m of (item.system?.description?.value ?? "").matchAll(/\[\[\/(?:item|damage|heal|save) activity=([^\]]+)\]\]/g))
+    if (!acts[m[1]]) err(where, `кликабельная ссылка на отсутствующее действие ${m[1]}`);
   for ( const [k, a] of Object.entries(acts) ) {
     if ( k !== a._id ) err(where, `ключ действия ${k} не совпадает с _id ${a._id}`);
     if ( !ID.test(a._id) ) err(where, `действие с некорректным _id ${a._id}`);
@@ -71,8 +73,15 @@ function checkItem(where, item) {
     if ( a.type === "summon" ) for ( const p of a.profiles ) if ( !docs.has(p.uuid) ) err(where, `профиль призыва ссылается на неизвестный ${p.uuid}`);
     if ( a.type === "cast" && !srdIds.has(a.spell.uuid) && !docs.has(a.spell.uuid) ) err(where, `cast ссылается на неизвестное заклинание ${a.spell.uuid}`);
     if ( a.type === "transform" ) for ( const p of a.profiles ) if ( p.uuid && !docs.has(p.uuid) ) err(where, `превращение ссылается на неизвестного ${p.uuid}`);
+    if (a.type === "forward" && !acts[a.activity?.id]) err(where, "переадресация ссылается на отсутствующее действие");
     for ( const t of a.consumption?.targets ?? [] ) if ( !["itemUses", "activityUses", "spellSlots", "hitDice", "attribute", "material"].includes(t.type) ) err(where, `неизвестный тип расхода ${t.type}`);
     for (const t of a.consumption?.targets ?? []) if (t.type === "spellSlots" && !/^[1-9]$/.test(t.target)) err(where, `неверная ячейка: ${t.target}`);
+    for (const t of a.consumption?.targets ?? []) {
+      if (t.type === "itemUses" && !t.target && !item.system.uses?.max) err(where, "расход предмета без счётчика применений");
+      if (t.type === "activityUses" && !a.uses?.max) err(where, "расход действия без счётчика применений");
+      if (t.type === "spellSlots" && Number(t.value) > 0 && (!a.consumption.scaling.allowed || t.scaling.mode !== "level"))
+        err(where, "уровень расходуемой ячейки не связан с выбранным усилением");
+    }
     if (a.type === "summon") {
       if (a.summon.mode !== "" || !a.profiles.length) err(where, "неверный режим фиксированного призыва");
       for (const p of a.profiles) {
@@ -83,13 +92,27 @@ function checkItem(where, item) {
     }
   }
   const advIds = new Set();
+  if (item.type === "feat" && item.system.type?.value === "feat"
+    && /<strong>Увеличение характеристики\.<\/strong>/.test(item.system.description.value)
+    && !item.system.advancement.some(a => a.type === "AbilityScoreImprovement"))
+    err(where, "повышение характеристики описано, но нет встроенного шага AbilityScoreImprovement");
   for ( const adv of item.system?.advancement ?? [] ) {
     if ( !ID.test(adv._id) ) err(where, `продвижение с некорректным _id ${adv._id}`);
     if ( advIds.has(adv._id) ) err(where, `повтор _id продвижения ${adv._id}`);
     advIds.add(adv._id);
+    if (adv.type === "AbilityScoreImprovement") {
+      const c = adv.configuration;
+      const abilities = ["str", "dex", "con", "int", "wis", "cha"];
+      if (!Number.isInteger(c.points) || c.points < 0 || !Number.isInteger(c.cap) || c.cap < 1)
+        err(where, "некорректные очки повышения характеристики");
+      if ((c.locked ?? []).some(a => !abilities.includes(a))) err(where, "неизвестная заблокированная характеристика");
+      if (!c.points && !Object.values(c.fixed ?? {}).some(v => v > 0)) err(where, "пустое повышение характеристики");
+    }
     const uuids = [...(adv.configuration?.items ?? []), ...(adv.configuration?.pool ?? [])].map(i => i.uuid);
     if ( adv.type === "ItemChoice" && !adv.configuration.pool.length && !adv.configuration.restriction.list.length && adv.configuration.type !== "spell" ) warn(where, `выбор «${adv.title}» без вариантов`);
-    if ( adv.type === "ItemGrant" && !adv.configuration.items.length ) err(where, `пустая выдача «${adv.title}»`);
+    const dragonTable = ["potent-dragonmark", "boon-of-siberys"].includes(item.system.identifier)
+      && adv.title === "Подготовка драконьих заклинаний" && adv.configuration.optional;
+    if ( adv.type === "ItemGrant" && !adv.configuration.items.length && !dragonTable ) err(where, `пустая выдача «${adv.title}»`);
     for ( const u of uuids ) if ( !docs.has(u) && !srdIds.has(u) ) err(where, `продвижение «${adv.title}» ссылается на неизвестный ${u}`);
   }
   if ( item.img && !item.img.startsWith("modules/") && !ICONS.has(item.img) ) warn(where, `иконка не найдена: ${item.img}`);
@@ -107,7 +130,8 @@ function checkHtml(where, html) {
     if ( u.startsWith("Compendium.spikependium.") && !docs.has(u.split(".").slice(0, 5).join(".")) ) err(where, `ссылка на неизвестный документ модуля ${u}`);
     if ( u.startsWith("Compendium.dnd5e.") && !srdIds.has(u) ) err(where, `ссылка на неизвестный документ SRD ${u}`);
   }
-  if ( /\*\*|\[\[|\]\]|<<|>>/.test(html) ) warn(where, "в HTML осталась необработанная разметка");
+  const prose = html.replace(/\[\[\/(?:r|item|damage|heal|save)\s+[^\]]+\]\](?:\{[^}]*\})?/g, "");
+  if ( /\*\*|\[\[|\]\]|<<|>>/.test(prose) ) warn(where, "в HTML осталась необработанная разметка");
 }
 
 for ( const [pack, list] of Object.entries(byPack) ) {
@@ -126,6 +150,9 @@ for ( const [pack, list] of Object.entries(byPack) ) {
     }
     if ( TYPE[pack] === "Item" ) { checkItem(where, data); checkHtml(where, data.system?.description?.value); }
     if ( TYPE[pack] === "Actor" ) {
+      for (const e of data.effects ?? []) {
+        if (!ID.test(e._id) || e._key !== `!actors.effects!${data._id}.${e._id}`) err(where, "неверный ключ эффекта существа");
+      }
       for ( const it of data.items ?? [] ) { checkSource(`${where} → ${it.name}`, it.system.source); checkItem(`${where} → ${it.name}`, it); checkHtml(`${where} → ${it.name}`, it.system.description.value); }
       checkHtml(where, data.system.details.biography.value);
     }

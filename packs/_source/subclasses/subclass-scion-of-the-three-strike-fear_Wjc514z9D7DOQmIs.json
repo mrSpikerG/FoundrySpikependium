@@ -5,7 +5,7 @@
   "img": "icons/magic/control/fear-fright-monster-grin-red-orange.webp",
   "system": {
     "description": {
-      "value": "<p>Вы получаете следующую опцию для Хитрого удара:</p><p><strong>Устрашение (стоимость: 1к6).</strong> Цель должна преуспеть в спасброске Мудрости, иначе она получает состояние &Reference[frightened]{испуганный} на 1 минуту. Испуганная цель повторяет спасбросок в конце каждого своего хода, заканчивая эффект на себе при успехе.</p>",
+      "value": "<p>Вы получаете следующую опцию для Хитрого удара:</p><p><strong>Устрашение (стоимость: [[/r 1d6]]{1к6}).</strong> Цель должна преуспеть в спасброске Мудрости, иначе она получает состояние &Reference[frightened]{испуганный} на 1 минуту. Испуганная цель повторяет спасбросок в конце каждого своего хода, заканчивая эффект на себе при успехе.</p><h3>Действия</h3><ul><li>[[/item activity=ZsHmT4yqMpRfRVBe]]{Применить} · [[/save activity=ZsHmT4yqMpRfRVBe]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -64,7 +64,12 @@
           "override": true,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "HfG7SHJk8F7IloPa",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -125,7 +130,48 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "HfG7SHJk8F7IloPa",
+      "name": "Вселить страх",
+      "img": "icons/magic/control/fear-fright-monster-grin-red-orange.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Вы получаете следующую опцию для Хитрого удара:</p><p><strong>Устрашение (стоимость: [[/r 1d6]]{1к6}).</strong> Цель должна преуспеть в спасброске Мудрости, иначе она получает состояние &Reference[frightened]{испуганный} на 1 минуту. Испуганная цель повторяет спасбросок в конце каждого своего хода, заканчивая эффект на себе при успехе.</p>",
+      "origin": null,
+      "statuses": [
+        "frightened"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!Wjc514z9D7DOQmIs.HfG7SHJk8F7IloPa"
+    }
+  ],
   "folder": "GioKOb9UiBzHe9Tc",
   "sort": 0,
   "ownership": {

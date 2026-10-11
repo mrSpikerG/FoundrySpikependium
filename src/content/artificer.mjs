@@ -1,7 +1,7 @@
 // UA 2024 «Обновление Эберрона»: класс Изобретатель.
 import {
   utility, effect, change, uses, LR, useSelf, useActivity, useSlot,
-  advScale, advTrait, advItemGrant, spellConfig
+  advScale, advTrait, advItemGrant, advItemChoice, spellConfig
 } from "../../tools/lib/core.mjs";
 import {
   classItem, feature, folder, md, table, itemLink, spellUuid, startingEquipmentAB
@@ -326,8 +326,12 @@ export function define() {
       advScale("artificer:plans", "plans", "Известные чертежи", "number", { 2: 4, 6: 5, 10: 6, 14: 7, 18: 8 }),
       advScale("artificer:magic-items", "magic-items", "Создаваемые магические предметы", "number", { 2: 2, 6: 3, 10: 4, 14: 5, 18: 6 })
     ],
-    extraAdvancement: mendingUuid ? [advItemGrant("artificer:mending", 1, [mendingUuid], {
+    extraAdvancement: [advItemChoice("artificer:cantrip-choice", null, {
+      title: "Заговоры изобретателя", type: "spell", list: ["class:artificer"], spellLevel: "0",
+      choices: { 1: { count: 2, replacement: true }, 10: { count: 1, replacement: true }, 14: { count: 1, replacement: true } },
+      spell: spellConfig({ abilities: ["int"], always: false })
+    }), ...(mendingUuid ? [advItemGrant("artificer:mending", 1, [mendingUuid], {
       title: "Магический мастеровой: Починка", spell: spellConfig({ abilities: ["int"], always: true })
-    })] : []
+    })] : [])]
   });
 }

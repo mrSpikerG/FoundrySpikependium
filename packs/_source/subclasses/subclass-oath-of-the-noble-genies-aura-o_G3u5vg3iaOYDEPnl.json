@@ -5,7 +5,7 @@
   "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue-yellow.webp",
   "system": {
     "description": {
-      "value": "<p>Выберите один из следующих типов урона: кислотный, холодный, огненный, электрический или звуковой. Вы и ваши союзники получаете сопротивление этому типу урона, находясь в вашей Ауре защиты.</p><p>В начале каждого вашего хода вы можете изменить тип урона, на который влияет это умение, на один из других доступных вариантов (не требует действия).</p>",
+      "value": "<p>Выберите один из следующих типов урона: кислотный, холодный, огненный, электрический или звуковой. Вы и ваши союзники получаете сопротивление этому типу урона, находясь в вашей Ауре защиты.</p><p>В начале каждого вашего хода вы можете изменить тип урона, на который влияет это умение, на один из других доступных вариантов (не требует действия).</p><h3>Действия</h3><ul><li>[[/item activity=YUa5G1oz7E4FruW6]]{Выбрать стихию ауры для себя}</li><li>[[/item activity=NtYWyVoFszBWp88d]]{Аура стихийной защиты: кислота — союзникам}</li><li>[[/item activity=ZEnYU35DpgZnu0C4]]{Аура стихийной защиты: холод — союзникам}</li><li>[[/item activity=Q3yNnWphSZu2sCGi]]{Аура стихийной защиты: огонь — союзникам}</li><li>[[/item activity=njFl4fECVoVj7mHH]]{Аура стихийной защиты: электричество — союзникам}</li><li>[[/item activity=WdMFh2fqsN5tKTiE]]{Аура стихийной защиты: звук — союзникам}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -32,12 +32,786 @@
       "spent": 0,
       "recovery": []
     },
-    "activities": {},
+    "activities": {
+      "YUa5G1oz7E4FruW6": {
+        "_id": "YUa5G1oz7E4FruW6",
+        "type": "transform",
+        "name": "Выбрать стихию ауры для себя",
+        "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue-yellow.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Начало вашего хода",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "K2dHoSgqth6Qojxo"
+          },
+          {
+            "_id": "So0KCs4qxFxFFdNY"
+          },
+          {
+            "_id": "G66F12g35nMNHFMU"
+          },
+          {
+            "_id": "PQALLWmzTm1CSGQ2"
+          },
+          {
+            "_id": "HBKacXxEFqY40Pa2"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      },
+      "NtYWyVoFszBWp88d": {
+        "_id": "NtYWyVoFszBWp88d",
+        "type": "utility",
+        "name": "Аура стихийной защиты: кислота — союзникам",
+        "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue-yellow.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Союзники находятся в Ауре защиты; предыдущий тип сопротивления снят",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "K2dHoSgqth6Qojxo"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "ZEnYU35DpgZnu0C4": {
+        "_id": "ZEnYU35DpgZnu0C4",
+        "type": "utility",
+        "name": "Аура стихийной защиты: холод — союзникам",
+        "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue-yellow.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Союзники находятся в Ауре защиты; предыдущий тип сопротивления снят",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "So0KCs4qxFxFFdNY"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "Q3yNnWphSZu2sCGi": {
+        "_id": "Q3yNnWphSZu2sCGi",
+        "type": "utility",
+        "name": "Аура стихийной защиты: огонь — союзникам",
+        "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue-yellow.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Союзники находятся в Ауре защиты; предыдущий тип сопротивления снят",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "G66F12g35nMNHFMU"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "njFl4fECVoVj7mHH": {
+        "_id": "njFl4fECVoVj7mHH",
+        "type": "utility",
+        "name": "Аура стихийной защиты: электричество — союзникам",
+        "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue-yellow.webp",
+        "sort": 500000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Союзники находятся в Ауре защиты; предыдущий тип сопротивления снят",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "PQALLWmzTm1CSGQ2"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "WdMFh2fqsN5tKTiE": {
+        "_id": "WdMFh2fqsN5tKTiE",
+        "type": "utility",
+        "name": "Аура стихийной защиты: звук — союзникам",
+        "img": "icons/magic/defensive/shield-barrier-flaming-diamond-blue-yellow.webp",
+        "sort": 600000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Союзники находятся в Ауре защиты; предыдущий тип сопротивления снят",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "HBKacXxEFqY40Pa2"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
     "properties": [],
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "K2dHoSgqth6Qojxo",
+      "name": "Аура стихийной защиты: кислота",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "acid",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "4KYFMctL8DdQDECV"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.auraActive\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Сопротивление выбранных союзников автоматически подавляется вне Ауры защиты, при смене стихии или недееспособности владельца.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "aura": "acid"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!G3u5vg3iaOYDEPnl.K2dHoSgqth6Qojxo"
+    },
+    {
+      "_id": "So0KCs4qxFxFFdNY",
+      "name": "Аура стихийной защиты: холод",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "cold",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "4QVTdTQ4uzq8KcEP"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.auraActive\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Сопротивление выбранных союзников автоматически подавляется вне Ауры защиты, при смене стихии или недееспособности владельца.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "aura": "cold"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!G3u5vg3iaOYDEPnl.So0KCs4qxFxFFdNY"
+    },
+    {
+      "_id": "G66F12g35nMNHFMU",
+      "name": "Аура стихийной защиты: огонь",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "fire",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "KFRsWCH4joCLBdTc"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.auraActive\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Сопротивление выбранных союзников автоматически подавляется вне Ауры защиты, при смене стихии или недееспособности владельца.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "aura": "fire"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!G3u5vg3iaOYDEPnl.G66F12g35nMNHFMU"
+    },
+    {
+      "_id": "PQALLWmzTm1CSGQ2",
+      "name": "Аура стихийной защиты: электричество",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "lightning",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "R5yAsJyBsTuQXo62"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.auraActive\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Сопротивление выбранных союзников автоматически подавляется вне Ауры защиты, при смене стихии или недееспособности владельца.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "aura": "lightning"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!G3u5vg3iaOYDEPnl.PQALLWmzTm1CSGQ2"
+    },
+    {
+      "_id": "HBKacXxEFqY40Pa2",
+      "name": "Аура стихийной защиты: звук",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "thunder",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "kVGDfyKEHgT4ffsv"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.auraActive\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Сопротивление выбранных союзников автоматически подавляется вне Ауры защиты, при смене стихии или недееспособности владельца.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "aura": "thunder"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!G3u5vg3iaOYDEPnl.HBKacXxEFqY40Pa2"
+    }
+  ],
   "folder": "sLMpFPgDxHNxaUYx",
   "sort": 0,
   "ownership": {

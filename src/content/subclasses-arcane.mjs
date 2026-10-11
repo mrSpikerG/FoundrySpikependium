@@ -2,7 +2,7 @@
 // UA 2025 «Арканное обновление» (новые редакции: Арканный лучник, Мастер тату, Призыватель, Очарователь, Некромант, Преобразователь).
 import {
   utility, save, heal, damage, teleport, cast, attack, dmg, effect, change, uses, LR, SR,
-  useSelf, useItem, useActivity, useSlot, advTrait, advItemGrant, advItemChoice, advScale, spellConfig
+  useSelf, useItem, useActivity, useSlot, usePact, advTrait, advItemGrant, advItemChoice, advScale, spellConfig
 } from "../../tools/lib/core.mjs";
 import { feature, folder, ref, spellUuid } from "../../tools/lib/docs.mjs";
 import { makeSubclass } from "./_subclass.mjs";
@@ -95,7 +95,7 @@ export function define() {
   const opt = (id, ability, dice, type, img, name, desc, extra = {}) => shotOpt(id, name, desc, [
     save(`arcane-archer:shot:${id}`, {
       activation: "special", condition: "Попадание дальнобойной атакой оружием с боеприпасами", count: 1, affects: "creature",
-      ability, dc: "int", consume: [SHOT], damage: dice ? [dmg(dice, type)] : [], onSave: extra.onSave ?? "none", ...extra
+      ability, dc: "int", consume: [SHOT], damage: dice ? [dmg(dice, type)] : [], onSave: extra.onSave ?? "full", ...extra
     })
   ], img);
   opt("banishing", "cha", DIE, "psychic", "icons/magic/control/debuff-energy-hold-levitate-pink", "Изгоняющий выстрел",
@@ -225,12 +225,12 @@ export function define() {
   });
   tattoo(AN, "butterfly", "Тату: Бабочка", "Вы знаете заговор [[Свет]]. Когда вы совершаете прыжок в высоту, вы можете применять свой модификатор Ловкости вместо модификатора Силы, чтобы определить высоту прыжка.", { cantrip: "Свет", img: "icons/creatures/invertebrates/fly-wasp-mosquito-green" });
   tattoo(AN, "crane", "Тату: Журавль", "Вы знаете заговор [[Наставление]]. Когда вы промахиваетесь по существу атакой от вашего Шквала ударов, вы получаете преимущество на следующий бросок атаки против этого существа до конца вашего следующего хода.", { cantrip: "Наставление", img: "icons/creatures/birds/raptor-hawk-flying" });
-  const horseSpeed = effect("tattoo:horse:speed", { name: "Скорость (Лошадь)", img: "icons/environment/creatures/horse-brown", transfer: false, changes: [change("system.attributes.movement.speeds.walk", 10)] });
+  const horseSpeed = effect("tattoo:horse:speed", { name: "Скорость (Лошадь)", img: "icons/environment/creatures/horse-brown", transfer: false, expiry: "sourceStart", changes: [change("system.attributes.movement.speeds.walk", 10)] });
   tattoo(AN, "horse", "Тату: Лошадь", "Вы знаете заговор [[Сообщение]]. Когда вы тратите 1 очко духа для применения Поступи ветра, ваша скорость увеличивается на 10 футов до начала вашего следующего хода.", {
     cantrip: "Сообщение", img: "icons/environment/creatures/horse-brown",
     effects: [horseSpeed], acts: [utility("tattoo:horse:use", { activation: "special", condition: "Поступь ветра за очко духа", self: true, duration: "round", durationValue: 1, effects: [horseSpeed._id] })]
   });
-  const turtleAc = effect("tattoo:turtle:ac", { name: "КД +1 (Черепаха)", img: "icons/commodities/biological/shell-tan", transfer: false, changes: [change("system.attributes.ac.bonus", "+ 1")] });
+  const turtleAc = effect("tattoo:turtle:ac", { name: "КД +1 (Черепаха)", img: "icons/commodities/biological/shell-tan", transfer: false, expiry: "sourceStart", changes: [change("system.attributes.ac.bonus", "+ 1")] });
   tattoo(AN, "turtle", "Тату: Черепаха", "Вы знаете заговор [[Уход за умирающим]]. Когда вы тратите 1 очко духа для применения Терпеливой обороны, вы получаете бонус +1 к КД до начала вашего следующего хода.", {
     cantrip: "Уход за умирающим", img: "icons/commodities/biological/shell-tan",
     effects: [turtleAc], acts: [utility("tattoo:turtle:use", { activation: "special", condition: "Терпеливая оборона за очко духа", self: true, duration: "round", durationValue: 1, effects: [turtleAc._id] })]
@@ -340,7 +340,10 @@ export function define() {
       {
         id: "ancestral-majesty", level: 14, name: "Величие предка", img: "icons/magic/control/control-influence-crown-gold",
         desc: "Лик вашего предка внушает благоговение или ужас. Пока действует ваше умение Врождённое чародейство, вас окружает магическая эманация с радиусом 5 футов. Каждый раз, когда существо, которое вы видите, входит в эту эманацию или заканчивает там свой ход, вы можете заставить его совершить спасбросок Харизмы. При провале цель получает состояние <<prone|лежащий ничком>> или <<frightened|испуганный>> (на ваш выбор) до конца вашего следующего хода. Существо совершает этот спасбросок не более 1 раза за ход.",
-        acts: [save("ancestral:majesty", { activation: "special", condition: "Существо входит в эманацию 5 футов или заканчивает в ней ход", count: 1, affects: "creature", ability: "cha" })]
+        acts: [
+          save("ancestral:majesty", { name: "Величие предка: сбить с ног", activation: "special", condition: "Существо входит в эманацию 5 футов или заканчивает в ней ход", count: 1, affects: "creature", ability: "cha" }),
+          save("ancestral:majesty:fear", { name: "Величие предка: испугать", activation: "special", condition: "Существо входит в эманацию 5 футов или заканчивает в ней ход", count: 1, affects: "creature", ability: "cha" })
+        ]
       },
       { id: "steadfast-caster", level: 14, name: "Непоколебимый заклинатель", img: "icons/magic/defensive/barrier-shield-dome-blue-purple", desc: "Ваша глубокая связь с предком придаёт вам устойчивость. Получение урона не может прервать вашу концентрацию на заклинаниях чародея." },
       {
@@ -404,10 +407,11 @@ export function define() {
       },
       {
         id: "master-of-hexes", level: 14, name: "Искусное проклятье", img: "icons/magic/unholy/hand-marked-pink",
+        uses: uses(1, LR),
         desc: "Сила вашего Проклятья клинка возрастает, предоставляя следующие эффекты:\n\n**Проклятый крит.** Любой бросок атаки по цели, находящейся под действием вашего Проклятья клинка, считается критическим попаданием при результате 19 или 20 на к20.\n\n**Взрывное проклятие.** Когда вы наносите урон цели под действием вашего Проклятья клинка, вы можете заставить проклятие взорваться зловещей энергией. Цель и каждое выбранное вами существо в эманации с радиусом 30 футов, исходящей от цели, получают 3к6 урона некротической энергией, психической энергией или излучением (на ваш выбор), а их скорость уменьшается на 10 футов до начала вашего следующего хода. После применения этого эффекта вы не можете применять его снова, пока не завершите продолжительный отдых, если только не потратите ячейку Магии договора (действие не требуется), чтобы восстановить его применение.\n\n**Восстановление проклятия.** Вы восстанавливаете 1 израсходованное применение Проклятья клинка, когда завершаете короткий отдых или используете своё умение Магическая хитрость.",
         acts: [
-          damage("hexblade:explosive", { name: "Взрывное проклятие", activation: "special", template: { type: "radius", size: 30 }, affects: "enemy", usesMax: 1, usesRecovery: [LR], consume: [useActivity()], damage: [dmg("3d6", "necrotic", "psychic", "radiant")] }),
-          utility("hexblade:explosive:slot", { name: "Восстановить взрыв (ячейка договора)", activation: "special", consume: [useSlot(1)] }),
+          damage("hexblade:explosive", { name: "Взрывное проклятие", activation: "special", template: { type: "radius", size: 30 }, affects: "enemy", consume: [useSelf()], damage: [dmg("3d6", "necrotic", "psychic", "radiant")] }),
+          utility("hexblade:explosive:slot", { name: "Восстановить взрыв (ячейка договора)", activation: "special", consume: [usePact(), useSelf(-1)] }),
           utility("hexblade:recover", { name: "Восстановление проклятия", activation: "special", condition: "Короткий отдых или Магическая хитрость", consume: [{ type: "itemUses", value: "-1", target: "feat:hexblades-curse", scaling: {} }] })
         ]
       }
@@ -452,10 +456,11 @@ export function define() {
       { id: "focused-conjuration", level: 10, name: "Фокусированный вызов", img: "icons/magic/perception/third-eye-blue-red", desc: "Получение урона не может прервать вашу концентрацию на заклинаниях школы вызова." },
       {
         id: "split-summons", level: 14, name: "Разделённые призывы", img: "icons/magic/control/silhouette-hold-change-blue",
+        uses: uses(1, LR),
         desc: "Когда вы накладываете заклинание [[Призыв духа аберрации]], [[Призыв духа конструкта]], [[Призыв духа дракона]], [[Призыв духа элементаля]] или [[Призыв духа феи]] ячейкой заклинания, вы можете изменить заклинание так, чтобы оно призывало двух существ вместо одного. Каждое существо одного вида использует статблок и правила, указанные в заклинании, и проявляется в разных свободных клетках на ваш выбор в пределах дистанции заклинания, но хиты призванных существ уменьшаются вдвое. Если вы теряете концентрацию на заклинании, то оба существа исчезают.\n\nОдин раз применив это умение для изменения заклинания таким образом, вы должны завершить продолжительный отдых, прежде чем сможете сделать это снова. Вы также можете восстановить возможность применить его, потратив ячейку заклинания 5 уровня или выше (действие не требуется).",
         acts: [
-          utility("conjurer:split", { activation: "special", condition: "Вы накладываете призыв духа ячейкой", usesMax: 1, usesRecovery: [LR], consume: [useActivity()] }),
-          utility("conjurer:split:slot", { name: "Применить (ячейка 5+)", activation: "special", consume: [useSlot(5)] })
+          utility("conjurer:split", { activation: "special", condition: "Вы накладываете призыв духа ячейкой", consume: [useSelf()] }),
+          utility("conjurer:split:slot", { name: "Восстановить применение (ячейка 5+)", activation: "special", consume: [useSlot(5), useSelf(-1)] })
         ]
       }
     ]

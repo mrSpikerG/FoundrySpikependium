@@ -2,7 +2,7 @@
 // UA 2026 «Злодейские опции 2» (Путь скорби, Мастер яда, Покровитель первородный + воззвания).
 import {
   utility, save, heal, damage, teleport, cast, dmg, effect, change, uses, LR, SR, makeId,
-  useSelf, useItem, useActivity, useSlot, useSorcery, advTrait, advItemGrant, advItemChoice, advScale, spellConfig
+  useSelf, useItem, useActivity, useSlot, usePact, useSorcery, advTrait, advItemGrant, advItemChoice, advScale, spellConfig
 } from "../../tools/lib/core.mjs";
 import { feature, folder, md, table, ref, spellUuid, spellTable } from "../../tools/lib/docs.mjs";
 import { makeSubclass } from "./_subclass.mjs";
@@ -25,14 +25,14 @@ function transformActivity(key, profiles, o = {}) {
     range: { value: "", units: "self", special: "", override: false },
     target: { template: { count: "", contiguous: false, type: "", size: "", width: "", height: "", units: "ft" }, affects: { count: "", type: "self", choice: false, special: "" }, prompt: true, override: false },
     uses: { spent: 0, recovery: [], max: "" },
-    visibility: { identifier: "", level: { min: null, max: null }, requireAttunement: false, requireIdentification: false, requireMagic: false },
-    profiles: profiles.map((p, i) => ({ _id: makeId(`transform-profile:${key}:${i}`), cr: "", name: p.name, uuid: p.uuid, sizes: [], types: [], movement: [], level: { min: null, max: null } })),
+    visibility: { identifier: "druid", level: { min: null, max: null }, requireAttunement: false, requireIdentification: false, requireMagic: false },
+    profiles: profiles.map((p, i) => ({ _id: makeId(`transform-profile:${key}:${i}`), cr: "", name: p.name, uuid: p.uuid, sizes: [], types: [], movement: [], level: { min: p.min ?? null, max: null } })),
     settings: {
       effects: ["otherOrigin", "origin", "feat", "spell", "class", "background"],
-      keep: ["bio", "class", "feats", "hp", "languages", "mental", "tempHP"], merge: ["saves", "skills"],
+      keep: ["bio", "class", "feats", "hp", "languages", "mental", "physical", "tempHP"], merge: ["saves", "skills"],
       minimumAC: "", other: [], spellLists: ["subclass:titan"], tempFormula: "2 * @classes.druid.levels", transformTokens: true
     },
-    transform: { customize: true, formless: false, mode: "", preset: "" }
+    transform: { customize: false, formless: false, mode: "", preset: "" }
   };
 }
 
@@ -103,11 +103,11 @@ export function define() {
   // ======================================================================
   // Круг титана (друид)
   // ======================================================================
-  const forms = [
-    { name: "Бегемот", uuid: ref("actor:titan-behemoth") },
-    { name: "Левиафан", uuid: ref("actor:titan-leviathan") },
-    { name: "Инсектоид", uuid: ref("actor:titan-insectoid") }
-  ];
+  const forms = [["behemoth", "Бегемот"], ["leviathan", "Левиафан"], ["insectoid", "Инсектоид"]].flatMap(([id, name]) => [
+    { name: `${name} (Большой)`, uuid: ref(`actor:titan-${id}`), min: 3 },
+    { name: `${name} (Огромный)`, uuid: ref(`actor:titan-${id}-huge`), min: 10 },
+    { name: `${name} (Громадный)`, uuid: ref(`actor:titan-${id}-gargantuan`), min: 14 }
+  ]);
   makeSubclass({
     key: "subclass:circle-of-the-titan", cls: "Друид", clsGen: "друида", classIdentifier: "druid",
     name: "Круг титана", en: "Circle of the Titan", identifier: "titan", book: VO, page: 3,
@@ -189,6 +189,7 @@ export function define() {
         desc: "Когда вы бросаете свою кость раны и выбрасываете 6, вы можете применить один из следующих эффектов.\n\n**Гноение Минауроса.** Из раны извергается едкий гной. Каждое существо в пределах эманации с радиусом 5 футов, исходящей от цели, получает урон кислотой, равный вашему модификатору Телосложения, а цель получает состояние <<poisoned|отравленный>> до начала своего следующего хода.\n\n**Разрыв Кании.** Рана разрывается всплеском энергии магии. Цель получает урон силовым полем, равный вашему модификатору Телосложения.\n\n**Стигийская гангрена.** Из раны распространяется инфернальный иней. Цель получает урон холодом, равный вашему модификатору Телосложения, и не может совершать реакции до начала своего следующего хода.",
         acts: [
           damage("hell-knight:minauros", { name: "Гноение Минауроса", activation: "special", condition: "На кости раны выпало 6", template: { type: "radius", size: 5 }, affects: "creature", damage: [dmg("@abilities.con.mod", "acid")] }),
+          utility("hell-knight:minauros:poison", { name: "Гноение Минауроса: отравить цель раны", activation: "special", condition: "На кости раны выпало 6; только цель раны", count: 1, affects: "creature" }),
           damage("hell-knight:cania", { name: "Разрыв Кании", activation: "special", condition: "На кости раны выпало 6", count: 1, affects: "creature", damage: [dmg("@abilities.con.mod", "force")] }),
           damage("hell-knight:stygian", { name: "Стигийская гангрена", activation: "special", condition: "На кости раны выпало 6", count: 1, affects: "creature", damage: [dmg("@abilities.con.mod", "cold")] })
         ]
@@ -217,7 +218,7 @@ export function define() {
   // Демон (чародей)
   // ======================================================================
   const AB = "(@scale.demonic.abyss-dice)";
-  const carapace = effect("demonic:carapace", { name: "Панцирь исчадия", img: "icons/creatures/unholy/demon-hairy-winged-pink", transfer: false, seconds: 6, description: "<p>Броски атаки против вас совершаются с помехой до начала вашего следующего хода.</p>" });
+  const carapace = effect("demonic:carapace", { name: "Панцирь исчадия", img: "icons/creatures/unholy/demon-hairy-winged-pink", transfer: false, expiry: "sourceStart", description: "<p>Броски атаки против вас совершаются с помехой до начала вашего следующего хода.</p>" });
   makeSubclass({
     key: "subclass:demonic-sorcery", cls: "Чародей", clsGen: "чародея", classIdentifier: "sorcerer",
     name: "Демон", en: "Demonic Sorcery", identifier: "demonic", book: VO, page: 7,
@@ -242,6 +243,7 @@ export function define() {
       },
       {
         id: "abyssal-aura", level: 3, name: "Аура Бездны", img: "icons/magic/unholy/energy-smoke-pink",
+        uses: uses(1, LR),
         html: md("Когда вы применяете Врождённое чародейство, вы можете наполнить окружающее пространство хаосом Бездны. Пока это применение Врождённого чародейства активно, реальность искривляется в пределах эманации с радиусом 10 футов, исходящей от вас, заполняя эту область демоническим эффектом. Совершите бросок по таблице «Эффекты Бездны», чтобы определить эффект. Если эффект требует спасброска, то Сл. равна сложности спасброска ваших заклинаний.\n\nПрименив это умение, вы не можете применять его снова, пока не завершите продолжительный отдых. Вы также можете восстановить его применение, потратив 2 очка чародейства (действие не требуется).")
           + table("Эффекты Бездны", ["1к6", "Эффект"], [
             ["1", "<strong>Липкая паутина.</strong> Густая паутина заполняет эманацию, делая её труднопроходимой местностью для ваших врагов. Каждый враг, который начинает свой ход в эманации, должен преуспеть в спасброске Силы, иначе становится опутанным. Существо, опутанное паутиной, может действием совершить проверку Силы (Атлетика) со Сл. спасброска ваших заклинаний, оканчивая этот эффект на себе при успешной проверке."],
@@ -252,13 +254,13 @@ export function define() {
             ["6", "<strong>Изнуряющие кости.</strong> Призрачные конечности вырываются из земли и высасывают жизнь из всего рядом. Каждый враг, который начинает свой ход в эманации, получает 1к10 урона некротической энергией и не может восстанавливать хиты до начала своего следующего хода. Урон некротической энергией увеличивается на 1к10, когда вы достигаете уровней чародея 11 (2к10) и 16 (3к10)."]
           ]),
         acts: [
-          utility("demonic:aura", { name: "Призвать Ауру Бездны", activation: "special", condition: "При применении Врождённого чародейства", template: { type: "radius", size: 10 }, usesMax: 1, usesRecovery: [LR], consume: [useActivity()], roll: "1d6", rollName: "Эффект Бездны" }),
-          utility("demonic:aura:sp", { name: "Восстановить ауру (2 очка чародейства)", activation: "special", consume: [useSorcery(2)], roll: "1d6", rollName: "Эффект Бездны" }),
+          utility("demonic:aura", { name: "Призвать Ауру Бездны", activation: "special", condition: "При применении Врождённого чародейства", template: { type: "radius", size: 10 }, consume: [useSelf()], roll: "1d6", rollName: "Эффект Бездны" }),
+          utility("demonic:aura:sp", { name: "Восстановить ауру (2 очка чародейства)", activation: "special", consume: [useSorcery(2), useSelf(-1)] }),
           save("demonic:aura:web", { name: "1. Липкая паутина", activation: "special", count: 1, affects: "enemy", ability: "str" }),
-          save("demonic:aura:slime", { name: "2. Едкая слизь", activation: "special", count: 1, affects: "enemy", ability: "dex", damage: [dmg(`${AB}d6`, "acid")] }),
-          save("demonic:aura:screams", { name: "3. Ужасающие крики", activation: "special", count: 1, affects: "enemy", ability: "wis", damage: [dmg(`${AB}d6`, "psychic")] }),
-          save("demonic:aura:spores", { name: "4. Чарующие споры (11+ уровень)", activation: "special", count: 1, affects: "enemy", ability: "wis", minLevel: 11 }),
-          save("demonic:aura:foliage", { name: "5. Ядовитая листва", activation: "special", count: 1, affects: "enemy", ability: "con", damage: [dmg(`${AB}d6`, "poison")] }),
+          save("demonic:aura:slime", { name: "2. Едкая слизь", activation: "special", count: 1, affects: "enemy", ability: "dex", damage: [dmg(`${AB}d6`, "acid")], onSave: "full" }),
+          save("demonic:aura:screams", { name: "3. Ужасающие крики", activation: "special", count: 1, affects: "enemy", ability: "wis", damage: [dmg(`${AB}d6`, "psychic")], onSave: "full" }),
+          save("demonic:aura:spores", { name: "4. Чарующие споры (11+ уровень)", activation: "special", count: 1, affects: "enemy", ability: "wis", minLevel: 11, identifier: "sorcerer" }),
+          save("demonic:aura:foliage", { name: "5. Ядовитая листва", activation: "special", count: 1, affects: "enemy", ability: "con", damage: [dmg(`${AB}d6`, "poison")], onSave: "full" }),
           damage("demonic:aura:bones", { name: "6. Изнуряющие кости", activation: "special", count: 1, affects: "enemy", damage: [dmg(`${AB}d10`, "necrotic")] })
         ]
       },
@@ -390,10 +392,11 @@ export function define() {
     features: [
       {
         id: "elemental-node", level: 3, name: "Элементальный узел", img: "icons/magic/symbols/elements-air-earth-fire-water",
+        uses: uses(1, SR),
         desc: "Действием магия вы можете создать сферу стихийной магии с радиусом 5 футов и центром в точке, которую вы видите в пределах 60 футов от себя. Магия этого элементального узла напоминает выбранную вами стихию. В последующие ходы вы можете бонусным действием перемещать узел на расстояние до 30 футов.\n\nКогда узел появляется, каждое существо в узле, кроме вас, совершает спасбросок Ловкости против вашей Сл. спасброска заклинаний, получая при провале 1к6 урона того типа, который соответствует вашей стихии, или половину этого урона при успехе. Существо также совершает этот спасбросок, когда узел перемещается в его пространство, а также когда оно входит в узел или заканчивает там свой ход. Существо совершает этот спасбросок только один раз в ход.\n\nУзел существует 1 минуту, пока вы не рассеете его (действие не требуется) или пока не примените это умение, чтобы создать другой узел. Применив это умение, вы не можете применять его снова, пока не завершите короткий или продолжительный отдых, если только не потратите ячейку Магии договора (действие не требуется), чтобы восстановить применение.\n\nУрон узла увеличивается на 1к6, когда вы достигаете 6 уровня колдуна (2к6) и 14 уровня колдуна (3к6).",
         acts: [
-          save("primordial:node", { name: "Создать узел", activation: "action", range: 60, template: { type: "sphere", size: 5 }, affects: "creature", ability: "dex", usesMax: 1, usesRecovery: [SR], consume: [useActivity()], duration: "minute", durationValue: 1, damage: [dmg("(@scale.primordial.node-dice)d6", ELEMENTS.map(e => e[0]))], onSave: "half" }),
-          save("primordial:node:slot", { name: "Создать узел (ячейка договора)", activation: "action", range: 60, template: { type: "sphere", size: 5 }, affects: "creature", ability: "dex", consume: [useSlot(1)], duration: "minute", durationValue: 1, damage: [dmg("(@scale.primordial.node-dice)d6", ELEMENTS.map(e => e[0]))], onSave: "half" }),
+          save("primordial:node", { name: "Создать узел", activation: "action", range: 60, template: { type: "sphere", size: 5 }, affects: "creature", ability: "dex", consume: [useSelf()], duration: "minute", durationValue: 1, damage: [dmg("(@scale.primordial.node-dice)d6", ELEMENTS.map(e => e[0]))], onSave: "half" }),
+          utility("primordial:node:slot", { name: "Восстановить применение (ячейка договора)", activation: "special", consume: [usePact(), useSelf(-1)] }),
           save("primordial:node:tick", { name: "Урон узла (вход / конец хода)", activation: "special", count: 1, affects: "creature", ability: "dex", damage: [dmg("(@scale.primordial.node-dice)d6", ELEMENTS.map(e => e[0]))], onSave: "half" }),
           utility("primordial:node:move", { name: "Переместить узел", activation: "bonus", range: 30 })
         ]

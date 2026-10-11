@@ -114,7 +114,7 @@ export function itemLink(ruName, display) {
 export function md(text) {
   if ( !text ) return "";
   const inline = s => s
-    .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, n, d) => spellLink(n.trim(), d?.trim()))
+    .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (match, n, d) => n.trim().startsWith("/") ? match : spellLink(n.trim(), d?.trim()))
     .replace(/\{\{([^}|]+)(?:\|([^}]+))?\}\}/g, (_, n, d) => itemLink(n.trim(), d?.trim()))
     .replace(/<<([a-zA-Z]+)\|([^>]+)>>/g, (_, id, ru) => cond(id, ru))
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
@@ -202,6 +202,8 @@ export function feature(o) {
     for ( const a of o.acts ?? [] ) {
       const lvl = a.visibility?.level;
       if ( lvl && ((lvl.min != null) || (lvl.max != null)) && !a.visibility.identifier ) a.visibility.identifier = o.levelClass;
+      const ability = { artificer: "int", psion: "int", wizard: "int", cleric: "wis", druid: "wis", ranger: "wis", bard: "cha", paladin: "cha", sorcerer: "cha", warlock: "cha" }[o.levelClass];
+      if (ability && a.save?.dc.calculation === "spellcasting") a.save.dc.calculation = ability;
     }
   }
   const system = {
@@ -210,7 +212,7 @@ export function feature(o) {
     identifier: o.identifier ?? "",
     type: { value: o.typeValue ?? "class", subtype: o.subtype ?? "" },
     requirements: o.requirements ?? "",
-    prerequisites: { level: o.level ?? null, repeatable: !!o.repeatable, items: [] },
+    prerequisites: { level: o.level ?? null, repeatable: !!o.repeatable, items: o.prerequisiteItems ?? [] },
     uses: o.uses ?? { max: "", spent: 0, recovery: [] },
     activities: activities(o.acts),
     properties: o.properties ?? [],
@@ -378,7 +380,14 @@ export function equipment(o) {
     uses: o.uses ?? { max: "", spent: 0, recovery: [] },
     activities: activities(o.acts)
   };
-  return itemBase("items", o.key, o, "equipment", system);
+  if (o.equipType === "tool") {
+    delete system.armor;
+    delete system.hp;
+    delete system.strength;
+    system.type = { value: "art", baseItem: "" };
+    Object.assign(system, { ability: "", bonus: "", chatFlavor: "" });
+  }
+  return itemBase("items", o.key, o, o.equipType === "tool" ? "tool" : "equipment", system);
 }
 
 /**
@@ -427,7 +436,7 @@ export function enchantActivity(key, effectId, o = {}) {
     name: o.name ?? "",
     img: "",
     sort: 0,
-    activation: { type: "", value: null, condition: "", override: false },
+    activation: { type: o.activation ?? "", value: o.activation ? 1 : null, condition: "", override: !!o.activation },
     consumption: { targets: [], scaling: { allowed: false, max: "" }, spellSlot: true },
     description: { chatFlavor: "", value: "" },
     duration: { value: "", units: "inst", special: "", override: false, concentration: false },
@@ -435,9 +444,9 @@ export function enchantActivity(key, effectId, o = {}) {
     range: { value: "", units: "", special: "", override: false },
     target: { template: { count: "", contiguous: false, type: "", size: "", width: "", height: "", units: "ft" }, affects: { count: "", type: "", choice: false, special: "" }, prompt: true, override: false },
     uses: { spent: 0, recovery: [], max: "" },
-    enchant: { identifier: "" },
-    restrictions: { allowMagical: false, categories: o.categories ?? ["simpleM", "simpleR", "martialM", "martialR"], properties: o.properties ?? [], type: o.type ?? "weapon" },
-    visibility: { identifier: "", level: { min: null, max: null }, requireAttunement: false, requireIdentification: false, requireMagic: false }
+    enchant: { self: !!o.self },
+    restrictions: { allowMagical: !!o.allowMagical, categories: o.categories ?? ["simpleM", "simpleR", "martialM", "martialR"], properties: o.properties ?? [], type: o.type ?? "weapon" },
+    visibility: { identifier: "", level: { min: null, max: null }, requireAttunement: !!o.requireAttunement, requireIdentification: false, requireMagic: !!o.requireAttunement }
   };
 }
 
@@ -485,7 +494,7 @@ export function npc(o) {
         advancement: [],
         enchant: {}
       },
-      effects: [],
+      effects: (it.effects ?? []).map(e => ({ ...e, _key: `!actors.items.effects!${_id}.${iid}.${e._id}` })),
       folder: null,
       sort: (i + 1) * 100000,
       ownership: { default: 0 },
@@ -538,7 +547,7 @@ export function npc(o) {
       texture: { src: icon(o.img) }, width: o.tokenSize ?? 1, height: o.tokenSize ?? 1
     },
     items,
-    effects: [],
+    effects: (o.effects ?? []).map(e => ({ ...e, _key: `!actors.effects!${_id}.${e._id}` })),
     folder: o.folder ?? null,
     sort: o.sort ?? 0,
     ownership: { default: 0 },

@@ -5,7 +5,7 @@
   "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
   "system": {
     "description": {
-      "value": "<p>Бонусным действием вы можете усилить свою Ауру защиты, получая указанные ниже эффекты на одну минуту или пока вы не прекратите их (действие не требуется). Применив это умение, вы не можете применять его снова, пока не завершите продолжительный отдых. Вы можете восстановить применение этого умения, потратив ячейку заклинаний 5 уровня (действие не требуется).</p><p><strong>Телохранитель.</strong> Пока цель вашей Защитной связи находится в ауре, это существо получает сопротивление ко всему урону.</p><p><strong>Защита от магии.</strong> Вы и ваши союзники в ауре получаете преимущество на спасброски против заклинаний.</p><p><strong>Оберег от заклинаний.</strong> Броски дальнобойной атаки заклинанием против вас и ваших союзников в ауре совершаются с помехой.</p>",
+      "value": "<p>Бонусным действием вы можете усилить свою Ауру защиты, получая указанные ниже эффекты на одну минуту или пока вы не прекратите их (действие не требуется). Применив это умение, вы не можете применять его снова, пока не завершите продолжительный отдых. Вы можете восстановить применение этого умения, потратив ячейку заклинаний 5 уровня (действие не требуется).</p><p><strong>Телохранитель.</strong> Пока цель вашей Защитной связи находится в ауре, это существо получает сопротивление ко всему урону.</p><p><strong>Защита от магии.</strong> Вы и ваши союзники в ауре получаете преимущество на спасброски против заклинаний.</p><p><strong>Оберег от заклинаний.</strong> Броски дальнобойной атаки заклинанием против вас и ваших союзников в ауре совершаются с помехой.</p><h3>Действия</h3><ul><li>[[/item activity=gFTfP2FDF5LkZiUu]]{Изменить форму}</li><li>[[/item activity=ZDde5bdCy0aoEEck]]{Восстановить применение (ячейка 5+)}</li><li>[[/item activity=JR36zgTr1BNdku6S]]{Восстановить применение (ячейка 5+) (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -28,14 +28,19 @@
       "items": []
     },
     "uses": {
-      "max": "",
+      "max": "1",
       "spent": 0,
-      "recovery": []
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
     },
     "activities": {
       "gFTfP2FDF5LkZiUu": {
         "_id": "gFTfP2FDF5LkZiUu",
-        "type": "utility",
+        "type": "transform",
         "name": "",
         "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
         "sort": 100000,
@@ -48,104 +53,9 @@
         "consumption": {
           "targets": [
             {
-              "type": "activityUses",
+              "type": "itemUses",
               "value": "1",
               "target": "",
-              "scaling": {}
-            }
-          ],
-          "scaling": {
-            "allowed": false,
-            "max": ""
-          },
-          "spellSlot": true
-        },
-        "description": {
-          "chatFlavor": "",
-          "value": ""
-        },
-        "duration": {
-          "value": "1",
-          "units": "minute",
-          "special": "",
-          "override": true,
-          "concentration": false
-        },
-        "effects": [
-          {
-            "_id": "aBIyCWOFt0wfvhYE"
-          }
-        ],
-        "range": {
-          "value": "",
-          "units": "self",
-          "special": "",
-          "override": true
-        },
-        "target": {
-          "template": {
-            "count": "",
-            "contiguous": false,
-            "type": "",
-            "size": "",
-            "width": "",
-            "height": "",
-            "units": "ft"
-          },
-          "affects": {
-            "count": "1",
-            "type": "self",
-            "choice": false,
-            "special": ""
-          },
-          "prompt": true,
-          "override": true
-        },
-        "uses": {
-          "spent": 0,
-          "recovery": [
-            {
-              "period": "lr",
-              "type": "recoverAll"
-            }
-          ],
-          "max": "1"
-        },
-        "visibility": {
-          "identifier": "",
-          "level": {
-            "min": null,
-            "max": null
-          },
-          "requireAttunement": false,
-          "requireIdentification": false,
-          "requireMagic": false
-        },
-        "roll": {
-          "formula": "",
-          "name": "",
-          "prompt": false,
-          "visible": false
-        }
-      },
-      "ZDde5bdCy0aoEEck": {
-        "_id": "ZDde5bdCy0aoEEck",
-        "type": "utility",
-        "name": "Применить (ячейка 5)",
-        "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
-        "sort": 200000,
-        "activation": {
-          "type": "bonus",
-          "value": 1,
-          "condition": "",
-          "override": true
-        },
-        "consumption": {
-          "targets": [
-            {
-              "type": "spellSlots",
-              "value": "1",
-              "target": "5",
               "scaling": {}
             }
           ],
@@ -211,11 +121,162 @@
           "requireIdentification": false,
           "requireMagic": false
         },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      },
+      "ZDde5bdCy0aoEEck": {
+        "_id": "ZDde5bdCy0aoEEck",
+        "type": "utility",
+        "name": "Восстановить применение (ячейка 5+)",
+        "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "5",
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": "5"
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
         "roll": {
           "formula": "",
           "name": "",
           "prompt": false,
           "visible": false
+        }
+      },
+      "JR36zgTr1BNdku6S": {
+        "_id": "JR36zgTr1BNdku6S",
+        "type": "forward",
+        "name": "Восстановить применение (ячейка 5+) (Магия договора)",
+        "sort": 200001,
+        "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
+        "activity": {
+          "id": "ZDde5bdCy0aoEEck"
+        },
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 9,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 5
+            }
+          }
         }
       }
     },

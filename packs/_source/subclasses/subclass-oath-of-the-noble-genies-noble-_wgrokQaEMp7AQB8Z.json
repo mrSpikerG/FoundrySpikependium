@@ -5,7 +5,7 @@
   "img": "icons/magic/air/wind-tornado-cyclone-purple-pink.webp",
   "system": {
     "description": {
-      "value": "<p>Бонусным действием вы получаете следующие эффекты на 10 минут или до тех пор, пока не прекратите их (не требует действия). После использования этого умения вы не можете использовать его снова до завершения продолжительного отдыха. Вы также можете восстановить использование, потратив ячейку заклинания 5 уровня (не требует действия).</p><p><strong>Полёт.</strong> Вы получаете скорость полёта 60 футов и можете парить.</p><p><strong>Малое желание.</strong> Когда вы или союзник в вашей Ауре защиты проваливаете тест к20, вы можете реакцией сделать эту проверку успешной.</p>",
+      "value": "<p>Бонусным действием вы получаете следующие эффекты на 10 минут или до тех пор, пока не прекратите их (не требует действия). После использования этого умения вы не можете использовать его снова до завершения продолжительного отдыха. Вы также можете восстановить использование, потратив ячейку заклинания 5 уровня (не требует действия).</p><p><strong>Полёт.</strong> Вы получаете скорость полёта 60 футов и можете парить.</p><p><strong>Малое желание.</strong> Когда вы или союзник в вашей Ауре защиты проваливаете тест к20, вы можете реакцией сделать эту проверку успешной.</p><h3>Действия</h3><ul><li>[[/item activity=dh26fG6BVMVNljAY]]{Изменить форму}</li><li>[[/item activity=1sOjFGD2njPK9glg]]{Восстановить применение (ячейка 5+)}</li><li>[[/item activity=tFI1zq1D1qGBVAwR]]{Малое желание}</li><li>[[/item activity=BNkRB3CbbcLrm7Vx]]{Восстановить применение (ячейка 5+) (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -28,14 +28,19 @@
       "items": []
     },
     "uses": {
-      "max": "",
+      "max": "1",
       "spent": 0,
-      "recovery": []
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
     },
     "activities": {
       "dh26fG6BVMVNljAY": {
         "_id": "dh26fG6BVMVNljAY",
-        "type": "utility",
+        "type": "transform",
         "name": "",
         "img": "icons/magic/air/wind-tornado-cyclone-purple-pink.webp",
         "sort": 100000,
@@ -48,7 +53,7 @@
         "consumption": {
           "targets": [
             {
-              "type": "activityUses",
+              "type": "itemUses",
               "value": "1",
               "target": "",
               "scaling": {}
@@ -103,13 +108,8 @@
         },
         "uses": {
           "spent": 0,
-          "recovery": [
-            {
-              "period": "lr",
-              "type": "recoverAll"
-            }
-          ],
-          "max": "1"
+          "recovery": [],
+          "max": ""
         },
         "visibility": {
           "identifier": "",
@@ -121,22 +121,24 @@
           "requireIdentification": false,
           "requireMagic": false
         },
-        "roll": {
-          "formula": "",
-          "name": "",
-          "prompt": false,
-          "visible": false
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
         }
       },
       "1sOjFGD2njPK9glg": {
         "_id": "1sOjFGD2njPK9glg",
         "type": "utility",
-        "name": "Применить (ячейка 5)",
+        "name": "Восстановить применение (ячейка 5+)",
         "img": "icons/magic/air/wind-tornado-cyclone-purple-pink.webp",
         "sort": 200000,
         "activation": {
-          "type": "bonus",
-          "value": 1,
+          "type": "special",
+          "value": null,
           "condition": "",
           "override": true
         },
@@ -146,12 +148,21 @@
               "type": "spellSlots",
               "value": "1",
               "target": "5",
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
               "scaling": {}
             }
           ],
           "scaling": {
-            "allowed": false,
-            "max": ""
+            "allowed": true,
+            "max": "5"
           },
           "spellSlot": true
         },
@@ -160,22 +171,18 @@
           "value": ""
         },
         "duration": {
-          "value": "10",
-          "units": "minute",
+          "value": "",
+          "units": "inst",
           "special": "",
-          "override": true,
+          "override": false,
           "concentration": false
         },
-        "effects": [
-          {
-            "_id": "6ZVaVvPpolskPE9R"
-          }
-        ],
+        "effects": [],
         "range": {
           "value": "",
-          "units": "self",
+          "units": "",
           "special": "",
-          "override": true
+          "override": false
         },
         "target": {
           "template": {
@@ -188,13 +195,13 @@
             "units": "ft"
           },
           "affects": {
-            "count": "1",
-            "type": "self",
+            "count": "",
+            "type": "",
             "choice": false,
             "special": ""
           },
           "prompt": true,
-          "override": true
+          "override": false
         },
         "uses": {
           "spent": 0,
@@ -295,6 +302,60 @@
           "name": "",
           "prompt": false,
           "visible": false
+        }
+      },
+      "BNkRB3CbbcLrm7Vx": {
+        "_id": "BNkRB3CbbcLrm7Vx",
+        "type": "forward",
+        "name": "Восстановить применение (ячейка 5+) (Магия договора)",
+        "sort": 200001,
+        "img": "icons/magic/air/wind-tornado-cyclone-purple-pink.webp",
+        "activity": {
+          "id": "1sOjFGD2njPK9glg"
+        },
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 9,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 5
+            }
+          }
         }
       }
     },

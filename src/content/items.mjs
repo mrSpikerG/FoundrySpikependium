@@ -1,5 +1,5 @@
 // Магические предметы UA 2024 «Обновление Эберрона».
-import { utility, save, teleport, effect, change, uses, DAWN, useSelf } from "../../tools/lib/core.mjs";
+import { utility, check, save, teleport, effect, change, uses, DAWN, useSelf } from "../../tools/lib/core.mjs";
 import { equipment, weaponTemplate, enchantActivity, enchantEffect, folder, ref } from "../../tools/lib/docs.mjs";
 
 const BOOK = "UA-EB";
@@ -40,12 +40,41 @@ export function define() {
     effects: [effect("item:helm-of-awareness:init", { name: "Преимущество на инициативу", img: "icons/equipment/head/helm-norman-engraved", changes: [change("system.attributes.init.roll.mode", 1)] })]
   });
 
+  // Формы и вес из equipment24/tools/artisan официального SRD dnd5e 6.0.6.
+  const tools = [
+    ["alchemist", "Припасы алхимика", 8], ["brewer", "Припасы пивовара", 9],
+    ["calligrapher", "Припасы каллиграфа", 5], ["carpenter", "Инструменты плотника", 6],
+    ["cartographer", "Инструменты картографа", 6], ["cobbler", "Инструменты сапожника", 5],
+    ["cook", "Принадлежности повара", 8], ["glassblower", "Инструменты стеклодува", 5],
+    ["jeweler", "Инструменты ювелира", 2], ["leatherworker", "Инструменты кожевника", 5],
+    ["mason", "Инструменты каменщика", 8], ["painter", "Припасы художника", 5],
+    ["potter", "Инструменты гончара", 3], ["smith", "Инструменты кузнеца", 8],
+    ["tinker", "Инструменты ремонтника", 10], ["weaver", "Инструменты ткача", 5],
+    ["woodcarver", "Инструменты резчика по дереву", 5]
+  ];
+  const toolCheck = check("item:manifold-tool:check", { name: "Проверка инструмента", ability: "int", bonus: "@prof", self: true, requireAttunement: true });
+  const toolProficiencies = tools.map(([id, name]) => effect(`item:manifold-tool:prof:${id}`, {
+    name: `Мультиинструмент: ${name}`, changes: [change(`system.tools.${id}.value`, 1, "upgrade")]
+  }));
+  const toolForms = tools.map(([id, name, weight]) => enchantEffect(`item:manifold-tool:form:${id}`, name, [
+    change("name", `Мультиинструмент (${name.toLowerCase()})`, "override"),
+    change("system.type.baseItem", id, "override"), change("system.weight.value", weight, "override"),
+    change(`system.activities.${toolCheck._id}.check.ability`, "", "override"),
+    change(`system.activities.${toolCheck._id}.check.bonus`, "", "override")
+  ], "icons/tools/hand/wrench-steel"));
+  const toolTransform = enchantActivity("item:manifold-tool:transform", toolForms[0]._id, {
+    name: "Преобразовать", activation: "action", self: true, type: "tool", categories: ["art"], allowMagical: true, requireAttunement: true
+  });
+  toolTransform.effects = toolForms.map((e, i) => ({
+    _id: e._id, level: { min: null, max: null }, riders: { activity: [], effect: [toolProficiencies[i]._id], item: [] }
+  }));
+
   equipment({
     key: "item:manifold-tool", folder: F, book: BOOK, page: 9, name: "Мультиинструмент", en: "Manifold Tool",
-    img: "icons/tools/hand/wrench-steel", equipType: "wondrous", rarity: "common", attunement: "required", price: 100, weight: 1,
-    weightNote: "Вес оценочный: 1 фунт для исходной формы простого ручного инструмента (например, гаечного ключа). Вес в UA не указан; при смене формы на комплект ремесленных инструментов измените вес по его записи в правилах 2024.",
-    desc: "*Чудесный предмет, обычный (требуется настройка).*\n\nЭтот инструмент принимает форму гаечного ключа, отвёртки или другого простого инструмента. Действием магия вы можете коснуться предмета и преобразовать его в выбранные вами инструменты ремесленника. В какой бы форме ни находился этот инструмент, вы владеете им при использовании.",
-    acts: [utility("item:manifold-tool:transform", { name: "Преобразовать", activation: "action", requireAttunement: true })]
+    img: "icons/tools/hand/wrench-steel", equipType: "tool", rarity: "common", attunement: "required", price: 100, weight: 1,
+    weightNote: "Вес оценочный: 1 фунт для исходной формы простого ручного инструмента (например, гаечного ключа). Вес в UA не указан; вес выбранного комплекта ремесленных инструментов подставляется из его записи SRD 2024.",
+    desc: "*Чудесный предмет, обычный (требуется настройка).*\n\nЭтот инструмент принимает форму гаечного ключа, отвёртки или другого простого инструмента. Действием магия вы можете коснуться предмета и преобразовать его в выбранные вами инструменты ремесленника. В какой бы форме ни находился этот инструмент, вы владеете им при использовании.\n\n**В Foundry.** Настройтесь на предмет и отметьте его используемым. Действие «Преобразовать» предлагает 17 ремесленных форм: меняются название, тип инструмента, вес и владение. «Проверка инструмента» создаёт стандартную кнопку проверки выбранного инструмента. Исходная ручная форма использует Интеллект с бонусом мастерства; нужную характеристику можно выбрать в окне броска. Повторное применение того же зачарования возвращает исходную форму.",
+    effects: [...toolForms, ...toolProficiencies], acts: [toolTransform, toolCheck]
   });
 
   equipment({
@@ -58,8 +87,9 @@ export function define() {
   });
 
   // --- Излучающее свет оружие ----------------------------------------------
-  const blind = effect("item:radiant-weapon:blinded", { name: "Ослеплён", transfer: false, statuses: ["blinded"], description: "<p>До конца следующего хода цели.</p>" });
+  const blind = effect("item:radiant-weapon:blinded", { name: "Ослеплён", transfer: false, statuses: ["blinded"], expiry: "targetEnd", description: "<p>До конца следующего хода цели.</p>" });
   const radiantLight = utility("item:radiant-weapon:light", { name: "Свет", activation: "bonus", self: true, duration: "perm", requireAttunement: true, img: "icons/magic/light/explosion-star-glow-yellow" });
+  radiantLight.flags = { spikependium: { action: "radiant-light" } };
   const radiantBlind = save("item:radiant-weapon:blind", {
     name: "Ослепляющая вспышка", activation: "reaction", condition: "Сразу после того, как по вам попали атакой",
     count: 1, affects: "creature", ability: "con", dc: "15", consume: [useSelf()], effects: [blind._id], requireAttunement: true, img: "icons/magic/light/beam-rays-yellow"

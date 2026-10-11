@@ -46,7 +46,7 @@ export function define() {
         html: md("Вы поддерживаете магическую силу и боевую сосредоточенность в идеальном балансе, что позволяет вам превращать ячейки заклинаний в очки духа или превращать очки духа в ячейки заклинаний.\n\n**Восстановление очков духа.** Вы можете потратить ячейку заклинания, чтобы восстановить количество потраченных очков духа, равное уровню этой ячейки (действие не требуется).\n\n**Восстановление ячеек заклинаний.** Бонусным действием вы можете преобразовать непотраченные очки духа, чтобы восстановить одну потраченную ячейку заклинания. Таблица «Восстановление ячеек заклинаний» показывает стоимость восстановления ячейки заклинания определённого уровня, а также минимальный уровень монаха, необходимый для восстановления такой ячейки. Вы можете восстановить ячейку заклинания уровнем не выше 4.")
           + table("Восстановление ячеек заклинаний", ["Уровень ячейки", "Стоимость очков духа", "Мин. уровень монаха"], [[1, 2, 6], [2, 3, 7], [3, 5, 13], [4, 6, 19]]),
         acts: [
-          utility("mystic-arts:slot-to-focus", { name: "Ячейка → очки духа", activation: "special", consume: [useSlot(1), { type: "itemUses", value: "-1", target: "feat:monks-focus", scaling: { mode: "amount", formula: "" } }], scaling: true, scalingMax: "3" }),
+          utility("mystic-arts:slot-to-focus", { name: "Ячейка → очки духа", activation: "special", consume: [useSlot(1), { type: "itemUses", value: "-1", target: "feat:monks-focus", scaling: { mode: "amount", formula: "" } }], scaling: true, scalingMax: "9" }),
           ...[[1, 2, 6], [2, 3, 7], [3, 5, 13], [4, 6, 19]].map(([lvl, cost, min]) => utility(`mystic-arts:focus-to-slot:${lvl}`, {
             name: `Очки духа → ячейка ${lvl} уровня`, activation: "bonus", minLevel: min,
             consume: [useItem("feat:monks-focus", cost), { type: "spellSlots", value: "-1", target: String(lvl), scaling: {} }]
@@ -95,11 +95,11 @@ export function define() {
         acts: counterspell ? [cast("spellguard:counterspell", counterspell, { name: "Контрзаклинание (частью реакции)", activation: "special", condition: "После попадания Ударом чаростража" })] : []
       },
       {
-        id: "eternal-spellguard", level: 20, name: "Вечный чаростраж", img: "icons/magic/defensive/barrier-shield-dome-deflect-teal", effects: [eternal],
+        id: "eternal-spellguard", level: 20, name: "Вечный чаростраж", img: "icons/magic/defensive/barrier-shield-dome-deflect-teal", effects: [eternal], uses: uses(1, LR),
         desc: "Бонусным действием вы можете усилить свою Ауру защиты, получая указанные ниже эффекты на одну минуту или пока вы не прекратите их (действие не требуется). Применив это умение, вы не можете применять его снова, пока не завершите продолжительный отдых. Вы можете восстановить применение этого умения, потратив ячейку заклинаний 5 уровня (действие не требуется).\n\n**Телохранитель.** Пока цель вашей Защитной связи находится в ауре, это существо получает сопротивление ко всему урону.\n\n**Защита от магии.** Вы и ваши союзники в ауре получаете преимущество на спасброски против заклинаний.\n\n**Оберег от заклинаний.** Броски дальнобойной атаки заклинанием против вас и ваших союзников в ауре совершаются с помехой.",
         acts: [
-          utility("spellguard:eternal", { activation: "bonus", self: true, duration: "minute", durationValue: 1, usesMax: 1, usesRecovery: [LR], consume: [useActivity()], effects: [eternal._id] }),
-          utility("spellguard:eternal:slot", { name: "Применить (ячейка 5)", activation: "bonus", self: true, duration: "minute", durationValue: 1, consume: [useSlot(5)], effects: [eternal._id] })
+          utility("spellguard:eternal", { activation: "bonus", self: true, duration: "minute", durationValue: 1, consume: [useSelf()], effects: [eternal._id] }),
+          utility("spellguard:eternal:slot", { name: "Восстановить применение (ячейка 5+)", activation: "special", consume: [useSlot(5), useSelf(-1)] })
         ]
       }
     ]
@@ -122,7 +122,7 @@ export function define() {
         desc: "Сразу после того как видимое существо в пределах 30 футов накладывает заклинание 1 уровня или выше, вы можете реакцией впитать магическую энергию этого заклинания.\n\nКогда вы это делаете, до конца вашего следующего хода, при следующем попадании по цели Скрытой атакой вы наносите дополнительный урон силовым полем. Этот дополнительный урон равен к6 в количестве, равном уровню впитанного заклинания.\n\nВы можете совершать эту реакцию количество раз, равное вашему модификатору Интеллекта (минимум один раз). Вы восстанавливаете все потраченные применения после продолжительного отдыха.",
         acts: [
           utility("magic-stealer:absorb", { name: "Впитать заклинание", activation: "reaction", condition: "Существо в 30 футах накладывает заклинание 1+ уровня", range: 30, consume: [useSelf()] }),
-          damage("magic-stealer:damage", { name: "Дополнительный урон Скрытой атаки", activation: "special", condition: "Укажите уровень впитанного заклинания через масштаб", count: 1, affects: "creature", scaling: true, scalingMax: "8", damage: [dmg("1d6", "force", { scale: 1 })] })
+          damage("magic-stealer:damage", { name: "Дополнительный урон Скрытой атаки", activation: "special", condition: "Укажите уровень впитанного заклинания через масштаб", count: 1, affects: "creature", scaling: true, scalingMax: "9", damage: [dmg("1d6", "force", { scale: 1 })] })
         ]
       },
       {

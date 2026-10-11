@@ -111,6 +111,12 @@ export function define() {
     activation: "action", ability: "int", identifier: "artificer", minLevel: 3, hd: "@classes.artificer.levels - 1", ac: "@abilities.int.mod", hp: "4 * @classes.artificer.levels", attackDamage: "@abilities.int.mod",
     duration: "spec", durationSpecial: "До окончания продолжительного отдыха", range: 5
   };
+  const reanimatedProfiles = [
+    { uuid: ref("actor:reanimated-companion"), min: 3, max: 4 },
+    ...["conduit", "fury"].flatMap(arcane => ["", "big-medium", "big-large", "thin", "wet"].map(body => ({
+      uuid: ref(`actor:reanimated-companion:${arcane}${body ? `:${body}` : ""}`), min: body ? 9 : 5, max: body ? null : 8
+    })))
+  ];
   makeSubclass({
     key: "subclass:reanimator", cls: "Изобретатель", clsGen: "изобретателя", classIdentifier: "artificer",
     name: "Реаниматор", en: "Reanimator", identifier: "reanimator", book: "UA-HS", page: 1,
@@ -146,10 +152,10 @@ export function define() {
 
 **Спутник в бою.** В бою спутник действует во время вашего хода. Он может перемещаться и использовать свою реакцию самостоятельно, но единственное действие, которое он предпринимает, — это действие уклонение, либо вы можете бонусным действием приказать ему совершить другое действие. Если вы находитесь в состоянии <<incapacitated|недееспособный>>, то спутник действует самостоятельно и не ограничен действием уклонение.`,
         acts: [
-          summon("reanimator:companion", [{ uuid: ref("actor:reanimated-companion") }], {
+          summon("reanimator:companion", reanimatedProfiles, {
             ...summonOpts, name: "Создать спутника", usesMax: 1, usesRecovery: [LR], consume: [useActivity()]
           }),
-          summon("reanimator:companion-slot", [{ uuid: ref("actor:reanimated-companion") }], {
+          summon("reanimator:companion-slot", reanimatedProfiles, {
             ...summonOpts, name: "Создать спутника (ячейка)", consume: [useSlot(1)], scaling: true
           })
         ]

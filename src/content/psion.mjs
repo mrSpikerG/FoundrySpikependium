@@ -144,7 +144,7 @@ export function define() {
   // --- Псионические дисциплины ---------------------------------------------
   const disc = (id, name, desc, acts, img) => feature({
     key: `psion:discipline:${id}`, folder: FD(), book: BOOK, page: 5, level: 2, requirements: REQ,
-    name, identifier: `discipline-${id}`, subtype: "psionicDiscipline", img, desc, acts
+    name, identifier: `discipline-${id}`, subtype: "psionicDiscipline", img, desc, acts, levelClass: "psion"
   });
   /** Бросок кости с тратой только при успехе: бросок + отдельная кнопка «потратить». */
   const onSuccess = (id, condition, rollName = "Бонус к проверке", spendName = "Проверка удалась — потратить кость") => [
@@ -156,7 +156,7 @@ export function define() {
     "Когда вы накладываете заклинание псионика школы некромантии или преобразования, вы можете потратить количество псионических костей, не превышающее ваш модификатор Интеллекта, бросить их и получить количество временных хитов, равное сумме бросков + ваш модификатор Интеллекта (минимум 1).",
     [heal("psion:discipline:biofeedback:use", {
       activation: "special", condition: "Заклинание псионика школы некромантии или преобразования", self: true, temp: true,
-      consume: [PSI_SCALING], scaling: true, scalingMax: "max(1, @abilities.int.mod) - 1",
+      consume: [PSI_SCALING], scaling: true, scalingMax: "max(1, @abilities.int.mod)",
       formula: "(1 + @scaling)d@scale.psion.die.faces + max(1, @abilities.int.mod)"
     })],
     "icons/magic/life/heart-glowing-red");
@@ -164,7 +164,7 @@ export function define() {
     "Когда вы накладываете заклинание псионика из школы вызова или воплощения, которое вынуждает видимое вами существо совершить спасбросок против этого заклинания, вы можете потратить количество псионических костей, не превышающее ваш модификатор Интеллекта, и бросить их. Существо получает урон психической энергией, равный сумме бросков + ваш модификатор Интеллекта (минимум 1), независимо от результата спасброска.",
     [damage("psion:discipline:destructive-thoughts:use", {
       activation: "special", condition: "Заклинание вызова или воплощения со спасброском", count: 1, affects: "creature",
-      consume: [PSI_SCALING], scaling: true, scalingMax: "max(1, @abilities.int.mod) - 1",
+      consume: [PSI_SCALING], scaling: true, scalingMax: "max(1, @abilities.int.mod)",
       damage: [dmg("(1 + @scaling)d@scale.psion.die.faces + max(1, @abilities.int.mod)", "psychic")]
     })],
     "icons/magic/unholy/strike-hand-glow-pink");
@@ -301,6 +301,11 @@ export function define() {
       advScale("psion:dice", "dice", "Количество псионических костей", "number", { 1: 4, 5: 6, 9: 8, 13: 10, 17: 12 })
     ],
     extraAdvancement: [
+      advItemChoice("psion:cantrip-choice", null, {
+        title: "Заговоры псионика", type: "spell", list: ["class:psion"], spellLevel: "0",
+        choices: { 1: { count: 2, replacement: true }, 4: { count: 1, replacement: true }, 10: { count: 1, replacement: true } },
+        spell: spellConfig({ abilities: ["int"], always: false })
+      }),
       advItemChoice("psion:disciplines", null, {
         title: "Псионические дисциплины", type: "feat", pool: disciplines, replacement: true,
         choices: { 2: { count: 2, replacement: true }, 5: { count: 1, replacement: true }, 10: { count: 1, replacement: true }, 13: { count: 1, replacement: true }, 17: { count: 1, replacement: true } },

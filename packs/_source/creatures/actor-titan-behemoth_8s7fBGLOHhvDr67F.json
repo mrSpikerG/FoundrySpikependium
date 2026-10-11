@@ -106,7 +106,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>КД</strong> 11 + ваш модификатор Мудрости.</p><p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> в этой форме равны вашему значению Мудрости — <em>в Foundry выставьте их вручную после превращения</em>. Интеллект, Мудрость и Харизма сохраняются; Телосложение выставьте равным исходному вручную. Размер: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>",
+        "value": "<p><strong>КД</strong> 11 + ваш модификатор Мудрости.</p><p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> автоматически равны вашей Мудрости благодаря эффекту формы. Телосложение, Интеллект, Мудрость и Харизма сохраняются. Размер выбирается при превращении: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>",
         "public": ""
       },
       "alignment": "Мировоззрение не меняется",
@@ -180,7 +180,7 @@
       "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
       "system": {
         "description": {
-          "value": "<p>Когда вы впервые в ход входите в пространство врага, размер которого меньше вашего минимум на один, это существо подвергается следующему эффекту: <em>Спасбросок Силы:</em> Сл. равна вашей Сл. спасброска заклинаний. <em>Провал:</em> цель ложится ничком. Если у цели уже есть состояние лежащий ничком, то вместо этого она получает 2к6 дробящего урона.</p>",
+          "value": "<p>Когда вы впервые в ход входите в пространство врага, размер которого меньше вашего минимум на один, это существо подвергается следующему эффекту: <em>Спасбросок Силы:</em> Сл. равна вашей Сл. спасброска заклинаний. <em>Провал:</em> цель ложится ничком. Если у цели уже есть состояние лежащий ничком, то вместо этого она получает [[/damage 2d6 type=bludgeoning]]{2к6} дробящего урона.</p><h3>Действия</h3><ul><li>[[/item activity=pa6gKwkg4aDO7EbA]]{Сбить с ног} · [[/save activity=pa6gKwkg4aDO7EbA]]{Спасбросок цели}</li><li>[[/item activity=GBovpZwGkzMcR0Lx]]{Ярость: цель уже лежит ничком} · [[/damage activity=GBovpZwGkzMcR0Lx]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -211,13 +211,105 @@
           "pa6gKwkg4aDO7EbA": {
             "_id": "pa6gKwkg4aDO7EbA",
             "type": "save",
-            "name": "",
+            "name": "Сбить с ног",
             "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
             "sort": 100000,
             "activation": {
               "type": "special",
               "value": null,
               "condition": "Первый вход в пространство меньшего врага за ход",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "EVuzZ9pZxKfpv5Pi",
+                "onSave": false
+              }
+            ],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "druid",
+              "level": {
+                "min": 10,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": []
+            },
+            "save": {
+              "ability": [
+                "str"
+              ],
+              "dc": {
+                "calculation": "spellcasting",
+                "formula": ""
+              },
+              "bonus": ""
+            }
+          },
+          "GBovpZwGkzMcR0Lx": {
+            "_id": "GBovpZwGkzMcR0Lx",
+            "type": "damage",
+            "name": "Ярость: цель уже лежит ничком",
+            "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
+            "sort": 200000,
+            "activation": {
+              "type": "special",
+              "value": null,
+              "condition": "",
               "override": true
             },
             "consumption": {
@@ -271,9 +363,9 @@
               "max": ""
             },
             "visibility": {
-              "identifier": "",
+              "identifier": "druid",
               "level": {
-                "min": null,
+                "min": 10,
                 "max": null
               },
               "requireAttunement": false,
@@ -281,18 +373,29 @@
               "requireMagic": false
             },
             "damage": {
-              "onSave": "none",
-              "parts": []
-            },
-            "save": {
-              "ability": [
-                "str"
-              ],
-              "dc": {
-                "calculation": "spellcasting",
-                "formula": ""
+              "critical": {
+                "allow": false,
+                "bonus": ""
               },
-              "bonus": ""
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 2,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "bludgeoning"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
             }
           }
         },
@@ -300,7 +403,48 @@
         "advancement": [],
         "enchant": {}
       },
-      "effects": [],
+      "effects": [
+        {
+          "_id": "EVuzZ9pZxKfpv5Pi",
+          "name": "Сбить с ног",
+          "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "<p>Когда вы впервые в ход входите в пространство врага, размер которого меньше вашего минимум на один, это существо подвергается следующему эффекту: <em>Спасбросок Силы:</em> Сл. равна вашей Сл. спасброска заклинаний. <em>Провал:</em> цель ложится ничком. Если у цели уже есть состояние лежащий ничком, то вместо этого она получает [[/damage 2d6 type=bludgeoning]]{2к6} дробящего урона.</p>",
+          "origin": null,
+          "statuses": [
+            "prone"
+          ],
+          "tint": "#ffffff",
+          "flags": {},
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!8s7fBGLOHhvDr67F.tTtB9Q8vEuFz8xKQ.EVuzZ9pZxKfpv5Pi"
+        }
+      ],
       "folder": null,
       "sort": 100000,
       "ownership": {
@@ -445,7 +589,7 @@
       "img": "icons/creatures/claws/claw-curved-jagged-gray.webp",
       "system": {
         "description": {
-          "value": "<p><em>Рукопашная атака:</em> бонус равен вашему модификатору атаки заклинанием, досягаемость 10 фт. <em>Попадание:</em> 1к8 + ваш модификатор Мудрости рубящего урона.</p>",
+          "value": "<p><em>Рукопашная атака:</em> бонус равен вашему модификатору атаки заклинанием, досягаемость 10 фт. <em>Попадание:</em> [[/r 1d8]]{1к8} + ваш модификатор Мудрости рубящего урона.</p><h3>Действия</h3><ul><li>[[/item activity=FUfvClWWOMTdFY7x]]{Атаковать} · [[/damage activity=FUfvClWWOMTdFY7x]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -615,7 +759,7 @@
       "img": "icons/magic/fire/beam-jet-stream-embers.webp",
       "system": {
         "description": {
-          "value": "<p>Вы тратите ячейку заклинаний 1+ уровня. <em>Спасбросок Ловкости:</em> Сл. равна вашей Сл. спасброска заклинаний, каждое существо в линии шириной 5 футов и длиной 60 футов. <em>Провал:</em> 2к8 за каждый уровень потраченной ячейки + ваш модификатор Мудрости урона излучением. <em>Успех:</em> половина урона.</p>",
+          "value": "<p>Вы тратите ячейку заклинаний 1+ уровня. <em>Спасбросок Ловкости:</em> Сл. равна вашей Сл. спасброска заклинаний, каждое существо в линии шириной 5 футов и длиной 60 футов. <em>Провал:</em> [[/r 2d8]]{2к8} за каждый уровень потраченной ячейки + ваш модификатор Мудрости урона излучением. <em>Успех:</em> половина урона.</p><h3>Действия</h3><ul><li>[[/item activity=yodAfsTxpe62UINB]]{Применить} · [[/damage activity=yodAfsTxpe62UINB]]{Бросок урона} · [[/save activity=yodAfsTxpe62UINB]]{Спасбросок цели}</li><li>[[/item activity=occf1Er9FXoqp1BM]]{Раскалённое дыхание (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
           "chat": ""
         },
         "source": {
@@ -661,12 +805,15 @@
                   "type": "spellSlots",
                   "value": "1",
                   "target": "1",
-                  "scaling": {}
+                  "scaling": {
+                    "mode": "level",
+                    "formula": ""
+                  }
                 }
               ],
               "scaling": {
                 "allowed": true,
-                "max": ""
+                "max": "9"
               },
               "spellSlot": true
             },
@@ -694,7 +841,7 @@
                 "contiguous": false,
                 "type": "line",
                 "size": "60",
-                "width": "",
+                "width": "5",
                 "height": "",
                 "units": "ft"
               },
@@ -754,6 +901,54 @@
               },
               "bonus": ""
             }
+          },
+          "occf1Er9FXoqp1BM": {
+            "_id": "occf1Er9FXoqp1BM",
+            "type": "forward",
+            "name": "Раскалённое дыхание (Магия договора)",
+            "sort": 100001,
+            "img": "icons/magic/fire/beam-jet-stream-embers.webp",
+            "activity": {
+              "id": "yodAfsTxpe62UINB"
+            },
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "spellSlot": false,
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "targets": [
+                {
+                  "type": "attribute",
+                  "target": "spells.pact.value",
+                  "value": "1",
+                  "scaling": {}
+                }
+              ]
+            },
+            "visibility": {
+              "identifier": "warlock",
+              "level": {
+                "min": 1,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "flags": {
+              "spikependium": {
+                "pact": {
+                  "minimum": 1
+                }
+              }
+            }
           }
         },
         "properties": [],
@@ -781,7 +976,63 @@
       "_key": "!actors.items!8s7fBGLOHhvDr67F.ULPZm9XtAsh2m6oZ"
     }
   ],
-  "effects": [],
+  "effects": [
+    {
+      "_id": "RBrjBpclschV7OvW",
+      "name": "Характеристики титана",
+      "img": "icons/creatures/abilities/bull-head-horns-glowing.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.value",
+            "value": "@abilities.wis.value",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "AE0ZZTux2B6afThy"
+          },
+          {
+            "key": "system.abilities.dex.value",
+            "value": "@abilities.wis.value",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "zSHXljuxmbpA8fOz"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.effects!8s7fBGLOHhvDr67F.RBrjBpclschV7OvW"
+    }
+  ],
   "folder": "hVWaqnDXVg7pUNNY",
   "sort": 0,
   "ownership": {

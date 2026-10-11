@@ -5,7 +5,7 @@
   "img": "icons/magic/fire/explosion-flame-lightning-strike.webp",
   "system": {
     "description": {
-      "value": "<p>Сразу после того, как вы накладываете Божественную кару, вы можете потратить одно использование вашего Божественного канала и применить один из следующих эффектов:</p><p><strong>Удар дао.</strong> Цель получает состояние &Reference[grappled]{схваченный} (Сл. высвобождения равна Сл. спасброска от ваших заклинаний). Пока цель находится в состоянии схваченный, она также получает состояние &Reference[restrained]{опутанный}.</p><p><strong>Побег джинна.</strong> Вы телепортируетесь на видимое свободное пространство в пределах 30 футов от себя и принимаете форму тумана до конца вашего следующего хода. В этой форме вы обладаете иммунитетом к состояниям схваченный, лежащий ничком и опутанный.</p><p><strong>Ярость ифрита.</strong> Цель получает дополнительно 2к4 урона огнём.</p><p><strong>Волна марида.</strong> Цель и каждое существо на ваш выбор в радиусе 10 футов от вас должны совершить спасбросок Силы против Сл. спасброска от ваших заклинаний. При провале существо отталкивается на 15 футов от вас и получает состояние &Reference[prone]{лежащий ничком}.</p>",
+      "value": "<p>Сразу после того, как вы накладываете Божественную кару, вы можете потратить одно использование вашего Божественного канала и применить один из следующих эффектов:</p><p><strong>Удар дао.</strong> Цель получает состояние &Reference[grappled]{схваченный} (Сл. высвобождения равна Сл. спасброска от ваших заклинаний). Пока цель находится в состоянии схваченный, она также получает состояние &Reference[restrained]{опутанный}.</p><p><strong>Побег джинна.</strong> Вы телепортируетесь на видимое свободное пространство в пределах 30 футов от себя и принимаете форму тумана до конца вашего следующего хода. В этой форме вы обладаете иммунитетом к состояниям схваченный, лежащий ничком и опутанный.</p><p><strong>Ярость ифрита.</strong> Цель получает дополнительно [[/damage 2d4 type=fire]]{2к4} урона огнём.</p><p><strong>Волна марида.</strong> Цель и каждое существо на ваш выбор в радиусе 10 футов от вас должны совершить спасбросок Силы против Сл. спасброска от ваших заклинаний. При провале существо отталкивается на 15 футов от вас и получает состояние &Reference[prone]{лежащий ничком}.</p><h3>Действия</h3><ul><li>[[/item activity=A8uOqVnHKM7E6jgg]]{Удар дао}</li><li>[[/item activity=wpwEYXmv9i76StD0]]{Побег джинна}</li><li>[[/item activity=hdkGUalqiesrT8sM]]{Ярость ифрита} · [[/damage activity=hdkGUalqiesrT8sM]]{Бросок урона}</li><li>[[/item activity=BEl0FhkirfWfAxuU]]{Волна марида} · [[/save activity=BEl0FhkirfWfAxuU]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
       "chat": ""
     },
     "source": {
@@ -71,7 +71,11 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "XUdl5uWAN0XfPCHL"
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -157,7 +161,11 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "EkCUytuNAgbBZOQ3"
+          }
+        ],
         "range": {
           "value": "",
           "units": "self",
@@ -347,7 +355,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "JUZK8P7jH8lUB2ml",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -397,7 +410,7 @@
             "str"
           ],
           "dc": {
-            "calculation": "spellcasting",
+            "calculation": "cha",
             "formula": ""
           },
           "bonus": ""
@@ -408,7 +421,152 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "XUdl5uWAN0XfPCHL",
+      "name": "Удар дао",
+      "img": "icons/magic/fire/explosion-flame-lightning-strike.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Сразу после того, как вы накладываете Божественную кару, вы можете потратить одно использование вашего Божественного канала и применить один из следующих эффектов:</p><p><strong>Удар дао.</strong> Цель получает состояние &Reference[grappled]{схваченный} (Сл. высвобождения равна Сл. спасброска от ваших заклинаний). Пока цель находится в состоянии схваченный, она также получает состояние &Reference[restrained]{опутанный}.</p><p><strong>Побег джинна.</strong> Вы телепортируетесь на видимое свободное пространство в пределах 30 футов от себя и принимаете форму тумана до конца вашего следующего хода. В этой форме вы обладаете иммунитетом к состояниям схваченный, лежащий ничком и опутанный.</p><p><strong>Ярость ифрита.</strong> Цель получает дополнительно [[/damage 2d4 type=fire]]{2к4} урона огнём.</p><p><strong>Волна марида.</strong> Цель и каждое существо на ваш выбор в радиусе 10 футов от вас должны совершить спасбросок Силы против Сл. спасброска от ваших заклинаний. При провале существо отталкивается на 15 футов от вас и получает состояние &Reference[prone]{лежащий ничком}.</p>",
+      "origin": null,
+      "statuses": [
+        "grappled",
+        "restrained"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ZJ3eNdoy4oyaPREr.XUdl5uWAN0XfPCHL"
+    },
+    {
+      "_id": "EkCUytuNAgbBZOQ3",
+      "name": "Побег джинна",
+      "img": "icons/magic/fire/explosion-flame-lightning-strike.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.ci.value",
+            "value": "grappled",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "kfTAJFck1qkB1up0"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "prone",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "THzHGIbT43glfHHU"
+          },
+          {
+            "key": "system.traits.ci.value",
+            "value": "restrained",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "2X0482B2ELAmfYO3"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceEnd",
+        "expired": false
+      },
+      "description": "<p>Сразу после того, как вы накладываете Божественную кару, вы можете потратить одно использование вашего Божественного канала и применить один из следующих эффектов:</p><p><strong>Удар дао.</strong> Цель получает состояние &Reference[grappled]{схваченный} (Сл. высвобождения равна Сл. спасброска от ваших заклинаний). Пока цель находится в состоянии схваченный, она также получает состояние &Reference[restrained]{опутанный}.</p><p><strong>Побег джинна.</strong> Вы телепортируетесь на видимое свободное пространство в пределах 30 футов от себя и принимаете форму тумана до конца вашего следующего хода. В этой форме вы обладаете иммунитетом к состояниям схваченный, лежащий ничком и опутанный.</p><p><strong>Ярость ифрита.</strong> Цель получает дополнительно [[/damage 2d4 type=fire]]{2к4} урона огнём.</p><p><strong>Волна марида.</strong> Цель и каждое существо на ваш выбор в радиусе 10 футов от вас должны совершить спасбросок Силы против Сл. спасброска от ваших заклинаний. При провале существо отталкивается на 15 футов от вас и получает состояние &Reference[prone]{лежащий ничком}.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ZJ3eNdoy4oyaPREr.EkCUytuNAgbBZOQ3"
+    },
+    {
+      "_id": "JUZK8P7jH8lUB2ml",
+      "name": "Волна марида",
+      "img": "icons/magic/fire/explosion-flame-lightning-strike.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Сразу после того, как вы накладываете Божественную кару, вы можете потратить одно использование вашего Божественного канала и применить один из следующих эффектов:</p><p><strong>Удар дао.</strong> Цель получает состояние &Reference[grappled]{схваченный} (Сл. высвобождения равна Сл. спасброска от ваших заклинаний). Пока цель находится в состоянии схваченный, она также получает состояние &Reference[restrained]{опутанный}.</p><p><strong>Побег джинна.</strong> Вы телепортируетесь на видимое свободное пространство в пределах 30 футов от себя и принимаете форму тумана до конца вашего следующего хода. В этой форме вы обладаете иммунитетом к состояниям схваченный, лежащий ничком и опутанный.</p><p><strong>Ярость ифрита.</strong> Цель получает дополнительно [[/damage 2d4 type=fire]]{2к4} урона огнём.</p><p><strong>Волна марида.</strong> Цель и каждое существо на ваш выбор в радиусе 10 футов от вас должны совершить спасбросок Силы против Сл. спасброска от ваших заклинаний. При провале существо отталкивается на 15 футов от вас и получает состояние &Reference[prone]{лежащий ничком}.</p>",
+      "origin": null,
+      "statuses": [
+        "prone"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ZJ3eNdoy4oyaPREr.JUZK8P7jH8lUB2ml"
+    }
+  ],
   "folder": "sLMpFPgDxHNxaUYx",
   "sort": 0,
   "ownership": {
