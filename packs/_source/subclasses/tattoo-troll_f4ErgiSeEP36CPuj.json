@@ -43,7 +43,7 @@
           "type": "turnStart",
           "value": 1,
           "condition": "Вы окровавлены и имеете хотя бы 1 хит",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -69,7 +69,7 @@
           "value": "",
           "units": "self",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -82,13 +82,13 @@
             "units": "ft"
           },
           "affects": {
-            "count": "",
-            "type": "",
+            "count": "1",
+            "type": "self",
             "choice": false,
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,

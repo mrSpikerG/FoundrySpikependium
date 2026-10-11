@@ -171,7 +171,7 @@ function activityBase(type, key, o = {}) {
     sort: o.sort ?? 0,
     activation: {
       type: activation, value: o.activationValue ?? (timed ? 1 : null),
-      condition: o.condition ?? "", override: false
+      condition: o.condition ?? "", override: o.activation != null || o.condition != null
     },
     consumption: {
       targets: o.consume ?? [],
@@ -182,25 +182,25 @@ function activityBase(type, key, o = {}) {
     duration: {
       value: o.durationValue != null ? String(o.durationValue) : "",
       units: o.duration ?? "inst", special: o.durationSpecial ?? "",
-      override: false, concentration: !!o.concentration
+      override: o.duration != null || o.durationValue != null || o.concentration != null, concentration: !!o.concentration
     },
     effects: (o.effects ?? []).map(e => (typeof e === "string" ? { _id: e } : e)),
-    range: { value: o.range != null ? String(o.range) : "", units: rangeUnits, special: o.rangeSpecial ?? "", override: false },
+    range: { value: o.range != null ? String(o.range) : "", units: rangeUnits, special: o.rangeSpecial ?? "", override: o.range != null || o.rangeUnits != null || !!o.self || !!o.touch },
     target: {
       template: {
         count: "", contiguous: false, type: template.type ?? "", size: template.size != null ? String(template.size) : "",
-        width: "", height: "", units: "ft"
+        width: template.width != null ? String(template.width) : "", height: template.height != null ? String(template.height) : "", units: "ft"
       },
       affects: {
-        count: o.count != null ? String(o.count) : "", type: o.affects ?? "",
+        count: o.count != null ? String(o.count) : (o.self ? "1" : ""), type: o.affects ?? (o.self ? "self" : ""),
         choice: !!o.choice, special: o.affectsSpecial ?? ""
       },
-      prompt: true, override: false
+      prompt: true, override: o.template != null || o.affects != null || o.count != null || !!o.self
     },
     uses: { spent: 0, recovery: o.usesRecovery ?? [], max: o.usesMax != null ? String(o.usesMax) : "" },
     visibility: {
       identifier: "", level: { min: o.minLevel ?? null, max: o.maxLevel ?? null },
-      requireAttunement: !!o.requireAttunement, requireIdentification: false, requireMagic: !!o.requireMagic
+      requireAttunement: !!o.requireAttunement, requireIdentification: false, requireMagic: !!(o.requireMagic ?? o.requireAttunement)
     }
   };
 }
@@ -268,7 +268,8 @@ export function cast(key, spellUuid, o = {}) {
       ability: o.ability ?? "",
       challenge: { attack: "", save: "", override: false },
       level: o.level ?? null,
-      properties: o.properties ?? ["vocal", "somatic", "material"],
+      // dnd5e хранит здесь исключённые компоненты; вызывающие функции задают оставшиеся.
+      properties: ["vocal", "somatic", "material"].filter(p => !(o.properties ?? ["vocal", "somatic", "material"]).includes(p)),
       spellbook: o.spellbook ?? true,
       uuid: spellUuid
     }
@@ -276,20 +277,22 @@ export function cast(key, spellUuid, o = {}) {
 }
 
 export function summon(key, profiles, o = {}) {
+  const base = activityBase("summon", key, o);
   return {
-    ...activityBase("summon", key, o),
+    ...base,
     bonuses: {
       ac: o.ac ?? "", hd: o.hd ?? "", hp: o.hp ?? "",
       attackDamage: o.attackDamage ?? "", saveDamage: o.saveDamage ?? "", healing: o.healing ?? ""
     },
     creatureSizes: o.sizes ?? [],
     creatureTypes: o.types ?? [],
-    match: { attacks: o.matchAttacks ?? true, proficiency: o.matchProficiency ?? true, saves: o.matchSaves ?? true },
+    match: { ability: o.ability ?? "", attacks: o.matchAttacks ?? true, disposition: true, proficiency: o.matchProficiency ?? true, saves: o.matchSaves ?? true },
     profiles: profiles.map((p, i) => ({
-      _id: makeId(`summon-profile:${key}:${i}`), count: p.count ?? "", name: p.name ?? "",
-      uuid: p.uuid, level: { min: p.min ?? null, max: p.max ?? null }
+      _id: makeId(`summon-profile:${key}:${i}`), count: p.count ?? "1", name: p.name ?? "",
+      uuid: p.uuid, cr: "", types: [], level: { min: p.min ?? null, max: p.max ?? null }
     })),
-    summon: { prompt: true, mode: "", identifier: o.identifier ?? "" }
+    summon: { prompt: true, mode: "" },
+    visibility: { ...base.visibility, identifier: o.identifier ?? "" }
   };
 }
 

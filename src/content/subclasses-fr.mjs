@@ -130,7 +130,7 @@ export function define() {
 
   // --- Рыцарь пурпурного дракона (воин) ------------------------------------
   const comp = { uuid: ref("actor:purple-dragon-companion") };
-  const dragonSummon = { ac: "@abilities.int.mod", hp: "5 * @classes.fighter.levels", attackDamage: "@abilities.int.mod" };
+  const dragonSummon = { ability: "int", identifier: "fighter", minLevel: 3, hd: "@classes.fighter.levels - 1", ac: "@abilities.int.mod", hp: "5 * @classes.fighter.levels", attackDamage: "@abilities.int.mod" };
   const comprehend = spellUuid("Понимание языков");
   makeSubclass({
     key: "subclass:purple-dragon-knight", cls: "Воин", clsGen: "воина", classIdentifier: "fighter",

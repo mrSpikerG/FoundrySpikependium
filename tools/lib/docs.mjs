@@ -158,6 +158,7 @@ function fillActivityIcons(system, img) {
 }
 
 function itemBase(pack, key, o, type, system) {
+  if (pack === "items") system.description.value += `<p><em>Цена: ориентир по редкости из правил 2024 года${type === "weapon" || o.baseItem ? " плюс стоимость базового предмета" : ""}; в UA цена не указана. ${type === "weapon" ? "Это шаблон зачарования: вес и урон берутся от выбранного оружия." : o.weightNote ?? (o.weight == null ? "Вес в UA не указан; значение 0 — техническое, задайте его по решению Мастера." : "Вес взят у базового предмета.")}</em></p>`;
   const _id = makeId(`item:${key}`);
   fillActivityIcons(system, icon(o.img));
   const effects = (o.effects ?? []).map(e => ({ ...e, _key: `!items.effects!${_id}.${e._id}` }));
@@ -324,7 +325,7 @@ export function spell(o) {
     description: description(o),
     source: source(o.book, o.page),
     identifier: o.identifier ?? "",
-    activation: { type: o.activation ?? "action", value: o.activationValue ?? 1, condition: "" },
+    activation: { type: o.activation ?? "action", value: o.activationValue ?? 1, condition: o.condition ?? o.acts?.[0]?.activation.condition ?? "" },
     duration: { value: o.durationValue != null ? String(o.durationValue) : "", units: o.duration ?? "inst" },
     level: o.level,
     materials: { value: o.materials ?? "", consumed: !!o.consumed, cost: o.cost ?? 0, supply: 0 },
@@ -334,7 +335,7 @@ export function spell(o) {
     range: { value: o.range != null ? String(o.range) : "", units: o.rangeUnits ?? "ft", special: "" },
     school: o.school,
     sourceItem: "",
-    target: o.target ?? { affects: { type: "", count: "", choice: false, special: "" }, template: { type: "", size: "", units: "ft", contiguous: false, count: "" } },
+    target: o.target ?? structuredClone(o.acts?.[0]?.target) ?? { affects: { type: "", count: "", choice: false, special: "" }, template: { type: "", size: "", units: "ft", contiguous: false, count: "" } },
     uses: { max: "", spent: 0, recovery: [] },
     activities: activities(o.acts),
     ability: ""
@@ -430,12 +431,12 @@ export function enchantActivity(key, effectId, o = {}) {
     consumption: { targets: [], scaling: { allowed: false, max: "" }, spellSlot: true },
     description: { chatFlavor: "", value: "" },
     duration: { value: "", units: "inst", special: "", override: false, concentration: false },
-    effects: [{ _id: effectId, level: { min: null, max: null }, riders: { activity: o.riders ?? [], effect: [], item: [] } }],
+    effects: [{ _id: effectId, level: { min: null, max: null }, riders: { activity: o.riders ?? [], effect: o.riderEffects ?? [], item: [] } }],
     range: { value: "", units: "", special: "", override: false },
     target: { template: { count: "", contiguous: false, type: "", size: "", width: "", height: "", units: "ft" }, affects: { count: "", type: "", choice: false, special: "" }, prompt: true, override: false },
     uses: { spent: 0, recovery: [], max: "" },
     enchant: { identifier: "" },
-    restrictions: { allowMagical: false, categories: o.categories ?? [], properties: o.properties ?? [], type: o.type ?? "weapon" },
+    restrictions: { allowMagical: false, categories: o.categories ?? ["simpleM", "simpleR", "martialM", "martialR"], properties: o.properties ?? [], type: o.type ?? "weapon" },
     visibility: { identifier: "", level: { min: null, max: null }, requireAttunement: false, requireIdentification: false, requireMagic: false }
   };
 }

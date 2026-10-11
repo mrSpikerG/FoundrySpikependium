@@ -2,7 +2,7 @@
 import { attack, save, heal, utility, dmg, uses, LR, useSlot, useSelf } from "../../tools/lib/core.mjs";
 import { npc, folder } from "../../tools/lib/docs.mjs";
 
-const TITAN_NOTE = "<p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются действием умения «Титаническая форма»). <strong>Сила, Ловкость</strong> в этой форме равны вашему значению Мудрости — <em>в Foundry выставьте их вручную после превращения</em>. Телосложение, Интеллект, Мудрость и Харизма не меняются. Размер: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>";
+const TITAN_NOTE = "<p><strong>Временные хиты</strong> 2 × ваш уровень друида (выдаются при превращении). <strong>Сила, Ловкость</strong> в этой форме равны вашему значению Мудрости — <em>в Foundry выставьте их вручную после превращения</em>. Интеллект, Мудрость и Харизма сохраняются; Телосложение выставьте равным исходному вручную. Размер: Большой; Огромный (уровень друида 10+); Громадный (уровень друида 14+).</p>";
 
 export function define() {
   const fForms = folder("creatures", "Формы титана", { sort: 3000 });
@@ -67,7 +67,7 @@ export function define() {
   // --- Спутник реликт (три вида) --------------------------------------------
   const vestige = (key, variant, en, type, dr, dmgType, img, power) => npc({
     key, name: `Спутник реликт (${variant})`, en: `Vestige Companion (${en})`, book: "UA-MS", page: 5, folder: fComp, img,
-    size: "sm", creatureType: type, alignment: "Нейтральный", ac: 13, hp: 4,
+    size: "sm", creatureType: type, alignment: "Нейтральный", ac: 13, hp: 4, hpFormula: "1d6",
     movement: { walk: 5, fly: 30, hover: true }, abilities: { str: 1, dex: 14, con: 10, int: 15, wis: 15, cha: 16 },
     dr: [dr], ci: ["charmed", "frightened", "prone"], senses: { darkvision: 60 }, languagesCustom: "говорит на языках, которые знаете вы",
     bio: "<p><strong>КД</strong> 13 + ваш модификатор Харизмы; <strong>Хиты</strong> 4 + 4 × ваш уровень колдуна (кости хитов [к6] в количестве, равном вашему уровню колдуна). <strong>БМ</strong> равен вашему БМ.</p><p><em>Примечание для Foundry: значения, зависящие от уровня и Харизмы колдуна, подставляются действием призыва автоматически.</em></p>",

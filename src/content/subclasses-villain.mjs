@@ -27,8 +27,12 @@ function transformActivity(key, profiles, o = {}) {
     uses: { spent: 0, recovery: [], max: "" },
     visibility: { identifier: "", level: { min: null, max: null }, requireAttunement: false, requireIdentification: false, requireMagic: false },
     profiles: profiles.map((p, i) => ({ _id: makeId(`transform-profile:${key}:${i}`), cr: "", name: p.name, uuid: p.uuid, sizes: [], types: [], movement: [], level: { min: null, max: null } })),
-    settings: null,
-    transform: { customize: false, formless: false, mode: "", preset: "wildshape" }
+    settings: {
+      effects: ["otherOrigin", "origin", "feat", "spell", "class", "background"],
+      keep: ["bio", "class", "feats", "hp", "languages", "mental", "tempHP"], merge: ["saves", "skills"],
+      minimumAC: "", other: [], spellLists: ["subclass:titan"], tempFormula: "2 * @classes.druid.levels", transformTokens: true
+    },
+    transform: { customize: true, formless: false, mode: "", preset: "" }
   };
 }
 
@@ -118,7 +122,7 @@ export function define() {
           + table("Облик титана", ["1к4", "Бегемот", "Левиафан", "Инсектоид"], [
             ["1", "Блестящая чешуя", "Множество щупалец", "Радужные крылья"], ["2", "Несколько голов", "Полупрозрачная слизь", "Фасеточные глаза"],
             ["3", "Рептильный хвост", "Рот миноги", "Хитиновые рога"], ["4", "Шерсть, как у примата", "Змеиное тело", "Светящийся хитин"]
-          ]) + md("*Действие «Принять форму титана» расходует применение Дикой формы и превращает вас в выбранного титана; отдельное действие выдаёт временные хиты (2 × уровень друида).*"),
+          ]) + md("*Действие «Принять форму титана» расходует применение Дикой формы и превращает вас в выбранного титана; временные хиты (2 × уровень друида) выдаются при превращении. После превращения выставьте Силу и Ловкость равными исходной Мудрости, восстановите исходное Телосложение. Размер: Большой, либо Огромный с 10 уровня, либо Громадный с 14 уровня.*"),
         acts: [
           transformActivity("titan:form", forms, { name: "Принять форму титана", consume: [useItem("feat:wild-shape")], img: "icons/creatures/abilities/bull-head-horns-glowing" }),
           heal("titan:temp-hp", { name: "Временные хиты формы", activation: "special", self: true, temp: true, formula: "2 * @classes.druid.levels" })

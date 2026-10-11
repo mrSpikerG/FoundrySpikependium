@@ -5,7 +5,7 @@
   "img": "icons/equipment/finger/ring-cabochon-gold-purple.webp",
   "system": {
     "description": {
-      "value": "<p><em>Кольцо, необычное (требуется настройка заклинателем).</em></p><p>Пока вы носите это кольцо, вы можете восстановить 1 потраченную ячейку заклинаний бонусным действием. Восстановленная ячейка может быть 3 уровня или ниже. После использования кольцо нельзя использовать снова до следующего рассвета.</p>",
+      "value": "<p><em>Кольцо, необычное (требуется настройка заклинателем).</em></p><p>Пока вы носите это кольцо, вы можете восстановить 1 потраченную ячейку заклинаний бонусным действием. Восстановленная ячейка может быть 3 уровня или ниже. После использования кольцо нельзя использовать снова до следующего рассвета.</p><p><em>Цена: ориентир по редкости из правил 2024 года; в UA цена не указана. Вес оценочный: 0,1 фунта по аналогии с обычным кольцом. Отдельный вес кольца в UA и правилах 2024 не указан.</em></p>",
       "chat": ""
     },
     "source": {
@@ -24,11 +24,11 @@
     "container": null,
     "quantity": 1,
     "weight": {
-      "value": 0,
+      "value": 0.1,
       "units": "lb"
     },
     "price": {
-      "value": 0,
+      "value": 400,
       "denomination": "gp"
     },
     "rarity": "uncommon",
@@ -67,17 +67,17 @@
       ]
     },
     "activities": {
-      "YqRdl2nAnj2fyZ7H": {
-        "_id": "YqRdl2nAnj2fyZ7H",
+      "fEeT1dJtFSpPQZTa": {
+        "_id": "fEeT1dJtFSpPQZTa",
         "type": "utility",
-        "name": "Восстановить ячейку",
+        "name": "Восстановить ячейку 1 уровня",
         "img": "icons/equipment/finger/ring-cabochon-gold-purple.webp",
         "sort": 100000,
         "activation": {
           "type": "bonus",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -85,6 +85,12 @@
               "type": "itemUses",
               "value": "1",
               "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "spellSlots",
+              "target": "1",
+              "value": "-1",
               "scaling": {}
             }
           ],
@@ -144,7 +150,283 @@
           },
           "requireAttunement": true,
           "requireIdentification": false,
-          "requireMagic": false
+          "requireMagic": true
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "a2mdldyvGoIm4Qzi": {
+        "_id": "a2mdldyvGoIm4Qzi",
+        "type": "utility",
+        "name": "Восстановить ячейку 2 уровня",
+        "img": "icons/equipment/finger/ring-cabochon-gold-purple.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "spellSlots",
+              "target": "2",
+              "value": "-1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": true,
+          "requireIdentification": false,
+          "requireMagic": true
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "0jmq3u7N2vdGdWG6": {
+        "_id": "0jmq3u7N2vdGdWG6",
+        "type": "utility",
+        "name": "Восстановить ячейку 3 уровня",
+        "img": "icons/equipment/finger/ring-cabochon-gold-purple.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "spellSlots",
+              "target": "3",
+              "value": "-1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": true,
+          "requireIdentification": false,
+          "requireMagic": true
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "nPDYbicSq3YICUPm": {
+        "_id": "nPDYbicSq3YICUPm",
+        "type": "utility",
+        "name": "Восстановить ячейку магии договора (до 3 уровня)",
+        "img": "icons/equipment/finger/ring-cabochon-gold-purple.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "-1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": true,
+          "requireIdentification": false,
+          "requireMagic": true
         },
         "roll": {
           "formula": "",

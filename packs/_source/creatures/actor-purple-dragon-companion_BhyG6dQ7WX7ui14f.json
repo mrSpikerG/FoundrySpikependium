@@ -74,7 +74,7 @@
         "max": 4,
         "temp": 0,
         "tempmax": 0,
-        "formula": ""
+        "formula": "1d6"
       },
       "movement": {
         "speeds": {
@@ -102,7 +102,7 @@
     },
     "details": {
       "biography": {
-        "value": "<p><strong>КД</strong> 13 + ваш модификатор Интеллекта; <strong>Хиты</strong> 4 + пятикратный ваш уровень воина (кости хитов [к6] в количестве, равном вашему уровню воина). <strong>БМ</strong> равен вашему БМ.</p><p>На 7 уровне дракон становится Средним, на 15 — Большим (скорость и скорость полёта 40 футов).</p><p><em>Примечание для Foundry: бонус атаки Разрыванием и Сл. Дыхания гравитации берутся у призывателя (БМ + модификатор Интеллекта воина).</em></p>",
+        "value": "<p><strong>КД</strong> 13 + ваш модификатор Интеллекта; <strong>Хиты</strong> 4 + пятикратный ваш уровень воина (кости хитов [к6] в количестве, равном вашему уровню воина). <strong>БМ</strong> равен вашему БМ.</p><p>На 7 уровне дракон становится Средним, на 15 — Большим (скорость и скорость полёта 40 футов).</p><p><em>Примечание для Foundry: бонус атаки Разрыванием и Сл. Дыхания гравитации берутся у призывателя (Разрывание: 3 + модификатор Интеллекта; Сл. дыхания: 8 + БМ + модификатор Интеллекта).</em></p>",
         "public": ""
       },
       "alignment": "Нейтральный",
@@ -337,7 +337,7 @@
               "type": "action",
               "value": 1,
               "condition": "",
-              "override": false
+              "override": true
             },
             "consumption": {
               "targets": [],
@@ -363,7 +363,7 @@
               "value": "5",
               "units": "ft",
               "special": "",
-              "override": false
+              "override": true
             },
             "target": {
               "template": {
@@ -512,7 +512,7 @@
               "type": "action",
               "value": 1,
               "condition": "",
-              "override": false
+              "override": true
             },
             "consumption": {
               "targets": [
@@ -564,7 +564,7 @@
                 "special": ""
               },
               "prompt": true,
-              "override": false
+              "override": true
             },
             "uses": {
               "spent": 0,
@@ -606,7 +606,7 @@
               "type": "action",
               "value": 1,
               "condition": "",
-              "override": false
+              "override": true
             },
             "consumption": {
               "targets": [
@@ -658,7 +658,7 @@
                 "special": ""
               },
               "prompt": true,
-              "override": false
+              "override": true
             },
             "uses": {
               "spent": 0,

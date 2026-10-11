@@ -5,7 +5,7 @@
   "img": "icons/weapons/swords/sword-gold-holy.webp",
   "system": {
     "description": {
-      "value": "<p><em>Оружие (любое простое или воинское), редкое (требуется настройка заклинателем).</em></p><p>Это магическое оружие даёт бонус +1 к броскам атаки и урона, совершённым с его помощью. Пока вы держите его, вы можете бонусным действием заставить его излучать яркий свет в радиусе 30 футов и тусклый свет на дополнительные 30 футов. Вы можете погасить свет бонусным действием.</p><p>Оружие имеет 4 заряда. Вы можете реакцией сразу после того, как по вам попали атакой, потратить 1 заряд оружия и заставить атакующего совершить спасбросок Телосложения со Сл. 15. При провале атакующий получает состояние &Reference[blinded]{ослеплённый} до конца своего следующего хода. Оружие восстанавливает 1к4 израсходованных зарядов ежедневно на рассвете.</p><p><em>Чтобы создать конкретное оружие, используйте действие «Зачаровать оружие» и выберите обычное оружие в инвентаре.</em></p>",
+      "value": "<p><em>Оружие (любое простое или воинское), редкое (требуется настройка заклинателем).</em></p><p>Это магическое оружие даёт бонус +1 к броскам атаки и урона, совершённым с его помощью. Пока вы держите его, вы можете бонусным действием заставить его излучать яркий свет в радиусе 30 футов и тусклый свет на дополнительные 30 футов. Вы можете погасить свет бонусным действием.</p><p>Оружие имеет 4 заряда. Вы можете реакцией сразу после того, как по вам попали атакой, потратить 1 заряд оружия и заставить атакующего совершить спасбросок Телосложения со Сл. 15. При провале атакующий получает состояние &Reference[blinded]{ослеплённый} до конца своего следующего хода. Оружие восстанавливает 1к4 израсходованных зарядов ежедневно на рассвете.</p><p><em>Чтобы создать конкретное оружие, используйте действие «Зачаровать оружие» и выберите обычное оружие в инвентаре.</em></p><p><em>Цена: ориентир по редкости из правил 2024 года плюс стоимость базового предмета; в UA цена не указана. Это шаблон зачарования: вес и урон берутся от выбранного оружия.</em></p>",
       "chat": ""
     },
     "source": {
@@ -28,7 +28,7 @@
       "units": "lb"
     },
     "price": {
-      "value": 0,
+      "value": 4000,
       "denomination": "gp"
     },
     "rarity": "rare",
@@ -141,7 +141,9 @@
                 "OSQw8gu0Cyils3z4",
                 "Vbh4a30N5ck9sszF"
               ],
-              "effect": [],
+              "effect": [
+                "QTARTjUYGvjNgBks"
+              ],
               "item": []
             }
           }
@@ -181,7 +183,12 @@
         },
         "restrictions": {
           "allowMagical": false,
-          "categories": [],
+          "categories": [
+            "simpleM",
+            "simpleR",
+            "martialM",
+            "martialR"
+          ],
           "properties": [],
           "type": "weapon"
         },
@@ -206,7 +213,7 @@
           "type": "bonus",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -224,7 +231,7 @@
           "value": "",
           "units": "perm",
           "special": "",
-          "override": false,
+          "override": true,
           "concentration": false
         },
         "effects": [],
@@ -232,7 +239,7 @@
           "value": "",
           "units": "self",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -245,13 +252,13 @@
             "units": "ft"
           },
           "affects": {
-            "count": "",
-            "type": "",
+            "count": "1",
+            "type": "self",
             "choice": false,
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,
@@ -264,9 +271,9 @@
             "min": null,
             "max": null
           },
-          "requireAttunement": false,
+          "requireAttunement": true,
           "requireIdentification": false,
-          "requireMagic": false
+          "requireMagic": true
         },
         "roll": {
           "formula": "",
@@ -285,7 +292,7 @@
           "type": "reaction",
           "value": 1,
           "condition": "Сразу после того, как по вам попали атакой",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -313,7 +320,11 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "QTARTjUYGvjNgBks"
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -337,7 +348,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,
@@ -350,9 +361,9 @@
             "min": null,
             "max": null
           },
-          "requireAttunement": false,
+          "requireAttunement": true,
           "requireIdentification": false,
-          "requireMagic": false
+          "requireMagic": true
         },
         "damage": {
           "onSave": "none",
@@ -420,12 +431,36 @@
             "_id": "IoFApDBEUBQW8yY2"
           },
           {
+            "key": "system.price.value",
+            "value": "4000",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "GaQMtmAkmShVWuQ4"
+          },
+          {
+            "key": "system.source.book",
+            "value": "UA-EB",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ofQ8qGdAiLqpwoxW"
+          },
+          {
+            "key": "system.source.page",
+            "value": "9",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "OBxLyVlweCRKG4sB"
+          },
+          {
             "key": "system.description.value",
             "value": "{}<p>@Embed[Compendium.spikependium.items.Item.Ka5ZIzCo401FlpBk caption=false]</p>",
             "type": "override",
             "priority": null,
             "phase": "initial",
-            "_id": "GaQMtmAkmShVWuQ4"
+            "_id": "IqEGc2Sh0AGTrDCe"
           },
           {
             "key": "img",
@@ -433,7 +468,7 @@
             "type": "override",
             "priority": null,
             "phase": "initial",
-            "_id": "ofQ8qGdAiLqpwoxW"
+            "_id": "bpA4O9zAPdT6Lonz"
           },
           {
             "key": "system.uses.max",
@@ -441,7 +476,15 @@
             "type": "override",
             "priority": null,
             "phase": "initial",
-            "_id": "OBxLyVlweCRKG4sB"
+            "_id": "8GAVRED9dzsGTDCJ"
+          },
+          {
+            "key": "system.uses.recovery",
+            "value": "[{\"period\":\"dawn\",\"type\":\"formula\",\"formula\":\"1d4\"}]",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "eU4zkoCIaH1HXlkY"
           }
         ]
       },
@@ -474,6 +517,46 @@
         "lastModifiedBy": null
       },
       "_key": "!items.effects!Ka5ZIzCo401FlpBk.Zt2PVFUn7eBtBqUr"
+    },
+    {
+      "_id": "QTARTjUYGvjNgBks",
+      "name": "Ослеплён",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>До конца следующего хода цели.</p>",
+      "origin": null,
+      "statuses": [
+        "blinded"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!Ka5ZIzCo401FlpBk.QTARTjUYGvjNgBks"
     }
   ],
   "folder": "HyNCtrH5jnhW1Wps",

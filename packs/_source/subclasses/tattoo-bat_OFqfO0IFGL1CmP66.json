@@ -43,7 +43,7 @@
           "type": "special",
           "value": null,
           "condition": "Вы тратите очко духа на Терпеливую оборону или Поступь ветра",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -61,7 +61,7 @@
           "value": "1",
           "units": "minute",
           "special": "",
-          "override": false,
+          "override": true,
           "concentration": false
         },
         "effects": [
@@ -73,7 +73,7 @@
           "value": "",
           "units": "self",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -86,13 +86,13 @@
             "units": "ft"
           },
           "affects": {
-            "count": "",
-            "type": "",
+            "count": "1",
+            "type": "self",
             "choice": false,
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,

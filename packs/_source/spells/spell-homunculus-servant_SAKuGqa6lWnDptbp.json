@@ -49,19 +49,23 @@
     "school": "con",
     "sourceItem": "",
     "target": {
-      "affects": {
-        "type": "",
+      "template": {
         "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "",
+        "type": "",
         "choice": false,
         "special": ""
       },
-      "template": {
-        "type": "",
-        "size": "",
-        "units": "ft",
-        "contiguous": false,
-        "count": ""
-      }
+      "prompt": true,
+      "override": false
     },
     "uses": {
       "max": "",
@@ -79,7 +83,7 @@
           "type": "hour",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -143,7 +147,7 @@
         },
         "bonuses": {
           "ac": "",
-          "hd": "",
+          "hd": "@item.level - 1",
           "hp": "5 * @item.level",
           "attackDamage": "@item.level",
           "saveDamage": "",
@@ -152,16 +156,20 @@
         "creatureSizes": [],
         "creatureTypes": [],
         "match": {
+          "ability": "",
           "attacks": true,
+          "disposition": true,
           "proficiency": true,
           "saves": true
         },
         "profiles": [
           {
             "_id": "zFA0EPTFlLEfYMrE",
-            "count": "",
+            "count": "1",
             "name": "",
             "uuid": "Compendium.spikependium.creatures.Actor.Dm0I9VgaND4bbbef",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -170,8 +178,7 @@
         ],
         "summon": {
           "prompt": true,
-          "mode": "",
-          "identifier": ""
+          "mode": ""
         }
       }
     },

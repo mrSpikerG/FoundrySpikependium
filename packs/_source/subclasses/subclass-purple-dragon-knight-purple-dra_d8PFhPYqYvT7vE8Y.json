@@ -43,7 +43,7 @@
           "type": "special",
           "value": null,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -96,9 +96,9 @@
           "max": ""
         },
         "visibility": {
-          "identifier": "",
+          "identifier": "fighter",
           "level": {
-            "min": null,
+            "min": 3,
             "max": null
           },
           "requireAttunement": false,
@@ -107,7 +107,7 @@
         },
         "bonuses": {
           "ac": "@abilities.int.mod",
-          "hd": "",
+          "hd": "@classes.fighter.levels - 1",
           "hp": "5 * @classes.fighter.levels",
           "attackDamage": "@abilities.int.mod",
           "saveDamage": "",
@@ -116,16 +116,20 @@
         "creatureSizes": [],
         "creatureTypes": [],
         "match": {
+          "ability": "int",
           "attacks": true,
+          "disposition": true,
           "proficiency": true,
           "saves": true
         },
         "profiles": [
           {
             "_id": "Ura9fzLeCAJ6Bsoj",
-            "count": "",
+            "count": "1",
             "name": "",
             "uuid": "Compendium.spikependium.creatures.Actor.BhyG6dQ7WX7ui14f",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -134,8 +138,7 @@
         ],
         "summon": {
           "prompt": true,
-          "mode": "",
-          "identifier": ""
+          "mode": ""
         }
       },
       "9DpwAPudJLagoVnB": {
@@ -148,7 +151,7 @@
           "type": "action",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -181,7 +184,7 @@
           "value": "",
           "units": "touch",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -208,9 +211,9 @@
           "max": ""
         },
         "visibility": {
-          "identifier": "",
+          "identifier": "fighter",
           "level": {
-            "min": null,
+            "min": 3,
             "max": null
           },
           "requireAttunement": false,
@@ -219,7 +222,7 @@
         },
         "bonuses": {
           "ac": "@abilities.int.mod",
-          "hd": "",
+          "hd": "@classes.fighter.levels - 1",
           "hp": "5 * @classes.fighter.levels",
           "attackDamage": "@abilities.int.mod",
           "saveDamage": "",
@@ -228,16 +231,20 @@
         "creatureSizes": [],
         "creatureTypes": [],
         "match": {
+          "ability": "int",
           "attacks": true,
+          "disposition": true,
           "proficiency": true,
           "saves": true
         },
         "profiles": [
           {
             "_id": "C0dEiuaDOMSMJviT",
-            "count": "",
+            "count": "1",
             "name": "",
             "uuid": "Compendium.spikependium.creatures.Actor.BhyG6dQ7WX7ui14f",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -246,8 +253,7 @@
         ],
         "summon": {
           "prompt": true,
-          "mode": "",
-          "identifier": ""
+          "mode": ""
         }
       },
       "jQaQy8lS05OQjrtJ": {
@@ -260,7 +266,7 @@
           "type": "hour",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -313,9 +319,9 @@
           "max": ""
         },
         "visibility": {
-          "identifier": "",
+          "identifier": "fighter",
           "level": {
-            "min": null,
+            "min": 3,
             "max": null
           },
           "requireAttunement": false,
@@ -324,7 +330,7 @@
         },
         "bonuses": {
           "ac": "@abilities.int.mod",
-          "hd": "",
+          "hd": "@classes.fighter.levels - 1",
           "hp": "5 * @classes.fighter.levels",
           "attackDamage": "@abilities.int.mod",
           "saveDamage": "",
@@ -333,16 +339,20 @@
         "creatureSizes": [],
         "creatureTypes": [],
         "match": {
+          "ability": "int",
           "attacks": true,
+          "disposition": true,
           "proficiency": true,
           "saves": true
         },
         "profiles": [
           {
             "_id": "PgUsycUfYdSfA3st",
-            "count": "",
+            "count": "1",
             "name": "",
             "uuid": "Compendium.spikependium.creatures.Actor.BhyG6dQ7WX7ui14f",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -351,8 +361,7 @@
         ],
         "summon": {
           "prompt": true,
-          "mode": "",
-          "identifier": ""
+          "mode": ""
         }
       }
     },

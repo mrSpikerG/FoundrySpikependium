@@ -5,7 +5,7 @@
   "img": "icons/weapons/axes/axe-battle-black.webp",
   "system": {
     "description": {
-      "value": "<p><em>Оружие (любое простое или воинское со свойством метательное), необычное.</em></p><p>Это магическое оружие даёт бонус +1 к броскам атаки и урона, совершённым с его помощью, и возвращается в вашу руку сразу после использования для выполнения дальнобойной атаки.</p><p><em>Чтобы создать конкретное оружие, используйте действие «Зачаровать оружие» и выберите обычное метательное оружие.</em></p>",
+      "value": "<p><em>Оружие (любое простое или воинское со свойством метательное), необычное.</em></p><p>Это магическое оружие даёт бонус +1 к броскам атаки и урона, совершённым с его помощью, и возвращается в вашу руку сразу после использования для выполнения дальнобойной атаки.</p><p><em>Чтобы создать конкретное оружие, используйте действие «Зачаровать оружие» и выберите обычное метательное оружие.</em></p><p><em>Цена: ориентир по редкости из правил 2024 года плюс стоимость базового предмета; в UA цена не указана. Это шаблон зачарования: вес и урон берутся от выбранного оружия.</em></p>",
       "chat": ""
     },
     "source": {
@@ -28,7 +28,7 @@
       "units": "lb"
     },
     "price": {
-      "value": 0,
+      "value": 400,
       "denomination": "gp"
     },
     "rarity": "uncommon",
@@ -172,7 +172,12 @@
         },
         "restrictions": {
           "allowMagical": false,
-          "categories": [],
+          "categories": [
+            "simpleM",
+            "simpleR",
+            "martialM",
+            "martialR"
+          ],
           "properties": [
             "thr"
           ],
@@ -232,12 +237,36 @@
             "_id": "sEDZHXrZvgeyua1r"
           },
           {
+            "key": "system.price.value",
+            "value": "400",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "qfTO7owZyvNT1bov"
+          },
+          {
+            "key": "system.source.book",
+            "value": "UA-EB",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "JpNBPPqQhRJdDs4c"
+          },
+          {
+            "key": "system.source.page",
+            "value": "9",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "6Fx3l4NUisxo68u4"
+          },
+          {
             "key": "system.description.value",
             "value": "{}<p>@Embed[Compendium.spikependium.items.Item.oWVUrF7gwFSxQFFf caption=false]</p>",
             "type": "override",
             "priority": null,
             "phase": "initial",
-            "_id": "qfTO7owZyvNT1bov"
+            "_id": "bwdj7Z3ctJASQB5z"
           },
           {
             "key": "img",
@@ -245,7 +274,7 @@
             "type": "override",
             "priority": null,
             "phase": "initial",
-            "_id": "JpNBPPqQhRJdDs4c"
+            "_id": "hBKc1xYfXqk4qL3Y"
           }
         ]
       },

@@ -108,7 +108,7 @@ export function define() {
 
   // --- Реаниматор -----------------------------------------------------------
   const summonOpts = {
-    activation: "action", ac: "@abilities.int.mod", hp: "4 * @classes.artificer.levels", attackDamage: "@abilities.int.mod",
+    activation: "action", ability: "int", identifier: "artificer", minLevel: 3, hd: "@classes.artificer.levels - 1", ac: "@abilities.int.mod", hp: "4 * @classes.artificer.levels", attackDamage: "@abilities.int.mod",
     duration: "spec", durationSpecial: "До окончания продолжительного отдыха", range: 5
   };
   makeSubclass({
@@ -155,7 +155,7 @@ export function define() {
         ]
       },
       {
-        id: "eldritch-modifications", level: 5, name: "Странные модификации", img: "icons/skills/wounds/injury-stapled-flesh-tan",
+        id: "eldritch-modifications", page: 2, level: 5, name: "Странные модификации", img: "icons/skills/wounds/injury-stapled-flesh-tan",
         desc: `
 Каждый раз, когда вы создаёте Реанимированного спутника, он получает одну из следующих опций на ваш выбор; выбор делается при создании спутника.
 
@@ -164,7 +164,7 @@ export function define() {
 **Ярость.** Когда вы приказываете вашему спутнику выполнить действие Ужасающий удар, он может использовать его дважды.`
       },
       {
-        id: "improved-reanimation", level: 9, name: "Улучшенная реанимация", img: "icons/skills/wounds/anatomy-organ-heart-red",
+        id: "improved-reanimation", page: 2, level: 9, name: "Улучшенная реанимация", img: "icons/skills/wounds/anatomy-organ-heart-red",
         desc: `
 Вы продолжаете эксперименты и вносите дополнительные изменения в своего спутника. Каждый раз, когда вы создаёте Реанимированного спутника, он получает одну из следующих особенностей на ваш выбор; выберите, когда создаёте спутника.
 
@@ -175,7 +175,7 @@ export function define() {
 **Влажный.** Спутник получает скорость плавания, равную его скорости. Кроме того, каждый раз, когда существо в пределах 10 футов от спутника попадает по нему атакой, это существо получает урон кислотой, равный вашему модификатору Интеллекта.`
       },
       {
-        id: "promethean-revival", level: 15, name: "Прометеево воскрешение", img: "icons/magic/life/ankh-gold-blue",
+        id: "promethean-revival", page: 2, level: 15, name: "Прометеево воскрешение", img: "icons/magic/life/ankh-gold-blue",
         desc: `
 Вы овладели наукой оживления, получая следующие преимущества.
 

@@ -74,7 +74,7 @@
         "max": 5,
         "temp": 0,
         "tempmax": 0,
-        "formula": ""
+        "formula": "1d4"
       },
       "movement": {
         "speeds": {
@@ -336,7 +336,7 @@
               "type": "action",
               "value": 1,
               "condition": "",
-              "override": false
+              "override": true
             },
             "consumption": {
               "targets": [],
@@ -362,7 +362,7 @@
               "value": "5",
               "units": "ft",
               "special": "",
-              "override": false
+              "override": true
             },
             "target": {
               "template": {
@@ -446,7 +446,7 @@
               "type": "action",
               "value": 1,
               "condition": "",
-              "override": false
+              "override": true
             },
             "consumption": {
               "targets": [],
@@ -472,7 +472,7 @@
               "value": "30",
               "units": "ft",
               "special": "",
-              "override": false
+              "override": true
             },
             "target": {
               "template": {
@@ -616,7 +616,7 @@
               "type": "reaction",
               "value": 1,
               "condition": "Создатель накладывает заклинание с дистанцией «касание» в пределах 120 футов",
-              "override": false
+              "override": true
             },
             "consumption": {
               "targets": [],

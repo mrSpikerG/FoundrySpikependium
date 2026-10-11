@@ -46,19 +46,23 @@
     "school": "enc",
     "sourceItem": "",
     "target": {
-      "affects": {
-        "type": "",
+      "template": {
         "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1 + @scaling",
+        "type": "creature",
         "choice": false,
         "special": ""
       },
-      "template": {
-        "type": "",
-        "size": "",
-        "units": "ft",
-        "contiguous": false,
-        "count": ""
-      }
+      "prompt": true,
+      "override": true
     },
     "uses": {
       "max": "",
@@ -76,7 +80,7 @@
           "type": "action",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -106,7 +110,7 @@
           "value": "90",
           "units": "ft",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -119,13 +123,13 @@
             "units": "ft"
           },
           "affects": {
-            "count": "1",
+            "count": "1 + @scaling",
             "type": "creature",
             "choice": false,
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,

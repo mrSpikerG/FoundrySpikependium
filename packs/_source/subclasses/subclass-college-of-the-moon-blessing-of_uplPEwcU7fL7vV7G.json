@@ -43,7 +43,7 @@
           "type": "bonus",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -124,11 +124,7 @@
             "override": false
           },
           "level": null,
-          "properties": [
-            "vocal",
-            "somatic",
-            "material"
-          ],
+          "properties": [],
           "spellbook": true,
           "uuid": "Compendium.dnd5e.spells24.Item.phbsplMoonbeam00"
         }
@@ -143,7 +139,7 @@
           "type": "bonus",
           "value": 1,
           "condition": "Потратьте ячейку 3 уровня или выше",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -212,11 +208,7 @@
             "override": false
           },
           "level": null,
-          "properties": [
-            "vocal",
-            "somatic",
-            "material"
-          ],
+          "properties": [],
           "spellbook": true,
           "uuid": "Compendium.dnd5e.spells24.Item.phbsplMoonbeam00"
         }
@@ -231,7 +223,7 @@
           "type": "special",
           "value": null,
           "condition": "Существо провалило спасбросок от Лунного луча",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -257,7 +249,7 @@
           "value": "60",
           "units": "ft",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -276,7 +268,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,

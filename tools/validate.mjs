@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { BOOKS } from "./lib/core.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "packs/_source");
@@ -14,6 +15,13 @@ const errors = [];
 const warnings = [];
 const err = (where, msg) => errors.push(`${where}: ${msg}`);
 const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
+const bookPages = { "UA-EB": 16, "UA-FR": 10, "UA-HS": 9, "UA-PS": 13, "UA-PU": 15, "UA-AS": 10, "UA-AU": 9, "UA-MS": 6, "UA-VO": 11, "UA-VO2": 5 };
+function checkSource(where, source) {
+  if (!source || !BOOKS[source.book]) return err(where, "нет известного источника UA");
+  const page = Number(source.page);
+  if (!Number.isInteger(page) || page < 1 || page > bookPages[source.book]) err(where, `страница вне документа: ${source.page}`);
+  if (source.rules !== "2024") err(where, "неверная редакция правил");
+}
 
 // SRD-идентификаторы, на которые разрешено ссылаться.
 const srdIds = new Set([
@@ -59,10 +67,20 @@ function checkItem(where, item) {
     if ( !ID.test(a._id) ) err(where, `действие с некорректным _id ${a._id}`);
     for ( const e of a.effects ?? [] ) if ( !effectIds.has(e._id) ) err(where, `действие «${a.name}» ссылается на отсутствующий эффект ${e._id}`);
     for ( const r of a.effects?.flatMap(e => e.riders?.activity ?? []) ?? [] ) if ( !acts[r] ) err(where, `наездник ${r} отсутствует среди действий`);
+    for ( const r of a.effects?.flatMap(e => e.riders?.effect ?? []) ?? [] ) if ( !effectIds.has(r) ) err(where, `отсутствует эффект зачарования ${r}`);
     if ( a.type === "summon" ) for ( const p of a.profiles ) if ( !docs.has(p.uuid) ) err(where, `профиль призыва ссылается на неизвестный ${p.uuid}`);
     if ( a.type === "cast" && !srdIds.has(a.spell.uuid) && !docs.has(a.spell.uuid) ) err(where, `cast ссылается на неизвестное заклинание ${a.spell.uuid}`);
     if ( a.type === "transform" ) for ( const p of a.profiles ) if ( p.uuid && !docs.has(p.uuid) ) err(where, `превращение ссылается на неизвестного ${p.uuid}`);
     for ( const t of a.consumption?.targets ?? [] ) if ( !["itemUses", "activityUses", "spellSlots", "hitDice", "attribute", "material"].includes(t.type) ) err(where, `неизвестный тип расхода ${t.type}`);
+    for (const t of a.consumption?.targets ?? []) if (t.type === "spellSlots" && !/^[1-9]$/.test(t.target)) err(where, `неверная ячейка: ${t.target}`);
+    if (a.type === "summon") {
+      if (a.summon.mode !== "" || !a.profiles.length) err(where, "неверный режим фиксированного призыва");
+      for (const p of a.profiles) {
+        if (docs.get(p.uuid)?.type !== "npc") err(where, "призываемый документ не NPC");
+        if (p.count !== "1") err(where, "UA-призыв должен создавать одно существо");
+        if (p.level.min != null && p.level.max != null && p.level.min > p.level.max) err(where, "перевёрнутые уровни профиля");
+      }
+    }
   }
   const advIds = new Set();
   for ( const adv of item.system?.advancement ?? [] ) {
@@ -100,9 +118,15 @@ for ( const [pack, list] of Object.entries(byPack) ) {
     if ( /"undefined"|NaN|\[object Object\]|@@REF/.test(raw) ) err(where, "в данных найдено undefined/NaN/[object Object]/@@REF");
     if ( data.folder && !folderIds.has(data.folder) ) err(where, `папка ${data.folder} не найдена`);
     if ( data._key.startsWith("!folders!") ) continue;
+    if (data.system?.source) checkSource(where, data.system.source);
+    if (pack === "items") {
+      if (!Number.isFinite(data.system.price.value) || data.system.price.value <= 0 || data.system.price.denomination !== "gp") err(where, "нет корректной цены в зм");
+      if (!Number.isFinite(data.system.weight.value) || data.system.weight.value < 0 || data.system.weight.units !== "lb") err(where, "неверный вес");
+      if (data.type !== "weapon" && data.system.weight.value === 0) err(where, "не заполнен вес физического предмета");
+    }
     if ( TYPE[pack] === "Item" ) { checkItem(where, data); checkHtml(where, data.system?.description?.value); }
     if ( TYPE[pack] === "Actor" ) {
-      for ( const it of data.items ?? [] ) { checkItem(`${where} → ${it.name}`, it); checkHtml(`${where} → ${it.name}`, it.system.description.value); }
+      for ( const it of data.items ?? [] ) { checkSource(`${where} → ${it.name}`, it.system.source); checkItem(`${where} → ${it.name}`, it); checkHtml(`${where} → ${it.name}`, it.system.description.value); }
       checkHtml(where, data.system.details.biography.value);
     }
     if ( TYPE[pack] === "JournalEntry" ) {

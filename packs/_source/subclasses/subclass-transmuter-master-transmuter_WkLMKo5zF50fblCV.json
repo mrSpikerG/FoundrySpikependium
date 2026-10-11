@@ -43,7 +43,7 @@
           "type": "minute",
           "value": 10,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -122,7 +122,7 @@
           "type": "action",
           "value": 1,
           "condition": "Цель восстанавливает половину максимума хитов",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -148,7 +148,7 @@
           "value": "",
           "units": "touch",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -167,7 +167,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,
@@ -201,7 +201,7 @@
           "type": "action",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -271,8 +271,7 @@
           },
           "level": null,
           "properties": [
-            "vocal",
-            "somatic"
+            "material"
           ],
           "spellbook": true,
           "uuid": "Compendium.dnd5e.spells24.Item.phbsplRaiseDead0"
@@ -288,7 +287,7 @@
           "type": "action",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -314,7 +313,7 @@
           "value": "",
           "units": "touch",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -333,7 +332,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,
@@ -367,7 +366,7 @@
           "type": "special",
           "value": null,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [

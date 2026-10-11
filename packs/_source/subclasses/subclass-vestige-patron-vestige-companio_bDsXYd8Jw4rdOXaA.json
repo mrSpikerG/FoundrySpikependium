@@ -43,7 +43,7 @@
           "type": "minute",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -96,9 +96,9 @@
           "max": ""
         },
         "visibility": {
-          "identifier": "",
+          "identifier": "warlock",
           "level": {
-            "min": null,
+            "min": 3,
             "max": null
           },
           "requireAttunement": false,
@@ -107,7 +107,7 @@
         },
         "bonuses": {
           "ac": "@abilities.cha.mod",
-          "hd": "",
+          "hd": "@classes.warlock.levels - 1",
           "hp": "4 * @classes.warlock.levels",
           "attackDamage": "@abilities.cha.mod",
           "saveDamage": "",
@@ -116,16 +116,20 @@
         "creatureSizes": [],
         "creatureTypes": [],
         "match": {
+          "ability": "cha",
           "attacks": true,
+          "disposition": true,
           "proficiency": true,
           "saves": true
         },
         "profiles": [
           {
             "_id": "gw8N6HH8PBwgUebF",
-            "count": "",
+            "count": "1",
             "name": "Небожитель",
             "uuid": "Compendium.spikependium.creatures.Actor.ygdgcDsAyn9Cyfee",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -133,9 +137,11 @@
           },
           {
             "_id": "Ku8A5CmPIzkjHbmz",
-            "count": "",
+            "count": "1",
             "name": "Исчадие",
             "uuid": "Compendium.spikependium.creatures.Actor.IpgOEVZ6ks2N1zdt",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -143,9 +149,11 @@
           },
           {
             "_id": "RbZc2F0RLRx56Skc",
-            "count": "",
+            "count": "1",
             "name": "Нежить",
             "uuid": "Compendium.spikependium.creatures.Actor.AJDrnK3LLsKHkyBG",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -154,8 +162,7 @@
         ],
         "summon": {
           "prompt": true,
-          "mode": "",
-          "identifier": ""
+          "mode": ""
         }
       },
       "kUEdPFMFUoHcrJ9w": {
@@ -168,7 +175,7 @@
           "type": "special",
           "value": null,
           "condition": "По окончании продолжительного отдыха",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -221,9 +228,9 @@
           "max": ""
         },
         "visibility": {
-          "identifier": "",
+          "identifier": "warlock",
           "level": {
-            "min": null,
+            "min": 3,
             "max": null
           },
           "requireAttunement": false,
@@ -232,25 +239,29 @@
         },
         "bonuses": {
           "ac": "@abilities.cha.mod",
-          "hd": "",
+          "hd": "@classes.warlock.levels - 1",
           "hp": "4 * @classes.warlock.levels",
           "attackDamage": "@abilities.cha.mod",
           "saveDamage": "",
-          "healing": ""
+          "healing": "@abilities.cha.mod"
         },
         "creatureSizes": [],
         "creatureTypes": [],
         "match": {
+          "ability": "cha",
           "attacks": true,
+          "disposition": true,
           "proficiency": true,
           "saves": true
         },
         "profiles": [
           {
             "_id": "Sb4oz63HCCnlwBg3",
-            "count": "",
+            "count": "1",
             "name": "Небожитель",
             "uuid": "Compendium.spikependium.creatures.Actor.ygdgcDsAyn9Cyfee",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -258,9 +269,11 @@
           },
           {
             "_id": "izGWV4HX5BVCF7MV",
-            "count": "",
+            "count": "1",
             "name": "Исчадие",
             "uuid": "Compendium.spikependium.creatures.Actor.IpgOEVZ6ks2N1zdt",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -268,9 +281,11 @@
           },
           {
             "_id": "hX4QgXE6CJTaE5Ap",
-            "count": "",
+            "count": "1",
             "name": "Нежить",
             "uuid": "Compendium.spikependium.creatures.Actor.AJDrnK3LLsKHkyBG",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -279,8 +294,7 @@
         ],
         "summon": {
           "prompt": true,
-          "mode": "",
-          "identifier": ""
+          "mode": ""
         }
       }
     },

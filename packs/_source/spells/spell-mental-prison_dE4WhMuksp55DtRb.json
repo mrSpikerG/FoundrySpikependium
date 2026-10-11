@@ -47,19 +47,23 @@
     "school": "ill",
     "sourceItem": "",
     "target": {
-      "affects": {
-        "type": "",
+      "template": {
         "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
         "choice": false,
         "special": ""
       },
-      "template": {
-        "type": "",
-        "size": "",
-        "units": "ft",
-        "contiguous": false,
-        "count": ""
-      }
+      "prompt": true,
+      "override": true
     },
     "uses": {
       "max": "",
@@ -77,7 +81,7 @@
           "type": "action",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -95,7 +99,7 @@
           "value": "1",
           "units": "minute",
           "special": "",
-          "override": false,
+          "override": true,
           "concentration": true
         },
         "effects": [
@@ -107,7 +111,7 @@
           "value": "60",
           "units": "ft",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -126,7 +130,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,
@@ -186,7 +190,7 @@
           "type": "special",
           "value": null,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -231,7 +235,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,

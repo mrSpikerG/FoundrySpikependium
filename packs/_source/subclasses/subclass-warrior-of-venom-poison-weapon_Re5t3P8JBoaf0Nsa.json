@@ -43,7 +43,7 @@
           "type": "turnStart",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -68,7 +68,7 @@
           "value": "1",
           "units": "minute",
           "special": "",
-          "override": false,
+          "override": true,
           "concentration": false
         },
         "effects": [],
@@ -129,7 +129,7 @@
           "type": "special",
           "value": null,
           "condition": "Существо получило урон отравленным оружием",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -147,7 +147,7 @@
           "value": "1",
           "units": "round",
           "special": "",
-          "override": false,
+          "override": true,
           "concentration": false
         },
         "effects": [
@@ -178,7 +178,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,
@@ -212,7 +212,7 @@
           "type": "special",
           "value": null,
           "condition": "Существо получило урон отравленным оружием",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -257,7 +257,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,

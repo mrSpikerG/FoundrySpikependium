@@ -48,7 +48,7 @@
           "type": "reaction",
           "value": 1,
           "condition": "Существо в 30 футах накладывает заклинание 1+ уровня",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -81,7 +81,7 @@
           "value": "30",
           "units": "ft",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -134,7 +134,7 @@
           "type": "special",
           "value": null,
           "condition": "Укажите уровень впитанного заклинания через масштаб",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -179,7 +179,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,

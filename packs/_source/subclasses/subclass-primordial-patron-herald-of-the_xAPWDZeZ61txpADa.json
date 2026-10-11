@@ -43,7 +43,7 @@
           "type": "special",
           "value": null,
           "condition": "Вы потратили ячейку договора в узле",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -88,7 +88,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,
@@ -130,7 +130,7 @@
           "type": "minute",
           "value": 10,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -206,11 +206,7 @@
             "override": false
           },
           "level": null,
-          "properties": [
-            "vocal",
-            "somatic",
-            "material"
-          ],
+          "properties": [],
           "spellbook": true,
           "uuid": "Compendium.dnd5e.spells24.Item.phbsplPlanarAlly"
         }

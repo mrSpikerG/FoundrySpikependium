@@ -9,8 +9,8 @@
       "chat": ""
     },
     "source": {
-      "book": "UA-PS",
-      "page": "10",
+      "book": "UA-PU",
+      "page": "15",
       "custom": "",
       "rules": "2024",
       "revision": 1,
@@ -49,19 +49,23 @@
     "school": "con",
     "sourceItem": "",
     "target": {
-      "affects": {
-        "type": "",
+      "template": {
         "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "",
+        "type": "",
         "choice": false,
         "special": ""
       },
-      "template": {
-        "type": "",
-        "size": "",
-        "units": "ft",
-        "contiguous": false,
-        "count": ""
-      }
+      "prompt": true,
+      "override": false
     },
     "uses": {
       "max": "",
@@ -79,7 +83,7 @@
           "type": "action",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [],
@@ -97,7 +101,7 @@
           "value": "1",
           "units": "hour",
           "special": "",
-          "override": false,
+          "override": true,
           "concentration": true
         },
         "effects": [],
@@ -105,7 +109,7 @@
           "value": "90",
           "units": "ft",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -152,16 +156,20 @@
         "creatureSizes": [],
         "creatureTypes": [],
         "match": {
+          "ability": "",
           "attacks": true,
+          "disposition": true,
           "proficiency": true,
           "saves": true
         },
         "profiles": [
           {
             "_id": "WRG087eubtUTOCS7",
-            "count": "",
+            "count": "1",
             "name": "Кристаллическая сущность",
             "uuid": "Compendium.spikependium.creatures.Actor.vAuSOoU0tegDH9Bj",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -169,9 +177,11 @@
           },
           {
             "_id": "Pg5e39auhPJyCY41",
-            "count": "",
+            "count": "1",
             "name": "Эктоплазменная сущность",
             "uuid": "Compendium.spikependium.creatures.Actor.KG0DPTZKm0qcO3da",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -179,9 +189,11 @@
           },
           {
             "_id": "NhzzbLYeaJV7CODh",
-            "count": "",
+            "count": "1",
             "name": "Призрачная сущность",
             "uuid": "Compendium.spikependium.creatures.Actor.T6A4Avc3HJO8b0Hu",
+            "cr": "",
+            "types": [],
             "level": {
               "min": null,
               "max": null
@@ -190,8 +202,7 @@
         ],
         "summon": {
           "prompt": true,
-          "mode": "",
-          "identifier": ""
+          "mode": ""
         }
       }
     },

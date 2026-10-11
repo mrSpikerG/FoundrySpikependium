@@ -48,7 +48,7 @@
           "type": "bonus",
           "value": 1,
           "condition": "После лечения или снятия состояния заклинанием с ячейкой",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -124,11 +124,7 @@
             "override": false
           },
           "level": null,
-          "properties": [
-            "vocal",
-            "somatic",
-            "material"
-          ],
+          "properties": [],
           "spellbook": true,
           "uuid": "Compendium.dnd5e.spells24.Item.phbsplDispelMagi"
         }

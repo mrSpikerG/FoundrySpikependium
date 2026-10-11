@@ -48,7 +48,7 @@
           "type": "reaction",
           "value": 1,
           "condition": "По вам или окровавленному союзнику в 30 фт. попали атакой",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -81,7 +81,7 @@
           "value": "30",
           "units": "ft",
           "special": "",
-          "override": false
+          "override": true
         },
         "target": {
           "template": {
@@ -100,7 +100,7 @@
             "special": ""
           },
           "prompt": true,
-          "override": false
+          "override": true
         },
         "uses": {
           "spent": 0,

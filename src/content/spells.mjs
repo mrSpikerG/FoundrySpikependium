@@ -24,7 +24,7 @@ export function define() {
 
 **Накладывание более высокой ячейкой.** Используйте уровень ячейки заклинания как уровень заклинания в статблоке.`,
     acts: [summon("spell:homunculus-servant:summon", [{ uuid: ref("actor:homunculus-servant") }], {
-      activation: "hour", hp: "5 * @item.level", attackDamage: "@item.level", name: "Призыв гомункула"
+      activation: "hour", hd: "@item.level - 1", hp: "5 * @item.level", attackDamage: "@item.level", name: "Призыв гомункула"
     })]
   });
 
@@ -41,7 +41,7 @@ export function define() {
   });
   spell({
     key: "spell:intellect-fortress", name: "Крепость интеллекта", en: "Intellect Fortress",
-    book: "UA-PS", page: 9, folder: lvlFolder(3), img: "icons/magic/defensive/barrier-shield-dome-blue-purple",
+    book: "UA-PU", page: 13, folder: lvlFolder(3), img: "icons/magic/defensive/barrier-shield-dome-blue-purple",
     level: 3, school: "abj", range: 30, components: "В", concentration: true, duration: "hour", durationValue: 1,
     effects: [fortress],
     desc: `
@@ -51,7 +51,7 @@ export function define() {
 
 **Накладывание более высокой ячейкой.** Вы можете выбрать в качестве цели одно дополнительное существо за каждый уровень ячейки выше 3.`,
     acts: [utility("spell:intellect-fortress:use", {
-      activation: "action", range: 30, count: 1, affects: "ally", duration: "hour", durationValue: 1,
+      activation: "action", range: 30, count: "1 + @scaling", affects: "ally", duration: "hour", durationValue: 1,
       concentration: true, effects: [fortress._id], name: "Наложить"
     })]
   });
@@ -64,7 +64,7 @@ export function define() {
   });
   spell({
     key: "spell:psychic-scream", name: "Психический крик", en: "Psychic Scream",
-    book: "UA-PS", page: 9, folder: lvlFolder(9), img: "icons/magic/sonic/scream-wail-shout-teal",
+    book: "UA-PU", page: 14, folder: lvlFolder(9), img: "icons/magic/sonic/scream-wail-shout-teal",
     level: 9, school: "enc", range: 90, components: "С",
     effects: [stunned],
     desc: `
@@ -90,7 +90,7 @@ export function define() {
   });
   spell({
     key: "spell:raulothims-psychic-lance", name: "Психическое копьё Раулотима", en: "Raulothim's Psychic Lance",
-    book: "UA-PS", page: 10, folder: lvlFolder(4), img: "icons/magic/perception/third-eye-blue-red",
+    book: "UA-PU", page: 14, folder: lvlFolder(4), img: "icons/magic/perception/third-eye-blue-red",
     level: 4, school: "enc", range: 120, components: "В",
     effects: [lanced],
     desc: `
@@ -110,7 +110,7 @@ export function define() {
   // --- Призыв сущности астрала ----------------------------------------------
   spell({
     key: "spell:summon-astral-entity", name: "Призыв сущности астрала", en: "Summon Astral Entity",
-    book: "UA-PS", page: 10, folder: lvlFolder(3), img: "icons/magic/unholy/orb-swirling-teal",
+    book: "UA-PU", page: 15, folder: lvlFolder(3), img: "icons/magic/unholy/orb-swirling-teal",
     level: 3, school: "con", range: 90, components: "ВСМ",
     materials: "драгоценный камень или кристалл стоимостью не менее 300 зм", cost: 300,
     concentration: true, duration: "hour", durationValue: 1,
@@ -149,7 +149,7 @@ export function define() {
 
 **Накладывание более высокой ячейкой.** За каждый уровень ячейки выше 2 вы можете выбрать дополнительное существо в качестве цели.`,
     acts: [save("spell:tashas-mind-whip:save", {
-      activation: "action", range: 90, count: 1, affects: "creature", ability: "int",
+      activation: "action", range: 90, count: "1 + @scaling", affects: "creature", ability: "int",
       damage: [dmg("3d6", "psychic")], onSave: "half", effects: [whipped._id]
     })]
   });
@@ -160,7 +160,7 @@ export function define() {
   });
   spell({
     key: "spell:telekinetic-crush", name: "Телекинетическое давление", en: "Telekinetic Crush",
-    book: "UA-PS", page: 11, folder: lvlFolder(3), img: "icons/magic/earth/strike-body-stone-crumble",
+    book: "UA-PU", page: 14, folder: lvlFolder(3), img: "icons/magic/earth/strike-body-stone-crumble",
     level: 3, school: "trs", range: 120, components: "В",
     target: { affects: { type: "creature", count: "", choice: false, special: "" }, template: { type: "cube", size: "30", units: "ft", contiguous: false, count: "" } },
     effects: [prone],

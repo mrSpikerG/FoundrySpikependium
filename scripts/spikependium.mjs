@@ -1,7 +1,15 @@
 // Spikependium — интеграция с системой dnd5e и модулем Babele.
 import { SPELL_LISTS, SOURCE_BOOKS } from "./generated.mjs";
+import { prepareSummon, canRefuel } from "./summons.mjs";
 
 const MODULE_ID = "spikependium";
+
+Hooks.on("dnd5e.preSummonToken", prepareSummon);
+Hooks.on("dnd5e.preUseActivity", activity => {
+  if (canRefuel(activity)) return;
+  ui.notifications.warn("Кольцо восстанавливает только потраченную ячейку 1–3 уровня.");
+  return false;
+});
 
 Hooks.once("init", () => {
   const cfg = CONFIG.DND5E;

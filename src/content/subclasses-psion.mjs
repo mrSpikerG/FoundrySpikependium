@@ -84,7 +84,7 @@ export function define() {
         ]
       },
       {
-        id: "greater-mutable-form", level: 10, name: "Лучшая изменчивая форма", img: "icons/magic/control/silhouette-hold-change-green",
+        id: "greater-mutable-form", page: 9, level: 10, name: "Лучшая изменчивая форма", img: "icons/magic/control/silhouette-hold-change-green",
         desc: `
 Когда вы применяете Изменчивую форму, её длительность увеличивается до 10 минут, и вы получаете 1 из следующих эффектов на ваш выбор. Эффект действует до окончания Изменчивой формы.
 

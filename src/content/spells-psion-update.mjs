@@ -45,7 +45,7 @@ export function define() {
 До окончания действия заклинания вы можете действием магия переместить сферу горизонтально на расстояние до 20 футов и заставить её снова изливать магическую тьму до начала вашего следующего хода.
 
 **Накладывание более высокой ячейкой.** Урон увеличивается на 1к8 за каждый уровень ячейки выше 3.`,
-    acts: [save("spell:bleeding-darkness:save", { activation: "action", range: 60, template: { type: "cylinder", size: 10 }, affects: "creature", ability: "con", damage: [dmg("3d8", "cold", { scale: 1 })], onSave: "none", effects: [blinded._id], concentration: true, duration: "minute", durationValue: 1 })]
+    acts: [save("spell:bleeding-darkness:save", { activation: "action", range: 60, template: { type: "cylinder", size: 10, height: 40 }, affects: "creature", ability: "con", damage: [dmg("3d8", "cold", { scale: 1 })], onSave: "none", effects: [blinded._id], concentration: true, duration: "minute", durationValue: 1 })]
   });
 
   // --- След эктоплазмы ------------------------------------------------------
@@ -207,7 +207,7 @@ export function define() {
 **Псионная перезарядка.** Совершая действие магия, вы можете коснуться существа (включая себя) и бросить 1к6. Существо восстанавливает 1 потраченную ячейку заклинания, уровень которой равен половине результата броска (округляя вверх) или меньше. После того как существо восстановило ячейку заклинания этим заклинанием, оно не может сделать это снова, пока не завершит продолжительный отдых.`,
     acts: [
       utility("spell:thought-form:cast", { name: "Принять форму", activation: "bonus", self: true, concentration: true, duration: "minute", durationValue: 1, effects: [thought._id] }),
-      utility("spell:thought-form:recharge", { name: "Псионная перезарядка", activation: "action", touch: true, spellSlot: false, count: 1, affects: "creature", roll: "ceil(1d6 / 2)", rollName: "Максимальный уровень ячейки" })
+      utility("spell:thought-form:recharge", { name: "Псионная перезарядка", activation: "action", touch: true, spellSlot: false, duration: "inst", concentration: false, count: 1, affects: "creature", roll: "ceil(1d6 / 2)", rollName: "Максимальный уровень ячейки" })
     ]
   });
 }

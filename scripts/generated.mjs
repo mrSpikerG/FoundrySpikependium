@@ -2,6 +2,7 @@
 export const SPELL_LISTS = [
   "Compendium.spikependium.rules.JournalEntry.gM5vOl1gdgaTr1OA.JournalEntryPage.Iu0b85GAATahdcaU",
   "Compendium.spikependium.rules.JournalEntry.igxEu9xTBd2ibOhd.JournalEntryPage.7mA90ZHTpOUoVEwn",
+  "Compendium.spikependium.rules.JournalEntry.h2ipnUG7Tc4dsoNe.JournalEntryPage.LWRnhzZdKlHN1Eb3",
   "Compendium.spikependium.rules.JournalEntry.WIUVrlrKuK95hmLo.JournalEntryPage.HZBTkSBZZeWC4L8H",
   "Compendium.spikependium.rules.JournalEntry.WIUVrlrKuK95hmLo.JournalEntryPage.1PTGLav38eznW08Z",
   "Compendium.spikependium.rules.JournalEntry.WIUVrlrKuK95hmLo.JournalEntryPage.FOPbOjmPN6MPBFt5",

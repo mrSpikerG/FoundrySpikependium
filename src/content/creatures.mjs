@@ -12,7 +12,7 @@ export function define() {
   npc({
     key: "actor:homunculus-servant", name: "Гомункул слуга", en: "Homunculus Servant", book: "UA-EB", page: 8,
     folder: fSpell, img: "icons/creatures/magical/construct-iron-stomping-yellow",
-    size: "tiny", creatureType: "construct", alignment: "Нейтральный", ac: 13, hp: 5,
+    size: "tiny", creatureType: "construct", alignment: "Нейтральный", ac: 13, hp: 5, hpFormula: "1d4",
     movement: { walk: 20, fly: 30 }, abilities: { str: 4, dex: 15, con: 12, int: 10, wis: 10, cha: 7 },
     di: ["poison"], ci: ["exhaustion", "poisoned"], senses: { darkvision: 60 },
     languagesCustom: "телепатия 1 миля (работает только с создателем)",
@@ -38,11 +38,11 @@ export function define() {
   npc({
     key: "actor:purple-dragon-companion", name: "Спутник пурпурный дракон", en: "Purple Dragon Companion",
     book: "UA-FR", page: 4, folder: fComp, img: "icons/creatures/abilities/dragon-breath-purple",
-    size: "sm", creatureType: "dragon", alignment: "Нейтральный", ac: 13, hp: 4,
+    size: "sm", creatureType: "dragon", alignment: "Нейтральный", ac: 13, hp: 4, hpFormula: "1d6",
     movement: { walk: 30, fly: 30, swim: 30 }, abilities: { str: 16, dex: 16, con: 12, int: 8, wis: 13, cha: 10 },
     senses: { darkvision: 60 }, telepathy: 30, languagesCustom: "понимает языки, которые знаете вы",
     bio: "<p><strong>КД</strong> 13 + ваш модификатор Интеллекта; <strong>Хиты</strong> 4 + пятикратный ваш уровень воина (кости хитов [к6] в количестве, равном вашему уровню воина). <strong>БМ</strong> равен вашему БМ.</p><p>На 7 уровне дракон становится Средним, на 15 — Большим (скорость и скорость полёта 40 футов).</p>"
-      + "<p><em>Примечание для Foundry: бонус атаки Разрыванием и Сл. Дыхания гравитации берутся у призывателя (БМ + модификатор Интеллекта воина).</em></p>",
+      + "<p><em>Примечание для Foundry: бонус атаки Разрыванием и Сл. Дыхания гравитации берутся у призывателя (Разрывание: 3 + модификатор Интеллекта; Сл. дыхания: 8 + БМ + модификатор Интеллекта).</em></p>",
     items: [
       { name: "Амфибия", img: "icons/magic/water/bubbles-air-water-blue", desc: "Дракон может дышать и воздухом, и под водой." },
       { name: "Непоколебимая связь", img: "icons/magic/control/energy-stream-link-large-blue",
@@ -64,7 +64,7 @@ export function define() {
   npc({
     key: "actor:reanimated-companion", name: "Реанимированный спутник", en: "Reanimated Companion",
     book: "UA-HS", page: 2, folder: fComp, img: "icons/magic/death/hand-dirt-undead-zombie",
-    size: "sm", creatureType: "undead", alignment: "Нейтральный", ac: 10, hp: 4,
+    size: "sm", creatureType: "undead", alignment: "Нейтральный", ac: 10, hp: 4, hpFormula: "1d6",
     movement: { walk: 30 }, abilities: { str: 14, dex: 10, con: 16, int: 4, wis: 10, cha: 6 },
     dr: ["necrotic", "poison"], di: ["lightning"], ci: ["charmed", "exhaustion", "poisoned"],
     senses: { blindsight: 60 }, languagesCustom: "понимает языки, которые знаете вы",
@@ -83,7 +83,7 @@ export function define() {
 
   // --- Дух псионики (три сущности) -----------------------------------------
   const spiritBase = (key, variant, o) => npc({
-    key, name: `Дух псионики (${variant})`, en: `Psionic Spirit (${o.en})`, book: "UA-PS", page: 10, folder: fSpell,
+    key, name: `Дух псионики (${variant})`, en: `Psionic Spirit (${o.en})`, book: "UA-PU", page: 15, folder: fSpell,
     img: o.img, size: "med", creatureType: "aberration", alignment: "Нейтральный", ac: o.ac, hp: 40,
     movement: { walk: 30, fly: o.fly ?? null, hover: !!o.fly }, abilities: { str: 16, dex: 12, con: 11, int: 16, wis: 12, cha: 10 },
     di: ["psychic"], senses: { darkvision: 60 }, languages: ["deep"], telepathy: 60,

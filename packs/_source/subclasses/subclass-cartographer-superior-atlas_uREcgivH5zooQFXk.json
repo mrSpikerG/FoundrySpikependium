@@ -43,7 +43,7 @@
           "type": "minute",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -124,7 +124,11 @@
             "override": false
           },
           "level": null,
-          "properties": [],
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
           "spellbook": true,
           "uuid": "Compendium.dnd5e.spells24.Item.phbsplFindthePat"
         }

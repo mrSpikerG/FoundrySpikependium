@@ -48,7 +48,7 @@
           "type": "action",
           "value": 1,
           "condition": "",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [
@@ -124,7 +124,11 @@
             "override": false
           },
           "level": null,
-          "properties": [],
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
           "spellbook": true,
           "uuid": "Compendium.dnd5e.spells24.Item.phbsplAugury0000"
         }
@@ -139,7 +143,7 @@
           "type": "reaction",
           "value": 1,
           "condition": "Видимое существо в пределах 30 футов умирает",
-          "override": false
+          "override": true
         },
         "consumption": {
           "targets": [

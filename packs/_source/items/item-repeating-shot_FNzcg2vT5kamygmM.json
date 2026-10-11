@@ -5,7 +5,7 @@
   "img": "icons/weapons/crossbows/crossbow-loaded-black.webp",
   "system": {
     "description": {
-      "value": "<p><em>Оружие (любое простое или воинское со свойством боеприпасы), необычное (требуется настройка).</em></p><p>Это магическое оружие даёт бонус +1 к броскам атаки и урона при использовании для дальнобойной атаки, а также игнорирует свойство перезарядка, если оно имеется.</p><p>Если оружию не хватает боеприпасов, то оно создаёт их само, автоматически производя 1 магический боеприпас, когда владелец совершает дальнобойную атаку с его помощью. Созданный боеприпас исчезает сразу после того, как попадает или промахивается по цели.</p><p><em>Чтобы создать конкретное оружие, используйте действие «Зачаровать оружие» и выберите обычное оружие со свойством боеприпасы.</em></p>",
+      "value": "<p><em>Оружие (любое простое или воинское со свойством боеприпасы), необычное (требуется настройка).</em></p><p>Это магическое оружие даёт бонус +1 к броскам атаки и урона при использовании для дальнобойной атаки, а также игнорирует свойство перезарядка, если оно имеется.</p><p>Если оружию не хватает боеприпасов, то оно создаёт их само, автоматически производя 1 магический боеприпас, когда владелец совершает дальнобойную атаку с его помощью. Созданный боеприпас исчезает сразу после того, как попадает или промахивается по цели.</p><p><em>Чтобы создать конкретное оружие, используйте действие «Зачаровать оружие» и выберите обычное оружие со свойством боеприпасы.</em></p><p><em>Цена: ориентир по редкости из правил 2024 года плюс стоимость базового предмета; в UA цена не указана. Это шаблон зачарования: вес и урон берутся от выбранного оружия.</em></p>",
       "chat": ""
     },
     "source": {
@@ -28,7 +28,7 @@
       "units": "lb"
     },
     "price": {
-      "value": 0,
+      "value": 400,
       "denomination": "gp"
     },
     "rarity": "uncommon",
@@ -172,7 +172,12 @@
         },
         "restrictions": {
           "allowMagical": false,
-          "categories": [],
+          "categories": [
+            "simpleM",
+            "simpleR",
+            "martialM",
+            "martialR"
+          ],
           "properties": [
             "amm"
           ],
@@ -240,12 +245,36 @@
             "_id": "NGu6IlgrusnCX5m5"
           },
           {
+            "key": "system.price.value",
+            "value": "400",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "THF5DuFAsvtBY0k9"
+          },
+          {
+            "key": "system.source.book",
+            "value": "UA-EB",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "uiaSeUICMFgfH1kF"
+          },
+          {
+            "key": "system.source.page",
+            "value": "9",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ITvFSFcPs6XOBdIM"
+          },
+          {
             "key": "system.description.value",
             "value": "{}<p>@Embed[Compendium.spikependium.items.Item.FNzcg2vT5kamygmM caption=false]</p>",
             "type": "override",
             "priority": null,
             "phase": "initial",
-            "_id": "THF5DuFAsvtBY0k9"
+            "_id": "XQRAPZCsfx2CmJ3I"
           },
           {
             "key": "img",
@@ -253,7 +282,15 @@
             "type": "override",
             "priority": null,
             "phase": "initial",
-            "_id": "uiaSeUICMFgfH1kF"
+            "_id": "hZhCRXuIEXukd00U"
+          },
+          {
+            "key": "system.properties",
+            "value": "-lod",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "w8LTyLRO7ZDlQ0E8"
           }
         ]
       },
