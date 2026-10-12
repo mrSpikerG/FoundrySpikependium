@@ -50,9 +50,27 @@ import { captureAttackDamage, guardianEvaluatedTargets, guardianRecords } from "
 import { wetHitSnapshots } from "./companions.mjs";
 import { strikeHitSnapshots } from "./opportunity.mjs";
 import { prepareHollowConcentration, hollowArmorSuppression } from "./hollow-warden.mjs";
+import { recordRavenousHit, canUseRavenous, prepareRavenousDialog, recordRavenousUse, rollRavenousHealing,
+  ravenousApplyDamage, recordRavenousHealing, chooseRavenousHeal } from "./hollow-ravenous.mjs";
+import { prepareOriginCheck, buildOriginCheck, finalizeOriginCheck, prepareOriginInspirationDialog,
+  canUseOriginInspiration, applyOriginInspiration } from "./arcana-origin.mjs";
 
 const MODULE_ID = "spikependium";
 Hooks.on("dnd5e.preBeginConcentrating", prepareHollowConcentration);
+Hooks.on("preCreateChatMessage", recordRavenousHit);
+Hooks.on("dnd5e.preUseActivity", prepareRavenousDialog);
+Hooks.on("dnd5e.preActivityConsumption", canUseRavenous);
+Hooks.on("dnd5e.preCreateUsageMessage", recordRavenousUse);
+Hooks.on("dnd5e.preApplyDamage", recordRavenousHealing);
+Hooks.on("dnd5e.preRollAbilityCheckV2", prepareOriginCheck);
+Hooks.on("dnd5e.postBuildAbilityCheckRollConfig", buildOriginCheck);
+Hooks.on("dnd5e.postAbilityCheckRollConfiguration", finalizeOriginCheck);
+Hooks.on("dnd5e.preUseActivity", prepareOriginInspirationDialog);
+Hooks.on("dnd5e.preActivityConsumption", canUseOriginInspiration);
+Hooks.on("dnd5e.postUseActivity", (...args) => applyOriginInspiration(...args).catch(error => {
+  console.error("Spikependium: Понимание смерти", error);
+  ui.notifications.error("Не удалось выдать Героическое вдохновение. Проверьте карточку расхода и отметку вдохновения на листе.");
+}));
 
 Hooks.once("init", registerHandlingMovement);
 Hooks.once("init", registerGuardianMovement);
@@ -74,6 +92,7 @@ Hooks.on("createChatMessage", async message => {
     if (game.user.isActiveGM && guardianRecords(message).some(r => r.state === "done"))
       await message.update({ "flags.spikependium.handlingHits": handlingHits(message), "flags.spikependium.wetHits": wetHitSnapshots(message),
         "flags.spikependium.strikeHits": strikeHitSnapshots(message), "flags.spikependium.bigPushHits": bigPushSnapshots(message) });
+    await chooseRavenousHeal(message);
     await chooseHandling(message);
     await triggerWetResponses(message);
     await applyStrikeHits(message);
@@ -472,7 +491,9 @@ Hooks.once("init", () => {
   }
   libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype._prepareSpellcasting", addDrainedSlots, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.calculateDamage", calculateCompanionDamage, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.applyDamage", guardianApplyDamage, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.applyDamage", function(wrapped, ...args) {
+    return guardianApplyDamage.call(this, (...forward) => ravenousApplyDamage.call(this, wrapped, ...forward), ...args);
+  }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ChatMessage.documentClass.prototype.applyChatCardDamage", guardianCardDamage, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ChatMessage.dataModels.attack.prototype.evaluatedTargets", guardianEvaluatedTargets, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.attack.documentClass.prototype.rollDamage", captureAttackDamage, "WRAPPER");
@@ -494,7 +515,9 @@ Hooks.once("init", () => {
   libWrapper.register(MODULE_ID, "CONFIG.Item.documentClass.prototype.getRollData", storedItemRollData, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.cast.documentClass.prototype.getCachedSpellData", storedCachedSpell, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.cast.documentClass.prototype.prepareFinalData", prepareStoredCast, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.heal.documentClass.prototype.rollDamage", rollLifeHealing, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.heal.documentClass.prototype.rollDamage", function(wrapped, ...args) {
+    return rollRavenousHealing.call(this, (...forward) => rollLifeHealing.call(this, wrapped, ...forward), ...args);
+  }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.save.documentClass.prototype.getDamageConfig", bigExplosionDamageConfig, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.save.documentClass.prototype.getAppliedEffectChanges", thinEffectChanges, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.attack.documentClass.prototype.rollAttack", function(wrapped, config, ...args) {

@@ -1,0 +1,216 @@
+{
+  "_id": "HiXWuqcXVyaFumA1",
+  "name": "Магический могильщик",
+  "type": "feat",
+  "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Заговор.</strong> Вы изучаете один заговор школы некромантии из списка Волшебника или Жреца. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для него (выберите при выборе черты).</p><p><strong>Знания от мёртвых.</strong> Когда вы совершаете проверку Интеллекта (История) или Мудрости (Медицина), вы можете бросить [[/r 1d4]]{1к4} и добавить результат к этой проверке.</p><p><strong>Понимание смерти.</strong> Когда вы совершаете действие Помощь для стабилизации существа с 0 хитами, вы получаете Героическое вдохновение. После использования этого преимущества вы должны завершить долгий отдых, чтобы воспользоваться им снова.</p><h3>Действия</h3><ul><li>[[/item activity=afilG6CWFA9hk6DT]]{Понимание смерти}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "28",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magic-undertaker",
+    "type": {
+      "value": "feat",
+      "subtype": "origin"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "afilG6CWFA9hk6DT": {
+        "_id": "afilG6CWFA9hk6DT",
+        "type": "utility",
+        "name": "Понимание смерти",
+        "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вы успешно стабилизировали существо с 0 хитами действием Помощь",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "heroicInspirationSelf": true
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "Gl9ENqHFPo9CdUqN",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "0": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplChillTouch"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSparetheDy"
+            }
+          ],
+          "restriction": {
+            "type": "spell",
+            "subtype": "",
+            "list": [
+              "wizard",
+              "cleric"
+            ],
+            "level": "0",
+            "school": [
+              "nec"
+            ]
+          },
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Заговор некромантии Волшебника или Жреца",
+        "hint": "Выберите подходящий заговор; можно перетащить другой заговор некромантии из указанных списков своей книги."
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "9PyqwBpBkWMzeKXz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:magic-undertaker"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!HiXWuqcXVyaFumA1"
+}

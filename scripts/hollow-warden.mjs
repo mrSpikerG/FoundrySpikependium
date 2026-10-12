@@ -6,6 +6,13 @@ function huntersMark(effect) {
   const item = resolve(effect.flags.dnd5e?.item?.uuid) ?? effect.flags.dnd5e?.item?.data;
   return item?.type === "spell" && item.system.identifier === "hunters-mark";
 }
+export function hollowTransformation(actor) {
+  if (actor?.statuses.has("antimagic")) return;
+  const concentrating = actor?.effects?.find(e => huntersMark(e) && !e.isSuppressed);
+  if (!concentrating) return;
+  if (concentrating.flags.spikependium?.hollowWrath) return concentrating;
+  if (actor.effects.some(e => live(e) && e.active && resolve(e.system.origin?.activity)?.item.flags.spikependium?.key === KEY)) return concentrating;
+}
 export function prepareHollowConcentration(actor, item, data, activity) {
   if (activity?.actor !== actor || activity.item !== item || !actor.isOwner || item.type !== "spell"
     || item.system.identifier !== "hunters-mark" || item.flags.spikependium?.storedSpell

@@ -15,7 +15,7 @@ import { BLUEPRINTS } from "../src/content/artificer.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = ["spells", "spells-psion-update", "creatures", "creatures-2", "artificer", "psion", "subclasses-artificer",
   "subclasses-psion", "subclasses-fr", "subclasses-horror", "subclasses-arcane", "subclasses-villain", "subclasses-mystic",
-  "feats", "feats-villain", "items", "journals"];
+  "feats", "feats-villain", "arcana-unleashed-feats", "items", "journals"];
 
 /* -------------------------------------------- */
 /*  1. Определение содержимого                  */

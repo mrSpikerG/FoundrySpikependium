@@ -15,11 +15,12 @@ const errors = [];
 const warnings = [];
 const err = (where, msg) => errors.push(`${where}: ${msg}`);
 const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
-const bookPages = { "UA-EB": 16, "UA-FR": 10, "UA-HS": 9, "UA-PS": 13, "UA-PU": 15, "UA-AS": 10, "UA-AU": 9, "UA-MS": 6, "UA-VO": 11, "UA-VO2": 5 };
+const bookPages = { "AU": 160, "UA-EB": 16, "UA-FR": 10, "UA-HS": 9, "UA-PS": 13, "UA-PU": 15, "UA-AS": 10, "UA-AU": 9, "UA-MS": 6, "UA-VO": 11, "UA-VO2": 5 };
 function checkSource(where, source) {
   if (!source || !BOOKS[source.book]) return err(where, "нет известного источника UA");
   const page = Number(source.page);
   if (!Number.isInteger(page) || page < 1 || page > bookPages[source.book]) err(where, `страница вне документа: ${source.page}`);
+  if (source.book === "AU" && page > 45 && page < 151) err(where, "эта страница отсутствует в предоставленном PDF Неудержимой магии");
   if (source.rules !== "2024") err(where, "неверная редакция правил");
 }
 

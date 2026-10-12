@@ -2129,6 +2129,7 @@ export const FORGE_BASES = [
 ];
 
 export const SOURCE_BOOKS = {
+  "AU": "Неудержимая магия",
   "UA-EB": "UA 2024: Обновление Эберрона",
   "UA-FR": "UA 2025: Подклассы Забытых королевств",
   "UA-HS": "UA 2025: Жуткие подклассы",
