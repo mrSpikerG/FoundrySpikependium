@@ -1,0 +1,238 @@
+{
+  "_id": "J2DMGPbkptyDyQRA",
+  "name": "Вызов растения",
+  "type": "spell",
+  "img": "icons/magic/nature/root-vines-grow-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: друид, следопыт.</em></p><p>Вы призываете дух оживлённого растения в незанятое пространство, которое вы видите в пределах дистанции. Выберите один из обликов: Гриб, Дерево, Лоза. Он использует соответствующий статблок духа.</p><p>Дух дружелюбен вам и вашим союзникам. В бою он получает вашу инициативу, но ходит сразу после вас. Он подчиняется устным командам без расхода действия; без команды совершает Уклонение и перемещается, избегая опасностей. Дух исчезает при 0 хитах или окончании заклинания.</p><p><strong>Использование ячейки большего уровня.</strong> Уровень ячейки используется как уровень заклинания в статблоке.</p><p><strong>Foundry.</strong> Выбор облика и размещение используют штатное окно призыва. КД, хиты, Бонус мастерства и атаки подставляются автоматически. Условия видимости и свободное пространство подтверждает Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=xxXO5CXoDWJpSmiW]]{Призвать духа}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "38",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "summon-plant",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "level": 5,
+    "materials": {
+      "value": "травы стоимостью не менее 500 зм",
+      "consumed": false,
+      "cost": 500,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "range": {
+      "value": "90",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "con",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "",
+        "type": "",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": false
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "xxXO5CXoDWJpSmiW": {
+        "_id": "xxXO5CXoDWJpSmiW",
+        "type": "summon",
+        "name": "Призвать духа",
+        "img": "icons/magic/nature/root-vines-grow-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "effects": [],
+        "range": {
+          "value": "90",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@item.level",
+          "hd": "",
+          "hp": "10 * (@item.level - 5)",
+          "attackDamage": "@item.level",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [
+          "lg"
+        ],
+        "creatureTypes": [
+          "plant"
+        ],
+        "match": {
+          "ability": "",
+          "attacks": true,
+          "disposition": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "ku6nSTYf49H9zPZq",
+            "count": "1",
+            "name": "Гриб",
+            "uuid": "Compendium.spikependium.creatures.Actor.gx6Vl2986BcNrq2v",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "bXs7jWeKiO46Vc3P",
+            "count": "1",
+            "name": "Дерево",
+            "uuid": "Compendium.spikependium.creatures.Actor.DZekUXCyrj7UyomQ",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "4nUJUowmseipAlmo",
+            "count": "1",
+            "name": "Лоза",
+            "uuid": "Compendium.spikependium.creatures.Actor.EJ8WrAUXz2GLvACl",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "eo23z098jphqsOls",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-summon-plant"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!J2DMGPbkptyDyQRA"
+}

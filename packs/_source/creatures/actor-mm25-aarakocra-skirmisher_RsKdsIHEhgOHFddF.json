@@ -1,0 +1,709 @@
+{
+  "_id": "RsKdsIHEhgOHFddF",
+  "name": "Aarakocra Skirmisher",
+  "type": "npc",
+  "img": "icons/creatures/birds/raptor-hawk-flying.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 11,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 11,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "skills": {
+      "prc": {
+        "value": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 12,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 11,
+        "max": 11,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "2d8+2"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "20",
+          "fly": "50"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": null,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<h2>Ааракокра — крылатые защитники неба</h2><p>Среда обитания: Горы, Планы (Стихийный план Воздуха). Сокровища: Инвентарь, Личные.</p><p>Ааракокры — крылатый народ, который парит в небесах бесчисленных миров и бескрайних просторах Стихийного плана Воздуха. Их внешность обычно напоминает птиц, распространённых в тех краях, где они обитают. Некоторые напоминают ястребов или кондоров, другие же похожи на колибри или археоптериксов. Во многих землях ааракокры рассказывают о славных древних временах, когда они сражались с проклятой Королевой Хаоса бок о бок с таинственными Воздушными герцогами Ааки.</p><p>Ааракокры-застрельщики искусны в борьбе с летающими в облаках врагами. Они часто атакуют цели на земле, совершая пикирующие удары.</p>",
+        "public": ""
+      },
+      "alignment": "Нейтральный",
+      "type": {
+        "value": "elemental",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0.25,
+      "habitat": {
+        "custom": "",
+        "value": [
+          {
+            "type": "mountain"
+          },
+          {
+            "type": "planar",
+            "subtype": "Стихийный план Воздуха"
+          }
+        ]
+      },
+      "treasure": {
+        "value": [
+          "armaments",
+          "individual"
+        ]
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "auran",
+          "aarakocra"
+        ],
+        "custom": "",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "10",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Ааракокра-застрельщик",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "texture": {
+      "src": "icons/creatures/birds/raptor-hawk-flying.webp"
+    },
+    "width": 1,
+    "height": 1
+  },
+  "items": [
+    {
+      "_id": "29mNOsbDXOF2izN4",
+      "name": "Лапы",
+      "type": "weapon",
+      "img": "icons/creatures/claws/claw-talons-yellow-red.webp",
+      "system": {
+        "description": {
+          "value": "<p>Рукопашная атака: +4, досягаемость 5 футов. Попадание: [[/damage 2d4+2 type=slashing]]{2к4 + 2} режущего урона. Если ааракокра переместилась не менее чем на 30 футов по прямой к цели непосредственно перед попаданием, урон становится [[/r 3d4+2]]{3к4 + 2}.</p><p>Примечание: в книге средний обычный урон указан как 4, что не соответствует формуле [[/r 2d4+2]]{2к4 + 2}. Здесь сохранена формула книги.</p><h3>Действия</h3><ul><li>[[/item activity=F0vBn5SAtTCwXxj3]]{Лапы} · [[/damage activity=F0vBn5SAtTCwXxj3]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "10",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "aarakocra-talons",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "F0vBn5SAtTCwXxj3": {
+            "_id": "F0vBn5SAtTCwXxj3",
+            "type": "attack",
+            "name": "Лапы",
+            "img": "icons/creatures/claws/claw-talons-yellow-red.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "proficient": 1,
+        "equipped": true,
+        "identified": true,
+        "range": {
+          "value": null,
+          "long": null,
+          "reach": 5,
+          "units": "ft"
+        },
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 2,
+            "denomination": 4,
+            "bonus": "",
+            "types": [
+              "slashing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "spikependium": {
+          "dive": {
+            "feet": 30
+          }
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!RsKdsIHEhgOHFddF.29mNOsbDXOF2izN4"
+    },
+    {
+      "_id": "CfmSEg4wa886nD5m",
+      "name": "Пилум ветра",
+      "type": "weapon",
+      "img": "icons/weapons/polearms/javelin-flared.webp",
+      "system": {
+        "description": {
+          "value": "<p>Рукопашная или дальнобойная атака: +4, досягаемость 5 футов или дистанция 30/120 футов. Попадание: [[/damage 1d6+2 type=piercing]]{1к6 + 2} колющего урона и [[/r 1d4]]{1к4} урона громом. После попадания или промаха при дистанционной атаке пилум сразу магически возвращается в руку.</p><p>Вес и цена указаны по базовому метательному копью; отдельные значения для Пилума ветра в книге не приведены.</p><h3>Действия</h3><ul><li>[[/item activity=hIyhJvna30AkgOMq]]{Пилум: рукопашная} · [[/damage activity=hIyhJvna30AkgOMq]]{Бросок урона}</li><li>[[/item activity=8KG9p8GsVTaAqkSH]]{Пилум: бросок} · [[/damage activity=8KG9p8GsVTaAqkSH]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "10",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "wind-javelin",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "hIyhJvna30AkgOMq": {
+            "_id": "hIyhJvna30AkgOMq",
+            "type": "attack",
+            "name": "Пилум: рукопашная",
+            "img": "icons/weapons/polearms/javelin-flared.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 1,
+                  "denomination": 4,
+                  "bonus": "",
+                  "types": [
+                    "thunder"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          },
+          "8KG9p8GsVTaAqkSH": {
+            "_id": "8KG9p8GsVTaAqkSH",
+            "type": "attack",
+            "name": "Пилум: бросок",
+            "img": "icons/weapons/polearms/javelin-flared.webp",
+            "sort": 200000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 1,
+                  "denomination": 4,
+                  "bonus": "",
+                  "types": [
+                    "thunder"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "properties": [
+          "thr",
+          "ret"
+        ],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "simpleM",
+          "baseItem": "javelin"
+        },
+        "proficient": 1,
+        "equipped": true,
+        "identified": true,
+        "quantity": 1,
+        "price": {
+          "value": 5,
+          "denomination": "sp"
+        },
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "range": {
+          "value": 30,
+          "long": 120,
+          "reach": 5,
+          "units": "ft"
+        },
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 1,
+            "denomination": 6,
+            "bonus": "",
+            "types": [
+              "piercing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!RsKdsIHEhgOHFddF.CfmSEg4wa886nD5m"
+    }
+  ],
+  "effects": [],
+  "folder": "4BUbLDhdunZZb8Ff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:aarakocra-skirmisher",
+      "originalName": "Aarakocra Skirmisher"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!RsKdsIHEhgOHFddF"
+}

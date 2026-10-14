@@ -1,0 +1,243 @@
+{
+  "_id": "hWNX4EnrMy5knEBQ",
+  "name": "Grave Grasp",
+  "type": "spell",
+  "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+  "system": {
+    "description": {
+      "value": "<p>Из земли или иной поверхности в пределах 60 футов появляются гнилые руки. Совершите дальнобойную атаку заклинанием по существу в пределах 5 футов от выбранной поверхности. При попадании цель опутана и не может восстанавливать хиты, пока опутана этим заклинанием. Сама цель или другое существо в пределах 5 футов может действием освободить её, прекратив опутывание без проверки. За каждый уровень ячейки выше 1-го можно выбрать ещё одну цель. Штатная атака и профиль Опутан настроены; активный профиль блокирует штатное восстановление хитов, но не временные хиты. Точный выбор дополнительных целей и освобождение пока контролируются вручную.</p><h3>Действия</h3><ul><li>[[/item activity=JPwnmDDvSkf3HrHJ]]{Могильная хватка}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "15",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-grave-grasp",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 1,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "range": {
+      "value": "60",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "nec",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "JPwnmDDvSkf3HrHJ": {
+        "_id": "JPwnmDDvSkf3HrHJ",
+        "type": "attack",
+        "name": "Могильная хватка",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "effects": [
+          {
+            "_id": "pnzrKjyWVKNDZBQ6"
+          }
+        ],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "attack": {
+          "ability": "",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "ranged",
+            "classification": "spell"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": false,
+          "parts": []
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "pnzrKjyWVKNDZBQ6",
+      "name": "Могильная хватка: опутан",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "restrained"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "magusGraveGrasp": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!hWNX4EnrMy5knEBQ.pnzrKjyWVKNDZBQ6"
+    }
+  ],
+  "folder": "dfSvlGQZbtiT0B1k",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:magus-grave-grasp",
+      "originalName": "Grave Grasp"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!hWNX4EnrMy5knEBQ"
+}

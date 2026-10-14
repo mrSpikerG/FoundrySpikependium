@@ -1,5 +1,16 @@
 const RULES = { "feat:magic-speaker": { dec: "cha", itm: "cha", per: "cha" }, "feat:magic-undertaker": { his: "int", med: "wis" } };
 const BONUS = "@spikependiumOriginIntuition", applying = new Set();
+export function prepareOriginGrantedAbility(activity) {
+  if (activity?.item?.flags.spikependium?.key !== "feat:magic-ward" || activity.type !== "cast"
+    || !activity.flags.spikependium?.originGrantedAbility) return;
+  const ability = activity.item.system.advancement.find(a => a.type === "ItemGrant"
+    && a.configuration.items.some(i => i.uuid === activity.spell.uuid))?.value.ability;
+  if (!["int", "wis", "cha"].includes(ability)) {
+    ui.notifications.warn("Выберите Интеллект, Мудрость или Харизму в продвижении черты Магический защитник.");
+    return false;
+  }
+  activity.updateSource({ "spell.ability": ability });
+}
 function choices(config, ability = null) {
   if (!config.subject?.isOwner || !config.skill || config.tool) return [];
   return config.subject.items.filter(item => {

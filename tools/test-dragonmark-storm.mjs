@@ -90,7 +90,7 @@ const hooks=new Map(),init=[];globalThis.Hooks={on(name,fn){const callbacks=hook
 await import("../scripts/spikependium.mjs");for(const[name,fn]of [["dnd5e.preUseActivity",canUseStormModifier],
   ["dnd5e.preActivityConsumption",canUseStormModifier],["dnd5e.preBeginConcentrating",prepareStormConcentration]])assert(hooks.get(name).includes(fn));
 const registrations=new Map();globalThis.libWrapper={register(module,target,fn){assert(!registrations.has(target));registrations.set(target,fn);}};
-globalThis.CONFIG={DND5E:{activityTypes:{},sourceBooks:{},featureTypes:{feat:{subtypes:{}},class:{subtypes:{}}}}};
+globalThis.CONFIG={DND5E:{activityConsumptionTypes:{},activityTypes:{},sourceBooks:{},featureTypes:{feat:{subtypes:{}},class:{subtypes:{}}}}};
 dnd5e.registry={spellLists:{register(){}}};init.at(-1)();
 pc.statuses.clear();pc.system.attributes.movement.speeds.fly="max(0, @spikependium.stormFlightSpeed)";
 assert.equal(registrations.get("CONFIG.Actor.documentClass.prototype.applyActiveEffects").call(pc,()=>"native","final"),"native");

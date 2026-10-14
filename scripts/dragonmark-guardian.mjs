@@ -71,7 +71,7 @@ function validHit(message, record) {
 function pendingDecision(attack, actor) {
   const snapshot = attack.flags.spikependium?.guardianAttack;
   if (!game.users.activeGM || attack.rolls.length !== 1 || !snapshot || snapshot.time !== game.time.worldTime || snapshot.turn !== turn()) return false;
-  return attackHitTargets(attack).some(({ token: victim }) => victim.actor.uuid === actor.uuid && protectedScene(victim.parent)
+  return attackHitTargets(attack, { ignoreDefense: true }).some(({ token: victim }) => victim.actor.uuid === actor.uuid && protectedScene(victim.parent)
     && !guardianRecords(attack).some(r => r.victim === victim.uuid)
     && attack.system.targets.filter(t => t.actor === actor.uuid).length === 1
     && same(victim, snapshot.targets.find(t => t.token === victim.uuid)?.from)
@@ -139,7 +139,7 @@ async function choose(message) {
   const snapshot = message.flags.spikependium?.guardianAttack;
   if (!snapshot || snapshot.time !== game.time.worldTime || snapshot.turn !== turn()) return;
   const signature = attackSignature(message);
-  for (const { index, token: victim } of attackHitTargets(message)) {
+  for (const { index, token: victim } of attackHitTargets(message, { ignoreDefense: true })) {
     const scene = victim.parent, id = `${message.id}:${index}:${victim.id}`;
     if (scene !== canvas.scene || !protectedScene(scene)) continue;
     if (!same(victim, snapshot.targets.find(t => t.token === victim.uuid)?.from)) continue;

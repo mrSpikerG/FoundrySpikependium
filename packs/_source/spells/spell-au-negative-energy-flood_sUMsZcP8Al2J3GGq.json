@@ -1,0 +1,305 @@
+{
+  "_id": "sUMsZcP8Al2J3GGq",
+  "name": "Поток негативной энергии",
+  "type": "spell",
+  "img": "icons/magic/unholy/projectile-missile-green.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, колдун.</em></p><p>Вы направляете ленты тёмной энергии на одно существо, которое видите в пределах дистанции. Если цель не является Нежитью, она совершает спасбросок Телосложения, получая [[/damage 3d10+25 type=necrotic]]{3к10 + 25} урона некротической энергией при провале или половину при успехе.</p><p>Гуманоид, убитый этим заклинанием, воскресает в начале вашего следующего хода как Зомби, выполняющий ваши устные приказы в течение 24 часов, после чего действует согласно своей природе.</p><p>Если цель — Нежить, она получает [[/r 3d10]]{3к10} временных хитов.</p><p><strong>Использование ячейки большего уровня.</strong> Урон увеличивается на [[/r 1d10]]{1к10} за каждый уровень ячейки выше пятого. Временные хиты нежити не увеличиваются.</p><p><strong>Применение.</strong> Выберите ровно одну цель и соответствующий вариант действия. Тип цели проверяется до расхода ячейки. Урон и временные хиты применяются штатными карточками; временные хиты не складываются. Превращение убитого гуманоида в зомби в следующий ход, его приказы и окончание контроля через 24 часа пока обрабатывает Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=UMRKKBUATSLCm0S2]]{Цель не является нежитью} · [[/damage activity=UMRKKBUATSLCm0S2]]{Бросок урона} · [[/save activity=UMRKKBUATSLCm0S2]]{Спасбросок цели}</li><li>[[/item activity=Fm6XNeGXmSeE7zTA]]{Нежить: временные хиты} · [[/heal activity=Fm6XNeGXmSeE7zTA]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "44",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "negative-energy-flood",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 5,
+    "materials": {
+      "value": "сломанная кость и квадратный лоскут чёрного шёлка",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "material"
+    ],
+    "range": {
+      "value": "60",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "nec",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "UMRKKBUATSLCm0S2": {
+        "_id": "UMRKKBUATSLCm0S2",
+        "type": "save",
+        "name": "Цель не является нежитью",
+        "img": "icons/magic/unholy/projectile-missile-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 10,
+              "bonus": "25",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "arcanaStage": "negative-energy-living"
+          }
+        }
+      },
+      "Fm6XNeGXmSeE7zTA": {
+        "_id": "Fm6XNeGXmSeE7zTA",
+        "type": "heal",
+        "name": "Нежить: временные хиты",
+        "img": "icons/magic/unholy/projectile-missile-green.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "number": 3,
+          "denomination": 10,
+          "bonus": "",
+          "types": [
+            "temphp"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "flags": {
+          "spikependium": {
+            "arcanaStage": "negative-energy-undead"
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "eo23z098jphqsOls",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-negative-energy-flood"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!sUMsZcP8Al2J3GGq"
+}

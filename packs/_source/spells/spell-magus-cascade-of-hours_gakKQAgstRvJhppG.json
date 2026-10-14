@@ -1,0 +1,180 @@
+{
+  "_id": "gakKQAgstRvJhppG",
+  "name": "Cascade of Hours",
+  "type": "spell",
+  "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+  "system": {
+    "description": {
+      "value": "<p>За 1 минуту накладывания вы оказываетесь в кармане времени и выполняете одну задачу длительностью не более 8 часов, не требующую взаимодействия с другим существом: например, путешествие через город, изготовление предмета или чтение книги. Внутри нельзя получать короткий или продолжительный отдых. Ход мирового времени, перемещение и результат задачи определяет Мастер; кнопка учитывает только накладывание.</p><h3>Действия</h3><ul><li>[[/item activity=U1mVFOR5bJnGfOxF]]{Войти в карман времени}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "14",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-cascade-of-hours",
+    "activation": {
+      "type": "minute",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 4,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "trs",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "U1mVFOR5bJnGfOxF": {
+        "_id": "U1mVFOR5bJnGfOxF",
+        "type": "utility",
+        "name": "Войти в карман времени",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "minute",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "ux7dYbggpraxXe3r",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:magus-cascade-of-hours",
+      "originalName": "Cascade of Hours"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!gakKQAgstRvJhppG"
+}

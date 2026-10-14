@@ -1,0 +1,192 @@
+{
+  "_id": "K0HGhQJa4jrGYftX",
+  "name": "Перегруженный магией",
+  "type": "feat",
+  "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Заговор.</strong> Вы изучаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{Огненный снаряд}. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для него (выберите при выборе черты).</p><p><strong>Всплеск мощи.</strong> Когда вы накладываете заклинание школы Эвокации и наносите им урон, вы можете добавить свой бонус владения к одному броску урона этого заклинания. После использования вы должны завершить долгий отдых, чтобы воспользоваться этой пользой снова.</p><p><strong>Применение.</strong> Накладывайте заклинание и бросайте урон из его карточки. В обычном окне урона выберите один компонент для Всплеска мощи. Бонус добавляется только к нему; применение расходуется после подтверждения окна и входит в штатную отмену расхода в карточке урона. При закрытии окна без броска применение сохраняется. Это не постоянная прибавка ко всем заклинаниям.</p><h3>Действия</h3><ul><li>[[/item activity=YQm7NiaWrVZOhS5c]]{Всплеск мощи}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "29",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magic-overloaded",
+    "type": {
+      "value": "feat",
+      "subtype": "origin"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "YQm7NiaWrVZOhS5c": {
+        "_id": "YQm7NiaWrVZOhS5c",
+        "type": "utility",
+        "name": "Всплеск мощи",
+        "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "originSurge": true
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "O1pnVk6nCzbA7vOc",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFireBolt00",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заговор: Огненный снаряд",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "9PyqwBpBkWMzeKXz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:magic-overloaded"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!K0HGhQJa4jrGYftX"
+}

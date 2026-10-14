@@ -1,5 +1,14 @@
 // Файл создаётся сборщиком (tools/build.mjs). Не редактируйте вручную.
 export const SPELL_LISTS = [
+  "Compendium.spikependium.rules.JournalEntry.sFtUY3L5HJic3TAP.JournalEntryPage.6ZhMcCR2hAbLBQrL",
+  "Compendium.spikependium.rules.JournalEntry.s5Apu0KxMRlGFEl2.JournalEntryPage.rM568ZSEjxVyJEXy",
+  "Compendium.spikependium.rules.JournalEntry.qLzfqnMRJv9dEF37.JournalEntryPage.DM2BJ3J0fvhA5bx0",
+  "Compendium.spikependium.rules.JournalEntry.JbobyN50uJzquXFL.JournalEntryPage.4cjpzOYx5gpLbjr4",
+  "Compendium.spikependium.rules.JournalEntry.4sAnCe2Lp6HcRNJI.JournalEntryPage.DExERiMGQ309x85f",
+  "Compendium.spikependium.rules.JournalEntry.Kj3TzxTD1E4cfufy.JournalEntryPage.kA8Dx04Z1guXoSO7",
+  "Compendium.spikependium.rules.JournalEntry.6ywWg39O0GApY9Nx.JournalEntryPage.eIIJxNy75r2YYryk",
+  "Compendium.spikependium.rules.JournalEntry.GIWEO0ehk916XQZ8.JournalEntryPage.J9LSHUyhpqbgpJhh",
+  "Compendium.spikependium.rules.JournalEntry.WqehI91cxWGCHLdt.JournalEntryPage.24rLb2XG7BhJfOE2",
   "Compendium.spikependium.rules.JournalEntry.gM5vOl1gdgaTr1OA.JournalEntryPage.Iu0b85GAATahdcaU",
   "Compendium.spikependium.rules.JournalEntry.igxEu9xTBd2ibOhd.JournalEntryPage.7mA90ZHTpOUoVEwn",
   "Compendium.spikependium.rules.JournalEntry.h2ipnUG7Tc4dsoNe.JournalEntryPage.LWRnhzZdKlHN1Eb3",
@@ -7,7 +16,15 @@ export const SPELL_LISTS = [
   "Compendium.spikependium.rules.JournalEntry.WIUVrlrKuK95hmLo.JournalEntryPage.1PTGLav38eznW08Z",
   "Compendium.spikependium.rules.JournalEntry.WIUVrlrKuK95hmLo.JournalEntryPage.FOPbOjmPN6MPBFt5",
   "Compendium.spikependium.rules.JournalEntry.WIUVrlrKuK95hmLo.JournalEntryPage.NjbLZObNt1yoQovb",
-  "Compendium.spikependium.rules.JournalEntry.WIUVrlrKuK95hmLo.JournalEntryPage.GiGHUaVdhtWcynHD"
+  "Compendium.spikependium.rules.JournalEntry.WIUVrlrKuK95hmLo.JournalEntryPage.GiGHUaVdhtWcynHD",
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.bglEPObKQJ4H5Bxp",
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.Y8PfVE6fQ7xjR9yC",
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.MBrjyjBqrNVbZL4Y",
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.XZJETN0SxP634tKu",
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.H7GRSzGI4y6VGqEQ",
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.cEwHOfaivAFAMT6V",
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.ouh9gH5fbq8JlXUF",
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.K9x4zipr5vUhmhjA"
 ];
 
 export const WILD_TALENTS = [
@@ -2129,6 +2146,11 @@ export const FORGE_BASES = [
 ];
 
 export const SOURCE_BOOKS = {
+  "GS1": "Сумка грифона — книга 1 (2024)",
+  "GS2": "Сумка грифона — книга 2",
+  "VSS": "Valda’s Spire of Secrets: Алхимик",
+  "MAGUS-PT3": "Magus 2024 — Playtest 3",
+  "MM25": "Энциклопедия чудовищ (2025)",
   "AU": "Неудержимая магия",
   "UA-EB": "UA 2024: Обновление Эберрона",
   "UA-FR": "UA 2025: Подклассы Забытых королевств",

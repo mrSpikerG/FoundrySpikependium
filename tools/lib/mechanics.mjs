@@ -56,6 +56,7 @@ export const ACTIVITY_EFFECTS = {
 };
 const EFFECT_BY_ACTIVITY = new Map(Object.entries(ACTIVITY_EFFECTS).map(([key, rule]) => [makeId(`activity:${key}`), { key, ...rule }]));
 const DAMAGE_TYPES = {
+  "режущего": "slashing",
   "дробящего": "bludgeoning", "колющего": "piercing", "рубящего": "slashing",
   "кислотой": "acid", "холодом": "cold", "огнём": "fire", "огнем": "fire",
   "электричеством": "lightning", "излучением": "radiant", "ядом": "poison", "звуком": "thunder",
@@ -157,7 +158,7 @@ function enrichItem(item) {
   }
   for (const a of acts) {
     // Единственный источник эффекта позволяет снимать форму без дублирования эффектов.
-    if (a.type === "utility" && a.target.affects.type === "self" && a.effects.length === 1
+    if (a.type === "utility" && !a.flags?.spikependium?.cunningDisengage && a.target.affects.type === "self" && a.effects.length === 1
       && !a.roll.formula && !a.duration.concentration
       && acts.filter(other => other.effects?.some(e => e._id === a.effects[0]._id)).length === 1
       && item.effects?.some(e => e._id === a.effects[0]._id && !e.transfer)) {

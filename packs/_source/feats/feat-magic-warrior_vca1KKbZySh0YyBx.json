@@ -1,0 +1,157 @@
+{
+  "_id": "vca1KKbZySh0YyBx",
+  "name": "Магический воин",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы изучаете два заговора волшебника. Рекомендуемые варианты — @UUID[Compendium.dnd5e.spells24.Item.phbsplMageHand00]{Волшебная рука} и @UUID[Compendium.dnd5e.spells24.Item.phbsplRayofFrost]{Луч холода}. Выберите для обоих одну заклинательную характеристику: Интеллект, Мудрость или Харизму. При каждом получении нового уровня можно заменить один из этих заговоров другим заговором волшебника.</p><p><strong>Применение.</strong> Добавление черты открывает штатный выбор двух заговоров и общей характеристики. Каталог содержит доступные заговоры SRD; другой заговор волшебника можно перетащить из установленной библиотеки. При последующих повышениях уровня штатный мастер продвижения предлагает необязательную замену одного заговора, включая повышение в другом классе. Шаги замены не выдаются задним числом.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "33",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magic-warrior",
+    "type": {
+      "value": "feat",
+      "subtype": "fightingStyle"
+    },
+    "requirements": "Умение Боевой стиль",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": [
+        "feat:fighting-style"
+      ]
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "KuBX6uBMmAhZVAsm",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "0": {
+              "count": 2,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplAcidSplash"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplChillTouch"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDancingLig"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplElementali"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFireBolt00"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLight00000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMageHand00"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMending000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMessage000"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMinorIllus"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPoisonSpra"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPrestidigi"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplRayofFrost"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplShockingGr"
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplTrueStrike"
+            }
+          ],
+          "restriction": {
+            "type": "spell",
+            "subtype": "",
+            "list": [
+              "class:wizard"
+            ],
+            "level": "0",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Два заговора волшебника",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "BlBA3Y8uRzJHrcyd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:magic-warrior"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!vca1KKbZySh0YyBx"
+}

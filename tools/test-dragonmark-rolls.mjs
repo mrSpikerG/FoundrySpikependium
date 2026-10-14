@@ -181,7 +181,7 @@ for(const[name,fn]of [["dnd5e.preRollAbilityCheckV2",prepareDragonmarkCheck],["d
   ["dnd5e.postBuildSavingThrowRollConfig",buildFortitudeSave],["dnd5e.postSavingThrowRollConfiguration",finalizeFortitudeSave],
   ["dnd5e.preActivityConsumption",canConsumeFortitude]])assert(hooks.get(name).includes(fn));
 const registrations=new Map();globalThis.libWrapper={register(module,target,callback){assert(!registrations.has(target));registrations.set(target,callback);}};
-CONFIG.DND5E={activityTypes:{},sourceBooks:{},featureTypes:{feat:{subtypes:{}},class:{subtypes:{}}}};
+CONFIG.DND5E={activityConsumptionTypes:{},activityTypes:{},sourceBooks:{},featureTypes:{feat:{subtypes:{}},class:{subtypes:{}}}};
 globalThis.dnd5e={registry:{spellLists:{register(){}}}};init.at(-1)();
 const combinedEvaluate = registrations.get("CONFIG.Dice.D20Roll.buildEvaluate");
 const integratedSave = saver(true), integratedRoll = selectSave(integratedSave, "1d6"), integratedMessage = {};

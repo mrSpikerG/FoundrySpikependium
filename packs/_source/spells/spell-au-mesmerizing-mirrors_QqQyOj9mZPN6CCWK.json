@@ -1,0 +1,267 @@
+{
+  "_id": "QqQyOj9mZPN6CCWK",
+  "name": "Завораживающие зеркала",
+  "type": "spell",
+  "img": "icons/sundries/survival/mirror-plain.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: бард, волшебник, колдун, чародей.</em></p><p>Вы создаёте десятки иллюзорных зеркал, чтобы запутать не более трёх существ по вашему выбору, которых вы видите в пределах дистанции. Каждая цель совершает спасбросок Интеллекта. При провале цель получает [[/damage 7d6 type=psychic]]{7к6} урона психической энергией и становится &Reference[stunned]{Ошеломлённой}. Пока цель Ошеломлена, её скорость уменьшается вдвое. При успехе цель получает только половину урона.</p><p>Ошеломлённая цель повторяет спасбросок в конце каждого своего хода, заканчивая действие заклинания на себе при успехе.</p><p><strong>Применение.</strong> Выберите от одной до трёх целей. Эффекты и повторные спасброски обрабатываются отдельно для каждой цели. Урон применяется штатной карточкой. Иммунитет к Ошеломлению исключает этот эффект, а повторные накладывания одного заклинания не умножают штраф скорости.</p><h3>Действия</h3><ul><li>[[/item activity=lbsAOCRU5oWOcUO4]]{Завораживающие зеркала} · [[/damage activity=lbsAOCRU5oWOcUO4]]{Бросок урона} · [[/save activity=lbsAOCRU5oWOcUO4]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "40",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "mesmerizing-mirrors",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 8,
+    "materials": {
+      "value": "осколок зеркала",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "range": {
+      "value": "90",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "ill",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "3",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "lbsAOCRU5oWOcUO4": {
+        "_id": "lbsAOCRU5oWOcUO4",
+        "type": "save",
+        "name": "Завораживающие зеркала",
+        "img": "icons/sundries/survival/mirror-plain.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "GPglCRewG8asAdED",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "90",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "3",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 7,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "psychic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "GPglCRewG8asAdED",
+      "name": "Завораживающие зеркала",
+      "img": "icons/sundries/survival/mirror-plain.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.multiplier",
+            "value": "0.5",
+            "type": "multiply",
+            "priority": null,
+            "phase": "initial",
+            "_id": "1cWA4s9JAHRqyuAU"
+          }
+        ],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "stunned"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "mesmerizing-mirrors"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!QqQyOj9mZPN6CCWK.GPglCRewG8asAdED"
+    }
+  ],
+  "folder": "Bvw1Ei7rCkf9CFym",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-mesmerizing-mirrors"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!QqQyOj9mZPN6CCWK"
+}

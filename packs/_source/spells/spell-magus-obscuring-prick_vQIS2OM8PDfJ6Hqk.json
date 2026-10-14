@@ -1,0 +1,207 @@
+{
+  "_id": "vQIS2OM8PDfJ6Hqk",
+  "name": "Obscuring Prick",
+  "type": "spell",
+  "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+  "system": {
+    "description": {
+      "value": "<p>Существо в пределах 60 футов совершает спасбросок Мудрости. При провале получает [[/damage 1d4 type=piercing]]{1к4} колющего урона и до начала вашего следующего хода не может видеть именно вас, как если бы было ослеплено. Это не полная слепота: других существ оно продолжает видеть. На уровнях персонажа 5/11/17 урон равен [[/r 2d4]]{2к4}/[[/r 3d4]]{3к4}/[[/r 4d4]]{4к4}. Спасбросок и урон настроены; ограничение видимости только заклинателя и связанные броски пока учитываются вручную.</p><h3>Действия</h3><ul><li>[[/item activity=2S4EQ89iOteH7hPM]]{Ослепляющий укол} · [[/damage activity=2S4EQ89iOteH7hPM]]{Бросок урона} · [[/save activity=2S4EQ89iOteH7hPM]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "15",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-obscuring-prick",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 0,
+    "materials": {
+      "value": "серебряная игла",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "range": {
+      "value": "60",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "ill",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "2S4EQ89iOteH7hPM": {
+        "_id": "2S4EQ89iOteH7hPM",
+        "type": "save",
+        "name": "Ослепляющий укол",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "piercing"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "hc3epEyengDJxik7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:magus-obscuring-prick",
+      "originalName": "Obscuring Prick"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!vQIS2OM8PDfJ6Hqk"
+}

@@ -10,7 +10,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 // https://github.com/foundryvtt/dnd5e/blob/87e94dbd9f930135e0694cd7e7d49f210603cd2c/module/documents/activity/mixin.mjs
 // https://github.com/foundryvtt/dnd5e/blob/87e94dbd9f930135e0694cd7e7d49f210603cd2c/module/data/chat-message/fields/deltas-field.mjs
+// https://github.com/foundryvtt/dnd5e/blob/87e94dbd9f930135e0694cd7e7d49f210603cd2c/module/dice/basic-roll.mjs
+// https://github.com/foundryvtt/dnd5e/blob/87e94dbd9f930135e0694cd7e7d49f210603cd2c/module/applications/dice/d20-configuration-dialog.mjs
 // Only the private Core update call is injected as applyUpdates.
+export async function nativeBuildEvaluate(rolls, config={}, message={}) {
+    if ( config.evaluate !== false ) {
+      for ( const roll of rolls ) await roll.evaluate();
+    }
+  }
+export function nativeSaveRollFailure() {
+    if ( !this._evaluated ) return;
+    if ( !Number.isNumeric(this.options.target) ) return false;
+    return this.total < this.options.target;
+  }
+export function nativeD20FinalizeConfig(config, action) {
+    let advantageMode = CONFIG.Dice.D20Roll.ADV_MODE.NORMAL;
+    if ( action === "advantage" ) advantageMode = CONFIG.Dice.D20Roll.ADV_MODE.ADVANTAGE;
+    else if ( action === "disadvantage" ) advantageMode = CONFIG.Dice.D20Roll.ADV_MODE.DISADVANTAGE;
+    for ( const roll of config.rolls ?? [] ) {
+      roll.options ??= {};
+      roll.options.advantageMode = advantageMode;
+    }
+  }
 export function getDeltas(dataModel, updates) {
     updates = foundry.utils.flattenObject(updates);
     const deltas = [];

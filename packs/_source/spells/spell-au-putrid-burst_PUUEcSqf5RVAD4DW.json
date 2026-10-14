@@ -1,0 +1,354 @@
+{
+  "_id": "PUUEcSqf5RVAD4DW",
+  "name": "Гнойный взрыв",
+  "type": "spell",
+  "img": "icons/magic/unholy/orb-glowing-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, друид, колдун, чародей.</em></p><p>От вас исходит линия миазмов длиной 60 футов и шириной 10 футов в выбранном направлении. Все существа в линии совершают спасбросок Телосложения. При провале цель получает [[/damage 4d10 type=necrotic]]{4к10} урона некротической энергией и становится &Reference[poisoned]{Отравленной}, пока заклинание активно. При успехе начальный урон не наносится.</p><p>Существо, Отравленное этим заклинанием, получает [[/damage 2d10 type=poison]]{2к10} урона ядом в начале каждого своего хода. В конце каждого своего хода Отравленная цель повторяет спасбросок, заканчивая действие заклинания на себе при успехе.</p><p><strong>Использование ячейки большего уровня.</strong> Начальный урон увеличивается на [[/r 1d10]]{1к10} за каждый уровень ячейки выше четвёртого. Периодический урон остаётся [[/r 2d10]]{2к10}.</p><p><strong>Применение.</strong> Перед накладыванием выберите токены существ в линии; шаблон создаётся штатным действием. Заклинание не требует концентрации. Подключённый Мастер автоматически обрабатывает периодический урон и повторные спасброски. Иммунитет к состоянию Отравленный исключает продолжающийся эффект, но не начальный некротический урон.</p><h3>Действия</h3><ul><li>[[/item activity=3l8Wk9HDsLEcDhWn]]{Гнойный взрыв} · [[/damage activity=3l8Wk9HDsLEcDhWn]]{Бросок урона} · [[/save activity=3l8Wk9HDsLEcDhWn]]{Спасбросок цели}</li><li>[[/item activity=DUOUBOiAH5vMtVf4]]{Ядовитые миазмы (начало хода)} · [[/damage activity=DUOUBOiAH5vMtVf4]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "39",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "putrid-burst",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 4,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "nec",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "line",
+        "size": "60",
+        "width": "10",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "3l8Wk9HDsLEcDhWn": {
+        "_id": "3l8Wk9HDsLEcDhWn",
+        "type": "save",
+        "name": "Гнойный взрыв",
+        "img": "icons/magic/unholy/orb-glowing-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "9E8kJEFQZo2lUSex",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "line",
+            "size": "60",
+            "width": "10",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 4,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      },
+      "DUOUBOiAH5vMtVf4": {
+        "_id": "DUOUBOiAH5vMtVf4",
+        "type": "damage",
+        "name": "Ядовитые миазмы (начало хода)",
+        "img": "icons/magic/unholy/orb-glowing-purple.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Цель Отравлена именно этим заклинанием",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "poison"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "9E8kJEFQZo2lUSex",
+      "name": "Гнойный взрыв — Отравлен",
+      "img": "icons/magic/unholy/orb-glowing-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "poisoned"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "putrid-burst"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!PUUEcSqf5RVAD4DW.9E8kJEFQZo2lUSex"
+    }
+  ],
+  "folder": "DajrrvlBtzQLhOs9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-putrid-burst"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!PUUEcSqf5RVAD4DW"
+}

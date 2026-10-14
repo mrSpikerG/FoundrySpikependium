@@ -1,0 +1,94 @@
+{
+  "_id": "mewk2GoCMvclsOIk",
+  "name": "Архимагус: Интеллект и Ловкость +2",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Интеллект и Ловкость увеличиваются на 2, максимум до 23. Это два фиксированных увеличения; свободного распределения или замены чертой нет.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-archmagus-dex",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": 20,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "WKJbYxP0y7Kxad6n",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 0,
+          "fixed": {
+            "str": 0,
+            "dex": 2,
+            "con": 0,
+            "int": 2,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "recommendation": null,
+          "max": 23
+        },
+        "value": {},
+        "level": 0,
+        "title": "Интеллект и Ловкость +2 (максимум 23)",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "SeLB7GqlEKAjEW3H",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "magus:archmagus-dex"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!mewk2GoCMvclsOIk"
+}

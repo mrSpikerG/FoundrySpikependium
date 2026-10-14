@@ -1,0 +1,193 @@
+import { spell, folder, ref, journal, equipment, npc } from "../../tools/lib/docs.mjs";
+import { attack, save, damage, heal, utility, summon, dmg, effect } from "../../tools/lib/core.mjs";
+export const MAGUS_NEW_SPELLS = [
+  ["animate-shield", "Оживление щита", "Animate Shield", 2, "trs", 12, "magus"],
+  ["animate-weapon", "Оживление оружия", "Animate Weapon", 2, "trs", 13, "magus"],
+  ["arcane-invigoration", "Арканное подкрепление", "Arcane Invigoration", 2, "abj", 13, "magus"],
+  ["assess-enemy", "Оценка врага", "Assess Enemy", 4, "div", 13, "magus", "ranger"],
+  ["bitter-wind", "Горький ветер", "Bitter Wind", 0, "nec", 13, "cleric", "druid", "warlock"],
+  ["carrionette", "Марионетка тлена", "Carrionette", 2, "nec", 13, "warlock"],
+  ["cascade-of-hours", "Каскад часов", "Cascade of Hours", 4, "trs", 14, "sorcerer", "wizard"],
+  ["demiplanar-pitch", "Бросок из демиплана", "Demiplanar Pitch", 0, "con", 14, "sorcerer", "wizard"],
+  ["ensorcelled-strike", "Зачарованный удар", "Ensorcelled Strike", 1, "evo", 14, "magus"],
+  ["forced-hesitation", "Вынужденная заминка", "Forced Hesitation", 1, "enc", 14, "bard", "ranger"],
+  ["give-life", "Передача жизни", "Give Life", 0, "trs", 14, "druid"],
+  ["grave-bolt", "Могильный разряд", "Grave Bolt", 1, "nec", 14, "cleric", "warlock", "wizard"],
+  ["grave-grasp", "Могильная хватка", "Grave Grasp", 1, "nec", 15, "warlock", "wizard"],
+  ["hateful-haunting", "Злобное наваждение", "Hateful Haunting", 0, "nec", 15, "cleric", "warlock"],
+  ["misfortunate-missile", "Снаряд несчастья", "Misfortunate Missile", 0, "div", 15, "bard", "sorcerer", "wizard"],
+  ["obscuring-prick", "Ослепляющий укол", "Obscuring Prick", 0, "ill", 15, "sorcerer", "warlock", "wizard"],
+  ["overexposure", "Уязвимость к критическим ударам", "Overexposure", 0, "div", 15, "bard", "cleric", "sorcerer", "wizard"],
+  ["phantasmal-feint", "Призрачный финт", "Phantasmal Feint", 0, "ill", 15, "bard", "sorcerer", "wizard"],
+  ["provoke", "Провокация", "Provoke", 1, "enc", 16, "magus"],
+  ["reflect-magic", "Отражение магии", "Reflect Magic", 5, "abj", 16, "bard", "sorcerer", "wizard"],
+  ["righteous-incitement", "Праведный вызов", "Righteous Incitement", 0, "evo", 16, "cleric"],
+  ["spell-aegis", "Эгида заклинаний", "Spell Aegis", 1, "abj", 16, "magus", "ranger", "sorcerer", "wizard"],
+  ["strike-order", "Приказ атаковать", "Strike Order", 3, "enc", 16, "bard", "magus", "paladin"],
+  ["thornhold", "Терновый покров", "Thornhold", 0, "abj", 17, "druid"],
+  ["towerfall-tactic", "Тактика падения башни", "Towerfall Tactic", 1, "abj", 17, "magus"],
+  ["waypoint", "Путевая метка", "Waypoint", 3, "con", 17, "bard", "ranger", "wizard"],
+  ["weapon-aegis", "Эгида оружия", "Weapon Aegis", 1, "abj", 17, "magus", "paladin", "sorcerer", "wizard"]
+];
+const ICON = "icons/magic/symbols/runes-star-pentagon-magenta";
+const key = id => `spell:magus-${id}`;
+const aid = (id, action) => `magus-spell:${id}:${action}`;
+const dice = (formula, type, cantrip = false) => dmg(formula, type, cantrip ? { cantrip: true } : { scale: 1 });
+const noCost = { activation: "", spellSlot: false };
+
+export function define() {
+  const make = (id, desc, other = {}) => {
+    const row = MAGUS_NEW_SPELLS.find(r => r[0] === id); if (!row) throw Error(id);
+    const [, name, en, level, school, page] = row;
+    return spell({ key: key(id), identifier: `magus-${id}`, name, en, level, school, page, book: "MAGUS-PT3", img: ICON,
+      folder: folder("spells", `${level ? `${level} уровень` : "Заговоры"}/Магус (Playtest 3)`), components: "ВС", desc, ...other });
+  };
+  for (const [id, title, baseAC, page] of [["shield", "Оживлённый щит", 12, 12], ["weapon", "Оживлённое оружие", 10, 13]]) {
+    npc({ key: `actor:magus-animated-${id}`, name: title, book: "MAGUS-PT3", page, folder: folder("creatures", "Магус (Playtest 3)/Оживлённые предметы"), img: ICON,
+      size: "sm", creatureType: "construct", movement: { walk: 0 }, ac: baseAC, hp: 20, hpFormula: "", cr: null,
+      abilities: { str: 10, dex: 10, con: 10, int: 1, wis: 10, cha: 1 }, di: ["poison", "psychic"],
+      ci: ["blinded", "charmed", "deafened", "exhaustion", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"],
+      bio: `Оживлённый предмет из заклинания [[${id === "shield" ? "Оживление щита" : "Оживление оружия"}]]. КД равен ${baseAC} + модификатор заклинателя; 20 хитов + 10 за каждый уровень ячейки выше 2-го. Бонусным действием заклинателя может пролететь до 30 футов. Самостоятельного перемещения своим ходом заклинание не предоставляет. Исчезает после минуты либо при 0 хитов; досрочное завершение отслеживается вручную.`,
+      items: [] });
+  }
+  make("animate-shield", `Оживите щит-компонент в свободном пространстве в пределах 30 футов на 1 минуту, без концентрации. Это Маленький конструкт: КД 12 + модификатор заклинательной характеристики, 20 хитов, иммунитет к яду, психическому урону и всем состояниям. Выбранные вами существа в пределах 5 футов от него получают +2 к КД, если сами не используют щит. Бонусным действием в последующие ходы можно переместить щит полётом до 30 футов. При 0 хитов заклинание заканчивается.
+
+**Высокая ячейка.** +10 хитов за каждый уровень выше 2-го.
+
+**Foundry.** Штатный призыв создаёт щит с масштабируемыми КД и хитами. Условия ауры, выбор защищённых существ, командное перемещение и прекращение при 0 хитов пока контролируются вручную.`, {
+    activation: "bonus", range: 30, duration: "minute", durationValue: 1, components: "ВСМ", materials: "щит стоимостью не менее 1 зм", cost: 1,
+    acts: [summon(aid("animate-shield", "cast"), [{ uuid: ref("actor:magus-animated-shield") }], { name: "Оживить щит", activation: "bonus", range: 30, duration: "minute", durationValue: 1, ac: "@mod", hp: "10 * (@item.level - 2)", types: ["construct"], sizes: ["sm"] }),
+      utility(aid("animate-shield", "move"), { name: "Команда: переместить щит (вручную)", activation: "bonus", range: 30, spellSlot: false })]
+  });
+  make("animate-weapon", `Оживите оружие-компонент в свободном пространстве в пределах 30 футов на 1 минуту, без концентрации. Это Маленький конструкт: КД 10 + модификатор заклинательной характеристики, 20 хитов, иммунитет к яду, психическому урону и всем состояниям. В начале каждого вашего хода оружие совершает одну атаку по выбранной вами цели: досягаемость 5 футов для обычного рукопашного оружия, 10 для оружия с досягаемостью, обычная дистанция для дальнобойного или метательного. Используется ваш бонус атаки заклинанием; к урону прибавляется ваш модификатор заклинательной характеристики. Бонусным действием в последующие ходы можно переместить его полётом до 30 футов. При 0 хитов заклинание заканчивается.
+
+**Высокая ячейка.** +10 хитов за каждый уровень выше 2-го.
+
+**Foundry.** Призыв создаёт конструкт с КД и хитами. Перенос именно выбранного оружия, его урона/дистанции и атака в начале хода ещё настраиваются; пока добавьте исходное оружие призванному существу и установите нужные бонусы вручную.`, {
+    activation: "bonus", range: 30, duration: "minute", durationValue: 1, components: "ВСМ", materials: "оружие стоимостью не менее 1 зм", cost: 1,
+    acts: [summon(aid("animate-weapon", "cast"), [{ uuid: ref("actor:magus-animated-weapon") }], { name: "Оживить оружие", activation: "bonus", range: 30, duration: "minute", durationValue: 1, ac: "@mod", hp: "10 * (@item.level - 2)", types: ["construct"], sizes: ["sm"] }),
+      utility(aid("animate-weapon", "move"), { name: "Команда: переместить оружие (вручную)", activation: "bonus", range: 30, spellSlot: false })]
+  });
+  for (const [id, isTemp] of [["arcane-invigoration", true], ["give-life", false]]) {
+    make(id, isTemp ? `Потратьте и бросьте одну или две свои непотраченные кости хитов. Вы получаете временные хиты в размере суммы бросков + модификатор заклинательной характеристики. За каждый уровень ячейки выше 2-го можно потратить ещё одну кость. При мультиклассе разрешено сочетать разные размеры костей. Выбор, расход и бросок костей выполняются в окне накладывания.`
+      : `Касанием передайте жизненную силу другому существу: потратьте и бросьте одну свою кость хитов, цель восстанавливает столько же хитов. Модификатор Телосложения или заклинательной характеристики не прибавляется. На уровнях персонажа 5/11/17 можно потратить до 2/3/4 костей соответственно; размеры костей можно сочетать. Выбор и расход выполняются в окне накладывания; лечение применяется из карточки результата.`, {
+      activation: isTemp ? "bonus" : "action", rangeUnits: isTemp ? "self" : "touch",
+      acts: [heal(aid(id, "cast"), { name: isTemp ? "Потратить кости и получить временные хиты" : "Потратить свои кости и передать жизнь", activation: isTemp ? "bonus" : "action", self: isTemp, touch: !isTemp, count: 1, affects: isTemp ? "self" : "creature", formula: "0", temp: isTemp,
+        consume: [{ type: "spikependiumMagusHitDice", target: "", value: "1", scaling: {} }] })]
+    });
+  }
+  const assess = effect("magus:assess-enemy", { name: "Оценка врага: выбранная цель", transfer: false, seconds: 60 });
+  make("assess-enemy", `Выберите видимое существо в пределах 60 футов. Вы узнаёте все его иммунитеты, сопротивления и уязвимости к видам урона. На 1 минуту вы также знаете, окровавлена ли цель; ваши атаки против неё критические на 19–20; когда она атакует вас, вы можете реакцией дать этой атаке помеху. Накладывание создаёт отметку цели на минуту. Мастер сообщает скрытые сведения; критический диапазон только против этой цели и помеха атаке пока отмечаются вручную.`, {
+    activation: "bonus", range: 60, components: "С", duration: "minute", durationValue: 1, effects: [assess],
+    acts: [utility(aid("assess-enemy", "cast"), { name: "Оценить видимого врага", activation: "bonus", range: 60, count: 1, affects: "creature", duration: "minute", durationValue: 1, effects: [assess._id] })]
+  });
+  make("bitter-wind", `Существо в пределах 30 футов совершает спасбросок Телосложения. При провале получает 1к8 урона холодом и теряет все сопротивления урону до начала вашего следующего хода либо до получения урона того вида, к которому обычно имеет сопротивление. На уровнях персонажа 5/11/17 урон равен 2к8/3к8/4к8. Спасбросок и урон настроены; снятие и точное восстановление сопротивлений после первого подходящего урона пока выполняются вручную.`, {
+    range: 30, acts: [save(aid("bitter-wind", "cast"), { name: "Горький ветер", activation: "action", range: 30, count: 1, affects: "creature", ability: "con", damage: [dice("1d8", "cold", true)], onSave: "none" })]
+  });
+  make("carrionette", `Реакция: видимое существо в пределах 60 футов падает до 0 хитов или умирает. Если оно ещё живо, оно немедленно умирает. В начале вашего следующего хода вы без действия указываете ему, куда двигаться и какую из его скоростей использовать; бонусным действием можно приказать выполнить одно действие из его статблока, кроме накладывания заклинания. Заклинание заканчивается в конце этого вашего хода. Оно не действует на конструктов, нежить и существ с ПО 7 или выше.
+
+**Высокая ячейка.** Предельный допустимый ПО возрастает на 3 за каждый уровень выше 2-го: при ячейке 2-го уровня допустим ПО до 6 включительно.
+
+Смерть, управление существом, выбор допустимого действия и срок контроля пока контролируются Мастером; повторное заклинание для команды не требуется.`, {
+    activation: "reaction", condition: "Видимое существо падает до 0 хитов или умирает", range: 60, components: "ВСМ", materials: "крестовина кукловода", duration: "round", durationValue: 1,
+    acts: [utility(aid("carrionette", "cast"), { name: "Подчинить умирающее тело", activation: "reaction", condition: "Цель падает до 0 хитов или умирает", range: 60, count: 1, affects: "creature" }),
+      utility(aid("carrionette", "command"), { name: "Команда телу: действие (вручную)", activation: "bonus", spellSlot: false })]
+  });
+  make("cascade-of-hours", "За 1 минуту накладывания вы оказываетесь в кармане времени и выполняете одну задачу длительностью не более 8 часов, не требующую взаимодействия с другим существом: например, путешествие через город, изготовление предмета или чтение книги. Внутри нельзя получать короткий или продолжительный отдых. Ход мирового времени, перемещение и результат задачи определяет Мастер; кнопка учитывает только накладывание.", {
+    activation: "minute", activationValue: 1, rangeUnits: "self", acts: [utility(aid("cascade-of-hours", "cast"), { name: "Войти в карман времени", activation: "minute", activationValue: 1, self: true })]
+  });
+  make("demiplanar-pitch", "Совершите дальнобойную атаку заклинанием по видимому существу в пределах 90 футов. При попадании нанесите 1к8 дробящего, колющего или рубящего урона по своему выбору. Вы метаете случайный предмет из содержимого чьей-то Сумки хранения; после атаки он возвращается в свой демиплан. На уровнях персонажа 5/11/17 урон равен 2к8/3к8/4к8. Выберите один из трёх способов атаки; инвентарь посторонних Сумок хранения не изменяется.", {
+    range: 90, components: "С", acts: ["bludgeoning", "piercing", "slashing"].map((type, i) => attack(aid("demiplanar-pitch", type), { name: ["Дробящий бросок", "Колющий бросок", "Рубящий бросок"][i], activation: "action", range: 90, count: 1, affects: "creature", classification: "spell", attackType: "ranged", includeBase: false, damage: [dice("1d8", type, true)] }))
+  });
+  make("ensorcelled-strike", `При накладывании совершите безоружный удар или атаку оружием по существу. При попадании нанесите обычный урон; до конца вашего следующего хода цель зачарована: её спасброски против заклинаний совершаются с помехой, атаки заклинаниями против неё — с преимуществом. Зачарование заканчивается раньше, если цель провалит спасбросок против заклинания или по ней попадёт атака заклинанием. Это особое зачарование, а не состояние Очарованный.
+
+**Высокая ячейка.** При ячейке 2-го уровня или выше именно рукопашная атака оружием дополнительно наносит по 1к6 силового урона за каждый уровень выше 1-го.
+
+Выбор исходного оружия/безоружного удара, объединение атаки с накладыванием, добавочный урон и прекращение зачарования пока выполняются вручную. Компоненты взяты из отдельного описания заклинания (С), а не противоречащей ему пометки М в таблице.`, {
+    activation: "bonus", rangeUnits: "self", components: "С", acts: [utility(aid("ensorcelled-strike", "cast"), { name: "Зачаровать удар — затем выполнить исходную атаку", activation: "bonus", self: true })]
+  });
+  make("forced-hesitation", "Реакция на бросок инициативы видимого существа в пределах 60 футов. Цель совершает спасбросок Мудрости; при провале получает 3к4 психического урона. Её инициатива уменьшается на наибольший результат среди костей этого урона. За каждый уровень ячейки выше 1-го урон увеличивается на 1к4. Спасбросок и урон настроены; инициативу измените по наибольшей уже выпавшей кости, не бросая её заново.", {
+    activation: "reaction", condition: "Видимое существо бросает инициативу", range: 60,
+    acts: [save(aid("forced-hesitation", "cast"), { name: "Вынужденная заминка", activation: "reaction", condition: "Цель совершает бросок инициативы", range: 60, count: 1, affects: "creature", ability: "wis", damage: [dice("3d4", "psychic")], onSave: "none" })]
+  });
+  const graveHeal = heal(aid("grave-bolt", "heal"), { name: "Могильный разряд — лечить нежить", activation: "action", range: 30, count: 1, affects: "creature", formula: "1d8" }); graveHeal.healing.scaling = { mode: "whole", number: 1, formula: "" };
+  make("grave-bolt", "Выберите видимую цель в пределах 30 футов. Нежить восстанавливает 1к8 хитов; любая другая цель получает 1к8 некротического урона. Если гуманоид умирает от этого урона, он немедленно превращается в Зомби, который начинает действовать с начала следующего раунда. За каждый уровень ячейки выше 1-го урон или лечение увеличивается на 1к8. Выберите подходящее действие урона или лечения; создание зомби и его инициатива пока выполняются вручную. В оригинале нет ни атаки, ни спасброска — они не добавлены.", {
+    range: 30, components: "ВСМ", materials: "флакон зловонной болотной грязи",
+    acts: [damage(aid("grave-bolt", "damage"), { name: "Могильный разряд — урон живой цели", activation: "action", range: 30, count: 1, affects: "creature", damage: [dice("1d8", "necrotic")] }), graveHeal]
+  });
+  const grasp = effect("magus:grave-grasp", { name: "Могильная хватка: опутан", transfer: false, statuses: ["restrained"], seconds: 60, flags: { spikependium: { magusGraveGrasp: true } } });
+  make("grave-grasp", "Из земли или иной поверхности в пределах 60 футов появляются гнилые руки. Совершите дальнобойную атаку заклинанием по существу в пределах 5 футов от выбранной поверхности. При попадании цель опутана и не может восстанавливать хиты, пока опутана этим заклинанием. Сама цель или другое существо в пределах 5 футов может действием освободить её, прекратив опутывание без проверки. За каждый уровень ячейки выше 1-го можно выбрать ещё одну цель. Штатная атака и профиль Опутан настроены; активный профиль блокирует штатное восстановление хитов, но не временные хиты. Точный выбор дополнительных целей и освобождение пока контролируются вручную.", {
+    range: 60, concentration: true, duration: "minute", durationValue: 1, effects: [grasp],
+    acts: [attack(aid("grave-grasp", "cast"), { name: "Могильная хватка", activation: "action", range: 60, count: 1, affects: "creature", classification: "spell", attackType: "ranged", includeBase: false, duration: "minute", durationValue: 1, concentration: true, effects: [grasp._id] })]
+  });
+  make("hateful-haunting", "Существо в пределах 60 футов, которое не оглохло, совершает спасбросок Харизмы. При провале получает 1к4 психического урона и ещё 1к4 психического урона при первом провале проверки характеристики или броска атаки до конца своего следующего хода. На уровнях персонажа 5/11/17 оба значения урона равны 2к4/3к4/4к4. Для вторичного урона используйте отдельную кнопку без новой ячейки; событие провала, однократность и срок пока отслеживаются вручную.", {
+    range: 60, components: "В", acts: [save(aid("hateful-haunting", "cast"), { name: "Злобное наваждение", activation: "action", range: 60, count: 1, affects: "creature", ability: "cha", damage: [dice("1d4", "psychic", true)], onSave: "none" }),
+      damage(aid("hateful-haunting", "repeat"), { name: "Первый провал — дополнительный урон (однократно)", ...noCost, damage: [dice("1d4", "psychic", true)] })]
+  });
+  make("misfortunate-missile", "Дальнобойная атака заклинанием по видимому существу в пределах 60 футов. При попадании — 1к6 силового урона. Один раз до начала вашего следующего хода, сразу после испытания к20 цели, вы можете реакцией бросить 1к4 и вычесть результат из этого испытания. На уровнях персонажа 5/11/17 основной урон равен 2к6/3к6/4к6; к4 штрафа не увеличивается. Событие подходящего испытания, изменение исходного результата и однократность реакции пока отслеживаются вручную.", {
+    range: 60, components: "ВСМ", materials: "клочок шерсти чёрного кота",
+    acts: [attack(aid("misfortunate-missile", "cast"), { name: "Снаряд несчастья", activation: "action", range: 60, count: 1, affects: "creature", classification: "spell", attackType: "ranged", includeBase: false, damage: [dice("1d6", "force", true)] }),
+      utility(aid("misfortunate-missile", "reaction"), { name: "Несчастье — вычесть к4 из исходного испытания", activation: "reaction", spellSlot: false, roll: "1d4", rollName: "Штраф испытания" })]
+  });
+  make("obscuring-prick", "Существо в пределах 60 футов совершает спасбросок Мудрости. При провале получает 1к4 колющего урона и до начала вашего следующего хода не может видеть именно вас, как если бы было ослеплено. Это не полная слепота: других существ оно продолжает видеть. На уровнях персонажа 5/11/17 урон равен 2к4/3к4/4к4. Спасбросок и урон настроены; ограничение видимости только заклинателя и связанные броски пока учитываются вручную.", {
+    range: 60, components: "ВСМ", materials: "серебряная игла", acts: [save(aid("obscuring-prick", "cast"), { name: "Ослепляющий укол", activation: "action", range: 60, count: 1, affects: "creature", ability: "wis", damage: [dice("1d4", "piercing", true)], onSave: "none" })]
+  });
+  make("overexposure", "Видимое существо в пределах 120 футов совершает спасбросок Харизмы. При провале получает 1к6 урона излучением и становится уязвимым к критическим ударам: атаки против него критические на 19–20 до первого полученного критического удара или начала вашего следующего хода. На уровнях персонажа 5/11/17 урон равен 2к6/3к6/4к6. Это не уязвимость к виду урона. Условный диапазон критического удара и его досрочное прекращение пока отслеживаются вручную.", {
+    range: 120, components: "ВСМ", materials: "двадцатигранная кость", acts: [save(aid("overexposure", "cast"), { name: "Уязвимость к критическим ударам", activation: "action", range: 120, count: 1, affects: "creature", ability: "cha", damage: [dice("1d6", "radiant", true)], onSave: "none" })]
+  });
+  make("phantasmal-feint", "Рукопашная атака заклинанием игрушечным оружием по существу в пределах 10 футов. При попадании — 1к4 психического урона; следующая атака против этой цели до начала вашего следующего хода совершается с преимуществом. На уровнях персонажа 5/11/17 урон равен 2к4/3к4/4к4. Преимущество относится ровно к одной следующей атаке, а не ко всем атакам; пока отметьте его в соответствующем окне броска.", {
+    range: 10, components: "СМ", materials: "игрушечное оружие", acts: [attack(aid("phantasmal-feint", "cast"), { name: "Призрачный финт", activation: "action", range: 10, count: 1, affects: "creature", classification: "spell", attackType: "melee", includeBase: false, damage: [dice("1d4", "psychic", true)] })]
+  });
+  make("provoke", "Существо в пределах 10 футов, не находящееся в состояниях Ослеплённый и Оглохший, спровоцировано вами на время концентрации, до 1 минуты. Его атаки по существам, кроме вас, совершаются с помехой. Когда оно атакует другое существо, вы можете реакцией атаковать его оружием: обычный урон + 1к6 психического. При ячейке 2-го уровня или выше добавочный урон увеличивается на 1к6 за каждый уровень выше 1-го. В тексте не предусмотрен спасбросок. Условная помеха, подходящая реакция и объединённая атака оружием пока учитываются вручную.", {
+    activation: "bonus", range: 10, components: "В", concentration: true, duration: "minute", durationValue: 1,
+    acts: [utility(aid("provoke", "cast"), { name: "Спровоцировать существо", activation: "bonus", range: 10, count: 1, affects: "creature", concentration: true, duration: "minute", durationValue: 1 })]
+  });
+  make("reflect-magic", "Реакция, когда вы становитесь целью заклинания. Если его уровень не выше 5-го, перенаправьте его, выбрав новую цель или область, затем разрешите заклинание обычным образом. При более высокой ячейке можно отразить заклинание, уровень которого не выше уровня потраченной ячейки. Заклинание не даёт отдельного спасброска и не наносит урон. Комплект зеркала расходуется штатной операцией: перед использованием укажите запас материалов. Проверка исходного заклинания и перенаправление его целей/области пока выполняются Мастером.", {
+    activation: "reaction", condition: "Вы становитесь целью заклинания", rangeUnits: "self", components: "ВСМ", materials: "полированное серебряное зеркало стоимостью не менее 100 зм; расходуется", cost: 100, consumed: true,
+    acts: [utility(aid("reflect-magic", "cast"), { name: "Отразить исходное заклинание", activation: "reaction", condition: "Вы становитесь целью подходящего заклинания", self: true, consume: [{ type: "spikependiumMaterial", target: "", value: "1", scaling: {} }] })]
+  });
+  make("righteous-incitement", "Видимое существо в пределах 30 футов совершает спасбросок Мудрости. При провале получает 1к6 урона излучением. Если до конца своего следующего хода оно ни разу не выберет вас целью атаки, получает ещё 1к6 психического урона. На уровнях персонажа 5/11/17 оба значения равны 2к6/3к6/4к6. Дополнительный урон имеет отдельную кнопку без новой ячейки; условие отсутствия атаки, срок и однократность пока отслеживаются вручную.", {
+    range: 30, acts: [save(aid("righteous-incitement", "cast"), { name: "Праведный вызов", activation: "action", range: 30, count: 1, affects: "creature", ability: "wis", damage: [dice("1d6", "radiant", true)], onSave: "none" }),
+      damage(aid("righteous-incitement", "repeat"), { name: "Не атаковал заклинателя — психический урон", ...noCost, damage: [dice("1d6", "psychic", true)] })]
+  });
+  for (const [id, types, material] of [["spell-aegis", "кислотой, холодом, огнём, силовым полем, электричеством, некротической энергией, психической энергией, излучением и звуком", "черепаший панцирь"], ["weapon-aegis", "дробящим, колющим, рубящим уроном и ядом", "железная стружка"]]) {
+    make(id, `Создайте магическую эгиду с 3к8 хитов в свободном пространстве в пределах 60 футов, на время концентрации до 10 минут. Когда существо в пределах 10 футов от эгиды получает урон ${types}, вы можете перенести этот урон на эгиду. Если её хиты падают до 0, она разрушается и заклинание заканчивается. Бонусным действием в каждый свой ход можно переместить эгиду в другое свободное пространство в пределах 60 футов от вас. За каждый уровень ячейки выше 1-го хиты эгиды увеличиваются на 1к8.
+
+Бросок запаса хитов настроен; это запас отдельной эгиды, не лечение и не временные хиты персонажа. Размещение, учёт хитов, перехват урона, перемещение и прекращение при 0 пока выполняются вручную.`, {
+      range: 60, components: "СМ", materials: material, concentration: true, duration: "minute", durationValue: 10,
+      acts: [utility(aid(id, "cast"), { name: "Создать эгиду — запас хитов", activation: "action", range: 60, concentration: true, duration: "minute", durationValue: 10, roll: "(2 + @item.level)d8", rollName: "Хиты эгиды" }),
+        utility(aid(id, "move"), { name: "Переместить эгиду (вручную)", activation: "bonus", range: 60, spellSlot: false })]
+    });
+  }
+  make("strike-order", "Видимое существо в пределах 60 футов, способное слышать и понимать вас, совершает спасбросок Мудрости. При провале оно немедленно тратит реакцию на атаку по выбранному вами другому существу в досягаемости или обычной дистанции доступной атаки. Иммунитет к Очарованному даёт преимущество этому спасброску, а не автоматический иммунитет заклинанию. Если у цели нет реакции или подходящего существа для атаки, заклинание не действует. При ячейке 6-го уровня или выше длительность становится «Концентрация, до 1 минуты»; в последующие ходы можно бонусным действием повторять эффект по той же или другой подходящей цели. Повышенная длительность, условное преимущество, реакция цели и выбор её атаки пока контролируются вручную.", {
+    activation: "bonus", range: 60, acts: [save(aid("strike-order", "cast"), { name: "Приказать атаковать — ячейка 3–5", activation: "bonus", range: 60, count: 1, affects: "creature", ability: "wis", onSave: "none" }),
+      save(aid("strike-order", "concentration"), { name: "Приказать атаковать — ячейка 6+ (концентрация)", activation: "bonus", range: 60, count: 1, affects: "creature", ability: "wis", onSave: "none", duration: "minute", durationValue: 1, concentration: true })]
+  });
+  const thorns = heal(aid("thornhold", "cast"), { name: "Получить временные хиты тернового покрова", activation: "action", self: true, formula: "1d4", temp: true }); thorns.healing.scaling = { mode: "whole", number: null, formula: "" };
+  make("thornhold", "Вы получаете 1к4 временных хитов. Когда рукопашная атака существа лишает вас временных хитов именно от этого заклинания, оно получает колющий урон, равный числу этих потерянных временных хитов. Остаток этих временных хитов исчезает в конце вашего следующего хода. На уровнях персонажа 5/11/17 запас равен 2к4/3к4/4к4. Штатная карточка выдаёт временные хиты; принадлежность запаса, ответный урон из фактической потери и снятие оставшегося запаса по сроку пока контролируются вручную.", {
+    rangeUnits: "self", duration: "round", durationValue: 1, acts: [thorns]
+  });
+  const prone = effect("magus:towerfall-prone", { name: "Тактика падения башни: сбит с ног", transfer: false, statuses: ["prone"] });
+  make("towerfall-tactic", "Реакция на получение урона от атаки. Вы получаете временные хиты в размере потерянных обычных хитов, максимум 10. Нападавший совершает спасбросок Силы; при провале сбит с ног и его скорость равна 0 до конца текущего хода. Остаток временных хитов исчезает через минуту. За каждый уровень ячейки выше 1-го предел временных хитов увеличивается на 10. Кнопка создаёт спасбросок и профиль Сбитый с ног для нападавшего. Фактические потерянные обычные хиты после сопротивлений/временных хитов, выдача/исчезновение временных хитов и нулевая скорость до конца именно текущего хода пока учитываются вручную.", {
+    activation: "reaction", condition: "Вы получаете урон от атаки", rangeUnits: "self", components: "М", materials: "щит стоимостью не менее 1 зм", cost: 1, effects: [prone],
+    acts: [save(aid("towerfall-tactic", "cast"), { name: "Опрокинуть нападавшего", activation: "reaction", condition: "Вы получили урон от атаки", rangeUnits: "special", affectsSpecial: "Существо, совершившее исходную атаку", count: 1, affects: "creature", ability: "str", onSave: "none", effects: [prone._id] })]
+  });
+  make("waypoint", "За минуту накладывания оставьте невидимую магическую метку в занимаемом вами месте. На протяжении 8 часов можно выполнить минутный ритуал и телепортировать себя и согласных видимых существ в пределах 10 футов к этой метке; число спутников — 1 + модификатор заклинательной характеристики, минимум 1. Если место занято, прибудьте в ближайшее свободное. После возвращения заклинание заканчивается. При ячейке 5–6-го уровня метка действует 24 часа, при ячейке 7-го или выше — 10 дней. Это не свойство Ритуал для бесплатного накладывания: минутный ритуал возвращения — часть эффекта. Хранение точки, усиленная длительность, согласие спутников и перенос между сценами пока выполняются вручную; возвращение не требует новой ячейки.", {
+    activation: "minute", activationValue: 1, rangeUnits: "self", components: "ВСМ", materials: "катушка ниток или буханка хлеба", duration: "hour", durationValue: 8,
+    acts: [utility(aid("waypoint", "cast"), { name: "Оставить путевую метку", activation: "minute", activationValue: 1, self: true, duration: "hour", durationValue: 8 }),
+      utility(aid("waypoint", "return"), { name: "Ритуал возвращения к метке (вручную)", activation: "minute", activationValue: 1, spellSlot: false, range: 10, affects: "creature" })]
+  });
+  const items = [["astrolabe", "Астролябия", 1, 10, "Небольшой металлический прибор: карта звёзд и инструмент для астрономических и навигационных задач."],
+    ["skull", "Память о смерти: череп гуманоида", 2, 1, "Физический останок умершего гуманоида, используемый как трофей, знак памяти или оккультный предмет."],
+    ["teeth", "Память о смерти: ожерелье из зубов", 1, 2, "Ожерелье из зубов умершего гуманоида."],
+    ["organ", "Память о смерти: орган в сосуде", 5, 5, "Сохранённый орган умершего гуманоида в сосуде."]];
+  for (const [id, name, weight, price, desc] of items) equipment({ key: `item:magus:${id}`, name, identifier: `magus-${id}`, book: "MAGUS-PT3", page: 12,
+    folder: folder("items", "Магус (Playtest 3)/Фокусировки"), img: ICON, weight, price, properties: ["foc"],
+    priceNote: "Цена и вес прямо указаны в таблице приложения A.", weightNote: "", desc: `${desc} Немагическое снаряжение. Может использоваться как фокусировка только персонажем, чьё умение разрешает этот вид фокусировки.` });
+  for (const [cls, label] of Object.entries({ bard: "барда", cleric: "жреца", druid: "друида", paladin: "паладина", ranger: "следопыта", sorcerer: "чародея", warlock: "колдуна", wizard: "волшебника" })) {
+    const rows = MAGUS_NEW_SPELLS.filter(r => r.slice(6).includes(cls));
+    journal({ key: `journal:magus-spells-${cls}`, name: `Магус: дополнение списка ${label}`, folder: folder("rules", "Магус (Playtest 3)/Списки заклинаний"), pages: [
+      { name: "Новые заклинания приложения B", spells: { type: "class", identifier: cls, uuids: rows.map(r => ref(key(r[0]))) } }
+    ] });
+  }
+}

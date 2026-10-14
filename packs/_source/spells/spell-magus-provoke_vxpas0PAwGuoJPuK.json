@@ -1,0 +1,180 @@
+{
+  "_id": "vxpas0PAwGuoJPuK",
+  "name": "Provoke",
+  "type": "spell",
+  "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+  "system": {
+    "description": {
+      "value": "<p>Существо в пределах 10 футов, не находящееся в состояниях Ослеплённый и Оглохший, спровоцировано вами на время концентрации, до 1 минуты. Его атаки по существам, кроме вас, совершаются с помехой. Когда оно атакует другое существо, вы можете реакцией атаковать его оружием: обычный урон + [[/r 1d6]]{1к6} психического. При ячейке 2-го уровня или выше добавочный урон увеличивается на [[/r 1d6]]{1к6} за каждый уровень выше 1-го. В тексте не предусмотрен спасбросок. Условная помеха, подходящая реакция и объединённая атака оружием пока учитываются вручную.</p><h3>Действия</h3><ul><li>[[/item activity=cUHjPwUd7i2j7qdJ]]{Спровоцировать существо}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "16",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-provoke",
+    "activation": {
+      "type": "bonus",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 1,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "concentration"
+    ],
+    "range": {
+      "value": "10",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "enc",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "cUHjPwUd7i2j7qdJ": {
+        "_id": "cUHjPwUd7i2j7qdJ",
+        "type": "utility",
+        "name": "Спровоцировать существо",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "effects": [],
+        "range": {
+          "value": "10",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "dfSvlGQZbtiT0B1k",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:magus-provoke",
+      "originalName": "Provoke"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!vxpas0PAwGuoJPuK"
+}

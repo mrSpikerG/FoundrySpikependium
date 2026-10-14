@@ -1,0 +1,112 @@
+{
+  "_id": "SwH9Cdg4J17pLUCZ",
+  "name": "Мистический воин (Magus)",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы получаете преимущество на спасброски Телосложения для поддержания концентрации. При провале такого спасброска для заклинания вы получаете временные хиты: удвоенный уровень заклинания + модификатор заклинательной характеристики. Преимущество настроено пассивным эффектом. Получение временных хитов после провала пока отслеживается вручную; преимущество относится к концентрации с Телосложением.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-mystic-warrior",
+    "type": {
+      "value": "feat",
+      "subtype": "fightingStyle"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "G68LVbwsotSHW9Gx",
+      "name": "Мистический воин: концентрация",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.concentration.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "8XRsFCyFDgA31J5l"
+          }
+        ],
+        "conditions": "{\"k\":\"attributes.concentration.ability\",\"o\":\"in\",\"v\":[\"\",\"con\"]}"
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!SwH9Cdg4J17pLUCZ.G68LVbwsotSHW9Gx"
+    }
+  ],
+  "folder": "7m7GhiuQC4v6KeqP",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:magus-mystic-warrior"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SwH9Cdg4J17pLUCZ"
+}

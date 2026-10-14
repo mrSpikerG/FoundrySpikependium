@@ -1,0 +1,737 @@
+{
+  "_id": "yECCFYkyZBwBmG9A",
+  "name": "Ankheg",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/spider-beetle-runed-green.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 17,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 11,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 1,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 13,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 6,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 14,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 45,
+        "max": 45,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "6d10+12"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "30",
+          "burrow": "10"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": 60,
+          "blindsight": null,
+          "tremorsense": 60,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<h2>Роющий насекомоподобный хищник</h2><p>Среда обитания: Лес, Степь. Сокровища: нет.</p><p>Анкеги роют лабиринты неглубоко под землёй. Они вырываются из тоннелей, хватают мелких существ жвалами и растворяют их кислотой. Они — бедствие для фермеров, чей скот становится лёгкой добычей. Обычно анкеги охотятся поодиночке, но богатые пищей места способны поддерживать колонию из нескольких десятков особей. Для уничтожения колонии нужно очистить тоннели и уничтожить кладки.</p><p>Цилиндрические тоннели часто заполнены останками добычи и подземными сокровищами. Мастер может бросить [[/r 1d8]] по таблице находок.</p><table><tr><th>[[/r 1d8]]{1к8}</th><th>Находка в тоннеле</th></tr><tr><td>1</td><td>Другой каменный тоннель, рукотворный или природный, ведущий в Подземье.</td></tr><tr><td>2</td><td>Вскрытые тоннелем подземные развалины или могила.</td></tr><tr><td>3</td><td>Кладка из [[/r 1d4]] свежих яиц: их можно разбить или использовать как пузырьки с кислотой.</td></tr><tr><td>4</td><td>Мёртвый анкег и следы более смертоносного подземного хищника.</td></tr><tr><td>5</td><td>Кусок панциря, пригодный в качестве щита.</td></tr><tr><td>6</td><td>Кошелёк с [[/r 2d6]] золотыми монетами рядом с лужей кислоты.</td></tr><tr><td>7</td><td>Заблудившийся скот или лесное животное.</td></tr><tr><td>8</td><td>Сильно изуродованное пугало.</td></tr></table><p><em>«Хотя анкеги и могут питаться всем, что находят под землёй, они предпочитают живое мясо вашего скота, ваших собак или вас самих».</em> — Фейд Дженкинс, мудрец из Кирвада.</p><p>@UUID[Compendium.spikependium.tables.RollTable.RelylAlhCLQVHUpr]{Находки в тоннеле анкега: открыть таблицу и бросить}</p>",
+        "public": ""
+      },
+      "alignment": "Без мировоззрения",
+      "type": {
+        "value": "monstrosity",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 2,
+      "habitat": {
+        "custom": "",
+        "value": [
+          {
+            "type": "forest"
+          },
+          {
+            "type": "grassland"
+          }
+        ]
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "traits": {
+      "size": "lg",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": "",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "14",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Анкег",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "texture": {
+      "src": "icons/creatures/invertebrates/spider-beetle-runed-green.webp"
+    },
+    "width": 2,
+    "height": 2
+  },
+  "items": [
+    {
+      "_id": "l0Vp0QihyabZSIAd",
+      "name": "Прокладывание тоннеля",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Анкег перемещается сквозь сплошной камень с половиной Скорости рытья, оставляя тоннель диаметром 10 футов. В сплошном камне включите эффект «Рытьё в сплошном камне» на этой особенности; вне камня отключите его. Эффект изменяет только Скорость рытья. Отрисовка тоннеля на карте остаётся за Мастером.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "14",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "ankheg-tunneler",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "w1tKEAu0khwV2zzh",
+          "name": "Рытьё в сплошном камне",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": [
+              {
+                "key": "system.attributes.movement.speeds.burrow",
+                "mode": 1,
+                "value": "0.5",
+                "_id": "DDSlsVH2ddpNxyjd"
+              }
+            ]
+          },
+          "disabled": true,
+          "transfer": true,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!yECCFYkyZBwBmG9A.l0Vp0QihyabZSIAd.w1tKEAu0khwV2zzh"
+        }
+      ],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!yECCFYkyZBwBmG9A.l0Vp0QihyabZSIAd"
+    },
+    {
+      "_id": "VFLq1xTu9s3GBKOp",
+      "name": "Укус",
+      "type": "weapon",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Бросок атаки в ближнем бою: +5 (с Преимуществом, если цель уже схвачена этим анкегом), досягаемость 5 футов. Попадание: [[/damage 2d6+3 type=slashing]]{2к6 + 3} режущего урона и [[/damage 1d6 type=acid]]{1к6} урона кислотой. Существо не больше Крупного становится Схваченным (Сл высвобождения 13). Для высвобождения выберите токен цели и кнопку в карточке укуса: действие цели и проверка Силы (Атлетика) или Ловкости (Акробатика).</p><h3>Действия</h3><ul><li>[[/item activity=8FBUeKiYpMhLeUeo]]{Укус} · [[/damage activity=8FBUeKiYpMhLeUeo]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "14",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "ankheg-bite",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "8FBUeKiYpMhLeUeo": {
+            "_id": "8FBUeKiYpMhLeUeo",
+            "type": "attack",
+            "name": "Укус",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 1,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "acid"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "proficient": 1,
+        "equipped": true,
+        "identified": true,
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "reach": 5,
+          "units": "ft"
+        },
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 2,
+            "denomination": 6,
+            "bonus": "",
+            "types": [
+              "slashing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "738GnhgYRU7CIb5C",
+          "name": "Схвачен анкегом",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [
+            "grappled"
+          ],
+          "tint": "#ffffff",
+          "flags": {},
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!yECCFYkyZBwBmG9A.VFLq1xTu9s3GBKOp.738GnhgYRU7CIb5C"
+        }
+      ],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "spikependium": {
+          "monsterGrapple": {
+            "dc": 13,
+            "reach": 5,
+            "maxSize": "lg",
+            "advantage": true
+          }
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!yECCFYkyZBwBmG9A.VFLq1xTu9s3GBKOp"
+    },
+    {
+      "_id": "3IdnWqjwInYlvO5H",
+      "name": "Кислотная струя",
+      "type": "feat",
+      "img": "icons/magic/acid/projectile-stream-bubbles.webp",
+      "system": {
+        "description": {
+          "value": "<p>Перезарядка 6. Каждое существо в линии длиной 30 футов и шириной 5 футов совершает спасбросок Ловкости Сл 12. Провал: [[/damage 4d6 type=acid]]{4к6} урона кислотой. Успех: половина урона.</p><h3>Действия</h3><ul><li>[[/item activity=nKyRvD37US2y9ebG]]{Кислотная струя} · [[/damage activity=nKyRvD37US2y9ebG]]{Бросок урона} · [[/save activity=nKyRvD37US2y9ebG]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "14",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "nKyRvD37US2y9ebG": {
+            "_id": "nKyRvD37US2y9ebG",
+            "type": "save",
+            "name": "Кислотная струя",
+            "img": "icons/magic/acid/projectile-stream-bubbles.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "activityUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "self",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "line",
+                "size": "30",
+                "width": "5",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [
+                {
+                  "period": "recharge",
+                  "type": "recoverAll",
+                  "formula": "6"
+                }
+              ],
+              "max": "1"
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 4,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "acid"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": [
+                "dex"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "12"
+              },
+              "bonus": ""
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!yECCFYkyZBwBmG9A.3IdnWqjwInYlvO5H"
+    }
+  ],
+  "effects": [],
+  "folder": "4BUbLDhdunZZb8Ff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:ankheg",
+      "originalName": "Ankheg"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!yECCFYkyZBwBmG9A"
+}

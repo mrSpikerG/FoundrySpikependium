@@ -1,0 +1,652 @@
+{
+  "_id": "xuCtwEc4G7w64ESl",
+  "name": "Bandit",
+  "type": "npc",
+  "img": "icons/skills/melee/strike-sword-slashing-red.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 11,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 12,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 11,
+        "max": 11,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "2d8+2"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "30"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": null,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p>Преступники, головорезы и наёмники вне закона добиваются своего угрозами. Их мотивами могут быть жадность, несправедливые законы, нужда или принуждение главаря.</p><p>Блок допускает Средний или Небольшой размер: по умолчанию выбран Средний. Для Небольшого измените размер существа и токена на листе. КБ 12; ПЗ 11 ([[/r 2d8+2]]{2к8 + 2}); инициатива +1 (11); пассивное Внимание 10. Скимитар, лёгкий арбалет и кожаный доспех имеют цену и вес обычных предметов 2024 года.</p>",
+        "public": ""
+      },
+      "alignment": "Нейтральный",
+      "type": {
+        "value": "humanoid",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0.125,
+      "habitat": {
+        "custom": "Любая",
+        "value": []
+      },
+      "treasure": {
+        "value": [
+          "any"
+        ]
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "cant"
+        ],
+        "custom": "",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "23",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Бандит",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "texture": {
+      "src": "icons/skills/melee/strike-sword-slashing-red.webp"
+    },
+    "width": 1,
+    "height": 1
+  },
+  "items": [
+    {
+      "_id": "cpEEaRBStGLHDpx5",
+      "name": "Скимитар",
+      "type": "weapon",
+      "img": "icons/weapons/swords/scimitar-worn-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>Атака по блоку Энциклопедии чудовищ (2025). Цена и вес обычного оружия — из штатных данных 2024 года; кости урона и досягаемость отражают возможности этого чудовища. Бросок атаки +3; попадание: [[/damage 1d6+1 type=slashing]]{1к6 + 1} режущего урона.</p><h3>Действия</h3><ul><li>[[/item activity=SL81QZGYQPpvjRd2]]{Скимитар} · [[/damage activity=SL81QZGYQPpvjRd2]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "23",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "bandit-scimitar",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "SL81QZGYQPpvjRd2": {
+            "_id": "SL81QZGYQPpvjRd2",
+            "type": "attack",
+            "name": "Скимитар",
+            "img": "icons/weapons/swords/scimitar-worn-blue.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [
+          "fin",
+          "lgt"
+        ],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "martialM",
+          "baseItem": "scimitar"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 25,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 3,
+          "units": "lb"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "reach": 5,
+          "units": "ft"
+        },
+        "ammunition": {},
+        "equipped": true,
+        "identified": true,
+        "proficient": 1,
+        "quantity": 1,
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 1,
+            "denomination": 6,
+            "bonus": "",
+            "types": [
+              "slashing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!xuCtwEc4G7w64ESl.cpEEaRBStGLHDpx5"
+    },
+    {
+      "_id": "TyFnvnB6CRmt4oTM",
+      "name": "Лёгкий арбалет",
+      "type": "weapon",
+      "img": "icons/weapons/crossbows/crossbow-simple-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>Атака по блоку Энциклопедии чудовищ (2025). Цена и вес обычного оружия — из штатных данных 2024 года; кости урона и досягаемость отражают возможности этого чудовища. Бросок атаки +3; попадание: [[/damage 1d8+1 type=piercing]]{1к8 + 1} колющего урона. Запас болтов в книге не задан: выберите имеющиеся боеприпасы в штатном окне атаки. Система расходует выбранный болт; обычная отмена расхода возвращает его.</p><h3>Действия</h3><ul><li>[[/item activity=YqmOUfSbspUPrGQF]]{Лёгкий арбалет — дистанционно} · [[/damage activity=YqmOUfSbspUPrGQF]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "23",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "bandit-crossbow",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "YqmOUfSbspUPrGQF": {
+            "_id": "YqmOUfSbspUPrGQF",
+            "type": "attack",
+            "name": "Лёгкий арбалет — дистанционно",
+            "img": "icons/weapons/crossbows/crossbow-simple-brown.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "80",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [
+          "amm",
+          "lod",
+          "two"
+        ],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "simpleR",
+          "baseItem": "lightcrossbow"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 25,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 5,
+          "units": "lb"
+        },
+        "range": {
+          "value": 80,
+          "long": 320,
+          "reach": null,
+          "units": "ft"
+        },
+        "ammunition": {
+          "type": "crossbowBolt"
+        },
+        "equipped": true,
+        "identified": true,
+        "proficient": 1,
+        "quantity": 1,
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 1,
+            "denomination": 8,
+            "bonus": "",
+            "types": [
+              "piercing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!xuCtwEc4G7w64ESl.TyFnvnB6CRmt4oTM"
+    },
+    {
+      "_id": "PhPcfpIKNhSvQWve",
+      "name": "Кожаный доспех",
+      "type": "equipment",
+      "img": "icons/equipment/chest/breastplate-scale-leather.webp",
+      "system": {
+        "description": {
+          "value": "<p>Штатный доспех 2024 года: цена и вес по базовому предмету. КБ чудовища задан в соответствии с его блоком.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "23",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "leather",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "light",
+          "baseItem": "leather"
+        },
+        "armor": {
+          "value": 11,
+          "magicalBonus": null,
+          "dex": null
+        },
+        "price": {
+          "value": 10,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 10,
+          "units": "lb"
+        },
+        "quantity": 1,
+        "equipped": true,
+        "identified": true
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!xuCtwEc4G7w64ESl.PhPcfpIKNhSvQWve"
+    }
+  ],
+  "effects": [],
+  "folder": "2rxZB4d2dfnAF5c7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:bandit",
+      "originalName": "Bandit"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!xuCtwEc4G7w64ESl"
+}

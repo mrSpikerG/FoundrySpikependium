@@ -1,0 +1,197 @@
+{
+  "_id": "LdSl0OkKBusDTl4l",
+  "name": "Светошумовая бомба",
+  "type": "feat",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Бонусным действием бросьте бомбу себе под ноги. Существа не больше Большого в пределах 5 футов не могут использовать реакции до начала следующего своего хода. Отметьте подходящие цели и примените профиль карточкой эффектов; исключение неподходящего размера и выбор всех существ в области пока ручные. Расходуется одна бомба.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p><h3>Действия</h3><ul><li>[[/item activity=Ky6X7dUjnu2Y29fa]]{Светошумовая бомба}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-flash",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": 5,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "Ky6X7dUjnu2Y29fa": {
+        "_id": "Ky6X7dUjnu2Y29fa",
+        "type": "utility",
+        "name": "Светошумовая бомба",
+        "img": "icons/tools/laboratory/vials-blue-pink.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "target": "alchemist-bombs",
+              "value": "1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "shytaZuwZSNVeA2W"
+          }
+        ],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "emanation",
+            "size": "5",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "shytaZuwZSNVeA2W",
+      "name": "Светошумовая бомба: нет реакций",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetStart",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "noReactions": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!LdSl0OkKBusDTl4l.shytaZuwZSNVeA2W"
+    }
+  ],
+  "folder": "l0yvsXLqwjOovkA3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:flash"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!LdSl0OkKBusDTl4l"
+}

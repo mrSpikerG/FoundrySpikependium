@@ -37,6 +37,8 @@ export function prepareSummon(activity, profile, config) {
     updates[`system.abilities.${ability}.check.roll.bonus`] = String(checkBonus);
     updates[`system.abilities.${ability}.save.roll.bonus`] = String(checkBonus);
   }
+  if (key?.startsWith("actor:au-dinosaur-")) for (const ability of ["str", "con"])
+    updates[`system.abilities.${ability}.save.roll.bonus`] = String(Math.floor(activity.item.system.level / 2));
 
   // Изменения вкладываются в тот же набор обновлений, что и нативное зачарование атак.
   const itemUpdate = item => {

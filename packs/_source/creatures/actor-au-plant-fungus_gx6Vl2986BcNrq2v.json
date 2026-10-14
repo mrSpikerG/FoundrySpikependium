@@ -1,0 +1,832 @@
+{
+  "_id": "gx6Vl2986BcNrq2v",
+  "name": "Дух растения (Гриб)",
+  "type": "npc",
+  "img": "icons/magic/nature/root-vines-grow-brown.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 17,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 13,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 13,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 11,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 50,
+        "max": 50,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": ""
+      },
+      "movement": {
+        "speeds": {
+          "walk": "40"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": null,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p>КД: 11 + уровень заклинания. Хиты: 50 + 10 за каждый уровень заклинания выше пятого. Пассивное Восприятие 11. Бонус мастерства равен бонусу призывателя.</p><p>Дух дружелюбен вам и вашим союзникам. В бою он получает вашу инициативу, но ходит сразу после вас. Он подчиняется устным командам без расхода действия; без команды совершает Уклонение и перемещается, избегая опасностей. Дух исчезает при 0 хитах или окончании заклинания.</p>",
+        "public": ""
+      },
+      "alignment": "Нейтральный",
+      "type": {
+        "value": "plant",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": null,
+      "habitat": {
+        "custom": "",
+        "value": []
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "traits": {
+      "size": "lg",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [
+          "slashing"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": "Понимает известные призывателю языки",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "AU",
+      "page": "38",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Дух растения (Гриб)",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": 1,
+    "texture": {
+      "src": "icons/magic/nature/root-vines-grow-brown.webp"
+    },
+    "width": 2,
+    "height": 2
+  },
+  "items": [
+    {
+      "_id": "Srt2V5nvTTCVj2ky",
+      "name": "Мультиатака",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Дух совершает количество атак, равное половине уровня заклинания, округлённой вниз. Кнопка последовательно предлагает способ атаки и обычные броски.</p><h3>Действия</h3><ul><li>[[/item activity=LemnHCGkNuoFqWgU]]{Мультиатака}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "AU",
+          "page": "38",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "LemnHCGkNuoFqWgU": {
+            "_id": "LemnHCGkNuoFqWgU",
+            "type": "utility",
+            "name": "Мультиатака",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "flags": {
+              "spikependium": {
+                "multiattack": {
+                  "count": "spell",
+                  "weapons": [
+                    "au-spores"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gx6Vl2986BcNrq2v.Srt2V5nvTTCVj2ky"
+    },
+    {
+      "_id": "470c3PMgTWGpfrTA",
+      "name": "Распыление спор",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Бонус рукопашной или дальнобойной атаки равен модификатору атаки заклинанием призывателя. Досягаемость 5 футов или дистанция 30 футов. Попадание: [[/r 1d4]]{1к4} + уровень заклинания урона ядом, цель Отравлена до конца своего следующего хода. Если цель уже была Отравленной, вместо нового состояния она получает дополнительно [[/damage 3d4 type=poison]]{3к4} урона ядом.</p><h3>Действия</h3><ul><li>[[/item activity=TYWp12iTBeNqVICo]]{Рукопашная} · [[/damage activity=TYWp12iTBeNqVICo]]{Бросок урона}</li><li>[[/item activity=LqXFoDQhw0LSQg9d]]{Дальнобойная} · [[/damage activity=LqXFoDQhw0LSQg9d]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "AU",
+          "page": "38",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "au-spores",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "TYWp12iTBeNqVICo": {
+            "_id": "TYWp12iTBeNqVICo",
+            "type": "attack",
+            "name": "Рукопашная",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "Fb9xKL1qkuqJfW4U"
+              }
+            ],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "spell"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 1,
+                  "denomination": 4,
+                  "bonus": "",
+                  "types": [
+                    "poison"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          },
+          "LqXFoDQhw0LSQg9d": {
+            "_id": "LqXFoDQhw0LSQg9d",
+            "type": "attack",
+            "name": "Дальнобойная",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 200000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "Fb9xKL1qkuqJfW4U"
+              }
+            ],
+            "range": {
+              "value": "30",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "ranged",
+                "classification": "spell"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": false,
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 1,
+                  "denomination": 4,
+                  "bonus": "",
+                  "types": [
+                    "poison"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "Fb9xKL1qkuqJfW4U",
+          "name": "Распыление спор: Отравленный",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": "targetEnd",
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [
+            "poisoned"
+          ],
+          "tint": "#ffffff",
+          "flags": {},
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!gx6Vl2986BcNrq2v.470c3PMgTWGpfrTA.Fb9xKL1qkuqJfW4U"
+        }
+      ],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gx6Vl2986BcNrq2v.470c3PMgTWGpfrTA"
+    },
+    {
+      "_id": "gc7rse4KFi5OSyrb",
+      "name": "Споры: уже отравленная цель",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Дополнительные [[/damage 3d4 type=poison]]{3к4} урона ядом при попадании, если цель была Отравленной до этой атаки. Этот урон заменяет новое наложение состояния.</p><h3>Действия</h3><ul><li>[[/item activity=9RCqzqvRAKa8Zm3t]]{Дополнительный урон} · [[/damage activity=9RCqzqvRAKa8Zm3t]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "AU",
+          "page": "38",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "9RCqzqvRAKa8Zm3t": {
+            "_id": "9RCqzqvRAKa8Zm3t",
+            "type": "damage",
+            "name": "Дополнительный урон",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "special",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "critical": {
+                "allow": true,
+                "bonus": ""
+              },
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 3,
+                  "denomination": 4,
+                  "bonus": "",
+                  "types": [
+                    "poison"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!gx6Vl2986BcNrq2v.gc7rse4KFi5OSyrb"
+    }
+  ],
+  "effects": [],
+  "folder": "kjGUlKTBFrvy3V1F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:au-plant-fungus"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!gx6Vl2986BcNrq2v"
+}

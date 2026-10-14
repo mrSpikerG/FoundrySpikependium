@@ -1,0 +1,316 @@
+{
+  "_id": "V41ypp2FEJN56DmE",
+  "name": "Детонация",
+  "type": "spell",
+  "img": "icons/magic/fire/explosion-fireball-medium-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, колдун, чародей.</em></p><p>Вы создаёте магическое взрывающееся семя внутри существа, которое видите в пределах дистанции. Цель совершает спасбросок Телосложения, получая [[/damage 10d10 type=fire]]{10к10} урона огнём при провале или половину при успехе.</p><p>Затем происходит взрыв с центром на цели. Каждое существо в 60-футовой эманации, исходящей от первичной цели (исключая её), совершает спасбросок Ловкости. Если это заклинание снизило хиты первичной цели до 0, эти спасброски совершаются с помехой. Существо получает [[/damage 10d10 type=fire]]{10к10} урона огнём при провале или половину при успехе.</p><p>Заклинание наносит урон немагическим объектам в эманации, которые никто не несёт и не носит, и воспламеняет горючие объекты.</p><p><strong>Применение.</strong> Сначала выберите первичную цель и примените урон семени. Для взрыва выберите исходную карточку накладывания и отметьте существ вокруг первичной цели, исключая её. Взрыв не тратит вторую ячейку. Помеха выбирается по подтверждённому снижению хитов первичной цели до 0; размещение области и урон объектам проверяет Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=NODyngiDS6jk7xNp]]{Взрывающееся семя} · [[/damage activity=NODyngiDS6jk7xNp]]{Бросок урона} · [[/save activity=NODyngiDS6jk7xNp]]{Спасбросок цели}</li><li>[[/item activity=yOFCSoGR7dLe4PWz]]{Взрыв вокруг первичной цели} · [[/damage activity=yOFCSoGR7dLe4PWz]]{Бросок урона} · [[/save activity=yOFCSoGR7dLe4PWz]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "39",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "detonate",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 9,
+    "materials": {
+      "value": "кусок трута",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "range": {
+      "value": "500",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "evo",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "NODyngiDS6jk7xNp": {
+        "_id": "NODyngiDS6jk7xNp",
+        "type": "save",
+        "name": "Взрывающееся семя",
+        "img": "icons/magic/fire/explosion-fireball-medium-orange.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "500",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 10,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      },
+      "yOFCSoGR7dLe4PWz": {
+        "_id": "yOFCSoGR7dLe4PWz",
+        "type": "save",
+        "name": "Взрыв вокруг первичной цели",
+        "img": "icons/magic/fire/explosion-fireball-medium-orange.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "500",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "sphere",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 10,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "arcanaStage": "detonate-burst"
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "hgwg2ooHTR3ujmye",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-detonate"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!V41ypp2FEJN56DmE"
+}

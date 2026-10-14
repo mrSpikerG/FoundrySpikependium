@@ -1,0 +1,293 @@
+{
+  "_id": "6ANpT9BrAiiG1sbX",
+  "name": "Animate Weapon",
+  "type": "spell",
+  "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+  "system": {
+    "description": {
+      "value": "<p>Оживите оружие-компонент в свободном пространстве в пределах 30 футов на 1 минуту, без концентрации. Это Маленький конструкт: КД 10 + модификатор заклинательной характеристики, 20 хитов, иммунитет к яду, психическому урону и всем состояниям. В начале каждого вашего хода оружие совершает одну атаку по выбранной вами цели: досягаемость 5 футов для обычного рукопашного оружия, 10 для оружия с досягаемостью, обычная дистанция для дальнобойного или метательного. Используется ваш бонус атаки заклинанием; к урону прибавляется ваш модификатор заклинательной характеристики. Бонусным действием в последующие ходы можно переместить его полётом до 30 футов. При 0 хитов заклинание заканчивается.</p><p><strong>Высокая ячейка.</strong> +10 хитов за каждый уровень выше 2-го.</p><p><strong>Foundry.</strong> Призыв создаёт конструкт с КД и хитами. Перенос именно выбранного оружия, его урона/дистанции и атака в начале хода ещё настраиваются; пока добавьте исходное оружие призванному существу и установите нужные бонусы вручную.</p><h3>Действия</h3><ul><li>[[/item activity=ghdGsDh3h4nyoktl]]{Оживить оружие}</li><li>[[/item activity=a8fjiQbHjDIsBD0N]]{Команда: переместить оружие (вручную)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "13",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-animate-weapon",
+    "activation": {
+      "type": "bonus",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 2,
+    "materials": {
+      "value": "оружие стоимостью не менее 1 зм",
+      "consumed": false,
+      "cost": 1,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "range": {
+      "value": "30",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "trs",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "",
+        "type": "",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": false
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "ghdGsDh3h4nyoktl": {
+        "_id": "ghdGsDh3h4nyoktl",
+        "type": "summon",
+        "name": "Оживить оружие",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@mod",
+          "hd": "",
+          "hp": "10 * (@item.level - 2)",
+          "attackDamage": "",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [
+          "sm"
+        ],
+        "creatureTypes": [
+          "construct"
+        ],
+        "match": {
+          "ability": "",
+          "attacks": true,
+          "disposition": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "hTEoCGB5rSkv94Uw",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.f2K5XcTvRsput5HL",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": ""
+        }
+      },
+      "a8fjiQbHjDIsBD0N": {
+        "_id": "a8fjiQbHjDIsBD0N",
+        "type": "utility",
+        "name": "Команда: переместить оружие (вручную)",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "5eSSW5LXiArvfhE2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:magus-animate-weapon",
+      "originalName": "Animate Weapon"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!6ANpT9BrAiiG1sbX"
+}

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { cast, summon, utility, useSlot, makeId } from "./lib/core.mjs";
+import { cast, summon, utility, useSlot, makeId, SRD } from "./lib/core.mjs";
 import { prepareSummon, canRefuel, hasReanimatedCompanion } from "../scripts/summons.mjs";
 import { prepareGrantedSpell, prepareSpiritsGuidance, prepareFeatSave, preparePactUsage, prepareAbilityAdvancement, prepareFormConsumption, radiantLightUpdate, conditionalState, applyTurnLimit, prepareUpdatedSpell } from "../scripts/mechanics.mjs";
 import { dragonSlot, restorationPlan, prepareChoiceDialog, applyChoiceConsumption } from "../scripts/choices.mjs";
@@ -26,6 +26,7 @@ assert.equal(inlineRolls(protectedMarkup), protectedMarkup);
 assert.equal(inlineRolls(inlineRolls('1к4')), inlineRolls('1к4'));
 assert.equal(inlineRolls('2к6 урона психической энергией'), '[[/damage 2d6 type=psychic]]{2к6} урона психической энергией');
 assert.equal(inlineRolls('1к4 рубящего урона'), '[[/damage 1d4 type=slashing]]{1к4} рубящего урона');
+assert.equal(inlineRolls('1к6 + 1 режущего урона'), '[[/damage 1d6+1 type=slashing]]{1к6 + 1} режущего урона');
 assert.equal(md('[[/r 1d6]]{1к6}'), '<p>[[/r 1d6]]{1к6}</p>');
 for (const [deltas, paid] of [
   [{ item: { feat: [{ keyPath: "system.activities.modifier.uses.spent", delta: 1 }] } }, true],
@@ -327,7 +328,8 @@ assert.equal(stolenDamage.consumption.scaling.max, "9");
 const slotToFocus = Object.values(doc("subclass:warrior-of-mystic-arts:mystic-focus").system.activities).find(a => a._id === makeId("activity:mystic-arts:slot-to-focus"));
 assert.equal(slotToFocus.consumption.scaling.max, "9");
 for (const item of allItems) for (const identifier of item.system?.prerequisites?.items ?? [])
-  assert.ok(allItems.some(i => `${i.type}:${i.system?.identifier}` === identifier), `Не найдена предпосылка ${identifier}`);
+  assert.ok(allItems.some(i => `${i.type}:${i.system?.identifier}` === identifier)
+    || Object.values(SRD.classFeatures).some(i => `${i.type}:${i.identifier}` === identifier), `Не найдена предпосылка ${identifier}`);
 for (const key of ["handling", "scribing", "sentinel"]) {
   const modifier = Object.values(doc(`feat:greater-${key}`).system.activities).find(a => a._id === makeId(`activity:greater:${key}:mod`));
   assert.equal(modifier.uses.max, "");

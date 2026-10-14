@@ -9,7 +9,200 @@
       "rules": "2024",
       "extracted": true,
       "imported": false,
-      "coverage": []
+      "coverage": [
+        {
+          "section": "Aarakocra",
+          "printedPage": 10,
+          "documents": [
+            "actor:mm25:aarakocra-aeromancer",
+            "actor:mm25:aarakocra-skirmisher"
+          ]
+        },
+        {
+          "section": "Hell Hound",
+          "printedPage": 13,
+          "documents": [
+            "actor:mm25:hell-hound"
+          ],
+          "manualAdjudication": [
+            "allies with neutral or differing token dispositions need manual advantage selection"
+          ]
+        },
+        {
+          "section": "Aboleth",
+          "printedPage": 12,
+          "lorePrintedPage": 11,
+          "documents": [
+            "actor:mm25:aboleth",
+            "table:mm25:aboleth-schemes"
+          ],
+          "pendingAutomation": [
+            "plane changes and control radius tracking",
+            "regional effect removal after death or relocating the lair"
+          ],
+          "manualAdjudication": [
+            "line of sight for Dominate Mind",
+            "distance across scenes without shared coordinates",
+            "manual save after cancellation or uncertain missing repeat card",
+            "water sources and allies for regional poison",
+            "telepathy from projected image",
+            "humanoid memories and greatest desires",
+            "new body location after 5d10 days"
+          ]
+        },
+        {
+          "section": "Ankheg",
+          "printedPage": 14,
+          "documents": [
+            "actor:mm25:ankheg",
+            "table:mm25:ankheg-finds"
+          ],
+          "manualAdjudication": [
+            "enable rock-burrowing speed effect for solid stone; draw tunnels on the map"
+          ]
+        },
+        {
+          "section": "Performer",
+          "printedPage": 16,
+          "documents": [
+            "actor:mm25:performer"
+          ],
+          "manualAdjudication": [
+            "select Small or Medium size and additional language",
+            "unknown AC, multiple attack rolls or linked actor tokens, mixed healing/damage, delayed damage after a new reaction replaces the old binding"
+          ],
+          "automation": [
+            "attack-bound Uncanny Dodge selection, native reaction expense/refund and native half-damage application"
+          ]
+        },
+        {
+          "section": "Arcanaloth",
+          "printedPage": 15,
+          "documents": [
+            "actor:mm25:arcanaloth"
+          ],
+          "pendingAutomation": [
+            "cross-scene transfer to and from the Soul Tome demiplane with ActorDelta/reference preservation"
+          ],
+          "manualAdjudication": [
+            "spell-less or unmarked magical save needs manual advantage",
+            "teleport visibility and destination occupancy",
+            "Fiendish Restoration destination in Gehenna",
+            "Soul Tome price and weight estimated from base spellbook"
+          ]
+        },
+        {
+          "section": "Performer Virtuoso and Performer Legend",
+          "printedPage": 17,
+          "documents": [
+            "actor:mm25:performer-virtuoso",
+            "actor:mm25:performer-legend"
+          ],
+          "manualAdjudication": [
+            "select Small or Medium size and additional languages",
+            "choose charm or fear for Majestic Melody",
+            "Jeweled Rod price and weight estimated from base spellcasting rod",
+            "unknown AC, multiple attack rolls or linked actor tokens, retrospective HP changes and interrupted saves without a card"
+          ],
+          "automation": [
+            "attack-bound Defensive Charm reaction, native Wisdom save/charm, hit-to-miss and damage/on-hit cancellation, refund and Legendary Resistance outcomes"
+          ]
+        },
+        {
+          "section": "Archhag",
+          "printedPage": 19,
+          "lorePrintedPage": 18,
+          "documents": [
+            "actor:mm25:archhag",
+            "table:mm25:archhag-bane"
+          ],
+          "automation": [
+            "native attacks/multiattack and prone on eligible hits",
+            "native linked spells and shared coven/Foul Magic uses",
+            "native lair resources and start-turn legendary recovery",
+            "Crackling Wave curse on both save outcomes with sourceEnd expiry and reaction prohibition",
+            "Witch Strike selection by own curses within 60 feet",
+            "verbal-component prohibition while Tongue Twister curse is active"
+          ],
+          "pendingAutomation": [
+            "Vengeful Escape HP interception, bane confirmation, demiplane transfer and original-space curse targets",
+            "bind Tongue Twister curse to the actual failed Counterspell save",
+            "lair Influence d10 penalty and post-rest first-slot Confusion without concentration",
+            "regional effect removal after death or relocating the lair"
+          ],
+          "manualAdjudication": [
+            "coven identity or unusual alliances may be confirmed in the usage dialog",
+            "bane identity, cross-plane location knowledge and destination of return",
+            "spell targets and narrative speech reversal"
+          ]
+        },
+        {
+          "section": "Assassin",
+          "printedPage": 20,
+          "documents": [
+            "actor:mm25:assassin",
+            "table:mm25:assassin-modus"
+          ],
+          "automation": [
+            "native melee/ranged attacks and mixed three-attack multiattack",
+            "confirmed-hit poison until the next source turn with condition immunity",
+            "Evasion using the native damage multiplier, saving-throw outcome, resistance rounding and temporary HP",
+            "base equipment weight/price and native RollTable",
+            "shared once-per-own-turn bonus-action budget using native actor resource deltas and refund",
+            "same-client concurrent bonus-action dialog guard and explicit free-action override",
+            "Disengage current-turn protection with native effect application, opportunity-attack gate, refund isolation and stale-card protection",
+            "Hide: native Dexterity Stealth DC 15, invisible condition while hidden, stored detection DC, cover confirmation, attack/verbal spell ending and native refund"
+          ],
+          "pendingAutomation": [
+            "Cunning Action Dash movement allowance"
+          ],
+          "manualAdjudication": [
+            "choose Medium or Small on the NPC sheet",
+            "ammunition inventory is not specified by the statblock",
+            "Evasion without a known native save outcome or with custom multipliers",
+            "poison turn expiry outside combat",
+            "Hide: confirm cover/obscurement and enemy sight, adjudicate enemy detection, loud sounds and continued concealment"
+          ]
+        },
+        {
+          "section": "Bugbear Warrior and Bugbear Stalker",
+          "printedPage": 21,
+          "documents": [
+            "actor:mm25:bugbear-warrior",
+            "actor:mm25:bugbear-stalker"
+          ],
+          "automation": [
+            "native melee/thrown attacks, two-attack mixed multiattack and Quick Grapple Dexterity save",
+            "source-bound grapple, Medium size limit, native escape check/action and separation/death/incapacitation cleanup",
+            "own-grapple advantage on light hammer and morningstar",
+            "native stack quantity consumption and refund for thrown hammers/javelins",
+            "base equipment weight/price"
+          ],
+          "pendingAutomation": [
+            "joint movement of grappler and victim without extra movement expense"
+          ],
+          "manualAdjudication": [
+            "confirm visibility for Quick Grapple",
+            "monsters use their statblock dice and reach; use standard gear data when transferring equipment to player inventory"
+          ]
+        },
+        {
+          "section": "Bandit",
+          "printedPage": 23,
+          "documents": [
+            "actor:mm25:bandit"
+          ],
+          "automation": [
+            "Native equipped weapons and armor with verified 2024 gear price, weight and properties",
+            "Native Dexterity weapon attacks +3 and damage 1d6+1 slashing / 1d8+1 piercing",
+            "Native crossbow ammunition selection, expense and refund; carried bolt count is unspecified in the source"
+          ],
+          "manualAdjudication": [
+            "Choose Small or Medium size; default is Medium",
+            "Select available ammunition; the book does not specify the carried quantity"
+          ]
+        }
+      ]
     },
     {
       "id": "AU",
@@ -28,6 +221,314 @@
             "feat:magic-speaker",
             "feat:magic-undertaker"
           ]
+        },
+        {
+          "section": "Spells",
+          "printedPage": 40,
+          "documents": [
+            "spell:au-iron-body",
+            "spell:au-mesmerizing-mirrors",
+            "spell:au-catnap"
+          ]
+        },
+        {
+          "section": "Spells",
+          "printedPage": 43,
+          "documents": [
+            "spell:au-invulnerability",
+            "spell:au-instill-doubt"
+          ]
+        },
+        {
+          "section": "Spells",
+          "printedPage": 44,
+          "documents": [
+            "spell:au-fractured-perception",
+            "spell:au-confusing-terrain"
+          ]
+        },
+        {
+          "section": "Spells",
+          "printedPage": 39,
+          "documents": [
+            "spell:au-putrid-burst"
+          ]
+        },
+        {
+          "section": "Spells",
+          "printedPage": 37,
+          "documents": [
+            "spell:au-vision-of-ages",
+            "spell:au-hindsight"
+          ]
+        },
+        {
+          "section": "Spells",
+          "printedPage": 41,
+          "documents": [
+            "spell:au-mordenkainens-research"
+          ]
+        },
+        {
+          "section": "Spells",
+          "printedPage": 45,
+          "documents": [
+            "spell:au-dissonant-tune"
+          ]
+        },
+        {
+          "section": "Summon spells and spirit variants",
+          "printedPage": 38,
+          "documents": [
+            "spell:au-summon-plant",
+            "spell:au-summon-dinosaur",
+            "actor:au-plant-fungus",
+            "actor:au-plant-tree",
+            "actor:au-plant-vine",
+            "actor:au-dinosaur-ankylosaurus",
+            "actor:au-dinosaur-triceratops",
+            "actor:au-dinosaur-tyrannosaurus"
+          ],
+          "pendingAutomation": [
+            "automatic Dash movement benefits for vine",
+            "siege damage to objects"
+          ],
+          "automation": [
+            "vine: shared once-per-own-turn bonus-action budget with native refund and same-client dialog guard",
+            "vine Disengage: current-turn opportunity-attack protection and native refund"
+          ]
+        },
+        {
+          "section": "Origin feats: Arcane Ward",
+          "printedPage": 27,
+          "documents": [
+            "feat:magic-ward"
+          ],
+          "pendingAutomation": [
+            "Resistance spell: automatic 1d4 damage reduction limited to once per turn"
+          ],
+          "manualAdjudication": [
+            "Help must assist an ability check; apply temporary HP using the native healing card"
+          ]
+        },
+        {
+          "section": "Origin feats: Magic Overloaded",
+          "printedPage": 29,
+          "documents": [
+            "feat:magic-overloaded"
+          ],
+          "manualAdjudication": [
+            "simultaneous owners on different clients share native non-atomic resource updates"
+          ]
+        },
+        {
+          "section": "Origin feats: Arcane Omens",
+          "printedPage": 28,
+          "documents": [
+            "feat:magic-omen"
+          ],
+          "pendingAutomation": [
+            "death-save counter/outcome correction after changing an already processed death saving throw",
+            "restoration of concentration already broken before the reaction",
+            "rollback/reapplication of damage and completed effects after changing or refunding a saving throw",
+            "selecting an individual roll in a grouped saving-throw card"
+          ],
+          "manualAdjudication": [
+            "confirm visibility of another creature within 30 feet",
+            "unknown/hidden DC or non-native saving throws require manual handling",
+            "another module rerolling or rewriting the original card is not overwritten",
+            "if dice were interrupted after payment but before a roll card was created, use the paid card roll button"
+          ]
+        },
+        {
+          "section": "Origin feats: Transformed Anatomy",
+          "printedPage": 29,
+          "documents": [
+            "feat:transformed-anatomy"
+          ],
+          "pendingAutomation": [
+            "rollback/reapplication of already processed damage, completed effects and broken concentration after changing or refunding a saving throw"
+          ],
+          "manualAdjudication": [
+            "confirm forced shape-change for effects other than linked Polymorph/True Polymorph spells",
+            "unknown/hidden DC or grouped/non-native saving-throw cards require manual handling"
+          ]
+        },
+        {
+          "section": "Spells: Detonate",
+          "printedPage": 39,
+          "documents": [
+            "spell:au-detonate"
+          ],
+          "pendingAutomation": [
+            "automatic classification of primary-hit HP reduction and burst origin/template placement"
+          ],
+          "manualAdjudication": [
+            "confirm primary damage reduced the target to zero HP",
+            "unattended nonmagical objects and ignition"
+          ]
+        },
+        {
+          "section": "Spells: Lightning Ring",
+          "printedPage": 43,
+          "documents": [
+            "spell:au-lightning-ring"
+          ],
+          "pendingAutomation": [
+            "entry/movement/end-turn aura events and automatic failed-save deafening"
+          ],
+          "manualAdjudication": [
+            "choose creatures affected by the aura and apply native deafening effect"
+          ]
+        },
+        {
+          "section": "Spells: Grave Ground",
+          "printedPage": 42,
+          "documents": [
+            "spell:au-grave-ground"
+          ],
+          "pendingAutomation": [
+            "four-square contiguous area placement",
+            "enemy difficult terrain and entry/end-turn events",
+            "one saving throw per creature per turn",
+            "fresh grouped penalty when using raw Roll.reroll rather than the usage card"
+          ],
+          "manualAdjudication": [
+            "choose enemies in the area and apply weakening marker",
+            "Apply the native weakening effect to failed saves",
+            "Use damage action card for a fresh grouped penalty; raw individual rerolls retain allocated reduction"
+          ],
+          "automation": [
+            "Native one-d6 damage-group reduction after critical configuration and before resistance/rounding",
+            "Chosen primary component, capped reduction and overflow into other damage types; native flavor/type aggregation",
+            "Healing and temporary-HP exclusion; existing dice/results/properties and critical flags preserved",
+            "Active effect expiry/disable checks, non-stacking copies and native provenance lookup for existing world effects",
+            "Private native generic penalty roll, source receipt and no extra cards for virtual rolls"
+          ]
+        },
+        {
+          "section": "Spells: Negative Energy Flood",
+          "printedPage": 44,
+          "documents": [
+            "spell:au-negative-energy-flood"
+          ],
+          "pendingAutomation": [
+            "create a zombie from a humanoid killed by this spell at the beginning of the caster next turn",
+            "24-hour control expiration"
+          ]
+        },
+        {
+          "section": "Spells: Wither and Bloom",
+          "printedPage": 45,
+          "documents": [
+            "spell:au-wither-and-bloom"
+          ],
+          "pendingAutomation": [
+            "automatic vertical sphere containment",
+            "area capture recovery after canceled initial template placement"
+          ],
+          "manualAdjudication": [
+            "withering nonmagical plants",
+            "Sphere height, total cover and withering nonmagical plants",
+            "Resource refund does not roll back already applied healing; reconcile HP manually",
+            "Without scene/placed sphere or access to the original private casting card, resolve healing manually",
+            "Simultaneous owners on different clients share native non-atomic resource consumption"
+          ],
+          "automation": [
+            "One recipient chosen before casting, original native Region snapshot and current resolution time",
+            "Native healing activity on recipient, mixed-class and NPC hit-die consumption; no second slot",
+            "Original scaled spell level and caster modifier once, without recipient Constitution modifier",
+            "Native consumption/refund and ActorDelta support, paid-card roll recovery, source refund and stale-attempt guards",
+            "Automatic native healing application with maximum/temp HP preservation and atomic once-per-cast receipt",
+            "Native outgoing healing rules use original caster and scaled spell, not recipient; manual card application also records completion"
+          ]
+        },
+        {
+          "section": "Origin feats: Arcane Artist",
+          "printedPage": 28,
+          "documents": [
+            "feat:magic-artist"
+          ],
+          "automation": [
+            "native Minor Illusion grant with mental spellcasting ability choice",
+            "native once-per-long-rest consumption and refund",
+            "illusion cast, 30-foot range and single-recipient validation",
+            "Heroic Inspiration recipient update by the active GM or shared owner, without receipt replays"
+          ],
+          "manualAdjudication": [
+            "confirm the selected ally sees the caster",
+            "activate immediately after the cast using its usage card; selection window is 60 seconds and the same world time/combat turn",
+            "refund restores the resource but does not remove inspiration already granted or spent",
+            "if the ally moves out of range or the source card is deleted before processing, resolve delivery manually",
+            "custom at-will leveled spell activities without native casting/consumption metadata require manual handling"
+          ]
+        },
+        {
+          "section": "Spells: Zone of Amity",
+          "printedPage": 44,
+          "documents": [
+            "spell:au-zone-of-amity"
+          ],
+          "automation": [
+            "native self effect, 10-minute non-concentration duration, emanation template and bard/warlock spell-list links",
+            "native d20 minimum 10 for a confirmed influence check on a selected creature in the 60-foot aura",
+            "range/height/units, source ownership, suppression and expiration checks",
+            "preserves ability bonuses, advantage/disadvantage and higher native minimums"
+          ],
+          "manualAdjudication": [
+            "confirm the ability check is intended to influence the selected creature",
+            "select the relevant token before opening the check dialog"
+          ]
+        },
+        {
+          "section": "Spells: Aura of Evasion",
+          "printedPage": 35,
+          "documents": [
+            "spell:au-aura-of-evasion"
+          ],
+          "automation": [
+            "Native slot consumption, concentration and self effect",
+            "Native Dexterity saving throw advantage with disadvantage cancellation",
+            "Zero damage on successful native Dexterity half-damage save; half on failure before resistance and rounding",
+            "Exact tokens, 30 feet including elevation and scene units, incapacity and current concentration validation; no stacking with Assassin Evasion"
+          ],
+          "manualAdjudication": [
+            "Confirm alliance and unobstructed emanation",
+            "Without scene tokens, an unambiguous speaker or a linked native saving-throw card, resolve the aura manually",
+            "If a private casting card is unavailable to the rolling user, resolve the aura manually"
+          ]
+        },
+        {
+          "section": "General feat: Spell Resilient",
+          "printedPage": 32,
+          "documents": [
+            "feat:spell-resilient"
+          ],
+          "automation": [
+            "Native Dexterity/Constitution +1 choice capped at 20 and one native resistance choice",
+            "One d6 per own failed magical save, proficiency-bonus uses per long rest, no action or reaction",
+            "Native save/DC/visibility snapshots, original d20 preserved, refund/replay and same-client dialog guards"
+          ],
+          "manualAdjudication": [
+            "Confirm non-spell magical effect",
+            "Already processed damage/effects/concentration consequences need manual reconciliation",
+            "Different clients share native non-atomic resource updates"
+          ]
+        },
+        {
+          "section": "Fighting style: Magic Warrior",
+          "printedPage": 33,
+          "documents": [
+            "feat:magic-warrior"
+          ],
+          "automation": [
+            "Native fighting-style feature prerequisite, choice of two wizard cantrips and one shared mental ability",
+            "Native optional one-cantrip replacement on future character levels, including multiclass advancement; no backdated replacement steps"
+          ],
+          "manualAdjudication": [
+            "Drag non-SRD wizard cantrips from their installed source into the native choice",
+            "Direct item creation without the native advancement manager needs manual advancement setup"
+          ]
         }
       ],
       "availablePrintedRanges": [
@@ -45,7 +546,14 @@
         4,
         5,
         6
-      ]
+      ],
+      "webAudit": {
+        "source": "https://ruleholder.com/sourcebooks/au",
+        "checkedOn": "2026-10-14",
+        "moduleVersion": "1.83.0",
+        "report": "tools/data/arcana-unleashed-coverage.json",
+        "complete": false
+      }
     },
     {
       "id": "MTF",
@@ -82,6 +590,68 @@
       "excludedSections": [
         "sexual violence"
       ]
+    },
+    {
+      "id": "MAGUS-PT3",
+      "file": "Magus 2024-Playtest3-0.1.pdf",
+      "title": "Magus 2024 — Playtest 3",
+      "sha256": "fea83a16db442a42768760bc5f8a8ba762211a6f72a4d076ee9986ac4e1c74ce",
+      "pdfPages": 17,
+      "rules": "2024",
+      "extracted": true,
+      "imported": false,
+      "coverage": [
+        {
+          "pages": [
+            2,
+            4
+          ],
+          "status": "partial",
+          "documents": [
+            "class:magus",
+            "journal:spell-list-magus",
+            "item:magus:diamond-50"
+          ],
+          "features": 13,
+          "automation": [
+            "Нативные хиты, владения, навыки и стартовое снаряжение А/Б",
+            "Начальное мастерство двух видов оружия",
+            "Выбор/замена заговоров и подготовленных заклинаний на каждом уровне",
+            "Повышения характеристик и выбор боевого стиля",
+            "Архимагус: точный выбор Интеллект/Сила либо Интеллект/Ловкость +2, максимум 23",
+            "Сопротивление силовому урону и условное преимущество концентрации",
+            "Восстановление ячеек с лимитами, расходом и отменой"
+          ],
+          "remainingAutomation": [
+            "Мистическая метка и выпуск заклинания",
+            "Арканное усилие и восстановление за ячейку",
+            "Урон/атаки Меча и магии, Дополнительная атака",
+            "Усиление и массовая метка",
+            "Условные спасброски и атаки против заклинаний",
+            "Связь Магического всплеска с бесплатным заклинанием и восстановлением",
+            "Временные хиты Мистического воина",
+            "Смена мастерства после отдыха"
+          ]
+        }
+      ],
+      "pending": [
+        "Шесть подклассов и все их особенности",
+        "Новые заклинания приложения и документы заклинаний вне SRD",
+        "Условная автоматизация класса: см. coverage.remainingAutomation",
+        "Снаряжение приложения"
+      ],
+      "sourceConflicts": [
+        "Таблица: Magical Recovery на 6-м, Sigil Surge на 9-м; заголовки особенностей: Sigil Surge на 6-м, Magical Recovery на 9-м",
+        "Cantrips: текст указывает новый заговор на 14-м, таблица — на 16-м уровне"
+      ],
+      "levelConflictResolution": {
+        "use": "classTable",
+        "chosenBy": "user",
+        "date": "2026-10-15",
+        "magicalRecovery": 6,
+        "sigilSurge": 9,
+        "additionalCantrip": 16
+      }
     }
   ]
 }

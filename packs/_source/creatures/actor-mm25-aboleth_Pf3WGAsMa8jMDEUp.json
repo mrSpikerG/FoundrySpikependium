@@ -1,0 +1,2569 @@
+{
+  "_id": "Pf3WGAsMa8jMDEUp",
+  "name": "Aboleth",
+  "type": "npc",
+  "img": "icons/creatures/eyes/humanoid-single-blind.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 21,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 9,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 15,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 18,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 15,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 18,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "skills": {
+      "prc": {
+        "value": 2
+      },
+      "his": {
+        "value": 2
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 3,
+        "spent": 0
+      },
+      "legres": {
+        "max": 3,
+        "spent": 0
+      },
+      "lair": {
+        "value": true,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "attributes": {
+      "init": {
+        "roll": {
+          "bonus": "@prof * 2"
+        }
+      },
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 17,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 150,
+        "max": 150,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "20d10+40"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "10",
+          "swim": "40"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": 120,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "int"
+    },
+    "details": {
+      "biography": {
+        "value": "<h2>Неподвластный времени инопланетный кукловод</h2><p>Среда обитания: Подводный мир, Подземье. Сокровища: Реликвии. Описание: страница 11; логово и статблок: страница 12.</p><p>В океанских глубинах аболеты видят сны о погибших империях и плетут многовековые интриги. Их амфибийная физиология, ментальное подавление и отвратительная инфекция позволяют превращать жертв в водных слуг. Они помнят противоречивые и невозможные империи древнейших эпох. Их утончённое мышление чуждо смертным.</p><p>Аболеты скрываются в развалинах подводных империй, источниках едкой слизи и на границе реальности. Они собирают толпы порабощённых слуг, подчиняют разум жертв и готовятся восстановить древнюю власть. Их цели можно выбрать или определить броском [[/r 1d6]].</p><table><tr><th>[[/r 1d6]]{1к6}</th><th>Замысел аболета</th></tr><tr><td>1</td><td>Осуществить непостижимый план, действуя будто случайно.</td></tr><tr><td>2</td><td>Узнать больше о мире, похищая существ и поглощая их разум.</td></tr><tr><td>3</td><td>Телепатически манипулировать выходцами из укромного места, заставляя их поклоняться себе как богу.</td></tr><tr><td>4</td><td>Открыть врата в далёкое прошлое или будущее и начать вторжение из другого времени.</td></tr><tr><td>5</td><td>Призвать драконовую черепаху, кракена или другое морское чудовище, чтобы затопить прибрежный город.</td></tr><tr><td>6</td><td>Посулами сокровищ заставить охотников вернуть реликвии давно павшей империи.</td></tr></table><h3>Логово аболета</h3><p>Затопленные развалины и пещеры с отдельными сухими помещениями для слуг и сокровищ. При смерти аболета или переносе логова региональные эффекты сразу исчезают.</p><p>Включите штатное поле «В логове» на листе: лимиты легендарных действий и устойчивости увеличатся с 3 до 4; опыт — с 5900 до 7200. Это открывает Псионическую проекцию и Загрязнённую воду.</p><p>@UUID[Compendium.spikependium.tables.RollTable.MP601d2EAGD5uYW6]{Замыслы аболета: открыть таблицу и бросить}</p>",
+        "public": ""
+      },
+      "alignment": "Принципиальная злая",
+      "type": {
+        "value": "aberration",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 10,
+      "habitat": {
+        "custom": "",
+        "value": [
+          {
+            "type": "underwater"
+          },
+          {
+            "type": "underdark"
+          }
+        ]
+      },
+      "treasure": {
+        "value": [
+          "relics"
+        ]
+      }
+    },
+    "traits": {
+      "size": "lg",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "deep"
+        ],
+        "custom": "",
+        "communication": {
+          "telepathy": {
+            "value": 120,
+            "units": "ft"
+          }
+        }
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "12",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Аболет",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "texture": {
+      "src": "icons/creatures/eyes/humanoid-single-blind.webp"
+    },
+    "width": 2,
+    "height": 2
+  },
+  "items": [
+    {
+      "_id": "A3q5sGB09vr5nPaw",
+      "name": "Амфибия",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Аболет может дышать воздухом и водой. Откройте «Вода и увлажнение кожи», выберите токен и отметьте нахождение под водой или вне воды. Те же кнопки на карточке Облака слизи позволяют отметить состояние пострадавшего существа и увлажнение его кожи.</p><h3>Действия</h3><ul><li>[[/item activity=CA7ElzchQg3QAiK8]]{Вода и увлажнение кожи}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "CA7ElzchQg3QAiK8": {
+            "_id": "CA7ElzchQg3QAiK8",
+            "type": "utility",
+            "name": "Вода и увлажнение кожи",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "self",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "self",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "flags": {
+              "spikependium": {
+                "abolethWaterControls": true
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.A3q5sGB09vr5nPaw"
+    },
+    {
+      "_id": "cCwFDpn90hu8xzkz",
+      "name": "Зондирующая телепатия",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Если видимое аболету существо общается с ним телепатически, аболет узнаёт его самые большие желания.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.cCwFDpn90hu8xzkz"
+    },
+    {
+      "_id": "qjkKJGFNEctzpDhd",
+      "name": "Легендарная устойчивость",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>3 применения в день, 4 в логове. При провале спасброска аболет может выбрать успех. Используйте штатную кнопку Легендарной устойчивости на карточке проваленного спасброска: она одновременно расходует счётчик и меняет результат на успех.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "legendary-resistance",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.qjkKJGFNEctzpDhd"
+    },
+    {
+      "_id": "YPFqCQdzb55rnrf9",
+      "name": "Облако слизи",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Под водой аболет окружён слизью. В конце его хода каждое существо в 5-футовой Эманации совершает спасбросок Выносливости Сл 14. При провале цель проклята: прозрачная склизкая кожа, дыхание воздухом и водой, восстановление ПЗ только под водой. Перед использованием отметьте аболета под водой в карточке «Вода и увлажнение кожи». В бою активный Мастер автоматически получает карточку облака и спасброски целей: учитываются дистанция, стены и полное укрытие, союзники включаются, сам аболет исключается. Повторное воздействие не сбрасывает уже действующее проклятие. На карточке Облака слизи выберите пострадавший токен и отметьте его состояние воды. Пока у проклятой цели не выбрано «Под водой», восстановление хитов блокируется; временные хиты разрешены. Вне воды автоматически применяется [[/r 1d12]]{1к12} кислотой в конце каждых 10 минут. Кнопка «Увлажнить кожу цели» защищает текущий десятиминутный интервал, если нажата до его окончания. Вход под воду прерывает сухой интервал; после выхода отсчёт начинается заново. При сбое используется уже созданная карточка и метка применения хитов; карточка не наносит тот же урон повторно.</p><h3>Действия</h3><ul><li>[[/item activity=roX3Mbv2ku3U9sOn]]{Облако слизи} · [[/save activity=roX3Mbv2ku3U9sOn]]{Спасбросок цели}</li><li>[[/item activity=vZJ3vMB2YNG545V0]]{Проклятие: урон вне воды} · [[/damage activity=vZJ3vMB2YNG545V0]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "aboleth-mucus",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "roX3Mbv2ku3U9sOn": {
+            "_id": "roX3Mbv2ku3U9sOn",
+            "type": "save",
+            "name": "Облако слизи",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "turnEnd",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "i8LB2VxeFX2FEIZl",
+                "onSave": false
+              }
+            ],
+            "range": {
+              "value": "",
+              "units": "self",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "radius",
+                "size": "5",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": []
+            },
+            "save": {
+              "ability": [
+                "con"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "14"
+              },
+              "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "monsterAction": "aboleth-curse"
+              }
+            }
+          },
+          "vZJ3vMB2YNG545V0": {
+            "_id": "vZJ3vMB2YNG545V0",
+            "type": "damage",
+            "name": "Проклятие: урон вне воды",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 200000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "critical": {
+                "allow": false,
+                "bonus": ""
+              },
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 1,
+                  "denomination": 12,
+                  "bonus": "",
+                  "types": [
+                    "acid"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "i8LB2VxeFX2FEIZl",
+          "name": "Проклятие слизистого облака",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "Склизкая прозрачная кожа, дыхание воздухом и водой. Восстанавливать ПЗ можно только под водой. Вне воды в конце каждых 10 минут: [[/r 1d12]]{1к12} кислотой, если кожа не была увлажнена. Снятие проклятия завершает эффект.",
+          "origin": null,
+          "statuses": [
+            "cursed"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "monsterEffect": "aboleth-curse",
+              "abolethCurseDamage": {
+                "_id": "7GUvmTepZiTFd3jn",
+                "type": "damage",
+                "name": "Проклятие аболета: кислотный урон",
+                "img": "",
+                "sort": 0,
+                "activation": {
+                  "type": "",
+                  "value": null,
+                  "condition": "",
+                  "override": true
+                },
+                "consumption": {
+                  "targets": [],
+                  "scaling": {
+                    "allowed": false,
+                    "max": ""
+                  },
+                  "spellSlot": false
+                },
+                "description": {
+                  "chatFlavor": "",
+                  "value": ""
+                },
+                "duration": {
+                  "value": "",
+                  "units": "inst",
+                  "special": "",
+                  "override": false,
+                  "concentration": false
+                },
+                "effects": [],
+                "range": {
+                  "value": "",
+                  "units": "self",
+                  "special": "",
+                  "override": true
+                },
+                "target": {
+                  "template": {
+                    "count": "",
+                    "contiguous": false,
+                    "type": "",
+                    "size": "",
+                    "width": "",
+                    "height": "",
+                    "units": "ft"
+                  },
+                  "affects": {
+                    "count": "1",
+                    "type": "self",
+                    "choice": false,
+                    "special": ""
+                  },
+                  "prompt": true,
+                  "override": true
+                },
+                "uses": {
+                  "spent": 0,
+                  "recovery": [],
+                  "max": ""
+                },
+                "visibility": {
+                  "identifier": "",
+                  "level": {
+                    "min": null,
+                    "max": null
+                  },
+                  "requireAttunement": false,
+                  "requireIdentification": false,
+                  "requireMagic": false
+                },
+                "damage": {
+                  "critical": {
+                    "allow": false,
+                    "bonus": ""
+                  },
+                  "parts": [
+                    {
+                      "custom": {
+                        "enabled": false,
+                        "formula": ""
+                      },
+                      "number": 1,
+                      "denomination": 12,
+                      "bonus": "",
+                      "types": [
+                        "acid"
+                      ],
+                      "scaling": {
+                        "mode": "",
+                        "number": null,
+                        "formula": ""
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!Pf3WGAsMa8jMDEUp.YPFqCQdzb55rnrf9.i8LB2VxeFX2FEIZl"
+        }
+      ],
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.YPFqCQdzb55rnrf9"
+    },
+    {
+      "_id": "CMDtiiOzhnaSoxFh",
+      "name": "Потустороннее восстановление",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Спустя [[/r 5d10]]{5к10} дней после уничтожения тела аболет возрождается со всеми ПЗ в Дальнем Пределе или другом месте, выбранном Мастером.</p><h3>Действия</h3><ul><li>[[/item activity=MdGSxWnQKggrx2rP]]{Дни до нового тела}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "MdGSxWnQKggrx2rP": {
+            "_id": "MdGSxWnQKggrx2rP",
+            "type": "utility",
+            "name": "Дни до нового тела",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "5d10",
+              "name": "",
+              "prompt": false,
+              "visible": true
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.CMDtiiOzhnaSoxFh"
+    },
+    {
+      "_id": "hd6G7PlnYUJnSQvX",
+      "name": "Мультиатака",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Две атаки Щупальцем, затем Поглощение воспоминаний или Порабощение разума, если действие доступно.</p><h3>Действия</h3><ul><li>[[/item activity=8aABufn52oRwDjlI]]{Мультиатака}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "8aABufn52oRwDjlI": {
+            "_id": "8aABufn52oRwDjlI",
+            "type": "utility",
+            "name": "Мультиатака",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "flags": {
+              "spikependium": {
+                "multiattack": {
+                  "weapon": "aboleth-tentacle",
+                  "count": 2,
+                  "finishers": [
+                    "aboleth-consume-memories",
+                    "aboleth-dominate-mind"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.hd6G7PlnYUJnSQvX"
+    },
+    {
+      "_id": "KBSj1nqNVJwuXzPR",
+      "name": "Щупальце",
+      "type": "weapon",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Бросок атаки в ближнем бою: +9, досягаемость 15 футов. Попадание: [[/damage 2d6+5 type=bludgeoning]]{2к6 + 5} дробящего урона. Существо не больше Крупного схвачено одним из четырёх щупалец (Сл высвобождения 14).</p><h3>Действия</h3><ul><li>[[/item activity=elKNi1a71pLo55jJ]]{Щупальце} · [[/damage activity=elKNi1a71pLo55jJ]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "aboleth-tentacle",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "elKNi1a71pLo55jJ": {
+            "_id": "elKNi1a71pLo55jJ",
+            "type": "attack",
+            "name": "Щупальце",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "15",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "proficient": 1,
+        "equipped": true,
+        "identified": true,
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "reach": 15,
+          "units": "ft"
+        },
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 2,
+            "denomination": 6,
+            "bonus": "",
+            "types": [
+              "bludgeoning"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "AmjGt2Bm20VYyCNC",
+          "name": "Схвачен щупальцем аболета",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [
+            "grappled"
+          ],
+          "tint": "#ffffff",
+          "flags": {},
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!Pf3WGAsMa8jMDEUp.KBSj1nqNVJwuXzPR.AmjGt2Bm20VYyCNC"
+        }
+      ],
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "spikependium": {
+          "monsterGrapple": {
+            "dc": 14,
+            "reach": 15,
+            "maxSize": "lg",
+            "limit": 4
+          }
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.KBSj1nqNVJwuXzPR"
+    },
+    {
+      "_id": "fCYxdOohaqFkKWE2",
+      "name": "Поглощение воспоминаний",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Одно существо, схваченное или очарованное именно этим аболетом, в пределах 30 футов: спасбросок Интеллекта Сл 16, [[/r 3d6]]{3к6} психического урона при провале, половина при успехе. Если этим действием ПЗ Гуманоида уменьшены до 0, аболет получает его воспоминания.</p><h3>Действия</h3><ul><li>[[/item activity=GAjeaV8ukVAKvtCf]]{Поглощение воспоминаний} · [[/damage activity=GAjeaV8ukVAKvtCf]]{Бросок урона} · [[/save activity=GAjeaV8ukVAKvtCf]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "aboleth-consume-memories",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "GAjeaV8ukVAKvtCf": {
+            "_id": "GAjeaV8ukVAKvtCf",
+            "type": "save",
+            "name": "Поглощение воспоминаний",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "30",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 3,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "psychic"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": [
+                "int"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "16"
+              },
+              "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "monsterAction": "aboleth-memories"
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.fCYxdOohaqFkKWE2"
+    },
+    {
+      "_id": "JEKH2WyFJCzJUKEM",
+      "name": "Порабощение разума",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Дважды в день. Видимое существо в пределах 30 футов: спасбросок Мудрости Сл 16. Провал: Очаровано до смерти аболета или перехода на другой план. Оно действует как союзник аболета и находится под его контролем в пределах 60 футов; телепатическая связь действует на любом расстоянии. После каждого применения урона автоматически повторяет спасбросок; ещё один — за каждые сутки, проведённые не ближе 1 мили от аболета. Успех завершает эффект. Для дальнего отсчёта оба токена должны находиться на одной сцене с измеримой сеткой. Смену плана, расстояния между разными сценами и управление союзником разрешает Мастер. Если спасбросок отменён или карточка не создана из-за сбоя, проверьте историю чата и разрешите проверку вручную; модуль не делает слепой повтор.</p><h3>Действия</h3><ul><li>[[/item activity=UlJOlk0SF4y0YGnx]]{Порабощение разума} · [[/save activity=UlJOlk0SF4y0YGnx]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "aboleth-dominate-mind",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "2",
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ]
+        },
+        "activities": {
+          "UlJOlk0SF4y0YGnx": {
+            "_id": "UlJOlk0SF4y0YGnx",
+            "type": "save",
+            "name": "Порабощение разума",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "target": "",
+                  "value": "1",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "hK1QEsnj7BW0M32D",
+                "onSave": false
+              }
+            ],
+            "range": {
+              "value": "30",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": []
+            },
+            "save": {
+              "ability": [
+                "wis"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "16"
+              },
+              "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "monsterAction": "aboleth-dominate"
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "hK1QEsnj7BW0M32D",
+          "name": "Порабощение разумом аболета",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "Союзник аболета; под его контролем в пределах 60 футов. Телепатическая связь на любом расстоянии. Эффект заканчивается при смерти аболета, переходе на другой план или успешном повторном спасброске Мудрости Сл 16 после урона либо за 1 милю (не чаще раза в 24 часа для удаления).",
+          "origin": null,
+          "statuses": [
+            "charmed"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "monsterEffect": "aboleth-dominate"
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!Pf3WGAsMa8jMDEUp.JEKH2WyFJCzJUKEM.hK1QEsnj7BW0M32D"
+        }
+      ],
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.JEKH2WyFJCzJUKEM"
+    },
+    {
+      "_id": "YNFymHpWkrIxczgC",
+      "name": "Бич",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Легендарное действие (1 использование), сразу после хода другого существа: одна атака Щупальцем. Не расходует обычное действие.</p><h3>Действия</h3><ul><li>[[/item activity=BLGUQgTNEGCYCaEK]]{Бич}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "BLGUQgTNEGCYCaEK": {
+            "_id": "BLGUQgTNEGCYCaEK",
+            "type": "utility",
+            "name": "Бич",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "Сразу после окончания хода другого существа",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "flags": {
+              "spikependium": {
+                "multiattack": {
+                  "weapon": "aboleth-tentacle",
+                  "count": 1
+                }
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.YNFymHpWkrIxczgC"
+    },
+    {
+      "_id": "YF4CaGWZs4ITCZcl",
+      "name": "Психическое истощение",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Легендарное действие (1 использование), сразу после хода другого существа. Если есть существо, Очарованное или Схваченное этим аболетом, он использует Поглощение воспоминаний и восстанавливает [[/r 1d10]]{1к10} ПЗ. Лечение открывается отдельной штатной карточкой на самого аболета.</p><h3>Действия</h3><ul><li>[[/item activity=IDHL4Ec55BI6GIWr]]{Психическое истощение} · [[/damage activity=IDHL4Ec55BI6GIWr]]{Бросок урона} · [[/save activity=IDHL4Ec55BI6GIWr]]{Спасбросок цели}</li><li>[[/item activity=siugtPJ1BHBbYgyV]]{Восстановление аболета} · [[/heal activity=siugtPJ1BHBbYgyV]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "aboleth-psychic-drain",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "IDHL4Ec55BI6GIWr": {
+            "_id": "IDHL4Ec55BI6GIWr",
+            "type": "save",
+            "name": "Психическое истощение",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "Сразу после окончания хода другого существа",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "30",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 3,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "psychic"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": [
+                "int"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "16"
+              },
+              "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "monsterAction": "aboleth-drain"
+              }
+            }
+          },
+          "siugtPJ1BHBbYgyV": {
+            "_id": "siugtPJ1BHBbYgyV",
+            "type": "heal",
+            "name": "Восстановление аболета",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 200000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "self",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "self",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "healing": {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "healing"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.YF4CaGWZs4ITCZcl"
+    },
+    {
+      "_id": "EUToDqyhDDAdYKhc",
+      "name": "Загрязнённая вода",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Источники воды в пределах 1 мили от логова загрязнены. Существо, выпившее воду, кроме аболета и его союзников, совершает спасбросок Выносливости Сл 15; при провале Отравлено 1 час. При смерти аболета или переносе логова региональный эффект исчезает.</p><h3>Действия</h3><ul><li>[[/item activity=qfHjeFAVOiYWomJX]]{Выпить загрязнённую воду} · [[/save activity=qfHjeFAVOiYWomJX]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "aboleth-water",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "qfHjeFAVOiYWomJX": {
+            "_id": "qfHjeFAVOiYWomJX",
+            "type": "save",
+            "name": "Выпить загрязнённую воду",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "1",
+              "units": "hour",
+              "special": "",
+              "override": true,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "Ehd7r2duGZlvVOxv",
+                "onSave": false
+              }
+            ],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": []
+            },
+            "save": {
+              "ability": [
+                "con"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              },
+              "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "monsterAction": "aboleth-water-poison"
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "Ehd7r2duGZlvVOxv",
+          "name": "Загрязнённая вода логова",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": 3600,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [
+            "poisoned"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "monsterEffect": "aboleth-water-poison"
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!Pf3WGAsMa8jMDEUp.EUToDqyhDDAdYKhc.Ehd7r2duGZlvVOxv"
+        }
+      ],
+      "folder": null,
+      "sort": 1200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.EUToDqyhDDAdYKhc"
+    },
+    {
+      "_id": "AalAKe6GFMkc2dde",
+      "name": "Псионическая проекция",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>В логове аболет неограниченно творит Проекцию образа без компонентов, используя Интеллект (Сл 16); дистанция 1 миля. Он может использовать телепатию из места иллюзии. При смерти аболета или переносе логова региональный эффект исчезает.</p><h3>Действия</h3><ul><li>[[/item activity=FEhD0csJgoKiawSR]]{Псионическая проекция}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "aboleth-projection",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "FEhD0csJgoKiawSR": {
+            "_id": "FEhD0csJgoKiawSR",
+            "type": "cast",
+            "name": "Псионическая проекция",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "1",
+              "units": "mi",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "int",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "vocal",
+                "somatic",
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplProjectIma"
+            },
+            "flags": {
+              "spikependium": {
+                "monsterAction": "aboleth-projection"
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Pf3WGAsMa8jMDEUp.AalAKe6GFMkc2dde"
+    }
+  ],
+  "effects": [],
+  "folder": "4BUbLDhdunZZb8Ff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:aboleth",
+      "originalName": "Aboleth"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!Pf3WGAsMa8jMDEUp"
+}

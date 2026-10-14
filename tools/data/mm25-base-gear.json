@@ -1,0 +1,302 @@
+{
+  "source": "https://github.com/foundryvtt/dnd5e/tree/87e94dbd9f930135e0694cd7e7d49f210603cd2c/packs/_source/equipment24",
+  "gear": {
+    "chainshirt": {
+      "name": "Chain Shirt",
+      "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+      "type": "equipment",
+      "system": {
+        "type": {
+          "value": "medium",
+          "baseItem": "chainshirt"
+        },
+        "armor": {
+          "value": 13,
+          "magicalBonus": null,
+          "dex": 2
+        },
+        "price": {
+          "value": 50,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 20,
+          "units": "lb"
+        },
+        "properties": []
+      }
+    },
+    "hide": {
+      "name": "Hide Armor",
+      "img": "icons/equipment/chest/vest-cloth-tattered-tan.webp",
+      "type": "equipment",
+      "system": {
+        "type": {
+          "value": "medium",
+          "baseItem": "hide"
+        },
+        "armor": {
+          "value": 12,
+          "magicalBonus": null,
+          "dex": 2
+        },
+        "price": {
+          "value": 10,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 12,
+          "units": "lb"
+        },
+        "properties": []
+      }
+    },
+    "javelin": {
+      "name": "Javelin",
+      "img": "icons/weapons/polearms/javelin-flared.webp",
+      "type": "weapon",
+      "system": {
+        "type": {
+          "value": "simpleM",
+          "baseItem": "javelin"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 5,
+          "denomination": "sp"
+        },
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "properties": [
+          "thr"
+        ],
+        "range": {
+          "value": 30,
+          "long": 120,
+          "units": "ft",
+          "reach": null
+        },
+        "ammunition": {}
+      }
+    },
+    "lightcrossbow": {
+      "name": "Light Crossbow",
+      "img": "icons/weapons/crossbows/crossbow-simple-brown.webp",
+      "type": "weapon",
+      "system": {
+        "type": {
+          "value": "simpleR",
+          "baseItem": "lightcrossbow"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 25,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 5,
+          "units": "lb"
+        },
+        "properties": [
+          "amm",
+          "lod",
+          "two"
+        ],
+        "range": {
+          "value": 80,
+          "long": 320,
+          "units": "ft",
+          "reach": null
+        },
+        "ammunition": {
+          "type": "crossbowBolt"
+        }
+      }
+    },
+    "lighthammer": {
+      "name": "Light Hammer",
+      "img": "icons/weapons/hammers/shorthammer-double-stone-engraved.webp",
+      "type": "weapon",
+      "system": {
+        "type": {
+          "value": "simpleM",
+          "baseItem": "lighthammer"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 2,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "properties": [
+          "lgt",
+          "thr"
+        ],
+        "range": {
+          "value": 20,
+          "long": 60,
+          "units": "ft",
+          "reach": null
+        },
+        "ammunition": {}
+      }
+    },
+    "morningstar": {
+      "name": "Morningstar",
+      "img": "icons/weapons/maces/mace-cube-spiked-steel.webp",
+      "type": "weapon",
+      "system": {
+        "type": {
+          "value": "martialM",
+          "baseItem": "morningstar"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 15,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 4,
+          "units": "lb"
+        },
+        "properties": [],
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "ft",
+          "reach": null
+        },
+        "ammunition": {}
+      }
+    },
+    "shortsword": {
+      "name": "Shortsword",
+      "img": "icons/weapons/swords/sword-guard-worn-purple.webp",
+      "type": "weapon",
+      "system": {
+        "type": {
+          "value": "martialM",
+          "baseItem": "shortsword"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 10,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "properties": [
+          "fin",
+          "lgt"
+        ],
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "ft",
+          "reach": null
+        },
+        "ammunition": {}
+      }
+    },
+    "studded": {
+      "name": "Studded Leather Armor",
+      "img": "icons/equipment/chest/breastplate-rivited-red.webp",
+      "type": "equipment",
+      "system": {
+        "type": {
+          "value": "light",
+          "baseItem": "studded"
+        },
+        "armor": {
+          "value": 12,
+          "magicalBonus": null,
+          "dex": null
+        },
+        "price": {
+          "value": 45,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 13,
+          "units": "lb"
+        },
+        "properties": []
+      }
+    },
+    "scimitar": {
+      "name": "Scimitar",
+      "img": "icons/weapons/swords/scimitar-worn-blue.webp",
+      "type": "weapon",
+      "system": {
+        "type": {
+          "value": "martialM",
+          "baseItem": "scimitar"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 25,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 3,
+          "units": "lb"
+        },
+        "properties": [
+          "fin",
+          "lgt"
+        ],
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "ft",
+          "reach": null
+        },
+        "ammunition": {}
+      }
+    },
+    "leather": {
+      "name": "Leather Armor",
+      "img": "icons/equipment/chest/breastplate-scale-leather.webp",
+      "type": "equipment",
+      "system": {
+        "type": {
+          "value": "light",
+          "baseItem": "leather"
+        },
+        "armor": {
+          "value": 11,
+          "magicalBonus": null,
+          "dex": null
+        },
+        "price": {
+          "value": 10,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 10,
+          "units": "lb"
+        },
+        "properties": []
+      }
+    }
+  }
+}

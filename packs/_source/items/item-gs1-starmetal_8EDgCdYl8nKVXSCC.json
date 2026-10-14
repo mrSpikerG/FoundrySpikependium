@@ -1,0 +1,248 @@
+{
+  "_id": "8EDgCdYl8nKVXSCC",
+  "name": "Starmetal Ring",
+  "type": "equipment",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>За 1 час прикосновения привяжите один объект массой до 25 фунтов, хотя бы наполовину состоящий из металла; новая связь заменяет предыдущую. Нося кольцо, в свой ход бонусным действием притяните этот объект на расстояние до 20 футов, если он находится в пределах 40 футов и не за полным укрытием. Объект обходит препятствия без вреда. В своём пространстве поймайте его свободной рукой или положите у ног. Связь, положение объекта и перемещение пока отслеживает Мастер.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 0,01 фунта для небольшого кольца; источник не задаёт вес.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=c288611be778f027\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=52ozB80xJFBRBW6R]]{Связать металлический объект}</li><li>[[/item activity=JwEv0szF39GjJgnQ]]{Притянуть связанный объект на 20 футов}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=c288611be778f027",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-starmetal",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.01,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "ring",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "52ozB80xJFBRBW6R": {
+        "_id": "52ozB80xJFBRBW6R",
+        "type": "utility",
+        "name": "Связать металлический объект",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "hour",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "touch",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "JwEv0szF39GjJgnQ": {
+        "_id": "JwEv0szF39GjJgnQ",
+        "type": "utility",
+        "name": "Притянуть связанный объект на 20 футов",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "40",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "6qgmiQML3TaZ2v8F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:starmetal",
+      "originalName": "Starmetal Ring"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!8EDgCdYl8nKVXSCC"
+}

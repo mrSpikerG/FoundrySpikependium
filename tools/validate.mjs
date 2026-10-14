@@ -8,6 +8,8 @@ import { BOOKS } from "./lib/core.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "packs/_source");
 const SRD = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/srd.json"), "utf8"));
+const webSources = new Map(JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/external-content-inventory.json"), "utf8")).sources
+  .map(s => [s.id, new Set(s.entries ? s.entries.map(e => e.url) : [s.url])]));
 const ICONS = new Set(fs.readFileSync(path.join(ROOT, "tools/data/icons.txt"), "utf8").split(/\r?\n/).filter(Boolean));
 
 const ID = /^[A-Za-z0-9]{16}$/;
@@ -15,11 +17,17 @@ const errors = [];
 const warnings = [];
 const err = (where, msg) => errors.push(`${where}: ${msg}`);
 const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
-const bookPages = { "AU": 160, "UA-EB": 16, "UA-FR": 10, "UA-HS": 9, "UA-PS": 13, "UA-PU": 15, "UA-AS": 10, "UA-AU": 9, "UA-MS": 6, "UA-VO": 11, "UA-VO2": 5 };
+const bookPages = { "MM25": 385, "AU": 160, "UA-EB": 16, "UA-FR": 10, "UA-HS": 9, "UA-PS": 13, "UA-PU": 15, "UA-AS": 10, "UA-AU": 9, "UA-MS": 6, "UA-VO": 11, "UA-VO2": 5 };
 function checkSource(where, source) {
-  if (!source || !BOOKS[source.book]) return err(where, "нет известного источника UA");
+  if (!source || !BOOKS[source.book]) return err(where, "нет известного источника");
+  if (["GS1", "GS2", "VSS"].includes(source.book)) {
+    if (!webSources.get(source.book)?.has(source.custom)) err(where, "нет точной ссылки на карточку в реестре веб-источника");
+    if (source.page !== "") err(where, "номер страницы веб-источника не подтверждён");
+    if (source.rules !== (source.book === "GS1" ? "2024" : "2014")) err(where, "неверная редакция веб-источника");
+    return;
+  }
   const page = Number(source.page);
-  if (!Number.isInteger(page) || page < 1 || page > bookPages[source.book]) err(where, `страница вне документа: ${source.page}`);
+  if (!Number.isInteger(page) || page < 1 || page > (source.book === "MAGUS-PT3" ? 17 : bookPages[source.book])) err(where, `страница вне документа: ${source.page}`);
   if (source.book === "AU" && page > 45 && page < 151) err(where, "эта страница отсутствует в предоставленном PDF Неудержимой магии");
   if (source.rules !== "2024") err(where, "неверная редакция правил");
 }
@@ -42,7 +50,7 @@ for ( const pack of fs.readdirSync(SRC) ) {
     byPack[pack].push({ file, data });
   }
 }
-const TYPE = { classes: "Item", subclasses: "Item", feats: "Item", spells: "Item", items: "Item", creatures: "Actor", rules: "JournalEntry" };
+const TYPE = { classes: "Item", subclasses: "Item", feats: "Item", spells: "Item", items: "Item", creatures: "Actor", rules: "JournalEntry", tables: "RollTable" };
 for ( const [pack, list] of Object.entries(byPack) ) {
   const ids = new Set();
   for ( const { file, data } of list ) {
@@ -75,7 +83,10 @@ function checkItem(where, item) {
     if ( a.type === "cast" && !srdIds.has(a.spell.uuid) && !docs.has(a.spell.uuid) ) err(where, `cast ссылается на неизвестное заклинание ${a.spell.uuid}`);
     if ( a.type === "transform" ) for ( const p of a.profiles ) if ( p.uuid && !docs.has(p.uuid) ) err(where, `превращение ссылается на неизвестного ${p.uuid}`);
     if (a.type === "forward" && !acts[a.activity?.id]) err(where, "переадресация ссылается на отсутствующее действие");
-    for ( const t of a.consumption?.targets ?? [] ) if ( !["itemUses", "activityUses", "spellSlots", "hitDice", "attribute", "material"].includes(t.type) ) err(where, `неизвестный тип расхода ${t.type}`);
+    for ( const t of a.consumption?.targets ?? [] ) if ( !["itemUses", "activityUses", "spellSlots", "hitDice", "attribute", "material", "spikependiumMaterial", "spikependiumMagusHitDice"].includes(t.type) ) err(where, `неизвестный тип расхода ${t.type}`);
+    for (const t of a.consumption?.targets ?? []) if (t.type === "spikependiumMaterial"
+      && (item.type !== "spell" || !item.system.materials?.consumed || !item.system.properties.includes("material") || t.value !== "1"))
+      err(where, "расход компонента требует заклинания с расходуемым материалом и стоимостью 1 комплект");
     for (const t of a.consumption?.targets ?? []) if (t.type === "spellSlots" && !/^[1-9]$/.test(t.target)) err(where, `неверная ячейка: ${t.target}`);
     for (const t of a.consumption?.targets ?? []) {
       if (t.type === "itemUses" && !t.target && !item.system.uses?.max) err(where, "расход предмета без счётчика применений");
@@ -145,6 +156,7 @@ for ( const [pack, list] of Object.entries(byPack) ) {
     if ( /"undefined"|NaN|\[object Object\]|@@REF/.test(raw) ) err(where, "в данных найдено undefined/NaN/[object Object]/@@REF");
     if ( data.folder && !folderIds.has(data.folder) ) err(where, `папка ${data.folder} не найдена`);
     if ( data._key.startsWith("!folders!") ) continue;
+    if (!data.folder) err(where, "документ должен находиться в папке компендиума");
     if (data.system?.source) checkSource(where, data.system.source);
     if (pack === "items") {
       if (!Number.isFinite(data.system.price.value) || data.system.price.value <= 0 || data.system.price.denomination !== "gp") err(where, "нет корректной цены в зм");
@@ -156,13 +168,49 @@ for ( const [pack, list] of Object.entries(byPack) ) {
       for (const e of data.effects ?? []) {
         if (!ID.test(e._id) || e._key !== `!actors.effects!${data._id}.${e._id}`) err(where, "неверный ключ эффекта существа");
       }
-      for ( const it of data.items ?? [] ) { checkSource(`${where} → ${it.name}`, it.system.source); checkItem(`${where} → ${it.name}`, it); checkHtml(`${where} → ${it.name}`, it.system.description.value); }
+      for ( const it of data.items ?? [] ) {
+        checkSource(`${where} → ${it.name}`, it.system.source); checkItem(`${where} → ${it.name}`, it); checkHtml(`${where} → ${it.name}`, it.system.description.value);
+        for (const activity of Object.values(it.system.activities ?? {})) {
+          const rule = activity.flags?.spikependium?.multiattack;
+          if (!rule) continue;
+          const scaled = rule.count === "spell" && /^actor:au-(plant|dinosaur)-/.test(data.flags.spikependium?.key ?? "");
+          if (!scaled && (!Number.isSafeInteger(rule.count) || rule.count < 1)) err(where, "неверное число атак мультиатаки");
+          const weapons = rule.weapons ?? [rule.weapon];
+          if (!Array.isArray(weapons) || !weapons.length || new Set(weapons).size !== weapons.length
+            || weapons.some(identifier => !data.items.some(i => i.system.identifier === identifier && Object.values(i.system.activities).some(a => a.type === "attack"))))
+            err(where, "мультиатака ссылается на отсутствующую атаку");
+          if (rule.optionalSpell && !data.items.some(i => Object.values(i.system.activities).some(a => a.type === "cast" && a.spell.uuid === rule.optionalSpell)))
+            err(where, "мультиатака ссылается на отсутствующее действие заклинания");
+          for (const [identifier, limit] of Object.entries(rule.attackLimits ?? {}))
+            if (!weapons.includes(identifier) || !Number.isSafeInteger(limit) || limit < 1 || limit > rule.count)
+              err(where, "неверный лимит замены атаки мультиатаки");
+          if (rule.finishers && (!Array.isArray(rule.finishers) || !rule.finishers.length
+            || rule.finishers.some(identifier => !data.items.some(i => i.system.identifier === identifier
+              && Object.values(i.system.activities).some(a => a.type === "save")))))
+            err(where, "мультиатака ссылается на отсутствующее завершающее действие");
+        }
+      }
       checkHtml(where, data.system.details.biography.value);
     }
     if ( TYPE[pack] === "JournalEntry" ) {
       for ( const p of data.pages ) {
         checkHtml(`${where} → ${p.name}`, p.text?.content ?? p.system?.description?.value);
         for ( const u of p.system?.spells ?? [] ) if ( !docs.has(u) && !srdIds.has(u) ) err(where, `список заклинаний: неизвестный ${u}`);
+      }
+    }
+    if (TYPE[pack] === "RollTable") {
+      checkSource(where, data.flags.spikependium?.source); checkHtml(where, data.description);
+      if (data._key !== `!tables!${data._id}` || data.formula !== `1d${data.results.length}` || !data.replacement || !data.displayRoll)
+        err(where, "неверная формула или режим случайной таблицы");
+      const ids = new Set();
+      for (const [index, result] of data.results.entries()) {
+        if (!ID.test(result._id) || ids.has(result._id) || result._key !== `!tables.results!${data._id}.${result._id}`)
+          err(where, "неверный идентификатор результата таблицы");
+        ids.add(result._id);
+        if (result.type !== "text" || result.weight !== 1 || result.drawn || JSON.stringify(result.range) !== JSON.stringify([index + 1, index + 1]))
+          err(where, "неверный диапазон или тип результата таблицы");
+        if (!result.description) err(where, "пустое описание результата таблицы");
+        checkHtml(where, result.description);
       }
     }
   }
@@ -177,7 +225,8 @@ for ( const [pack, list] of Object.entries(byPack) ) {
       if ( adv.type === "ScaleValue" && adv.configuration.identifier ) scales.add(`${data.system.identifier}.${adv.configuration.identifier}`);
     }
   }
-  const CLASSES = new Set(["artificer", "psion", "barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"]);
+  const CLASSES = new Set(["artificer", "psion", "barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard",
+    ...[...docs.values()].filter(d => d.type === "class").map(d => d.system.identifier)]);
   const ABIL = new Set(["str", "dex", "con", "int", "wis", "cha"]);
   const OK = [/^@prof$/, /^@scaling$/, /^@mod$/, /^@item\.(uses\.(spent|max|value)|level)$/, /^@attributes\.(spell\.mod|movement\.walk|hd\.\w+)$/, /^@details\.level$/];
   const checkFormula = (where, formula) => {
@@ -212,6 +261,10 @@ for ( const [pack, list] of Object.entries(byPack) ) {
 }
 
 // Итог.
+const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "module.json"), "utf8"));
+const library = manifest.packFolders?.find(folder => folder.name === "Spikependium");
+for (const pack of manifest.packs) if (!library?.packs?.includes(pack.name))
+  err("module.json", `компендиум ${pack.name} должен входить в папку библиотеки Spikependium`);
 const total = Object.values(byPack).reduce((n, l) => n + l.length, 0);
 console.log(`Проверено записей: ${total}`);
 if ( warnings.length ) console.log(`Предупреждения (${warnings.length}):\n  ${warnings.join("\n  ")}`);

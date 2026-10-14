@@ -1,0 +1,112 @@
+{
+  "_id": "Tcjw2AwsRwHxmlTC",
+  "name": "Магический всплеск",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Выберите одно заклинание магуса 6-го уровня. Один раз за продолжительный отдых вы можете наложить его без расхода ячейки. При этом восстановите одну потраченную ячейку не выше 5-го уровня по своему выбору. Штатное продвижение сохраняет выбранное заклинание; свободное накладывание, общий расход применения и восстановление ячейки ещё связываются, пока отслеживайте их вручную.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-spell-surge",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": 18,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "N9AWnpQllpsvxiby",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "18": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:magus"
+            ],
+            "level": "6",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 18,
+        "title": "Заклинание Магического всплеска",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "SeLB7GqlEKAjEW3H",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "magus:spell-surge"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Tcjw2AwsRwHxmlTC"
+}

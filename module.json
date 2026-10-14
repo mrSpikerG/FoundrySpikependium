@@ -1,11 +1,11 @@
 {
   "id": "spikependium",
-  "title": "Spikependium — Unearthed Arcana (RU)",
-  "description": "Материалы Unearthed Arcana 2024–2026 на русском языке для системы D&D 5e (правила 2024 года): классы Изобретатель и Псионик, подклассы, черты меток дракона и диких талантов, заклинания, магические предметы и спутники. Перевод: Koroz.",
-  "version": "1.40.0",
+  "title": "Spikependium — материалы D&D на русском",
+  "description": "Материалы D&D на русском для Foundry VTT 14 и dnd5e 6.x: Unearthed Arcana, Энциклопедия чудовищ (2025), Неудержимая магия, Сумка грифона, Алхимик (Valda) и Магус (Playtest 3). Перенос и автоматизация продолжаются.",
+  "version": "1.85.0",
   "url": "https://github.com/mrSpikerG/FoundrySpikependium",
   "manifest": "https://github.com/mrSpikerG/FoundrySpikependium/releases/latest/download/module.json",
-  "download": "https://github.com/mrSpikerG/FoundrySpikependium/releases/download/v1.40.0/spikependium.zip",
+  "download": "https://github.com/mrSpikerG/FoundrySpikependium/releases/download/v1.85.0/spikependium.zip",
   "authors": [
     {
       "name": "Spikependium"
@@ -142,6 +142,18 @@
         "ASSISTANT": "OWNER"
       },
       "flags": {}
+    },
+    {
+      "name": "tables",
+      "label": "Случайные таблицы",
+      "path": "packs/tables",
+      "type": "RollTable",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -156,7 +168,8 @@
         "spells",
         "items",
         "creatures",
-        "rules"
+        "rules",
+        "tables"
       ],
       "folders": []
     }

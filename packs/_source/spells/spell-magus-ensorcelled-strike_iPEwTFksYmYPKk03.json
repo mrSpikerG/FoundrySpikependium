@@ -1,0 +1,179 @@
+{
+  "_id": "iPEwTFksYmYPKk03",
+  "name": "Ensorcelled Strike",
+  "type": "spell",
+  "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+  "system": {
+    "description": {
+      "value": "<p>При накладывании совершите безоружный удар или атаку оружием по существу. При попадании нанесите обычный урон; до конца вашего следующего хода цель зачарована: её спасброски против заклинаний совершаются с помехой, атаки заклинаниями против неё — с преимуществом. Зачарование заканчивается раньше, если цель провалит спасбросок против заклинания или по ней попадёт атака заклинанием. Это особое зачарование, а не состояние Очарованный.</p><p><strong>Высокая ячейка.</strong> При ячейке 2-го уровня или выше именно рукопашная атака оружием дополнительно наносит по [[/r 1d6]]{1к6} силового урона за каждый уровень выше 1-го.</p><p>Выбор исходного оружия/безоружного удара, объединение атаки с накладыванием, добавочный урон и прекращение зачарования пока выполняются вручную. Компоненты взяты из отдельного описания заклинания (С), а не противоречащей ему пометки М в таблице.</p><h3>Действия</h3><ul><li>[[/item activity=nn0ItPjuKvGZqiPa]]{Зачаровать удар — затем выполнить исходную атаку}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "14",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-ensorcelled-strike",
+    "activation": {
+      "type": "bonus",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 1,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "somatic"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "evo",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "nn0ItPjuKvGZqiPa": {
+        "_id": "nn0ItPjuKvGZqiPa",
+        "type": "utility",
+        "name": "Зачаровать удар — затем выполнить исходную атаку",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "dfSvlGQZbtiT0B1k",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:magus-ensorcelled-strike",
+      "originalName": "Ensorcelled Strike"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!iPEwTFksYmYPKk03"
+}

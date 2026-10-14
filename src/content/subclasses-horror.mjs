@@ -132,6 +132,13 @@ export function define() {
     changes: [change("system.attributes.ac.bonus", "+ max(1, @abilities.wis.mod)")],
     description: "<p>Бонус к КД, тревожная аура в 10 футов. Действует, пока активна ваша Метка охотника.</p>"
   });
+  const unsettling = effect("hollow-warden:unsettling", {
+    name: "Тревожная аура: действие или бонусное действие", img: "icons/magic/nature/tree-spirit-black",
+    transfer: false, flags: { spikependium: { hollowAuraRestriction: true } },
+    description: "<p>До конца этого хода можно совершить действие или бонусное действие, но не оба. Реакция сохраняется.</p>"
+  });
+  // targetEnd пропускает ход создания; аура ограничивает только текущий ход.
+  unsettling.duration = { value: 1, units: "turns", expiry: "turnEnd", expired: false };
   makeSubclass({
     key: "subclass:hollow-warden", cls: "Следопыт", clsGen: "следопыта", classIdentifier: "ranger",
     name: "Страж пустоты", en: "Hollow Warden", identifier: "hollow-warden", book: BOOK, page: 5,
@@ -142,11 +149,11 @@ export function define() {
     features: [
       {
         id: "wrath-of-the-wilds", level: 3, name: "Гнев диких", img: "icons/magic/nature/tree-spirit-black",
-        effects: [wrath],
+        effects: [wrath, unsettling],
         desc: "Вы черпаете силу из древних и зловещих ужасов земли. Когда вы накладываете заклинание [[Метка охотника]], вы трансформируетесь, получая следующие преимущества на время действия заклинания.\n\n**Древняя броня.** Вы получаете бонус к КД, равный вашему модификатору Мудрости (минимум +1). Ваше тело покрывается гнилой корой или звериной шкурой.\n\n**Тревожная аура.** Когда враг начинает свой ход в пределах 10-футовой эманации от вас, он должен совершить спасбросок Мудрости против вашей Сл. спасброска заклинаний. При провале он может в этот ход совершить либо действие, либо бонусное действие, но не оба. Ваша тень удлиняется и искажается вокруг вас, либо из вашего тела вырастают неестественные образования, такие как окровавленные рога или гнилые клыки.",
         acts: [
           utility("hollow-warden:wrath", { name: "Трансформация", activation: "special", condition: "Вы накладываете Метку охотника", self: true, effects: [wrath._id] }),
-          save("hollow-warden:aura", { name: "Тревожная аура", activation: "special", condition: "Враг начинает ход в 10 футах от вас", count: 1, affects: "enemy", ability: "wis" })
+          save("hollow-warden:aura", { name: "Тревожная аура", activation: "special", condition: "Враг начинает ход в 10 футах от вас", count: 1, affects: "enemy", ability: "wis", effects: [{ _id: unsettling._id, onSave: false }] })
         ]
       },
       {

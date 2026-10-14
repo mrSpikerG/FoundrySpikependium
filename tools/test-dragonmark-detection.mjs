@@ -111,6 +111,6 @@ await import("../scripts/spikependium.mjs");
 for(const[name,fn]of [["dnd5e.preUseActivity",canUseDetectionModifier],["dnd5e.preActivityConsumption",canUseDetectionModifier],
   ["dnd5e.postInitiativeDialogRollConfiguration",finalizeDetectionInitiative],["dnd5e.preRollInitiative",applyDetectionInitiative]])assert(hooks.get(name).includes(fn));
 const registrations=new Map();globalThis.libWrapper={register(module,target,fn){assert(!registrations.has(target));registrations.set(target,fn);}};
-CONFIG.DND5E={activityTypes:{},sourceBooks:{},featureTypes:{feat:{subtypes:{}},class:{subtypes:{}}}};
+CONFIG.DND5E={activityConsumptionTypes:{},activityTypes:{},sourceBooks:{},featureTypes:{feat:{subtypes:{}},class:{subtypes:{}}}};
 dnd5e.registry={spellLists:{register(){}}};init.at(-1)();assert.equal(registrations.get("CONFIG.Combatant.documentClass.prototype.getInitiativeRoll"),combatantDetectionInitiative);
 console.log("Улучшенное обнаружение: выбор при накладывании, общий расход с заклинанием, длительность и нативное преимущество, исходные чувства в одном эффекте, обновление без дублей, отказ/недоступные применения, враги/союзники/дистанция/высота/метры/уровни/подавление, окна и массовая инициатива: OK.");

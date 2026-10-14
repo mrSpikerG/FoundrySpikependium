@@ -10,7 +10,7 @@ const DIST = path.join(ROOT, "dist");
 const OUT = path.join(DIST, "spikependium");
 const ZIP = path.join(DIST, "spikependium.zip");
 
-const INCLUDE = ["module.json", "README.md", "scripts", "lang", "styles", "babele", "packs"];
+const INCLUDE = ["module.json", "README.md", "docs/MODULE_GUIDE.md", "docs/AU_COVERAGE.md", "docs/CONTENT_STATUS.md", "scripts", "lang", "styles", "babele", "packs"];
 const SKIP = new Set(["_source", "LOCK", "LOG", "LOG.old"]);
 
 fs.rmSync(OUT, { recursive: true, force: true });
@@ -25,7 +25,10 @@ function copy(src, dest) {
       if ( SKIP.has(entry) ) continue;
       copy(path.join(src, entry), path.join(dest, entry));
     }
-  } else fs.copyFileSync(src, dest);
+  } else {
+    fs.mkdirSync(path.dirname(dest), { recursive: true });
+    fs.copyFileSync(src, dest);
+  }
 }
 for ( const item of INCLUDE ) copy(path.join(ROOT, item), path.join(OUT, item));
 

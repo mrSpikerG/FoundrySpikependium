@@ -1,0 +1,340 @@
+{
+  "_id": "SFrHHaEXoxk9HpiX",
+  "name": "Видение уходящих эпох",
+  "type": "spell",
+  "img": "icons/magic/time/hourglass-tilted-gray.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: бард, волшебник, колдун, чародей.</em></p><p>Вы заставляете одно видимое существо в пределах дистанции поверить, что оно и его окружение за мгновения рассыпаются в прах, словно проходят целые эпохи. Цель совершает спасбросок Интеллекта. При провале она получает [[/damage 10d12 type=psychic]]{10к12} урона психической энергией и становится &Reference[paralyzed]{Парализованной}, пока заклинание активно. При успехе начального урона нет.</p><p>Пока цель Парализована, она повторяет спасбросок в конце каждого своего хода. При провале она получает один уровень Истощения. При успехе заклинание заканчивается. Оно также заканчивается, если другое существо в пределах 5 футов от цели действием потрясёт её и вырвет из иллюзии.</p><p><strong>Применение.</strong> Повторные спасброски в бою обрабатывает подключённый Мастер. Провал повышает штатный уровень истощения один раз за этот спасбросок; накопленное истощение сохраняется после окончания заклинания. Для встряхивания выберите токен помогающего существа и воспользуйтесь кнопкой в карточке заклинания. Заклинание не требует концентрации.</p><h3>Действия</h3><ul><li>[[/item activity=nvzQxutZRvcyMbPt]]{Видение уходящих эпох} · [[/damage activity=nvzQxutZRvcyMbPt]]{Бросок урона} · [[/save activity=nvzQxutZRvcyMbPt]]{Спасбросок цели}</li><li>[[/item activity=TgBOr6VU70WpvWdF]]{Встряхнуть цель (действие)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "37",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "vision-of-ages",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 9,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "range": {
+      "value": "120",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "ill",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "nvzQxutZRvcyMbPt": {
+        "_id": "nvzQxutZRvcyMbPt",
+        "type": "save",
+        "name": "Видение уходящих эпох",
+        "img": "icons/magic/time/hourglass-tilted-gray.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "VPVC5NCxRarQ8ozl",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "120",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 10,
+              "denomination": 12,
+              "bonus": "",
+              "types": [
+                "psychic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      },
+      "TgBOr6VU70WpvWdF": {
+        "_id": "TgBOr6VU70WpvWdF",
+        "type": "utility",
+        "name": "Встряхнуть цель (действие)",
+        "img": "icons/magic/time/hourglass-tilted-gray.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "arcanaShakeTemplate": true
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "VPVC5NCxRarQ8ozl",
+      "name": "Видение уходящих эпох",
+      "img": "icons/magic/time/hourglass-tilted-gray.webp",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "paralyzed"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "vision-of-ages"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!SFrHHaEXoxk9HpiX.VPVC5NCxRarQ8ozl"
+    }
+  ],
+  "folder": "hgwg2ooHTR3ujmye",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-vision-of-ages"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SFrHHaEXoxk9HpiX"
+}

@@ -1,0 +1,87 @@
+{
+  "_id": "KVHFe7K74QO10IlU",
+  "name": "Мастерство оружия",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Выберите два вида оружия, которыми владеете: вы можете использовать их свойства мастерства. После продолжительного отдыха можно заменить выбранные виды оружия. Начальный выбор настроен штатным продвижением; смените выбор после отдыха в управлении продвижениями.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "3",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-weapon-mastery",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": 1,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "VT0zhdXcjL2hs12h",
+        "type": "Trait",
+        "configuration": {
+          "mode": "mastery",
+          "allowReplacements": true,
+          "grants": [],
+          "choices": [
+            {
+              "count": 2,
+              "pool": [
+                "weapon:*"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Два вида оружия с мастерством",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "SeLB7GqlEKAjEW3H",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "magus:weapon-mastery"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!KVHFe7K74QO10IlU"
+}

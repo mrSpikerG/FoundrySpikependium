@@ -1,8 +1,9 @@
 // Spikependium — интеграция с системой dnd5e и модулем Babele.
 import { SPELL_LISTS, SOURCE_BOOKS } from "./generated.mjs";
+import { prepareMagusDiceDialog, registerMagusDice, recordMagusDice, prepareMagusDiceHealing, canConsumeMagusSpell, guardMagusHealing } from "./magus-spells.mjs";
 import { prepareSummon, canRefuel, hasReanimatedCompanion } from "./summons.mjs";
 import { prepareFeatSave, preparePactUsage, prepareGrantedSpell, prepareSpiritsGuidance, prepareAbilityAdvancement, prepareFormConsumption, toggleRadiantLight, conditionalState, applyTurnLimit, prepareUpdatedSpell, validateMutableForm } from "./mechanics.mjs";
-import { prepareChoiceDialog, applyChoiceConsumption } from "./choices.mjs";
+import { prepareChoiceDialog, applyChoiceConsumption, refundResearch } from "./choices.mjs";
 import { prepareAuraCondition, refreshSceneAuras, endEffectsOnDamage, endSceneEffects, applySelfEffects } from "./effects.mjs";
 import { prepareResourceUpdates, postHitDieDamage, limitRestoration, showResourceConsumption } from "./resources.mjs";
 import { commandCompanion, canCompanionAct, updateCompanions, recordCompanionRest, recordCompanionDeath, canUseCompanionDeath, recordCompanionStatus, isLifeTransfer, prepareCompanionUsage, rollLifeHealing, canCreateCompanionMessage, prepareCompanionDamage, calculateCompanionDamage, rollCompanionStrike, prepareCompanionAbsorption, bigExplosionDamageConfig, validateExplosionBonus, recordWetHits, triggerWetResponses } from "./companions.mjs";
@@ -42,6 +43,12 @@ import { canUseMakingModifier, prepareMakingDialog, recordMakingCast, applyMakin
 import { canUseMovementModifier, prepareMovementDialog, captureMovementTarget, recordMovementCast,
   applyMovementCast, resumeMovementCasts, movementMarkCost, refreshMovementMarks } from "./dragonmark-movement.mjs";
 import { canUseReaction, reactionUse, recordReaction, recordReactionConsumption, reactionDeltaLabel, finishReaction, resumeReactions } from "./reactions.mjs";
+import { performerDodgeUse, performerDodgeDamage } from "./performer-dodge.mjs";
+import { canUseGriffonItem, griffonUse } from "./griffon-items.mjs";
+Hooks.on("dnd5e.preUseActivity", canUseGriffonItem);
+import { canUseArchhag, prepareArchhagTargets, prepareCovenDialog } from "./archhag.mjs";
+import { defensiveCharmUse, defensiveCharmDamage, recordDefenseUsage, recordDefenseConsumption,
+  defenseDeltaLabel, resumeDefensiveCharms, resumeActorDefense, clearDeletedDefense } from "./performer-defense.mjs";
 import { registerHandlingMovement, canUseHandlingModifier, recordHandlingHits, chooseHandling, isHandlingAttack, validateHandlingAttack,
   handlingRollAttack, resumeHandling, handlingFalling, handlingMovementCost, handlingHits } from "./dragonmark-handling.mjs";
 import { registerGuardianMovement, canUseGuardian, prepareGuardianDialog, recordGuardianAttack, chooseGuardian, resumeGuardian,
@@ -53,7 +60,189 @@ import { prepareHollowConcentration, hollowArmorSuppression } from "./hollow-war
 import { recordRavenousHit, canUseRavenous, prepareRavenousDialog, recordRavenousUse, rollRavenousHealing,
   ravenousApplyDamage, recordRavenousHealing, chooseRavenousHeal } from "./hollow-ravenous.mjs";
 import { prepareOriginCheck, buildOriginCheck, finalizeOriginCheck, prepareOriginInspirationDialog,
-  canUseOriginInspiration, applyOriginInspiration } from "./arcana-origin.mjs";
+  canUseOriginInspiration, applyOriginInspiration, prepareOriginGrantedAbility } from "./arcana-origin.mjs";
+import { recordArtistIllusion, prepareArtistDialog, captureArtistInspiration, recordArtistInspiration,
+  syncArtistInspiration, resumeArtistInspirations } from "./arcana-artist.mjs";
+import { prepareAmityCheck, buildAmityCheck, finalizeAmityCheck } from "./arcana-amity.mjs";
+import { monsterEvasionDamage } from "./monster-evasion.mjs";
+import { prepareEvasionSave, buildEvasionSave, finalizeEvasionSave } from "./arcana-evasion.mjs";
+import { magicWarriorAdd } from "./arcana-warrior.mjs";
+import { prepareBloomDialog, captureBloom, canUseBloom, recordBloomConsumption, recordBloomArea, registerBloomDice,
+  bloomChatButtons, bloomChatAction, syncBloomHealing, recordBloomHealing, resumeBloomHealing, rollBloomHealing } from "./arcana-bloom.mjs";
+import { prepareBugbearGrab, canUseBugbearGrab } from "./bugbear-grab.mjs";
+import { cunningUse, recordCunningConsumption, cunningDeltaLabel } from "./cunning-actions.mjs";
+import { recordDisengageUse, syncDisengage, cleanDisengage, resumeDisengage } from "./cunning-disengage.mjs";
+import { prepareHideDialog, canUseHide, recordHideUse, rollHide, canRollHide, syncHide, endHideOnAttack, endHideOnSpell, cleanHide, resumeHide } from "./cunning-hide.mjs";
+import { canUseOriginSurge, prepareOriginSurge, finalizeOriginSurge, consumeOriginSurge } from "./arcana-surge.mjs";
+import { anatomyStrideChange, prepareAnatomySave, buildAnatomySave, finalizeAnatomySave } from "./arcana-anatomy.mjs";
+import { canUseArcanaStage, prepareArcanaStage, captureArcanaStage, recordDetonateCast, prepareDetonateSave, arcanaStageScaling,
+  recordArcanaStageConsumption,arcanaStageDeltaLabel,prepareGroundDamage,groundDamage } from "./arcana-stages.mjs";
+import { recordOriginSaveWindow, prepareOriginSaveBoost, captureOriginSaveBoost, recordOriginSaveBoostConsumption,
+  recordOriginSaveBoostUsage, canRollOriginSaveBoost, rollOriginSaveBoost, resumeOriginSaveBoosts,
+  originSaveBoostDeltaLabel, originSaveBoostError, resilientSaveUse } from "./arcana-save-boost.mjs";
+
+import { recordMonsterMovement, endMonsterApproach, recordMonsterAttack, prepareMonsterDamage, useMonsterMultiattack, prepareMonsterAttack, prepareMonsterSave, canUseMonsterWeapon } from "./monster-actions.mjs";
+import { canUseMonsterActivity, recordMonsterEffect, syncMonsterEffects, monsterDrainHealing, endDeadAbolethCharms, monsterLegendaryRecovery, monsterError } from "./monster-effects.mjs";
+import { recordAbolethCalculation, recordAbolethDamage, abolethApplyDamage, syncAbolethRepeat, resumeAbolethDomination } from "./aboleth-domination.mjs";
+import { abolethWaterButtons, abolethWaterAction, restrictAbolethHealing, guardAbolethHPUpdate } from "./aboleth-water.mjs";
+import { recordAbolethCurseDamage, resumeAbolethCurse } from "./aboleth-curse.mjs";
+import { abolethEndTurn, resumeMucusCloud } from "./aboleth-cloud.mjs";
+import { recordSoulTomeDestruction, finishSoulTomeDestruction, resumeSoulTomes, releaseSoulTomePrisons, soulTomeEndTurn, prepareSoulTomeRest, renderSoulTomeDamage, soulTomeError } from "./soul-tome.mjs";
+import { recordSoulClawAttack, syncSoulClawAttack, resumeSoulClawAttacks } from "./soul-claw.mjs";
+import { soulPrisonButtons, soulPrisonAction, syncSoulPrisonRepeat, soulPrisonEndTurn, resumeSoulPrisonRepeats } from "./soul-prison.mjs";
+import { canUseArcanaSpell, recordArcanaCast, syncArcanaCast, syncArcanaRepeat, cureIronBody,
+  guardIronExhaustion, arcanaEndTurn, resumeArcanaSpells, arcanaSpellError, registerArcanaMaterials, arcanaSpellSuppression, canConsumeArcanaSpell } from "./arcana-spells.mjs";
+import { arcanaStartTurn, resumeArcanaTicks, recordArcanaTickDamage } from "./arcana-periodic.mjs";
+import { observeCatnap, prepareCatnapRest, finishCatnap, canUseArcanaShake, awakeningChatButtons, awakeningChatAction, finishArcanaShake } from "./arcana-awakening.mjs";
+import { recordArcanaSummonCast, arcanaSummonChatAction, canPlaceArcanaSpirit, prepareArcanaSpirit, sortArcanaSpirits, updateArcanaSpirits,
+  recordArcanaSpiritAttack, prepareArcanaSpiritDamage, applyArcanaSpiritHits, recordArcanaSpiritPlaced, applyArcanaCharge } from "./arcana-summons.mjs";
+import { escapeChatButtons, escapeChatAction, canPayArcanaEscape, recordArcanaEscapePayment, finishArcanaEscape, escapePaymentButtons, refundArcanaEscape } from "./arcana-spirit-actions.mjs";
+
+Hooks.on("dnd5e.preUseActivity", canPayArcanaEscape);
+Hooks.on("dnd5e.preActivityConsumption", canPayArcanaEscape);
+Hooks.on("dnd5e.activityConsumption", recordArcanaEscapePayment);
+for (const hook of ["createChatMessage", "updateChatMessage"]) Hooks.on(hook, message => {
+  finishArcanaEscape(message).catch(arcanaSpellError);
+  applyArcanaCharge(message).catch(arcanaSpellError);
+});
+for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => {
+  for (const message of game.messages) {
+    if (message.flags.spikependium?.arcanaEscape) finishArcanaEscape(message).catch(arcanaSpellError);
+    if (message.type === "damage" && message.flags.spikependium?.attackSource) applyArcanaCharge(message).catch(arcanaSpellError);
+  }
+});
+
+Hooks.on("dnd5e.preCreateUsageMessage", recordArcanaSummonCast);
+Hooks.on("dnd5e.preSummon", canPlaceArcanaSpirit);
+Hooks.on("dnd5e.preSummonToken", prepareArcanaSpirit);
+Hooks.on("dnd5e.postSummon", (...args) => recordArcanaSpiritPlaced(...args).catch(arcanaSpellError));
+Hooks.on("preCreateChatMessage", recordArcanaSpiritAttack);
+Hooks.on("preCreateChatMessage", recordSoulClawAttack);
+for (const hook of ["createChatMessage", "updateChatMessage"]) Hooks.on(hook, message => syncSoulClawAttack(message).catch(monsterError));
+for (const hook of ["ready", "canvasReady", "updateScene"]) Hooks.on(hook, () => resumeSoulClawAttacks().catch(monsterError));
+Hooks.on("dnd5e.preUseActivity", canUseMonsterActivity);
+Hooks.on("dnd5e.preActivityConsumption", canUseMonsterActivity);
+Hooks.on("dnd5e.preUseActivity", (activity, config, dialog, message) => {
+  prepareCovenDialog(activity, config, dialog);
+  prepareArchhagTargets(activity, config, dialog, message);
+  return canUseArchhag(activity, config, dialog, message);
+});
+Hooks.on("dnd5e.preActivityConsumption", canUseArchhag);
+Hooks.on("dnd5e.preCreateUsageMessage", recordMonsterEffect);
+Hooks.on("dnd5e.preCreateUsageMessage", recordDefenseUsage);
+Hooks.on("dnd5e.postActivityConsumption", recordDefenseConsumption);
+for (const hook of ["createChatMessage", "updateChatMessage", "deleteChatMessage"])
+  Hooks.on(hook, message => resumeDefensiveCharms(message).catch(monsterError));
+Hooks.on("ready", () => resumeDefensiveCharms().catch(monsterError));
+Hooks.on("updateActor", actor => resumeActorDefense(actor).catch(monsterError));
+Hooks.on("updateToken", token => resumeActorDefense(token.actor).catch(monsterError));
+Hooks.on("deleteChatMessage", message => clearDeletedDefense(message).catch(monsterError));
+Hooks.on("dnd5e.postUseActivity", (...args) => monsterDrainHealing(...args).catch(monsterError));
+for (const hook of ["createChatMessage", "updateChatMessage"]) Hooks.on(hook, message => syncMonsterEffects(message).catch(monsterError));
+Hooks.on("ready", () => { for (const message of game.messages) if (message.flags.spikependium?.monsterCast) syncMonsterEffects(message).catch(monsterError); });
+for (const hook of ["ready", "updateActor", "updateActorDelta", "updateActiveEffect", "createActiveEffect"])
+  Hooks.on(hook, () => endDeadAbolethCharms().catch(monsterError));
+Hooks.on("dnd5e.preApplyDamage", recordAbolethDamage);
+Hooks.on("dnd5e.calculateDamage", recordAbolethCalculation);
+Hooks.on("dnd5e.preCalculateDamage", restrictAbolethHealing);
+Hooks.on("dnd5e.preApplyDamage", recordAbolethCurseDamage);
+for (const hook of ["ready", "canvasReady", "createChatMessage", "updateChatMessage"])
+  Hooks.on(hook, () => resumeMucusCloud().catch(monsterError));
+for (const hook of ["ready", "canvasReady", "updateWorldTime", "updateActor", "updateActorDelta", "createActiveEffect", "updateActiveEffect", "deleteActiveEffect"])
+  Hooks.on(hook, () => resumeAbolethCurse().catch(monsterError));
+Hooks.on("preUpdateActor", guardAbolethHPUpdate);
+Hooks.on("preUpdateActorDelta", (delta, changed) => guardAbolethHPUpdate(delta.parent.actor, changed));
+for (const hook of ["createChatMessage", "updateChatMessage"]) Hooks.on(hook, message => syncAbolethRepeat(message).catch(monsterError));
+for (const hook of ["ready", "canvasReady", "updateWorldTime", "updateToken", "deleteToken", "updateActor", "updateActorDelta", "createActiveEffect", "updateActiveEffect", "deleteActiveEffect"])
+  Hooks.on(hook, () => resumeAbolethDomination().catch(monsterError));
+Hooks.on("dnd5e.preRollAttackV2", prepareMonsterAttack);
+Hooks.on("dnd5e.preRollAttackV2", config => canUseMonsterWeapon(config.subject));
+Hooks.on("dnd5e.preRollSavingThrowV2", prepareMonsterSave);
+Hooks.on("dnd5e.preUseActivity", prepareBloomDialog);
+Hooks.on("dnd5e.preActivityConsumption", captureBloom);
+Hooks.on("dnd5e.preActivityConsumption", canUseBloom);
+Hooks.on("dnd5e.postActivityConsumption", recordBloomConsumption);
+Hooks.on("dnd5e.postUseActivity", (...args) => recordBloomArea(...args).catch(monsterError));
+Hooks.on("dnd5e.preApplyDamage", recordBloomHealing);
+for (const event of ["createChatMessage", "updateChatMessage"])
+  Hooks.on(event, message => syncBloomHealing(message).catch(monsterError));
+for (const event of ["ready", "updateUser"])
+  Hooks.on(event, () => resumeBloomHealing().catch(monsterError));
+Hooks.on("dnd5e.preRollSavingThrowV2", prepareEvasionSave);
+Hooks.on("dnd5e.postBuildSavingThrowRollConfig", buildEvasionSave);
+Hooks.on("dnd5e.postSavingThrowRollConfiguration", finalizeEvasionSave);
+Hooks.on("dnd5e.preUseActivity", canUseMonsterWeapon);
+Hooks.on("preUpdateItem", recordSoulTomeDestruction);
+Hooks.on("dnd5e.renderChatMessage", renderSoulTomeDamage);
+Hooks.on("updateItem", item => finishSoulTomeDestruction(item).then(() => releaseSoulTomePrisons(item)).catch(soulTomeError));
+Hooks.on("dnd5e.preRestCompleted", prepareSoulTomeRest);
+for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => resumeSoulTomes().catch(soulTomeError));
+for (const hook of ["createChatMessage", "updateChatMessage"]) Hooks.on(hook, message => syncSoulPrisonRepeat(message).catch(soulTomeError));
+for (const hook of ["ready", "canvasReady", "updateUser"]) Hooks.on(hook, () => resumeSoulPrisonRepeats().catch(soulTomeError));
+Hooks.on("dnd5e.preRollDamageV2", prepareArcanaSpiritDamage);
+for (const hook of ["createChatMessage", "updateChatMessage"]) Hooks.on(hook, message => applyArcanaSpiritHits(message).catch(arcanaSpellError));
+for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => {
+  for (const message of game.messages) if (message.flags.spikependium?.arcanaSpiritAttack) applyArcanaSpiritHits(message).catch(arcanaSpellError);
+});
+for (const hook of ["dnd5e.postSummon", "ready", "canvasReady", "updateWorldTime", "updateActor", "updateActorDelta", "createActiveEffect", "deleteActiveEffect", "updateActiveEffect", "createCombatant", "updateCombatant", "createCombat", "updateToken", "deleteToken"])
+  Hooks.on(hook, () => updateArcanaSpirits().catch(arcanaSpellError));
+
+Hooks.on("dnd5e.preCreateUsageMessage", recordArcanaCast);
+Hooks.on("dnd5e.preActivityConsumption", canConsumeArcanaSpell);
+Hooks.on("dnd5e.preUseActivity", canUseArcanaShake);
+Hooks.on("dnd5e.preActivityConsumption", canUseArcanaShake);
+Hooks.on("dnd5e.preRestCompleted", prepareCatnapRest);
+for (const hook of ["createChatMessage", "updateChatMessage"]) Hooks.on(hook, message => finishArcanaShake(message).catch(arcanaSpellError));
+for (const hook of ["createActiveEffect", "updateActiveEffect"]) Hooks.on(hook, effect => observeCatnap(effect).then(() => finishCatnap()).catch(arcanaSpellError));
+Hooks.on("deleteActiveEffect", effect => observeCatnap(effect, true).then(() => finishCatnap()).catch(arcanaSpellError));
+for (const hook of ["updateWorldTime", "updateActor", "updateActorDelta", "updateItem", "createActiveEffect", "updateActiveEffect", "deleteActiveEffect"])
+  Hooks.on(hook, () => finishCatnap().catch(arcanaSpellError));
+for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => finishCatnap(true).catch(arcanaSpellError));
+for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => {
+  for (const message of game.messages) if (message.flags.spikependium?.arcanaShake) finishArcanaShake(message).catch(arcanaSpellError);
+});
+for (const hook of ["createChatMessage", "updateChatMessage", "deleteChatMessage"]) Hooks.on(hook, message => {
+  syncArcanaCast(message).catch(arcanaSpellError);
+  syncArcanaRepeat(message).catch(arcanaSpellError);
+});
+for (const hook of ["createActiveEffect", "updateActiveEffect"]) Hooks.on(hook, effect => cureIronBody(effect).catch(arcanaSpellError));
+Hooks.on("preCreateActiveEffect", guardIronExhaustion);
+Hooks.on("preUpdateActiveEffect", guardIronExhaustion);
+for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => resumeArcanaSpells().catch(arcanaSpellError));
+for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => resumeArcanaTicks().catch(arcanaSpellError));
+Hooks.on("dnd5e.preApplyDamage", recordArcanaTickDamage);
+import { relentlessApplyDamage, relentlessUpdate, relentlessOnUpdate, recordRelentlessDamage, canUseRelentless, resumeRelentless, relentlessDeltaLabel } from "./hollow-relentless.mjs";
+
+Hooks.on("dnd5e.preApplyDamage", recordRelentlessDamage);
+Hooks.on("dnd5e.preUseActivity", canUseRelentless);
+Hooks.on("dnd5e.preActivityConsumption", canUseRelentless);
+for (const hook of ["updateActor", "updateActorDelta", "ready", "canvasReady"]) Hooks.on(hook, () => resumeRelentless().catch(error => {
+  console.error("Spikependium: Неослабевающая охота", error);
+  ui.notifications.error("Не удалось восстановить карточку Неослабевающей охоты. Проверьте записанные хиты и ячейки.");
+}));
+import { startHollowAuras, syncHollowAura, prepareHollowSave, resumeHollowAuras, canUseHollowAction, hollowActionUse,
+  recordHollowActionConsumption, hollowActionDeltaLabel, prepareHollowDamage, recordHollowDamage, hollowAuraChatButtons, hollowAuraChatAction, endHollowAuraEffects } from "./hollow-aura.mjs";
+
+function hollowAuraError(error) { console.error("Spikependium: Тревожная аура", error); ui.notifications.error("Не удалось завершить последствия ауры. Проверьте карточку начала хода; Мастер может завершить её или отметить ручное разрешение."); }
+Hooks.on("updateCombat", (...args) => startHollowAuras(...args).catch(hollowAuraError));
+Hooks.on("preCreateChatMessage", prepareHollowSave);
+for (const hook of ["createChatMessage", "updateChatMessage", "deleteChatMessage"]) Hooks.on(hook, message => syncHollowAura(message).catch(hollowAuraError));
+for (const hook of ["ready", "canvasReady"]) Hooks.on(hook, () => resumeHollowAuras().catch(hollowAuraError));
+for (const hook of ["updateCombat", "deleteCombat", "deleteToken", "ready", "canvasReady"]) Hooks.on(hook, () => endHollowAuraEffects().catch(hollowAuraError));
+Hooks.on("dnd5e.preUseActivity", canUseHollowAction);
+Hooks.on("dnd5e.preActivityConsumption", canUseHollowAction);
+Hooks.on("dnd5e.postActivityConsumption", recordHollowActionConsumption);
+Hooks.on("dnd5e.preRollDamageV2", prepareHollowDamage);
+Hooks.on("dnd5e.preApplyDamage", recordHollowDamage);
+
+Hooks.on("recordToken", recordMonsterMovement);
+Hooks.on("preCreateChatMessage", recordMonsterAttack);
+Hooks.on("createChatMessage", endMonsterApproach);
+Hooks.on("dnd5e.preRollDamageV2", prepareMonsterDamage);
+Hooks.on("dnd5e.postUseActivity", (...args) => useMonsterMultiattack(...args).catch(error => {
+  console.error("Spikependium: мультиатака", error);
+  ui.notifications.error("Не удалось завершить мультиатаку. Проверьте уже выполненные атаки в чате; оставшиеся действия доступны на листе.");
+}));
 
 const MODULE_ID = "spikependium";
 Hooks.on("dnd5e.preBeginConcentrating", prepareHollowConcentration);
@@ -65,7 +254,68 @@ Hooks.on("dnd5e.preApplyDamage", recordRavenousHealing);
 Hooks.on("dnd5e.preRollAbilityCheckV2", prepareOriginCheck);
 Hooks.on("dnd5e.postBuildAbilityCheckRollConfig", buildOriginCheck);
 Hooks.on("dnd5e.postAbilityCheckRollConfiguration", finalizeOriginCheck);
+Hooks.on("dnd5e.preRollAbilityCheckV2", prepareAmityCheck);
+Hooks.on("dnd5e.postBuildAbilityCheckRollConfig", buildAmityCheck);
+Hooks.on("dnd5e.postAbilityCheckRollConfiguration", finalizeAmityCheck);
 Hooks.on("dnd5e.preUseActivity", prepareOriginInspirationDialog);
+Hooks.on("dnd5e.preUseActivity", prepareArtistDialog);
+Hooks.on("dnd5e.preUseActivity", prepareBugbearGrab);
+Hooks.on("dnd5e.preActivityConsumption", canUseBugbearGrab);
+Hooks.on("dnd5e.postActivityConsumption", recordCunningConsumption);
+Hooks.on("dnd5e.preCreateUsageMessage", recordDisengageUse);
+Hooks.on("dnd5e.preUseActivity", prepareHideDialog);
+Hooks.on("dnd5e.preActivityConsumption", canUseHide);
+Hooks.on("dnd5e.preCreateUsageMessage", recordHideUse);
+Hooks.on("dnd5e.preRollAbilityCheckV2", canRollHide);
+Hooks.on("dnd5e.postUseActivity", (...args) => rollHide(...args).catch(monsterError));
+Hooks.on("dnd5e.postUseActivity", activity => endHideOnSpell(activity).catch(monsterError));
+Hooks.on("dnd5e.rollAttack", (...args) => endHideOnAttack(...args).catch(monsterError));
+for (const hook of ["createChatMessage", "updateChatMessage"])
+  Hooks.on(hook, message => syncHide(message).catch(monsterError));
+for (const hook of ["updateActor", "updateActorDelta"])
+  Hooks.on(hook, () => cleanHide().catch(monsterError));
+for (const hook of ["ready", "updateUser"])
+  Hooks.on(hook, () => resumeHide().catch(monsterError));
+for (const hook of ["createChatMessage", "updateChatMessage"])
+  Hooks.on(hook, message => syncDisengage(message).catch(monsterError));
+for (const hook of ["updateCombat", "deleteCombat", "updateWorldTime", "updateActor", "updateActorDelta"])
+  Hooks.on(hook, () => cleanDisengage().catch(monsterError));
+for (const hook of ["ready", "updateUser"])
+  Hooks.on(hook, () => resumeDisengage().catch(monsterError));
+Hooks.on("dnd5e.preActivityConsumption", captureArtistInspiration);
+Hooks.on("dnd5e.preCreateUsageMessage", recordArtistIllusion);
+Hooks.on("dnd5e.preCreateUsageMessage", recordArtistInspiration);
+const artistError = error => {
+  console.error("Spikependium: Вдохновляющая магия", error);
+  ui.notifications.error("Не удалось передать Героическое вдохновение. Проверьте отметку на листе союзника и карточку расхода.");
+};
+for (const hook of ["createChatMessage", "updateChatMessage"])
+  Hooks.on(hook, message => syncArtistInspiration(message).catch(artistError));
+Hooks.on("ready", () => resumeArtistInspirations().catch(artistError));
+Hooks.on("dnd5e.preUseActivity", prepareOriginGrantedAbility);
+Hooks.on("dnd5e.preActivityConsumption", prepareOriginGrantedAbility);
+Hooks.on("dnd5e.preActivityConsumption", canUseOriginSurge);
+Hooks.on("dnd5e.preUseActivity", canUseOriginSurge);
+Hooks.on("dnd5e.preRollDamageV2", prepareOriginSurge);
+Hooks.on("dnd5e.postDamageRollConfiguration", finalizeOriginSurge);
+Hooks.on("dnd5e.preRollSavingThrowV2", prepareAnatomySave);
+Hooks.on("dnd5e.postBuildSavingThrowRollConfig", buildAnatomySave);
+Hooks.on("dnd5e.postSavingThrowRollConfiguration", finalizeAnatomySave);
+Hooks.on("dnd5e.preUseActivity",canUseArcanaStage);
+Hooks.on("dnd5e.preUseActivity",prepareArcanaStage);
+Hooks.on("dnd5e.preActivityConsumption",captureArcanaStage);
+Hooks.on("dnd5e.preCreateUsageMessage",recordDetonateCast);
+Hooks.on("dnd5e.postActivityConsumption",recordArcanaStageConsumption);
+Hooks.on("dnd5e.preRollSavingThrowV2",prepareDetonateSave);
+Hooks.on("preCreateChatMessage", recordOriginSaveWindow);
+Hooks.on("dnd5e.preUseActivity", prepareOriginSaveBoost);
+Hooks.on("dnd5e.preActivityConsumption", captureOriginSaveBoost);
+Hooks.on("dnd5e.postActivityConsumption", recordOriginSaveBoostConsumption);
+Hooks.on("dnd5e.preCreateUsageMessage", recordOriginSaveBoostUsage);
+Hooks.on("dnd5e.preRollFormulaV2", canRollOriginSaveBoost);
+Hooks.on("dnd5e.postUseActivity", (...args)=>rollOriginSaveBoost(...args).catch(originSaveBoostError));
+for(const hook of ["createChatMessage","updateChatMessage","updateActor","updateActorDelta","ready"])
+  Hooks.on(hook,document=>resumeOriginSaveBoosts(document).catch(originSaveBoostError));
 Hooks.on("dnd5e.preActivityConsumption", canUseOriginInspiration);
 Hooks.on("dnd5e.postUseActivity", (...args) => applyOriginInspiration(...args).catch(error => {
   console.error("Spikependium: Понимание смерти", error);
@@ -380,7 +630,12 @@ Hooks.on("updateCombat", (...args) => chooseThinFear(...args).catch(error => {
 }));
 for (const hook of ["createChatMessage", "updateChatMessage", "deleteChatMessage"]) Hooks.on(hook, syncThinFear);
 Hooks.on("dnd5e.preRollDamageV2", prepareCompanionDamage);
+Hooks.on("dnd5e.preRollDamageV2", prepareMagusDiceHealing);
+Hooks.on("dnd5e.postActivityConsumption", recordMagusDice);
+Hooks.on("dnd5e.preActivityConsumption", canConsumeMagusSpell);
+Hooks.on("dnd5e.preApplyDamage", guardMagusHealing);
 Hooks.on("dnd5e.preRollDamageV2", prepareConduitRoll);
+Hooks.on("dnd5e.preRollDamageV2", prepareGroundDamage);
 Hooks.on("dnd5e.postDamageRollConfiguration", finalizeConduitRoll);
 Hooks.on("dnd5e.postDamageRollConfiguration", validateExplosionBonus);
 for (const hook of ["createItem", "deleteItem", "updateItem", "updateActor", "createActiveEffect", "updateActiveEffect", "deleteActiveEffect", "updateWorldTime", "ready"]) Hooks.on(hook, cleanForgeItems);
@@ -435,6 +690,7 @@ Hooks.on("dnd5e.postUseActivity", (activity, config, results) => {
   });
 });
 Hooks.on("dnd5e.preUseActivity", (activity, config, dialog, message) => {
+  if (!canUseArcanaSpell(activity)) return false;
   if (!canUseVestigePocket(activity) || !canSummonVestige(activity) || !canUseVestigeAura(activity)
     || !canUseVestigeRestForm(activity) || !canUseVestigePower(activity) || !canActDuringVestigeSwap(activity) || !canUseVestigeSwap(activity)
     || activity.actor?.token?.flags.spikependium?.vestigeFormPending) return false;
@@ -457,6 +713,7 @@ Hooks.on("dnd5e.preUseActivity", (activity, config, dialog, message) => {
     return false;
   }
   prepareChoiceDialog(activity, config, dialog);
+  prepareMagusDiceDialog(activity, config, dialog);
   prepareDetectionDialog(activity, config, dialog);
   prepareStormDialog(activity, config, dialog);
   prepareHospitalityDialog(activity, config, dialog);
@@ -477,7 +734,32 @@ Hooks.on("dnd5e.preUseActivity", (activity, config, dialog, message) => {
 });
 
 Hooks.once("init", () => {
+  libWrapper.register(MODULE_ID, "dnd5e.applications.advancement.AdvancementManager.forItemAdd", magicWarriorAdd, "WRAPPER");
+  registerArcanaMaterials();
+  registerBloomDice();
+  registerMagusDice();
+  libWrapper.register(MODULE_ID, "CONFIG.Combat.documentClass.prototype._onEndTurn", function(wrapped, ...args) {
+    return soulPrisonEndTurn.call(this, (...prison) => soulTomeEndTurn.call(this, (...next) => abolethEndTurn.call(this, (...inner) => arcanaEndTurn.call(this, wrapped, ...inner), ...next), ...prison), ...args);
+  }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Combat.documentClass.prototype._sortCombatants", sortArcanaSpirits, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype._onChatAction", arcanaSummonChatAction, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.attack.documentClass.prototype._usageChatButtons", escapeChatButtons, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.attack.documentClass.prototype._onChatAction", escapeChatAction, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Combat.documentClass.prototype._onStartTurn", arcanaStartTurn, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Actor.dataModels.npc.prototype.recoverCombatUses", monsterLegendaryRecovery, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.teleport.documentClass.prototype._usageChatButtons", passageChatButtons, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.save.documentClass.prototype._usageChatButtons", function(wrapped, ...args) {
+    return bloomChatButtons.call(this, (...bloom) => soulPrisonButtons.call(this, (...prison) => abolethWaterButtons.call(this, (...water) => awakeningChatButtons.call(this, (...next) => hollowAuraChatButtons.call(this, (...escape) => escapeChatButtons.call(this, wrapped, ...escape), ...next), ...water), ...prison), ...bloom), ...args);
+  }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.save.documentClass.prototype._onChatAction", function(wrapped, ...args) {
+    return bloomChatAction.call(this, (...bloom) => soulPrisonAction.call(this, (...prison) => abolethWaterAction.call(this, (...water) => awakeningChatAction.call(this, (...next) => hollowAuraChatAction.call(this, (...escape) => escapeChatAction.call(this, wrapped, ...escape), ...next), ...water), ...prison), ...bloom), ...args);
+  }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.utility.documentClass.prototype._usageChatButtons", function(wrapped, ...args) {
+    return abolethWaterButtons.call(this, (...water) => escapePaymentButtons.call(this, (...next) => awakeningChatButtons.call(this, wrapped, ...next), ...water), ...args);
+  }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.utility.documentClass.prototype._onChatAction", function(wrapped, ...args) {
+    return abolethWaterAction.call(this, (...next) => awakeningChatAction.call(this, wrapped, ...next), ...args);
+  }, "WRAPPER");
   for (const type of Object.keys(CONFIG.DND5E.activityTypes)) {
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype._requiresConfigurationDialog`, requireConduitCastingDialog, "WRAPPER");
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.getUsageToken`, function(wrapped, ...args) {
@@ -485,27 +767,41 @@ Hooks.once("init", () => {
     }, "WRAPPER");
     libWrapper.register(MODULE_ID,
     `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype._prepareUsageUpdates`, prepareResourceUpdates, "WRAPPER");
-    libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.refund`, refundTinkering, "WRAPPER");
+    libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.refund`, function(wrapped, ...args) {
+      return refundResearch.call(this, (...outer) => refundArcanaEscape.call(this,
+        (...next) => refundTinkering.call(this, wrapped, ...next), ...outer), ...args);
+    }, "WRAPPER");
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype._prepareConsumeResourceUsageConfig`, restoreForgeSelection, "WRAPPER");
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.getRollData`, storedActivityRollData, "WRAPPER");
   }
   libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype._prepareSpellcasting", addDrainedSlots, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.calculateDamage", calculateCompanionDamage, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.applyDamage", function(wrapped, ...args) {
-    return guardianApplyDamage.call(this, (...forward) => ravenousApplyDamage.call(this, wrapped, ...forward), ...args);
+  libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.calculateDamage", function(wrapped, ...args) {
+    return monsterEvasionDamage.call(this, (...next) => calculateCompanionDamage.call(this, wrapped, ...next), ...args);
   }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.applyDamage", function(wrapped, ...args) {
+    return abolethApplyDamage.call(this, (...damage) => guardianApplyDamage.call(this, (...forward) => defensiveCharmDamage.call(this, (...defense) => performerDodgeDamage.call(this, (...dodge) => ravenousApplyDamage.call(this,
+      (...inner) => relentlessApplyDamage.call(this, wrapped, ...inner), ...dodge), ...defense), ...forward), ...damage), ...args);
+  }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.update", relentlessUpdate, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype._onUpdate", relentlessOnUpdate, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ChatMessage.documentClass.prototype.applyChatCardDamage", guardianCardDamage, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ChatMessage.dataModels.attack.prototype.evaluatedTargets", guardianEvaluatedTargets, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.attack.documentClass.prototype.rollDamage", captureAttackDamage, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Dice.DamageRoll.build", finishConduitRoll, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Dice.DamageRoll.buildEvaluate", function(wrapped, ...args) {
+    return groundDamage.call(this, (...next) => consumeOriginSurge.call(this, wrapped, ...next), ...args);
+  }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Dice.D20Roll.buildEvaluate", function(wrapped, ...args) {
     return consumeMakingAttack.call(this, (...forward) => consumeFortitudeSave.call(this, wrapped, ...forward), ...args);
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.enchant.documentClass.prototype.applyEnchantment", applyMakingEnchantment, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ActiveEffect.documentClass.prototype.isSuppressed", function(wrapped, ...args) {
-    return hollowArmorSuppression.call(this, (...forward) => makingSuppression.call(this, wrapped, ...forward), ...args);
+    return arcanaSpellSuppression.call(this, (...outer) => hollowArmorSuppression.call(this,
+      (...forward) => makingSuppression.call(this, wrapped, ...forward), ...outer), ...args);
   }, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.ActiveEffect.documentClass.applyChange", makingEffectChange, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.ActiveEffect.documentClass.applyChange", function(wrapped,...args){
+    return anatomyStrideChange.call(this,(...next)=>makingEffectChange.call(this,wrapped,...next),...args);
+  }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Combatant.documentClass.prototype.getInitiativeRoll", combatantDetectionInitiative, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.applyActiveEffects", function(wrapped, ...args) {
     return finalizeStormMovement.call(this, (...forward) => prepareFindingActorEffects.call(this, wrapped, ...forward), ...args);
@@ -516,7 +812,7 @@ Hooks.once("init", () => {
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.cast.documentClass.prototype.getCachedSpellData", storedCachedSpell, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.cast.documentClass.prototype.prepareFinalData", prepareStoredCast, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.heal.documentClass.prototype.rollDamage", function(wrapped, ...args) {
-    return rollRavenousHealing.call(this, (...forward) => rollLifeHealing.call(this, wrapped, ...forward), ...args);
+    return rollBloomHealing.call(this, (...bloom) => rollRavenousHealing.call(this, (...forward) => rollLifeHealing.call(this, wrapped, ...forward), ...bloom), ...args);
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.save.documentClass.prototype.getDamageConfig", bigExplosionDamageConfig, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.save.documentClass.prototype.getAppliedEffectChanges", thinEffectChanges, "WRAPPER");
@@ -543,8 +839,15 @@ Hooks.once("init", () => {
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Token.documentClass.prototype.updateFalling", handlingFalling, "WRAPPER");
   for (const type of Object.keys(CONFIG.DND5E.activityTypes))
-    libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.use`, reactionUse, "WRAPPER");
-  libWrapper.register(MODULE_ID, "dnd5e.dataModels.chatMessage.fields.IndividualDeltaField.processDelta", reactionDeltaLabel, "WRAPPER");
+    libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype._prepareUsageScaling`, arcanaStageScaling, "WRAPPER");
+  for (const type of Object.keys(CONFIG.DND5E.activityTypes))
+    libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.use`, function(wrapped, config, ...args) {
+      return defensiveCharmUse.call(this, (defense, ...inner) => performerDodgeUse.call(this, (dodge, ...outer) => hollowActionUse.call(this, (next, ...forward) => reactionUse.call(this, (cunning, ...rest) => cunningUse.call(this, (boost,...tail)=>griffonUse.call(this,(next,...rest)=>resilientSaveUse.call(this,wrapped,next,...rest),boost,...tail), cunning, ...rest), next, ...forward), dodge, ...outer), defense, ...inner), config, ...args);
+    }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "dnd5e.dataModels.chatMessage.fields.IndividualDeltaField.processDelta", function(wrapped, ...args) {
+    return arcanaStageDeltaLabel.call(this,(...stage)=>originSaveBoostDeltaLabel.call(this,(...bonus)=>defenseDeltaLabel.call(this, (...defense) => relentlessDeltaLabel.call(this, (...outer) => hollowActionDeltaLabel.call(this,
+      (...forward) => reactionDeltaLabel.call(this, (...cunning) => cunningDeltaLabel.call(this, wrapped, ...cunning), ...forward), ...outer), ...defense), ...bonus), ...stage), ...args);
+  }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype._prepareUsageConfig", prepareVestigeRestConfig, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype._finalizeMessageConfig", recordVestigeFormConfig, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype.placeSummons", placeVestigeRestForm, "WRAPPER");

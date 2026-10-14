@@ -1,0 +1,200 @@
+{
+  "_id": "tFc7tbogvso5UURF",
+  "name": "Brawler's Ring",
+  "type": "equipment",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>Нося кольцо, при попадании безоружным ударом нанесите [[/r 1d4]]{1к4} + модификатор Силы дробящего урона. На листе есть отдельная штатная атака с этим уроном. Для другого способа безоружного удара используйте его обычное действие; эта запись не увеличивает урон Захвата или Толчка и пока не меняет остальные кнопки безоружного удара.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 0,01 фунта для небольшого кольца; источник не задаёт вес.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=c3dc5725aed3978f\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=9hAnv08ebvSANHoL]]{Безоружный удар кольцом} · [[/damage activity=9hAnv08ebvSANHoL]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=c3dc5725aed3978f",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-brawler",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.01,
+      "units": "lb"
+    },
+    "price": {
+      "value": 400,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "ring",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": 1,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "9hAnv08ebvSANHoL": {
+        "_id": "9hAnv08ebvSANHoL",
+        "type": "attack",
+        "name": "Безоружный удар кольцом",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "attack": {
+          "ability": "str",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": false,
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "bludgeoning"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "VPvBwCDh1UcyRJeD",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:brawler",
+      "originalName": "Brawler's Ring"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!tFc7tbogvso5UURF"
+}

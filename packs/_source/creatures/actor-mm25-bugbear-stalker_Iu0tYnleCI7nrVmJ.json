@@ -1,0 +1,1190 @@
+{
+  "_id": "Iu0tYnleCI7nrVmJ",
+  "name": "Bugbear Stalker",
+  "type": "npc",
+  "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 17,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 14,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 11,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 12,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 11,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "skills": {
+      "sur": {
+        "value": 1
+      },
+      "ste": {
+        "value": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 15,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 65,
+        "max": 65,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "10d8+20"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "30"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": 60,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<h2>Неуловимые гоблиноиды-силачи</h2><p>Среда обитания: Лес, Степь, Планы (Страна Фей), Подземье. Сокровища: Вооружение, Личные.</p><p>Багберы воплощают страх перед дикими землями и опасность, затаившуюся в тени леса. Они славятся незаметностью, и враги, осмелившиеся ступить на их землю, часто исчезают без следа.</p><p>Багберы-ловчие часто берут жертв в заложники и используют их для захвата или запугивания других существ.</p>",
+        "public": ""
+      },
+      "alignment": "Хаотичная Злая",
+      "type": {
+        "value": "fey",
+        "subtype": "Гоблиноид",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 3,
+      "habitat": {
+        "custom": "",
+        "value": [
+          {
+            "type": "forest"
+          },
+          {
+            "type": "grassland"
+          },
+          {
+            "type": "planar",
+            "subtype": "Страна Фей"
+          },
+          {
+            "type": "underdark"
+          }
+        ]
+      },
+      "treasure": {
+        "value": [
+          "armaments",
+          "individual"
+        ]
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "goblin"
+        ],
+        "custom": "",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "21",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Багбер-ловчий",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "texture": {
+      "src": "icons/creatures/abilities/mouth-teeth-long-red.webp"
+    },
+    "width": 1,
+    "height": 1
+  },
+  "items": [
+    {
+      "_id": "g9CAd47yoyjylnwh",
+      "name": "Похищение",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Багбер не тратит дополнительные футы перемещения при движении со схваченным им существом. Перенос второго токена вместе с багбером пока выполняет Мастер; штраф за этот перенос не добавляйте.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "bugbear-abduction",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Iu0tYnleCI7nrVmJ.g9CAd47yoyjylnwh"
+    },
+    {
+      "_id": "BujxWTyvUnRabdYF",
+      "name": "Мультиатака",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>2 атаки в любой комбинации; цели и способ выбираются перед каждой атакой.</p><h3>Действия</h3><ul><li>[[/item activity=WHiXsROIGcGLW0Dn]]{Мультиатака}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "WHiXsROIGcGLW0Dn": {
+            "_id": "WHiXsROIGcGLW0Dn",
+            "type": "utility",
+            "name": "Мультиатака",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "flags": {
+              "spikependium": {
+                "multiattack": {
+                  "weapons": [
+                    "bugbear-stalker-morningstar",
+                    "bugbear-stalker-javelin"
+                  ],
+                  "count": 2
+                }
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Iu0tYnleCI7nrVmJ.BujxWTyvUnRabdYF"
+    },
+    {
+      "_id": "hTZ3gEkRHhoN68e5",
+      "name": "Моргенштерн",
+      "type": "weapon",
+      "img": "icons/weapons/maces/mace-cube-spiked-steel.webp",
+      "system": {
+        "description": {
+          "value": "<p>Атака по блоку Энциклопедии чудовищ (2025). Цена и вес обычного оружия — из штатных данных 2024 года; кости урона и досягаемость отражают возможности этого чудовища. Бросок атаки +5, с преимуществом, если цель схвачена именно этим багбером; попадание: [[/damage 2d8+3 type=piercing]]{2к8 + 3} колющего урона.</p><h3>Действия</h3><ul><li>[[/item activity=yJFh6J0jS0Ijg8Mu]]{Моргенштерн} · [[/damage activity=yJFh6J0jS0Ijg8Mu]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "bugbear-stalker-morningstar",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "yJFh6J0jS0Ijg8Mu": {
+            "_id": "yJFh6J0jS0Ijg8Mu",
+            "type": "attack",
+            "name": "Моргенштерн",
+            "img": "icons/weapons/maces/mace-cube-spiked-steel.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "martialM",
+          "baseItem": "morningstar"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 15,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 4,
+          "units": "lb"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "reach": 10,
+          "units": "ft"
+        },
+        "ammunition": {},
+        "equipped": true,
+        "identified": true,
+        "proficient": 1,
+        "quantity": 1,
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 2,
+            "denomination": 8,
+            "bonus": "",
+            "types": [
+              "piercing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "spikependium": {
+          "ownGrappleAdvantage": true
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Iu0tYnleCI7nrVmJ.hTZ3gEkRHhoN68e5"
+    },
+    {
+      "_id": "I6I37HncAtadsjL0",
+      "name": "Пилум",
+      "type": "weapon",
+      "img": "icons/weapons/polearms/javelin-flared.webp",
+      "system": {
+        "description": {
+          "value": "<p>Атака по блоку Энциклопедии чудовищ (2025). Цена и вес обычного оружия — из штатных данных 2024 года; кости урона и досягаемость отражают возможности этого чудовища. Бросок атаки +5; попадание: [[/damage 3d6+3 type=piercing]]{3к6 + 3} колющего урона. При дистанционной атаке расходуется один пилум; в ближнем бою он сохраняется.</p><h3>Действия</h3><ul><li>[[/item activity=XRdheidgF5izdKQL]]{Пилум} · [[/damage activity=XRdheidgF5izdKQL]]{Бросок урона}</li><li>[[/item activity=MBGtvsLuhgNshhlO]]{Пилум — дистанционно} · [[/damage activity=MBGtvsLuhgNshhlO]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "bugbear-stalker-javelin",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "XRdheidgF5izdKQL": {
+            "_id": "XRdheidgF5izdKQL",
+            "type": "attack",
+            "name": "Пилум",
+            "img": "icons/weapons/polearms/javelin-flared.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          },
+          "MBGtvsLuhgNshhlO": {
+            "_id": "MBGtvsLuhgNshhlO",
+            "type": "attack",
+            "name": "Пилум — дистанционно",
+            "img": "icons/weapons/polearms/javelin-flared.webp",
+            "sort": 200000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "material",
+                  "target": "I6I37HncAtadsjL0",
+                  "value": "1",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "30",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [
+          "thr"
+        ],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "simpleM",
+          "baseItem": "javelin"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 5,
+          "denomination": "sp"
+        },
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "range": {
+          "value": 30,
+          "long": 120,
+          "reach": 10,
+          "units": "ft"
+        },
+        "ammunition": {},
+        "equipped": true,
+        "identified": true,
+        "proficient": 1,
+        "quantity": 6,
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 3,
+            "denomination": 6,
+            "bonus": "",
+            "types": [
+              "piercing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Iu0tYnleCI7nrVmJ.I6I37HncAtadsjL0"
+    },
+    {
+      "_id": "lsq03JFBltmPG7BQ",
+      "name": "Быстрый захват",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Бонусное действие; спасбросок Ловкости Сл 13: одно видимое существо не больше Среднего в пределах 10 футов. При провале цель Схвачена (Сл высвобождения 13). Подтвердите видимость в окне применения. Для высвобождения используйте кнопку в карточке: действие цели, Сила (Атлетика) или Ловкость (Акробатика).</p><h3>Действия</h3><ul><li>[[/item activity=FRuC82dFAhps2mVj]]{Быстрый захват} · [[/save activity=FRuC82dFAhps2mVj]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "bugbear-stalker-grab",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "FRuC82dFAhps2mVj": {
+            "_id": "FRuC82dFAhps2mVj",
+            "type": "save",
+            "name": "Быстрый захват",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "bonus",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "DYAsJEL5F5iDhPdr",
+                "onSave": false
+              }
+            ],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": []
+            },
+            "save": {
+              "ability": [
+                "dex"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "13"
+              },
+              "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "monsterAction": "bugbear-grab"
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "DYAsJEL5F5iDhPdr",
+          "name": "Схвачен багбером-ловчим",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [
+            "grappled"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "monsterEffect": "bugbear-grab"
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!Iu0tYnleCI7nrVmJ.lsq03JFBltmPG7BQ.DYAsJEL5F5iDhPdr"
+        }
+      ],
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "spikependium": {
+          "monsterGrapple": {
+            "dc": 13,
+            "reach": 10,
+            "maxSize": "med"
+          }
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Iu0tYnleCI7nrVmJ.lsq03JFBltmPG7BQ"
+    },
+    {
+      "_id": "Wwh3JvPcF5MvEwwg",
+      "name": "Кольчужная рубаха",
+      "type": "equipment",
+      "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+      "system": {
+        "description": {
+          "value": "<p>Штатный доспех 2024 года: цена и вес по базовому предмету. КБ чудовища задан в соответствии с его блоком.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "chainshirt",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "medium",
+          "baseItem": "chainshirt"
+        },
+        "armor": {
+          "value": 13,
+          "magicalBonus": null,
+          "dex": 2
+        },
+        "price": {
+          "value": 50,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 20,
+          "units": "lb"
+        },
+        "quantity": 1,
+        "equipped": true,
+        "identified": true
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!Iu0tYnleCI7nrVmJ.Wwh3JvPcF5MvEwwg"
+    }
+  ],
+  "effects": [],
+  "folder": "4BUbLDhdunZZb8Ff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:bugbear-stalker",
+      "originalName": "Bugbear Stalker"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!Iu0tYnleCI7nrVmJ"
+}

@@ -1,0 +1,101 @@
+{
+  "_id": "QqwJWiWYgn1cuJWC",
+  "name": "Архимагус",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Интеллект и одна характеристика на выбор — Сила или Ловкость — увеличиваются на 2, максимум до 23. Выбор варианта и фиксированные прибавки настроены штатными продвижениями. Кроме того, Восстановление магии получает два применения за продолжительный отдых.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-archmagus",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": 20,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "f21QyEZEtTzw7s4X",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "20": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.SGdJSLEoXh2qfqdx"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.mewk2GoCMvclsOIk"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 20,
+        "title": "Выберите Силу или Ловкость для Архимагуса",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "SeLB7GqlEKAjEW3H",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "magus:archmagus"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!QqwJWiWYgn1cuJWC"
+}

@@ -79,7 +79,7 @@ export function validateExplosionBonus(rolls, config) {
   }
 }
 
-export function attackHitTargets(message) {
+export function attackHitTargets(message, { ignoreDefense = false } = {}) {
   if (message.type !== "attack") return [];
   if (guardianRecords(message).some(r => ["prompted", "moving", "stopped"].includes(r.state))) return [];
   const hits = [];
@@ -87,6 +87,7 @@ export function attackHitTargets(message) {
     if (!(roll instanceof CONFIG.Dice.D20Roll) || !roll._evaluated) continue;
     for (const original of message.system.targets) {
       const target = guardianTarget(message, original, index);
+      if (target.isMiss || (!ignoreDefense && index === 0 && defensiveCharmWaiting(message, target))) continue;
       if (target === original && (!Number.isFinite(target.ac) || (!roll.isCritical && (roll.isFumble || roll.total < target.ac)))) continue;
       const token = target.token ? fromUuidSync(target.token) : null;
       if (token?.actor) hits.push({ index, target, token });
@@ -201,18 +202,21 @@ export function calculateCompanionDamage(wrapped, damages, options = {}) {
       return { ...d, value: options.multiplier < 0 ? -d.value : d.value, type: "healing", spikependiumAbsorption: true };
     });
   const source = options.originatingMessage ?? options.origin;
-  const piercing = source?.flags.spikependium?.ignoreNecroticResistance && damages.some(d => d.type === "necrotic")
+  const types = source?.flags?.spikependium?.ignoreResistanceTypes;
+  const bypass = new Set((Array.isArray(types) ? types : []).filter(t => ["necrotic", "poison", "psychic"].includes(t)));
+  if (source?.flags?.spikependium?.ignoreNecroticResistance) bypass.add("necrotic");
+  const piercing = damages.some(d => bypass.has(d.type))
     && options.ignore !== true && options.ignore?.resistance !== true;
   if (!absorbing && !piercing) return wrapped(damages, options);
   const ignored = new Set(piercing ? options.ignore?.resistance || [] : []);
-  if (piercing) ignored.add("necrotic");
+  if (piercing) for (const type of bypass) ignored.add(type);
   const nativeOptions = { ...options, ignore: options.ignore === true ? true : { ...options.ignore,
     ...(piercing ? { resistance: ignored } : {}), ...(absorbing ? { threshold: true } : {}) } };
   const resistance = this.system.traits?.dr;
   const original = resistance?.value;
   // Нативный ALL проверяется отдельно: разворачиваем его только на время синхронного расчёта.
   if (piercing && original?.has("ALL") && !ignored.has("ALL")) resistance.value = new Set([...original].filter(t => t !== "ALL")
-    .concat([...Object.keys(CONFIG.DND5E.damageTypes), ...damages.map(d => d.type)].filter(t => t !== "necrotic" && !(t in CONFIG.DND5E.healingTypes))));
+      .concat([...Object.keys(CONFIG.DND5E.damageTypes), ...damages.map(d => d.type)].filter(t => !bypass.has(t) && !(t in CONFIG.DND5E.healingTypes))));
   let result;
   try { result = wrapped(damages, nativeOptions); }
   finally { if (resistance) resistance.value = original; }
@@ -547,3 +551,5 @@ export async function recordCompanionRest(actor, result, config) {
   // Обновление владельца доставляет завершение отдыха Мастеру, даже если игрок отключил карточку отдыха.
   await actor.setFlag("spikependium", "longRest", foundry.utils.randomID());
 }
+import { defensiveCharmWaiting } from "./performer-defense.mjs";
+

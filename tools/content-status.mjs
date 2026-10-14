@@ -1,0 +1,16 @@
+import fs from "node:fs";
+import assert from "node:assert/strict";
+const module = JSON.parse(fs.readFileSync("module.json", "utf8"));
+const coverage = JSON.parse(fs.readFileSync("tools/data/arcana-unleashed-coverage.json", "utf8"));
+const sources = JSON.parse(fs.readFileSync("tools/data/external-content-inventory.json", "utf8")).sources;
+const keys = new Set(fs.readdirSync("packs/_source/items").filter(f => f.endsWith(".json"))
+  .map(f => JSON.parse(fs.readFileSync(`packs/_source/items/${f}`, "utf8")).flags?.spikependium?.key).filter(Boolean));
+const remaining = id => {
+  const source = sources.find(s => s.id === id); assert.ok(source);
+  return source.entries.filter(e => !e.key || !keys.has(e.key)).length;
+};
+const left = section => coverage.sections[section].total - coverage.sections[section].imported;
+const text = `# Что осталось сделать\n\nЛокальная версия ${module.version}. Наличие документа не означает полной автоматизации.\n\n| Источник | Осталось |\n| --- | --- |\n| Неудержимая магия | ${left("spells")} заклинаний, ${left("feats")} черт, ${left("spellCompanionProfiles")} профиля призыва; 8 окончательных подклассов, 10 предысторий, 47 предметов, 5 семейств развивающихся предметов, 19 существ, 9 фракций, приключение и неперенесённые правила. |\n| Monster Manual 2025 | Балор, бандитский атаман и остальной бестиарий после стр. 23; неперенесённые общие правила. |\n| Воло и Морденкайнен | Обе книги с адаптацией правил 2014 к системе 2024. |\n| Домашние правила | Игровые разделы; раздел сексуального насилия исключён. |\n| Magus, Playtest 3 | 6 подклассов, новые заклинания и снаряжение приложения; завершить метки, Арканное усилие, условные атаки/спасброски, Магический всплеск, временные хиты и смену мастерства после отдыха. |\n| Алхимик | Завершить класс: стартовое снаряжение, формулы, открытия и 11 специализаций; партии/сроки бомб, дальняя дистанция и исходный урон взрыва, реагенты и зелья, существа, философский камень и материалы EfC. |\n| Сумка грифона, книга 1 | ${remaining("GS1")} из 365 записей каталога; завершить автоматизацию перенесённых предметов. |\n| Сумка грифона, книга 2 | ${remaining("GS2")} из 504 записей каталога; завершить автоматизацию перенесённых предметов. |\n\nОставшаяся автоматизация:\n\n- Условные эффекты UA, заклинания вне SRD и окончательная сверка источников.\n- События областей, труднопроходимая местность, ограничения раз за ход, создание зомби, региональные эффекты и перенос между сценами/планами.\n- Пересчёт уже применённых хитов, состояний, концентрации и вдохновения после отмены или изменения исходного броска.\n- Дополнительное перемещение Рывка, совместное движение при захвате, Сопротивление на к4 и неподдержанные реакции.\n- Проверка условных действий предметов: исходный бросок, видимость, согласие, заряды, отмена, экипировка и настройка.\n\nПодробности: [сверка Неудержимой магии](AU_COVERAGE.md), [механики и ограничения](MODULE_GUIDE.md). Точный реестр новых источников: \`tools/data/new-books-inventory.json\` и \`tools/data/external-content-inventory.json\`.\n`;
+assert.ok(text.split("\n").length < 40);
+fs.writeFileSync("docs/CONTENT_STATUS.md", text);
+console.log("CONTENT_STATUS.md: remaining work only.");

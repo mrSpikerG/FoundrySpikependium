@@ -21,25 +21,46 @@ export function dragonSlot(activity) {
   return { resource, level };
 }
 
-export function restorationPlan(actor, selection = {}) {
+export function restorationPlan(actor, selection = {}, { maximumLevel = 4, maximumTotal = 4, maximumCount = Infinity } = {}) {
+  if (!selection || typeof selection !== "object" || Array.isArray(selection)) return null;
   const updates = {};
-  let total = 0;
+  let total = 0, restored = 0;
   for (const [key, count] of Object.entries(selection)) {
-    if (!["spell1", "spell2", "spell3", "spell4", "pact"].includes(key)) return null;
+    if (!/^spell[1-5]$|^pact$/.test(key)) return null;
     const slot = actor.system.spells[key];
     const level = key === "pact" ? slot?.level : Number(key.slice(5));
     const number = Number(count);
     if (!Number.isInteger(number) || number < 0) return null;
     if (!number) continue;
-    if (!slot || level < 1 || level > 4 || number > slot.max - slot.value) return null;
+    if (!slot || !Number.isInteger(level) || level < 1 || level > maximumLevel
+      || !Number.isInteger(slot.value) || slot.value < 0 || !Number.isInteger(slot.max) || number > slot.max - slot.value) return null;
     total += number * level;
+    restored += number;
     updates[`system.spells.${key}.value`] = slot.value + number;
   }
-  return total > 0 && total <= 4 ? updates : null;
+  return total > 0 && total <= maximumTotal && restored <= maximumCount ? updates : null;
+}
+
+export function magusRecovery(actor) {
+  const level = actor.classes?.magus?.system.levels;
+  return Number.isInteger(level) && level >= 6 && level <= 20
+    ? { maximumLevel: 5, maximumTotal: Math.ceil(level / 2) } : null;
+}
+
+export function refundResearch(wrapped, consumed, ...args) {
+  if (["spell:au-mordenkainens-research", "magus:magical-recovery"].includes(this.item.flags.spikependium?.key)) {
+    for (const { keyPath, delta } of consumed.actor ?? []) if (/^system\.spells\.(spell[1-5]|pact)\.value$/.test(keyPath) && delta > 0
+      && foundry.utils.getProperty(this.actor, keyPath) < delta) {
+      ui.notifications.warn("Восстановленные ячейки уже потрачены. Отмена не должна создавать отрицательный запас; разрешите изменение вручную."); return;
+    }
+  }
+  return wrapped(consumed, ...args);
 }
 
 export function prepareChoiceDialog(activity, config, dialog) {
   const restoration = activity.item.flags.spikependium?.key === "feat:arcane-restoration";
+  const research = activity.item.flags.spikependium?.key === "spell:au-mordenkainens-research";
+  const magus = activity.item.flags.spikependium?.key === "magus:magical-recovery";
   const dragon = dragonSlot(activity);
   const hitDice = activity.consumption?.targets.some(t => t.type === "hitDice");
   const forge = !!activity.flags?.spikependium?.forge;
@@ -47,7 +68,7 @@ export function prepareChoiceDialog(activity, config, dialog) {
   const finding = findingEnhancement(activity)?.resource.uses.value > 0;
   const guidance = activity.item.flags.spikependium?.key === "artificer:flash-of-genius"
     && (activity.actor.classes.artificer?.system.levels ?? 0) >= 20 && activity.actor.items.some(i => i.system.attuned);
-  if (!restoration && !dragon && !hitDice && !forge && !guidance && !life && !finding) return;
+  if (!restoration && !research && !magus && !dragon && !hitDice && !forge && !guidance && !life && !finding) return;
   config.spikependium = { ...config.spikependium, usageChoice: true };
   if (life || (forge && activity.flags.spikependium.forge !== "charge")) config.scaling = 0;
   const normalConsumption = structuredClone(config.consume);
@@ -78,18 +99,22 @@ export function prepareChoiceDialog(activity, config, dialog) {
           name: "spikependium.hitDie",
           value: this.config.spikependium?.hitDie ?? choices[0]?.value });
       }
-      if (restoration) {
+      if (restoration || research || magus) {
+        const castLevel = research ? (this.actor.system.spells[this.config.spell?.slot]?.level ?? activity.item.system.level + (this.config.scaling ?? 0)) : 4;
+        const recovery = magus ? magusRecovery(this.actor) : null;
+        const maximum = magus ? (recovery?.maximumLevel ?? 0) : research ? (castLevel >= 8 ? 4 : castLevel >= 6 ? 3 : 2) : 4;
+        const budget = magus ? (recovery?.maximumTotal ?? 0) : 4;
         for (const [key, slot] of Object.entries(this.actor.system.spells)) {
           const level = key === "pact" ? slot.level : Number(key.slice(5));
-          if (!["spell1", "spell2", "spell3", "spell4", "pact"].includes(key)
-            || !level || level > 4 || slot.value >= slot.max) continue;
+          if (!/^spell[1-5]$|^pact$/.test(key)
+            || !level || level > maximum || slot.value >= slot.max) continue;
           context.fields.push({
-            field: new NumberField({ integer: true, min: 0, max: Math.min(slot.max - slot.value, Math.floor(4 / level)),
+            field: new NumberField({ integer: true, min: 0, max: Math.min(slot.max - slot.value, research ? 2 : Math.floor(budget / level)),
               label: `${key === "pact" ? "Магия договора" : "Ячейки"}: ${level} ур.` }),
             name: `spikependium.restore.${key}`, value: this.config.spikependium?.restore?.[key] ?? 0
           });
         }
-        context.notes.push({ type: "info", message: "Выберите потраченные ячейки. Сумма их уровней — не более 4." });
+        context.notes.push({ type: "info", message: research ? `Выберите одну или две потраченные ячейки не выше ${maximum}-го уровня.` : `Выберите потраченные ячейки. Сумма их уровней — не более ${budget}.${magus ? " Используйте после короткого отдыха; ячейки не выше 5-го уровня." : ""}` });
       }
       if (dragon) context.fields.push({
         field: new BooleanField({ label: `Ячейка драконьей магии (${dragon.level} ур.)`,
@@ -118,10 +143,20 @@ export function prepareChoiceDialog(activity, config, dialog) {
 }
 
 export function applyChoiceConsumption(activity, config, message, updates) {
-  if (activity.item.flags.spikependium?.key === "feat:arcane-restoration") {
-    const plan = restorationPlan(activity.actor, config.spikependium?.restore);
+  if (["feat:arcane-restoration", "spell:au-mordenkainens-research", "magus:magical-recovery"].includes(activity.item.flags.spikependium?.key)) {
+    const research = activity.item.flags.spikependium.key === "spell:au-mordenkainens-research", level = activity.item.system?.level;
+    const magus = activity.item.flags.spikependium.key === "magus:magical-recovery";
+    const recovery = magus ? magusRecovery(activity.actor) : null;
+    if (magus && (!recovery || !updates.item.some(update => update._id === activity.item.id
+      && update["system.uses.spent"] === activity.item.system.uses.spent + 1))) {
+      ui.notifications.warn("Восстановление магии требует магуса 6-го уровня и расхода применения умения.");
+      return false;
+    }
+    if (research && (!Number.isInteger(level) || level < 5 || level > 9)) return false;
+    const plan = restorationPlan(activity.actor, config.spikependium?.restore, magus ? recovery : research
+      ? { maximumLevel: level >= 8 ? 4 : level >= 6 ? 3 : 2, maximumTotal: Infinity, maximumCount: 2 } : {});
     if (!plan) {
-      ui.notifications.warn("Выберите потраченные ячейки общей стоимостью от 1 до 4 уровней.");
+      ui.notifications.warn(magus ? "Выберите доступные потраченные ячейки не выше 5-го уровня в пределах половины уровня магуса с округлением вверх." : research ? "Изыскания Морденкайнена: выберите одну или две доступные потраченные ячейки допустимого уровня." : "Выберите потраченные ячейки общей стоимостью от 1 до 4 уровней.");
       return false;
     }
     // Восстановление и расход применения входят в одну нативную операцию с возможностью отмены.

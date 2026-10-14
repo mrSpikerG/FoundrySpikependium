@@ -152,5 +152,5 @@ for (const key of ["subclass:hell-knight:advanced-wounds", "subclass:warrior-of-
 }
 for (const text of ['"dnd5e.preUseActivity", canUseReaction', '"dnd5e.preActivityConsumption", canUseReaction',
   '"dnd5e.postActivityConsumption", recordReactionConsumption', '"dnd5e.preCreateUsageMessage", recordReaction',
-  'documentClass.prototype.use`, reactionUse', 'IndividualDeltaField.processDelta", reactionDeltaLabel']) assert.ok(main.includes(text));
+  'reactionUse.call(this,', 'reactionDeltaLabel.call(this,']) assert.ok(main.includes(text));
 console.log("Reactions: native consume/refund and deltas, one reaction to next own turn, other combat/ActorDelta, no fee on cancel, same-client reservation, sourceStart semantics, outside combat/time, nonmagical effect, manual reset and partial failures, active GM priority: OK.");

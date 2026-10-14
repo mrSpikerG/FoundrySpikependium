@@ -12,7 +12,14 @@ import { preparePassageUpdates } from "./dragonmark-passage.mjs";
 import { prepareMakingUpdates } from "./dragonmark-making.mjs";
 import { prepareMovementUpdates } from "./dragonmark-movement.mjs";
 import { prepareReactionUpdates } from "./reactions.mjs";
+import { prepareDodgeUpdates } from "./performer-dodge.mjs";
+import { prepareDefenseUpdates } from "./performer-defense.mjs";
 import { prepareRavenousUpdates } from "./hollow-ravenous.mjs";
+import { prepareHollowActionUpdates } from "./hollow-aura.mjs";
+import { prepareOriginSaveBoostUpdates } from "./arcana-save-boost.mjs";
+import { prepareArcanaStageUpdates } from "./arcana-stages.mjs";
+import { prepareCunningUpdates } from "./cunning-actions.mjs";
+import { prepareBloomUpdates } from "./arcana-bloom.mjs";
 
 export function showResourceConsumption(activity, config, message) {
   const deltas = message.data?.system?.deltas;
@@ -100,7 +107,14 @@ export async function prepareResourceUpdates(wrapped, config, ...args) {
       if (updates) updates = prepareMakingUpdates(this, config, updates);
       if (updates) updates = prepareMovementUpdates(this, config, updates);
       if (updates) updates = prepareReactionUpdates(this, config, updates);
+      if (updates) updates = prepareOriginSaveBoostUpdates(this, config, updates);
+      if (updates) updates = prepareArcanaStageUpdates(this, config, updates);
+      if (updates) updates = prepareBloomUpdates(this, config, updates);
+      if (updates) updates = prepareCunningUpdates(this, config, updates);
+      if (updates) updates = prepareDodgeUpdates(this, config, updates);
+      if (updates) updates = prepareDefenseUpdates(this, config, updates);
       if (updates) updates = prepareRavenousUpdates(this, config, updates);
+      if (updates) updates = prepareHollowActionUpdates(this, config, updates);
       if (updates && (this.flags.spikependium?.forge || isLifeTransfer(this))) updates.spikependium = { ...updates.spikependium,
         numericFlags: Object.entries(updates.actor).filter(([path, value]) => path.startsWith("flags.spikependium.") && typeof value === "number")
           .map(([keyPath, value]) => ({ keyPath, delta: value - (foundry.utils.getProperty(this.actor, keyPath) ?? 0) })) };

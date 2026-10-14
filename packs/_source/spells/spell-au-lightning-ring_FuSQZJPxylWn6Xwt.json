@@ -1,0 +1,513 @@
+{
+  "_id": "FuSQZJPxylWn6Xwt",
+  "name": "Круговая молния",
+  "type": "spell",
+  "img": "icons/magic/lightning/orb-ball-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, друид, колдун, чародей.</em></p><p>Кольцо потрескивающего электричества заполняет 10-футовую эманацию, исходящую от вас. Когда эманация входит в пространство существа, либо существо входит в эманацию или заканчивает там свой ход, вы можете заставить его совершить спасбросок Телосложения. При провале цель получает [[/damage 3d6 type=lightning]]{3к6} урона электричеством плюс [[/damage 3d6 type=thunder]]{3к6} урона звуком и становится Оглохшей на 1 минуту. При успехе цель получает половину урона.</p><p>Пока заклинание активно, вы можете действием Магия выпустить линию длиной 60 футов и шириной 5 футов в выбранном направлении. Все существа в линии совершают спасбросок Ловкости, получая [[/damage 6d6 type=lightning]]{6к6} урона электричеством при провале или половину при успехе.</p><p><strong>Применение.</strong> Создайте кольцо бонусным действием. Воздействие эманации и выпуск линии доступны только при активном кольце и его концентрации, без повторного расхода ячейки. Существа для воздействия выбираются перед действием; событие входа/конца хода подтверждает Мастер. Оглохший накладывается штатной карточкой эффектов на провалившие цели.</p><h3>Действия</h3><ul><li>[[/item activity=L0cQ9JKRyabEHxje]]{Создать кольцо}</li><li>[[/item activity=UGq0QtlaGni1jk6X]]{Воздействие эманации} · [[/damage activity=UGq0QtlaGni1jk6X]]{Бросок урона} · [[/save activity=UGq0QtlaGni1jk6X]]{Спасбросок цели}</li><li>[[/item activity=jymhcAHQBrrIc7rU]]{Выпустить линию} · [[/damage activity=jymhcAHQBrrIc7rU]]{Бросок урона} · [[/save activity=jymhcAHQBrrIc7rU]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "43",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "lightning-ring",
+    "activation": {
+      "type": "bonus",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "level": 8,
+    "materials": {
+      "value": "клочок меха и стеклянное кольцо",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "evo",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "emanation",
+        "size": "10",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "L0cQ9JKRyabEHxje": {
+        "_id": "L0cQ9JKRyabEHxje",
+        "type": "utility",
+        "name": "Создать кольцо",
+        "img": "icons/magic/lightning/orb-ball-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "effects": [
+          {
+            "_id": "IbGYkGZLY7Uj3g8Z"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "emanation",
+            "size": "10",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "UGq0QtlaGni1jk6X": {
+        "_id": "UGq0QtlaGni1jk6X",
+        "type": "save",
+        "name": "Воздействие эманации",
+        "img": "icons/magic/lightning/orb-ball-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "pR8uuHx3ft1XQ7qO",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "10",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "lightning"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "thunder"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "arcanaStage": "lightning-ring"
+          }
+        }
+      },
+      "jymhcAHQBrrIc7rU": {
+        "_id": "jymhcAHQBrrIc7rU",
+        "type": "save",
+        "name": "Выпустить линию",
+        "img": "icons/magic/lightning/orb-ball-blue.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "line",
+            "size": "60",
+            "width": "5",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "lightning"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "arcanaStage": "lightning-ring"
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "IbGYkGZLY7Uj3g8Z",
+      "name": "Круговая молния",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaOngoing": "lightning-ring",
+          "arcanaSpell": "lightning-ring"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!FuSQZJPxylWn6Xwt.IbGYkGZLY7Uj3g8Z"
+    },
+    {
+      "_id": "pR8uuHx3ft1XQ7qO",
+      "name": "Круговая молния — Оглохший",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "deafened"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!FuSQZJPxylWn6Xwt.pR8uuHx3ft1XQ7qO"
+    }
+  ],
+  "folder": "Bvw1Ei7rCkf9CFym",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-lightning-ring"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FuSQZJPxylWn6Xwt"
+}

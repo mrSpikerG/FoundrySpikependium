@@ -1,0 +1,1122 @@
+{
+  "_id": "ziPUFv8xGBPKwkZ9",
+  "name": "Performer Virtuoso",
+  "type": "npc",
+  "img": "icons/tools/instruments/lute-gold-brown.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 18,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 13,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 19,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "skills": {
+      "acr": {
+        "value": 2
+      },
+      "ath": {
+        "value": 1
+      },
+      "prc": {
+        "value": 1
+      },
+      "prf": {
+        "value": 2
+      },
+      "ste": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "init": {
+        "roll": {
+          "bonus": "@prof"
+        }
+      },
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 18,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 110,
+        "max": 110,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "17d8+34"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "30"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": null,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "cha"
+    },
+    "details": {
+      "biography": {
+        "value": "<h2>Художники и мастеры</h2><p>Среда обитания: любая. Сокровища: Инвентарь, Личные. Обзор: страница 16.</p><p>Мастера сцены выступают в величественных дворцовых залах и на скромных рыночных площадях. Они путешествуют, показывая таланты и мистические искусства, или служат при дворах великих держав. Некоторые передают профессиональные секреты и магические приёмы ученикам.</p><p>Профессии и роли: акробат, актёр, артист бурлеска, борец, воздушный гимнаст, глашатай, гуттаперча, джигит, жонглёр, каскадёр, комик, кукловод, менестрель, менталист, мим, певец, плакальщик, поэт, рассказчик, ритуалист, сценический боец, танцор, укротитель животных, уличный музыкант, устный историк, фокусник, хомейжи, циркач, шут.</p><p>Артист может быть Небольшим или Средним; размер по умолчанию Средний, при необходимости измените его на листе. Дополнительные языки выберите там же.</p><p>Виртуозные артисты снискали громкую славу: ведущие театральные актёры, отчаянные каскадёры, придворные шуты с опасными политическими намёками. Некоторые наставляют других и передают секреты профессии.</p>",
+        "public": ""
+      },
+      "alignment": "Нейтральный",
+      "type": {
+        "value": "humanoid",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 6,
+      "habitat": {
+        "custom": "Любая",
+        "value": []
+      },
+      "treasure": {
+        "value": [
+          "armaments",
+          "individual"
+        ]
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "custom": "Один дополнительный язык",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "17",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Виртуозный артист",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "texture": {
+      "src": "icons/tools/instruments/lute-gold-brown.webp"
+    },
+    "width": 1,
+    "height": 1
+  },
+  "items": [
+    {
+      "_id": "miyUe7HjKWMnxozS",
+      "name": "Мультиатака",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Три атаки Рапирой.</p><h3>Действия</h3><ul><li>[[/item activity=gR8Ked6MWc1OzFym]]{Мультиатака}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "17",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "gR8Ked6MWc1OzFym": {
+            "_id": "gR8Ked6MWc1OzFym",
+            "type": "utility",
+            "name": "Мультиатака",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "flags": {
+              "spikependium": {
+                "multiattack": {
+                  "weapon": "rapier",
+                  "count": 3
+                }
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ziPUFv8xGBPKwkZ9.miyUe7HjKWMnxozS"
+    },
+    {
+      "_id": "UEITvCFZil2Rb6Nu",
+      "name": "Рапира",
+      "type": "weapon",
+      "img": "icons/weapons/swords/sword-guard-flanged.webp",
+      "system": {
+        "description": {
+          "value": "<p>Бросок атаки в ближнем бою: +7, досягаемость 5 футов. Попадание: [[/damage 1d8+4 type=piercing]]{1к8 + 4} колющего урона и [[/r 2d6]]{2к6} психического урона. Цена и вес — по базовой рапире.</p><h3>Действия</h3><ul><li>[[/item activity=aBOKbuqd1J8cN1vx]]{Рапира} · [[/damage activity=aBOKbuqd1J8cN1vx]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "17",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "rapier",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "aBOKbuqd1J8cN1vx": {
+            "_id": "aBOKbuqd1J8cN1vx",
+            "type": "attack",
+            "name": "Рапира",
+            "img": "icons/weapons/swords/sword-guard-flanged.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 2,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "psychic"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "properties": [
+          "fin"
+        ],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "martialM",
+          "baseItem": "rapier"
+        },
+        "proficient": 1,
+        "equipped": true,
+        "identified": true,
+        "quantity": 1,
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "price": {
+          "value": 25,
+          "denomination": "gp"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "reach": 5,
+          "units": "ft"
+        },
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 1,
+            "denomination": 8,
+            "bonus": "",
+            "types": [
+              "piercing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ziPUFv8xGBPKwkZ9.UEITvCFZil2Rb6Nu"
+    },
+    {
+      "_id": "ZyvGCw9960YprCF1",
+      "name": "Чарующая мелодия",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Каждое существо в Сфере радиусом 20 футов с центром в пределах 120 футов: спасбросок Мудрости Сл 15. Провал: [[/r 3d10+4]]{3к10 + 4} психического урона и Очарование до конца следующего хода артиста. Успех: половина урона.</p><h3>Действия</h3><ul><li>[[/item activity=Bom48g6goS9K9YYQ]]{Чарующая мелодия: Очарование} · [[/damage activity=Bom48g6goS9K9YYQ]]{Бросок урона} · [[/save activity=Bom48g6goS9K9YYQ]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "17",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "Bom48g6goS9K9YYQ": {
+            "_id": "Bom48g6goS9K9YYQ",
+            "type": "save",
+            "name": "Чарующая мелодия: Очарование",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "WLlrqruoBBhcR6Ev",
+                "onSave": false
+              }
+            ],
+            "range": {
+              "value": "120",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "sphere",
+                "size": "20",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 3,
+                  "denomination": 10,
+                  "bonus": "4",
+                  "types": [
+                    "psychic"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": [
+                "wis"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              },
+              "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "monsterAction": "performer-charmed"
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "WLlrqruoBBhcR6Ev",
+          "name": "Чарующая мелодия: Очарование",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": "sourceEnd",
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [
+            "charmed"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "monsterEffect": "performer-charmed"
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!ziPUFv8xGBPKwkZ9.ZyvGCw9960YprCF1.WLlrqruoBBhcR6Ev"
+        }
+      ],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ziPUFv8xGBPKwkZ9.ZyvGCw9960YprCF1"
+    },
+    {
+      "_id": "SUtM52Pz23DoSL0E",
+      "name": "Заклинания",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Харизма, Сл 15. Материальные компоненты не требуются. Неограниченно: Малая иллюзия, Мелкие фокусы. Один раз в день: Безудержный смех Таши (3-й круг).</p><h3>Действия</h3><ul><li>[[/item activity=09avcvSfZDjW5BUv]]{Малая иллюзия}</li><li>[[/item activity=uhIFn5WD05TU4ZL9]]{Мелкие фокусы}</li><li>[[/item activity=mNeVMYg1UGCbiseN]]{Безудержный смех Таши}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "17",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "09avcvSfZDjW5BUv": {
+            "_id": "09avcvSfZDjW5BUv",
+            "type": "cast",
+            "name": "Малая иллюзия",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMinorIllus"
+            }
+          },
+          "uhIFn5WD05TU4ZL9": {
+            "_id": "uhIFn5WD05TU4ZL9",
+            "type": "cast",
+            "name": "Мелкие фокусы",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 200000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPrestidigi"
+            }
+          },
+          "mNeVMYg1UGCbiseN": {
+            "_id": "mNeVMYg1UGCbiseN",
+            "type": "cast",
+            "name": "Безудержный смех Таши",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 300000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "activityUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [
+                {
+                  "period": "day",
+                  "type": "recoverAll"
+                }
+              ],
+              "max": "1"
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": 3,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplTashasHide"
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!ziPUFv8xGBPKwkZ9.SUtM52Pz23DoSL0E"
+    }
+  ],
+  "effects": [],
+  "folder": "4BUbLDhdunZZb8Ff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:performer-virtuoso",
+      "originalName": "Performer Virtuoso"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!ziPUFv8xGBPKwkZ9"
+}

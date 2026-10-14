@@ -1,0 +1,1280 @@
+{
+  "_id": "uRzisIq5YGhPwHzb",
+  "name": "Aarakocra Aeromancer",
+  "type": "npc",
+  "img": "icons/creatures/birds/raptor-hawk-flying.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 10,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 16,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 13,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 17,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "skills": {
+      "prc": {
+        "value": 2
+      },
+      "arc": {
+        "value": 1
+      },
+      "nat": {
+        "value": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 16,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 66,
+        "max": 66,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "12d8+12"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "20",
+          "fly": "50"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": null,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "wis"
+    },
+    "details": {
+      "biography": {
+        "value": "<h2>Ааракокра — крылатые защитники неба</h2><p>Среда обитания: Горы, Планы (Стихийный план Воздуха). Сокровища: Инвентарь, Личные.</p><p>Ааракокры — крылатый народ, который парит в небесах бесчисленных миров и бескрайних просторах Стихийного плана Воздуха. Их внешность обычно напоминает птиц, распространённых в тех краях, где они обитают. Некоторые напоминают ястребов или кондоров, другие же похожи на колибри или археоптериксов. Во многих землях ааракокры рассказывают о славных древних временах, когда они сражались с проклятой Королевой Хаоса бок о бок с таинственными Воздушными герцогами Ааки.</p><p>Ааракокры-аэроманты повелевают волшебными ветрами бесконечных штормов Стихийного плана Воздуха.</p>",
+        "public": ""
+      },
+      "alignment": "Нейтральный",
+      "type": {
+        "value": "elemental",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 4,
+      "habitat": {
+        "custom": "",
+        "value": [
+          {
+            "type": "mountain"
+          },
+          {
+            "type": "planar",
+            "subtype": "Стихийный план Воздуха"
+          }
+        ]
+      },
+      "treasure": {
+        "value": [
+          "armaments",
+          "individual"
+        ]
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "auran",
+          "aarakocra"
+        ],
+        "custom": "",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "10",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Ааракокра-аэромант",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "texture": {
+      "src": "icons/creatures/birds/raptor-hawk-flying.webp"
+    },
+    "width": 1,
+    "height": 1
+  },
+  "items": [
+    {
+      "_id": "zpQ0V1xJkDOthaAE",
+      "name": "Мультиатака",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Ааракокра совершает две атаки Посохом ветра и может сотворить Порыв ветра.</p><h3>Действия</h3><ul><li>[[/item activity=AUkWirtGGQaxl2Tx]]{Мультиатака}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "10",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "AUkWirtGGQaxl2Tx": {
+            "_id": "AUkWirtGGQaxl2Tx",
+            "type": "utility",
+            "name": "Мультиатака",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "flags": {
+              "spikependium": {
+                "multiattack": {
+                  "weapon": "wind-staff",
+                  "count": 2,
+                  "optionalSpell": "Compendium.dnd5e.spells24.Item.phbsplGustofWind"
+                }
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!uRzisIq5YGhPwHzb.zpQ0V1xJkDOthaAE"
+    },
+    {
+      "_id": "7TrqP0NJIt4QNi8m",
+      "name": "Посох ветра",
+      "type": "weapon",
+      "img": "icons/weapons/staves/staff-forest-green.webp",
+      "system": {
+        "description": {
+          "value": "<p>Рукопашная или дальнобойная атака: +5, досягаемость 5 футов или дистанция 120 футов. Попадание: [[/damage 1d8+3 type=bludgeoning]]{1к8 + 3} дробящего урона и [[/r 2d10]]{2к10} урона молнией.</p><p>Вес и цена указаны по базовому боевому посоху; отдельные значения для Посоха ветра в книге не приведены.</p><h3>Действия</h3><ul><li>[[/item activity=IoaVGK5CEZJ1lPls]]{Посох: рукопашная} · [[/damage activity=IoaVGK5CEZJ1lPls]]{Бросок урона}</li><li>[[/item activity=rvoKrNhyCzD0vpis]]{Посох: дальнобойная} · [[/damage activity=rvoKrNhyCzD0vpis]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "10",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "wind-staff",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "IoaVGK5CEZJ1lPls": {
+            "_id": "IoaVGK5CEZJ1lPls",
+            "type": "attack",
+            "name": "Посох: рукопашная",
+            "img": "icons/weapons/staves/staff-forest-green.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 2,
+                  "denomination": 10,
+                  "bonus": "",
+                  "types": [
+                    "lightning"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          },
+          "rvoKrNhyCzD0vpis": {
+            "_id": "rvoKrNhyCzD0vpis",
+            "type": "attack",
+            "name": "Посох: дальнобойная",
+            "img": "icons/weapons/staves/staff-forest-green.webp",
+            "sort": 200000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "120",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 2,
+                  "denomination": 10,
+                  "bonus": "",
+                  "types": [
+                    "lightning"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "proficient": 1,
+        "equipped": true,
+        "identified": true,
+        "quantity": 1,
+        "price": {
+          "value": 2,
+          "denomination": "sp"
+        },
+        "weight": {
+          "value": 4,
+          "units": "lb"
+        },
+        "range": {
+          "value": 120,
+          "long": null,
+          "reach": 5,
+          "units": "ft"
+        },
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 1,
+            "denomination": 8,
+            "bonus": "",
+            "types": [
+              "bludgeoning"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!uRzisIq5YGhPwHzb.7TrqP0NJIt4QNi8m"
+    },
+    {
+      "_id": "YodjBwWFCD3pRmPr",
+      "name": "Заклинания",
+      "type": "feat",
+      "img": "icons/magic/air/wind-vortex-swirl-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>Мудрость; Сл. спасброска заклинания 13. Материальные компоненты не требуются.</p><p>Неограниченно: Магическая рука, Порыв ветра, Сообщение, Стихийность.</p><p>По одному применению за продолжительный отдых: Удар молнии и Плавное падение. Плавное падение — реакция при наступлении условия заклинания.</p><h3>Действия</h3><ul><li>[[/item activity=66wtSsBBEomhjHxm]]{Магическая рука}</li><li>[[/item activity=n0c2eOINXoHpZbAV]]{Порыв ветра}</li><li>[[/item activity=5wON9wdS6u4g5aG7]]{Сообщение}</li><li>[[/item activity=RMtLJECzyrdAUURV]]{Стихийность}</li><li>[[/item activity=0LnobxtERZYF32Hi]]{Удар молнии}</li><li>[[/item activity=fwdCCNfB2f6AWUfq]]{Плавное падение}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "10",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "66wtSsBBEomhjHxm": {
+            "_id": "66wtSsBBEomhjHxm",
+            "type": "cast",
+            "name": "Магическая рука",
+            "img": "icons/magic/air/wind-vortex-swirl-blue.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "wis",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMageHand00"
+            }
+          },
+          "n0c2eOINXoHpZbAV": {
+            "_id": "n0c2eOINXoHpZbAV",
+            "type": "cast",
+            "name": "Порыв ветра",
+            "img": "icons/magic/air/wind-vortex-swirl-blue.webp",
+            "sort": 200000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "wis",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGustofWind"
+            }
+          },
+          "5wON9wdS6u4g5aG7": {
+            "_id": "5wON9wdS6u4g5aG7",
+            "type": "cast",
+            "name": "Сообщение",
+            "img": "icons/magic/air/wind-vortex-swirl-blue.webp",
+            "sort": 300000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "wis",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMessage000"
+            }
+          },
+          "RMtLJECzyrdAUURV": {
+            "_id": "RMtLJECzyrdAUURV",
+            "type": "cast",
+            "name": "Стихийность",
+            "img": "icons/magic/air/wind-vortex-swirl-blue.webp",
+            "sort": 400000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "wis",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplElementali"
+            }
+          },
+          "0LnobxtERZYF32Hi": {
+            "_id": "0LnobxtERZYF32Hi",
+            "type": "cast",
+            "name": "Удар молнии",
+            "img": "icons/magic/air/wind-vortex-swirl-blue.webp",
+            "sort": 500000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "activityUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [
+                {
+                  "period": "lr",
+                  "type": "recoverAll"
+                }
+              ],
+              "max": "1"
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "wis",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLightningB"
+            }
+          },
+          "fwdCCNfB2f6AWUfq": {
+            "_id": "fwdCCNfB2f6AWUfq",
+            "type": "cast",
+            "name": "Плавное падение",
+            "img": "icons/magic/air/wind-vortex-swirl-blue.webp",
+            "sort": 600000,
+            "activation": {
+              "type": "reaction",
+              "value": 1,
+              "condition": "Вы или существо в пределах 60 футов падаете.",
+              "override": true
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "activityUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [
+                {
+                  "period": "lr",
+                  "type": "recoverAll"
+                }
+              ],
+              "max": "1"
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "wis",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFeatherFal"
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!uRzisIq5YGhPwHzb.YodjBwWFCD3pRmPr"
+    }
+  ],
+  "effects": [],
+  "folder": "4BUbLDhdunZZb8Ff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:aarakocra-aeromancer",
+      "originalName": "Aarakocra Aeromancer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!uRzisIq5YGhPwHzb"
+}

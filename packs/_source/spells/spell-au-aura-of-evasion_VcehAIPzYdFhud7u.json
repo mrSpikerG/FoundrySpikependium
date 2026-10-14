@@ -1,0 +1,228 @@
+{
+  "_id": "VcehAIPzYdFhud7u",
+  "name": "Аура увёртливости",
+  "type": "spell",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, колдун, чародей.</em></p><p>В течение минуты концентрации от вас исходит 30-футовая эманация. Вы и ваши союзники внутри неё совершаете спасброски Ловкости с преимуществом. Если эффект позволяет спасброском Ловкости уменьшить урон вдвое, защищённое существо получает нулевой урон при успехе и половину при провале. Недееспособные существа этой защиты не получают.</p><p><strong>Применение.</strong> Накладывание расходует ячейку и создаёт личный эффект с концентрацией. В обычном окне спасброска Ловкости выберите ауру и подтвердите союзность и распространение эманации до вашего токена. Для своей ауры подтверждение уже выбрано. Модуль проверяет конкретные токены, расстояние 30 футов с учётом высоты и единиц сцены, активность этого накладывания и недееспособность. Преимущество сочетается со штатной помехой. Урон из связанной карточки спасброска с правилом «половина при успехе» пересчитывается перед сопротивлениями и округлением. Несколько аур и Увёртливость не уменьшают его повторно. Другие характеристики и эффекты без такого спасброска не затрагиваются. Союзность и препятствия подтверждает Мастер; вне сцены спасбросок и уменьшение урона обрабатываются вручную.</p><h3>Действия</h3><ul><li>[[/item activity=rByDXhtYETZME0Yp]]{Создать ауру увёртливости}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "35",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "aura-of-evasion",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 7,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "abj",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "emanation",
+        "size": "30",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "rByDXhtYETZME0Yp": {
+        "_id": "rByDXhtYETZME0Yp",
+        "type": "utility",
+        "name": "Создать ауру увёртливости",
+        "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "effects": [
+          {
+            "_id": "9Vs0KoRSHuccY9SM"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "emanation",
+            "size": "30",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "9Vs0KoRSHuccY9SM",
+      "name": "Аура увёртливости",
+      "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "aura-of-evasion"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!VcehAIPzYdFhud7u.9Vs0KoRSHuccY9SM"
+    }
+  ],
+  "folder": "GcAbLCaR99k8zXDx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-aura-of-evasion"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!VcehAIPzYdFhud7u"
+}

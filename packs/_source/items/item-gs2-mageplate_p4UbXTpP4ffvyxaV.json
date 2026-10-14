@@ -1,0 +1,526 @@
+{
+  "_id": "p4UbXTpP4ffvyxaV",
+  "name": "Mageplate Ring",
+  "type": "equipment",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>Кольцо имеет 3 заряда, восстанавливаемых на рассвете. Бонусным действием потратьте 1, 2 или 3 заряда: базовый КД станет 16, 17 или 18 соответственно на 1 минуту, без добавления Ловкости. Призрачные доспехи дают яркий свет на 20 футов и тусклый ещё на 20 футов. Выбранный профиль включается штатной формой; при пересечении сроков профили не складывают КД; сопротивления и другие бонусы не отключаются. Система использует лучшую доступную формулу КД и учитывает щит. Свет токена пока настраивается вручную; отмена расхода возвращает заряды, но уже применённую форму проверьте отдельно.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 0,01 фунта для небольшого кольца; источник не задаёт вес.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=b9c801450ff9e83d\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=E5qeeltosuAyvSvQ]]{Призрачный доспех: КД 16, 1 заряд}</li><li>[[/item activity=CSMhGqpz5jsAc4YW]]{Призрачный доспех: КД 17, 2 заряда}</li><li>[[/item activity=8XjQDzydhKrML9sM]]{Призрачный доспех: КД 18, 3 заряда}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=b9c801450ff9e83d",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-mageplate",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.01,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "ring",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "3",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "E5qeeltosuAyvSvQ": {
+        "_id": "E5qeeltosuAyvSvQ",
+        "type": "transform",
+        "name": "Призрачный доспех: КД 16, 1 заряд",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "fUBfBYb9ySJ7kLPF"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": true,
+          "requireIdentification": false,
+          "requireMagic": true
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      },
+      "CSMhGqpz5jsAc4YW": {
+        "_id": "CSMhGqpz5jsAc4YW",
+        "type": "transform",
+        "name": "Призрачный доспех: КД 17, 2 заряда",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "2",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "6fSuXcbjrJw5QZSb"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": true,
+          "requireIdentification": false,
+          "requireMagic": true
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      },
+      "8XjQDzydhKrML9sM": {
+        "_id": "8XjQDzydhKrML9sM",
+        "type": "transform",
+        "name": "Призрачный доспех: КД 18, 3 заряда",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "3",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "4c7qjRI4zjxnEipP"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": true,
+          "requireIdentification": false,
+          "requireMagic": true
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "fUBfBYb9ySJ7kLPF",
+      "name": "Призрачный доспех: базовый КД 16",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.formulas",
+            "value": "16",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "ySzHI6OjEtzUERHI"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "griffonMageplate": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!p4UbXTpP4ffvyxaV.fUBfBYb9ySJ7kLPF"
+    },
+    {
+      "_id": "6fSuXcbjrJw5QZSb",
+      "name": "Призрачный доспех: базовый КД 17",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.formulas",
+            "value": "17",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "KFgotxQjqKsmKlEY"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "griffonMageplate": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!p4UbXTpP4ffvyxaV.6fSuXcbjrJw5QZSb"
+    },
+    {
+      "_id": "4c7qjRI4zjxnEipP",
+      "name": "Призрачный доспех: базовый КД 18",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.formulas",
+            "value": "18",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "1vE2TdGCg9m8Lalp"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "griffonMageplate": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!p4UbXTpP4ffvyxaV.4c7qjRI4zjxnEipP"
+    }
+  ],
+  "folder": "VPvBwCDh1UcyRJeD",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:mageplate",
+      "originalName": "Mageplate Ring"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!p4UbXTpP4ffvyxaV"
+}

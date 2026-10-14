@@ -1,0 +1,536 @@
+{
+  "_id": "I3iEBwL3QO4fQ3bB",
+  "name": "Performer",
+  "type": "npc",
+  "img": "icons/tools/instruments/lute-gold-brown.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 16,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 12,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 13,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 16,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "skills": {
+      "acr": {
+        "value": 1
+      },
+      "ath": {
+        "value": 1
+      },
+      "prf": {
+        "value": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 13,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 27,
+        "max": 27,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "5d8+5"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "30"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": null,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<h2>Художники и мастеры</h2><p>Среда обитания: любая. Сокровища: Инвентарь, Личные. Обзор: страница 16.</p><p>Мастера сцены выступают в величественных дворцовых залах и на скромных рыночных площадях. Они путешествуют, показывая таланты и мистические искусства, или служат при дворах великих держав. Некоторые передают профессиональные секреты и магические приёмы ученикам.</p><p>Профессии и роли: акробат, актёр, артист бурлеска, борец, воздушный гимнаст, глашатай, гуттаперча, джигит, жонглёр, каскадёр, комик, кукловод, менестрель, менталист, мим, певец, плакальщик, поэт, рассказчик, ритуалист, сценический боец, танцор, укротитель животных, уличный музыкант, устный историк, фокусник, хомейжи, циркач, шут.</p><p>Артист может быть Небольшим или Средним; размер по умолчанию Средний, при необходимости измените его на листе. Дополнительные языки выберите там же.</p><p>Обычные артисты — странствующие рассказчики, трактирные музыканты, местные исполнители и хористы. Часто это самоучки или начинающие студенты. Обычно владеют двумя-тремя инструментами или навыками.</p>",
+        "public": ""
+      },
+      "alignment": "Нейтральный",
+      "type": {
+        "value": "humanoid",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 0.5,
+      "habitat": {
+        "custom": "Любая",
+        "value": []
+      },
+      "treasure": {
+        "value": [
+          "armaments",
+          "individual"
+        ]
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common"
+        ],
+        "custom": "Один дополнительный язык",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "16",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Артист",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "texture": {
+      "src": "icons/tools/instruments/lute-gold-brown.webp"
+    },
+    "width": 1,
+    "height": 1
+  },
+  "items": [
+    {
+      "_id": "BqaAggRoI3Zy1Lwe",
+      "name": "Короткий меч",
+      "type": "weapon",
+      "img": "icons/weapons/swords/shortsword-guard-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>Бросок атаки в ближнем бою: +5, досягаемость 5 футов. Попадание: [[/damage 1d6+3 type=piercing]]{1к6 + 3} колющего урона. Цена и вес — по базовому короткому мечу.</p><h3>Действия</h3><ul><li>[[/item activity=T7K9OUbwW0JATgnC]]{Короткий меч} · [[/damage activity=T7K9OUbwW0JATgnC]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "16",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "shortsword",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "T7K9OUbwW0JATgnC": {
+            "_id": "T7K9OUbwW0JATgnC",
+            "type": "attack",
+            "name": "Короткий меч",
+            "img": "icons/weapons/swords/shortsword-guard-brown.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [
+          "fin",
+          "lgt"
+        ],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "martialM",
+          "baseItem": "shortsword"
+        },
+        "proficient": 1,
+        "equipped": true,
+        "identified": true,
+        "quantity": 1,
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "price": {
+          "value": 10,
+          "denomination": "gp"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "reach": 5,
+          "units": "ft"
+        },
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 1,
+            "denomination": 6,
+            "bonus": "",
+            "types": [
+              "piercing"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!I3iEBwL3QO4fQ3bB.BqaAggRoI3Zy1Lwe"
+    },
+    {
+      "_id": "0Ey4SxSqKw5q9d5v",
+      "name": "Невероятное уклонение",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Реакция: по артисту попадает бросок атаки. Артист получает половину урона от этой атаки, округлённую вниз. При штатном применении урона связанной атаки предлагается потратить реакцию; уменьшение, сопротивления и временные хиты рассчитывает dnd5e. При использовании с листа выберите карточку ещё не разрешённого попадания. Возврат расхода реакции отменяет уменьшение для последующих применений этой карточки, но не откатывает уже полученный урон. Неизвестный КБ, несколько бросков в карточке, смешанное лечение с уроном и неоднозначные токены требуют ручного разрешения.</p><h3>Действия</h3><ul><li>[[/item activity=QuImfAi59iGAiAkW]]{Невероятное уклонение}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "16",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "QuImfAi59iGAiAkW": {
+            "_id": "QuImfAi59iGAiAkW",
+            "type": "utility",
+            "name": "Невероятное уклонение",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "reaction",
+              "value": 1,
+              "condition": "По артисту попадает бросок атаки",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!I3iEBwL3QO4fQ3bB.0Ey4SxSqKw5q9d5v"
+    }
+  ],
+  "effects": [],
+  "folder": "4BUbLDhdunZZb8Ff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:performer",
+      "originalName": "Performer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!I3iEBwL3QO4fQ3bB"
+}

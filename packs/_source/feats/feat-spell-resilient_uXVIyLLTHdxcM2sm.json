@@ -1,0 +1,215 @@
+{
+  "_id": "uXVIyLLTHdxcM2sm",
+  "name": "Стойкий к заклинаниям",
+  "type": "feat",
+  "img": "icons/magic/defensive/shield-barrier-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Повышение характеристики.</strong> Увеличьте Ловкость или Телосложение на 1, максимум до 20.</p><p><strong>Магическая устойчивость.</strong> Выберите сопротивление урону звуком, излучением, некротической или психической энергией.</p><p><strong>Стойкий к магии.</strong> После провала собственного спасброска против заклинания или магического эффекта можно добавить к нему результат [[/r 1d6]]{1к6}. Эта польза имеет число применений, равное бонусу владения; долгий отдых восстанавливает их. Действие и реакция не требуются.</p><p><strong>Применение.</strong> При добавлении черты штатные шаги предлагают характеристику и один тип сопротивления. Для к6 выберите свежую собственную карточку провала с известной СЛ. Связанное заклинание распознаётся автоматически; прочие магические эффекты подтвердите в окне. Применение расходуется штатно, исходный к20 сохраняется. Отмена расхода возвращает применение и убирает к6. Уже обработанные последствия спасброска, включая урон, эффекты и потерянную концентрацию, проверяет Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=RL4kDlbP0jgvbiyS]]{Стойкий к магии}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "32",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "spell-resilient",
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "RL4kDlbP0jgvbiyS": {
+        "_id": "RL4kDlbP0jgvbiyS",
+        "type": "utility",
+        "name": "Стойкий к магии",
+        "img": "icons/magic/defensive/shield-barrier-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вы провалили спасбросок против заклинания или магического эффекта",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "@prof"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d6",
+          "name": "Бонус к магическому спасброску",
+          "prompt": false,
+          "visible": true
+        },
+        "flags": {
+          "spikependium": {
+            "originSaveBoost": true
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "wi5G5WaCfjKaSpqn",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [
+            "str",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Ловкость или Телосложение +1",
+        "hint": ""
+      },
+      {
+        "_id": "GFLiuCjg8LxsgNDy",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 1,
+              "pool": [
+                "dr:thunder",
+                "dr:radiant",
+                "dr:necrotic",
+                "dr:psychic"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Магическая устойчивость",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "6UtLiolDyU9n3JG3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:spell-resilient"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!uXVIyLLTHdxcM2sm"
+}

@@ -1,0 +1,494 @@
+{
+  "_id": "LYDssbh0ZfJPT3Jr",
+  "name": "Алхимик (Valda)",
+  "type": "class",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Самостоятельный класс Valda’s Spire of Secrets по правилам 2014 года. Базовые хиты, владения, умения и бомбы доступны через штатные продвижения. Перенос продолжается: специализации, формулы, открытия, стартовое снаряжение, зельеварение и условные ограничения пока не завершены.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist",
+    "levels": 1,
+    "hd": {
+      "denomination": "d6",
+      "spent": 0,
+      "additional": ""
+    },
+    "advancement": [
+      {
+        "_id": "mkrGJAm3WEqoGyQ4",
+        "type": "HitPoints",
+        "configuration": {},
+        "value": {},
+        "title": ""
+      },
+      {
+        "_id": "NMETH7GZl2ut8hAs",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.uV8xo4LWGFqDMgUj",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.JYFoGO3r2NjPPMEs",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 1,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "X6E0RWXzHMv8J543",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.OYLdNDhVtAtuZStQ",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "gqlQRIDsk5eATIak",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.aTbmAXZqG38u4Za4",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "jLycbjVIUkF8endW",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.owT2zbccLqcUh5Fa",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 4,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "YXkywql6ZzD86b0U",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.LdSl0OkKBusDTl4l",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 5,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "nSEiVsf87kT9aJbE",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.3dFoowEMXbuRIdJk",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 11,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "UKpHPtuAqO1LD6rE",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.fJgQzssnsRBDZIis",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 15,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "AngfULX1qSQksu3b",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.S1P82FF5RrrNj5kn",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 20,
+        "title": "Умения класса",
+        "hint": ""
+      },
+      {
+        "_id": "imHsM16MfTF0Opz1",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 4,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "KxBycOzPjKBAvy9W",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 8,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "pffCiqmtqIgstDGj",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 12,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "hrGNk2Cxpl9Gv9iP",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 16,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "Cja3LlwpUAbRbzQ2",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 2,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [],
+          "recommendation": null,
+          "max": null
+        },
+        "value": {},
+        "level": 19,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "s73bsU7Y14MFwLdZ",
+        "type": "Subclass",
+        "configuration": {},
+        "value": {
+          "document": null,
+          "uuid": null
+        },
+        "level": 2,
+        "title": "",
+        "hint": ""
+      },
+      {
+        "_id": "JaVzclb5PiPMpFtK",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "saves:dex",
+            "saves:int"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Спасброски",
+        "hint": "",
+        "classRestriction": "primary"
+      },
+      {
+        "_id": "roRRyln1gwrofzfR",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 3,
+              "pool": [
+                "skills:prc",
+                "skills:sur",
+                "skills:his",
+                "skills:slt",
+                "skills:arc",
+                "skills:med",
+                "skills:nat",
+                "skills:ins"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Три навыка",
+        "hint": "",
+        "classRestriction": "primary"
+      },
+      {
+        "_id": "4qPYcSo6EZvv7MgK",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "weapon:sim"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Простое оружие",
+        "hint": "",
+        "classRestriction": "primary"
+      },
+      {
+        "_id": "gVVBDMfVcLD6SQZG",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "armor:lgt"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Лёгкие доспехи",
+        "hint": ""
+      },
+      {
+        "_id": "KuowFpHL4JxHBDQj",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "tool:art:alchemist",
+            "tool:herb"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 1,
+        "title": "Припасы алхимика и набор травника",
+        "hint": "",
+        "classRestriction": "primary"
+      },
+      {
+        "_id": "0bMuKBH4KOMVbxFD",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "bomb",
+          "type": "dice",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "1": {
+              "number": 1,
+              "faces": 10,
+              "modifiers": []
+            },
+            "5": {
+              "number": 2,
+              "faces": 10,
+              "modifiers": []
+            },
+            "11": {
+              "number": 3,
+              "faces": 10,
+              "modifiers": []
+            },
+            "17": {
+              "number": 4,
+              "faces": 10,
+              "modifiers": []
+            }
+          }
+        },
+        "value": {},
+        "title": "Урон заряженной бомбы",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    },
+    "startingEquipment": [],
+    "wealth": "",
+    "primaryAbility": {
+      "value": [
+        "int"
+      ],
+      "all": true
+    },
+    "properties": []
+  },
+  "effects": [],
+  "folder": "rgSgVPHyBNKGagTE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "class:alchemist"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!LYDssbh0ZfJPT3Jr"
+}

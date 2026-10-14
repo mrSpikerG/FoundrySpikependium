@@ -1,0 +1,192 @@
+{
+  "_id": "xgX9ymGsOj28bGX6",
+  "name": "Магический провидец",
+  "type": "feat",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Заговор.</strong> Вы изучаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplGuidance00]{Наставление}. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для него (выберите при выборе черты).</p><p><strong>Полезное предчувствие.</strong> Когда вы или существо, которое вы видите в пределах 30 футов, проваливаете спасбросок, вы можете реакцией бросить [[/r 1d4]]{1к4} и добавить результат к этому спасброску, потенциально превратив провал в успех. Вы можете использовать эту пользу количество раз, равное вашему бонусу владения; потраченные применения восстанавливаются после долгого отдыха.</p><p><strong>Применение.</strong> В окне реакции выберите свежую карточку проваленного спасброска с известной СЛ и подтвердите видимость другой цели. После расхода реакции и применения модуль бросает к4 и добавляет его в исходную карточку без перебрасывания к20. Отмена расхода убирает добавленный бонус, если исходная карточка не была изменена другим способом. Последствия уже применённого урона, завершённых эффектов, испытания смерти или прерванной концентрации проверяет Мастер; реакцию применяйте до их обработки.</p><h3>Действия</h3><ul><li>[[/item activity=dB3o0DBPXZYZcFw1]]{Полезное предчувствие}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "28",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magic-omen",
+    "type": {
+      "value": "feat",
+      "subtype": "origin"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "dB3o0DBPXZYZcFw1": {
+        "_id": "dB3o0DBPXZYZcFw1",
+        "type": "utility",
+        "name": "Полезное предчувствие",
+        "img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Вы или видимое существо в пределах 30 футов провалили спасбросок",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "@prof"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d4",
+          "name": "Бонус к спасброску",
+          "prompt": false,
+          "visible": true
+        },
+        "flags": {
+          "spikependium": {
+            "originSaveBoost": true
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "gLArgXNemPKAOZc5",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGuidance00",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заговор: Наставление",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "9PyqwBpBkWMzeKXz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:magic-omen"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!xgX9ymGsOj28bGX6"
+}

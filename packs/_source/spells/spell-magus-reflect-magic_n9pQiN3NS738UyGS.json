@@ -1,0 +1,188 @@
+{
+  "_id": "n9pQiN3NS738UyGS",
+  "name": "Reflect Magic",
+  "type": "spell",
+  "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+  "system": {
+    "description": {
+      "value": "<p>Реакция, когда вы становитесь целью заклинания. Если его уровень не выше 5-го, перенаправьте его, выбрав новую цель или область, затем разрешите заклинание обычным образом. При более высокой ячейке можно отразить заклинание, уровень которого не выше уровня потраченной ячейки. Заклинание не даёт отдельного спасброска и не наносит урон. Комплект зеркала расходуется штатной операцией: перед использованием укажите запас материалов. Проверка исходного заклинания и перенаправление его целей/области пока выполняются Мастером.</p><h3>Действия</h3><ul><li>[[/item activity=ZHXBbowSIMwp1RC5]]{Отразить исходное заклинание}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "16",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-reflect-magic",
+    "activation": {
+      "type": "reaction",
+      "value": 1,
+      "condition": "Вы становитесь целью заклинания"
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 5,
+    "materials": {
+      "value": "полированное серебряное зеркало стоимостью не менее 100 зм; расходуется",
+      "consumed": true,
+      "cost": 100,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "abj",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "ZHXBbowSIMwp1RC5": {
+        "_id": "ZHXBbowSIMwp1RC5",
+        "type": "utility",
+        "name": "Отразить исходное заклинание",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Вы становитесь целью подходящего заклинания",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spikependiumMaterial",
+              "target": "",
+              "value": "1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "LbQNxdBampSGAR2U",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:magus-reflect-magic",
+      "originalName": "Reflect Magic"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!n9pQiN3NS738UyGS"
+}

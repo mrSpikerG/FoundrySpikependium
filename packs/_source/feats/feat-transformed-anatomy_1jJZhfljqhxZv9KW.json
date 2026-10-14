@@ -1,0 +1,212 @@
+{
+  "_id": "1jJZhfljqhxZv9KW",
+  "name": "Преобразованная анатомия",
+  "type": "feat",
+  "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Удлинённый шаг.</strong> Ваша скорость увеличивается на 5 футов.</p><p><strong>Устойчивая форма.</strong> Вы совершаете с преимуществом спасброски против эффектов, которые принуждают вас к смене формы против вашей воли. Кроме того, когда вы проваливаете спасбросок Телосложения, вы можете реакцией бросить [[/r 1d4]]{1к4} и добавить результат к этому спасброску, потенциально превратив провал в успех. Вы можете использовать эту пользу количество раз, равное вашему бонусу владения; потраченные применения восстанавливаются после долгого отдыха.</p><p><strong>Применение.</strong> Скорость увеличивается постоянным активным эффектом с учётом единиц листа. В окне спасброска отметьте, что эффект принудительно меняет форму; для Превращения и Истинного превращения признак выбирается автоматически. Преимущество сочетается с другими источниками и отменяется помехой. Реакция к4 использует только свежую карточку вашего проваленного спасброска Телосложения с известной СЛ, сохраняет к20 и поддерживает штатную отмену расхода. Последствия уже обработанного урона, завершённых эффектов и прерванной концентрации проверяет Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=MnKkDbHWJF89olOs]]{Устойчивая форма — спасбросок Телосложения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "29",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "transformed-anatomy",
+    "type": {
+      "value": "feat",
+      "subtype": "origin"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "MnKkDbHWJF89olOs": {
+        "_id": "MnKkDbHWJF89olOs",
+        "type": "utility",
+        "name": "Устойчивая форма — спасбросок Телосложения",
+        "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Вы провалили спасбросок Телосложения",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "@prof"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d4",
+          "name": "Бонус к спасброску Телосложения",
+          "prompt": false,
+          "visible": true
+        },
+        "flags": {
+          "spikependium": {
+            "originSaveBoost": true
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "8zhDXLfJ7l2jN20h",
+      "name": "Удлинённый шаг (+5 футов)",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.bonus",
+            "value": "5",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "HY9X5wDGsGLsU1D4"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "anatomyStride": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!1jJZhfljqhxZv9KW.8zhDXLfJ7l2jN20h"
+    }
+  ],
+  "folder": "9PyqwBpBkWMzeKXz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:transformed-anatomy"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!1jJZhfljqhxZv9KW"
+}

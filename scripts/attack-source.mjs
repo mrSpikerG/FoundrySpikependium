@@ -15,10 +15,14 @@ export function guardianRecords(attack) {
     .flatMap(scene => Object.values(scene.flags.spikependium?.guardianHits ?? {}))
     .filter(r => r.attack === attack.uuid && game.users.get(r.author)?.isGM);
 }
-export function guardianTarget(attack, target, index = 0) {
+export function guardianRawTarget(attack, target, index = 0) {
   const record = guardianRecords(attack).find(r => r.state === "done" && r.victim === target.token && r.index === index
     && r.signature === attackSignature(attack));
   return record ? { ...record.target, isMiss: false } : target;
+}
+export function guardianTarget(attack, target, index = 0) {
+  const result = guardianRawTarget(attack, target, index);
+  return index === 0 && defensiveCharmOutcome(attack, result) === "miss" ? { ...result, isMiss: true } : result;
 }
 export function guardianEvaluatedTargets(wrapped, ...args) {
   return wrapped(...args).map(target => guardianTarget(this.parent, target));
@@ -32,10 +36,12 @@ export async function captureAttackDamage(wrapped, config = {}, dialog = {}, mes
   if (attack?.type === "attack" && attack.getAssociatedActivity()?.uuid === this.uuid) {
     message = foundry.utils.deepClone(message);
     foundry.utils.setProperty(message, "data.flags.spikependium.attackSource", { message: attack.uuid, signature: attackSignature(attack) });
-    foundry.utils.setProperty(message, "data.system.targets", attack.system.targets.map(t => {
+    foundry.utils.setProperty(message, "data.system.targets", attack.system.targets.filter(t => !guardianTarget(attack, t).isMiss).map(t => {
       const { isMiss, ...target } = guardianTarget(attack, t);
       return target;
     }));
   }
   return wrapped(config, dialog, message);
 }
+import { defensiveCharmOutcome } from "./performer-defense.mjs";
+

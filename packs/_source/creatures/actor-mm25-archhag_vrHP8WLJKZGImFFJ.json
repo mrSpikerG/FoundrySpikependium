@@ -1,0 +1,3709 @@
+{
+  "_id": "vrHP8WLJKZGImFFJ",
+  "name": "Archhag",
+  "type": "npc",
+  "img": "icons/magic/control/debuff-energy-snare-purple-pink.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 24,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 15,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 23,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 19,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 19,
+        "proficient": 1,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 25,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "skills": {
+      "prc": {
+        "value": 1
+      },
+      "dec": {
+        "value": 1
+      },
+      "per": {
+        "value": 2
+      }
+    },
+    "resources": {
+      "legact": {
+        "max": 3,
+        "spent": 0
+      },
+      "legres": {
+        "max": 4,
+        "spent": 0
+      },
+      "lair": {
+        "value": true,
+        "initiative": null,
+        "inside": false
+      }
+    },
+    "attributes": {
+      "init": {
+        "roll": {
+          "bonus": "@prof * 2"
+        }
+      },
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 20,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 333,
+        "max": 333,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "29d10+174"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "40"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": null,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": 60
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "cha"
+    },
+    "details": {
+      "biography": {
+        "value": "<h2>Ведьма запретных тайн и магического коварства</h2><p>Среда обитания: любая. Сокровища: Магия. Описание и слабости: страница 18; статблок и логово: страница 19.</p><p>Бессмертные, непредсказуемые архикарги собирают тайны и заключают волшебные сделки, управляя чужими судьбами по своей прихоти. Они стремятся разгадать тайны мультивселенной и используют странную магию для непостижимых целей. Эгоизм и жадность сочетаются с экстравагантными манерами и очарованием.</p><p>Архикарга может поделиться запретным знанием в обмен на поручение, ценный магический предмет, воспоминания, год жизни или способность плакать. Обычно она избегает боя; прижатая к стене, сражается призрачными когтями, молниями и завораживающими заклинаниями, проклинает речь других заклинателей и ищет способ ускользнуть ради будущей мести.</p><p>У каждой архикарги есть уникальная погибель — предмет, существо или явление, связанное с судьбоносным прошлым либо противоположное её магии. Мастер определяет слабость; её нужно принести в пределах 30 футов, чтобы убить архикаргу. @UUID[Compendium.spikependium.tables.RollTable.U65Xw4iHM7hdMyVf]{Погибель архикарги: выбрать или бросить}</p><h3>Логово</h3><p>Тайный демиплан, особняк на грозовой туче или избушка на гигантских куриных ногах; интерьер меняется и обладает удивительными особенностями.</p><p>В пределах 1 мили существа, кроме карги и её союзников, вычитают [[/r 1d10]] из проверки характеристики при действии Влияние. Завершившие здесь долгий отдых при первом последующем заклинании с ячейкой также накладывают Замешательство с центром на себе, используя собственную заклинательную характеристику и без концентрации. После смерти карги или переноса логова оба эффекта немедленно прекращаются. Центр логова, союзников и региональные последствия пока определяет Мастер.</p>",
+        "public": ""
+      },
+      "alignment": "Нейтральная злая",
+      "type": {
+        "value": "fey",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 21,
+      "habitat": {
+        "custom": "Любая",
+        "value": []
+      },
+      "treasure": {
+        "value": [
+          "arcana"
+        ]
+      }
+    },
+    "traits": {
+      "size": "lg",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [
+          "fire",
+          "psychic",
+          "cold"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "frightened",
+          "charmed",
+          "exhaustion"
+        ],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "all"
+        ],
+        "custom": "",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "19",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Архикарга",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "texture": {
+      "src": "icons/magic/control/debuff-energy-snare-purple-pink.webp"
+    },
+    "width": 2,
+    "height": 2
+  },
+  "items": [
+    {
+      "_id": "eYYXgVMYm9mhbr5y",
+      "name": "Легендарная устойчивость",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>4 применения в день, 5 в логове. На карточке проваленного спасброска нажмите штатную кнопку Легендарной устойчивости: расход и успешный результат учитывает dnd5e.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.eYYXgVMYm9mhbr5y"
+    },
+    {
+      "_id": "qK5hVRRgVjhEVU8C",
+      "name": "Магия ковена",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Пока в 30 футах есть минимум две союзные карги: можно накладывать одно из перечисленных заклинаний с обычным временем, без материальных компонентов, используя Интеллект (Сл 19). Все шесть вариантов расходуют одно общее применение, восстанавливаемое после долгого отдыха. Союзные карги распознаются по записи модуля или имени карги и одинаковой ненейтральной принадлежности токенов. Для нейтральных и необычных союзов либо игры без карты подтвердите условие в штатном окне применения.</p><h3>Действия</h3><ul><li>[[/item activity=TYDhFtjz3snXc3sH]]{Гадание}</li><li>[[/item activity=WCV0xBxu9vk7MY5E]]{Невидимый слуга}</li><li>[[/item activity=ODLUAix7NLil3VcC]]{Опознание}</li><li>[[/item activity=xHoYnBO44U6ik6gm]]{Поиск предмета}</li><li>[[/item activity=OnocHgaTUJA0gy30]]{Призыв фамильяра}</li><li>[[/item activity=yqqh8PlIC8td0D0E]]{Тайновидение}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "archhag-coven",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "1",
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ]
+        },
+        "activities": {
+          "TYDhFtjz3snXc3sH": {
+            "_id": "TYDhFtjz3snXc3sH",
+            "type": "cast",
+            "name": "Гадание",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "int",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDivination"
+            }
+          },
+          "WCV0xBxu9vk7MY5E": {
+            "_id": "WCV0xBxu9vk7MY5E",
+            "type": "cast",
+            "name": "Невидимый слуга",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 200000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "int",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplUnseenServ"
+            }
+          },
+          "ODLUAix7NLil3VcC": {
+            "_id": "ODLUAix7NLil3VcC",
+            "type": "cast",
+            "name": "Опознание",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 300000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "int",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplIdentify00"
+            }
+          },
+          "xHoYnBO44U6ik6gm": {
+            "_id": "xHoYnBO44U6ik6gm",
+            "type": "cast",
+            "name": "Поиск предмета",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 400000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "int",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLocateObje"
+            }
+          },
+          "OnocHgaTUJA0gy30": {
+            "_id": "OnocHgaTUJA0gy30",
+            "type": "cast",
+            "name": "Призыв фамильяра",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 500000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "int",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFindFamili"
+            }
+          },
+          "yqqh8PlIC8td0D0E": {
+            "_id": "yqqh8PlIC8td0D0E",
+            "type": "cast",
+            "name": "Тайновидение",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 600000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "int",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplScrying000"
+            }
+          }
+        },
+        "properties": [
+          "mgc"
+        ],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.qK5hVRRgVjhEVU8C"
+    },
+    {
+      "_id": "U5soaaJn7LhVZXTf",
+      "name": "Мстительный побег",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>При падении до 0 ПЗ архикарга умирает только при наличии погибели в 30 футах. Иначе её ПЗ становятся 1, и она телепортируется в безопасный демиплан, откуда может вернуться через [[/r 2d6]]{2к6} дней. После телепортации каждое существо в 60 футах от покинутого пространства проклято: помеха проверкам характеристик и спасброскам; карга знает его местонахождение в мультивселенной. Пока Мастер проверяет погибель, изменяет ПЗ и переносит токен; проклятие примените кнопкой эффектов к выбранным существам. Мастер проверяет расстояние до 60 футов от исходного пространства карги.</p><h3>Действия</h3><ul><li>[[/item activity=ByAHx7Ri8vXK93Vo]]{Дни до возвращения}</li><li>[[/item activity=JzUoVDcHd0KAOgIn]]{Проклятие после побега}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "archhag-vengeful-escape",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "ByAHx7Ri8vXK93Vo": {
+            "_id": "ByAHx7Ri8vXK93Vo",
+            "type": "utility",
+            "name": "Дни до возвращения",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "2d6",
+              "name": "",
+              "prompt": false,
+              "visible": true
+            }
+          },
+          "JzUoVDcHd0KAOgIn": {
+            "_id": "JzUoVDcHd0KAOgIn",
+            "type": "utility",
+            "name": "Проклятие после побега",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 200000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "NOaeVogwQtHksBaV"
+              }
+            ],
+            "range": {
+              "value": "60",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        },
+        "properties": [
+          "mgc"
+        ],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "NOaeVogwQtHksBaV",
+          "name": "Проклятие Мстительного побега",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": [
+              {
+                "key": "system.rolls.ability.check.mode",
+                "value": "-1",
+                "type": "add",
+                "priority": null,
+                "phase": "initial",
+                "_id": "0efZFKpyiqF7JtAY"
+              },
+              {
+                "key": "system.rolls.ability.save.mode",
+                "value": "-1",
+                "type": "add",
+                "priority": null,
+                "phase": "initial",
+                "_id": "p95TPNIHYa4RvAJ4"
+              },
+              {
+                "key": "system.attributes.death.roll.mode",
+                "value": "-1",
+                "type": "add",
+                "priority": null,
+                "phase": "initial",
+                "_id": "nHBVyn0VeT2Lguug"
+              }
+            ],
+            "magical": true
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "Помеха проверкам характеристик и спасброскам. Архикарга знает местонахождение существа в мультивселенной. Пока проклятие не снято.",
+          "origin": null,
+          "statuses": [
+            "cursed"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "archhagCurse": true
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!vrHP8WLJKZGImFFJ.U5soaaJn7LhVZXTf.NOaeVogwQtHksBaV"
+        }
+      ],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.U5soaaJn7LhVZXTf"
+    },
+    {
+      "_id": "CqaaASO2HqWLhx8c",
+      "name": "Устойчивость к магии",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Преимущество спасброскам против заклинаний и других магических эффектов. Для связанной карточки заклинания или магической способности оно выбирается автоматически; несвязанный магический источник подтвердите в окне.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "magic-resistance",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "spikependium": {
+          "magicResistance": true
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.CqaaASO2HqWLhx8c"
+    },
+    {
+      "_id": "1QAgyW11MSYmRzzT",
+      "name": "Мультиатака",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Две атаки Призрачными когтями и Трескучая волна.</p><h3>Действия</h3><ul><li>[[/item activity=mBEs1MiEFFz4Myke]]{Мультиатака}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "mBEs1MiEFFz4Myke": {
+            "_id": "mBEs1MiEFFz4Myke",
+            "type": "utility",
+            "name": "Мультиатака",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "flags": {
+              "spikependium": {
+                "multiattack": {
+                  "weapon": "archhag-spectral-claws",
+                  "count": 2,
+                  "finishers": [
+                    "archhag-crackling-wave"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 500000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.1QAgyW11MSYmRzzT"
+    },
+    {
+      "_id": "jY19IKnxuoakHcIK",
+      "name": "Призрачные когти",
+      "type": "weapon",
+      "img": "icons/magic/unholy/hand-claw-fire-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>Атака +14: досягаемость 10 футов или дистанция 60 футов. Урон [[/r 3d6+7]]{3к6 + 7} силой. Существо не больше Крупного сбито с ног при попадании. Естественная магическая атака не является продаваемым предметом.</p><h3>Действия</h3><ul><li>[[/item activity=OoGA4MLfRnQQVduN]]{Когти: ближний бой} · [[/damage activity=OoGA4MLfRnQQVduN]]{Бросок урона}</li><li>[[/item activity=IasdCSpBfAJUGHw2]]{Когти: дистанционная} · [[/damage activity=IasdCSpBfAJUGHw2]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "archhag-spectral-claws",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "OoGA4MLfRnQQVduN": {
+            "_id": "OoGA4MLfRnQQVduN",
+            "type": "attack",
+            "name": "Когти: ближний бой",
+            "img": "icons/magic/unholy/hand-claw-fire-blue.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "cha",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          },
+          "IasdCSpBfAJUGHw2": {
+            "_id": "IasdCSpBfAJUGHw2",
+            "type": "attack",
+            "name": "Когти: дистанционная",
+            "img": "icons/magic/unholy/hand-claw-fire-blue.webp",
+            "sort": 200000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "60",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "cha",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [
+          "mgc"
+        ],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "proficient": 1,
+        "equipped": true,
+        "identified": true,
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "range": {
+          "value": 60,
+          "long": null,
+          "reach": 10,
+          "units": "ft"
+        },
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 3,
+            "denomination": 6,
+            "bonus": "",
+            "types": [
+              "force"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "TeTd2MpzthMZQGrz",
+          "name": "Сбит Призрачными когтями",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [
+            "prone"
+          ],
+          "tint": "#ffffff",
+          "flags": {},
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!vrHP8WLJKZGImFFJ.jY19IKnxuoakHcIK.TeTd2MpzthMZQGrz"
+        }
+      ],
+      "folder": null,
+      "sort": 600000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.jY19IKnxuoakHcIK"
+    },
+    {
+      "_id": "aLCTVSTv7bkOW2Ui",
+      "name": "Трескучая волна",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>60-футовый конус: спасбросок Ловкости Сл 22, [[/r 5d12]]{5к12} молнией, половина при успехе. При любом результате существо проклято и не может совершать реакции до конца следующего хода карги. Выберите цели конуса перед применением; проклятие применяется после штатного спасброска.</p><h3>Действия</h3><ul><li>[[/item activity=MeSfRH9oFHIrwvTB]]{Трескучая волна} · [[/damage activity=MeSfRH9oFHIrwvTB]]{Бросок урона} · [[/save activity=MeSfRH9oFHIrwvTB]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "archhag-crackling-wave",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "MeSfRH9oFHIrwvTB": {
+            "_id": "MeSfRH9oFHIrwvTB",
+            "type": "save",
+            "name": "Трескучая волна",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "CDDqHyOBThXU4zqb",
+                "onSave": true
+              }
+            ],
+            "range": {
+              "value": "",
+              "units": "self",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "cone",
+                "size": "60",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 5,
+                  "denomination": 12,
+                  "bonus": "",
+                  "types": [
+                    "lightning"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": [
+                "dex"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "22"
+              },
+              "bonus": ""
+            },
+            "flags": {
+              "spikependium": {
+                "monsterAction": "archhag-wave"
+              }
+            }
+          }
+        },
+        "properties": [
+          "mgc"
+        ],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "CDDqHyOBThXU4zqb",
+          "name": "Проклятие Трескучей волны",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": [],
+            "magical": true
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": "sourceEnd",
+            "expired": false
+          },
+          "description": "Нельзя совершать реакции до конца следующего хода архикарги. Успешный спасбросок не предотвращает это проклятие.",
+          "origin": null,
+          "statuses": [
+            "cursed"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "monsterEffect": "archhag-wave",
+              "archhagCurse": true,
+              "noReactions": true
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!vrHP8WLJKZGImFFJ.aLCTVSTv7bkOW2Ui.CDDqHyOBThXU4zqb"
+        }
+      ],
+      "folder": null,
+      "sort": 700000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.aLCTVSTv7bkOW2Ui"
+    },
+    {
+      "_id": "Y0PeopZSztxVB8RX",
+      "name": "Заклинания",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Харизма, Сл 22; материальные компоненты и ячейки не требуются. Неограниченно: Дверь в пространстве, Завораживающий узор, Обнаружение мыслей, Рассеивание магии. По 2 применения в день: Манипуляция памятью, Массовое внушение, Планарный переход.</p><h3>Действия</h3><ul><li>[[/item activity=VQExRoxib7R1nOxX]]{Дверь в пространстве}</li><li>[[/item activity=tIfkNalkSC18w7wk]]{Завораживающий узор}</li><li>[[/item activity=rCdIaPgQ8ov1mnvE]]{Обнаружение мыслей}</li><li>[[/item activity=9KtwNe7ihkoo5NQQ]]{Рассеивание магии}</li><li>[[/item activity=IwXrI0Pt06K19h92]]{Манипуляция памятью}</li><li>[[/item activity=E16Eh4NjIrUspINV]]{Массовое внушение}</li><li>[[/item activity=TBALROHvszJfZQqG]]{Планарный переход}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "VQExRoxib7R1nOxX": {
+            "_id": "VQExRoxib7R1nOxX",
+            "type": "cast",
+            "name": "Дверь в пространстве",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDimensionD"
+            }
+          },
+          "tIfkNalkSC18w7wk": {
+            "_id": "tIfkNalkSC18w7wk",
+            "type": "cast",
+            "name": "Завораживающий узор",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 200000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplHypnoticPa"
+            }
+          },
+          "rCdIaPgQ8ov1mnvE": {
+            "_id": "rCdIaPgQ8ov1mnvE",
+            "type": "cast",
+            "name": "Обнаружение мыслей",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 300000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDetectThou"
+            }
+          },
+          "9KtwNe7ihkoo5NQQ": {
+            "_id": "9KtwNe7ihkoo5NQQ",
+            "type": "cast",
+            "name": "Рассеивание магии",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 400000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDispelMagi"
+            }
+          },
+          "IwXrI0Pt06K19h92": {
+            "_id": "IwXrI0Pt06K19h92",
+            "type": "cast",
+            "name": "Манипуляция памятью",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 500000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "activityUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [
+                {
+                  "period": "day",
+                  "type": "recoverAll"
+                }
+              ],
+              "max": "2"
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplModifyMemo"
+            }
+          },
+          "E16Eh4NjIrUspINV": {
+            "_id": "E16Eh4NjIrUspINV",
+            "type": "cast",
+            "name": "Массовое внушение",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 600000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "activityUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [
+                {
+                  "period": "day",
+                  "type": "recoverAll"
+                }
+              ],
+              "max": "2"
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMassSugges"
+            }
+          },
+          "TBALROHvszJfZQqG": {
+            "_id": "TBALROHvszJfZQqG",
+            "type": "cast",
+            "name": "Планарный переход",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 700000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "activityUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [
+                {
+                  "period": "day",
+                  "type": "recoverAll"
+                }
+              ],
+              "max": "2"
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPlaneShift"
+            }
+          }
+        },
+        "properties": [
+          "mgc"
+        ],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 800000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.Y0PeopZSztxVB8RX"
+    },
+    {
+      "_id": "fQFTBQFbiSh26VQz",
+      "name": "Удар ведьмы",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Каждое проклятое именно этой каргой существо в пределах 60 футов получает [[/r 4d6]]{4к6} молнией. Цели на сцене автоматически выбираются по источнику действующего проклятия и расстоянию; текущие цели пользователя сохраняются. Урон применяется штатной кнопкой. Для проклятий вне этого модуля источник и получателей проверяет Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=Rk40OocCmXRlSYvH]]{Удар ведьмы} · [[/damage activity=Rk40OocCmXRlSYvH]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "archhag-witch-strike",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "Rk40OocCmXRlSYvH": {
+            "_id": "Rk40OocCmXRlSYvH",
+            "type": "damage",
+            "name": "Удар ведьмы",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "bonus",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "60",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "damage": {
+              "critical": {
+                "allow": false,
+                "bonus": ""
+              },
+              "parts": [
+                {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "number": 4,
+                  "denomination": 6,
+                  "bonus": "",
+                  "types": [
+                    "lightning"
+                  ],
+                  "scaling": {
+                    "mode": "",
+                    "number": null,
+                    "formula": ""
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "properties": [
+          "mgc"
+        ],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 900000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.fQFTBQFbiSh26VQz"
+    },
+    {
+      "_id": "wWAE1XE7j7Q1IEg1",
+      "name": "Скороговорка",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Реакция: Контрзаклинание (Харизма, Сл 22), когда срабатывает условие заклинания. При провале спасброска цель также проклята до конца своего следующего хода: не может накладывать заклинания со словесным компонентом и говорит противоположное желаемому. После подтверждённого провала используйте отдельную кнопку проклятия: дополнительную реакцию она не расходует. Автоматическая привязка проклятия к исходному Контрзаклинанию ещё дорабатывается.</p><h3>Действия</h3><ul><li>[[/item activity=iYw0KbVZxXwOrrSq]]{Скороговорка: Контрзаклинание}</li><li>[[/item activity=sCNb7hSOL8Mr1yk1]]{Проклятие после провала Контрзаклинания}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "archhag-counterspell",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "iYw0KbVZxXwOrrSq": {
+            "_id": "iYw0KbVZxXwOrrSq",
+            "type": "cast",
+            "name": "Скороговорка: Контрзаклинание",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "reaction",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCounterspe"
+            }
+          },
+          "sCNb7hSOL8Mr1yk1": {
+            "_id": "sCNb7hSOL8Mr1yk1",
+            "type": "utility",
+            "name": "Проклятие после провала Контрзаклинания",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 200000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "ZATC65ucvSFUx0EK"
+              }
+            ],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        },
+        "properties": [
+          "mgc"
+        ],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "ZATC65ucvSFUx0EK",
+          "name": "Проклятие Скороговорки",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": [],
+            "magical": true
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": "targetEnd",
+            "expired": false
+          },
+          "description": "Нельзя накладывать заклинания со словесным компонентом; при разговоре существо говорит противоположное желаемому. До конца следующего хода цели.",
+          "origin": null,
+          "statuses": [
+            "cursed"
+          ],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "archhagCurse": true,
+              "noVerbalSpells": true
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!vrHP8WLJKZGImFFJ.wWAE1XE7j7Q1IEg1.ZATC65ucvSFUx0EK"
+        }
+      ],
+      "folder": null,
+      "sort": 1000000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.wWAE1XE7j7Q1IEg1"
+    },
+    {
+      "_id": "w5uixGUSea2EvpCi",
+      "name": "Взмах карги",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Легендарное действие: одна атака Призрачными когтями.</p><h3>Действия</h3><ul><li>[[/item activity=wcSvOu6HNrJnySh8]]{Взмах карги}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "wcSvOu6HNrJnySh8": {
+            "_id": "wcSvOu6HNrJnySh8",
+            "type": "utility",
+            "name": "Взмах карги",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "Сразу после хода другого существа",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "flags": {
+              "spikependium": {
+                "multiattack": {
+                  "weapon": "archhag-spectral-claws",
+                  "count": 1
+                }
+              }
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.w5uixGUSea2EvpCi"
+    },
+    {
+      "_id": "mEENxKijafJOvTIM",
+      "name": "Подлая магия",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Легендарное действие: Дверь в пространстве или Завораживающий узор. Оба варианта расходуют общее применение; оно восстанавливается в начале следующего хода карги. Вне боя восстановление отмечает Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=O0K6ch7kwQLnIKxL]]{Подлая магия: Дверь в пространстве}</li><li>[[/item activity=nJcW5WHzMWLOTDYL]]{Подлая магия: Завораживающий узор}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "archhag-foul-magic",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "1",
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "turnStart",
+              "type": "recoverAll"
+            }
+          ]
+        },
+        "activities": {
+          "O0K6ch7kwQLnIKxL": {
+            "_id": "O0K6ch7kwQLnIKxL",
+            "type": "cast",
+            "name": "Подлая магия: Дверь в пространстве",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "Сразу после хода другого существа",
+              "override": true
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDimensionD"
+            }
+          },
+          "nJcW5WHzMWLOTDYL": {
+            "_id": "nJcW5WHzMWLOTDYL",
+            "type": "cast",
+            "name": "Подлая магия: Завораживающий узор",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 200000,
+            "activation": {
+              "type": "legendary",
+              "value": 1,
+              "condition": "Сразу после хода другого существа",
+              "override": true
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "spell": {
+              "ability": "cha",
+              "challenge": {
+                "attack": "",
+                "save": "",
+                "override": false
+              },
+              "level": null,
+              "properties": [
+                "material"
+              ],
+              "spellbook": false,
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplHypnoticPa"
+            }
+          }
+        },
+        "properties": [
+          "mgc"
+        ],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.mEENxKijafJOvTIM"
+    },
+    {
+      "_id": "4taawZoZjQ2FaMJL",
+      "name": "Оговорка логова",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Существа, кроме карги и её союзников, в пределах 1 мили вычитают [[/r 1d10]]{1к10} из проверки характеристики при действии Влияние. Мастер проверяет границы логова, союзников и подходящее действие.</p><h3>Действия</h3><ul><li>[[/item activity=W2sjqbzDPOW3Gm7E]]{Штраф к действию Влияние}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "W2sjqbzDPOW3Gm7E": {
+            "_id": "W2sjqbzDPOW3Gm7E",
+            "type": "utility",
+            "name": "Штраф к действию Влияние",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "",
+              "units": "",
+              "special": "",
+              "override": false
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "1d10",
+              "name": "",
+              "prompt": false,
+              "visible": true
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.4taawZoZjQ2FaMJL"
+    },
+    {
+      "_id": "xAIZ8BMJCTq29ODW",
+      "name": "Назойливая магия логова",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>После долгого отдыха в 1 миле от логова первое последующее заклинание с ячейкой также накладывает @UUID[Compendium.dnd5e.spells24.Item.phbsplConfusion0]{Замешательство} с центром на существе, с его заклинательной характеристикой и без концентрации. Карга и союзники исключены. Отдых, первое применение, выбор исключений и прекращение региональных эффектов после смерти или переноса логова пока отслеживает Мастер.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "19",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!vrHP8WLJKZGImFFJ.xAIZ8BMJCTq29ODW"
+    }
+  ],
+  "effects": [],
+  "folder": "4BUbLDhdunZZb8Ff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:archhag",
+      "originalName": "Archhag"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!vrHP8WLJKZGImFFJ"
+}

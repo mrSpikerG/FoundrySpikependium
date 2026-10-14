@@ -1,0 +1,293 @@
+{
+  "_id": "Ps9Yl4crbGV62CCG",
+  "name": "Animate Shield",
+  "type": "spell",
+  "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+  "system": {
+    "description": {
+      "value": "<p>Оживите щит-компонент в свободном пространстве в пределах 30 футов на 1 минуту, без концентрации. Это Маленький конструкт: КД 12 + модификатор заклинательной характеристики, 20 хитов, иммунитет к яду, психическому урону и всем состояниям. Выбранные вами существа в пределах 5 футов от него получают +2 к КД, если сами не используют щит. Бонусным действием в последующие ходы можно переместить щит полётом до 30 футов. При 0 хитов заклинание заканчивается.</p><p><strong>Высокая ячейка.</strong> +10 хитов за каждый уровень выше 2-го.</p><p><strong>Foundry.</strong> Штатный призыв создаёт щит с масштабируемыми КД и хитами. Условия ауры, выбор защищённых существ, командное перемещение и прекращение при 0 хитов пока контролируются вручную.</p><h3>Действия</h3><ul><li>[[/item activity=ixX12EH0ZmuhWB7B]]{Оживить щит}</li><li>[[/item activity=n06NOFnI07NIqnI0]]{Команда: переместить щит (вручную)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "12",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-animate-shield",
+    "activation": {
+      "type": "bonus",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 2,
+    "materials": {
+      "value": "щит стоимостью не менее 1 зм",
+      "consumed": false,
+      "cost": 1,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "range": {
+      "value": "30",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "trs",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "",
+        "type": "",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": false
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "ixX12EH0ZmuhWB7B": {
+        "_id": "ixX12EH0ZmuhWB7B",
+        "type": "summon",
+        "name": "Оживить щит",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@mod",
+          "hd": "",
+          "hp": "10 * (@item.level - 2)",
+          "attackDamage": "",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [
+          "sm"
+        ],
+        "creatureTypes": [
+          "construct"
+        ],
+        "match": {
+          "ability": "",
+          "attacks": true,
+          "disposition": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "A9T59CGvF8xmlKIi",
+            "count": "1",
+            "name": "",
+            "uuid": "Compendium.spikependium.creatures.Actor.XEFLQdYjDAcNzzAE",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": ""
+        }
+      },
+      "n06NOFnI07NIqnI0": {
+        "_id": "n06NOFnI07NIqnI0",
+        "type": "utility",
+        "name": "Команда: переместить щит (вручную)",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "5eSSW5LXiArvfhE2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:magus-animate-shield",
+      "originalName": "Animate Shield"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Ps9Yl4crbGV62CCG"
+}

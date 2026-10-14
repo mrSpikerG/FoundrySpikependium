@@ -213,7 +213,7 @@ for (const [name, fn] of [["dnd5e.preUseActivity", canUseFindingModifier], ["dnd
   ["dnd5e.preActivityConsumption", captureFindingTarget], ["dnd5e.preBeginConcentrating", prepareFindingConcentration],
   ["preUpdateActiveEffect", guardFindingUpdate], ["updateActorDelta", refreshFindingTargets], ["updateWorldTime", refreshFindingTargets]]) assert(hooks.get(name).includes(fn));
 const registrations = new Map(); globalThis.libWrapper = { register(module, name, fn) { assert(!registrations.has(name)); registrations.set(name, fn); } };
-globalThis.CONFIG = { DND5E: { activityTypes: {}, sourceBooks: {}, featureTypes: { feat: { subtypes: {} }, class: { subtypes: {} } } } };
+globalThis.CONFIG = { DND5E: { activityConsumptionTypes: {}, activityTypes: {}, sourceBooks: {}, featureTypes: { feat: { subtypes: {} }, class: { subtypes: {} } } } };
 dnd5e.registry = { spellLists: { register() {} } }; init.at(-1)();
 {
   const s = setup(); paid(s); s.target.statuses.add("invisible");

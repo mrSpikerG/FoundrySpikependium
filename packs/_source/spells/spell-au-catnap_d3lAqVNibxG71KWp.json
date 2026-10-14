@@ -1,0 +1,314 @@
+{
+  "_id": "d3lAqVNibxG71KWp",
+  "name": "Дрёма",
+  "type": "spell",
+  "img": "icons/magic/time/hourglass-brown-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: бард, волшебник, изобретатель, чародей.</em></p><p>Вы показываете успокаивающий жест. Не более трёх согласных существ, которых вы видите в пределах дистанции, становятся &Reference[unconscious]{Бессознательными}, пока заклинание активно. Заклинание заканчивается на цели, если она получает урон или другое существо действием встряхивает её.</p><p>Если цель остаётся Бессознательной всю длительность заклинания, она получает преимущества короткого отдыха и не может снова стать целью этого заклинания до завершения долгого отдыха.</p><p><strong>Использование ячейки большего уровня.</strong> Вы можете выбрать одно дополнительное существо за каждый уровень ячейки выше третьего.</p><p><strong>Применение.</strong> После десяти минут непрерывного сна модуль предлагает штатный короткий отдых без дополнительного продвижения времени. Преждевременное прекращение эффекта отменяет это преимущество. Полученный отдых блокирует повторное применение до долгого отдыха. Для пробуждения действием используется кнопка встряхивания в карточке заклинания.</p><h3>Действия</h3><ul><li>[[/item activity=57FakEOYUJCHZPY8]]{Дрёма}</li><li>[[/item activity=TgBOr6VU70WpvWdF]]{Встряхнуть цель (действие)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "40",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "catnap",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "level": 3,
+    "materials": {
+      "value": "щепотка песка",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "somatic",
+      "material"
+    ],
+    "range": {
+      "value": "30",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "enc",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "@item.level",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "57FakEOYUJCHZPY8": {
+        "_id": "57FakEOYUJCHZPY8",
+        "type": "utility",
+        "name": "Дрёма",
+        "img": "icons/magic/time/hourglass-brown-orange.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "PowXXYthWgoiz3gS"
+          }
+        ],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "@item.level",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "TgBOr6VU70WpvWdF": {
+        "_id": "TgBOr6VU70WpvWdF",
+        "type": "utility",
+        "name": "Встряхнуть цель (действие)",
+        "img": "icons/magic/time/hourglass-brown-orange.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "arcanaShakeTemplate": true
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "PowXXYthWgoiz3gS",
+      "name": "Дрёма",
+      "img": "icons/magic/time/hourglass-brown-orange.webp",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "unconscious"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "catnap",
+          "endsOnDamage": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!d3lAqVNibxG71KWp.PowXXYthWgoiz3gS"
+    }
+  ],
+  "folder": "yt9MUC2qhvb6mmbr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-catnap"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!d3lAqVNibxG71KWp"
+}

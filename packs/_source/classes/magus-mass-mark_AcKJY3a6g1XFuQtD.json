@@ -1,0 +1,72 @@
+{
+  "_id": "AcKJY3a6g1XFuQtD",
+  "name": "Массовая метка",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>При использовании Мистической метки можно усилить согласных существ в пределах 30 футов, числом не больше уровня магуса. На 10 минут они получают один выбранный вариант: Массовая эгида — сопротивление виду урона метки; Массовое зачарование — возможность заменять урон оружия и безоружных ударов этим видом. Одно применение за короткий или продолжительный отдых. Это дополнение к созданию метки, а не отдельная метка или дополнительная трата ячейки. Выбор целей, привязка к метке и эффекты пока отслеживаются вручную.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "4",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-mass-mark",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": 10,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "sr",
+          "type": "recoverAll"
+        },
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "SeLB7GqlEKAjEW3H",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "magus:mass-mark"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!AcKJY3a6g1XFuQtD"
+}

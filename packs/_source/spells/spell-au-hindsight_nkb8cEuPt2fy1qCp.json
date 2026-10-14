@@ -1,0 +1,188 @@
+{
+  "_id": "nkb8cEuPt2fy1qCp",
+  "name": "Взгляд в прошлое",
+  "type": "spell",
+  "img": "icons/magic/time/hourglass-tilted-gray.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник.</em></p><p>Вы смотрите назад сквозь ткань времени. Вы видите события, произошедшие в пределах дистанции за последние 10 лет, со скоростью примерно один день в секунду. Пока заклинание активно, вы можете свободно замедлять, останавливать, перематывать назад или ускорять эти видения.</p><p><strong>Foundry.</strong> Укажите число комплектов песочных часов в поле запаса материалов. На накладывание расходуются одна ячейка и один комплект; концентрация длится до часа. События прошлого описывает Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=zdSjBGc9b8BKJVQc]]{Увидеть прошлое}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "37",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "hindsight",
+    "activation": {
+      "type": "minute",
+      "value": 10,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "level": 9,
+    "materials": {
+      "value": "крошечные песочные часы стоимостью не менее 500 зм, расходуемые заклинанием",
+      "consumed": true,
+      "cost": 500,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "range": {
+      "value": "500",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "div",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "",
+        "type": "",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": false
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "zdSjBGc9b8BKJVQc": {
+        "_id": "zdSjBGc9b8BKJVQc",
+        "type": "utility",
+        "name": "Увидеть прошлое",
+        "img": "icons/magic/time/hourglass-tilted-gray.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "minute",
+          "value": 10,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spikependiumMaterial",
+              "target": "",
+              "value": "1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "effects": [],
+        "range": {
+          "value": "500",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "hgwg2ooHTR3ujmye",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-hindsight"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!nkb8cEuPt2fy1qCp"
+}

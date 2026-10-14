@@ -1,0 +1,876 @@
+{
+  "_id": "7eQ8Ka8MqbKZf625",
+  "name": "Bugbear Warrior",
+  "type": "npc",
+  "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 15,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 14,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 13,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 8,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 11,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 9,
+        "proficient": 0,
+        "max": null,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "skills": {
+      "sur": {
+        "value": 1
+      },
+      "ste": {
+        "value": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 14,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 33,
+        "max": 33,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": "6d8+6"
+      },
+      "movement": {
+        "speeds": {
+          "walk": "30"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": 60,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<h2>Неуловимые гоблиноиды-силачи</h2><p>Среда обитания: Лес, Степь, Планы (Страна Фей), Подземье. Сокровища: Вооружение, Личные.</p><p>Багберы воплощают страх перед дикими землями и опасность, затаившуюся в тени леса. Они славятся незаметностью, и враги, осмелившиеся ступить на их землю, часто исчезают без следа.</p><p>Багберы-воители готовы служить тем, кто предложит им сокровища, пищу или шанс поохотиться на опасную добычу.</p>",
+        "public": ""
+      },
+      "alignment": "Хаотичная Злая",
+      "type": {
+        "value": "fey",
+        "subtype": "Гоблиноид",
+        "swarm": "",
+        "custom": ""
+      },
+      "cr": 1,
+      "habitat": {
+        "custom": "",
+        "value": [
+          {
+            "type": "forest"
+          },
+          {
+            "type": "grassland"
+          },
+          {
+            "type": "planar",
+            "subtype": "Страна Фей"
+          },
+          {
+            "type": "underdark"
+          }
+        ]
+      },
+      "treasure": {
+        "value": [
+          "armaments",
+          "individual"
+        ]
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "goblin"
+        ],
+        "custom": "",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "MM25",
+      "page": "21",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Багбер-воитель",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "texture": {
+      "src": "icons/creatures/abilities/mouth-teeth-long-red.webp"
+    },
+    "width": 1,
+    "height": 1
+  },
+  "items": [
+    {
+      "_id": "SBUQLdovyOCxEf2x",
+      "name": "Похищение",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Багбер не тратит дополнительные футы перемещения при движении со схваченным им существом. Перенос второго токена вместе с багбером пока выполняет Мастер; штраф за этот перенос не добавляйте.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "bugbear-abduction",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7eQ8Ka8MqbKZf625.SBUQLdovyOCxEf2x"
+    },
+    {
+      "_id": "J78l7ZCdsOfMLm95",
+      "name": "Захват",
+      "type": "weapon",
+      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "system": {
+        "description": {
+          "value": "<p>Атака по блоку Энциклопедии чудовищ (2025). Цена и вес обычного оружия — из штатных данных 2024 года; кости урона и досягаемость отражают возможности этого чудовища. Попадание: [[/damage 2d6+2 type=bludgeoning]]{2к6 + 2} дробящего урона. Существо не больше Среднего становится Схваченным; Сл высвобождения 12.</p><h3>Действия</h3><ul><li>[[/item activity=fswJbMCzJ9Fv4ent]]{Захват} · [[/damage activity=fswJbMCzJ9Fv4ent]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "bugbear-warrior-grab",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "fswJbMCzJ9Fv4ent": {
+            "_id": "fswJbMCzJ9Fv4ent",
+            "type": "attack",
+            "name": "Захват",
+            "img": "icons/skills/melee/unarmed-punch-fist.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "natural",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "identified": true,
+        "proficient": 1,
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "price": {
+          "value": 0,
+          "denomination": "gp"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "reach": 10,
+          "units": "ft"
+        },
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 2,
+            "denomination": 6,
+            "bonus": "",
+            "types": [
+              "bludgeoning"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "F5sVuIZyt9uqQ1Ks",
+          "name": "Схвачен багбером-воителем",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": []
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [
+            "grappled"
+          ],
+          "tint": "#ffffff",
+          "flags": {},
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!7eQ8Ka8MqbKZf625.J78l7ZCdsOfMLm95.F5sVuIZyt9uqQ1Ks"
+        }
+      ],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "spikependium": {
+          "monsterGrapple": {
+            "dc": 12,
+            "reach": 10,
+            "maxSize": "med"
+          }
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7eQ8Ka8MqbKZf625.J78l7ZCdsOfMLm95"
+    },
+    {
+      "_id": "tyIzty7AKA0HFI3u",
+      "name": "Лёгкий молот",
+      "type": "weapon",
+      "img": "icons/weapons/hammers/shorthammer-double-stone-engraved.webp",
+      "system": {
+        "description": {
+          "value": "<p>Атака по блоку Энциклопедии чудовищ (2025). Цена и вес обычного оружия — из штатных данных 2024 года; кости урона и досягаемость отражают возможности этого чудовища. Бросок атаки +4, с преимуществом, если цель схвачена именно этим багбером; попадание: [[/damage 3d4+2 type=bludgeoning]]{3к4 + 2} дробящего урона. При броске молота расходуется один предмет; расход можно отменить штатной карточкой.</p><h3>Действия</h3><ul><li>[[/item activity=zGFwbEmFNemUBfh5]]{Лёгкий молот} · [[/damage activity=zGFwbEmFNemUBfh5]]{Бросок урона}</li><li>[[/item activity=LEZ47gMLdTxZoGzF]]{Лёгкий молот — дистанционно} · [[/damage activity=LEZ47gMLdTxZoGzF]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "bugbear-warrior-hammer",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "zGFwbEmFNemUBfh5": {
+            "_id": "zGFwbEmFNemUBfh5",
+            "type": "attack",
+            "name": "Лёгкий молот",
+            "img": "icons/weapons/hammers/shorthammer-double-stone-engraved.webp",
+            "sort": 100000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "10",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          },
+          "LEZ47gMLdTxZoGzF": {
+            "_id": "LEZ47gMLdTxZoGzF",
+            "type": "attack",
+            "name": "Лёгкий молот — дистанционно",
+            "img": "icons/weapons/hammers/shorthammer-double-stone-engraved.webp",
+            "sort": 200000,
+            "activation": {
+              "type": "action",
+              "value": 1,
+              "condition": "",
+              "override": true
+            },
+            "consumption": {
+              "targets": [
+                {
+                  "type": "material",
+                  "target": "tyIzty7AKA0HFI3u",
+                  "value": "1",
+                  "scaling": {}
+                }
+              ],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [],
+            "range": {
+              "value": "20",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "1",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "critical": {
+                "threshold": null
+              },
+              "flat": false,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "critical": {
+                "bonus": ""
+              },
+              "includeBase": true,
+              "parts": []
+            }
+          }
+        },
+        "properties": [
+          "lgt",
+          "thr"
+        ],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "simpleM",
+          "baseItem": "lighthammer"
+        },
+        "armor": {
+          "value": null
+        },
+        "price": {
+          "value": 2,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 2,
+          "units": "lb"
+        },
+        "range": {
+          "value": 20,
+          "long": 60,
+          "reach": 10,
+          "units": "ft"
+        },
+        "ammunition": {},
+        "equipped": true,
+        "identified": true,
+        "proficient": 1,
+        "quantity": 3,
+        "damage": {
+          "base": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "number": 3,
+            "denomination": 4,
+            "bonus": "",
+            "types": [
+              "bludgeoning"
+            ],
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          }
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "spikependium": {
+          "ownGrappleAdvantage": true
+        }
+      },
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7eQ8Ka8MqbKZf625.tyIzty7AKA0HFI3u"
+    },
+    {
+      "_id": "Y29k5ZBqMOK5d9fo",
+      "name": "Сыромятный доспех",
+      "type": "equipment",
+      "img": "icons/equipment/chest/vest-cloth-tattered-tan.webp",
+      "system": {
+        "description": {
+          "value": "<p>Штатный доспех 2024 года: цена и вес по базовому предмету. КБ чудовища задан в соответствии с его блоком.</p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MM25",
+          "page": "21",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "hide",
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {},
+        "properties": [],
+        "advancement": [],
+        "enchant": {},
+        "type": {
+          "value": "medium",
+          "baseItem": "hide"
+        },
+        "armor": {
+          "value": 12,
+          "magicalBonus": null,
+          "dex": 2
+        },
+        "price": {
+          "value": 10,
+          "denomination": "gp"
+        },
+        "weight": {
+          "value": 12,
+          "units": "lb"
+        },
+        "quantity": 1,
+        "equipped": true,
+        "identified": true
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 400000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!7eQ8Ka8MqbKZf625.Y29k5ZBqMOK5d9fo"
+    }
+  ],
+  "effects": [],
+  "folder": "4BUbLDhdunZZb8Ff",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:mm25:bugbear-warrior",
+      "originalName": "Bugbear Warrior"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!7eQ8Ka8MqbKZf625"
+}

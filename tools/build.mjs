@@ -13,9 +13,9 @@ import { DRAGONMARK_TABLES } from "../src/content/feats.mjs";
 import { BLUEPRINTS } from "../src/content/artificer.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const CONTENT = ["spells", "spells-psion-update", "creatures", "creatures-2", "artificer", "psion", "subclasses-artificer",
+const CONTENT = ["spells", "spells-psion-update", "arcana-unleashed-spells", "arcana-unleashed-spells-2", "arcana-unleashed-spells-3", "arcana-unleashed-summons", "creatures", "creatures-2", "monsters-mm25", "monsters-performers-mm25", "monsters-arcanaloth-mm25", "monsters-archhag-mm25", "monsters-assassins-bugbears-mm25", "monsters-bandits-mm25", "artificer", "psion", "subclasses-artificer",
   "subclasses-psion", "subclasses-fr", "subclasses-horror", "subclasses-arcane", "subclasses-villain", "subclasses-mystic",
-  "feats", "feats-villain", "arcana-unleashed-feats", "items", "journals"];
+  "feats", "feats-villain", "arcana-unleashed-feats", "items", "griffons-saddlebag", "alchemist", "magus-spells", "magus", "journals"];
 
 /* -------------------------------------------- */
 /*  1. Определение содержимого                  */
@@ -126,4 +126,5 @@ const icons = getMissingIcons();
 if ( icons.length ) console.warn(`! Иконки не найдены в списке Foundry/dnd5e (${icons.length}):\n  ${icons.join("\n  ")}`);
 const refs = getMissingRefs();
 if ( refs.length ) console.log(`Ссылки без цели в SRD (${refs.length}) — показаны курсивом:\n  ${refs.sort().join("\n  ")}`);
+await import("./content-status.mjs");
 console.log("Готово.");

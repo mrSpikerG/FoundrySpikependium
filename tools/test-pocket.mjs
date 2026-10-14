@@ -322,7 +322,7 @@ console.error = log;
 console.log("Аура реликта: нативные эффекты и эманация, дистанция/высота/уровень, длительность и переключение, спасение/ActorDelta, обязательный уход, запрет до отдыха, частичные ошибки и старые эффекты: OK.");
 const init = [], registrations = new Map();
 globalThis.Hooks = { on() {}, once(event, callback) { if (event === "init") init.push(callback); } };
-globalThis.CONFIG = { DND5E: { activityTypes: Object.fromEntries(["utility", "save", "heal", "attack", "cast", "summon", "teleport"].map(type => [type, {}])),
+globalThis.CONFIG = { DND5E: { activityConsumptionTypes: {}, activityTypes: Object.fromEntries(["utility", "save", "heal", "attack", "cast", "summon", "teleport"].map(type => [type, {}])),
   sourceBooks: {}, featureTypes: { feat: { subtypes: {} }, class: { subtypes: {} } } } };
 globalThis.libWrapper = { register(module, target, callback) {
   assert.equal(registrations.has(target), false, `дублирующая регистрация libWrapper: ${target}`);

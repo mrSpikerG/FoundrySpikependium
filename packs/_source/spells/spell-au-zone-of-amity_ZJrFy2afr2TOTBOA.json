@@ -1,0 +1,229 @@
+{
+  "_id": "ZJrFy2afr2TOTBOA",
+  "name": "Область дружелюбия",
+  "type": "spell",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: бард, колдун.</em></p><p>Пока заклинание активно, от вас исходит магическая область дружелюбия 60-футовой эманацией. Когда вы совершаете проверку характеристики, чтобы повлиять на существо в этой области, при результате к20 9 и ниже вы можете считать, что выпало 10.</p><p><strong>Применение.</strong> Накладывание автоматически создаёт личный магический эффект на 10 минут без концентрации. Перед проверкой отметьте токен существа, на которое влияете. В обычном окне проверки выберите это существо и подтвердите, что проверка направлена на влияние на него. Модуль проверяет активность именно вашего накладывания и расстояние 60 футов с учётом высоты и единиц карты. Штатный минимум к20 становится равным 10; остальные бонусы, преимущество, помеха и более высокий минимум сохраняются. Эффект не даёт минимум 10 для всех проверок и не распространяется на атаки или спасброски. Влияние в данной ситуации разрешает Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=of0JAV8rDIxclDaD]]{Создать область дружелюбия}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "44",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "zone-of-amity",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "level": 4,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "enc",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "emanation",
+        "size": "60",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "of0JAV8rDIxclDaD": {
+        "_id": "of0JAV8rDIxclDaD",
+        "type": "transform",
+        "name": "Создать область дружелюбия",
+        "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "XwfYOcv9KyyBbCLK"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "emanation",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "XwfYOcv9KyyBbCLK",
+      "name": "Область дружелюбия",
+      "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "zone-of-amity"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ZJrFy2afr2TOTBOA.XwfYOcv9KyyBbCLK"
+    }
+  ],
+  "folder": "DajrrvlBtzQLhOs9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-zone-of-amity"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ZJrFy2afr2TOTBOA"
+}

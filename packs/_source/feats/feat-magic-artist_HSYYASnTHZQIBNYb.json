@@ -1,0 +1,192 @@
+{
+  "_id": "HSYYASnTHZQIBNYb",
+  "name": "Магический художник",
+  "type": "feat",
+  "img": "icons/sundries/gaming/playing-cards.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Заговор.</strong> Вы изучаете заговор @UUID[Compendium.dnd5e.spells24.Item.phbsplMinorIllus]{Малая иллюзия}. Интеллект, Мудрость или Харизма является вашей заклинательной характеристикой для него (выберите при выборе черты).</p><p><strong>Вдохновляющая магия.</strong> Когда вы накладываете заклинание школы Иллюзии, вы можете выбрать одного союзника в пределах 30 футов, который видит вас. Этот союзник получает Героическое вдохновение. После использования вы должны завершить долгий отдых, чтобы воспользоваться этой пользой снова.</p><p><strong>Применение.</strong> Сразу после накладывания иллюзии отметьте одного союзника и используйте Вдохновляющую магию. Выберите исходную карточку накладывания и подтвердите, что союзник видит вас. Модуль проверяет школу, владельца исходного накладывания, свежесть карточки и расстояние с учётом высоты и единиц карты; применение расходуется штатно. Активный Мастер либо владелец обоих персонажей ставит отметку Героического вдохновения на листе союзника. Вдохновение не накапливается. Отмена расхода восстанавливает применение; уже переданное или потраченное союзником вдохновение при этом проверьте вручную.</p><h3>Действия</h3><ul><li>[[/item activity=3ZCeb51az5jI7qG6]]{Вдохновляющая магия}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "28",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magic-artist",
+    "type": {
+      "value": "feat",
+      "subtype": "origin"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "3ZCeb51az5jI7qG6": {
+        "_id": "3ZCeb51az5jI7qG6",
+        "type": "utility",
+        "name": "Вдохновляющая магия",
+        "img": "icons/sundries/gaming/playing-cards.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Вы накладываете заклинание школы Иллюзии; союзник в пределах 30 футов видит вас",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "ally",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "artistInspiration": true
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "1OImXsHMBOMNfZ1f",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMinorIllus",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заговор: Малая иллюзия",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "9PyqwBpBkWMzeKXz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:magic-artist"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!HSYYASnTHZQIBNYb"
+}

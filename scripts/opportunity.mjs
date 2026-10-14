@@ -1,4 +1,5 @@
 import { attackHitTargets } from "./companions.mjs";
+import { opportunityTargetProtected } from "./cunning-disengage.mjs";
 
 const STRIKE_IDS = new Set(["8FKHvTEMzK92yKo4", "8I7DzW0U2d8CuWql"]);
 const PROFILE_ID = "WhVStqtfvQiffom6";
@@ -82,11 +83,11 @@ export async function applyStrikeHits(message) {
   }
 }
 
-export function prepareOpportunityRoll(config, dialog) {
+export function prepareOpportunityRoll(config, dialog, message) {
   const actor = config.subject?.actor;
-  if (!noOpportunityAttacks(actor)) return;
+  if (!noOpportunityAttacks(actor) && !opportunityTargetProtected(config, message)) return;
   if (config.spikependium?.attackPurpose === "opportunity") {
-    ui.notifications.warn("Ужасающий удар запрещает провоцированные атаки до начала следующего хода.");
+    ui.notifications.warn("Провоцированная атака сейчас запрещена: действует Ужасающий удар или цель совершила Отступление.");
     return false;
   }
   config.spikependium = { ...config.spikependium, attackPurpose: "normal" };
@@ -96,7 +97,7 @@ export function prepareOpportunityRoll(config, dialog) {
     async _prepareConfigurationContext(context, options) {
       context = await super._prepareConfigurationContext(context, options);
       context.fields.push({ name: "spikependium.attackPurpose", value: this.config.spikependium.attackPurpose,
-        field: new foundry.data.fields.StringField({ label: "Тип атаки: действует Ужасающий удар", required: true, blank: false,
+        field: new foundry.data.fields.StringField({ label: "Тип атаки: ограничение провоцированных атак", required: true, blank: false,
           hint: "Провоцированные атаки сейчас запрещены. Обычные атаки и другие реакции остаются доступными.",
           choices: { normal: "Обычная атака", opportunity: "Провоцированная атака (запрещена)" } }) });
       return context;
@@ -111,9 +112,9 @@ export function prepareOpportunityRoll(config, dialog) {
 }
 
 export function validateOpportunityRoll(rolls, config) {
-  if (!rolls.length || !noOpportunityAttacks(config.subject?.actor)) return;
+  if (!rolls.length || (!noOpportunityAttacks(config.subject?.actor) && !opportunityTargetProtected(config))) return;
   if (config.spikependium?.attackPurpose === "opportunity" || rolls.some(r => r.options.spikependiumOpportunityAttack)) {
-    ui.notifications.warn("Провоцированная атака отменена: действует Ужасающий удар.");
+    ui.notifications.warn("Провоцированная атака отменена: действует Ужасающий удар или цель совершила Отступление.");
     return false;
   }
 }

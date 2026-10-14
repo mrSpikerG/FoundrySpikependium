@@ -1,0 +1,68 @@
+{
+  "_id": "aTbmAXZqG38u4Za4",
+  "name": "Реагенты",
+  "type": "feat",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Число костей реагентов к10 равно уровню алхимика, начиная с третьего; долгий отдых восстанавливает их. При зарядке бомбы можно потратить не больше бонуса владения костей и добавить их результат к урону. За 10 минут можно потратить кости на зелье по таблице источника; зелье действует 24 часа. Один раз до следующего долгого отдыха после короткого можно вернуть кости, потраченные не на зелья. Автоматическое различение расходов, создание зелий и объединение костей с исходным уроном ещё не настроены.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-reagents",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "@classes.alchemist.levels",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "l0yvsXLqwjOovkA3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:reagents"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!aTbmAXZqG38u4Za4"
+}

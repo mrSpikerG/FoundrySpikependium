@@ -1,14 +1,15 @@
 {
   "name": "spikependium",
   "private": true,
-  "version": "1.40.0",
+  "version": "1.85.0",
   "type": "module",
   "description": "Сборка модуля Spikependium для Foundry VTT",
   "scripts": {
     "build": "node tools/build.mjs",
     "validate": "node tools/validate.mjs",
-    "test": "node tools/test.mjs && node tools/test-push.mjs && node tools/test-vestige.mjs && node tools/test-pocket.mjs && node tools/test-vestige-forms.mjs && node tools/test-vestige-powers.mjs && node tools/test-vestige-swap.mjs && node tools/test-dragonmark-rolls.mjs && node tools/test-dragonmark-detection.mjs && node tools/test-dragonmark-storm.mjs && node tools/test-dragonmark-finding.mjs && node tools/test-dragonmark-hospitality.mjs && node tools/test-dragonmark-warding.mjs && node tools/test-dragonmark-shadow.mjs && node tools/test-dragonmark-passage.mjs && node tools/test-dragonmark-making.mjs && node tools/test-dragonmark-movement.mjs && node tools/test-reactions.mjs && node tools/test-dragonmark-handling.mjs && node tools/test-dragonmark-guardian.mjs && node tools/test-hollow-warden.mjs && node tools/test-hollow-ravenous.mjs && node tools/test-arcana-origin.mjs",
-    "package": "node tools/build.mjs && node tools/validate.mjs && npm run test && node tools/package.mjs"
+    "test": "node tools/test.mjs && node tools/test-push.mjs && node tools/test-vestige.mjs && node tools/test-pocket.mjs && node tools/test-vestige-forms.mjs && node tools/test-vestige-powers.mjs && node tools/test-vestige-swap.mjs && node tools/test-dragonmark-rolls.mjs && node tools/test-dragonmark-detection.mjs && node tools/test-dragonmark-storm.mjs && node tools/test-dragonmark-finding.mjs && node tools/test-dragonmark-hospitality.mjs && node tools/test-dragonmark-warding.mjs && node tools/test-dragonmark-shadow.mjs && node tools/test-dragonmark-passage.mjs && node tools/test-dragonmark-making.mjs && node tools/test-dragonmark-movement.mjs && node tools/test-reactions.mjs && node tools/test-dragonmark-handling.mjs && node tools/test-dragonmark-guardian.mjs && node tools/test-hollow-warden.mjs && node tools/test-hollow-ravenous.mjs && node tools/test-arcana-origin.mjs && node tools/test-monsters.mjs && node tools/test-hollow-aura.mjs && node tools/test-hollow-relentless.mjs && node tools/test-arcana-spells.mjs && node tools/test-arcana-summons.mjs && node tools/test-soul-tome.mjs && node tools/test-performer-dodge.mjs && node tools/test-origin-save-boost.mjs && node tools/test-arcana-stages.mjs && node tools/test-arcana-artist.mjs && node tools/test-assassins-bugbears.mjs && node tools/test-arcana-bloom.mjs && node tools/test-arcana-warrior.mjs && node tools/test-griffon-items.mjs && node tools/test-magus.mjs",
+    "package": "node tools/build.mjs && node tools/validate.mjs && npm run test && node tools/package.mjs",
+    "status": "node tools/content-status.mjs"
   },
   "devDependencies": {
     "@foundryvtt/foundryvtt-cli": "^3.0.0",

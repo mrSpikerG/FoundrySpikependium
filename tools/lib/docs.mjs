@@ -1,6 +1,6 @@
 // Реестр документов и конструкторы предметов, актёров и журналов.
 import {
-  MODULE_ID, makeId, stats, icon, source, srdSpellUuid, srdItemUuid, noteMissingRef, cond,
+  MODULE_ID, BOOKS, makeId, stats, icon, source, srdSpellUuid, srdItemUuid, noteMissingRef, cond,
   activities, advItemGrant, advHP, advTrait, advASI, advSubclass, spellConfig, effect
 } from "./core.mjs";
 import { SPELL_NAMES, ITEM_NAMES } from "../../src/names.mjs";
@@ -16,10 +16,11 @@ export const PACKS = {
   spells: { label: "Заклинания", type: "Item" },
   items: { label: "Магические предметы", type: "Item" },
   creatures: { label: "Существа и спутники", type: "Actor" },
-  rules: { label: "Правила и списки", type: "JournalEntry" }
+  rules: { label: "Правила и списки", type: "JournalEntry" },
+  tables: { label: "Случайные таблицы", type: "RollTable" }
 };
 
-const DOC_PREFIX = { Item: "items", Actor: "actors", JournalEntry: "journal" };
+const DOC_PREFIX = { Item: "items", Actor: "actors", JournalEntry: "journal", RollTable: "tables" };
 
 /** key → { pack, doc } */
 export const REGISTRY = new Map();
@@ -158,7 +159,8 @@ function fillActivityIcons(system, img) {
 }
 
 function itemBase(pack, key, o, type, system) {
-  if (pack === "items") system.description.value += `<p><em>Цена: ориентир по редкости из правил 2024 года${type === "weapon" || o.baseItem ? " плюс стоимость базового предмета" : ""}; в UA цена не указана. ${type === "weapon" ? "Это шаблон зачарования: вес и урон берутся от выбранного оружия." : o.weightNote ?? (o.weight == null ? "Вес в UA не указан; значение 0 — техническое, задайте его по решению Мастера." : "Вес взят у базового предмета.")}</em></p>`;
+  if (pack === "items") system.description.value += `<p><em>${o.priceNote ?? `Цена: ориентир по редкости из правил 2024 года${type === "weapon" || o.baseItem ? " плюс стоимость базового предмета" : ""}; в UA цена не указана.`} ${type === "weapon" ? "Это шаблон зачарования: вес и урон берутся от выбранного оружия." : o.weightNote ?? (o.weight == null ? "Вес в источнике не указан; значение 0 — техническое, задайте его по решению Мастера." : "Вес взят у базового предмета.")}</em></p>`;
+  if (o.sourceUrl) { system.source.custom = o.sourceUrl; system.description.value += `<p>Источник: <a href="${o.sourceUrl}">${BOOKS[o.book] ?? o.book}</a>.</p>`; }
   const _id = makeId(`item:${key}`);
   fillActivityIcons(system, icon(o.img));
   const effects = (o.effects ?? []).map(e => ({ ...e, _key: `!items.effects!${_id}.${e._id}` }));
@@ -376,7 +378,7 @@ export function equipment(o) {
     type: { value: o.equipType ?? "trinket", baseItem: o.baseItem ?? "" },
     properties: o.properties ?? ["mgc"],
     strength: null,
-    proficient: null,
+    proficient: o.proficient ?? null,
     uses: o.uses ?? { max: "", spent: 0, recovery: [] },
     activities: activities(o.acts)
   };
@@ -388,6 +390,16 @@ export function equipment(o) {
     Object.assign(system, { ability: "", bonus: "", chatFlavor: "" });
   }
   return itemBase("items", o.key, o, o.equipType === "tool" ? "tool" : "equipment", system);
+}
+
+/** Немагический компонент с ценой и весом, без свойств носимого снаряжения. */
+export function loot(o) {
+  return itemBase("items", o.key, o, "loot", {
+    description: description(o), source: source(o.book, o.page), identifier: o.identifier ?? "",
+    quantity: 1, weight: { value: o.weight, units: "lb" }, price: { value: o.price, denomination: "gp" },
+    type: { value: "gem", subtype: "" }, container: null, rarity: "", identified: true, properties: [],
+    unidentified: { description: "" }
+  });
 }
 
 /**
@@ -461,7 +473,7 @@ export function enchantEffect(key, name, changes, img) {
 /* -------------------------------------------- */
 
 /**
- * NPC-актёр (призыв/спутник).
+ * NPC-актёр (чудовище, призыв или спутник).
  * o: { key, name, en, img, size, type, alignment, ac, acCalc, hp, hpFormula, movement, abilities, saves, senses,
  *      languages, di, dr, ci, items: [feature-like objects], bio, cr }
  */
@@ -479,26 +491,28 @@ export function npc(o) {
     return {
       _id: iid,
       name: it.name,
-      type: "feat",
+      type: it.type ?? "feat",
       img: itemImg,
       system: {
         description: { value: it.html ?? md(it.desc), chat: "" },
         source: source(o.book, o.page),
         identifier: "",
-        type: { value: "monster", subtype: "" },
-        requirements: "",
-        prerequisites: { level: null, repeatable: false, items: [] },
+        ...((it.type ?? "feat") === "feat" ? {
+          type: { value: "monster", subtype: "" }, requirements: "",
+          prerequisites: { level: null, repeatable: false, items: [] }
+        } : {}),
         uses: it.uses ?? { max: "", spent: 0, recovery: [] },
         activities: acts,
         properties: [],
         advancement: [],
-        enchant: {}
+        enchant: {},
+        ...it.system
       },
       effects: (it.effects ?? []).map(e => ({ ...e, _key: `!actors.items.effects!${_id}.${iid}.${e._id}` })),
       folder: null,
       sort: (i + 1) * 100000,
       ownership: { default: 0 },
-      flags: {},
+      flags: it.flags ?? {},
       _stats: stats(),
       _key: `!actors.items!${_id}.${iid}`
     };
@@ -510,40 +524,43 @@ export function npc(o) {
     img: icon(o.img),
     system: {
       abilities: abil,
+      ...(o.skills ? { skills: Object.fromEntries(Object.entries(o.skills).map(([key, value]) => [key, { value }])) } : {}),
+      ...(o.resources ? { resources: o.resources } : {}),
       attributes: {
+        ...(o.initiativeBonus ? { init: { roll: { bonus: o.initiativeBonus } } } : {}),
         // dnd5e 6: естественный доспех — calcs ["natural"] + flat; произвольная формула — formulas.
         ac: o.acFormula
           ? { calcs: [], flat: o.ac ?? 10, override: null, formulas: [{ formula: o.acFormula, label: o.acLabel ?? "Естественный доспех", armored: null, shielded: null }] }
           : { calcs: ["natural"], flat: o.ac ?? 10, override: null, formulas: [] },
         hp: { value: o.hp ?? 1, max: o.hp ?? 1, temp: 0, tempmax: 0, formula: o.hpFormula ?? "" },
         movement: {
-          speeds: Object.fromEntries(Object.entries({ walk: o.movement?.walk ?? 30, fly: o.movement?.fly, swim: o.movement?.swim, climb: o.movement?.climb })
+          speeds: Object.fromEntries(Object.entries({ walk: o.movement?.walk ?? 30, fly: o.movement?.fly, swim: o.movement?.swim, climb: o.movement?.climb, burrow: o.movement?.burrow })
             .filter(([, v]) => v != null).map(([k, v]) => [k, String(v)])),
           units: "ft", hover: !!o.movement?.hover, bonus: "", special: "", ignoredDifficultTerrain: []
         },
-        senses: { ranges: { darkvision: o.senses?.darkvision ?? null, blindsight: o.senses?.blindsight ?? null, tremorsense: null, truesight: null }, units: "ft", special: o.senses?.special ?? "" },
+        senses: { ranges: { darkvision: o.senses?.darkvision ?? null, blindsight: o.senses?.blindsight ?? null, tremorsense: o.senses?.tremorsense ?? null, truesight: o.senses?.truesight ?? null }, units: "ft", special: o.senses?.special ?? "" },
         spellcasting: o.spellcasting ?? ""
       },
       details: {
         biography: { value: o.bio ?? "", public: "" },
         alignment: o.alignment ?? "Нейтральный",
-        type: { value: o.creatureType ?? "construct", subtype: "", swarm: "", custom: "" },
-        cr: o.cr ?? 0,
-        habitat: { custom: "", value: [] },
-        treasure: { value: [] }
+        type: { value: o.creatureType ?? "construct", subtype: o.creatureSubtype ?? "", swarm: "", custom: "" },
+        cr: Object.hasOwn(o, "cr") ? o.cr : 0,
+        habitat: { custom: o.habitatCustom ?? "", value: o.habitat ?? [] },
+        treasure: { value: o.treasure ?? [] }
       },
       traits: {
         size: o.size ?? "med",
         di: { value: o.di ?? [], bypasses: [], custom: "" },
         dr: { value: o.dr ?? [], bypasses: [], custom: "" },
-        dv: { value: [], bypasses: [], custom: "" },
+        dv: { value: o.dv ?? [], bypasses: [], custom: "" },
         ci: { value: o.ci ?? [], custom: "" },
         languages: { value: o.languages ?? [], custom: o.languagesCustom ?? "", communication: o.telepathy ? { telepathy: { value: o.telepathy, units: "ft" } } : {} }
       },
       source: source(o.book, o.page)
     },
     prototypeToken: {
-      name: o.name, displayName: 20, actorLink: false, disposition: 1,
+      name: o.name, displayName: 20, actorLink: false, disposition: o.disposition ?? 1,
       texture: { src: icon(o.img) }, width: o.tokenSize ?? 1, height: o.tokenSize ?? 1
     },
     items,
@@ -606,6 +623,21 @@ export function journal(o) {
 export function journalPageUuid(key, index) {
   const entry = REGISTRY.get(key);
   return `${uuidOf(key)}.JournalEntryPage.${entry.doc.pages[index]._id}`;
+}
+
+export function rollTable(o) {
+  const _id = makeId(`table:${o.key}`);
+  return register("tables", o.key, {
+    _id, name: o.name, img: icon(o.img ?? "icons/svg/d20-black.svg"), description: o.description,
+    formula: `1d${o.rows.length}`, replacement: true, displayRoll: true, folder: o.folder,
+    results: o.rows.map((description, index) => {
+      const result = makeId(`table-result:${o.key}:${index}`);
+      return { _id: result, type: "text", name: "", description, img: "icons/svg/d20-black.svg", documentUuid: null,
+        weight: 1, range: [index + 1, index + 1], drawn: false, flags: {}, _stats: stats(), _key: `!tables.results!${_id}.${result}` };
+    }),
+    sort: 0, ownership: { default: 0 }, flags: { [MODULE_ID]: { key: o.key, source: source(o.book, o.page) } },
+    _stats: stats(), _key: `!tables!${_id}`
+  });
 }
 
 /* -------------------------------------------- */

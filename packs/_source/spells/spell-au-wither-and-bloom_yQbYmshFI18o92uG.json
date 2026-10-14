@@ -1,0 +1,301 @@
+{
+  "_id": "yQbYmshFI18o92uG",
+  "name": "Увядание и цветение",
+  "type": "spell",
+  "img": "icons/magic/nature/leaf-juggle-humanoid-green.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, друид, чародей.</em></p><p>Вы пробуждаете смерть и жизнь в сфере радиусом 10 футов с центром в точке в пределах дистанции. Все существа по вашему выбору в области совершают спасбросок Телосложения, получая [[/damage 3d6 type=necrotic]]{3к6} урона некротической энергией при провале или половину при успехе. Немагические растения в области, не являющиеся существами, увядают.</p><p>Кроме того, одно существо по вашему выбору в этой области может бросить одну из своих непотраченных костей хитов и восстановить количество хитов, равное результату броска плюс модификатор вашей заклинательной характеристики. После этого кость тратится.</p><p><strong>Использование ячейки большего уровня.</strong> Урон увеличивается на [[/r 1d6]]{1к6} за каждый уровень ячейки выше второго. Допустимое количество костей хитов увеличивается на единицу за каждый уровень ячейки выше второго. Модификатор заклинательной характеристики добавляется к восстановлению только один раз, независимо от количества костей.</p><p><strong>Применение.</strong> В окне накладывания выберите получателя лечения, затем разместите сферу и отметьте выбранные цели урона. В исходной карточке нажмите «Лечение: кости получателя». Получатель или Мастер выбирает, какие собственные кости потратить, вплоть до количества, разрешённого уровнем исходной ячейки. Кости разных классов можно смешивать. Лечение прибавляет сохранённый модификатор заклинателя один раз и автоматически применяется штатным способом, без повторной ячейки. Получатель должен находиться в исходной сфере в момент расхода костей. При закрытии броска после расхода используйте уже оплаченную карточку лечения. Отмена расхода возвращает кости, но уже восстановленные хиты не откатывает. Увядание растений, высоту сферы и препятствия проверяет Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=UrEKr2ZmuKAP2eHp]]{Увядание и цветение} · [[/damage activity=UrEKr2ZmuKAP2eHp]]{Бросок урона} · [[/save activity=UrEKr2ZmuKAP2eHp]]{Спасбросок цели}</li><li>[[/item activity=krwtwWLliKS5zTi8]]{Цветение: кости получателя} · [[/heal activity=krwtwWLliKS5zTi8]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "45",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "wither-and-bloom",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 2,
+    "materials": {
+      "value": "увядшая лоза, скрученная в петлю",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "range": {
+      "value": "60",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "nec",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "sphere",
+        "size": "10",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "",
+        "type": "creature",
+        "choice": true,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "UrEKr2ZmuKAP2eHp": {
+        "_id": "UrEKr2ZmuKAP2eHp",
+        "type": "save",
+        "name": "Увядание и цветение",
+        "img": "icons/magic/nature/leaf-juggle-humanoid-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "sphere",
+            "size": "10",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": true,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      },
+      "krwtwWLliKS5zTi8": {
+        "_id": "krwtwWLliKS5zTi8",
+        "type": "heal",
+        "name": "Цветение: кости получателя",
+        "img": "icons/magic/nature/leaf-juggle-humanoid-green.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "0"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "flags": {
+          "spikependium": {
+            "bloomTemplate": true
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "jzQHzwlAgBVmwkex",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-wither-and-bloom"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!yQbYmshFI18o92uG"
+}

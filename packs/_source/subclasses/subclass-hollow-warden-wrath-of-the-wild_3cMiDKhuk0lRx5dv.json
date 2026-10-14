@@ -149,7 +149,12 @@
           "override": false,
           "concentration": false
         },
-        "effects": [],
+        "effects": [
+          {
+            "_id": "ygdm59nfJAR0AyUf",
+            "onSave": false
+          }
+        ],
         "range": {
           "value": "",
           "units": "",
@@ -257,6 +262,48 @@
         "lastModifiedBy": null
       },
       "_key": "!items.effects!3cMiDKhuk0lRx5dv.fZo74BkhgvtJcAsO"
+    },
+    {
+      "_id": "ygdm59nfJAR0AyUf",
+      "name": "Тревожная аура: действие или бонусное действие",
+      "img": "icons/magic/nature/tree-spirit-black.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "turns",
+        "expiry": "turnEnd",
+        "expired": false
+      },
+      "description": "<p>До конца этого хода можно совершить действие или бонусное действие, но не оба. Реакция сохраняется.</p>",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "hollowAuraRestriction": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!3cMiDKhuk0lRx5dv.ygdm59nfJAR0AyUf"
     }
   ],
   "folder": "C9IkGWo36LYESs0h",
