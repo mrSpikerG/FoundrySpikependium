@@ -1,0 +1,174 @@
+{
+  "_id": "v3CHj5kbJqJgbcLM",
+  "name": "Venombane Armor (Studded Leather Armor)",
+  "type": "equipment",
+  "img": "icons/equipment/chest/breastplate-rivited-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Любой лёгкий доспех; выберите готовую основу. Паутина не может опутать вас; сквозь неё можно двигаться как по труднопроходимой местности. Это не иммунитет к любому Захвату/Опутыванию и не игнорирование всей паутины как местности. Подходящую паутину, её ограничения и состояние проверяйте вручную. Получая урон ядом, можно реакцией уменьшить его на [[/r 1d8]]{1к8} + модификатор Телосложения. Кнопка оплачивает реакцию и бросает уменьшение; исходный урон и его тип контролируйте вручную.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха/щита. Вес взят у выбранного базового доспеха/щита 2024; источник отдельного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=74258c184c43c67f\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=PnEjobQYTVeMH1HQ]]{Уменьшить исходный урон ядом на 1к8+Телосложение}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=74258c184c43c67f",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-venombane-studded",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 13,
+      "units": "lb"
+    },
+    "price": {
+      "value": 445,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 12,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "light",
+      "baseItem": "studded"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "PnEjobQYTVeMH1HQ": {
+        "_id": "PnEjobQYTVeMH1HQ",
+        "type": "utility",
+        "name": "Уменьшить исходный урон ядом на 1к8+Телосложение",
+        "img": "icons/equipment/chest/breastplate-quilted-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d8 + @abilities.con.mod",
+          "name": "",
+          "prompt": false,
+          "visible": true
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "eVXjau4f0N5dMD0C",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:venombane-studded",
+      "originalName": "Venombane Armor (Studded Leather Armor)",
+      "griffonArmorFamily": "venombane",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmStuddedLea"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!v3CHj5kbJqJgbcLM"
+}

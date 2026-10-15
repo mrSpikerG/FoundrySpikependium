@@ -1,0 +1,154 @@
+{
+  "_id": "VfTMlFvV2BB44htK",
+  "name": "Опытный целитель (EfC)",
+  "type": "feat",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Ваши лечебные зелья восстанавливают дополнительно Интеллект хитов, минимум 1. За 2 кости реагентов можно изготовить исцелин: лечение [[/r 2d4+2]]{2к4 + 2}, а также одна болезнь или одно из состояний: испуг, глухота, слепота, отравление, очарование, паралич. Неиспользованный исцелин теряет силу через 24 часа. Существующие зелья, создание исцелина и снятие выбранного состояния пока ручные; кнопка добавочного лечения доступна для применения после подходящего зелья.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Алхимик: дополнения EfC</a>.</p><h3>Действия</h3><ul><li>[[/item activity=VF91o25Cr70duiZj]]{Дополнительное лечение вашего зелья} · [[/heal activity=VF91o25Cr70duiZj]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "EfC",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-discovery-expert-healer",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Алхимик 9-го уровня",
+    "prerequisites": {
+      "level": 9,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "VF91o25Cr70duiZj": {
+        "_id": "VF91o25Cr70duiZj",
+        "type": "heal",
+        "name": "Дополнительное лечение вашего зелья",
+        "img": "icons/tools/laboratory/vials-blue-pink.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "max(1, @abilities.int.mod)"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "M1rSQywJho09IOHT",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:discovery:expert-healer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!VfTMlFvV2BB44htK"
+}

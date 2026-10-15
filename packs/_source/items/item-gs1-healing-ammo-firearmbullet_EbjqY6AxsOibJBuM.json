@@ -1,0 +1,93 @@
+{
+  "_id": "EbjqY6AxsOibJBuM",
+  "name": "Исцеляющие боеприпасы — пуля огнестрельного оружия",
+  "type": "consumable",
+  "img": "icons/containers/ammunition/bullets-belt.webp",
+  "system": {
+    "description": {
+      "value": "<p>При попадании по другому существу обычный урон отсутствует: цель восстанавливает [[/r 2d4]]{2к4} + сумму ваших модификаторов Ловкости и Мудрости (прибавка минимум +1). По союзнику бросок атаки с преимуществом: включите его в штатном диалоге, подтвердив союз. Выберите этот боеприпас в обычном выстреле: модуль заменяет все части урона оружия одним лечебным броском без бонусов оружия, критического удвоения и урона других свойств. Лечение себя по связанной карточке блокируется. При попадании боеприпас уничтожается; после промаха возможность найти его решает Мастер, восстанавливая количество вручную.</p><p><em>Цена оценочная за одну единицу: редкость 2024, половина цены из-за расходуемости. Вес одной единицы взят у обычного боеприпаса 2024 года.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=451ae54987300317\">Сумка грифона — книга 1 (2024)</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=451ae54987300317",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-healing-ammo-firearmBullet",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 200,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "ammo",
+      "subtype": "firearmBullet"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": false
+    },
+    "activities": {},
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": 0,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        },
+        "bonus": ""
+      },
+      "replace": false
+    }
+  },
+  "effects": [],
+  "folder": "Oz3oESLbmZIZefnF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:healing-ammo-firearmBullet",
+      "griffonAmmo": "healing-ammo"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!EbjqY6AxsOibJBuM"
+}

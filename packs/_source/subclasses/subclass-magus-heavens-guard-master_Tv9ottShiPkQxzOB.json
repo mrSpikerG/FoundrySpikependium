@@ -1,0 +1,343 @@
+{
+  "_id": "Tv9ottShiPkQxzOB",
+  "name": "Яркий как рассвет",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Дополнительные заклинания Магического всплеска.</strong> Можно потратить применение Магического всплеска на @UUID[Compendium.dnd5e.spells24.Item.phbsplHeal000000]{Исцеление} или @UUID[Compendium.dnd5e.spells24.Item.phbsplSunbeam000]{Солнечный луч}. Это тот же общий ресурс умения класса, а не новые применения. Восстановление ячейки вследствие всплеска пока выполните вручную.</p><p><strong>Небесный щитоносец.</strong> Завершив короткий отдых, можно восстановить Плащ сияния. Такое восстановление доступно один раз за продолжительный отдых; кнопка имеет отдельный ресурс.</p><h3>Действия</h3><ul><li>[[/item activity=2lTj9NtGmNR1C96L]]{Магический всплеск: Исцеление}</li><li>[[/item activity=mKdTDDOqTkngYJeM]]{Магический всплеск: Солнечный луч}</li><li>[[/item activity=gYO10WVetkVsJa1H]]{После короткого отдыха: восстановить «Плащ сияния»}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-heavens-guard-master",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Небесная стража",
+    "prerequisites": {
+      "level": 20,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "2lTj9NtGmNR1C96L": {
+        "_id": "2lTj9NtGmNR1C96L",
+        "type": "cast",
+        "name": "Магический всплеск: Исцеление",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:magus-spell-surge",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "int",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": 6,
+          "properties": [],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplHeal000000"
+        }
+      },
+      "mKdTDDOqTkngYJeM": {
+        "_id": "mKdTDDOqTkngYJeM",
+        "type": "cast",
+        "name": "Магический всплеск: Солнечный луч",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:magus-spell-surge",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "int",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": 6,
+          "properties": [],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplSunbeam000"
+        }
+      },
+      "gYO10WVetkVsJa1H": {
+        "_id": "gYO10WVetkVsJa1H",
+        "type": "utility",
+        "name": "После короткого отдыха: восстановить «Плащ сияния»",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "feat:magus-heavens-guard-cloak",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "dAxnIxQ7JETBZXTt",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-heavens-guard:master"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Tv9ottShiPkQxzOB"
+}

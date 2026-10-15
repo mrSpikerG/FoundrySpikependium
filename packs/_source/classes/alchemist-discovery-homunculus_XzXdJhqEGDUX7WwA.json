@@ -1,0 +1,260 @@
+{
+  "_id": "XzXdJhqEGDUX7WwA",
+  "name": "Создание гомункула",
+  "type": "feat",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>За 8 часов, в том числе во время долгого отдыха, создайте гомункула-фамильяра: конструкт, не меняет форму и не отпускается, может атаковать. Телепатия без ограничения расстояния на одном плане. Кнопка создаёт точный профиль гомункула 2014; наличие другого своего гомункула на сценах блокирует повтор. После смерти тело сохраняется; оживление занимает 1 час и допустимо во время отдыха. Материалы, время процедуры и оживление прежнего тела пока подтверждаются вручную.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p><h3>Действия</h3><ul><li>[[/item activity=vKOmab1XR71RIG0Z]]{Создать гомункула (8 часов)}</li><li>[[/item activity=SbGxCjihyRgdZChD]]{Оживить своего гомункула (1 час, прежнее тело)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-discovery-homunculus",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Алхимик",
+    "prerequisites": {
+      "level": 0,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "vKOmab1XR71RIG0Z": {
+        "_id": "vKOmab1XR71RIG0Z",
+        "type": "summon",
+        "name": "Создать гомункула (8 часов)",
+        "img": "icons/tools/laboratory/vials-blue-pink.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "hour",
+          "value": 8,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "",
+          "hd": "",
+          "hp": "",
+          "attackDamage": "",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [
+          "tiny"
+        ],
+        "creatureTypes": [
+          "construct"
+        ],
+        "match": {
+          "ability": "",
+          "attacks": false,
+          "disposition": true,
+          "proficiency": false,
+          "saves": false
+        },
+        "profiles": [
+          {
+            "_id": "wRo3yTGWfzm1bpKv",
+            "count": "1",
+            "name": "Гомункул алхимика",
+            "uuid": "Compendium.spikependium.creatures.Actor.T1yPDksJFJJwhwWH",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": ""
+        },
+        "flags": {
+          "spikependium": {
+            "alchemistCompanion": "homunculus"
+          }
+        }
+      },
+      "SbGxCjihyRgdZChD": {
+        "_id": "SbGxCjihyRgdZChD",
+        "type": "utility",
+        "name": "Оживить своего гомункула (1 час, прежнее тело)",
+        "img": "icons/tools/laboratory/vials-blue-pink.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "hour",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "A0GDqUCTNZZYZVVy",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:discovery:homunculus"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!XzXdJhqEGDUX7WwA"
+}

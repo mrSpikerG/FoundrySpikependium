@@ -1,0 +1,140 @@
+{
+  "_id": "sORTtrPDEVIy1Z77",
+  "name": "Звериная шкура",
+  "type": "equipment",
+  "img": "icons/consumables/meat/heart-organ-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Донор:</strong> Зверь не меньше Большого. <strong>Часть тела:</strong> кожа.</p><p>Природная броня: 13 + Ловкость. Можно использовать лучшую броню; щит даёт обычную пользу. Нативная формула выбирается вместе с остальными формулами КБ.</p><p>«Экипирован» означает: установка и обязательное восстановление уже закончены. На одной части тела действует один трансплантат. Подходящий донор, операция, затраты хитов/костей хитов и срок восстановления пока подтверждаются вручную. Вариант типа урона должен соответствовать донору.</p><p>Для получения через нативный выбор используйте @UUID[Compendium.spikependium.classes.Item.H3kR51bEABFEKm1x]{шаблон «Звериная шкура»}; он выдаёт этот физический предмет.</p><p><em>Цена указана в таблице стоимости трансплантатов источника (2014); доступность продажи определяет Мастер. Вес оценочный: 10 фунта по размеру заменяемой ткани/части тела; в источнике вес отсутствует. При установке и учёте нагрузки согласуйте его с Мастером.</em></p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-graft-item-beast-hide",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 10,
+      "units": "lb"
+    },
+    "price": {
+      "value": 250,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "properties": [],
+    "strength": null,
+    "proficient": 1,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {}
+  },
+  "effects": [
+    {
+      "_id": "i36kiHjt03L2Wgwz",
+      "name": "Звериная шкура",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.formulas",
+            "value": "13 + @abilities.dex.mod",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "oBvPZzxY0F8jFhlJ"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.graftActive.alchemist-graft-item-beast-hide\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!sORTtrPDEVIy1Z77.i36kiHjt03L2Wgwz"
+    }
+  ],
+  "folder": "ar2ZQqV4zByw6Bmp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:alchemist-graft:beast-hide",
+      "graft": {
+        "id": "beast-hide",
+        "slot": "skin",
+        "heavy": false
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!sORTtrPDEVIy1Z77"
+}

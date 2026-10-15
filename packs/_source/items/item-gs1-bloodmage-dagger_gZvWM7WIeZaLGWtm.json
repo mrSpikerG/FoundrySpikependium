@@ -1,0 +1,596 @@
+{
+  "_id": "gZvWM7WIeZaLGWtm",
+  "name": "Кинжал кровавого мага",
+  "type": "weapon",
+  "img": "icons/weapons/daggers/dagger-straight-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Кинжал +1, фокусировка, настройка заклинателем; 5 зарядов, в сумерках восстанавливается [[/r 1d3+2]]{1к3+2}. Держа кинжал, действием Магии за заряд совершите ближнюю атаку заклинанием по видимому живому существу в 5 футах: [[/r 3d6]]{3к6} некротического + заклинательная характеристика. Восстанавливаете хиты по фактически нанесённому некротическому урону, кроме урона конструкту, растению или нежити. Отдельная атака расходует заряд; при штатном применении её урона модуль лечит владельца с учётом сопротивлений цели и без повторного лечения от одной карточки. Видимость и допустимость живой цели проверьте сами; отмену уже применённого лечения исправляйте вручную. Второе свойство: при сотворении за ячейку 1–3 по себе/одному существу можно потратить заряды и столько же Костей хитов; каждый заряд повышает круг на 1, максимум до 5. Бросьте потраченные кости: сумма — некротический урон себе, игнорирующий иммунитет и сопротивление. При снижении до 0 заклинание проваливается. Это повышение, выбор/расход костей, самоповреждение и отмена заклинания пока выполняются вручную.</p><p><em>Цена оценочная: редкость 2024 плюс базовый кинжал. Вес по обычному кинжалу 2024 года: 1 фунт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=74641ec06f9bfc25\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=n2ouaBiPlvMVhWUn]]{Атака кинжалом} · [[/damage activity=n2ouaBiPlvMVhWUn]]{Бросок урона}</li><li>[[/item activity=Ttr0Oaea6Z5RiGju]]{Багровый кинжал: Интеллект, ваша заклинательная характеристика} · [[/damage activity=Ttr0Oaea6Z5RiGju]]{Бросок урона}</li><li>[[/item activity=heNLJVhrOfYWWZZh]]{Багровый кинжал: Мудрость, ваша заклинательная характеристика} · [[/damage activity=heNLJVhrOfYWWZZh]]{Бросок урона}</li><li>[[/item activity=3lWtXKmeX3NIQvtz]]{Багровый кинжал: Харизма, ваша заклинательная характеристика} · [[/damage activity=3lWtXKmeX3NIQvtz]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=74641ec06f9bfc25",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-bloodmage-dagger",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 40002,
+      "denomination": "gp"
+    },
+    "rarity": "veryRare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "simpleM",
+      "baseItem": "dagger"
+    },
+    "ammunition": {},
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": true,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": 1,
+        "denomination": 4,
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        },
+        "bonus": ""
+      }
+    },
+    "magicalBonus": 1,
+    "properties": [
+      "fin",
+      "lgt",
+      "thr",
+      "mgc",
+      "foc"
+    ],
+    "proficient": null,
+    "range": {
+      "value": 20,
+      "long": 60,
+      "units": "ft",
+      "reach": null
+    },
+    "mastery": "nick",
+    "uses": {
+      "max": "5",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dusk",
+          "type": "formula",
+          "formula": "1d3 + 2"
+        }
+      ]
+    },
+    "activities": {
+      "n2ouaBiPlvMVhWUn": {
+        "_id": "n2ouaBiPlvMVhWUn",
+        "type": "attack",
+        "name": "Атака кинжалом",
+        "img": "icons/weapons/daggers/dagger-straight-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "attack": {
+          "ability": "",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        }
+      },
+      "Ttr0Oaea6Z5RiGju": {
+        "_id": "Ttr0Oaea6Z5RiGju",
+        "type": "attack",
+        "name": "Багровый кинжал: Интеллект, ваша заклинательная характеристика",
+        "img": "icons/weapons/daggers/dagger-straight-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "attack": {
+          "ability": "int",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "spell"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": false,
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "flags": {
+          "spikependium": {
+            "griffonBloodDrain": true
+          }
+        }
+      },
+      "heNLJVhrOfYWWZZh": {
+        "_id": "heNLJVhrOfYWWZZh",
+        "type": "attack",
+        "name": "Багровый кинжал: Мудрость, ваша заклинательная характеристика",
+        "img": "icons/weapons/daggers/dagger-straight-blue.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "attack": {
+          "ability": "wis",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "spell"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": false,
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "flags": {
+          "spikependium": {
+            "griffonBloodDrain": true
+          }
+        }
+      },
+      "3lWtXKmeX3NIQvtz": {
+        "_id": "3lWtXKmeX3NIQvtz",
+        "type": "attack",
+        "name": "Багровый кинжал: Харизма, ваша заклинательная характеристика",
+        "img": "icons/weapons/daggers/dagger-straight-blue.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "attack": {
+          "ability": "cha",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "spell"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": false,
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "flags": {
+          "spikependium": {
+            "griffonBloodDrain": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "HoQtDYpDbRmuAoC9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:bloodmage-dagger",
+      "griffonWeapon": "bloodmage-dagger",
+      "griffonSpellcaster": true
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!gZvWM7WIeZaLGWtm"
+}

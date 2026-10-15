@@ -1,0 +1,160 @@
+{
+  "_id": "5MnRRLmxgEm95sBW",
+  "name": "Предрешить судьбу",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда видимое существо в пределах 60 футов совершает бросок с преимуществом или помехой, можно заставить его бросить три к20 вместо двух: используется наибольший результат при преимуществе или наименьший при помехе. Одно применение восстанавливается после короткого или продолжительного отдыха. На 20-м уровне магуса максимум увеличивается до трёх: после короткого отдыха восстанавливается только одно, после продолжительного — все. Ресурс и его восстановление настроены; изменение чужого броска пока выполняется вручную.</p><h3>Действия</h3><ul><li>[[/item activity=MaGQs1Im0H6k33jA]]{Предрешить судьбу: потратить применение}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-sidereal-cabal-seal",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Звёздная кабала",
+    "prerequisites": {
+      "level": 14,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "1 + 2 * floor(@classes.magus.levels / 20)",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "sr",
+          "type": "formula",
+          "formula": "1"
+        },
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "MaGQs1Im0H6k33jA": {
+        "_id": "MaGQs1Im0H6k33jA",
+        "type": "utility",
+        "name": "Предрешить судьбу: потратить применение",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "rR7lhoekX0OVF1fN",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-sidereal-cabal:seal"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!5MnRRLmxgEm95sBW"
+}

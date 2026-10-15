@@ -1,0 +1,163 @@
+{
+  "_id": "KeJhbu9npdLUzYit",
+  "name": "Аморист",
+  "type": "subclass",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Специализация самостоятельного алхимика, правила 2014 года. Особенности выдаются на уровнях 2/6/10/18; отдельные формулы и открытия не занимают общие выборы класса. Краткие игровые памятки с источником; условная автоматизация и производство ещё продолжаются.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-amorist",
+    "classIdentifier": "alchemist",
+    "advancement": [
+      {
+        "_id": "Z2hEB9benB7UBh8Q",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.6jR8zYA0UGak4l7h",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "Yy0uHYfcSHR2FcKz",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.DgP6grGkoSITHNFR",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "ZEPNT9GAOiY1S9Em",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.61EfofNCAUqDQC4o",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "PWq0xRl6s3daxrtF",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.7HD8xKEgC3HDC3jX",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "vISFYqNlgyzdv446",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "skills:dec",
+            "skills:per"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 2,
+        "title": "Обман и Убеждение",
+        "hint": ""
+      },
+      {
+        "_id": "l5be7ujMvxWgzCR5",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.codkFAlQd5gGhGxD",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Формула специализации (вне общего лимита)",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "sAvGEhBLiC4TBoW3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:alchemist-amorist"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!KeJhbu9npdLUzYit"
+}

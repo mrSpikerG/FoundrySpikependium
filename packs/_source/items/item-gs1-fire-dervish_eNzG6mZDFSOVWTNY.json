@@ -1,0 +1,652 @@
+{
+  "_id": "eNzG6mZDFSOVWTNY",
+  "name": "Fire Dervish Cloak",
+  "type": "equipment",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>Раз в свой ход без действия потратьте 1–3 заряда, уменьшив свою скорость на 10 футов за заряд до конца этого хода. Все другие существа в 5 футах совершают Ловкость СЛ 15: провал — [[/r 1d8]]{1к8} огнём за заряд и запрет провоцированных атак только по вам до конца этого хода; успех без урона/запрета. Пять зарядов восстанавливаются полностью на рассвете. Выбранная кнопка расходует заряды, проверяет общий лимит раз в свой ход и накладывает собственное уменьшение скорости после успешного применения. Профиль провала запрещает провоцированные атаки только по исходному носителю. Дистанцию, исключение себя, достаточное оставшееся перемещение и результат испытаний подтверждайте; применяйте профиль только провалившим. Отмена расхода не откатывает уже наложенные профили.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 4 фунта по обычному дорожному плащу; источник веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=7674eeefe1779a18\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=UDshFPgZT3Hdt6Vg]]{Огненный вихрь: 1 зарядов, скорость −10} · [[/damage activity=UDshFPgZT3Hdt6Vg]]{Бросок урона} · [[/save activity=UDshFPgZT3Hdt6Vg]]{Спасбросок цели}</li><li>[[/item activity=Lnu8dlIEeviCjK2S]]{Огненный вихрь: 2 зарядов, скорость −20} · [[/damage activity=Lnu8dlIEeviCjK2S]]{Бросок урона} · [[/save activity=Lnu8dlIEeviCjK2S]]{Спасбросок цели}</li><li>[[/item activity=yxhyyYy1Q9nbHeUE]]{Огненный вихрь: 3 зарядов, скорость −30} · [[/damage activity=yxhyyYy1Q9nbHeUE]]{Бросок урона} · [[/save activity=yxhyyYy1Q9nbHeUE]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=7674eeefe1779a18",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-fire-dervish",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 4,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "5",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "UDshFPgZT3Hdt6Vg": {
+        "_id": "UDshFPgZT3Hdt6Vg",
+        "type": "save",
+        "name": "Огненный вихрь: 1 зарядов, скорость −10",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "i5aNDrhyGw7GgSt9"
+          }
+        ],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "5",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "oncePerTurn": true,
+            "ownTurn": true,
+            "group": "griffon-fire-dervish",
+            "griffonDervishSpeed": "5LQE57TkbXIDbOZn"
+          }
+        }
+      },
+      "Lnu8dlIEeviCjK2S": {
+        "_id": "Lnu8dlIEeviCjK2S",
+        "type": "save",
+        "name": "Огненный вихрь: 2 зарядов, скорость −20",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "2",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "i5aNDrhyGw7GgSt9"
+          }
+        ],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "5",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "oncePerTurn": true,
+            "ownTurn": true,
+            "group": "griffon-fire-dervish",
+            "griffonDervishSpeed": "arMEN2rTqhpsUqFu"
+          }
+        }
+      },
+      "yxhyyYy1Q9nbHeUE": {
+        "_id": "yxhyyYy1Q9nbHeUE",
+        "type": "save",
+        "name": "Огненный вихрь: 3 зарядов, скорость −30",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "3",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "i5aNDrhyGw7GgSt9"
+          }
+        ],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "5",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "oncePerTurn": true,
+            "ownTurn": true,
+            "group": "griffon-fire-dervish",
+            "griffonDervishSpeed": "EJVoeOGYmWXTbktb"
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "i5aNDrhyGw7GgSt9",
+      "name": "Огненный дервиш: нет провоцированных атак по носителю",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceEnd",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "griffonDervishTarget": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!eNzG6mZDFSOVWTNY.i5aNDrhyGw7GgSt9"
+    },
+    {
+      "_id": "5LQE57TkbXIDbOZn",
+      "name": "Вращение: скорость −10 футов",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.bonus",
+            "value": "-10",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "gyyCKaLGRznPB10C"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceEnd",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!eNzG6mZDFSOVWTNY.5LQE57TkbXIDbOZn"
+    },
+    {
+      "_id": "arMEN2rTqhpsUqFu",
+      "name": "Вращение: скорость −20 футов",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.bonus",
+            "value": "-20",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "wtCYee3JHK5BeB5N"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceEnd",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!eNzG6mZDFSOVWTNY.arMEN2rTqhpsUqFu"
+    },
+    {
+      "_id": "EJVoeOGYmWXTbktb",
+      "name": "Вращение: скорость −30 футов",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.bonus",
+            "value": "-30",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "rrV93A2972uGMlou"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceEnd",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!eNzG6mZDFSOVWTNY.EJVoeOGYmWXTbktb"
+    }
+  ],
+  "folder": "oDwWgx9Dn4Lka5C9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:fire-dervish",
+      "originalName": "Fire Dervish Cloak"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!eNzG6mZDFSOVWTNY"
+}

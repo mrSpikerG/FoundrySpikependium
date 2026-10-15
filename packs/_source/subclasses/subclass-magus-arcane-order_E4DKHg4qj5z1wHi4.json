@@ -1,0 +1,406 @@
+{
+  "_id": "E4DKHg4qj5z1wHi4",
+  "name": "Arcane Order",
+  "type": "subclass",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Арканный орден изучает магические чудеса мультивселенной и защищает её магическую ткань от угроз существованию. Его магусы ищут забытые артефакты, памятники магии и тайные знания: ради могущества, любознательности или сохранения наследия для потомков.</p><p>Подкласс магуса: особенности выдаются на 3-м, 7-м, 14-м и 20-м уровнях. Перевод по предоставленному Magus 2024 — Playtest 3. Автоматизация условных меток и событийных особенностей продолжается.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-arcane-order",
+    "classIdentifier": "magus",
+    "advancement": [
+      {
+        "_id": "A7JyPbO52zy0gQlD",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.UJiwytiN6I9JUH8V",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.rWZS0UWbRHVQWd4u",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.V78TozSQHY8B9Qz3",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "pzWQHqdi2ODCGaGN",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.hy7z8mwp41c53ZsU",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.GcbDQD9FKL4f9Qtk",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "y1sww5W0OjYiJu0E",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.B15WRmlnhUPBqPy7",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "8w2DGxk461Ne1qb7",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.BSBCrqYXjNVRnHCU",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 20,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "pMDi9ZVet5iUTLDt",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.9ni4bvWTQugFTp6u",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplTrueStrike",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFindFamili",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMagicMissi",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "qC8jeF6ddW2wSx1B",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplNystulsMag",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMistyStep0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 5,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "d1OVirr6JT2UIYjr",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDispelMagi",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.spells.Item.n3Jgp3FFpFIm26S7",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "irWahuwrcrgSlJGE",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplBanishment",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbPrivateSanctu",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 13,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "ob7SAbTDqLG3K4zt",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.n9pQiN3NS738UyGS",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplTeleportat",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 17,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "jMbewnEMDrVLqs4U",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "7": {
+              "count": 2,
+              "replacement": false
+            },
+            "8": {
+              "count": 0,
+              "replacement": true
+            },
+            "9": {
+              "count": 0,
+              "replacement": true
+            },
+            "10": {
+              "count": 0,
+              "replacement": true
+            },
+            "11": {
+              "count": 0,
+              "replacement": true
+            },
+            "12": {
+              "count": 0,
+              "replacement": true
+            },
+            "13": {
+              "count": 0,
+              "replacement": true
+            },
+            "14": {
+              "count": 0,
+              "replacement": true
+            },
+            "15": {
+              "count": 0,
+              "replacement": true
+            },
+            "16": {
+              "count": 0,
+              "replacement": true
+            },
+            "17": {
+              "count": 0,
+              "replacement": true
+            },
+            "18": {
+              "count": 0,
+              "replacement": true
+            },
+            "19": {
+              "count": 0,
+              "replacement": true
+            },
+            "20": {
+              "count": 0,
+              "replacement": true
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:wizard"
+            ],
+            "level": "available",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Два всегда подготовленных заклинания волшебника",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "30f5YvxZ8EoNQIeN",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-arcane-order",
+      "originalName": "Arcane Order"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!E4DKHg4qj5z1wHi4"
+}

@@ -1,0 +1,174 @@
+{
+  "_id": "cxLHiMU3gMmTTvow",
+  "name": "Свинцовая краска",
+  "type": "feat",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Для Скрытой атаки по своей руне (в том числе нанесённой этим попаданием) не нужны преимущество или соседний союзник; помеха по-прежнему запрещает её. Такая Скрытая атака получает дополнительно [[/r 2d6]]{2к6} урона исходного типа. Выберите тип по оружию; остальные условия Скрытой атаки остаются. Условия срабатывания, выбор допустимых целей и откат уже применённых результатов проверяйте вручную; кнопка расходует ресурс и создаёт штатную карточку, но сама не подтверждает выполнение условия.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=hok1Fmsne40Z1h6c]]{Нанести урон} · [[/damage activity=hok1Fmsne40Z1h6c]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "gs1-runetagger-lead",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Клеймитель",
+    "prerequisites": {
+      "level": 17,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "hok1Fmsne40Z1h6c": {
+        "_id": "hok1Fmsne40Z1h6c",
+        "type": "damage",
+        "name": "",
+        "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "acid",
+                "bludgeoning",
+                "cold",
+                "fire",
+                "force",
+                "lightning",
+                "necrotic",
+                "piercing",
+                "poison",
+                "psychic",
+                "radiant",
+                "slashing",
+                "thunder"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "9Rff5wl23JPgCXUS",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:gs1-runetagger:lead"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!cxLHiMU3gMmTTvow"
+}

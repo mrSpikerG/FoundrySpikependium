@@ -1,0 +1,82 @@
+{
+  "_id": "451RZ58w0jArxxm2",
+  "name": "Регенерация",
+  "type": "feat",
+  "img": "icons/consumables/meat/heart-organ-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Донор:</strong> Существо с Регенерацией.</p><p>Раз за короткий/долгий отдых бонусным действием восстановите себе [[/r 1d10]]{1к10} + Телосложение хитов.</p><p>Это шаблон получения: продвижение выдаёт физический трансплантат и, если нужно, выбор донора/части тела. После подтверждённой операции и восстановления отметьте выданный предмет экипированным. При замене трансплантата снимите старый предмет и связанный с ним шаблон; возврат уже потраченных ресурсов и хирургические последствия пока ручные.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-graft-regeneration",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": true,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "Jk6ctGotJ18YmyOF",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.items.Item.dJnZzl4ipX0aTEgO",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 0,
+        "title": "Физический трансплантат",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "sluBNxrNkP9SryhZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:graft:regeneration"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!451RZ58w0jArxxm2"
+}

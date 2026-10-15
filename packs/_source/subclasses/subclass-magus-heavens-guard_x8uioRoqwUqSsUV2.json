@@ -1,0 +1,308 @@
+{
+  "_id": "x8uioRoqwUqSsUV2",
+  "name": "Heaven's Guard",
+  "type": "subclass",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>По легенде небожители, некогда охранявшие избранных богами смертных, приняли гуманоидный облик, чтобы защищать добро там, где небеса не могли вмешаться. Современные стражи скрывают своё происхождение: они могут быть этими небожителями, их перевоплощениями или наследниками красивого мифа. Они защищают доброе и священное Материального плана ценой собственной жизни.</p><p>Подкласс магуса: особенности выдаются на 3-м, 7-м, 14-м и 20-м уровнях. Перевод по предоставленному Magus 2024 — Playtest 3. Автоматизация условных меток и событийных особенностей продолжается.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-heavens-guard",
+    "classIdentifier": "magus",
+    "advancement": [
+      {
+        "_id": "Ncxd4cWcK5P573H1",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.8DZxp6TzGrifGIrW",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.2SMUkmiLBDvNzlAL",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.9HwdcoT7bDf2yC8B",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "ka0sJuRA8hMF0Hqf",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.76QeHxIijn7ydRhQ",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "SVpXNCOsahvj5kQE",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.69kIncoCEq2YDESC",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "UnCsJZWCql9Autu0",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Tv9ottShiPkQxzOB",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 20,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "xJeX9uFkDp7GabGh",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCureWounds",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.spells.Item.8JxibIeBerFwR4sr",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGuidingBol",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.spells.Item.wbjMiDIPORpDTPlz",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "I4BzDwV03GCea5xb",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.Ps9Yl4crbGV62CCG",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplGentleRepo",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 5,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "wGTAKccctYOZJHnH",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMassHealin",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplRevivify00",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "LNcXEoPRavmzZ6iL",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDeathWard0",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplStoneskin0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 13,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "AFYfWyeUQh8ZJtc4",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMassCureWo",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplRaiseDead0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 17,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "30f5YvxZ8EoNQIeN",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-heavens-guard",
+      "originalName": "Heaven's Guard"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!x8uioRoqwUqSsUV2"
+}

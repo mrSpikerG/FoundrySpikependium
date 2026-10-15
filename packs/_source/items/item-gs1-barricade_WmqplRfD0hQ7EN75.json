@@ -1,0 +1,342 @@
+{
+  "_id": "WmqplRfD0hQ7EN75",
+  "name": "Barricade Shield",
+  "type": "equipment",
+  "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Действием Магии раз в день до рассвета поставьте и расширьте щит до 15 футов в высоту и ширину. Края подстраиваются под замкнутое пространство; можно создать стену/платформу. Пока держите его, скорость 0, помеха проверкам/испытаниям Ловкости; вес не меняется. Расширенная баррикада — немагический объект, КД 14, 40 хитов; держится минуту. При 0 хитах или перемещении возвращается к обычному размеру, а не уничтожается. Удерживающий может окончить расширение бонусным действием. Настроены ресурс/восстановление, минутный профиль скорости/помех и досрочное окончание; передвижение носителя завершает удерживаемый профиль. Геометрия стены/платформы, коллизии, отдельные КД/40 хитов объекта, сдвиг щита и возврат при 0 хитах пока ручные.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха/щита. Вес взят у выбранного базового доспеха/щита 2024; источник отдельного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=a3529aae510a69ac\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=nRDABOxyxvNxa0mv]]{Установить и удерживать баррикаду на минуту}</li><li>[[/item activity=nLooz7QvTcg29KIL]]{Свернуть удерживаемую баррикаду}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=a3529aae510a69ac",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-barricade",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 6,
+      "units": "lb"
+    },
+    "price": {
+      "value": 410,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 2,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "shield",
+      "baseItem": "shield"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "nRDABOxyxvNxa0mv": {
+        "_id": "nRDABOxyxvNxa0mv",
+        "type": "transform",
+        "name": "Установить и удерживать баррикаду на минуту",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "R342fCNI0R05ug47"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      },
+      "nLooz7QvTcg29KIL": {
+        "_id": "nLooz7QvTcg29KIL",
+        "type": "utility",
+        "name": "Свернуть удерживаемую баррикаду",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "griffonEndShieldProfile": "griffonBarricadeHeld"
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "R342fCNI0R05ug47",
+      "name": "Удержание расширенной баррикады",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.multiplier",
+            "value": "0",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "fDDoQQR5t1ubU4BF"
+          },
+          {
+            "key": "system.abilities.dex.check.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "dNKkoGsFFZzorw7k"
+          },
+          {
+            "key": "system.abilities.dex.save.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "JGLbTXTcZFpoh4Fu"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "griffonBarricadeHeld": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!WmqplRfD0hQ7EN75.R342fCNI0R05ug47"
+    }
+  ],
+  "folder": "sBQYEGTXu32yTmbJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:barricade",
+      "originalName": "Barricade Shield",
+      "griffonArmorFamily": "barricade",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmShield0000"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!WmqplRfD0hQ7EN75"
+}

@@ -1,0 +1,171 @@
+{
+  "_id": "IH9SKo8BFcWDOWZE",
+  "name": "Doomsday Cookie",
+  "type": "consumable",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>Разломите печенье: один к20 определяет тему смерти по @UUID[Compendium.spikependium.tables.RollTable.p8fC2z1XDBKAGA8F]{таблице}. Первая тема закрепляется за существом: следующие печенья её повторяют. Создаётся личная бумажка. После подтверждённой Мастером смерти предсказанным образом она становится Свитком Возрождения только для адресата и рассыпается через минуту. Способ/время смерти и право чтения свитка проверяет Мастер. Сладко-солёный вкус с дымком не даёт дополнительных бонусов.</p><p><em>Цена оценочная: половина ориентира по редкости 2024 для всей расходуемой упаковки; не цена каждой конфеты внутри. Вес оценочный для маленькой сладости/упаковки: 0,1 фунта; источник веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=97a38d6b497439b6\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=1vIvRirZQOQZ6Mjp]]{Разломить печенье: закреплённое предсказание}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=97a38d6b497439b6",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-doomsday-cookie",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 200,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "food",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "1vIvRirZQOQZ6Mjp": {
+        "_id": "1vIvRirZQOQZ6Mjp",
+        "type": "utility",
+        "name": "Разломить печенье: закреплённое предсказание",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "sweetEat": "cookie",
+            "sweetGrant": "Compendium.spikependium.items.Item.2OQpRNyXcLGPdjUF"
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CTS1hPwmX5lmz1VE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:doomsday-cookie",
+      "originalName": "Doomsday Cookie"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!IH9SKo8BFcWDOWZE"
+}

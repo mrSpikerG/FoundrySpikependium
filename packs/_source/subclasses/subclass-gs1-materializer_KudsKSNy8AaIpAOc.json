@@ -1,0 +1,182 @@
+{
+  "_id": "KudsKSNy8AaIpAOc",
+  "name": "Претворитель",
+  "type": "subclass",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Авторский подкласс (хоумбрю) из Сумки грифона, книга 1, редакция 2024. Умения выдаются по уровням класса Волшебник. В библиотеке находятся краткие игровые памятки и штатные действия; полное правило приведено по ссылке источника. Ограничения автоматизации указаны на каждом умении.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey\">Сумка грифона — книга 1 (2024)</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "gs1-materializer",
+    "classIdentifier": "wizard",
+    "advancement": [
+      {
+        "_id": "AYg1wCm0hzwbn0w3",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.c9hjjfPEKcNEImff",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.XWkYKhGZjOBPpimF",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "RRZbLrZn0yMUbS22",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.55ua6nA4tJcsyvga",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "Vtrhk2OpyK1piNHz",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.E1uxsIdmzbFErRgb",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "bIMPcvx5BFQFun6A",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.y3hj12yvfk2RgrZd",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "Kqc0R1F5fW1M5JwL",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 3,
+              "pool": [
+                "tool:art:*"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Три ремесленных инструмента",
+        "hint": ""
+      },
+      {
+        "_id": "RdLVGFFpG5nYP3Yy",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMending000",
+              "optional": true
+            }
+          ],
+          "optional": true,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Починка (если уже известна — пропустите и добавьте другой заговор волшебника)",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "aQY6FHQhzbVduAW1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:gs1-materializer"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!KudsKSNy8AaIpAOc"
+}

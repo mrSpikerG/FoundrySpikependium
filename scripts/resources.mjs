@@ -20,6 +20,12 @@ import { prepareOriginSaveBoostUpdates } from "./arcana-save-boost.mjs";
 import { prepareArcanaStageUpdates } from "./arcana-stages.mjs";
 import { prepareCunningUpdates } from "./cunning-actions.mjs";
 import { prepareBloomUpdates } from "./arcana-bloom.mjs";
+import { prepareAnimationUpdates } from "./magus-animation.mjs";
+import { prepareAlchemistBombUpdates } from "./alchemist-bombs.mjs";
+import { prepareAlchemistCreation, prepareAlchemistSummonUpdates } from "./alchemist-creatures.mjs";
+import { prepareGriffonTwoUpdates } from "./griffon-two-items.mjs";
+import { prepareGriffonArmorUpdates } from "./griffon-armor.mjs";
+import { prepareSweetUpdates } from "./griffon-sweets.mjs";
 
 export function showResourceConsumption(activity, config, message) {
   const deltas = message.data?.system?.deltas;
@@ -110,6 +116,13 @@ export async function prepareResourceUpdates(wrapped, config, ...args) {
       if (updates) updates = prepareOriginSaveBoostUpdates(this, config, updates);
       if (updates) updates = prepareArcanaStageUpdates(this, config, updates);
       if (updates) updates = prepareBloomUpdates(this, config, updates);
+      if (updates) updates = prepareAnimationUpdates(this, config, updates);
+      if (updates) updates = prepareAlchemistBombUpdates(this, config, updates);
+      if (updates) updates = await prepareAlchemistCreation(this, config, updates);
+      if (updates) updates = prepareAlchemistSummonUpdates(this, config, updates);
+      if (updates) updates = await prepareGriffonTwoUpdates(this, config, updates);
+      if (updates) updates = prepareGriffonArmorUpdates(this, config, updates);
+      if (updates) updates = await prepareSweetUpdates(this, config, updates);
       if (updates) updates = prepareCunningUpdates(this, config, updates);
       if (updates) updates = prepareDodgeUpdates(this, config, updates);
       if (updates) updates = prepareDefenseUpdates(this, config, updates);

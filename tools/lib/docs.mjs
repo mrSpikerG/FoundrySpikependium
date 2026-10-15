@@ -10,6 +10,7 @@ import { SPELL_NAMES, ITEM_NAMES } from "../../src/names.mjs";
 /* -------------------------------------------- */
 
 export const PACKS = {
+  species: { label: "Виды", type: "Item" },
   classes: { label: "Классы", type: "Item" },
   subclasses: { label: "Подклассы", type: "Item" },
   feats: { label: "Черты", type: "Item" },
@@ -159,7 +160,7 @@ function fillActivityIcons(system, img) {
 }
 
 function itemBase(pack, key, o, type, system) {
-  if (pack === "items") system.description.value += `<p><em>${o.priceNote ?? `Цена: ориентир по редкости из правил 2024 года${type === "weapon" || o.baseItem ? " плюс стоимость базового предмета" : ""}; в UA цена не указана.`} ${type === "weapon" ? "Это шаблон зачарования: вес и урон берутся от выбранного оружия." : o.weightNote ?? (o.weight == null ? "Вес в источнике не указан; значение 0 — техническое, задайте его по решению Мастера." : "Вес взят у базового предмета.")}</em></p>`;
+  if (pack === "items") system.description.value += `<p><em>${o.priceNote ?? `Цена: ориентир по редкости из правил 2024 года${type === "weapon" || o.baseItem ? " плюс стоимость базового предмета" : ""}; в UA цена не указана.`} ${type === "weapon" && !o.baseItem ? "Это шаблон зачарования: вес и урон берутся от выбранного оружия." : o.weightNote ?? (o.weight == null ? "Вес в источнике не указан; значение 0 — техническое, задайте его по решению Мастера." : "Вес взят у базового предмета.")}</em></p>`;
   if (o.sourceUrl) { system.source.custom = o.sourceUrl; system.description.value += `<p>Источник: <a href="${o.sourceUrl}">${BOOKS[o.book] ?? o.book}</a>.</p>`; }
   const _id = makeId(`item:${key}`);
   fillActivityIcons(system, icon(o.img));
@@ -227,6 +228,17 @@ export function feature(o) {
 /** Черта (feat) — обёртка над feature. */
 export function feat(o) {
   return feature({ pack: "feats", typeValue: "feat", ...o });
+}
+
+/** Вид по схеме RaceData dnd5e 6; выбор наследия задаётся штатными advancement. */
+export function speciesItem(o) {
+  return itemBase("species", o.key, o, "race", {
+    description: description(o), source: source(o.book, o.page), identifier: o.identifier,
+    type: { value: "humanoid", subtype: o.identifier, custom: "" },
+    movement: { speeds: { walk: 30, burrow: 0, climb: 0, fly: 0, swim: 0 }, units: "ft", hover: false },
+    senses: { ranges: { darkvision: 60, blindsight: 0, tremorsense: 0, truesight: 0 }, units: "ft", special: "" },
+    advancement: o.advancement
+  });
 }
 
 /* -------------------------------------------- */
@@ -402,6 +414,19 @@ export function loot(o) {
   });
 }
 
+/** Расходник: тип, число доз и уничтожение исчерпанной единицы ведёт dnd5e. */
+export function consumable(o) {
+  return itemBase("items", o.key, o, "consumable", {
+    description: description(o), source: source(o.book, o.page), identifier: o.identifier ?? "",
+    identified: true, unidentified: { description: "" }, container: null,
+    quantity: 1, weight: { value: o.weight, units: "lb" }, price: { value: o.price, denomination: "gp" },
+    rarity: o.rarity ?? "", attunement: "", attuned: false, equipped: false,
+    type: { value: o.consumableType ?? "potion", subtype: "" }, properties: o.properties ?? ["mgc"], magicalBonus: null,
+    uses: { max: "1", spent: 0, recovery: [], autoDestroy: true, ...(o.uses ?? {}) },
+    activities: activities(o.acts)
+  });
+}
+
 /**
  * Магическое оружие-шаблон: зачарование накладывается на обычное оружие (как в SRD dnd5e).
  * o.enchant: { suffix, changes: [...], riders: [ids действий] }
@@ -495,7 +520,7 @@ export function npc(o) {
       img: itemImg,
       system: {
         description: { value: it.html ?? md(it.desc), chat: "" },
-        source: source(o.book, o.page),
+        source: { ...source(o.book, o.page), custom: o.sourceUrl ?? "" },
         identifier: "",
         ...((it.type ?? "feat") === "feat" ? {
           type: { value: "monster", subtype: "" }, requirements: "",
@@ -557,7 +582,7 @@ export function npc(o) {
         ci: { value: o.ci ?? [], custom: "" },
         languages: { value: o.languages ?? [], custom: o.languagesCustom ?? "", communication: o.telepathy ? { telepathy: { value: o.telepathy, units: "ft" } } : {} }
       },
-      source: source(o.book, o.page)
+      source: { ...source(o.book, o.page), custom: o.sourceUrl ?? "" }
     },
     prototypeToken: {
       name: o.name, displayName: 20, actorLink: false, disposition: o.disposition ?? 1,

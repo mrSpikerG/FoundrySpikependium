@@ -1,0 +1,586 @@
+{
+  "_id": "ZBHTaCGaGGgair0K",
+  "name": "Boots of Dendallen",
+  "type": "equipment",
+  "img": "icons/equipment/feet/boots-leather-banded-furred.webp",
+  "system": {
+    "description": {
+      "value": "<p>Нося настроенные сапоги, получаете полёт по своей скорости и парение, только не выше 20 футов над землёй. При Рывке доступны ещё 10 футов. Четыре заряда, в сумерках [[/r 1d3+1]]{1к3+1}. Бонусным действием за заряд: Поспешное отступление или Туманный шаг. Настроены полёт, парение, Cast, расход и восстановление; предел высоты, дополнительное перемещение Рывка и след тени ручные. При первом надевании — Мудрость СЛ 16: успех позволяет сразу снять сапоги, провал проклинает, наносит [[/r 4d8]]{4к8} некротического урона и запрещает снятие до Снятия проклятия/аналога. Проклятый профиль даёт помеху Акробатике и испытаниям Ловкости; вставание дороже на 10 футов. После разрешённого снятия снова [[/r 4d8]]{4к8} некротического урона. Условия проклятия, запрет снятия, доплата за вставание и оба события урона пока подтверждаются вручную. Профиль проклятия сохраняется независимо от настройки/экипировки; снимите его только после освобождения.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 2 фунта по обычным сапогам; источник веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=b3d2d053a1cd5e6a\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=SMb1Uyd9BBuVnbAQ]]{Поспешное отступление — 1 заряд}</li><li>[[/item activity=XZD6UfzCGTnWLHEq]]{Туманный шаг — 1 заряд}</li><li>[[/item activity=7xzzHCTjjS3mTG5s]]{Первое надевание: Мудрость СЛ 16} · [[/save activity=7xzzHCTjjS3mTG5s]]{Спасбросок цели}</li><li>[[/item activity=V3vos7w7l2ei5MHg]]{Провал при надевании / разрешённое снятие: 4к8} · [[/damage activity=V3vos7w7l2ei5MHg]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=b3d2d053a1cd5e6a",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-dendallen-boots",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 40000,
+      "denomination": "gp"
+    },
+    "rarity": "veryRare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "4",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dusk",
+          "type": "formula",
+          "formula": "1d3 + 1"
+        }
+      ]
+    },
+    "activities": {
+      "SMb1Uyd9BBuVnbAQ": {
+        "_id": "SMb1Uyd9BBuVnbAQ",
+        "type": "cast",
+        "name": "Поспешное отступление — 1 заряд",
+        "img": "icons/equipment/feet/boots-leather-banded-furred.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplExpeditiou"
+        }
+      },
+      "XZD6UfzCGTnWLHEq": {
+        "_id": "XZD6UfzCGTnWLHEq",
+        "type": "cast",
+        "name": "Туманный шаг — 1 заряд",
+        "img": "icons/equipment/feet/boots-leather-banded-furred.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplMistyStep0"
+        }
+      },
+      "7xzzHCTjjS3mTG5s": {
+        "_id": "7xzzHCTjjS3mTG5s",
+        "type": "save",
+        "name": "Первое надевание: Мудрость СЛ 16",
+        "img": "icons/equipment/feet/boots-leather-banded-furred.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "WWMyXuYEI0Ci56xx"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "16"
+          },
+          "bonus": ""
+        }
+      },
+      "V3vos7w7l2ei5MHg": {
+        "_id": "V3vos7w7l2ei5MHg",
+        "type": "damage",
+        "name": "Провал при надевании / разрешённое снятие: 4к8",
+        "img": "icons/equipment/feet/boots-leather-banded-furred.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 4,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "2iN5owaAOWvtaMyQ",
+      "name": "Сапоги Дендаллена: парение не выше 20 футов",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.speeds.fly",
+            "value": "@attributes.movement.speeds.walk",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "1u4bhUyeaiZ9dcIP"
+          },
+          {
+            "key": "system.attributes.movement.hover",
+            "value": "true",
+            "type": "override",
+            "priority": null,
+            "phase": "initial",
+            "_id": "PdnsxbzmkBarSbRr"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ZBHTaCGaGGgair0K.2iN5owaAOWvtaMyQ"
+    },
+    {
+      "_id": "WWMyXuYEI0Ci56xx",
+      "name": "Проклятие сапог Дендаллена",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.skills.acr.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "qdptu31kqs6Dkpu4"
+          },
+          {
+            "key": "system.abilities.dex.save.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "vCFACqEUTJ4PsUUr"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ZBHTaCGaGGgair0K.WWMyXuYEI0Ci56xx"
+    }
+  ],
+  "folder": "SBJ65gU7YA4akRMB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:dendallen-boots",
+      "originalName": "Boots of Dendallen"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ZBHTaCGaGGgair0K"
+}

@@ -1,0 +1,125 @@
+{
+  "_id": "gDIxsMPxEY1u6LUN",
+  "name": "Магические синапсы",
+  "type": "feat",
+  "img": "icons/consumables/meat/heart-organ-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Донор:</strong> Существо с Врождённым колдовством.</p><p>Изучаете один заговор волшебника от Интеллекта. Шаблон трансплантата предлагает нативный выбор заговора. Второй подходящий донор позволяет улучшить синапсы и изучить ещё один: добавьте отдельное улучшение из библиотеки. Без установленного трансплантата выданные этими записями заговоры блокируются.</p><p>Это шаблон получения: продвижение выдаёт физический трансплантат и, если нужно, выбор донора/части тела. После подтверждённой операции и восстановления отметьте выданный предмет экипированным. При замене трансплантата снимите старый предмет и связанный с ним шаблон; возврат уже потраченных ресурсов и хирургические последствия пока ручные.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-graft-magic-synapses",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "LaKt7nIYot0i3jxx",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.items.Item.W2X2tuC3JFN0Baws",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 0,
+        "title": "Физический трансплантат",
+        "hint": ""
+      },
+      {
+        "_id": "Bt2QHKNGqrqum2K1",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "0": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:wizard"
+            ],
+            "level": "0",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Один заговор волшебника",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "sluBNxrNkP9SryhZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:graft:magic-synapses"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!gDIxsMPxEY1u6LUN"
+}

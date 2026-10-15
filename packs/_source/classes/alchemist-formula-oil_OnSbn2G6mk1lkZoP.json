@@ -1,0 +1,157 @@
+{
+  "_id": "OnSbn2G6mk1lkZoP",
+  "name": "Маслянистая бомба",
+  "type": "feat",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Штатные кнопки для изученной формулы. Расходуется общий запас бомб. Зарядка имеет общий для всех формул предел раз за ход. Взрыв предлагает выбрать карточку урона оплаченной попавшей бомбы и использует половину исходного результата при провале, ноль при успехе, без нового броска. Основная цель и повторный взрыв исключаются; отмена оплаты делает старую карточку недействительной. Допустимые цели в радиусе, применение формулы и дополнительные условия пока контролируются вручную. Профиль эффекта применяйте к попавшей основной цели и провалившим спасбросок остальным целям.</p><p>Масло: следующий огонь +к6/исходную кость, максимум ceil(уровень/2); смывается галлоном воды. Контроль вручную.</p><p>Полное правило: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Маслянистая бомба</a>.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p><h3>Действия</h3><ul><li>[[/item activity=yba4xWAYvZNJZdGJ]]{Бросить заряженную бомбу}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-formula-oil",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Алхимик: известная формула",
+    "prerequisites": {
+      "level": 2,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "yba4xWAYvZNJZdGJ": {
+        "_id": "yba4xWAYvZNJZdGJ",
+        "type": "utility",
+        "name": "Бросить заряженную бомбу",
+        "img": "icons/tools/laboratory/vials-blue-pink.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:alchemist-bombs",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "90",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "sphere",
+            "size": "7.5",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "space",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "alchemistBomb": {
+              "charged": true
+            }
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "WyZkRkPekL6B0XMt",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:formula:oil"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!OnSbn2G6mk1lkZoP"
+}

@@ -1,0 +1,251 @@
+{
+  "_id": "dyLdz2EywoCgexdO",
+  "name": "Ледяная крепость",
+  "type": "feat",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>При входе в Ярость без брони получите [[/r 1d12]]{1к12} + Телосложение временных хитов. Позднее в Ярости бонусным действием можно потратить кость хитов для повторного получения. Условия срабатывания, выбор допустимых целей и откат уже применённых результатов проверяйте вручную; кнопка расходует ресурс и создаёт штатную карточку, но сама не подтверждает выполнение условия.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=CJuyPpXYtPGL8Y6f]]{Войти в Ярость: ледяная корка} · [[/heal activity=CJuyPpXYtPGL8Y6f]]{Бросок лечения}</li><li>[[/item activity=EnrKpdeHC1kSAwGd]]{Обновить ледяную корку} · [[/heal activity=EnrKpdeHC1kSAwGd]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "gs1-glacier-fortress",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Путь ледника",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "CJuyPpXYtPGL8Y6f": {
+        "_id": "CJuyPpXYtPGL8Y6f",
+        "type": "heal",
+        "name": "Войти в Ярость: ледяная корка",
+        "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "number": 1,
+          "denomination": 12,
+          "bonus": "@abilities.con.mod",
+          "types": [
+            "temphp"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      },
+      "EnrKpdeHC1kSAwGd": {
+        "_id": "EnrKpdeHC1kSAwGd",
+        "type": "heal",
+        "name": "Обновить ледяную корку",
+        "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "hitDice",
+              "value": "1",
+              "target": "smallest",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "number": 1,
+          "denomination": 12,
+          "bonus": "@abilities.con.mod",
+          "types": [
+            "temphp"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "FSerNjGOnP4jiYyp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:gs1-glacier:fortress"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!dyLdz2EywoCgexdO"
+}

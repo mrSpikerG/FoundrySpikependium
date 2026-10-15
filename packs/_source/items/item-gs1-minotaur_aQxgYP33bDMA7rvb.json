@@ -1,0 +1,153 @@
+{
+  "_id": "aQxgYP33bDMA7rvb",
+  "name": "Septum Ring of the Great Minotaur",
+  "type": "equipment",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройтесь и носите как пирсинг в носу: Сила +2, максимум 22, преимущество проверок Силы и удвоенная грузоподъёмность. Эти бонусы включаются штатным пассивным эффектом только при экипировке/настройке; большая существующая Сила не уменьшается. Также точно помните любой пройденный за последние 24 часа путь; память о маршрутах ведите вручную. Преимущество не распространяется на атаки или испытания Силы.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 0,01 фунта для небольшого носового украшения; источник веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=d1c10fccc272962c\">Сумка грифона — книга 1 (2024)</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=d1c10fccc272962c",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-minotaur",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.01,
+      "units": "lb"
+    },
+    "price": {
+      "value": 40000,
+      "denomination": "gp"
+    },
+    "rarity": "veryRare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {}
+  },
+  "effects": [
+    {
+      "_id": "8crHGZobYoeYFvuH",
+      "name": "Великий минотавр: Сила и грузоподъёмность",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.str.value",
+            "value": "+2 <=22",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "fcDFYt8PxSxsc5dE"
+          },
+          {
+            "key": "system.abilities.str.check.roll.mode",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "WiW0VG0CtUiIBNHA"
+          },
+          {
+            "key": "system.attributes.encumbrance.multipliers.maximum",
+            "value": "2",
+            "type": "multiply",
+            "priority": null,
+            "phase": "initial",
+            "_id": "HlP1FA0VKKQYT5Eg"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!aQxgYP33bDMA7rvb.8crHGZobYoeYFvuH"
+    }
+  ],
+  "folder": "wIJn7CjfpVbeGRRI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:minotaur",
+      "originalName": "Septum Ring of the Great Minotaur"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!aQxgYP33bDMA7rvb"
+}

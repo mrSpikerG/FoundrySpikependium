@@ -1,0 +1,274 @@
+{
+  "_id": "FwU2uktAatwxhITZ",
+  "name": "Покровительство Астрального грифона",
+  "type": "subclass",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Авторский подкласс (хоумбрю) из Сумки грифона, книга 1, редакция 2024. Умения выдаются по уровням класса Колдун. В библиотеке находятся краткие игровые памятки и штатные действия; полное правило приведено по ссылке источника. Ограничения автоматизации указаны на каждом умении.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey\">Сумка грифона — книга 1 (2024)</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "gs1-astral-griffon",
+    "classIdentifier": "warlock",
+    "advancement": [
+      {
+        "_id": "nw6KPldCeBHSAKEk",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.r0OvzHqxkqy04fHR",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.FCtvHbnLXDNJfMxB",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.vSOGhCTZo2IPV17Q",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "LikFxtxh156CY2IX",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.dTfQxlGXeGiH5Aum",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "qn6ha2z9Oracj26G",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5WYao1gSAXMEjuVE",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "hY486pm1ORJ8uK2w",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.d0TmpD9VFIg1Fx1V",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "YnfoLrW2asRewFuT",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMagicMissi",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplIdentify00",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLocateObje",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplRopeTrick0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "n4SlPm7EW01tXxNm",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplBlink00000",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplClairvoyan",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 5,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "FbbaLoatAeHSA5uz",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbPrivateSanctu",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLeomundsSe",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 7,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "bVBQw6amUlc53pqg",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLegendLore",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplPasswall00",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "fRJU44IoyqI9WWZ5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:gs1-astral-griffon"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FwU2uktAatwxhITZ"
+}

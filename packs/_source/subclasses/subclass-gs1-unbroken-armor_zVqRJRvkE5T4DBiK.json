@@ -1,0 +1,292 @@
+{
+  "_id": "zVqRJRvkE5T4DBiK",
+  "name": "Природная броня",
+  "type": "feat",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Постоянный эффект Дубовой кожи: КБ не ниже 17 (правила 2024). В начале своего хода получите половину уровня друида вниз временных хитов; при Диком облике — полтора уровня вниз. Получение временных хитов активируйте соответствующей кнопкой.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=2IhbrGcXeWnjStw6]]{Начало хода} · [[/heal activity=2IhbrGcXeWnjStw6]]{Бросок лечения}</li><li>[[/item activity=FBTPE3dONiAwcT9j]]{При Диком облике} · [[/heal activity=FBTPE3dONiAwcT9j]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "gs1-unbroken-armor",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Круг Несломленных",
+    "prerequisites": {
+      "level": 14,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "2IhbrGcXeWnjStw6": {
+        "_id": "2IhbrGcXeWnjStw6",
+        "type": "heal",
+        "name": "Начало хода",
+        "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "floor(@classes.druid.levels / 2)"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "temphp"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      },
+      "FBTPE3dONiAwcT9j": {
+        "_id": "FBTPE3dONiAwcT9j",
+        "type": "heal",
+        "name": "При Диком облике",
+        "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "floor(1.5 * @classes.druid.levels)"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "temphp"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "xWp1gCiM7Ro2x5WC",
+      "name": "Дубовая кожа: КБ не ниже 17",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.min",
+            "value": "17",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "FdHNi4gCYGWrhgxj"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!zVqRJRvkE5T4DBiK.xWp1gCiM7Ro2x5WC"
+    }
+  ],
+  "folder": "RyoyUnGL3JB0ecDG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:gs1-unbroken:armor"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!zVqRJRvkE5T4DBiK"
+}

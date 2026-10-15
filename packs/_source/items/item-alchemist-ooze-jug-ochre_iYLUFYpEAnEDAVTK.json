@@ -1,0 +1,206 @@
+{
+  "_id": "iYLUFYpEAnEDAVTK",
+  "name": "Кувшин слизи — золотистый студень",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>Действием бросьте сосуд до 20 футов, выпуская Золотистый студень. Слизь дружелюбна вам и союзникам, нападает на ближайшее допустимое существо, а без него движется к вам; через час становится неживой. Цель и маршрут выбирает Мастер. Призыв создаёт один профиль без замены атак, испытаний и бонуса владения на показатели бросающего.</p><p>Кувшин вмещает одну Большую слизь; у алхимика может быть только один такой сосуд. После выпуска остаётся пустым с потраченным применением; приготовление пополняет тот же предмет. Передачу и потерю сосуда учитывайте вручную.</p><p>Выпуск требует оплаты и карточки в чате; повторное размещение того же выпуска блокируется. Применяется часовой срок жизни. Слизневый наездник у создавшего слизь алхимика даёт скорость ходьбы не ниже 30 футов и его бонус владения к урону/инициативе. Езду и защиту от непосредственного контакта проверяйте вручную.</p><p><em>Цена оценочная: 4000 зм для многоразового редкого предмета по правилам 2024 года. Редкость кувшина взята по бутыли; источник не задаёт отдельной цены. Вес оценочный: 4 фунта по обычному глиняному кувшину; вес в источнике не указан.</em></p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p><h3>Действия</h3><ul><li>[[/item activity=5M3dhmHF5BFEOtd1]]{Разбить сосуд и выпустить слизь}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-ooze-jug-ochre",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 4,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": false
+    },
+    "activities": {
+      "5M3dhmHF5BFEOtd1": {
+        "_id": "5M3dhmHF5BFEOtd1",
+        "type": "summon",
+        "name": "Разбить сосуд и выпустить слизь",
+        "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "20",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "",
+          "hd": "",
+          "hp": "",
+          "attackDamage": "",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [
+          "lg"
+        ],
+        "creatureTypes": [
+          "ooze"
+        ],
+        "match": {
+          "ability": "",
+          "attacks": false,
+          "disposition": true,
+          "proficiency": false,
+          "saves": false
+        },
+        "profiles": [
+          {
+            "_id": "DfTATkDPBQAeEBgM",
+            "count": "1",
+            "name": "Золотистый студень",
+            "uuid": "Compendium.spikependium.creatures.Actor.fizzrNeDDt3N9GHx",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": ""
+        },
+        "flags": {
+          "spikependium": {
+            "alchemistCompanion": "ochre-jelly"
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "J7jCfnRtWWvJB4gn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:alchemist-ooze-jug-ochre",
+      "alchemistVessel": {
+        "jug": true,
+        "creature": "ochre-jelly"
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!iYLUFYpEAnEDAVTK"
+}

@@ -1,0 +1,287 @@
+{
+  "_id": "2OQpRNyXcLGPdjUF",
+  "name": "Бумажка Печенья судного дня",
+  "type": "consumable",
+  "img": "",
+  "system": {
+    "description": {
+      "value": "<p>Личная записка с постоянным предсказанием. Когда Мастер подтвердит смерть адресата предсказанным образом, он может активировать её: на минуту становится Свитком Возрождения только для этого существа. Затем рассыпается. Права на чтение свитка, момент/способ смерти и обычные ограничения Возрождения проверяет Мастер.</p><p><em>Условная цена личной бумажки: 2 см; адресный минутный свиток не оценивается как свободно продаваемый. Вес оценочный: 0,01 фунта для бумажки.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=97a38d6b497439b6\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=vFz3UueiADunCHOF]]{Мастер: предсказанная смерть — активировать свиток на минуту}</li><li>[[/item activity=tId23oFAfVuxm3t5]]{Возрождение только адресату предсказания}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=97a38d6b497439b6",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-cookie-paper",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.01,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0.2,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "scroll",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "vFz3UueiADunCHOF": {
+        "_id": "vFz3UueiADunCHOF",
+        "type": "utility",
+        "name": "Мастер: предсказанная смерть — активировать свиток на минуту",
+        "img": "",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "sweetCookieCharge": true
+          }
+        }
+      },
+      "tId23oFAfVuxm3t5": {
+        "_id": "tId23oFAfVuxm3t5",
+        "type": "cast",
+        "name": "Возрождение только адресату предсказания",
+        "img": "",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplRevivify00"
+        },
+        "flags": {
+          "spikependium": {
+            "sweetCookieCast": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "bUsfJpg5dOrpvDNY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "aux:gs1:sweet-paper",
+      "sweetTemplate": "paper",
+      "sweetCookieEnabled": 0,
+      "sweetCookieUntil": 0,
+      "sweetFates": [
+        "Огонь и губительные страсти",
+        "Опасность при полной луне",
+        "Смертельное любование отражением",
+        "Падение с большой высоты",
+        "Предательство",
+        "Пагубная спешка",
+        "Угроза за спиной",
+        "Потеря головы",
+        "Гибель за трапезой",
+        "Безжалостные силы природы",
+        "Непосильная тяжесть",
+        "Смерть в чужих челюстях",
+        "Зелень или зависть",
+        "Утрата привычной оболочки",
+        "Последний вдох",
+        "Несчастье в собственном доме",
+        "Угасание под новыми звёздами",
+        "Смертельный холод",
+        "Зловонная гибель",
+        "Обрушение камней"
+      ]
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!2OQpRNyXcLGPdjUF"
+}

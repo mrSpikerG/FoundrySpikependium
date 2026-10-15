@@ -1,0 +1,218 @@
+{
+  "_id": "ghZGwCiCF63f6FaC",
+  "name": "Дух дикой природы",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Дополнительные заговоры.</strong> Вы знаете два дополнительных заговора на выбор из списка магуса или друида. Выбор настроен штатным продвижением с Интеллектом.</p><p><strong>Зелёная рука.</strong> Получите владение Природой; если уже владеете, получите вместо этого компетентность. Навык выдаётся продвижением.</p><p><strong>Дикие инстинкты.</strong> Бонусным действием совершите Отход. До конца текущего хода ваша Скорость увеличивается на 10 футов, а проверки Силы (Атлетика) и Ловкости (Акробатика) выполняются с преимуществом. Число применений равно бонусу владения; восстановление после продолжительного отдыха. Кнопка расходует применение; Отход, временное изменение скорости, преимущество и окончание в этом же ходу пока контролируйте вручную.</p><h3>Действия</h3><ul><li>[[/item activity=8kvWDx3XplOMHKZh]]{Дикие инстинкты: Отход}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "11",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-sylvan-circle-spirit",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Лесной круг",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "@prof",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "8kvWDx3XplOMHKZh": {
+        "_id": "8kvWDx3XplOMHKZh",
+        "type": "utility",
+        "name": "Дикие инстинкты: Отход",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "I9RzTtJsGogv0Ceq",
+        "type": "Trait",
+        "configuration": {
+          "mode": "upgrade",
+          "allowReplacements": false,
+          "grants": [
+            "skills:nat"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Природа: владение или компетентность",
+        "hint": ""
+      },
+      {
+        "_id": "MtwhjtTC4ILIEcIG",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": false
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:magus",
+              "class:druid"
+            ],
+            "level": "0",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 3,
+        "title": "Два дополнительных заговора",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "FmtDkLCDgS6R4Bbr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-sylvan-circle:spirit"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ghZGwCiCF63f6FaC"
+}

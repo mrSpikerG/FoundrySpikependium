@@ -1,0 +1,239 @@
+{
+  "_id": "m714S2kX23EM36YX",
+  "name": "Ксенохимик",
+  "type": "subclass",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Специализация самостоятельного алхимика, правила 2014 года. Особенности выдаются на уровнях 2/6/10/18; отдельные формулы и открытия не занимают общие выборы класса. Краткие игровые памятки с источником; условная автоматизация и производство ещё продолжаются.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-xenochemist",
+    "classIdentifier": "alchemist",
+    "advancement": [
+      {
+        "_id": "XpLC4GLELLepIcsY",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.aVhZt6nzQfyjKBfg",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.CODTV5gMnKElSMzf",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "geuVFly4MKV2swmK",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.PXlyecnaYpPniCB5",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "cMGyqEu5sYPu6F1L",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.Xw2QjlZBHEifdfip",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "vy3t9ZuEq0HlMoGh",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.7I4NFXQYsBUByhKy",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "HVAnvQqqrHIv0RuM",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "2": {
+              "count": 2,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.NhECj96pAaVKdMen"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.E59l1H7GYt4DWLcB"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.7t8xkd2lZwsiGvrP"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.iMiD4ahsHPqzmlB7"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.GBzTEFsPhCFg1EIv"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.i5mcGjFyghyez7ZI"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.H3kR51bEABFEKm1x"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.CBDWDuZIw5CxoZAQ"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.LMoongR4W6yLut3v"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.9hZ6FhBRsPWBEwdN"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.gDIxsMPxEY1u6LUN"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.JpjoznCzVlBR2uyu"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.zQA4Jk4DL1Mk04fV"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.xxOzjqneLyjL3iNl"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.rIFbMvB43TeXAH1g"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.rUjQNMQjsE3tz8L2"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.PvA2ylqZQNzoemdj"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.451RZ58w0jArxxm2"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ChDDL5R24vCEkKkt"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.Sw9rCgp0Gqj49dKL"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.tWXixx2ejDDIwB6S"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.EyjJnhvgpAr26MSy"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.0hT3JDWpcICBdgi5"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.h8Xspi9dprLPMXP4"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.3R4aPlPb0Pk1OIEh"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.FYUsLLiPXM6VHvos"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 2,
+        "title": "Два чудовищных трансплантата",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "sAvGEhBLiC4TBoW3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:alchemist-xenochemist"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!m714S2kX23EM36YX"
+}

@@ -1012,49 +1012,51 @@
         {
           "name": "Вестники Космического рассвета",
           "url": "https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii",
-          "status": "notImported"
+          "status": "excludedByUser"
         },
         {
           "name": "Девятое перо",
           "url": "https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii",
-          "status": "notImported"
+          "status": "excludedByUser"
         },
         {
           "name": "Могильный завет",
           "url": "https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii",
-          "status": "notImported"
+          "status": "excludedByUser"
         },
         {
           "name": "Оберегающие длани",
           "url": "https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii",
-          "status": "notImported"
+          "status": "excludedByUser"
         },
         {
           "name": "Провидцы моря и неба",
           "url": "https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii",
-          "status": "notImported"
+          "status": "excludedByUser"
         },
         {
           "name": "Самоцветный конклав",
           "url": "https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii",
-          "status": "notImported"
+          "status": "excludedByUser"
         },
         {
           "name": "Ткачи горизонта",
           "url": "https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii",
-          "status": "notImported"
+          "status": "excludedByUser"
         },
         {
           "name": "Фантасмагорический цирк",
           "url": "https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii",
-          "status": "notImported"
+          "status": "excludedByUser"
         },
         {
           "name": "Хранители Горнила",
           "url": "https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii",
-          "status": "notImported"
+          "status": "excludedByUser"
         }
-      ]
+      ],
+      "inScope": false,
+      "status": "excludedByUser"
     },
     "adventure": {
       "total": 1,
@@ -1063,9 +1065,11 @@
         {
           "name": "Гробница теневых змей",
           "url": "https://ruleholder.com/sourcebooks/au/grobnitsa-tenevykh-zmey#sourcebook-reader-title",
-          "status": "notImported"
+          "status": "excludedByUser"
         }
-      ]
+      ],
+      "inScope": false,
+      "status": "excludedByUser"
     }
   },
   "additionalImportedDocuments": [
@@ -1076,7 +1080,25 @@
       "note": "Lists contain the 21 imported spells, not all 33 book spells."
     }
   ],
-  "missingRuleSections": [
+  "missingRuleSections": [],
+  "limitations": [
+    "UA drafts are present for all eight subclass concepts; they are not counted as imported AU book versions without a feature-by-feature comparison.",
+    "Imported means the document exists; this inventory does not certify every mechanical field or runtime behavior.",
+    "Different Russian translations are matched by spell/feat rules; names alone are not used as evidence of missing content.",
+    "47 magic item entries and 5 evolving item families count designs, not every rarity or base-weapon variant.",
+    "Some website spell descriptions contain unresolved numeric placeholders (e.g. sphere radius); those fields need another source before implementation.",
+    "The website supplies chapters missing from the local PDF; missingChapters in the PDF inventory remains a description of that PDF only."
+  ],
+  "userScope": {
+    "updatedOn": "2026-10-15",
+    "excluded": [
+      "adventures",
+      "standaloneRules",
+      "factions"
+    ],
+    "note": "По указанию пользователя: готовые приключения, правила и фракции не переносить. Механики игровых документов и служебные списки сохраняются."
+  },
+  "excludedRuleSections": [
     {
       "name": "Мультивселенная магии",
       "url": "https://ruleholder.com/sourcebooks/au/multivselennaya-magii"
@@ -1096,18 +1118,12 @@
     {
       "name": "Создание живых заклинаний",
       "url": "https://ruleholder.com/sourcebooks/au/magicheskie-sushchestva"
-    },
+    }
+  ],
+  "missingCompanionProfiles": [
     {
       "name": "Отголосок-спутник: сверка книжной версии и её параметров",
       "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#pokrovitelstvo-otgoloska-koldun"
     }
-  ],
-  "limitations": [
-    "UA drafts are present for all eight subclass concepts; they are not counted as imported AU book versions without a feature-by-feature comparison.",
-    "Imported means the document exists; this inventory does not certify every mechanical field or runtime behavior.",
-    "Different Russian translations are matched by spell/feat rules; names alone are not used as evidence of missing content.",
-    "47 magic item entries and 5 evolving item families count designs, not every rarity or base-weapon variant.",
-    "Some website spell descriptions contain unresolved numeric placeholders (e.g. sphere radius); those fields need another source before implementation.",
-    "The website supplies chapters missing from the local PDF; missingChapters in the PDF inventory remains a description of that PDF only."
   ]
 }

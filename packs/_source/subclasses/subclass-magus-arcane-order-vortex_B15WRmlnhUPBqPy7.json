@@ -1,0 +1,181 @@
+{
+  "_id": "B15WRmlnhUPBqPy7",
+  "name": "Арканный вихрь",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Действием выберите видимую точку в пределах 60 футов. Выбранные вами существа в сфере радиусом 20 футов с центром в этой точке могут телепортироваться на 30 футов в направлении по своему выбору. Остальные существа в сфере совершают спасбросок Силы против сложности заклинаний магуса. При провале существо получает [[/r 6d8]]{6d8} силового урона, притягивается на 15 футов к центру и до начала вашего следующего хода не может расходовать Скорость для удаления от центра. При успехе урона и этих последствий нет. Одно применение за продолжительный отдых. Кнопка бросает спасбросок и урон; разделение целей, телепортацию, притягивание и запрет движения контролируйте вручную.</p><h3>Действия</h3><ul><li>[[/item activity=p9U16zPvF8zpVq8r]]{Арканный вихрь: враждебные цели} · [[/damage activity=p9U16zPvF8zpVq8r]]{Бросок урона} · [[/save activity=p9U16zPvF8zpVq8r]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-arcane-order-vortex",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Арканный орден",
+    "prerequisites": {
+      "level": 14,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "p9U16zPvF8zpVq8r": {
+        "_id": "p9U16zPvF8zpVq8r",
+        "type": "save",
+        "name": "Арканный вихрь: враждебные цели",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "sphere",
+            "size": "20",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "str"
+          ],
+          "dc": {
+            "calculation": "int",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "pBE8pBBEeTG9BLie",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-arcane-order:vortex"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!B15WRmlnhUPBqPy7"
+}

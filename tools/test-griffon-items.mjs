@@ -7,7 +7,7 @@ import { monsterEvasionDamage } from "../scripts/monster-evasion.mjs";
 const read = pack => fs.readdirSync(`packs/_source/${pack}`).filter(f => f.endsWith(".json"))
   .map(f => JSON.parse(fs.readFileSync(`packs/_source/${pack}/${f}`, "utf8")));
 const items = read("items").filter(d => /^item:gs[12]:/.test(d.flags?.spikependium?.key ?? ""));
-assert.equal(items.length, 7);
+assert.equal(items.length, 129);
 for (const item of items) {
   assert.ok(item.folder); assert.ok(item.system.price.value > 0); assert.ok(item.system.weight.value > 0);
   assert.ok(item.system.description.value.includes("оценочн") || item.system.description.value.includes("по обычному амулету"));

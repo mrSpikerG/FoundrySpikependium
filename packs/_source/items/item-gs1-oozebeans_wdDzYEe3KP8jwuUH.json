@@ -1,0 +1,180 @@
+{
+  "_id": "wdDzYEe3KP8jwuUH",
+  "name": "Frefil's Jolly Oozebean Sugarbombs",
+  "type": "consumable",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>Упаковка из четырёх слизнебобов. При открытии модуль бросает четыре к8 и создаёт ровно четыре готовых цветных конфеты, фиксируя результаты до еды. @UUID[Compendium.spikependium.tables.RollTable.3fbFQXBaWQFaFcDd]{Цвета}. Каждая съедается бонусным действием и действует минуту. Одновременно действует только одна сладость со свойством Расстройство желудка. Новая оканчивает прежнюю; при замене — Телосложение СЛ 13, провал даёт Отравленного на минуту. Модуль заменяет свои сахарные профили и бросает обязательное испытание. Отмена расхода не восстанавливает уже заменённые эффекты; проверьте их вручную.</p><p><em>Цена оценочная: половина ориентира по редкости 2024 для всей расходуемой упаковки; не цена каждой конфеты внутри. Вес оценочный для маленькой сладости/упаковки: 0,1 фунта; источник веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=7011763fb4fc3b2b\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=YE13gUNZGqVEpvOf]]{Открыть пачку: четыре к8 и четыре фиксированных слизнебоба}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=7011763fb4fc3b2b",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-oozebeans",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 200,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "food",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "YE13gUNZGqVEpvOf": {
+        "_id": "YE13gUNZGqVEpvOf",
+        "type": "utility",
+        "name": "Открыть пачку: четыре к8 и четыре фиксированных слизнебоба",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "sweetEat": "ooze-open",
+            "sweetBeanTemplates": [
+              "Compendium.spikependium.items.Item.9PxnAa3UnTzQkJ9W",
+              "Compendium.spikependium.items.Item.M90ogs4fu3JHdCSJ",
+              "Compendium.spikependium.items.Item.XmsLwuUFvCvORUMR",
+              "Compendium.spikependium.items.Item.2hIkw7rg4Hy2Ot8A",
+              "Compendium.spikependium.items.Item.7EdEClOhlPSFemMo",
+              "Compendium.spikependium.items.Item.oQ6deBkzkLPn42Cl",
+              "Compendium.spikependium.items.Item.KEPnXdHEEckTDDpl",
+              "Compendium.spikependium.items.Item.07NW8zNfaCstuEF0"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CTS1hPwmX5lmz1VE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:oozebeans",
+      "originalName": "Frefil's Jolly Oozebean Sugarbombs"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!wdDzYEe3KP8jwuUH"
+}

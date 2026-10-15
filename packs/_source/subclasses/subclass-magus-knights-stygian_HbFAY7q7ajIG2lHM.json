@@ -1,0 +1,300 @@
+{
+  "_id": "HbFAY7q7ajIG2lHM",
+  "name": "Knights Stygian",
+  "type": "subclass",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Стигийские рыцари очищают мир от скверны, защищают невинных и слабых и добиваются справедливости. Их некромантия устрашает живых противников и превращает поверженных врагов в воинов на службе рыцарей.</p><p>Подкласс магуса: особенности выдаются на 3-м, 7-м, 14-м и 20-м уровнях. Перевод по предоставленному Magus 2024 — Playtest 3. Автоматизация условных меток и событийных особенностей продолжается.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "8",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-knights-stygian",
+    "classIdentifier": "magus",
+    "advancement": [
+      {
+        "_id": "QpHRs6rGYsXEYmXm",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.mDo2rG3zGcvNRCvw",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.cyBxQGrnwg74lS7K",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.ywh9FPMLAnuihZB4",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "4iBJYauxFdIIF6oL",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.ej2aN8XyUd5BDAzw",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "zhwSVvMnBQuIYA4o",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.hNUdCjy3C5dB8wwQ",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "qzSCJYFMGhQLYft6",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.bZZOsjm0sRnSn0v1",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 20,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "GGhSnM3xpkRVKq7Z",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.TTGLGgZuxbzhWG3f",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.spells.Item.YYbHGqycFvzqBD7Q",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.spells.Item.048vPVK004Q3ZUDm",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.spells.Item.hWNX4EnrMy5knEBQ",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "Lp7aUEjB7jZFusJO",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.4NsMIVfZVLcpQHOf",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplWeb0000000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 5,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "Id1ISDHyApnjqCr1",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplAnimateDea",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "TujopiWryPSTOB2Q",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplEvardsBlac",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 13,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "9c8X6ydStGE7pK2T",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplContagion0",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplInsectPlag",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 17,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "30f5YvxZ8EoNQIeN",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-knights-stygian",
+      "originalName": "Knights Stygian"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!HbFAY7q7ajIG2lHM"
+}

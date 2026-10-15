@@ -1,0 +1,256 @@
+{
+  "_id": "oJYJpGiXgVJUYhZc",
+  "name": "Глашатай коатля",
+  "type": "subclass",
+  "img": "icons/sundries/books/book-embossed-jewel-gold-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Авторский подкласс (хоумбрю) из Сумки грифона, книга 1, редакция 2024. Умения выдаются по уровням класса Воин. В библиотеке находятся краткие игровые памятки и штатные действия; полное правило приведено по ссылке источника. Ограничения автоматизации указаны на каждом умении.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey\">Сумка грифона — книга 1 (2024)</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "gs1-couatl-herald",
+    "classIdentifier": "fighter",
+    "advancement": [
+      {
+        "_id": "si3bmcKVo2GMJGxo",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.AHvc1Ljs8ecNROIf",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.QwleO3ykWeeuUfHh",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "D08OujNfwAui8uN3",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.QY7djaxqADBwHFO5",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "mBdpXonYVIwgfbOL",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.aBuS9qSGQCsejCnU",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "WNzJqCmVeMT4pSuX",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.TxlnOzkfjvYPjdjH",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 15,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "pX9RAm3lfJIqu0eS",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.nNSE3msAXVvqUMNZ",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "4AWyF9SMgXSntGAR",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "skills:ins",
+            "skills:per"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Проницательность и Убеждение",
+        "hint": ""
+      },
+      {
+        "_id": "fvvRjAuLHF1kUTP1",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "die",
+          "type": "dice",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "3": {
+              "number": 1,
+              "faces": 6,
+              "modifiers": []
+            },
+            "10": {
+              "number": 1,
+              "faces": 8,
+              "modifiers": []
+            },
+            "18": {
+              "number": 1,
+              "faces": 10,
+              "modifiers": []
+            }
+          }
+        },
+        "value": {},
+        "title": "Кость милосердия",
+        "hint": ""
+      },
+      {
+        "_id": "OEWau3gDVjsxJ1Uu",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "count",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "3": {
+              "value": 3
+            },
+            "7": {
+              "value": 4
+            },
+            "15": {
+              "value": 5
+            }
+          }
+        },
+        "value": {},
+        "title": "Кости милосердия",
+        "hint": ""
+      },
+      {
+        "_id": "De5iaclJtdT9GROh",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplCalmEmotio",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbSanctuary0000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 7,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "VqAIAFdgqOtyBtgQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:gs1-couatl-herald"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!oJYJpGiXgVJUYhZc"
+}

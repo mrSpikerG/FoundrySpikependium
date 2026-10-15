@@ -1,0 +1,308 @@
+{
+  "_id": "uAoEx8b2mHVKQ5FS",
+  "name": "Sidereal Cabal",
+  "type": "subclass",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Звёздная кабала предсказывает будущее по звёздам и вмешивается в переломные моменты. Когда-то она искала равновесие судьбы и свободы воли. Теперь одни её магусы незаметно охраняют естественный ход судьбы от внешних сил, а другие сознательно меняют исход развилок истории.</p><p>Подкласс магуса: особенности выдаются на 3-м, 7-м, 14-м и 20-м уровнях. Перевод по предоставленному Magus 2024 — Playtest 3. Автоматизация условных меток и событийных особенностей продолжается.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "10",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-sidereal-cabal",
+    "classIdentifier": "magus",
+    "advancement": [
+      {
+        "_id": "OiJifMfIhAqG17EN",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.yGoa8jDdTvvf3IW9",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.EEnnxILSJzLOcrOx",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.xGo44CjrCmvf9Imy",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "1VOoiCOh2CWyHLew",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5wCOULJA1ryv5dAt",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 7,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "djUo6Nq9dSxoqnGr",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5MnRRLmxgEm95sBW",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "ZTCSITgjJ0KjKclR",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.CodNP9M9qB2ULcM2",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 20,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "bffjxPlf0oYwbX26",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.1e9f7EitGKlNhvOv",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.spells.Item.MQX72HIm4d1mTFlP",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplBane000000",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplBless00000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 3,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "YvbZ312CRYfRJIJu",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplAugury0000",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMindSpike0",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 5,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "tFGYCvsuOD0DAmsk",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplHaste00000",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplSlow000000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 9,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "fFgCE21eplzxGHKN",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.gakKQAgstRvJhppG",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDivination",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 13,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      },
+      {
+        "_id": "Cg8MdrlZHyyJlMec",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplDream00000",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplScrying000",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 17,
+        "title": "Всегда подготовленные заклинания",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "30f5YvxZ8EoNQIeN",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-sidereal-cabal",
+      "originalName": "Sidereal Cabal"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!uAoEx8b2mHVKQ5FS"
+}

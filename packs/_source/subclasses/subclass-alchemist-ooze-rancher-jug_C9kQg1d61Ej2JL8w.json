@@ -1,0 +1,349 @@
+{
+  "_id": "C9kQg1d61Ej2JL8w",
+  "name": "Кувшин слизи",
+  "type": "feat",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Один кувшин хранит одну Большую слизь и работает как бутыль. Зельеварением заполните его золотистым студнем за 4 кости реагентов, студенистым кубом за 8, чёрной слизью за 10. Кнопки оплачивают и создают сосуд либо пополняют существующий пустой. Полный кувшин и несколько импортированных кувшинов блокируют приготовление; после выпуска остаётся пустой предмет. Передачу, потерю и возврат сосуда ведите вручную.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p><h3>Действия</h3><ul><li>[[/item activity=SVFBOTmGoHtNVM1G]]{Приготовить: Золотистый студень}</li><li>[[/item activity=LVSuXDfB3RvFrMHC]]{Приготовить: Студенистый куб}</li><li>[[/item activity=EDDkUIjXng4OCDbC]]{Приготовить: Чёрная слизь}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-ooze-rancher-jug",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Разводчик слизи",
+    "prerequisites": {
+      "level": 18,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "SVFBOTmGoHtNVM1G": {
+        "_id": "SVFBOTmGoHtNVM1G",
+        "type": "utility",
+        "name": "Приготовить: Золотистый студень",
+        "img": "icons/tools/laboratory/vials-blue-pink.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "minute",
+          "value": 10,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "4",
+              "target": "feat:alchemist-reagents",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "alchemistRecipe": {
+              "uuid": "Compendium.spikependium.items.Item.iYLUFYpEAnEDAVTK",
+              "cost": 4,
+              "jug": true
+            }
+          }
+        }
+      },
+      "LVSuXDfB3RvFrMHC": {
+        "_id": "LVSuXDfB3RvFrMHC",
+        "type": "utility",
+        "name": "Приготовить: Студенистый куб",
+        "img": "icons/tools/laboratory/vials-blue-pink.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "minute",
+          "value": 10,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "8",
+              "target": "feat:alchemist-reagents",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "alchemistRecipe": {
+              "uuid": "Compendium.spikependium.items.Item.M1SvWScUoNMBEhRW",
+              "cost": 8,
+              "jug": true
+            }
+          }
+        }
+      },
+      "EDDkUIjXng4OCDbC": {
+        "_id": "EDDkUIjXng4OCDbC",
+        "type": "utility",
+        "name": "Приготовить: Чёрная слизь",
+        "img": "icons/tools/laboratory/vials-blue-pink.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "minute",
+          "value": 10,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "10",
+              "target": "feat:alchemist-reagents",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "alchemistRecipe": {
+              "uuid": "Compendium.spikependium.items.Item.t7HyfOpayZLW3RGY",
+              "cost": 10,
+              "jug": true
+            }
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "qDd6wroSsCE0Go5L",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:alchemist-ooze-rancher:jug"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!C9kQg1d61Ej2JL8w"
+}

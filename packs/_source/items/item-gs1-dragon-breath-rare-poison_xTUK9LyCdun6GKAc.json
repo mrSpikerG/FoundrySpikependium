@@ -1,0 +1,176 @@
+{
+  "_id": "xTUK9LyCdun6GKAc",
+  "name": "Potion of Dragon's Breath (rare, poison)",
+  "type": "consumable",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>После питья получите одно временное дыхание на минуту: [[/r 3d10]]{3к10}, Ловкость СЛ 15, успех — половина. Дыхание заменяет одну атаку действия Атака; конус 15 футов либо линия 30×5. Этот вариант всегда наносит тип Яд; тип выбран при изготовлении по @UUID[Compendium.spikependium.tables.RollTable.xH2uixzYCZEeQ0uW]{Драконьим предкам}, не перебрасывайте его при питье. Желудок/зоб молодого, взрослого или древнего дракона могут заменить сырьё: соответствуют необычной, редкой и очень редкой редкости; тип по виду дракона. Если пропущен день с хотя бы двумя часами работы, к20: на 1 материалы/зелье портятся. Изготовление/сырьё и его дневной риск пока ручные.</p><p><em>Цена оценочная: половина ориентира по редкости 2024 для всей расходуемой упаковки; не цена каждой конфеты внутри. Вес по зелью: 0,5 фунта; источник собственного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=7a01b4148f697ec6\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=zcI0cdqx8qPgh7ue]]{Выпить: один выдох в следующую минуту}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=7a01b4148f697ec6",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-dragon-breath-rare-poison",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
+    "price": {
+      "value": 2000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "zcI0cdqx8qPgh7ue": {
+        "_id": "zcI0cdqx8qPgh7ue",
+        "type": "utility",
+        "name": "Выпить: один выдох в следующую минуту",
+        "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "sweetEat": "breath",
+            "sweetGrant": "Compendium.spikependium.feats.Item.Ua9x9dLcNO0wVIXT",
+            "sweetBreath": {
+              "type": "poison",
+              "dice": 3,
+              "dc": 15
+            }
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "LTZHCyIZEYdggjKG",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:dragon-breath-rare-poison",
+      "originalName": "Potion of Dragon's Breath (rare, poison)"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!xTUK9LyCdun6GKAc"
+}

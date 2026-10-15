@@ -1,0 +1,243 @@
+{
+  "_id": "ej2aN8XyUd5BDAzw",
+  "name": "Лик страха",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Ужасающее заклинание.</strong> Наложив заклинание некромантии 1-го уровня или выше либо заклинание Магии стигийских рыцарей, выберите одно существо в пределах 60 футов, которое видит вас. Оно совершает спасбросок Мудрости против сложности заклинаний магуса; при провале испугано до начала вашего следующего хода. Кнопку используйте только после подходящего накладывания; видимость и связь с накладыванием контролируются вручную.</p><p><strong>Бесстрашие.</strong> Вы имеете иммунитет к испугу, настроенный пассивным эффектом.</p><p><strong>Смертельный ужас.</strong> Каждый раз при нанесении некротического урона заклинанием или умением магуса можно заменить его психическим. Пока выберите вид урона вручную.</p><h3>Действия</h3><ul><li>[[/item activity=R9RW5K493FdHdFx0]]{Ужасающее заклинание: спасбросок} · [[/save activity=R9RW5K493FdHdFx0]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "9",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-knights-stygian-fear",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Стигийские рыцари",
+    "prerequisites": {
+      "level": 7,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "R9RW5K493FdHdFx0": {
+        "_id": "R9RW5K493FdHdFx0",
+        "type": "save",
+        "name": "Ужасающее заклинание: спасбросок",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "p3mHBJFlePhFGep3"
+          }
+        ],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "int",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "IoAElOmAtrGUMjKY",
+      "name": "Бесстрашие: иммунитет к испугу",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.ci.value",
+            "value": "frightened",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "nKxlgglxm4EKGcpi"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ej2aN8XyUd5BDAzw.IoAElOmAtrGUMjKY"
+    },
+    {
+      "_id": "p3mHBJFlePhFGep3",
+      "name": "Лик страха: Испуганный",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceStart",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "frightened"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ej2aN8XyUd5BDAzw.p3mHBJFlePhFGep3"
+    }
+  ],
+  "folder": "T8DerGB3zWqy3nKr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-knights-stygian:fear"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ej2aN8XyUd5BDAzw"
+}

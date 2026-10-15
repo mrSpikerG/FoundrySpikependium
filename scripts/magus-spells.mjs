@@ -130,9 +130,9 @@ export function prepareMagusDiceHealing(config, _dialog, message) {
 }
 
 export function guardMagusHealing(actor, amount, updates, options = {}) {
-  if (amount < 0 && actor.statuses.has("restrained") && (actor.appliedEffects ?? actor.effects).some(e =>
-    e.active && e.flags.spikependium?.magusGraveGrasp && e.statuses.has("restrained"))) {
-    ui.notifications.warn("Могильная хватка: опутанная этим заклинанием цель не может восстанавливать хиты.");
+  if (amount < 0 && (actor.appliedEffects ?? actor.effects).some(e => e.active &&
+    (e.flags.spikependium?.alchemistWithering || (actor.statuses.has("restrained") && e.flags.spikependium?.magusGraveGrasp && e.statuses.has("restrained"))))) {
+    ui.notifications.warn("Активный эффект запрещает этой цели восстанавливать хиты.");
     if (updates["system.attributes.hp.temp"] > actor.system.attributes.hp.temp) updates["system.attributes.hp.value"] = actor.system.attributes.hp.value;
     else return false;
   }

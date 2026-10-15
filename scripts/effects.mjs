@@ -8,8 +8,9 @@ export function auraActive(effect, origin, distance) {
   const target = effect.parent;
   if (target === source) return true;
   const type = effect.flags.spikependium.aura;
+  const prefixes = [`${origin.item.uuid}.Activity.`, `.Item.${origin.item.id}.Activity.`];
   const selected = source.effects.some(e => !e.disabled && !e.duration.expired && e.flags.spikependium?.aura === type
-    && e.system.origin?.activity?.startsWith(`${origin.item.uuid}.Activity.`));
+    && prefixes.some(prefix => e.system.origin?.activity?.startsWith(prefix)));
   if (!selected) return false;
   const radius = (source.classes.paladin?.system.levels ?? 0) >= 18 ? 30 : 10;
   // shortcut: без токенов на текущей сцене дистанция не проверяется; применять ауру на сцене боя.
@@ -45,7 +46,7 @@ export function tokensDistance(source, target) {
 export function prepareAuraCondition(wrapped, data) {
   const effect = this.parent;
   if (!effect.flags.spikependium?.aura || !effect.system.origin?.activity) return wrapped(data);
-  const origin = fromUuidSync(effect.system.origin.activity);
+  const origin = fromUuidSync(effect.system.origin.activity, { relative: effect.parent, strict: false });
   const active = auraActive(effect, origin, origin?.actor ? tokenDistance(origin.actor, effect.parent) : null);
   return wrapped({ ...data, spikependium: { ...data?.spikependium, auraActive: active } });
 }

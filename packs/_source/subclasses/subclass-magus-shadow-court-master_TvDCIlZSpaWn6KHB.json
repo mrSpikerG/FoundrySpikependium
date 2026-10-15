@@ -1,0 +1,343 @@
+{
+  "_id": "TvDCIlZSpaWn6KHB",
+  "name": "Теневой сифу",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Дополнительные заклинания Магического всплеска.</strong> Можно потратить применение Магического всплеска на @UUID[Compendium.dnd5e.spells24.Item.phbsplEyebite000]{Разящее око} или @UUID[Compendium.dnd5e.spells24.Item.phbsplProgrammed]{Заданная иллюзия}. Это тот же общий ресурс умения класса, а не новые применения. Восстановление ячейки вследствие всплеска пока выполните вручную.</p><p><strong>Теневой кукловод.</strong> Завершив короткий отдых, можно восстановить применение Ложного тела. Такое восстановление доступно один раз за продолжительный отдых; кнопка имеет отдельный ресурс.</p><h3>Действия</h3><ul><li>[[/item activity=UEvAgj1o83LeSGP9]]{Магический всплеск: Разящее око}</li><li>[[/item activity=89QnTfHkGUU9xL1y]]{Магический всплеск: Заданная иллюзия}</li><li>[[/item activity=7Asn5ZhLtMWTtRDJ]]{После короткого отдыха: восстановить «Дзюцу ложного тела»}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "10",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-shadow-court-master",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Теневой двор",
+    "prerequisites": {
+      "level": 20,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "UEvAgj1o83LeSGP9": {
+        "_id": "UEvAgj1o83LeSGP9",
+        "type": "cast",
+        "name": "Магический всплеск: Разящее око",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:magus-spell-surge",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "int",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": 6,
+          "properties": [],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplEyebite000"
+        }
+      },
+      "89QnTfHkGUU9xL1y": {
+        "_id": "89QnTfHkGUU9xL1y",
+        "type": "cast",
+        "name": "Магический всплеск: Заданная иллюзия",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:magus-spell-surge",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "int",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": 6,
+          "properties": [],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplProgrammed"
+        }
+      },
+      "7Asn5ZhLtMWTtRDJ": {
+        "_id": "7Asn5ZhLtMWTtRDJ",
+        "type": "utility",
+        "name": "После короткого отдыха: восстановить «Дзюцу ложного тела»",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "feat:magus-shadow-court-false-body",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "lZpSy1xWQe2EU7DH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-shadow-court:master"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!TvDCIlZSpaWn6KHB"
+}

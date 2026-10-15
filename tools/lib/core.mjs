@@ -83,8 +83,12 @@ export const BOOKS = {
   "GS1": "Сумка грифона — книга 1 (2024)",
   "GS2": "Сумка грифона — книга 2",
   "VSS": "Valda’s Spire of Secrets: Алхимик",
+  "EfC": "Алхимик: дополнения EfC",
+  "TT": "Алхимик: дополнения T&T",
+  "CAB": "Алхимик: дополнения CA:B",
   "MAGUS-PT3": "Magus 2024 — Playtest 3",
   "MM25": "Энциклопедия чудовищ (2025)",
+  "MM14": "Бестиарий (2014): существа алхимика",
   "AU": "Неудержимая магия",
   "UA-EB": "UA 2024: Обновление Эберрона",
   "UA-FR": "UA 2025: Подклассы Забытых королевств",
@@ -99,7 +103,7 @@ export const BOOKS = {
 };
 
 export function source(book, page = "") {
-  return { book, page: String(page), custom: "", rules: ["GS2", "VSS"].includes(book) ? "2014" : "2024", revision: 1, license: "" };
+  return { book, page: String(page), custom: "", rules: ["GS2", "VSS", "EfC", "TT", "CAB", "MM14"].includes(book) ? "2014" : "2024", revision: 1, license: "" };
 }
 
 /* -------------------------------------------- */

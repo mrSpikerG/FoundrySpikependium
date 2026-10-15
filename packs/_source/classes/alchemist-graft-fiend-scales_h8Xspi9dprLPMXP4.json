@@ -1,0 +1,82 @@
+{
+  "_id": "h8Xspi9dprLPMXP4",
+  "name": "Чешуя исчадия",
+  "type": "feat",
+  "img": "icons/consumables/meat/heart-organ-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Донор:</strong> Исчадие не меньше Среднего.</p><p>Природная броня: 15 + Ловкость, максимум добавки Ловкости 2. Нативная формула КБ участвует в обычном выборе брони и щита.</p><p>Это шаблон получения: продвижение выдаёт физический трансплантат и, если нужно, выбор донора/части тела. После подтверждённой операции и восстановления отметьте выданный предмет экипированным. При замене трансплантата снимите старый предмет и связанный с ним шаблон; возврат уже потраченных ресурсов и хирургические последствия пока ручные.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-graft-fiend-scales",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": true,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "fNmEqcQ2XB4rmD7M",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.items.Item.X6lDsdzyG9g3ox0C",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 0,
+        "title": "Физический трансплантат",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "sluBNxrNkP9SryhZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:graft:fiend-scales"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!h8Xspi9dprLPMXP4"
+}

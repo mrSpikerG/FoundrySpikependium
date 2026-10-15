@@ -1,0 +1,327 @@
+{
+  "_id": "YpKt0fHR50LSAVcV",
+  "name": "Боеприпасы кислотного света — арбалетный болт",
+  "type": "consumable",
+  "img": "icons/weapons/ammunition/arrow-broadhead-white.webp",
+  "system": {
+    "description": {
+      "value": "<p>При попадании горит минуту: яркий свет в пространстве цели, тусклый ещё в 5 футах; в начале каждого хода цель получает [[/r 1d4]]{1к4} кислоты, Скрытность с помехой, преимущества Невидимого недоступны. Существо действием Использование может извлечь и погасить боеприпас. После выстрела вернуть его нельзя. Обычное оружие списывает одну единицу. При подтверждённом попадании связанной карточки модуль накладывает минутный профиль помехи Скрытности. При активном Мастере профиль автоматически наносит [[/r 1d4]]{1к4} кислоты в начале хода именно поражённого токена, со штатными сопротивлениями и минутным сроком. Повторная обработка/возврат инициативы не повторяет урон. Свет, преимущества невидимости и извлечение пока ручные; при извлечении удалите профиль с цели. Отдельный бросок — ручной резерв.</p><p><em>Цена оценочная за одну единицу: редкость 2024, половина цены из-за расходуемости. Вес одной единицы взят у обычного боеприпаса 2024 года.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=f598d5ccc559a626\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=BCV51jihLYmbi456]]{При попадании: горящий кислотный свет}</li><li>[[/item activity=6YjrVTAB3V45SU6q]]{Начало хода цели: 1к4 кислоты} · [[/damage activity=6YjrVTAB3V45SU6q]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=f598d5ccc559a626",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-acidlight-crossbowBolt",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.075,
+      "units": "lb"
+    },
+    "price": {
+      "value": 2000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "ammo",
+      "subtype": "crossbowBolt"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "BCV51jihLYmbi456": {
+        "_id": "BCV51jihLYmbi456",
+        "type": "utility",
+        "name": "При попадании: горящий кислотный свет",
+        "img": "icons/weapons/ammunition/arrows-broadhead-white.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "HJHgPkFh4LvMCFEb"
+          }
+        ],
+        "range": {
+          "value": "600",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "6YjrVTAB3V45SU6q": {
+        "_id": "6YjrVTAB3V45SU6q",
+        "type": "damage",
+        "name": "Начало хода цели: 1к4 кислоты",
+        "img": "icons/weapons/ammunition/arrows-broadhead-white.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "acid"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        }
+      }
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": 0,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        },
+        "bonus": ""
+      },
+      "replace": false
+    }
+  },
+  "effects": [
+    {
+      "_id": "HJHgPkFh4LvMCFEb",
+      "name": "Кислотный свет: горящий боеприпас",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.skills.ste.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "G6U4a8LReJkDdd9y"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "griffonAcidlight": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!YpKt0fHR50LSAVcV.HJHgPkFh4LvMCFEb"
+    }
+  ],
+  "folder": "HSL8AQNhKiOkyhwa",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:acidlight-crossbowBolt",
+      "griffonAmmo": "acidlight"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!YpKt0fHR50LSAVcV"
+}

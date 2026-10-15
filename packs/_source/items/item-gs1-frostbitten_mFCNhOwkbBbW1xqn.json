@@ -1,0 +1,208 @@
+{
+  "_id": "mFCNhOwkbBbW1xqn",
+  "name": "Frostbitten Buckler",
+  "type": "equipment",
+  "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Три заряда, все восстанавливаются на рассвете. Когда видимое существо попадает по вам рукопашной атакой, реакцией за заряд нанесите ему [[/r 2d4]]{2к4} холодом. Затем получите временные хиты по количеству нанесённого холодного урона. Отдельная карточка оплачивает реакцию/заряд и наносит урон без испытания. При штатном применении её холодного урона обработчик выдаёт носителю временные хиты по фактическому рассчитанному урону после сопротивлений; повтор одной карточки бонус не повторяет. Нужны права на носителя. Исходное попадание/видимость, нестандартные карточки и отмену уже применённого урона контролируйте вручную. Урон, поглощённый временными хитами, также считается нанесённым; сверх оставшихся хитов не обрезается.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха/щита. Вес взят у выбранного базового доспеха/щита 2024; источник отдельного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=2cde4353800cca03\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=vBPqUEUK5zdakZdc]]{После рукопашного попадания: 2к4 холодом, затем временные хиты} · [[/damage activity=vBPqUEUK5zdakZdc]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=2cde4353800cca03",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-frostbitten",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 6,
+      "units": "lb"
+    },
+    "price": {
+      "value": 410,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 2,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "shield",
+      "baseItem": "shield"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "3",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "vBPqUEUK5zdakZdc": {
+        "_id": "vBPqUEUK5zdakZdc",
+        "type": "damage",
+        "name": "После рукопашного попадания: 2к4 холодом, затем временные хиты",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 4,
+              "bonus": "",
+              "types": [
+                "cold"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "flags": {
+          "spikependium": {
+            "griffonFrostReturn": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "sBQYEGTXu32yTmbJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:frostbitten",
+      "originalName": "Frostbitten Buckler",
+      "griffonArmorFamily": "frostbitten",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmShield0000"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!mFCNhOwkbBbW1xqn"
+}

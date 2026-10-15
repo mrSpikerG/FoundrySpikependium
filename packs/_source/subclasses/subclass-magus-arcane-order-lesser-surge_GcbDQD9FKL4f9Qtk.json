@@ -1,0 +1,68 @@
+{
+  "_id": "GcbDQD9FKL4f9Qtk",
+  "name": "Малый магический всплеск",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Один раз за продолжительный отдых можно наложить подготовленное заклинание магуса без расхода ячейки, как при расходе вашей ячейки наивысшего уровня. Выбор заклинания, его масштабирование и связь с расходом применения пока выполняются вручную.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "6",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-arcane-order-lesser-surge",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Арканный орден",
+    "prerequisites": {
+      "level": 7,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "pBE8pBBEeTG9BLie",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-arcane-order:lesser-surge"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!GcbDQD9FKL4f9Qtk"
+}

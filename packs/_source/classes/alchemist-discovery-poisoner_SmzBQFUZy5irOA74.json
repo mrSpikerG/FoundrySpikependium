@@ -1,0 +1,82 @@
+{
+  "_id": "SmzBQFUZy5irOA74",
+  "name": "Отравитель",
+  "type": "feat",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Получаете владение инструментами отравителя. СЛ изготовленных ядов равна СЛ ваших бомб.</p><p>Зельеварением можно изготовить следующие составы за указанное число костей реагентов. Само создание, расход и 24-часовой срок пока выполняйте вручную; эту таблицу нельзя считать автоматическим производством.</p><table><caption>Дополнительные рецепты</caption><thead><tr><th>Состав</th><th>Кости реагентов</th></tr></thead><tbody><tr><td>Простой яд, 2 дозы</td><td>1</td></tr><tr><td>Противоядие, 2 дозы</td><td>1</td></tr><tr><td>Зелье яда</td><td>2</td></tr><tr><td>Змеиный яд</td><td>2</td></tr><tr><td>Масло таггита</td><td>2</td></tr><tr><td>Сыворотка правды</td><td>2</td></tr></tbody></table><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-discovery-poisoner",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Алхимик",
+    "prerequisites": {
+      "level": 0,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "WQX4FIhVXe4BhMAB",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "tool:pois"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Инструменты отравителя",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "A0GDqUCTNZZYZVVy",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:discovery:poisoner"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SmzBQFUZy5irOA74"
+}

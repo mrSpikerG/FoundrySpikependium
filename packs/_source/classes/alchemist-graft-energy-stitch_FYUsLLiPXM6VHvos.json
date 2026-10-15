@@ -1,0 +1,113 @@
+{
+  "_id": "FYUsLLiPXM6VHvos",
+  "name": "Энергетический шов",
+  "type": "feat",
+  "img": "icons/consumables/meat/heart-organ-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Донор:</strong> Дракон, Исчадие, Небожитель, Фея или Элементаль с подходящим сопротивлением/иммунитетом.</p><p>Одно сопротивление урону звуком, кислотой, огнём, холодом, электричеством или ядом — по сопротивлению либо иммунитету донора. Тип фиксируется выбранным вариантом.</p><p>Это шаблон получения: продвижение выдаёт физический трансплантат и, если нужно, выбор донора/части тела. После подтверждённой операции и восстановления отметьте выданный предмет экипированным. При замене трансплантата снимите старый предмет и связанный с ним шаблон; возврат уже потраченных ресурсов и хирургические последствия пока ручные.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-graft-energy-stitch",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": true,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "61GiNWdiBZSE3LkC",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "0": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.items.Item.ik8GFL2d0zDhBMTY"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.AYzIxzTIw5qmrEhn"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.zTzjdl5gle8Mb8o7"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.IzLa3GRwfQMGQYhw"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.vcwcFGMOI3ezrH9r"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.5VGinltjXwfb7jED"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "equipment"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Часть тела и свойства донора",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "sluBNxrNkP9SryhZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:graft:energy-stitch"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!FYUsLLiPXM6VHvos"
+}

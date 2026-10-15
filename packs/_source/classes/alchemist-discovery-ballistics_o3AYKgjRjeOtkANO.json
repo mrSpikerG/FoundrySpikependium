@@ -1,0 +1,167 @@
+{
+  "_id": "o3AYKgjRjeOtkANO",
+  "name": "Исследование баллистики",
+  "type": "feat",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Изучаете две дополнительные общие формулы бомб. Выбор привязан к этому открытию и не расходует обычные формулы класса; при замене открытия его выдача удаляется штатным продвижением.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-discovery-ballistics",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Алхимик",
+    "prerequisites": {
+      "level": 0,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "JgK6nBMRWMUvVgEu",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "0": {
+              "count": 2,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.GUJz3LNM36Fb2cts"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ygcca16f8SLxoO32"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ZdgudXx1H3HUI3ve"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.LRFIXcqRu8ehjbBt"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.HTTdoV5IDas2nBv3"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.JIXXI4Dbk4WdrGDm"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.XDISwM8U9Ws7YQ5N"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.LUNSEHUQIKVFsUEO"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.YC43rPSHW5oAHsE3"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.OnSbn2G6mk1lkZoP"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.TCgLZIMmh9X3CbEe"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ylskzIPfkLzwxTKK"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.W0qHhkNWCidaIF9I"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.40DRCfOxSqmlRhaW"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.D4h57N0Wp77mo7yL"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.T3pSbHfXyPnQ11iU"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.0gpDlQZ92UWLABxV"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ygrXVjMZaVMvmMeU"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.meDmQ0SOUmrqHKWG"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.RvLCCtpvTMJqGDon"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.eJfLeOdHhbpIl1E2"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.fgdusAIrOoXg3teJ"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.vQqJxJURgCdWXyUj"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.Ut6CHHNmxOpYQp88"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Две дополнительные общие формулы",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "A0GDqUCTNZZYZVVy",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:discovery:ballistics"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!o3AYKgjRjeOtkANO"
+}

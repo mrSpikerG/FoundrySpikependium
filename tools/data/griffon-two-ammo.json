@@ -1,0 +1,139 @@
+{
+  "repository": "https://github.com/foundryvtt/dnd5e",
+  "revision": "87e94dbd9f930135e0694cd7e7d49f210603cd2c",
+  "license": "CC-BY-4.0",
+  "records": [
+    {
+      "source": "packs/_source/equipment24/adventuring-gear/ammunition/arrows.yml",
+      "sha256": "b33b60e23a785c8628fa68100f4bab6325ee14ab44542123537bde31732f6f4b",
+      "document": {
+        "_id": "phbamoArrows0000",
+        "name": "Arrows",
+        "type": "consumable",
+        "img": "icons/weapons/ammunition/arrows-broadhead-white.webp",
+        "system": {
+          "price": {
+            "value": 1,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 20,
+          "weight": {
+            "value": 0.05,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "uses": {
+            "max": "",
+            "autoDestroy": false,
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "base": {
+              "number": null,
+              "denomination": 0,
+              "types": [],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            },
+            "replace": false
+          },
+          "type": {
+            "value": "ammo",
+            "subtype": "arrow"
+          },
+          "magicalBonus": null,
+          "properties": [],
+          "identifier": "arrows"
+        },
+        "flags": {},
+        "_stats": {}
+      }
+    },
+    {
+      "source": "packs/_source/equipment24/adventuring-gear/ammunition/bolts.yml",
+      "sha256": "490b8bb426e994000543bd5fcebbc6c5f078ccd4beb535aeb11c25c242825396",
+      "document": {
+        "_id": "phbamoBolts00000",
+        "name": "Bolts",
+        "type": "consumable",
+        "img": "icons/weapons/ammunition/arrow-broadhead-white.webp",
+        "system": {
+          "price": {
+            "value": 1,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 20,
+          "weight": {
+            "value": 0.075,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "uses": {
+            "max": "",
+            "autoDestroy": false,
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "base": {
+              "number": null,
+              "denomination": 0,
+              "types": [],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            },
+            "replace": false
+          },
+          "type": {
+            "value": "ammo",
+            "subtype": "crossbowBolt"
+          },
+          "magicalBonus": null,
+          "properties": [],
+          "identifier": "bolts"
+        },
+        "flags": {},
+        "_stats": {}
+      }
+    }
+  ]
+}

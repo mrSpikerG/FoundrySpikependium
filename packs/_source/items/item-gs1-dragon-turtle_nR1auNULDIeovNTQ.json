@@ -1,0 +1,278 @@
+{
+  "_id": "nR1auNULDIeovNTQ",
+  "name": "Dragon Turtle Shield",
+  "type": "equipment",
+  "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Получая урон огнём, реакцией произнесите командное слово: исходный огненный урон уменьшается вдвое, а неподвижное облако пара диаметром 45 футов сильно заслоняет область на минуту, пока сильный ветер не развеет его. Резервуар восстанавливается на рассвете либо после часа погружения в немагическую солёную воду. Настроены реакция, ресурс, минутный шаблон радиусом 22,5 фута и отдельное восстановление после подтверждённого погружения. Исходный огненный урон, командное слово, сильное заслонение, ветер, вода и положение/окончание облака пока ручные. Это не постоянное сопротивление огню и не 45-футовый радиус.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха/щита. Вес взят у выбранного базового доспеха/щита 2024; источник отдельного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=360a6919b1b2b5c6\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=aB2ALh1YZyuRA1fP]]{Командное слово: вдвое огненный урон и облако пара}</li><li>[[/item activity=DPgwZcm5DPPzQocu]]{Час погружения в немагическую солёную воду: восстановить резервуар}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=360a6919b1b2b5c6",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-dragon-turtle",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 6,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4010,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 2,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "shield",
+      "baseItem": "shield"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "aB2ALh1YZyuRA1fP": {
+        "_id": "aB2ALh1YZyuRA1fP",
+        "type": "utility",
+        "name": "Командное слово: вдвое огненный урон и облако пара",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "22.5",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "griffonCommandWord": true
+          }
+        }
+      },
+      "DPgwZcm5DPPzQocu": {
+        "_id": "DPgwZcm5DPPzQocu",
+        "type": "utility",
+        "name": "Час погружения в немагическую солёную воду: восстановить резервуар",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "hour",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "sBQYEGTXu32yTmbJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:dragon-turtle",
+      "originalName": "Dragon Turtle Shield",
+      "griffonArmorFamily": "dragon-turtle",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmShield0000"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!nR1auNULDIeovNTQ"
+}

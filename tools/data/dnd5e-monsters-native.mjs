@@ -14,6 +14,36 @@ export class ConsumptionError extends Error {}
 const _loc = key => game.i18n.localize(key);
 const formatNumber = n => String(n);
 // module/data/activity/fields/consumption-targets-field.mjs at the same pinned commit.
+export async function nativeConsumeItemUses(config, updates) {
+    const item = this.target ? this.actor.items.get(this.target) : this.item;
+    if ( !item ) throw new ConsumptionError(_loc("DND5E.CONSUMPTION.Warning.MissingItem", {
+      activity: this.activity.name, item: this.item.name
+    }));
+    const result = await this._usesConsumption(config, {
+      uses: item.system.uses,
+      type: _loc("DND5E.CONSUMPTION.Type.ItemUses.Warning", { name: this.item.name }),
+      rolls: updates.rolls,
+      delta: { item: item.id, keyPath: "system.uses.spent" }
+    });
+    if ( !result ) return;
+    const itemUpdate = {};
+    if ( item.system.uses.autoDestroy && (result.spent === item.system.uses.max) ) {
+      const newQuantity = item.system.quantity - 1;
+      if ( newQuantity === 0 ) {
+        updates.delete.push(item.id);
+        return;
+      } else {
+        itemUpdate["system.uses.spent"] = 0;
+        itemUpdate["system.quantity"] = newQuantity;
+      }
+    } else {
+      itemUpdate["system.uses.spent"] = result.spent;
+    }
+    const itemIndex = updates.item.findIndex(i => i._id === item.id);
+    if ( itemIndex === -1 ) updates.item.push({ _id: item.id, ...itemUpdate });
+    else foundry.utils.mergeObject(updates.item[itemIndex], itemUpdate);
+}
+// module/data/activity/fields/consumption-targets-field.mjs at the same pinned commit.
 export async function nativeConsumeMaterial(config, updates) {
     const item = this.actor.items.get(this.target);
     if ( !item ) throw new ConsumptionError(_loc("DND5E.CONSUMPTION.Warning.MissingItem", {

@@ -1,0 +1,224 @@
+{
+  "_id": "DwanAF9Lg5lJBBWI",
+  "name": "Ironleaf Oaken Shield",
+  "type": "equipment",
+  "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройка друидом. Обычная форма: щит +1, суммарно +3 КД при владении. При превращении в зверя щит преобразуется вместе с вами и даёт только +1 КД звериному облику. При возвращении вновь оказывается на руке. Нативный щит имеет обычные +2 и магические +1; отдельный профиль +1 накладывайте на звериную форму, в которой обычный щит уже не учитывается. Не складывайте звериный профиль с полным бонусом +3. Преобразование, перенос/снятие профиля и возвращение щита пока ручные.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха/щита. Вес взят у выбранного базового доспеха/щита 2024; источник отдельного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=966eaebedbbfe1e7\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=TN0YQiguyLiEVAcK]]{Звериная форма: только +1 КД вместо щита}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=966eaebedbbfe1e7",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-ironleaf",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 6,
+      "units": "lb"
+    },
+    "price": {
+      "value": 410,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 2,
+      "magicalBonus": 1,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "shield",
+      "baseItem": "shield"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "TN0YQiguyLiEVAcK": {
+        "_id": "TN0YQiguyLiEVAcK",
+        "type": "utility",
+        "name": "Звериная форма: только +1 КД вместо щита",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "uF7qMvKP5AtOHLwC"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "uF7qMvKP5AtOHLwC",
+      "name": "Железнолист в зверином облике: КД +1",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.bonus",
+            "value": "1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "GrTw3ut1LYi1b9UQ"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!DwanAF9Lg5lJBBWI.uF7qMvKP5AtOHLwC"
+    }
+  ],
+  "folder": "sBQYEGTXu32yTmbJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:ironleaf",
+      "originalName": "Ironleaf Oaken Shield",
+      "griffonArmorFamily": "ironleaf",
+      "griffonClass": "druid",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmShield0000"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!DwanAF9Lg5lJBBWI"
+}

@@ -1,3 +1,4 @@
+import { griffonDervishProtected } from "./griffon-wearables.mjs";
 const applying = new Set();
 const keys = new Set(["actor:mm25:assassin", "actor:au-plant-vine"]);
 const isDisengage = activity => activity?.type === "utility" && activity.activation.type === "bonus"
@@ -25,7 +26,7 @@ export function opportunityTargetProtected(config, message) {
   const snapshot = config.spikependium?.opportunityTargets;
   const actors = snapshot ? snapshot.map(uuid => fromUuidSync(uuid, { strict: false }))
     : [...(game.user.targets ?? [])].map(t => (t.document ?? t).actor);
-  return actors.some(actor => actor && protectedFromOpportunity(actor));
+  return actors.some(actor => actor && (protectedFromOpportunity(actor) || griffonDervishProtected(config.subject?.actor, actor)));
 }
 export function recordDisengageUse(activity, message) {
   if (!isDisengage(activity) || !activity.actor.isOwner) return;

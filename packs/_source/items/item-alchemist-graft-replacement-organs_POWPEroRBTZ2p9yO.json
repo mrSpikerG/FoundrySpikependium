@@ -1,0 +1,91 @@
+{
+  "_id": "POWPEroRBTZ2p9yO",
+  "name": "Замена органа — внутренности",
+  "type": "equipment",
+  "img": "icons/consumables/meat/heart-organ-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Донор:</strong> Любое существо. <strong>Часть тела:</strong> внутренности.</p><p>Замена органа или конечности устраняет последствия ампутации/отказа органа, но не оживляет мёртвое. Внешность может сохранить признаки донора. Занимается соответствующая часть тела; функциональное восстановление и внешний вид определяет Мастер.</p><p>«Экипирован» означает: установка и обязательное восстановление уже закончены. На одной части тела действует один трансплантат. Подходящий донор, операция, затраты хитов/костей хитов и срок восстановления пока подтверждаются вручную. Вариант типа урона должен соответствовать донору.</p><p>Для получения через нативный выбор используйте @UUID[Compendium.spikependium.classes.Item.GBzTEFsPhCFg1EIv]{шаблон «Замена органа»}; он выдаёт этот физический предмет.</p><p><em>Цена указана в таблице стоимости трансплантатов источника (2014); доступность продажи определяет Мастер. Вес оценочный: 2 фунта по размеру заменяемой ткани/части тела; в источнике вес отсутствует. При установке и учёте нагрузки согласуйте его с Мастером.</em></p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-graft-item-replacement-organs",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 400,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "properties": [],
+    "strength": null,
+    "proficient": 1,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {}
+  },
+  "effects": [],
+  "folder": "BGNhYSzewWH7ZFRa",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:alchemist-graft:replacement:organs",
+      "graft": {
+        "id": "replacement",
+        "slot": "organs",
+        "heavy": false
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!POWPEroRBTZ2p9yO"
+}

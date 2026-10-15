@@ -1,18 +1,19 @@
 import inventory from "../../tools/data/external-content-inventory.json" with { type: "json" };
 import { attack, dmg, effect, change, utility, save, uses, DAWN, useSelf } from "../../tools/lib/core.mjs";
-import { equipment, folder } from "../../tools/lib/docs.mjs";
+import { equipment, consumable, folder } from "../../tools/lib/docs.mjs";
 
 function item(book, name, key, o) {
   const source = inventory.sources.find(s => s.id === book), entry = source.entries.find(e => e.name.endsWith(`[${name}]`));
   if (!entry) throw Error(`Не найден предмет ${book}/${name}`);
-  return equipment({ book, sourceUrl: entry.url, page: "", key: `item:${book.toLowerCase()}:${key}`, identifier: `griffon-${key}`,
+  return (o.consumableType || ["potion", "food"].includes(o.equipType) ? consumable : equipment)({ book, sourceUrl: entry.url, page: "", key: `item:${book.toLowerCase()}:${key}`, identifier: `griffon-${key}`,
     name: entry.name.slice(0, entry.name.lastIndexOf(" [")), en: name,
-    folder: folder("items", `${source.title}/${o.equipType === "ring" ? "Кольца" : "Чудесные предметы"}`),
+    folder: folder("items", `${source.title}/${o.category ?? (o.equipType === "ring" ? "Кольца" : o.equipType === "potion" ? "Зелья" : "Чудесные предметы")}`),
     img: "icons/equipment/finger/ring-band-engraved-scrolls-silver", weight: o.equipType === "ring" ? 0.01 : 2,
-    price: o.rarity === "rare" ? 4000 : o.rarity === "uncommon" ? 400 : 100,
+    price: { common: 100, uncommon: 400, rare: 4000, veryRare: 40000, legendary: 200000 }[o.rarity],
     priceNote: "Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана.",
     weightNote: o.equipType === "ring" ? "Вес оценочный: 0,01 фунта для небольшого кольца; источник не задаёт вес." : "Вес оценочный: 2 фунта; источник не задаёт вес.", ...o });
 }
+export { item as griffonItem };
 export function define() {
   item("GS1", "Ring of Gestures", "gestures", { equipType: "ring", rarity: "common",
     desc: "Надетое кольцо повторяет жест вашей руки своим камнем. Действием Магии можно изменить вид только этого камня с помощью Малой иллюзии: цвет, размер или форму изображённой руки. Другие применения заговора это кольцо не предоставляет.",

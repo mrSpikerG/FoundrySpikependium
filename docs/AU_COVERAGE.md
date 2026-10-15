@@ -14,8 +14,6 @@
 | Магические предметы | 0/47 |
 | Семейства развивающихся предметов | 0/5 |
 | Бестиарий | 0/19 |
-| Фракции | 0/9 |
-| Приключение | 0/1 |
 
 Все восемь концепций подклассов представлены черновиками UA. Их окончательные книжные версии не подтверждены сравнением каждой особенности, поэтому в таблице они не засчитываются. Семейства предметов считаются по замыслам, а не по каждой редкости или варианту оружия.
 
@@ -203,30 +201,11 @@
 - [Тёмная тварь](https://ruleholder.com/sourcebooks/au/magicheskie-sushchestva) — не перенесено.
 - [Чаростраж](https://ruleholder.com/sourcebooks/au/magicheskie-sushchestva) — не перенесено.
 
-## Фракции
+## Объём работ
 
-- [Вестники Космического рассвета](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено.
-- [Девятое перо](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено.
-- [Могильный завет](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено.
-- [Оберегающие длани](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено.
-- [Провидцы моря и неба](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено.
-- [Самоцветный конклав](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено.
-- [Ткачи горизонта](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено.
-- [Фантасмагорический цирк](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено.
-- [Хранители Горнила](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено.
+Готовые приключения, отдельные правила и фракции исключены из переноса пользователем 2026-10-15. Их отсутствие не считается незавершённой задачей. Служебные списки и механики игровых документов остаются в работе.
 
-## Приключение
-
-- [Гробница теневых змей](https://ruleholder.com/sourcebooks/au/grobnitsa-tenevykh-zmey#sourcebook-reader-title) — не перенесено.
-
-## Сопутствующие материалы
-
-- [Мультивселенная магии](https://ruleholder.com/sourcebooks/au/multivselennaya-magii) — не перенесено или требует книжной сверки.
-- [Создание магических миров и магические покровители](https://ruleholder.com/sourcebooks/au/sozdanie-magicheskikh-mirov) — не перенесено или требует книжной сверки.
-- [Слава, награды фракций и особые постройки](https://ruleholder.com/sourcebooks/au/magicheskie-fraktsii) — не перенесено или требует книжной сверки.
-- [Правила развития магических предметов и таблицы свойств](https://ruleholder.com/sourcebooks/au/magicheskie-predmety) — не перенесено или требует книжной сверки.
-- [Создание живых заклинаний](https://ruleholder.com/sourcebooks/au/magicheskie-sushchestva) — не перенесено или требует книжной сверки.
-- [Отголосок-спутник: сверка книжной версии и её параметров](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#pokrovitelstvo-otgoloska-koldun) — не перенесено или требует книжной сверки.
+Отголосок-спутник: требуется сверка книжной версии и параметров существа.
 
 Журнал списков заклинаний содержит только 21 перенесённое заклинание. Местный PDF содержит печатные страницы 4–45 и 151–160; сайт позволяет дополнить пропущенные главы.
 

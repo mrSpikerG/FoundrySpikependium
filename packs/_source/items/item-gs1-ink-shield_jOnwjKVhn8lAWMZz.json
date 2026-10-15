@@ -1,0 +1,687 @@
+{
+  "_id": "jOnwjKVhn8lAWMZz",
+  "name": "Retaliating Shield of Ink",
+  "type": "equipment",
+  "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Механический, немагический щит с тремя выстрелами до перезаправки. Когда существо Большого размера или меньше в 5 футах промахивается по вам, реакцией выстрелите чернилами: Ловкость, провал — Ослеплённый до начала следующего хода цели. Обычные чернила (бутылочка 10 зм): СЛ 10; чернила кальмара (флакон от 20 зм): СЛ 13. Новая карточка заполнена обычными чернилами. Две кнопки заправки за 1 минуту восстанавливают три выстрела и сохраняют соответствующую СЛ; применить другую СЛ без такой заправки нельзя. Расход флакона/денег подтверждайте вручную. Изучение: Интеллект (Расследование) СЛ 12 раскрывает устройство, обращение и уход. Кислота, яд, грог, масло, песок и прочие неподходящие вещества повреждают механизм; ремонт — 8 часов работы. Повреждение/ремонт, исходный промах, размер и дистанция ручные; отдых не заправляет щит.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха/щита. Вес взят у выбранного базового доспеха/щита 2024; источник отдельного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=e7eab4fac2293b1d\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=TzoFgRVMguMVEG1G]]{Выстрел чернилами: Ловкость СЛ 10} · [[/save activity=TzoFgRVMguMVEG1G]]{Спасбросок цели}</li><li>[[/item activity=FRdLGblcqAWqcCtz]]{Перезаправить: обычные чернила, 10 зм}</li><li>[[/item activity=hKkv6rlWxEtejbc6]]{Выстрел чернилами: Ловкость СЛ 13} · [[/save activity=hKkv6rlWxEtejbc6]]{Спасбросок цели}</li><li>[[/item activity=wiT7DA9xkdY5qdha]]{Перезаправить: чернила кальмара, от 20 зм}</li><li>[[/item activity=3afZZhhz9c62KbED]]{Изучить механизм: Расследование СЛ 12}</li><li>[[/item activity=XHdQbArQEazcp3KB]]{Ремонт после неподходящей заправки: 8 часов}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=e7eab4fac2293b1d",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-ink-shield",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 6,
+      "units": "lb"
+    },
+    "price": {
+      "value": 410,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 2,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "shield",
+      "baseItem": "shield"
+    },
+    "properties": [],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "3",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "TzoFgRVMguMVEG1G": {
+        "_id": "TzoFgRVMguMVEG1G",
+        "type": "save",
+        "name": "Выстрел чернилами: Ловкость СЛ 10",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "ZuBRAZxNKgi0d6lQ"
+          }
+        ],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "10"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "griffonInkDC": 10
+          }
+        }
+      },
+      "FRdLGblcqAWqcCtz": {
+        "_id": "FRdLGblcqAWqcCtz",
+        "type": "utility",
+        "name": "Перезаправить: обычные чернила, 10 зм",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "minute",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "-3",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "griffonInkRefill": 10
+          }
+        }
+      },
+      "hKkv6rlWxEtejbc6": {
+        "_id": "hKkv6rlWxEtejbc6",
+        "type": "save",
+        "name": "Выстрел чернилами: Ловкость СЛ 13",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "ZuBRAZxNKgi0d6lQ"
+          }
+        ],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "13"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "griffonInkDC": 13
+          }
+        }
+      },
+      "wiT7DA9xkdY5qdha": {
+        "_id": "wiT7DA9xkdY5qdha",
+        "type": "utility",
+        "name": "Перезаправить: чернила кальмара, от 20 зм",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "minute",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "-3",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "griffonInkRefill": 13
+          }
+        }
+      },
+      "3afZZhhz9c62KbED": {
+        "_id": "3afZZhhz9c62KbED",
+        "type": "check",
+        "name": "Изучить механизм: Расследование СЛ 12",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 500000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "check": {
+          "ability": "int",
+          "associated": [
+            "inv"
+          ],
+          "bonus": "",
+          "dc": {
+            "calculation": "",
+            "formula": "12"
+          },
+          "visible": true
+        }
+      },
+      "XHdQbArQEazcp3KB": {
+        "_id": "XHdQbArQEazcp3KB",
+        "type": "utility",
+        "name": "Ремонт после неподходящей заправки: 8 часов",
+        "img": "icons/equipment/shield/round-wooden-boss-steel-brown.webp",
+        "sort": 600000,
+        "activation": {
+          "type": "hour",
+          "value": 8,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "ZuBRAZxNKgi0d6lQ",
+      "name": "Чернила: Ослеплённый",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetStart",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "blinded"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!jOnwjKVhn8lAWMZz.ZuBRAZxNKgi0d6lQ"
+    }
+  ],
+  "folder": "sBQYEGTXu32yTmbJ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:ink-shield",
+      "originalName": "Retaliating Shield of Ink",
+      "griffonArmorFamily": "ink-shield",
+      "griffonInkDC": 10,
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmShield0000"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!jOnwjKVhn8lAWMZz"
+}

@@ -1,0 +1,179 @@
+{
+  "_id": "2U6NKmzkPtGlzEKt",
+  "name": "Фанфарные боеприпасы — пуля огнестрельного оружия",
+  "type": "consumable",
+  "img": "icons/containers/ammunition/bullets-belt.webp",
+  "system": {
+    "description": {
+      "value": "<p>При попадании обычный урон отсутствует: боеприпас исчезает и создаёт мгновенный выбранный звук от шёпота до крика. Слышащее существо без действия может распознать иллюзию проверкой Интеллекта (Расследование) СЛ 10. Выберите этот боеприпас в штатной атаке: расход работает, все части урона выстрела подавляются. Звук и слышимость разрешает Мастер; отдельная кнопка создаёт проверку распознавания. Это не автоматическое очарование/испуг и не универсальное преимущество отвлечения.</p><p><em>Цена оценочная за одну единицу: редкость 2024, половина цены из-за расходуемости. Вес одной единицы взят у обычного боеприпаса 2024 года.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=82eb91a29d985e9b\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=vu8HiWxlbtjcDehX]]{Слышащее существо: распознать звук, Расследование СЛ 10}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=82eb91a29d985e9b",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-fanfare-firearmBullet",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 50,
+      "denomination": "gp"
+    },
+    "rarity": "common",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "ammo",
+      "subtype": "firearmBullet"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "vu8HiWxlbtjcDehX": {
+        "_id": "vu8HiWxlbtjcDehX",
+        "type": "check",
+        "name": "Слышащее существо: распознать звук, Расследование СЛ 10",
+        "img": "icons/weapons/ammunition/arrows-broadhead-white.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "check": {
+          "ability": "int",
+          "associated": [
+            "inv"
+          ],
+          "bonus": "",
+          "dc": {
+            "calculation": "",
+            "formula": "10"
+          },
+          "visible": true
+        }
+      }
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": 0,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        },
+        "bonus": ""
+      },
+      "replace": false
+    }
+  },
+  "effects": [],
+  "folder": "0hAeu4kXkBa7kgis",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:fanfare-firearmBullet",
+      "griffonAmmo": "fanfare"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!2U6NKmzkPtGlzEKt"
+}

@@ -1,0 +1,343 @@
+{
+  "_id": "BSBCrqYXjNVRnHCU",
+  "name": "Мастер арканного искусства",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Дополнительные заклинания Магического всплеска.</strong> Можно потратить применение Магического всплеска на @UUID[Compendium.dnd5e.spells24.Item.phbsplChainLight]{Цепная молния} или @UUID[Compendium.dnd5e.spells24.Item.phbsplContingenc]{Предосторожность}. Это тот же общий ресурс умения класса, а не новые применения. Восстановление ячейки вследствие всплеска пока выполните вручную.</p><p><strong>Неиссякающие вихри.</strong> Завершив короткий отдых, можно восстановить применение Арканного вихря. Такое восстановление доступно один раз за продолжительный отдых. Кнопка восстановления имеет отдельный дневной ресурс; используйте её только после короткого отдыха.</p><h3>Действия</h3><ul><li>[[/item activity=0SKCB1im53k96RTx]]{Магический всплеск: Цепная молния}</li><li>[[/item activity=TyiZhxGOhScU5pN9]]{Магический всплеск: Предосторожность}</li><li>[[/item activity=EBk2RX48arpT0XrZ]]{После короткого отдыха: восстановить «Арканный вихрь»}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-arcane-order-master",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Арканный орден",
+    "prerequisites": {
+      "level": 20,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "0SKCB1im53k96RTx": {
+        "_id": "0SKCB1im53k96RTx",
+        "type": "cast",
+        "name": "Магический всплеск: Цепная молния",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:magus-spell-surge",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "int",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": 6,
+          "properties": [],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplChainLight"
+        }
+      },
+      "TyiZhxGOhScU5pN9": {
+        "_id": "TyiZhxGOhScU5pN9",
+        "type": "cast",
+        "name": "Магический всплеск: Предосторожность",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "feat:magus-spell-surge",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "int",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": 6,
+          "properties": [],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplContingenc"
+        }
+      },
+      "EBk2RX48arpT0XrZ": {
+        "_id": "EBk2RX48arpT0XrZ",
+        "type": "utility",
+        "name": "После короткого отдыха: восстановить «Арканный вихрь»",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "feat:magus-arcane-order-vortex",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "pBE8pBBEeTG9BLie",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-arcane-order:master"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!BSBCrqYXjNVRnHCU"
+}

@@ -1,0 +1,272 @@
+{
+  "checkedOn": "2026-10-15",
+  "classUrl": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+  "creatures": [
+    {
+      "key": "actor:alchemist-homunculus",
+      "id": "homunculus",
+      "name": "Гомункул алхимика",
+      "url": "https://dnd.su/bestiary/202-homunculus/",
+      "book": "MM14",
+      "size": "tiny",
+      "creatureType": "construct",
+      "ac": 13,
+      "hp": 5,
+      "hpFormula": "2d4",
+      "cr": 0,
+      "movement": {
+        "walk": 20,
+        "fly": 40
+      },
+      "abilities": {
+        "str": 4,
+        "dex": 15,
+        "con": 11,
+        "int": 10,
+        "wis": 10,
+        "cha": 7
+      },
+      "di": [
+        "poison"
+      ],
+      "dr": [],
+      "ci": [
+        "charmed",
+        "poisoned"
+      ],
+      "sha256": "ea65afe6958cf1ed8d245ec0b8d1289c06622b4f64a39bdfd55f856817dc3cbf"
+    },
+    {
+      "key": "actor:alchemist-golem",
+      "id": "golem",
+      "name": "Алхимический голем",
+      "url": "https://anyflip.com/rfmta/yxdx/basic/",
+      "book": "VSS",
+      "size": "med",
+      "creatureType": "construct",
+      "ac": 13,
+      "hp": 76,
+      "hpFormula": "9d8 + 36",
+      "cr": 5,
+      "movement": {
+        "walk": 30
+      },
+      "abilities": {
+        "str": 17,
+        "dex": 9,
+        "con": 18,
+        "int": 6,
+        "wis": 10,
+        "cha": 5
+      },
+      "di": [
+        "lightning"
+      ],
+      "dr": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "ci": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "petrified",
+        "poisoned"
+      ],
+      "sha256": null,
+      "sourceNote": "Public Valda 2014 block, printed page 43, read using web tool; original linked Russian card is private. Lightning absorption restores half incoming lightning. No private card text was accessed."
+    },
+    {
+      "key": "actor:alchemist-gray-ooze",
+      "id": "gray-ooze",
+      "name": "Серая слизь",
+      "url": "https://dnd.su/bestiary/257-gray-ooze/",
+      "book": "MM14",
+      "size": "med",
+      "creatureType": "ooze",
+      "ac": 8,
+      "hp": 22,
+      "hpFormula": "3d8 + 9",
+      "cr": 0.5,
+      "movement": {
+        "walk": 10,
+        "climb": 10
+      },
+      "abilities": {
+        "str": 12,
+        "dex": 6,
+        "con": 16,
+        "int": 1,
+        "wis": 6,
+        "cha": 2
+      },
+      "di": [],
+      "dr": [
+        "acid",
+        "fire",
+        "cold"
+      ],
+      "ci": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "exhaustion",
+        "frightened",
+        "prone"
+      ],
+      "sha256": "22b9b200da5ad18c5b8004d67bb186936ca9697f27d07bd18cbe5d60b50b8e8e"
+    },
+    {
+      "key": "actor:alchemist-ochre-jelly",
+      "id": "ochre-jelly",
+      "name": "Золотистый студень",
+      "url": "https://dnd.su/bestiary/8-ochre-jelly/",
+      "book": "MM14",
+      "size": "lg",
+      "creatureType": "ooze",
+      "ac": 8,
+      "hp": 45,
+      "hpFormula": "6d10 + 12",
+      "cr": 2,
+      "movement": {
+        "walk": 10,
+        "climb": 10
+      },
+      "abilities": {
+        "str": 15,
+        "dex": 6,
+        "con": 14,
+        "int": 2,
+        "wis": 6,
+        "cha": 1
+      },
+      "di": [
+        "lightning",
+        "slashing"
+      ],
+      "dr": [
+        "acid"
+      ],
+      "ci": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "exhaustion",
+        "frightened",
+        "prone"
+      ],
+      "sha256": "56464baee80d817f133d2285d551903ca95769dce1fd8f567af8b947916f99aa"
+    },
+    {
+      "key": "actor:alchemist-gelatinous-cube",
+      "id": "gelatinous-cube",
+      "name": "Студенистый куб",
+      "url": "https://dnd.su/bestiary/256-gelatinous-cube/",
+      "book": "MM14",
+      "size": "lg",
+      "creatureType": "ooze",
+      "ac": 6,
+      "hp": 84,
+      "hpFormula": "8d10 + 40",
+      "cr": 2,
+      "movement": {
+        "walk": 15
+      },
+      "abilities": {
+        "str": 14,
+        "dex": 3,
+        "con": 20,
+        "int": 1,
+        "wis": 6,
+        "cha": 1
+      },
+      "di": [],
+      "dr": [],
+      "ci": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "exhaustion",
+        "frightened",
+        "prone"
+      ],
+      "sha256": "cef039aa67db0675533f939be20c85b2ded80fcd07c8b15c16166773de5abffc"
+    },
+    {
+      "key": "actor:alchemist-black-pudding",
+      "id": "black-pudding",
+      "name": "Чёрная слизь",
+      "url": "https://dnd.su/bestiary/255-black-pudding/",
+      "book": "MM14",
+      "size": "lg",
+      "creatureType": "ooze",
+      "ac": 7,
+      "hp": 85,
+      "hpFormula": "10d10 + 30",
+      "cr": 4,
+      "movement": {
+        "walk": 20,
+        "climb": 20
+      },
+      "abilities": {
+        "str": 16,
+        "dex": 5,
+        "con": 16,
+        "int": 1,
+        "wis": 6,
+        "cha": 1
+      },
+      "di": [
+        "acid",
+        "cold",
+        "lightning",
+        "slashing"
+      ],
+      "dr": [],
+      "ci": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "exhaustion",
+        "frightened",
+        "prone"
+      ],
+      "sha256": "bc73de79213365a9eb54592b11db81836f11bb2d27ff9b20d197718486e1797f"
+    }
+  ],
+  "vessels": [
+    {
+      "id": "bottled-ooze",
+      "name": "Бутыль со слизью",
+      "creature": "gray-ooze",
+      "cost": 2,
+      "weight": 0.5
+    },
+    {
+      "id": "ooze-jug-ochre",
+      "name": "Кувшин слизи — золотистый студень",
+      "creature": "ochre-jelly",
+      "cost": 4,
+      "weight": 4,
+      "jug": true
+    },
+    {
+      "id": "ooze-jug-cube",
+      "name": "Кувшин слизи — студенистый куб",
+      "creature": "gelatinous-cube",
+      "cost": 8,
+      "weight": 4,
+      "jug": true
+    },
+    {
+      "id": "ooze-jug-black",
+      "name": "Кувшин слизи — чёрная слизь",
+      "creature": "black-pudding",
+      "cost": 10,
+      "weight": 4,
+      "jug": true
+    }
+  ]
+}

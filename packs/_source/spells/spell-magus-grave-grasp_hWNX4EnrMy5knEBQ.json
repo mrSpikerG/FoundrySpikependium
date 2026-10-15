@@ -58,7 +58,7 @@
         "units": "ft"
       },
       "affects": {
-        "count": "1",
+        "count": "1 + @scaling",
         "type": "creature",
         "choice": false,
         "special": ""
@@ -125,7 +125,7 @@
             "units": "ft"
           },
           "affects": {
-            "count": "1",
+            "count": "1 + @scaling",
             "type": "creature",
             "choice": false,
             "special": ""

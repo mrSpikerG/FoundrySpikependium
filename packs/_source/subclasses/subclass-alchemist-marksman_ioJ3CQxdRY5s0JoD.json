@@ -1,0 +1,181 @@
+{
+  "_id": "ioJ3CQxdRY5s0JoD",
+  "name": "Стрелок",
+  "type": "subclass",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Специализация самостоятельного алхимика, правила 2014 года. Особенности выдаются на уровнях 2/6/10/18; отдельные формулы и открытия не занимают общие выборы класса. Краткие игровые памятки с источником; условная автоматизация и производство ещё продолжаются.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Алхимик: дополнения CA:B</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "CAB",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-marksman",
+    "classIdentifier": "alchemist",
+    "advancement": [
+      {
+        "_id": "OdVZ0aImElvH14PS",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.MBZMgHLdBNYIEAcp",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "UpZ9SzEzGBBrDBhG",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.iRhsrBaLbdx2Elhy",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "IluebnmMrIRH52Ko",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5z4gMtLqlHSCVNSw",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "xCdshprthlmYWCaW",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.ltAOWobww0BRstjD",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "IlpEr9nVFl37ABWe",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.dNvRPBR3HuhUJbhx",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Открытие специализации (без замены)",
+        "hint": ""
+      },
+      {
+        "_id": "bFOv17qM37q5OQJW",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "weapon:mar:handcrossbow",
+            "weapon:mar:heavycrossbow"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 2,
+        "title": "Ручной и тяжёлый арбалеты",
+        "hint": ""
+      },
+      {
+        "_id": "BCEkg0URFGLmKkPo",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.qHMMwSsBZhImfpoF",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Формула специализации (вне общего лимита)",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "sAvGEhBLiC4TBoW3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:alchemist-marksman"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ioJ3CQxdRY5s0JoD"
+}

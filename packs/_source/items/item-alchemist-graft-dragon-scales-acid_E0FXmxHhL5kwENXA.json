@@ -1,0 +1,148 @@
+{
+  "_id": "E0FXmxHhL5kwENXA",
+  "name": "Чешуя дракона — Кислота",
+  "type": "equipment",
+  "img": "icons/consumables/meat/heart-organ-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Донор:</strong> Дракон не меньше Большого. <strong>Часть тела:</strong> кожа.</p><p>Также названа Шкурой дракона в описании. Базовая КБ 17 и сопротивление типу урона, к которому у дракона-донора иммунитет. Для установки требуется владение тяжёлыми доспехами. Нативная формула КБ участвует в обычном выборе брони/щита; тип сопротивления фиксируется вариантом.</p><p>«Экипирован» означает: установка и обязательное восстановление уже закончены. На одной части тела действует один трансплантат. Подходящий донор, операция, затраты хитов/костей хитов и срок восстановления пока подтверждаются вручную. Вариант типа урона должен соответствовать донору.</p><p>Для получения через нативный выбор используйте @UUID[Compendium.spikependium.classes.Item.0hT3JDWpcICBdgi5]{шаблон «Чешуя дракона»}; он выдаёт этот физический предмет.</p><p><em>Цена указана в таблице стоимости трансплантатов источника (2014); доступность продажи определяет Мастер. Вес оценочный: 15 фунта по размеру заменяемой ткани/части тела; в источнике вес отсутствует. При установке и учёте нагрузки согласуйте его с Мастером.</em></p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-graft-item-dragon-scales-acid",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 15,
+      "units": "lb"
+    },
+    "price": {
+      "value": 2250,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "properties": [],
+    "strength": null,
+    "proficient": 1,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {}
+  },
+  "effects": [
+    {
+      "_id": "TrB7lhBIXWHk8HwF",
+      "name": "Чешуя дракона",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.formulas",
+            "value": "17",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "9ltNOI4ThUq8emML"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "acid",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "fPry4LXDJImSq9hX"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.graftActive.alchemist-graft-item-dragon-scales-acid\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!E0FXmxHhL5kwENXA.TrB7lhBIXWHk8HwF"
+    }
+  ],
+  "folder": "J1w2QpAoAoZBBk4D",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:alchemist-graft:dragon-scales:acid",
+      "graft": {
+        "id": "dragon-scales",
+        "slot": "skin",
+        "heavy": true
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!E0FXmxHhL5kwENXA"
+}

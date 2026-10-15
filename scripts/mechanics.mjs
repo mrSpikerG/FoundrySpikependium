@@ -1,6 +1,18 @@
 import { WILD_TALENTS, DRAGONMARK_TABLES } from "./generated.mjs";
 import { noOpportunityAttacks } from "./opportunity.mjs";
 import { hasStormFlight, stormFlightSpeed } from "./dragonmark-storm.mjs";
+import { alchemistBombDCBonus } from "./alchemist-discoveries.mjs";
+import { graftActiveState } from "./alchemist-grafts.mjs";
+import { sweetTurtleAC } from "./griffon-sweets.mjs";
+
+export function magusMaskSpellChanges(wrapped, ...args) {
+  const changes = wrapped(...args);
+  if (this.item.flags.spikependium?.key === "subclass:magus-sylvan-circle:mask")
+    changes.push({ key: "system.properties", type: "add", value: "-concentration" });
+  if (this.item.flags.spikependium?.key === "item:gs1:dark-fathom")
+    changes.push({ key: "system.properties", type: "add", value: "-concentration" });
+  return changes;
+}
 
 export function conditionalState(actor, data) {
   const armor = actor.items.filter(i => i.type === "equipment" && i.system.equipped
@@ -8,6 +20,9 @@ export function conditionalState(actor, data) {
   const tokens = actor.items.find(i => i.flags.spikependium?.key === "subclass:phantom:tokens-of-the-departed");
   const maximum = Number(data.scale?.phantom?.trinkets ?? tokens?.system.uses.max ?? 0);
   return { unarmored: !armor.length, lightArmorAllowed: !armor.some(i => i.system.type.value !== "light"),
+    alchemistBombDC: alchemistBombDCBonus(actor, data),
+    graftActive: graftActiveState(actor), sweetTurtleAC: sweetTurtleAC(actor),
+    equippedShield: actor.items.some(i => i.type === "equipment" && i.system.equipped && i.system.type.value === "shield"),
     noOpportunityAttacks: noOpportunityAttacks(actor),
     hasSoulToken: !!tokens && maximum > tokens.system.uses.spent,
     mutableActive: (actor.effects ?? []).some(e => e.flags.spikependium?.mutableForm && !e.disabled && !e.duration.expired),

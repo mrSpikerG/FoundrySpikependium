@@ -5,7 +5,7 @@
   "img": "icons/tools/laboratory/vials-blue-pink.webp",
   "system": {
     "description": {
-      "value": "<p>Самостоятельный класс Valda’s Spire of Secrets по правилам 2014 года. Базовые хиты, владения, умения и бомбы доступны через штатные продвижения. Перенос продолжается: специализации, формулы, открытия, стартовое снаряжение, зельеварение и условные ограничения пока не завершены.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "value": "<p>Самостоятельный класс Valda’s Spire of Secrets по правилам 2014 года. Базовые хиты, владения, стартовое снаряжение, выбор/замена общих формул и 34 открытий доступны через штатные продвижения. Все 11 специализаций добавлены отдельно. Перенос продолжается: зельеварение, механизмы/существа, дополнительные открытия вместо повышения характеристик и условные ограничения пока не завершены.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
       "chat": ""
     },
     "source": {
@@ -449,6 +449,594 @@
         "value": {},
         "title": "Урон заряженной бомбы",
         "hint": ""
+      },
+      {
+        "_id": "GwbNc3BIN4gvU3Vq",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "bomb-d4",
+          "type": "dice",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "1": {
+              "number": 1,
+              "faces": 4,
+              "modifiers": []
+            },
+            "5": {
+              "number": 2,
+              "faces": 4,
+              "modifiers": []
+            },
+            "11": {
+              "number": 3,
+              "faces": 4,
+              "modifiers": []
+            },
+            "17": {
+              "number": 4,
+              "faces": 4,
+              "modifiers": []
+            }
+          }
+        },
+        "value": {},
+        "title": "Кости формулы к4",
+        "hint": ""
+      },
+      {
+        "_id": "hjJefgDe4MCOrfjq",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "bomb-d6",
+          "type": "dice",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "1": {
+              "number": 1,
+              "faces": 6,
+              "modifiers": []
+            },
+            "5": {
+              "number": 2,
+              "faces": 6,
+              "modifiers": []
+            },
+            "11": {
+              "number": 3,
+              "faces": 6,
+              "modifiers": []
+            },
+            "17": {
+              "number": 4,
+              "faces": 6,
+              "modifiers": []
+            }
+          }
+        },
+        "value": {},
+        "title": "Кости формулы к6",
+        "hint": ""
+      },
+      {
+        "_id": "PsHjJnidSJ5KbCta",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "bomb-d8",
+          "type": "dice",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "1": {
+              "number": 1,
+              "faces": 8,
+              "modifiers": []
+            },
+            "5": {
+              "number": 2,
+              "faces": 8,
+              "modifiers": []
+            },
+            "11": {
+              "number": 3,
+              "faces": 8,
+              "modifiers": []
+            },
+            "17": {
+              "number": 4,
+              "faces": 8,
+              "modifiers": []
+            }
+          }
+        },
+        "value": {},
+        "title": "Кости формулы к8",
+        "hint": ""
+      },
+      {
+        "_id": "eRtADIKIHIPdr5Ia",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "bomb-d12",
+          "type": "dice",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "1": {
+              "number": 1,
+              "faces": 12,
+              "modifiers": []
+            },
+            "5": {
+              "number": 2,
+              "faces": 12,
+              "modifiers": []
+            },
+            "11": {
+              "number": 3,
+              "faces": 12,
+              "modifiers": []
+            },
+            "17": {
+              "number": 4,
+              "faces": 12,
+              "modifiers": []
+            }
+          }
+        },
+        "value": {},
+        "title": "Кости формулы к12",
+        "hint": ""
+      },
+      {
+        "_id": "YWR9tY2iGehmuUPj",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "formulas-known",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "2": {
+              "value": 3
+            },
+            "5": {
+              "value": 4
+            },
+            "7": {
+              "value": 5
+            },
+            "9": {
+              "value": 6
+            },
+            "11": {
+              "value": 7
+            },
+            "13": {
+              "value": 8
+            },
+            "15": {
+              "value": 9
+            },
+            "17": {
+              "value": 10
+            },
+            "19": {
+              "value": 11
+            }
+          }
+        },
+        "value": {},
+        "title": "Известные формулы",
+        "hint": ""
+      },
+      {
+        "_id": "NI7vfyBWPHHLaZ2y",
+        "type": "ScaleValue",
+        "configuration": {
+          "identifier": "discoveries-known",
+          "type": "number",
+          "distance": {
+            "units": ""
+          },
+          "scale": {
+            "4": {
+              "value": 2
+            },
+            "6": {
+              "value": 3
+            },
+            "9": {
+              "value": 4
+            },
+            "13": {
+              "value": 5
+            },
+            "17": {
+              "value": 6
+            }
+          }
+        },
+        "value": {},
+        "title": "Известные открытия",
+        "hint": ""
+      },
+      {
+        "_id": "caULfkfJGDNdSKri",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "2": {
+              "count": 3,
+              "replacement": false
+            },
+            "3": {
+              "count": 0,
+              "replacement": true
+            },
+            "4": {
+              "count": 0,
+              "replacement": true
+            },
+            "5": {
+              "count": 1,
+              "replacement": true
+            },
+            "6": {
+              "count": 0,
+              "replacement": true
+            },
+            "7": {
+              "count": 1,
+              "replacement": true
+            },
+            "8": {
+              "count": 0,
+              "replacement": true
+            },
+            "9": {
+              "count": 1,
+              "replacement": true
+            },
+            "10": {
+              "count": 0,
+              "replacement": true
+            },
+            "11": {
+              "count": 1,
+              "replacement": true
+            },
+            "12": {
+              "count": 0,
+              "replacement": true
+            },
+            "13": {
+              "count": 1,
+              "replacement": true
+            },
+            "14": {
+              "count": 0,
+              "replacement": true
+            },
+            "15": {
+              "count": 1,
+              "replacement": true
+            },
+            "16": {
+              "count": 0,
+              "replacement": true
+            },
+            "17": {
+              "count": 1,
+              "replacement": true
+            },
+            "18": {
+              "count": 0,
+              "replacement": true
+            },
+            "19": {
+              "count": 1,
+              "replacement": true
+            },
+            "20": {
+              "count": 0,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.GUJz3LNM36Fb2cts"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ygcca16f8SLxoO32"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ZdgudXx1H3HUI3ve"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.LRFIXcqRu8ehjbBt"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.HTTdoV5IDas2nBv3"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.JIXXI4Dbk4WdrGDm"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.XDISwM8U9Ws7YQ5N"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.LUNSEHUQIKVFsUEO"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.YC43rPSHW5oAHsE3"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.OnSbn2G6mk1lkZoP"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.TCgLZIMmh9X3CbEe"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ylskzIPfkLzwxTKK"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.W0qHhkNWCidaIF9I"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.40DRCfOxSqmlRhaW"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.D4h57N0Wp77mo7yL"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.T3pSbHfXyPnQ11iU"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.0gpDlQZ92UWLABxV"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ygrXVjMZaVMvmMeU"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.meDmQ0SOUmrqHKWG"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.RvLCCtpvTMJqGDon"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.eJfLeOdHhbpIl1E2"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.fgdusAIrOoXg3teJ"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.vQqJxJURgCdWXyUj"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.Ut6CHHNmxOpYQp88"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Известные формулы бомб",
+        "hint": ""
+      },
+      {
+        "_id": "RNo2eLDgD2seNLCG",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "4": {
+              "count": 2,
+              "replacement": false
+            },
+            "5": {
+              "count": 0,
+              "replacement": true
+            },
+            "6": {
+              "count": 1,
+              "replacement": true
+            },
+            "7": {
+              "count": 0,
+              "replacement": true
+            },
+            "8": {
+              "count": 0,
+              "replacement": true
+            },
+            "9": {
+              "count": 1,
+              "replacement": true
+            },
+            "10": {
+              "count": 0,
+              "replacement": true
+            },
+            "11": {
+              "count": 0,
+              "replacement": true
+            },
+            "12": {
+              "count": 0,
+              "replacement": true
+            },
+            "13": {
+              "count": 1,
+              "replacement": true
+            },
+            "14": {
+              "count": 0,
+              "replacement": true
+            },
+            "15": {
+              "count": 0,
+              "replacement": true
+            },
+            "16": {
+              "count": 0,
+              "replacement": true
+            },
+            "17": {
+              "count": 1,
+              "replacement": true
+            },
+            "18": {
+              "count": 0,
+              "replacement": true
+            },
+            "19": {
+              "count": 0,
+              "replacement": true
+            },
+            "20": {
+              "count": 0,
+              "replacement": true
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.BXhUPffYrgGk4sId"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.Y661fxx5odmNiiNd"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.hGEaZnxDpAKUdXVf"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.7OHlvGOc3tUiJJpj"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.PUK18Hga9OjBtHN3"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.dNvRPBR3HuhUJbhx"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.kIZZZxZkuDwM2hQn"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.bV7K0UmoHSiOZZC1"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.Yj3II0MVw3lgOImF"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ltet5UpVv0mdFopo"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.PcEEg7EvqsHGuuwl"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.o3AYKgjRjeOtkANO"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.idpmd66KCX6HCdzA"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.AuCWzyQglsiibqwf"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.GXeecCWhLQzWVNOg"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ycYzVbmsqL7VaHor"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.yytJGWyn8hLnnaBs"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.VfTMlFvV2BB44htK"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.SmzBQFUZy5irOA74"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.nATMHTy0nEQ3kjgO"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.cV4F6III38Mq3DhW"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.RsvG6wIKyZYb9UmB"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.PFuQUOrU5zHiQ2pv"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.2dl0TzgS1CMMPRTn"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.GJ5spf6AAxldVdN5"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.AYVBC6kmjyBsquIs"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.kiABXqNoAjA8H1Ca"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.uSbssTPmNsnrQcLH"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.XzXdJhqEGDUX7WwA"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.JO9UpfnJ1TdRNr0v"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.J24zufUGD8OP4SuK"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.eEGKmwuwixZgUHa5"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.V0dgetIKrum9w4vR"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.YQYSB26j3CldxZSn"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Известные открытия",
+        "hint": ""
       }
     ],
     "spellcasting": {
@@ -458,7 +1046,252 @@
         "formula": ""
       }
     },
-    "startingEquipment": [],
+    "startingEquipment": [
+      {
+        "_id": "r1Nw3xfmp6I9aKsj",
+        "type": "OR",
+        "group": "",
+        "sort": 100000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "ocedxE9udevXPNRt",
+        "type": "AND",
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 200000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "vJ8sf2zE3n3bTHSY",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepLightCross",
+        "count": null,
+        "group": "ocedxE9udevXPNRt",
+        "sort": 300000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "FxeodwQZmShmtEPP",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbamoBolts00000",
+        "count": 20,
+        "group": "ocedxE9udevXPNRt",
+        "sort": 400000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "Ogop5e2f6mVscUoJ",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepClub000000",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 500000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "0cGYUzZCaFDewaOE",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepDagger0000",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 600000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "P4b2jlCtzCvTzC9E",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepGreatclub0",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 700000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "btB9nJ69g5NoFVcb",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepHandaxe000",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 800000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "rB7STFJKt3U56v63",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepJavelin000",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 900000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "9WluQWI9cAjOyGf9",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepLightHamme",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 1000000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "1eTYFd0Xvbw7ljmv",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepMace000000",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 1100000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "oHuTnPHh7Jr49SVL",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepQuartersta",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 1200000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "8BLsQ8fMqbtXTDut",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepSickle0000",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 1300000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "2AOxhPC0FAcEyAJG",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepSpear00000",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 1400000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "L83ue4wbarkwIlnZ",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepDart000000",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 1500000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "pvDpIdohROrd0nNI",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepLightCross",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 1600000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "UDGWcFDORNUXkibN",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepShortbow00",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 1700000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "oNRpITK85rAQrJoA",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepSling00000",
+        "count": null,
+        "group": "r1Nw3xfmp6I9aKsj",
+        "sort": 1800000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "W1gFaSwEMVOHYtmj",
+        "type": "OR",
+        "group": "",
+        "sort": 1900000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "7KEb7DoG9vr74lx8",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagExplorersPa",
+        "count": null,
+        "group": "W1gFaSwEMVOHYtmj",
+        "sort": 2000000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "AknZhJmXSrDDWBpw",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagScholarsPac",
+        "count": null,
+        "group": "W1gFaSwEMVOHYtmj",
+        "sort": 2100000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "WmXiD8u9BvhwN9LJ",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbtulAlchemists",
+        "count": null,
+        "group": "",
+        "sort": 2200000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "RusPc95tWD68C08E",
+        "type": "OR",
+        "group": "",
+        "sort": 2300000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "W0wV5Nq1D0EBMwB9",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagAcid0000000",
+        "count": null,
+        "group": "RusPc95tWD68C08E",
+        "sort": 2400000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "OeQJBfnK0TDczaNO",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagAlchemistsF",
+        "count": null,
+        "group": "RusPc95tWD68C08E",
+        "sort": 2500000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "UWTpH7RgmWcZatNG",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagPoisonBasic",
+        "count": null,
+        "group": "RusPc95tWD68C08E",
+        "sort": 2600000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "O1hOIDnbXq41Ykkp",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbarmLeatherArm",
+        "count": null,
+        "group": "",
+        "sort": 2700000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "Mrr3rUAGfNCxQdzn",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepDagger0000",
+        "count": null,
+        "group": "",
+        "sort": 2800000,
+        "requiresProficiency": false
+      }
+    ],
     "wealth": "",
     "primaryAbility": {
       "value": [

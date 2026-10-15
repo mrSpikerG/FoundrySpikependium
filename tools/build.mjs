@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import assert from "node:assert/strict";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { MODULE_ID, BOOKS, getMissingIcons, getMissingRefs, ARTIFICER_CATALOG } from "./lib/core.mjs";
 import { PACKS, REGISTRY, FOLDERS, EN_NAMES, uuidOf } from "./lib/docs.mjs";
@@ -15,7 +16,13 @@ import { BLUEPRINTS } from "../src/content/artificer.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = ["spells", "spells-psion-update", "arcana-unleashed-spells", "arcana-unleashed-spells-2", "arcana-unleashed-spells-3", "arcana-unleashed-summons", "creatures", "creatures-2", "monsters-mm25", "monsters-performers-mm25", "monsters-arcanaloth-mm25", "monsters-archhag-mm25", "monsters-assassins-bugbears-mm25", "monsters-bandits-mm25", "artificer", "psion", "subclasses-artificer",
   "subclasses-psion", "subclasses-fr", "subclasses-horror", "subclasses-arcane", "subclasses-villain", "subclasses-mystic",
-  "feats", "feats-villain", "arcana-unleashed-feats", "items", "griffons-saddlebag", "alchemist", "magus-spells", "magus", "journals"];
+  "feats", "feats-villain", "arcana-unleashed-feats", "items", "griffons-saddlebag", "griffons-saddlebag-rings", "griffons-saddlebag-two-rings", "griffons-saddlebag-wearables", "griffons-saddlebag-armor", "griffons-saddlebag-sweets", "griffons-saddlebag-weapons", "griffons-saddlebag-two-shields", "griffons-saddlebag-two-armor", "griffons-saddlebag-two-weapons", "griffonid", "subclasses-griffon", "alchemist", "alchemist-formulas", "alchemist-discoveries", "subclasses-alchemist", "alchemist-special-formulas", "alchemist-grafts", "alchemist-creatures", "magus-spells", "magus", "subclasses-magus", "journals"];
+
+assert.equal(new Set(CONTENT).size, CONTENT.length, "Повторный раздел библиотеки");
+for (const file of fs.readdirSync(path.join(ROOT, "src/content")).filter(name => name.endsWith(".mjs"))) {
+  if (/^export\s+(?:async\s+)?function\s+define\b/m.test(fs.readFileSync(path.join(ROOT, "src/content", file), "utf8")))
+    assert.ok(CONTENT.includes(file.slice(0, -4)), `Готовый раздел ${file} не подключён к библиотеке`);
+}
 
 /* -------------------------------------------- */
 /*  1. Определение содержимого                  */
@@ -24,7 +31,7 @@ const CONTENT = ["spells", "spells-psion-update", "arcana-unleashed-spells", "ar
 const context = {};
 for ( const name of CONTENT ) {
   const file = path.join(ROOT, "src/content", `${name}.mjs`);
-  if ( !fs.existsSync(file) ) { console.warn(`! Пропущен отсутствующий файл src/content/${name}.mjs`); continue; }
+  assert.ok(fs.existsSync(file), `Отсутствует обязательный раздел src/content/${name}.mjs`);
   const mod = await import(`../src/content/${name}.mjs`);
   await mod.define(context);
 }

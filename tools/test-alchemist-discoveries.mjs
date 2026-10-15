@@ -1,0 +1,93 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import { ALCHEMIST_DISCOVERIES } from "../src/content/alchemist-discoveries.mjs";
+import { ALCHEMIST_SAVE_DC, ALCHEMIST_URL } from "../src/content/alchemist-formulas.mjs";
+import { nativeItemChoiceCounts, nativeFeatClassLinked } from "./data/dnd5e-monsters-native.mjs";
+import { nativeAlchemistPrerequisites, nativeAlchemistLegacyEnchantment, nativeAlchemistForApplication, setAlchemistNativeContext } from "./data/dnd5e-alchemist-native.mjs";
+import { alchemistBombDCBonus, canUseAlchemistDiscovery, firebrandDamageChanges } from "../scripts/alchemist-discoveries.mjs";
+const docs = fs.readdirSync("packs/_source/classes").filter(f => f.endsWith(".json")).map(f => JSON.parse(fs.readFileSync(`packs/_source/classes/${f}`, "utf8")));
+const get = key => { const d = docs.find(d => d.flags?.spikependium?.key === key); assert.ok(d, key); return d; };
+const acts = doc => Object.values(doc.system.activities);
+const evidence = JSON.parse(fs.readFileSync("tools/data/alchemist-discoveries.json", "utf8"));
+assert.equal(evidence.entries.length, 34); assert.deepEqual(new Set(evidence.headings), new Set(ALCHEMIST_DISCOVERIES.map(d => d.name)));
+const cls = get("class:alchemist");
+const choice = cls.system.advancement.find(a => a.type === "ItemChoice" && a.title === "Известные открытия");
+assert.ok(choice); assert.equal(choice.configuration.allowDrops, false); assert.equal(choice.configuration.pool.length, 34);
+assert.deepEqual(new Set(choice.configuration.pool.map(i => i.uuid.split(".").at(-1))), new Set(evidence.entries.map(e => get(e.key)._id)));
+const expected = { 4: 2, 6: 1, 9: 1, 13: 1, 17: 1 };
+for (let level = 4; level <= 20; level++) {
+  const host = { configuration: choice.configuration, value: { added: {}, replaced: {} } };
+  assert.equal(nativeItemChoiceCounts.call(host, level).max, expected[level] ?? 0);
+  assert.equal(choice.configuration.choices[level].replacement, level > 4);
+  host.value.replaced[level] = { original: "old" };
+  assert.equal(nativeItemChoiceCounts.call(host, level).max, (expected[level] ?? 0) + (level > 4 ? 1 : 0));
+}
+assert.equal(Object.values(choice.configuration.choices).reduce((n, c) => n + c.count, 0), 6);
+globalThis.Actor = class {};
+globalThis.dnd5e = { settings: { rulesVersion: "modern" }, registry: { items: new Map() } };
+globalThis.game = { i18n: { getListFormatter: () => ({ format: v => v.join(", ") }) } };
+for (const row of evidence.entries) {
+  const doc = get(row.key), system = { ...doc.system, prerequisites: { ...doc.system.prerequisites, items: new Set(doc.system.prerequisites.items) }, parent: { uuid: `Compendium.spikependium.classes.Item.${doc._id}` } };
+  assert.equal(doc.name, row.name); assert.equal(doc.system.source.book, row.book); assert.equal(doc.system.source.custom, ALCHEMIST_URL);
+  assert.equal(doc.system.source.rules, "2014"); assert.equal(doc.system.source.page, ""); assert.ok(doc.folder);
+  assert.equal(doc.system.prerequisites.level, row.minimumLevel); assert.equal(doc.system.prerequisites.repeatable, false);
+  assert.equal(nativeFeatClassLinked.call(system), true, "discovery follow-up choices remain linked to the alchemist class");
+  assert.deepEqual(doc.system.prerequisites.items, row.specialty ? [`subclass:alchemist-${row.specialty}`] : []);
+  const actor = { system: { details: { level: 20 } }, identifiedItems: new Map(), sourcedItems: new Map() };
+  if (row.specialty) actor.identifiedItems.set(`subclass:alchemist-${row.specialty}`, new Set(["chosen-subclass"]));
+  assert.equal(nativeAlchemistPrerequisites.call(system, { actor, level: row.minimumLevel - 1 }).get("level").valid, false, "class-flow level, rather than multiclass character level, gates discovery");
+  assert.equal(nativeAlchemistPrerequisites.call(system, { actor, level: row.minimumLevel }).get("level").valid, true);
+  if (row.specialty) { actor.identifiedItems.clear(); assert.equal(nativeAlchemistPrerequisites.call(system, { actor, level: 20 }).get("items").valid, false); }
+  actor.sourcedItems.set(system.parent.uuid, new Set(["existing"]));
+  assert.equal(nativeAlchemistPrerequisites.call(system, { actor, level: 20 }).get("repeatable").valid, false);
+  for (const activity of acts(doc)) for (const profile of activity.effects ?? []) assert.ok(doc.effects.some(e => e._id === profile._id));
+}
+const ballistics = get("alchemist:discovery:ballistics").system.advancement[0];
+assert.equal(ballistics.configuration.choices[0].count, 2); assert.equal(ballistics.configuration.pool.length, 24); assert.equal(ballistics.configuration.allowDrops, false);
+const arcane = get("alchemist:discovery:arcane").system.advancement[0];
+assert.equal(arcane.configuration.choices[0].count, 3); assert.deepEqual(arcane.configuration.restriction.list, ["class:wizard"]); assert.equal(arcane.configuration.restriction.level, "0"); assert.deepEqual(arcane.configuration.spell.ability, ["int"]);
+assert.deepEqual(get("alchemist:discovery:combat-training").system.advancement[0].configuration.grants, ["weapon:mar", "armor:shl"]);
+assert.deepEqual(get("alchemist:discovery:poisoner").system.advancement[0].configuration.grants, ["tool:pois"]);
+assert.equal(get("alchemist:discovery:coagulation").effects[0].system.changes[0].value, "+ @classes.alchemist.levels + @abilities.con.mod");
+const dc = get("alchemist:discovery:blast-dc"), effect = { ...dc.effects[0], active: true };
+const actor = { items: [dc], effects: [effect] };
+for (let prof = 2; prof <= 6; prof++) assert.equal(alchemistBombDCBonus(actor, { prof }), Math.floor(prof / 2));
+effect.active = false; assert.equal(alchemistBombDCBonus(actor, { prof: 6 }), 0);
+actor.appliedEffects = [{ ...effect, active: true }]; actor.effects = []; assert.equal(alchemistBombDCBonus(actor, { prof: 5 }), 2);
+actor.items = []; assert.equal(alchemistBombDCBonus(actor, { prof: 6 }), 0, "orphan effects cannot grant the bonus");
+for (const d of [get("alchemist:bombs"), ...ALCHEMIST_DISCOVERIES.filter(d => d.id === "fire-eater").map(d => get(`alchemist:discovery:${d.id}`)), ...docs.filter(d => d.flags?.spikependium?.key?.startsWith("alchemist:formula:"))])
+  for (const a of acts(d).filter(a => a.type === "save")) assert.equal(a.save.dc.formula, ALCHEMIST_SAVE_DC);
+globalThis.ui = { notifications: { warn() {} } };
+const metabolism = get("alchemist:discovery:metabolism"), host = { ...acts(metabolism)[0], item: metabolism, actor: { isOwner: true, classes: { alchemist: { system: { levels: 13 } } }, items: [{ type: "subclass", system: { identifier: "alchemist-xenochemist" } }], system: { attributes: { prof: 5 } } } };
+assert.equal(canUseAlchemistDiscovery(host), undefined); host.actor.classes.alchemist.system.levels = 12; assert.equal(canUseAlchemistDiscovery(host), false);
+host.actor.classes.alchemist.system.levels = 13; host.actor.items = []; assert.equal(canUseAlchemistDiscovery(host), false);
+host.actor.items = [{ type: "subclass", system: { identifier: "alchemist-xenochemist" } }];
+host.consumption = acts(metabolism).at(-1).consumption; assert.equal(canUseAlchemistDiscovery(host), false, "six dice exceed proficiency five");
+host.actor.system.attributes.prof = 6; assert.equal(canUseAlchemistDiscovery(host), undefined);
+host.actor.isOwner = false; assert.equal(canUseAlchemistDiscovery(host), false);
+assert.equal(canUseAlchemistDiscovery({ item: {} }), undefined);
+const firebrand = get("alchemist:discovery:firebrand"), coat = acts(firebrand)[0], fx = firebrand.effects[0];
+assert.equal(coat.type, "enchant"); assert.deepEqual(coat.restrictions.categories, ["simpleM", "martialM"]); assert.equal(coat.activation.type, "bonus");
+assert.equal(coat.consumption.targets[0].target, "feat:alchemist-bombs"); assert.equal(fx.system.magical, false); assert.equal(fx.duration.expiry, "sourceEnd");
+globalThis.foundry = { utils: { deepClone: structuredClone, getType: v => v && !Array.isArray(v) && typeof v === "object" ? "Object" : typeof v } };
+globalThis.Roll = { replaceFormulaData: (formula, data) => formula.replace(/@scale\.alchemist\.bomb-d6/g, data.dice) };
+setAlchemistNativeContext({ DamageData: class { constructor(data) { Object.assign(this, structuredClone(data)); } clone() { return structuredClone(this); } } });
+globalThis.ActiveEffect = { implementation: { applyChangeField(model, change) { assert.equal(change.key, "damage.parts"); return [...model.damage.parts, change.value]; } } };
+for (const dice of ["1d6", "2d6", "3d6", "4d6"]) {
+  const changes = await nativeAlchemistForApplication(fx.system.changes, { getRollData: () => ({ dice }) }, { getRollData: () => ({ dice: "99d20" }) });
+  const attack = { id: "weapon", type: "attack", attack: { type: { classification: "weapon" } }, damage: { parts: [{ custom: { formula: "1d8" }, types: ["slashing"] }] } };
+  const spell = { ...structuredClone(attack), id: "spell", attack: { type: { classification: "spell" } } };
+  const save = { ...structuredClone(attack), id: "save", type: "save" }, heal = { id: "heal", type: "heal", healing: { custom: { enabled: false } } };
+  const all = [attack, spell, save, heal], target = { system: { activities: { getByTypes: (...types) => all.filter(a => types.includes(a.type)) } } }, updates = {};
+  assert.equal(firebrandDamageChanges.call({ parent: fx }, (item, change, result) => nativeAlchemistLegacyEnchantment(item, change, result), target, changes[0], updates), false);
+  assert.deepEqual(Object.keys(updates), ["system.activities.weapon.damage.parts"], "coating never adds fire to spells, saves or healing on the weapon");
+  const parts = updates["system.activities.weapon.damage.parts"]; assert.equal(parts[0].types[0], "slashing"); assert.equal(parts[1].custom.formula, dice);
+  assert.deepEqual(parts[1].types, ["fire"]); assert.equal(parts[1].locked, true); assert.equal(attack.damage.parts.length, 1, "the base template is untouched");
+}
+const unrelated = {}; assert.equal(firebrandDamageChanges.call({ parent: { flags: {} } }, item => item, unrelated, { key: "system.damage.parts" }, {}), unrelated);
+assert.equal(get("alchemist:discovery:enriched-serum").effects[0].system.changes.length, 0, "conditional nonmagical resistance must not weaken existing permanent resistance");
+assert.equal(get("alchemist:discovery:crow-mask").effects.length, 0, "inhaled immunity must not become blanket poison immunity");
+const eater = acts(get("alchemist:discovery:fire-eater")); assert.equal(eater[0].flags.spikependium.alchemistBomb.charged, true);
+assert.equal(eater[0].type, "save"); assert.equal(eater[0].damage.onSave, "half"); assert.equal(eater[0].target.template.type, "cone"); assert.equal(eater[0].target.template.size, "15");
+assert.equal(eater[1].target.affects.type, "self"); assert.equal(eater[1].damage.parts[0].custom.formula, "@scale.alchemist.bomb.number d4");
+console.log("Alchemist discoveries: all 34 source entries, native choice/replacement/prerequisites, linked formulas/cantrips/proficiencies, scoped DC toggle, resources and native typed weapon coating passed.");

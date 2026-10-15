@@ -1,0 +1,179 @@
+{
+  "_id": "2pbzearnH1DSNFjk",
+  "name": "Боеприпасы феникса — стрела",
+  "type": "consumable",
+  "img": "icons/weapons/ammunition/arrows-broadhead-white.webp",
+  "system": {
+    "description": {
+      "value": "<p>Магическая стрела/болт +1 к атаке и урону; колющий урон заменяется огненным. После выстрела возвращается в привязанный маленький колчан/футляр в начале вашего следующего хода. Бонусным действием командным словом можно воспламенить её: при выстреле в тот же ход +[[/r 1d6]]{1к6} огня, но дальше 30 футов боеприпас сгорает до попадания; такой боеприпас возвращается немедленно. Модуль ведёт доступность, срок воспламенения, возвращение и тип/дополнительную кость в связанной карточке урона. Дистанция свыше 30 футов при доступных токенах блокирует весь урон горящей стрелы. Вне инициативы обычное возвращение происходит после 6 секунд мирового времени. Сам вместительный футляр (ещё до десяти стрел/болтов), связь с ним и появление через 24 часа после уничтожения вне антимагии пока учитываются вручную; документ с количеством 0 до возвращения не удаляйте.</p><p><em>Цена оценочная за одну единицу: редкость 2024; возвращающийся предмет не получает скидку расходника. Вес одной единицы взят у обычного боеприпаса 2024 года.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=e9fd6fdffcef0fb0\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=UvX0wS4VNcmRW6hh]]{Командное слово: воспламенить до конца этого хода}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=e9fd6fdffcef0fb0",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-phoenix-arrow",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.05,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "ammo",
+      "subtype": "arrow"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": 1,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": false
+    },
+    "activities": {
+      "UvX0wS4VNcmRW6hh": {
+        "_id": "UvX0wS4VNcmRW6hh",
+        "type": "utility",
+        "name": "Командное слово: воспламенить до конца этого хода",
+        "img": "icons/weapons/ammunition/arrows-broadhead-white.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "griffonPhoenixIgnite": true,
+            "griffonCommandWord": true
+          }
+        }
+      }
+    },
+    "damage": {
+      "base": {
+        "number": null,
+        "denomination": 0,
+        "types": [],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        },
+        "bonus": ""
+      },
+      "replace": false
+    }
+  },
+  "effects": [],
+  "folder": "warttEuiHYlGwGZ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:phoenix-arrow",
+      "griffonAmmo": "phoenix"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!2pbzearnH1DSNFjk"
+}

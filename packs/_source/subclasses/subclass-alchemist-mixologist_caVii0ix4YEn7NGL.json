@@ -1,0 +1,162 @@
+{
+  "_id": "caVii0ix4YEn7NGL",
+  "name": "Миксолог",
+  "type": "subclass",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Специализация самостоятельного алхимика, правила 2014 года. Особенности выдаются на уровнях 2/6/10/18; отдельные формулы и открытия не занимают общие выборы класса. Краткие игровые памятки с источником; условная автоматизация и производство ещё продолжаются.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Алхимик: дополнения T&T</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "TT",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-mixologist",
+    "classIdentifier": "alchemist",
+    "advancement": [
+      {
+        "_id": "qd5G8AbPYlGwO4fT",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.K1Ecn0yQGEFV4zQk",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "szTbG544QlXNklQT",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.mENoJdYcRpub43Xx",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "8qSfaRbHwQsrVScE",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.NWEzQDiGtcmtqDHl",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "94DJo48QPLTvTLyl",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.5PAx4xSqtd3tPJ59",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 18,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "KuoMBbPFxEkK5Fg6",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "tool:art:brewer"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 2,
+        "title": "Инструменты пивовара",
+        "hint": ""
+      },
+      {
+        "_id": "swsJYAkkfC8uznVc",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.opyckh8bLb5Z4VKA",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Формула специализации (вне общего лимита)",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "sAvGEhBLiC4TBoW3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:alchemist-mixologist"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!caVii0ix4YEn7NGL"
+}

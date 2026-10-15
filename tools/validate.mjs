@@ -9,7 +9,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "packs/_source");
 const SRD = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/srd.json"), "utf8"));
 const webSources = new Map(JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/external-content-inventory.json"), "utf8")).sources
-  .map(s => [s.id, new Set(s.entries ? s.entries.map(e => e.url) : [s.url])]));
+  .map(s => [s.id, new Set([...(s.entries ? s.entries.map(e => e.url) : [s.url]), ...(s.characterOptions ? [s.characterOptions.url] : [])])]));
 const ICONS = new Set(fs.readFileSync(path.join(ROOT, "tools/data/icons.txt"), "utf8").split(/\r?\n/).filter(Boolean));
 
 const ID = /^[A-Za-z0-9]{16}$/;
@@ -20,8 +20,8 @@ const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
 const bookPages = { "MM25": 385, "AU": 160, "UA-EB": 16, "UA-FR": 10, "UA-HS": 9, "UA-PS": 13, "UA-PU": 15, "UA-AS": 10, "UA-AU": 9, "UA-MS": 6, "UA-VO": 11, "UA-VO2": 5 };
 function checkSource(where, source) {
   if (!source || !BOOKS[source.book]) return err(where, "нет известного источника");
-  if (["GS1", "GS2", "VSS"].includes(source.book)) {
-    if (!webSources.get(source.book)?.has(source.custom)) err(where, "нет точной ссылки на карточку в реестре веб-источника");
+  if (["GS1", "GS2", "VSS", "EfC", "TT", "CAB", "MM14"].includes(source.book)) {
+    if (!webSources.get(["EfC", "TT", "CAB"].includes(source.book) ? "VSS" : source.book)?.has(source.custom)) err(where, "нет точной ссылки на карточку в реестре веб-источника");
     if (source.page !== "") err(where, "номер страницы веб-источника не подтверждён");
     if (source.rules !== (source.book === "GS1" ? "2024" : "2014")) err(where, "неверная редакция веб-источника");
     return;
@@ -36,6 +36,7 @@ function checkSource(where, source) {
 const srdIds = new Set([
   ...Object.values(SRD.spells).map(s => `Compendium.dnd5e.spells24.Item.${s.id}`),
   ...Object.values(SRD.items).map(s => `Compendium.dnd5e.equipment24.Item.${s.id}`),
+  ...JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/alchemist-starting-gear.json"), "utf8")).gear.map(g => g.uuid),
   ...["phbarmStuddedLea", "phbwepDagger0000", "phbtulThievesToo", "phbagDungeoneers", "phbwepSpear00000",
     "phbwepLightCross", "phbamoBolts00000", "phbagCaseCrossbo"].map(id => `Compendium.dnd5e.equipment24.Item.${id}`)
 ]);
@@ -50,7 +51,7 @@ for ( const pack of fs.readdirSync(SRC) ) {
     byPack[pack].push({ file, data });
   }
 }
-const TYPE = { classes: "Item", subclasses: "Item", feats: "Item", spells: "Item", items: "Item", creatures: "Actor", rules: "JournalEntry", tables: "RollTable" };
+const TYPE = { species: "Item", classes: "Item", subclasses: "Item", feats: "Item", spells: "Item", items: "Item", creatures: "Actor", rules: "JournalEntry", tables: "RollTable" };
 for ( const [pack, list] of Object.entries(byPack) ) {
   const ids = new Set();
   for ( const { file, data } of list ) {
@@ -83,7 +84,7 @@ function checkItem(where, item) {
     if ( a.type === "cast" && !srdIds.has(a.spell.uuid) && !docs.has(a.spell.uuid) ) err(where, `cast ссылается на неизвестное заклинание ${a.spell.uuid}`);
     if ( a.type === "transform" ) for ( const p of a.profiles ) if ( p.uuid && !docs.has(p.uuid) ) err(where, `превращение ссылается на неизвестного ${p.uuid}`);
     if (a.type === "forward" && !acts[a.activity?.id]) err(where, "переадресация ссылается на отсутствующее действие");
-    for ( const t of a.consumption?.targets ?? [] ) if ( !["itemUses", "activityUses", "spellSlots", "hitDice", "attribute", "material", "spikependiumMaterial", "spikependiumMagusHitDice"].includes(t.type) ) err(where, `неизвестный тип расхода ${t.type}`);
+    for ( const t of a.consumption?.targets ?? [] ) if ( !["itemUses", "activityUses", "spellSlots", "hitDice", "attribute", "material", "spikependiumMaterial", "spikependiumMagusHitDice", "spikependiumAnimatedStrike"].includes(t.type) ) err(where, `неизвестный тип расхода ${t.type}`);
     for (const t of a.consumption?.targets ?? []) if (t.type === "spikependiumMaterial"
       && (item.type !== "spell" || !item.system.materials?.consumed || !item.system.properties.includes("material") || t.value !== "1"))
       err(where, "расход компонента требует заклинания с расходуемым материалом и стоимостью 1 комплект");
@@ -228,7 +229,7 @@ for ( const [pack, list] of Object.entries(byPack) ) {
   const CLASSES = new Set(["artificer", "psion", "barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard",
     ...[...docs.values()].filter(d => d.type === "class").map(d => d.system.identifier)]);
   const ABIL = new Set(["str", "dex", "con", "int", "wis", "cha"]);
-  const OK = [/^@prof$/, /^@scaling$/, /^@mod$/, /^@item\.(uses\.(spent|max|value)|level)$/, /^@attributes\.(spell\.mod|movement\.walk|hd\.\w+)$/, /^@details\.level$/];
+  const OK = [/^@prof$/, /^@scaling$/, /^@mod$/, /^@item\.(uses\.(spent|max|value)|level)$/, /^@attributes\.(spell\.mod|movement\.walk|hp\.max|hd\.\w+)$/, /^@details\.level$/, /^@spikependium\.alchemistBombDC$/];
   const checkFormula = (where, formula) => {
     if ( typeof formula !== "string" || !formula.includes("@") ) return;
     for ( const m of formula.matchAll(/@[a-zA-Z][\w.-]*/g) ) {
@@ -237,7 +238,7 @@ for ( const [pack, list] of Object.entries(byPack) ) {
       let mm;
       if ( (mm = ref.match(/^@scale\.([\w-]+)\.([\w-]+)(?:\.(faces|number|die))?$/)) ) ok = scales.has(`${mm[1]}.${mm[2]}`);
       else if ( (mm = ref.match(/^@classes\.([\w-]+)\.levels$/)) ) ok = CLASSES.has(mm[1]);
-      else if ( (mm = ref.match(/^@abilities\.(\w+)\.(mod|value)$/)) ) ok = ABIL.has(mm[1]);
+      else if ( (mm = ref.match(/^@abilities\.(\w+)\.(mod|value|max)$/)) ) ok = ABIL.has(mm[1]);
       if ( !ok ) err(where, `неизвестная ссылка в формуле: ${ref} (в «${formula}»)`);
     }
   };

@@ -358,7 +358,7 @@ for (const remaining of [0, 1]) {
 }
 const tables = fs.readdirSync("packs/_source/tables").filter(file => !file.startsWith("folder_"))
   .map(file => JSON.parse(fs.readFileSync(`packs/_source/tables/${file}`, "utf8")));
-assert.equal(tables.length, 4);
+assert.equal(tables.filter(t => t.flags.spikependium.source.book === "MM25").length, 4);
 for (const [actor, suffix, page, faces] of [[aboleth, "aboleth-schemes", "11", 6], [ankheg, "ankheg-finds", "14", 8]]) {
   const table = tables.find(t => t.flags.spikependium.key.endsWith(suffix)); assert.ok(table);
   assert.equal(table.flags.spikependium.source.book, "MM25"); assert.equal(table.flags.spikependium.source.page, page);

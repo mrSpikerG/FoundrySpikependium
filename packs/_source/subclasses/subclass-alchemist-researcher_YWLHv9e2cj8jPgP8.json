@@ -1,0 +1,290 @@
+{
+  "_id": "YWLHv9e2cj8jPgP8",
+  "name": "Исследователь",
+  "type": "subclass",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Специализация самостоятельного алхимика, правила 2014 года. Особенности выдаются на уровнях 2/6/10/18; отдельные формулы и открытия не занимают общие выборы класса. Краткие игровые памятки с источником; условная автоматизация и производство ещё продолжаются.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Алхимик: дополнения EfC</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "EfC",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-researcher",
+    "classIdentifier": "alchemist",
+    "advancement": [
+      {
+        "_id": "5aAbo8MzbG80h3YY",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.ZFFc5CLFrB3EA5L9",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "0T4kJ2V6aVey0YO2",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.l8GoVtoKroAzZ7mh",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "82GWtt1hKSOAFAoO",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.sUjj7gIDelO9SSo4",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "YpFTu6FDUEhBfXAk",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 2,
+              "pool": [
+                "skills:sur",
+                "skills:his",
+                "skills:arc",
+                "skills:med",
+                "skills:nat",
+                "skills:rel"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 2,
+        "title": "Два навыка исследователя",
+        "hint": ""
+      },
+      {
+        "_id": "zSFS3hbbVy0mNZJ2",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.bLvVDkAFgzNbj2r9",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 2,
+        "title": "Формула специализации (вне общего лимита)",
+        "hint": ""
+      },
+      {
+        "_id": "vOlT0H5Qnysq8Fj2",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "6": {
+              "count": 1,
+              "replacement": false
+            },
+            "18": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.classes.Item.BXhUPffYrgGk4sId"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.Y661fxx5odmNiiNd"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.hGEaZnxDpAKUdXVf"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.7OHlvGOc3tUiJJpj"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.PUK18Hga9OjBtHN3"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.dNvRPBR3HuhUJbhx"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.kIZZZxZkuDwM2hQn"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.bV7K0UmoHSiOZZC1"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.Yj3II0MVw3lgOImF"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ltet5UpVv0mdFopo"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.YsNabPQvpu8gD7au"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.o3AYKgjRjeOtkANO"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ArLCGzx1TljGHvMQ"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.AuCWzyQglsiibqwf"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.sOqbvrbKQyDvDWzv"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.ycYzVbmsqL7VaHor"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.POmfNQVfD7KfkuC5"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.VfTMlFvV2BB44htK"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.SmzBQFUZy5irOA74"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.nATMHTy0nEQ3kjgO"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.cV4F6III38Mq3DhW"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.cduwFQokcUDgTI9T"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.khZKMeB6XCrIFTSe"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.2dl0TzgS1CMMPRTn"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.GJ5spf6AAxldVdN5"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.AYVBC6kmjyBsquIs"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.Q5GCSoMEw6fc6Dw9"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.JN25sykpOmZxkpBX"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.XzXdJhqEGDUX7WwA"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.JO9UpfnJ1TdRNr0v"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.2eOuxMvIQY9ECkqY"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.eEGKmwuwixZgUHa5"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.kFRQlfScBLWB5dpC"
+            },
+            {
+              "uuid": "Compendium.spikependium.classes.Item.YQYSB26j3CldxZSn"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Междисциплинарные исследования",
+        "hint": ""
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "sAvGEhBLiC4TBoW3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:alchemist-researcher"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!YWLHv9e2cj8jPgP8"
+}

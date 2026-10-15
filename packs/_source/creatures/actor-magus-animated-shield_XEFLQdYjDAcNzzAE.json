@@ -33,7 +33,7 @@
         }
       },
       "int": {
-        "value": 1,
+        "value": 10,
         "proficient": 0,
         "max": null,
         "bonuses": {
@@ -51,7 +51,7 @@
         }
       },
       "cha": {
-        "value": 1,
+        "value": 10,
         "proficient": 0,
         "max": null,
         "bonuses": {
@@ -100,7 +100,7 @@
     },
     "details": {
       "biography": {
-        "value": "Оживлённый предмет из заклинания [[Оживление щита]]. КД равен 12 + модификатор заклинателя; 20 хитов + 10 за каждый уровень ячейки выше 2-го. Бонусным действием заклинателя может пролететь до 30 футов. Самостоятельного перемещения своим ходом заклинание не предоставляет. Исчезает после минуты либо при 0 хитов; досрочное завершение отслеживается вручную.",
+        "value": "<p>Оживлённый предмет из заклинания @UUID[Compendium.spikependium.spells.Item.Ps9Yl4crbGV62CCG]{Оживление щита}. КД равен 12 + модификатор заклинателя; 20 хитов + 10 за каждый уровень ячейки выше 2-го. Бонусным действием заклинателя может пролететь до 30 футов. Самостоятельного перемещения своим ходом заклинание не предоставляет. После минуты либо при 0 хитов оживление заканчивается: действия и защита перестают работать. Исходный предмет сохраняется в инвентаре заклинателя.</p><p>Характеристики автором не заданы: начальные значения 10 не являются правилом книги, при необходимости их определяет Мастер.</p>",
         "public": ""
       },
       "alignment": "Нейтральный",
@@ -185,7 +185,204 @@
     "width": 1,
     "height": 1
   },
-  "items": [],
+  "items": [
+    {
+      "_id": "i9FyiHqXqQWntakO",
+      "name": "Защита оживлённого щита",
+      "type": "feat",
+      "img": "icons/svg/upgrade.svg",
+      "system": {
+        "description": {
+          "value": "<p>Выберите существа и примените профиль защиты. Бонус +2 КД действует только в 5 футах от этого щита, пока у цели нет своего используемого щита. Несколько таких защит не суммируются.</p><h3>Действия</h3><ul><li>[[/item activity=5a24NeKpc0hx8afC]]{Выбрать защищаемых существ}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+          "chat": ""
+        },
+        "source": {
+          "book": "MAGUS-PT3",
+          "page": "12",
+          "custom": "",
+          "rules": "2024",
+          "revision": 1,
+          "license": ""
+        },
+        "identifier": "",
+        "type": {
+          "value": "monster",
+          "subtype": ""
+        },
+        "requirements": "",
+        "prerequisites": {
+          "level": null,
+          "repeatable": false,
+          "items": []
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {
+          "5a24NeKpc0hx8afC": {
+            "_id": "5a24NeKpc0hx8afC",
+            "type": "utility",
+            "name": "Выбрать защищаемых существ",
+            "img": "icons/svg/upgrade.svg",
+            "sort": 100000,
+            "activation": {
+              "type": "",
+              "value": null,
+              "condition": "",
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": false
+            },
+            "description": {
+              "chatFlavor": "",
+              "value": ""
+            },
+            "duration": {
+              "value": "",
+              "units": "inst",
+              "special": "",
+              "override": false,
+              "concentration": false
+            },
+            "effects": [
+              {
+                "_id": "FhaPuWx9UK30a0Q0"
+              }
+            ],
+            "range": {
+              "value": "5",
+              "units": "ft",
+              "special": "",
+              "override": true
+            },
+            "target": {
+              "template": {
+                "count": "",
+                "contiguous": false,
+                "type": "",
+                "size": "",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "creature",
+                "choice": false,
+                "special": ""
+              },
+              "prompt": true,
+              "override": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "visibility": {
+              "identifier": "",
+              "level": {
+                "min": null,
+                "max": null
+              },
+              "requireAttunement": false,
+              "requireIdentification": false,
+              "requireMagic": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            }
+          }
+        },
+        "properties": [],
+        "advancement": [],
+        "enchant": {}
+      },
+      "effects": [
+        {
+          "_id": "FhaPuWx9UK30a0Q0",
+          "name": "Защита оживлённого щита",
+          "img": "icons/svg/upgrade.svg",
+          "type": "base",
+          "system": {
+            "changes": [
+              {
+                "key": "system.attributes.ac.bonus",
+                "value": "2",
+                "type": "add",
+                "priority": null,
+                "phase": "initial",
+                "_id": "nq55baoK7g1vNFq7"
+              }
+            ],
+            "conditions": "{\"k\":\"spikependium.animatedShieldAllowed\",\"v\":true}"
+          },
+          "disabled": false,
+          "transfer": false,
+          "duration": {
+            "value": 60,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "origin": null,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {
+            "spikependium": {
+              "animatedShield": true
+            }
+          },
+          "sort": 0,
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_stats": {
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null,
+            "coreVersion": "14.367",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.6",
+            "createdTime": 1760054400000,
+            "modifiedTime": 1760054400000,
+            "lastModifiedBy": null
+          },
+          "_key": "!actors.items.effects!XEFLQdYjDAcNzzAE.i9FyiHqXqQWntakO.FhaPuWx9UK30a0Q0"
+        }
+      ],
+      "folder": null,
+      "sort": 100000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!actors.items!XEFLQdYjDAcNzzAE.i9FyiHqXqQWntakO"
+    }
+  ],
   "effects": [],
   "folder": "MQRoPN0YO4Yll8Pw",
   "sort": 0,

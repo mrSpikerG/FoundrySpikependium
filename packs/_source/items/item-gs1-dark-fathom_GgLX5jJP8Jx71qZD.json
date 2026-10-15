@@ -1,0 +1,192 @@
+{
+  "_id": "GgLX5jJP8Jx71qZD",
+  "name": "Dark Fathom Armor",
+  "type": "equipment",
+  "img": "icons/equipment/chest/breastplate-rivited-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Проклёпанный кожаный доспех +1: КД 13 + Ловкость; позволяет дышать под водой. Раз до сумерек сотворите Эвардовы чёрные щупальца, СЛ 15, квадрат 15 футов с центром на вас, неподвижный после размещения. Эта версия не требует концентрации, носитель иммунен именно к её эффектам. Cast связан с нативными Чёрными щупальцами, СЛ 15 и квадратом 15 футов; отдельное изменение удаляет требование концентрации. Связанные испытания, урон и эффекты собственному носителю блокируются по источнику этой версии. Размещение центра/неподвижность и подводное дыхание пока ручные; сложные события области зависят от системы. Обычные чужие Чёрные щупальца продолжают действовать нормально.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха/щита. Вес взят у выбранного базового доспеха/щита 2024; источник отдельного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=722224f01a9ce80f\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=ndLocfmw1AWu0PHs]]{Свои чёрные щупальца: квадрат 15 футов, без концентрации}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=722224f01a9ce80f",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-dark-fathom",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 13,
+      "units": "lb"
+    },
+    "price": {
+      "value": 40045,
+      "denomination": "gp"
+    },
+    "rarity": "veryRare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 12,
+      "magicalBonus": 1,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "light",
+      "baseItem": "studded"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dusk",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "ndLocfmw1AWu0PHs": {
+        "_id": "ndLocfmw1AWu0PHs",
+        "type": "cast",
+        "name": "Свои чёрные щупальца: квадрат 15 футов, без концентрации",
+        "img": "icons/equipment/chest/breastplate-rivited-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "square",
+            "size": "15",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "override": true,
+            "attack": "",
+            "save": "15"
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplEvardsBlac"
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "OaNph2U0xHtEGF0H",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:dark-fathom",
+      "originalName": "Dark Fathom Armor",
+      "griffonArmorFamily": "dark-fathom",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmStuddedLea"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!GgLX5jJP8Jx71qZD"
+}

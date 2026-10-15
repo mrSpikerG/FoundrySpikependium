@@ -1,0 +1,571 @@
+{
+  "url": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+  "sha256": "1fa5d3b5f1e05a80648dd1658a5e2235705a303f949fff11f43b6c293988b0eb",
+  "entries": [
+    {
+      "name": "Адаптация амфибии",
+      "sourceHeading": "Адаптация амфибии",
+      "key": "alchemist:graft:amphibious",
+      "price": 400,
+      "donor": "любое существо с особенностью Амфибия",
+      "body": "голова",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:amphibious",
+          "slot": "head",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Гибкая форма",
+      "sourceHeading": "Гибкая форма",
+      "key": "alchemist:graft:shapeshifter",
+      "price": 750,
+      "donor": "любое существо с подвидом Перевёртыш",
+      "body": "внутренности",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:shapeshifter",
+          "slot": "organs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Голосовые связки",
+      "sourceHeading": "Голосовые связки",
+      "key": "alchemist:graft:voice",
+      "price": 150,
+      "donor": "любое существо с особенностью Подражание",
+      "body": "голова",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:voice",
+          "slot": "head",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Драконьи лёгкие",
+      "sourceHeading": "Драконьи лёгкие",
+      "key": "alchemist:graft:dragon-lungs",
+      "price": 1000,
+      "donor": "Гуманоид, Дракон или Монстр с атакой Дыхание",
+      "body": "внутренности",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:dragon-lungs:acid",
+          "slot": "organs",
+          "damage": "acid"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:bludgeoning",
+          "slot": "organs",
+          "damage": "bludgeoning"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:cold",
+          "slot": "organs",
+          "damage": "cold"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:fire",
+          "slot": "organs",
+          "damage": "fire"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:force",
+          "slot": "organs",
+          "damage": "force"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:lightning",
+          "slot": "organs",
+          "damage": "lightning"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:necrotic",
+          "slot": "organs",
+          "damage": "necrotic"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:piercing",
+          "slot": "organs",
+          "damage": "piercing"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:poison",
+          "slot": "organs",
+          "damage": "poison"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:psychic",
+          "slot": "organs",
+          "damage": "psychic"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:radiant",
+          "slot": "organs",
+          "damage": "radiant"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:slashing",
+          "slot": "organs",
+          "damage": "slashing"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-lungs:thunder",
+          "slot": "organs",
+          "damage": "thunder"
+        }
+      ]
+    },
+    {
+      "name": "Замена органа",
+      "sourceHeading": "Замена органа",
+      "key": "alchemist:graft:replacement",
+      "price": 400,
+      "donor": "любое существо",
+      "body": "любая",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:replacement:arms",
+          "slot": "arms",
+          "damage": null
+        },
+        {
+          "key": "item:alchemist-graft:replacement:skin",
+          "slot": "skin",
+          "damage": null
+        },
+        {
+          "key": "item:alchemist-graft:replacement:head",
+          "slot": "head",
+          "damage": null
+        },
+        {
+          "key": "item:alchemist-graft:replacement:organs",
+          "slot": "organs",
+          "damage": null
+        },
+        {
+          "key": "item:alchemist-graft:replacement:legs",
+          "slot": "legs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Звериное оружие",
+      "sourceHeading": "Звериное оружие",
+      "key": "alchemist:graft:beast-weapons",
+      "price": 200,
+      "donor": "Дракон, Зверь или Монстр с атакой Укус или Когти",
+      "body": "голова или руки",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:beast-weapons:claws",
+          "slot": "arms",
+          "damage": "slashing"
+        },
+        {
+          "key": "item:alchemist-graft:beast-weapons:fangs",
+          "slot": "head",
+          "damage": "piercing"
+        }
+      ]
+    },
+    {
+      "name": "Звериная шкура",
+      "sourceHeading": "Звериная шкура",
+      "key": "alchemist:graft:beast-hide",
+      "price": 250,
+      "donor": "Зверь размером не меньше Большого",
+      "body": "кожа",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:beast-hide",
+          "slot": "skin",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Зловонная секреция",
+      "sourceHeading": "Зловонная секреция",
+      "key": "alchemist:graft:stench",
+      "price": 400,
+      "donor": "любое существо с особенностью Вонь",
+      "body": "внутренности",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:stench",
+          "slot": "organs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Изменчивая анатомия",
+      "sourceHeading": "Изменчивая анатомия",
+      "key": "alchemist:graft:aberrant-anatomy",
+      "price": 1250,
+      "donor": "Аберрация размером не меньше Среднего",
+      "body": "внутренности",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:aberrant-anatomy",
+          "slot": "organs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Копыта",
+      "sourceHeading": "Копыта",
+      "key": "alchemist:graft:hooves",
+      "price": 350,
+      "donor": "любое существо с особенностью Рывок или атакой Бодание или Копыта",
+      "body": "ноги",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:hooves",
+          "slot": "legs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Магические синапсы",
+      "sourceHeading": "Магические синапсы",
+      "key": "alchemist:graft:magic-synapses",
+      "price": 1000,
+      "donor": "любое существо с особенностью Врождённое колдовство",
+      "body": "голова",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:magic-synapses",
+          "slot": "head",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Мешочек с ядом",
+      "sourceHeading": "Мешочек с ядом",
+      "key": "alchemist:graft:venom-sac",
+      "price": 350,
+      "donor": "любое существо, способное отравить цель или нанести ей урон ядом, но не через оружие",
+      "body": "внутренности",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:venom-sac",
+          "slot": "organs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Мощные ноги",
+      "sourceHeading": "Мощные ноги",
+      "key": "alchemist:graft:powerful-legs",
+      "price": 400,
+      "donor": "любое существо с особенностью Наскок или Прыжок с места",
+      "body": "ноги",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:powerful-legs",
+          "slot": "legs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Огромные руки",
+      "sourceHeading": "Огромные руки",
+      "key": "alchemist:graft:giant-arms",
+      "price": 1500,
+      "donor": "великан",
+      "body": "руки",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:giant-arms",
+          "slot": "arms",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Обонятельные имплантаты",
+      "sourceHeading": "Обонятельные имплантаты",
+      "key": "alchemist:graft:smell",
+      "price": 200,
+      "donor": "любое существо с особенностью Острый слух и тонкий нюх или Тонкий нюх",
+      "body": "голова",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:smell",
+          "slot": "head",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Паутинная железа",
+      "sourceHeading": "Паутинная железа",
+      "key": "alchemist:graft:web-gland",
+      "price": 500,
+      "donor": "любое существо с атакой Паутина",
+      "body": "внутренности",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:web-gland",
+          "slot": "organs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Стальное сердце",
+      "sourceHeading": "Стальное сердце",
+      "key": "alchemist:graft:steel-heart",
+      "price": 2250,
+      "donor": "любой конструкт",
+      "body": "внутренности",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:steel-heart",
+          "slot": "organs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Регенерация",
+      "sourceHeading": "Регенерация",
+      "key": "alchemist:graft:regeneration",
+      "price": 500,
+      "donor": "любое существо с особенностью Регенерация",
+      "body": "внутренности",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:regeneration",
+          "slot": "organs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Рога",
+      "sourceHeading": "Рога",
+      "key": "alchemist:graft:horns",
+      "price": 350,
+      "donor": "любое существо с атакой Бодание, Клыки, Рога или Таран",
+      "body": "голова",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:horns:bludgeoning",
+          "slot": "head",
+          "damage": "bludgeoning"
+        },
+        {
+          "key": "item:alchemist-graft:horns:piercing",
+          "slot": "head",
+          "damage": "piercing"
+        }
+      ]
+    },
+    {
+      "name": "Тёмное зрение",
+      "sourceHeading": "Тёмное зрение",
+      "key": "alchemist:graft:darkvision",
+      "price": 300,
+      "donor": "любое существо с особенностью Тёмное зрение",
+      "body": "голова",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:darkvision",
+          "slot": "head",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Цепкие конечности",
+      "sourceHeading": "Цепкие конечности",
+      "key": "alchemist:graft:climbing",
+      "price": 1250,
+      "donor": "Гуманоид, Зверь или Монстр, имеющий скорость лазания",
+      "body": "ноги",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:climbing",
+          "slot": "legs",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Цепкий хвост",
+      "sourceHeading": "Цепкий хвост",
+      "key": "alchemist:graft:tail",
+      "price": 350,
+      "donor": "любое существо с атакой Удар хвостом",
+      "body": "кожа",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:tail",
+          "slot": "skin",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Чешуя дракона",
+      "sourceHeading": "Шкура дракона",
+      "key": "alchemist:graft:dragon-scales",
+      "price": 2250,
+      "donor": "Дракон размером не меньше Большого",
+      "body": "кожа",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:dragon-scales:acid",
+          "slot": "skin",
+          "damage": "acid"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:bludgeoning",
+          "slot": "skin",
+          "damage": "bludgeoning"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:cold",
+          "slot": "skin",
+          "damage": "cold"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:fire",
+          "slot": "skin",
+          "damage": "fire"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:force",
+          "slot": "skin",
+          "damage": "force"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:lightning",
+          "slot": "skin",
+          "damage": "lightning"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:necrotic",
+          "slot": "skin",
+          "damage": "necrotic"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:piercing",
+          "slot": "skin",
+          "damage": "piercing"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:poison",
+          "slot": "skin",
+          "damage": "poison"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:psychic",
+          "slot": "skin",
+          "damage": "psychic"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:radiant",
+          "slot": "skin",
+          "damage": "radiant"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:slashing",
+          "slot": "skin",
+          "damage": "slashing"
+        },
+        {
+          "key": "item:alchemist-graft:dragon-scales:thunder",
+          "slot": "skin",
+          "damage": "thunder"
+        }
+      ]
+    },
+    {
+      "name": "Чешуя исчадия",
+      "sourceHeading": "Чешуя исчадия",
+      "key": "alchemist:graft:fiend-scales",
+      "price": 1500,
+      "donor": "Исчадие размером не меньше Среднего",
+      "body": "кожа",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:fiend-scales",
+          "slot": "skin",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Щупальца",
+      "sourceHeading": "Щупальца",
+      "key": "alchemist:graft:tentacles",
+      "price": 500,
+      "donor": "любое существо с атакой Щупальце или Ложноножка",
+      "body": "руки",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:tentacles",
+          "slot": "arms",
+          "damage": null
+        }
+      ]
+    },
+    {
+      "name": "Энергетический шов",
+      "sourceHeading": "Энергетический шов",
+      "key": "alchemist:graft:energy-stitch",
+      "price": 500,
+      "donor": "Дракон, Исчадие, Небожитель, Фея или Элементаль с иммунитетом или сопротивлением урону звуком, кислотой, огнём, холодом, электричеством или ядом",
+      "body": "кожа",
+      "variants": [
+        {
+          "key": "item:alchemist-graft:energy-stitch:acid",
+          "slot": "skin",
+          "damage": "acid"
+        },
+        {
+          "key": "item:alchemist-graft:energy-stitch:cold",
+          "slot": "skin",
+          "damage": "cold"
+        },
+        {
+          "key": "item:alchemist-graft:energy-stitch:fire",
+          "slot": "skin",
+          "damage": "fire"
+        },
+        {
+          "key": "item:alchemist-graft:energy-stitch:lightning",
+          "slot": "skin",
+          "damage": "lightning"
+        },
+        {
+          "key": "item:alchemist-graft:energy-stitch:poison",
+          "slot": "skin",
+          "damage": "poison"
+        },
+        {
+          "key": "item:alchemist-graft:energy-stitch:thunder",
+          "slot": "skin",
+          "damage": "thunder"
+        }
+      ]
+    }
+  ]
+}

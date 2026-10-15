@@ -1,0 +1,145 @@
+{
+  "_id": "zvVFPMCLChyEPMuo",
+  "name": "Mammoth Boots",
+  "type": "equipment",
+  "img": "icons/equipment/feet/boots-leather-banded-furred.webp",
+  "system": {
+    "description": {
+      "value": "<p>Надетые сапоги делают носителя на 50 фунтов тяжелее, не нагружая его самого. Снег и лёд не требуют дополнительного перемещения: настроено игнорирование этих типов труднопроходимой местности. Смешанная местность сохраняет прочие причины замедления. Любое нежеланное перемещение сокращается на 5 футов, минимум до 0; это сокращение и увеличенный вес тела для внешних взаимодействий пока ручные. Масса сапог в инвентаре не увеличена на 50 фунтов.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 2 фунта по обычным сапогам; источник веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=22ff92cf996ac730\">Сумка грифона — книга 1 (2024)</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=22ff92cf996ac730",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-mammoth-boots",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 400,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {}
+  },
+  "effects": [
+    {
+      "_id": "pjI2XJHKqknS5z0f",
+      "name": "Мамонтовые сапоги: снег и лёд",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.ignoredDifficultTerrain",
+            "value": "ice",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "TEphyzZXC2CBrtfH"
+          },
+          {
+            "key": "system.attributes.movement.ignoredDifficultTerrain",
+            "value": "snow",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "AfVIORgG54quUNHa"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!zvVFPMCLChyEPMuo.pjI2XJHKqknS5z0f"
+    }
+  ],
+  "folder": "SBJ65gU7YA4akRMB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:mammoth-boots",
+      "originalName": "Mammoth Boots"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!zvVFPMCLChyEPMuo"
+}

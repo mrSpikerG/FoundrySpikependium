@@ -2,10 +2,10 @@
   "id": "spikependium",
   "title": "Spikependium — материалы D&D на русском",
   "description": "Материалы D&D на русском для Foundry VTT 14 и dnd5e 6.x: Unearthed Arcana, Энциклопедия чудовищ (2025), Неудержимая магия, Сумка грифона, Алхимик (Valda) и Магус (Playtest 3). Перенос и автоматизация продолжаются.",
-  "version": "1.85.0",
+  "version": "1.107.0",
   "url": "https://github.com/mrSpikerG/FoundrySpikependium",
   "manifest": "https://github.com/mrSpikerG/FoundrySpikependium/releases/latest/download/module.json",
-  "download": "https://github.com/mrSpikerG/FoundrySpikependium/releases/download/v1.85.0/spikependium.zip",
+  "download": "https://github.com/mrSpikerG/FoundrySpikependium/releases/download/v1.107.0/spikependium.zip",
   "authors": [
     {
       "name": "Spikependium"
@@ -59,6 +59,18 @@
     }
   ],
   "packs": [
+    {
+      "name": "species",
+      "label": "Виды",
+      "path": "packs/species",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
     {
       "name": "classes",
       "label": "Классы",
@@ -162,6 +174,7 @@
       "sorting": "m",
       "color": "#3d1f5c",
       "packs": [
+        "species",
         "classes",
         "subclasses",
         "feats",

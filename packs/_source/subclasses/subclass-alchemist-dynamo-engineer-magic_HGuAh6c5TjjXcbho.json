@@ -1,0 +1,68 @@
+{
+  "_id": "HGuAh6c5TjjXcbho",
+  "name": "Использование заклинаний",
+  "type": "feat",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p>Интеллект — характеристика заклинаний, атака: бонус владения + Интеллект, СЛ равна СЛ бомб. Каждый механизм хранит одну ячейку и заранее настроенное известное заклинание волшебника. Все ячейки одного круга; полный запас возвращается после долгого отдыха. На коротком/долгом отдыхе можно перенастроить неиспользованные механизмы. Два первых заклинания — Вызов/Преобразование, одно свободное по таблице на 2-м уровне; новые свободные на 8/14/20. Замена одного известного за уровень. Источник упоминает 3-й вместо 2-го уровня для замены первого свободного заклинания; здесь исходный выбор привязан к таблице. Круг заклинаний и общий предел одной замены между двумя списками настроены. Учёт конкретных механизмов, подготовку и применение их заклинаний пока ведите вручную. Нативная прогрессия обычных ячеек не выдаётся.</p><table><caption>Динамо-инженер</caption><thead><tr><th>Уровень алхимика</th><th>Известно</th><th>Механизмов</th><th>Круг ячеек</th></tr></thead><tbody><tr><td>2</td><td>3</td><td>2</td><td>1</td></tr><tr><td>3</td><td>3</td><td>2</td><td>1</td></tr><tr><td>4</td><td>4</td><td>3</td><td>1</td></tr><tr><td>5</td><td>4</td><td>3</td><td>1</td></tr><tr><td>6</td><td>4</td><td>3</td><td>1</td></tr><tr><td>7</td><td>5</td><td>4</td><td>2</td></tr><tr><td>8</td><td>6</td><td>4</td><td>2</td></tr><tr><td>9</td><td>6</td><td>4</td><td>2</td></tr><tr><td>10</td><td>7</td><td>5</td><td>2</td></tr><tr><td>11</td><td>8</td><td>5</td><td>2</td></tr><tr><td>12</td><td>8</td><td>5</td><td>2</td></tr><tr><td>13</td><td>9</td><td>5</td><td>3</td></tr><tr><td>14</td><td>10</td><td>5</td><td>3</td></tr><tr><td>15</td><td>10</td><td>5</td><td>3</td></tr><tr><td>16</td><td>11</td><td>6</td><td>3</td></tr><tr><td>17</td><td>11</td><td>6</td><td>3</td></tr><tr><td>18</td><td>11</td><td>6</td><td>3</td></tr><tr><td>19</td><td>12</td><td>7</td><td>4</td></tr><tr><td>20</td><td>13</td><td>7</td><td>4</td></tr></tbody></table><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-dynamo-engineer-magic",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Динамо-инженер",
+    "prerequisites": {
+      "level": 2,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "@scale.alchemist-dynamo-engineer.devices",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "jrArUPRysYCxFZm9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:alchemist-dynamo-engineer:magic"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!HGuAh6c5TjjXcbho"
+}

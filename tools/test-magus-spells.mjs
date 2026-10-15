@@ -20,6 +20,7 @@ assert.deepEqual(spell("ensorcelled-strike").system.properties, ["somatic"], "th
 assert.equal(spell("waypoint").system.properties.includes("ritual"), false, "the return ritual is not free ritual casting");
 for (const id of ["animate-shield", "animate-weapon", "assess-enemy"]) assert.equal(spell(id).system.properties.includes("concentration"), false);
 for (const id of ["grave-grasp", "provoke", "spell-aegis", "weapon-aegis"]) assert.ok(spell(id).system.properties.includes("concentration"));
+assert.equal(Object.values(spell("grave-grasp").system.activities)[0].target.affects.count, "1 + @scaling");
 for (const id of ["bitter-wind", "hateful-haunting", "obscuring-prick", "overexposure", "righteous-incitement", "forced-hesitation"]) assert.equal(Object.values(spell(id).system.activities)[0].damage.onSave, "none");
 for (const id of ["bitter-wind", "demiplanar-pitch", "hateful-haunting", "misfortunate-missile", "obscuring-prick", "overexposure", "phantasmal-feint", "righteous-incitement"]) {
   const a = Object.values(spell(id).system.activities)[0]; assert.equal(a.damage.parts[0].scaling.mode, "whole");
@@ -172,6 +173,8 @@ for (const id of ["shield", "weapon"]) for (const level of [2, 3, 9]) {
   const summonData = Object.values(spell(`animate-${id}`).system.activities)[0];
   const original = read("creatures").find(d => d.flags?.spikependium?.key === `actor:magus-animated-${id}`);
   assert.equal(original.system.attributes.movement.speeds.walk, "0");
+  assert.ok(original.system.details.biography.value.includes("@UUID[Compendium.spikependium.spells.Item."));
+  assert.ok(original.system.details.biography.value.includes("Характеристики автором не заданы"));
   const creature = { system: { ...original.system, isNPC: true }, prototypeToken: { actorLink: false }, items: [], getRollData: () => ({}) };
   creature.system.attributes.ac.calc = "natural";
   const host = { ...summonData, relevantLevel: level, getApplicableEffects: async () => [],

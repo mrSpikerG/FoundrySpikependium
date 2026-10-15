@@ -1,0 +1,134 @@
+{
+  "_id": "iMiD4ahsHPqzmlB7",
+  "name": "Драконьи лёгкие",
+  "type": "feat",
+  "img": "icons/consumables/meat/heart-organ-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Донор:</strong> Гуманоид, Дракон или Монстр с атакой Дыхание.</p><p>Раз за короткий/долгий отдых действием в свой ход выдохните 15-футовый конус. Ловкость против СЛ от Телосложения: число к6 равно вашему бонусу владения, половина урона при успехе. Тип урона фиксируется вариантом по дыханию донора.</p><p>Это шаблон получения: продвижение выдаёт физический трансплантат и, если нужно, выбор донора/части тела. После подтверждённой операции и восстановления отметьте выданный предмет экипированным. При замене трансплантата снимите старый предмет и связанный с ним шаблон; возврат уже потраченных ресурсов и хирургические последствия пока ручные.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-graft-dragon-lungs",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": true,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "fQFajqmAhQzDt6Yz",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "0": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.items.Item.HblwMbtynnviTxf7"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.LzWVgYwARzWJvVgB"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.VtfXZyKng08IFpO3"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.c4upOiaoXTCsl8SK"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.hZewbOgkdm1TBPMT"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.c2bZ2jvWDoOfACIw"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.rRQfz2ynyhSMxmDu"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.H2Xom0crGvEekPi3"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.0BaP5V8vMd35Q1yq"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.6lVeaOhzXR9vP3n0"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.Rp0YCaD9ctxE9C5D"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.rdJbV7nVF14qHAcE"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.q7YfQBQ6aDFn2VUK"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "equipment"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Часть тела и свойства донора",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "sluBNxrNkP9SryhZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:graft:dragon-lungs"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!iMiD4ahsHPqzmlB7"
+}

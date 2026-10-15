@@ -1,0 +1,134 @@
+{
+  "_id": "0hT3JDWpcICBdgi5",
+  "name": "Чешуя дракона",
+  "type": "feat",
+  "img": "icons/consumables/meat/heart-organ-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Донор:</strong> Дракон не меньше Большого.</p><p>Также названа Шкурой дракона в описании. Базовая КБ 17 и сопротивление типу урона, к которому у дракона-донора иммунитет. Для установки требуется владение тяжёлыми доспехами. Нативная формула КБ участвует в обычном выборе брони/щита; тип сопротивления фиксируется вариантом.</p><p>Это шаблон получения: продвижение выдаёт физический трансплантат и, если нужно, выбор донора/части тела. После подтверждённой операции и восстановления отметьте выданный предмет экипированным. При замене трансплантата снимите старый предмет и связанный с ним шаблон; возврат уже потраченных ресурсов и хирургические последствия пока ручные.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "VSS",
+      "page": "",
+      "custom": "https://janglep.github.io/homebrew/class/395-alchemist/index.html",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "alchemist-graft-dragon-scales",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": true,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "WeHrkPmhVYQIOVa1",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "0": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.items.Item.E0FXmxHhL5kwENXA"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.EhxY8PWwy4Dp5fg4"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.82El0K1ROXxUGRkE"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.NVqD7XVtAWqPVVuQ"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.3dEDa5oa8Kt1neq1"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.G0FqeFfOYCLjqNGO"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.TXfZ3cSGe27MOuwM"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.yQZNA8qabDV9CJRE"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.9KHrBI2eQojMW3rJ"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.lU8jmdBYb5BvwcWw"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.rPee7CQKoBCAZy57"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.BJTMiMX5mpI9ge8g"
+            },
+            {
+              "uuid": "Compendium.spikependium.items.Item.px5UZrh9nF9QSMjV"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "equipment"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Часть тела и свойства донора",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "sluBNxrNkP9SryhZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "alchemist:graft:dragon-scales"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!0hT3JDWpcICBdgi5"
+}

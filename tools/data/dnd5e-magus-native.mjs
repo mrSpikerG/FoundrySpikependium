@@ -553,3 +553,41 @@ export async function nativeMagusTraitSelected() {
     return { selected, available };
   }
 
+
+
+// Exact native method body; host services are injected.
+export async function nativeMagusTraitApply(level, data, options={}) {
+    if ( options.initial ) data = await this.automaticApplicationValue(level, { initial: true });
+
+    const updates = {};
+    const chosen = new Set(this.value.chosen ?? []);
+    const keys = data.chosen ? data.chosen : data.key ? [data.key] : null;
+    if ( !keys ) return;
+
+    for ( const key of keys ) {
+      chosen.add(key);
+      const keyPath = this.configuration.mode === "mastery" ? "system.traits.weaponProf.mastery.value"
+        : Trait.changeKeyPath(key);
+      let existingValue = updates[keyPath] ?? foundry.utils.getProperty(this.actor, keyPath);
+
+      if ( ["Array", "Set"].includes(foundry.utils.getType(existingValue)) ) {
+        existingValue = new Set(existingValue);
+        existingValue.add(key.split(":").pop());
+        updates[keyPath] = Array.from(existingValue);
+      } else if ( (this.configuration.mode !== "expertise") || (existingValue !== 0) ) {
+        updates[keyPath] = (this.configuration.mode === "default")
+          || ((this.configuration.mode === "upgrade") && (existingValue === 0)) ? 1 : 2;
+      }
+
+      if ( key.startsWith("tool") ) {
+        const toolId = key.split(":").pop();
+        const ability = CONFIG.DND5E.tools[toolId]?.ability;
+        const kp = `system.tools.${toolId}.ability`;
+        if ( ability && !foundry.utils.hasProperty(this.actor, kp) ) updates[kp] = ability;
+      }
+    }
+
+    this.actor.updateSource(updates);
+    this.updateSource({ "value.chosen": chosen });
+  }
+

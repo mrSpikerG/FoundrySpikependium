@@ -1,5 +1,5 @@
 import { spell, folder, ref, journal, equipment, npc } from "../../tools/lib/docs.mjs";
-import { attack, save, damage, heal, utility, summon, dmg, effect } from "../../tools/lib/core.mjs";
+import { attack, save, damage, heal, utility, summon, dmg, effect, change } from "../../tools/lib/core.mjs";
 export const MAGUS_NEW_SPELLS = [
   ["animate-shield", "Оживление щита", "Animate Shield", 2, "trs", 12, "magus"],
   ["animate-weapon", "Оживление оружия", "Animate Weapon", 2, "trs", 13, "magus"],
@@ -43,18 +43,22 @@ export function define() {
       folder: folder("spells", `${level ? `${level} уровень` : "Заговоры"}/Магус (Playtest 3)`), components: "ВС", desc, ...other });
   };
   for (const [id, title, baseAC, page] of [["shield", "Оживлённый щит", 12, 12], ["weapon", "Оживлённое оружие", 10, 13]]) {
+    const shield = effect("magus:animated-shield", { name: "Защита оживлённого щита", transfer: false, seconds: 60,
+      changes: [change("system.attributes.ac.bonus", 2)], conditions: { k: "spikependium.animatedShieldAllowed", v: true },
+      flags: { spikependium: { animatedShield: true } } });
     npc({ key: `actor:magus-animated-${id}`, name: title, book: "MAGUS-PT3", page, folder: folder("creatures", "Магус (Playtest 3)/Оживлённые предметы"), img: ICON,
       size: "sm", creatureType: "construct", movement: { walk: 0 }, ac: baseAC, hp: 20, hpFormula: "", cr: null,
-      abilities: { str: 10, dex: 10, con: 10, int: 1, wis: 10, cha: 1 }, di: ["poison", "psychic"],
+      abilities: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 }, di: ["poison", "psychic"],
       ci: ["blinded", "charmed", "deafened", "exhaustion", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious"],
-      bio: `Оживлённый предмет из заклинания [[${id === "shield" ? "Оживление щита" : "Оживление оружия"}]]. КД равен ${baseAC} + модификатор заклинателя; 20 хитов + 10 за каждый уровень ячейки выше 2-го. Бонусным действием заклинателя может пролететь до 30 футов. Самостоятельного перемещения своим ходом заклинание не предоставляет. Исчезает после минуты либо при 0 хитов; досрочное завершение отслеживается вручную.`,
-      items: [] });
+      bio: `<p>Оживлённый предмет из заклинания @UUID[${ref(key(`animate-${id}`))}]{${id === "shield" ? "Оживление щита" : "Оживление оружия"}}. КД равен ${baseAC} + модификатор заклинателя; 20 хитов + 10 за каждый уровень ячейки выше 2-го. Бонусным действием заклинателя может пролететь до 30 футов. Самостоятельного перемещения своим ходом заклинание не предоставляет. После минуты либо при 0 хитов оживление заканчивается: действия и защита перестают работать. Исходный предмет сохраняется в инвентаре заклинателя.</p><p>Характеристики автором не заданы: начальные значения 10 не являются правилом книги, при необходимости их определяет Мастер.</p>`,
+      items: id === "shield" ? [{ name: "Защита оживлённого щита", desc: "Выберите существа и примените профиль защиты. Бонус +2 КД действует только в 5 футах от этого щита, пока у цели нет своего используемого щита. Несколько таких защит не суммируются.",
+        effects: [shield], acts: [utility(aid("animated-shield", "protect"), { name: "Выбрать защищаемых существ", range: 5, affects: "creature", spellSlot: false, effects: [shield._id] })] }] : [] });
   }
   make("animate-shield", `Оживите щит-компонент в свободном пространстве в пределах 30 футов на 1 минуту, без концентрации. Это Маленький конструкт: КД 12 + модификатор заклинательной характеристики, 20 хитов, иммунитет к яду, психическому урону и всем состояниям. Выбранные вами существа в пределах 5 футов от него получают +2 к КД, если сами не используют щит. Бонусным действием в последующие ходы можно переместить щит полётом до 30 футов. При 0 хитов заклинание заканчивается.
 
 **Высокая ячейка.** +10 хитов за каждый уровень выше 2-го.
 
-**Foundry.** Штатный призыв создаёт щит с масштабируемыми КД и хитами. Условия ауры, выбор защищённых существ, командное перемещение и прекращение при 0 хитов пока контролируются вручную.`, {
+**Foundry.** Выберите свой щит стоимостью не менее 1 зм. Он снимается с экипировки; оригинал не удаляется. В призванном профиле выберите защищаемых существ и примените профиль: +2 КД действует только в 5 футах от щита, при отсутствии своего используемого щита и пока оживление активно. Несколько таких бонусов не суммируются. Движение по бонусной команде и фактическое положение обычного предмета после окончания определяет игрок или Мастер.`, {
     activation: "bonus", range: 30, duration: "minute", durationValue: 1, components: "ВСМ", materials: "щит стоимостью не менее 1 зм", cost: 1,
     acts: [summon(aid("animate-shield", "cast"), [{ uuid: ref("actor:magus-animated-shield") }], { name: "Оживить щит", activation: "bonus", range: 30, duration: "minute", durationValue: 1, ac: "@mod", hp: "10 * (@item.level - 2)", types: ["construct"], sizes: ["sm"] }),
       utility(aid("animate-shield", "move"), { name: "Команда: переместить щит (вручную)", activation: "bonus", range: 30, spellSlot: false })]
@@ -63,9 +67,9 @@ export function define() {
 
 **Высокая ячейка.** +10 хитов за каждый уровень выше 2-го.
 
-**Foundry.** Призыв создаёт конструкт с КД и хитами. Перенос именно выбранного оружия, его урона/дистанции и атака в начале хода ещё настраиваются; пока добавьте исходное оружие призванному существу и установите нужные бонусы вручную.`, {
+**Foundry.** Выберите своё оружие стоимостью не менее 1 зм. В призванный профиль переносится его обычная атака с уроном и свойствами оружия; бонус атаки берётся от заклинателя, к урону добавляется его заклинательный модификатор. В начале последующих ходов предлагается атака; расход не позволяет выполнить новую активацию второй раз в этот ход. Оригинал снимается с экипировки и недоступен отдельно до окончания оживления. Боеприпасы не создаются: при необходимости перенесите настоящие боеприпасы в профиль. Дополнительные способности с отдельными расходами и командное перемещение пока контролируются вручную.`, {
     activation: "bonus", range: 30, duration: "minute", durationValue: 1, components: "ВСМ", materials: "оружие стоимостью не менее 1 зм", cost: 1,
-    acts: [summon(aid("animate-weapon", "cast"), [{ uuid: ref("actor:magus-animated-weapon") }], { name: "Оживить оружие", activation: "bonus", range: 30, duration: "minute", durationValue: 1, ac: "@mod", hp: "10 * (@item.level - 2)", types: ["construct"], sizes: ["sm"] }),
+    acts: [summon(aid("animate-weapon", "cast"), [{ uuid: ref("actor:magus-animated-weapon") }], { name: "Оживить оружие", activation: "bonus", range: 30, duration: "minute", durationValue: 1, ac: "@mod", hp: "10 * (@item.level - 2)", attackDamage: "@mod", types: ["construct"], sizes: ["sm"] }),
       utility(aid("animate-weapon", "move"), { name: "Команда: переместить оружие (вручную)", activation: "bonus", range: 30, spellSlot: false })]
   });
   for (const [id, isTemp] of [["arcane-invigoration", true], ["give-life", false]]) {
@@ -118,7 +122,7 @@ export function define() {
   const grasp = effect("magus:grave-grasp", { name: "Могильная хватка: опутан", transfer: false, statuses: ["restrained"], seconds: 60, flags: { spikependium: { magusGraveGrasp: true } } });
   make("grave-grasp", "Из земли или иной поверхности в пределах 60 футов появляются гнилые руки. Совершите дальнобойную атаку заклинанием по существу в пределах 5 футов от выбранной поверхности. При попадании цель опутана и не может восстанавливать хиты, пока опутана этим заклинанием. Сама цель или другое существо в пределах 5 футов может действием освободить её, прекратив опутывание без проверки. За каждый уровень ячейки выше 1-го можно выбрать ещё одну цель. Штатная атака и профиль Опутан настроены; активный профиль блокирует штатное восстановление хитов, но не временные хиты. Точный выбор дополнительных целей и освобождение пока контролируются вручную.", {
     range: 60, concentration: true, duration: "minute", durationValue: 1, effects: [grasp],
-    acts: [attack(aid("grave-grasp", "cast"), { name: "Могильная хватка", activation: "action", range: 60, count: 1, affects: "creature", classification: "spell", attackType: "ranged", includeBase: false, duration: "minute", durationValue: 1, concentration: true, effects: [grasp._id] })]
+    acts: [attack(aid("grave-grasp", "cast"), { name: "Могильная хватка", activation: "action", range: 60, count: "1 + @scaling", affects: "creature", classification: "spell", attackType: "ranged", includeBase: false, duration: "minute", durationValue: 1, concentration: true, effects: [grasp._id] })]
   });
   make("hateful-haunting", "Существо в пределах 60 футов, которое не оглохло, совершает спасбросок Харизмы. При провале получает 1к4 психического урона и ещё 1к4 психического урона при первом провале проверки характеристики или броска атаки до конца своего следующего хода. На уровнях персонажа 5/11/17 оба значения урона равны 2к4/3к4/4к4. Для вторичного урона используйте отдельную кнопку без новой ячейки; событие провала, однократность и срок пока отслеживаются вручную.", {
     range: 60, components: "В", acts: [save(aid("hateful-haunting", "cast"), { name: "Злобное наваждение", activation: "action", range: 60, count: 1, affects: "creature", ability: "cha", damage: [dice("1d4", "psychic", true)], onSave: "none" }),

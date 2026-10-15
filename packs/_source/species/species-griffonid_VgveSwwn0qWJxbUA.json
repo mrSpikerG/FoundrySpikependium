@@ -1,0 +1,172 @@
+{
+  "_id": "VgveSwwn0qWJxbUA",
+  "name": "Грифонид",
+  "type": "race",
+  "img": "icons/creatures/birds/raptor-hawk-flying.webp",
+  "system": {
+    "description": {
+      "value": "<p>Авторский вид из Сумки грифона, книга 1 (редакция 2024). Гуманоид, Средний, скорость 30 футов, тёмное зрение 60 футов. При добавлении выберите общую характеристику магического наследия, затем птицу, кошку и два ремесленных инструмента. Наследие выдаёт заклинания на уровнях персонажа 1, 3 и 5; отдельные бесплатные сотворения восстанавливаются после долгого отдыха. Полные правила и внешний вид приведены по ссылке источника.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey\">Сумка грифона — книга 1 (2024)</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/tgs1/chast-ii-varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffonid",
+    "type": {
+      "value": "humanoid",
+      "subtype": "griffonid",
+      "custom": ""
+    },
+    "movement": {
+      "speeds": {
+        "walk": 30,
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 0
+      },
+      "units": "ft",
+      "hover": false
+    },
+    "senses": {
+      "ranges": {
+        "darkvision": 60,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0
+      },
+      "units": "ft",
+      "special": ""
+    },
+    "advancement": [
+      {
+        "_id": "fCal9mSmyApOOAwD",
+        "type": "Size",
+        "configuration": {
+          "sizes": [
+            "med"
+          ]
+        },
+        "value": {
+          "size": ""
+        },
+        "level": 0,
+        "title": "Средний размер",
+        "hint": ""
+      },
+      {
+        "_id": "9TZwlvU8aogCHn8J",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.species.Item.MSprMeCQvTNybZLh",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.species.Item.ZtR5ISSvg6fEj1bv",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 0,
+        "title": "Особенности грифонида",
+        "hint": ""
+      },
+      {
+        "_id": "W2M1NsAhsxPUsvU9",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": false,
+          "choices": {
+            "0": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [
+            {
+              "uuid": "Compendium.spikependium.species.Item.G2paGBG5yDIEzOm0"
+            },
+            {
+              "uuid": "Compendium.spikependium.species.Item.7uMg69bFMcR8APop"
+            },
+            {
+              "uuid": "Compendium.spikependium.species.Item.usB9hAstrhV7CJp0"
+            }
+          ],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "",
+            "school": []
+          },
+          "spell": null,
+          "type": "feat"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Характеристика наследия: Интеллект, Мудрость или Харизма",
+        "hint": ""
+      },
+      {
+        "_id": "kUJIsVCI3B1HZtte",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 2,
+              "pool": [
+                "tool:art:*"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Два ремесленных инструмента",
+        "hint": ""
+      }
+    ]
+  },
+  "effects": [],
+  "folder": "jZZSMqMzIhEEIrVd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "species:griffonid"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!VgveSwwn0qWJxbUA"
+}

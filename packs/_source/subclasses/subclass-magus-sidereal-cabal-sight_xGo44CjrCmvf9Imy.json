@@ -1,0 +1,301 @@
+{
+  "_id": "xGo44CjrCmvf9Imy",
+  "name": "Звёздное зрение",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Тёмное зрение.</strong> Получите тёмное зрение 60 футов; если уже имеете его при получении особенности, дальность увеличивается на 60 футов. Прибавка настроена пассивным эффектом.</p><p><strong>Малое предзнаменование.</strong> После каждого продолжительного отдыха бросьте один к20 и запишите число. Один раз до следующего продолжительного отдыха можно заменить этим числом Проверку к20, которую совершаете вы или видимое вам существо. Решение принимается до броска. Неиспользованное число теряется при продолжительном отдыхе. Кнопка бросает к20 для записи, отдельная кнопка расходует применение замены. Сохранение числа, право на бросок после отдыха и подмена исходного броска пока ручные.</p><p><strong>Взор провидца.</strong> Получите владение Внимательностью; если уже владеете, получите вместо этого компетентность. Навык выдаётся продвижением.</p><h3>Действия</h3><ul><li>[[/item activity=CAVLWqPLhotRhKTc]]{После продолжительного отдыха: записать к20}</li><li>[[/item activity=M4Q7TBAW5Rokb3hA]]{Использовать записанное предзнаменование до броска}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "10",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-sidereal-cabal-sight",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Звёздная кабала",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "CAVLWqPLhotRhKTc": {
+        "_id": "CAVLWqPLhotRhKTc",
+        "type": "utility",
+        "name": "После продолжительного отдыха: записать к20",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d20",
+          "name": "",
+          "prompt": false,
+          "visible": true
+        }
+      },
+      "M4Q7TBAW5Rokb3hA": {
+        "_id": "M4Q7TBAW5Rokb3hA",
+        "type": "utility",
+        "name": "Использовать записанное предзнаменование до броска",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "vjmuy7G083Ezuaxb",
+        "type": "Trait",
+        "configuration": {
+          "mode": "upgrade",
+          "allowReplacements": false,
+          "grants": [
+            "skills:prc"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 3,
+        "title": "Внимательность: владение или компетентность",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "EnvBV8TvtuzSBT5j",
+      "name": "Звёздное зрение: тёмное зрение +60 футов",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.senses.ranges.darkvision",
+            "value": "60",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "i272CzlG1EZ5FezC"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!xGo44CjrCmvf9Imy.EnvBV8TvtuzSBT5j"
+    }
+  ],
+  "folder": "rR7lhoekX0OVF1fN",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-sidereal-cabal:sight"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!xGo44CjrCmvf9Imy"
+}

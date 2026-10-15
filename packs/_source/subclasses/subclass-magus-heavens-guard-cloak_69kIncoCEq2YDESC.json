@@ -1,0 +1,166 @@
+{
+  "_id": "69kIncoCEq2YDESC",
+  "name": "Плащ сияния",
+  "type": "feat",
+  "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Бонусным действием выберите другое видимое существо в пределах 30 футов: оно получает [[/r 5d10]]{5d10} + уровень магуса временных хитов. Пока сохраняется хотя бы один временный хит именно этого умения, действуют преимущества: атаки против цели выполняются с помехой существами, которые не ослеплены и не имеют иммунитета к ослеплению; цель испускает яркий свет на 30 футов и тусклый ещё на 30; в каждый свой ход цель может бонусным действием пролететь 30 футов и должна приземлиться, иначе падает без урона от падения. Одно применение за продолжительный отдых. Кнопка выдаёт временные хиты и расходует применение; выбор другого существа, происхождение временных хитов, свет, условную помеху и полёт пока отслеживайте вручную.</p><h3>Действия</h3><ul><li>[[/item activity=8KcXFNWrYAn6SEZR]]{Плащ сияния: временные хиты другому существу} · [[/heal activity=8KcXFNWrYAn6SEZR]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "MAGUS-PT3",
+      "page": "7",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "magus-heavens-guard-cloak",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Небесная стража",
+    "prerequisites": {
+      "level": 14,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "8KcXFNWrYAn6SEZR": {
+        "_id": "8KcXFNWrYAn6SEZR",
+        "type": "heal",
+        "name": "Плащ сияния: временные хиты другому существу",
+        "img": "icons/skills/melee/sword-damaged-broken-glow-red.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "30",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "number": 5,
+          "denomination": 10,
+          "bonus": "@classes.magus.levels",
+          "types": [
+            "temphp"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "dAxnIxQ7JETBZXTt",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:magus-heavens-guard:cloak"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!69kIncoCEq2YDESC"
+}

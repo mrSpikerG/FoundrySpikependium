@@ -212,7 +212,7 @@ for (const profile of toolTransform.effects) {
   assert.ok(shape.system.changes.some(c => c.key === `system.activities.${toolCheck._id}.check.bonus` && c.value === ""));
 }
 assert.equal(manifold.effects.find(e => e.name === "Инструменты кузнеца").system.changes.find(c => c.key === "system.weight.value").value, "8");
-assert.equal([...docs.values()].filter(d => d.type === "subclass").length, 40);
+assert.equal([...docs.values()].filter(d => d.type === "subclass").length, 69);
 for (const [key, book, page] of [
   ["feat:greater-handling", "UA-EB", "14"], ["feat:greater-warding", "UA-EB", "15"],
   ["spell:intellect-fortress", "UA-PU", "13"], ["spell:summon-astral-entity", "UA-PU", "15"],
@@ -435,7 +435,7 @@ assert.deepEqual(tableUpdates["configuration.spell.ability"], ["wis"]);
 
 const equipment = type => ({ type: "equipment", flags: {}, system: { equipped: true, type: { value: type } } });
 for (const [types, unarmored, lightArmorAllowed] of [[[], true, true], [["shield"], true, true], [["light"], false, true], [["medium"], false, false], [["heavy"], false, false]]) {
-  assert.deepEqual(conditionalState({ items: types.map(equipment) }, {}), { unarmored, lightArmorAllowed, hasSoulToken: false, mutableActive: false, noOpportunityAttacks: false });
+  assert.deepEqual(conditionalState({ items: types.map(equipment) }, {}), { unarmored, lightArmorAllowed, alchemistBombDC: 0, graftActive: {}, sweetTurtleAC: false, scornedAC: 0, wildskinActive: false, myceliaTemp: false, myceliaWithdrawal: false, equippedShield: types.includes("shield"), hasSoulToken: false, mutableActive: false, noOpportunityAttacks: false });
 }
 const tokenResource = { flags: { spikependium: { key: "subclass:phantom:tokens-of-the-departed" } }, system: { uses: { max: "@scale.phantom.trinkets", spent: 1 } } };
 assert.equal(conditionalState({ items: [tokenResource] }, { scale: { phantom: { trinkets: 2 } } }).hasSoulToken, true);
