@@ -1,0 +1,443 @@
+{
+  "_id": "zYVwmnetWK6QE9IB",
+  "name": "Scorpio Armor (Plate Armor)",
+  "type": "equipment",
+  "img": "icons/equipment/chest/breastplate-collared-steel.webp",
+  "system": {
+    "description": {
+      "value": "<p>Даже без настройки, пока носите доспех: в тусклом свете или темноте исчезает помеха Скрытности самого доспеха; на солнечном свету скорость −5 футов. Кнопкой выберите текущее освещение: «Тусклый свет/темнота», «Солнце» либо «Прочее». Это ручное подтверждение окружения; свет токена не равен солнечному свету. Пересчитываются штатное свойство брони и скорость до множителей/замедлений; другие причины помехи сохраняются. При настройке дополнительно получаете преимущество спасбросков от яда. Бонусным действием, закрыв глаза и произнеся командное слово, раз до заката мгновенно узнаёте наличие и положение существ на земле в 30 футах, будто по чувству вибрации. Кнопка расходует ресурс, раскрытие допустимых токенов выполняет Мастер: постоянного чувства вибрации доспех не выдаёт. Преимущество автоматически распознаётся по связанному ядовитому урону/профилю Отравлен; неизвестные источники разрешайте вручную.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха. Вес взят у базового доспеха 2024; отдельного веса в источнике нет.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=f959a404eeb7c00a\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=gPiKjaOsoj1hby6D]]{Тусклый свет или темнота}</li><li>[[/item activity=GE2ty2sz8lWOfe2o]]{Солнечный свет}</li><li>[[/item activity=vLisTDiJkJ1fljoC]]{Прочее освещение}</li><li>[[/item activity=M7Otsoio1mx4gLzu]]{Закрыть глаза и произнести слово: почувствовать землю 30 футов}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=f959a404eeb7c00a",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-scorpio-plate",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 65,
+      "units": "lb"
+    },
+    "price": {
+      "value": 1900,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 18,
+      "magicalBonus": null,
+      "dex": 0
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "heavy",
+      "baseItem": "plate"
+    },
+    "properties": [
+      "stealthDisadvantage",
+      "mgc"
+    ],
+    "strength": 15,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dusk",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "gPiKjaOsoj1hby6D": {
+        "_id": "gPiKjaOsoj1hby6D",
+        "type": "utility",
+        "name": "Тусклый свет или темнота",
+        "img": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "scorpioLight": "dim"
+          }
+        }
+      },
+      "GE2ty2sz8lWOfe2o": {
+        "_id": "GE2ty2sz8lWOfe2o",
+        "type": "utility",
+        "name": "Солнечный свет",
+        "img": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "scorpioLight": "sun"
+          }
+        }
+      },
+      "vLisTDiJkJ1fljoC": {
+        "_id": "vLisTDiJkJ1fljoC",
+        "type": "utility",
+        "name": "Прочее освещение",
+        "img": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "scorpioLight": "other"
+          }
+        }
+      },
+      "M7Otsoio1mx4gLzu": {
+        "_id": "M7Otsoio1mx4gLzu",
+        "type": "utility",
+        "name": "Закрыть глаза и произнести слово: почувствовать землю 30 футов",
+        "img": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "griffonArmorPaid": true,
+            "griffonCommandWord": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "tXjRGQ0yDMqBGCWR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:scorpio-plate",
+      "originalName": "Scorpio Armor (Plate Armor)",
+      "griffonTwoArmor": "scorpio",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmPlateArmor"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!zYVwmnetWK6QE9IB"
+}

@@ -1,0 +1,689 @@
+{
+  "_id": "D8D86uDAWJjaBxnp",
+  "name": "Arcanist Gauntlets",
+  "type": "equipment",
+  "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройка заклинателем; можно использовать как заклинательную фокусировку. При сотворении ячейкой не выше 5-го уровня можно бросить [[/r 1d6]]{1к6}. Результат не ниже уровня ячейки: магию даёт предмет, личная ячейка не расходуется. Результат ниже: заклинание творится обычно с расходом ячейки; если подходящей ячейки нет, оно проваливается, а этот уровень всё равно засчитывается в суточный запас предмета. Нельзя получить уровень, который вы обычно не способны использовать. За сутки предмет предоставляет суммарно до 5 уровней, каждый конкретный уровень не более одного раза. При использовании собственного заклинания с ячейкой появляется выбор перчаток и допустимого уровня, включая ячейки договора. После подтверждения штатного окна один к6 автоматически определяет исход: перчатки оплачивают уровень, расходуется личная ячейка либо заклинание проваливается при пустой ячейке. В последнем случае создаётся только карточка неудачи; заклинание и его эффекты не запускаются, прежняя концентрация сохраняется. Каждый предоставленный уровень расходует свой одноразовый суточный счётчик и столько же общего запаса. Повтор уровня/превышение запаса блокируются; штатная отмена возвращает списанные ресурсы. Для нестандартных источников оставлены отдельный к6 и пять кнопок подтверждения; не используйте их повторно после автоматической оплаты. Провал с доступной личной ячейкой не расходует запас перчаток. Суточное восстановление настроено периодом день; источник не задаёт точного часа, подтвердите его у Мастера.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 0,5 фунта для пары тканевых/кожаных перчаток или 2 фунта для пары металлических рукавиц; особый вес источник не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=1e324aafcec4e001\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=rWJGPKRoGIVt76gs]]{При сотворении ячейкой до 5-го уровня: проверка 1к6}</li><li>[[/item activity=NmyK0RZ8RJzmGnpc]]{Подтвердить предоставленный уровень 1: расход 1 из 5}</li><li>[[/item activity=bQkda520HCdiOs7u]]{Подтвердить предоставленный уровень 2: расход 2 из 5}</li><li>[[/item activity=rNPWsI0y8fdiY69n]]{Подтвердить предоставленный уровень 3: расход 3 из 5}</li><li>[[/item activity=bP4bgK2chBuEjJWi]]{Подтвердить предоставленный уровень 4: расход 4 из 5}</li><li>[[/item activity=MwfYWQ4vggfbzJaE]]{Подтвердить предоставленный уровень 5: расход 5 из 5}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=1e324aafcec4e001",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-gs2-arcanist-gauntlets",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": 1,
+    "uses": {
+      "max": "5",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "day",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "rWJGPKRoGIVt76gs": {
+        "_id": "rWJGPKRoGIVt76gs",
+        "type": "utility",
+        "name": "При сотворении ячейкой до 5-го уровня: проверка 1к6",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "1d6",
+          "name": "",
+          "prompt": false,
+          "visible": true
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      },
+      "NmyK0RZ8RJzmGnpc": {
+        "_id": "NmyK0RZ8RJzmGnpc",
+        "type": "utility",
+        "name": "Подтвердить предоставленный уровень 1: расход 1 из 5",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "gloveBudget": 1
+          }
+        }
+      },
+      "bQkda520HCdiOs7u": {
+        "_id": "bQkda520HCdiOs7u",
+        "type": "utility",
+        "name": "Подтвердить предоставленный уровень 2: расход 2 из 5",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "2",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "gloveBudget": 2
+          }
+        }
+      },
+      "rNPWsI0y8fdiY69n": {
+        "_id": "rNPWsI0y8fdiY69n",
+        "type": "utility",
+        "name": "Подтвердить предоставленный уровень 3: расход 3 из 5",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "3",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "gloveBudget": 3
+          }
+        }
+      },
+      "bP4bgK2chBuEjJWi": {
+        "_id": "bP4bgK2chBuEjJWi",
+        "type": "utility",
+        "name": "Подтвердить предоставленный уровень 4: расход 4 из 5",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 500000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "4",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "gloveBudget": 4
+          }
+        }
+      },
+      "MwfYWQ4vggfbzJaE": {
+        "_id": "MwfYWQ4vggfbzJaE",
+        "type": "utility",
+        "name": "Подтвердить предоставленный уровень 5: расход 5 из 5",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 600000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "5",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "gloveBudget": 5
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "IEgnNTFzxYTHqSK9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:arcanist-gauntlets",
+      "originalName": "Arcanist Gauntlets",
+      "griffonGlove": "arcanist-gauntlets",
+      "griffonSpellcaster": true
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!D8D86uDAWJjaBxnp"
+}

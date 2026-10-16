@@ -5,14 +5,19 @@ const active = item => item?.system.equipped && (item.system.attunement !== "req
 const effects = actor => actor.appliedEffects ?? actor.effects ?? [];
 const ownedItem = (actor, id) => actor?.items?.find(i => key(i) === `item:gs2:${id}` && active(i));
 const cooldowns = item => Object.entries(item.flags.spikependium?.griffonCooldowns ?? {});
-const until = item => Math.max(0, ...cooldowns(item).filter(([, c]) => c.paid === 1).map(([, c]) => c.until));
+const until = (item, activity = "") => Math.max(0, ...cooldowns(item).filter(([, c]) => c.paid === 1 && (c.activity ?? "") === activity).map(([, c]) => c.until));
+const activitySpent = (root, activity, updates) => {
+  const update = updates.item.find(i => i._id === root.item.id);
+  return update?.[`system.activities.${root.id}.uses.spent`] ?? update?.[`system.activities.${root.id}`]?.uses?.spent
+    ?? (root === activity ? updates.activity?.["uses.spent"] ?? updates.activity?.uses?.spent : undefined);
+};
 const sourceItem = (e, actor) => {
   const uuid = e.system.origin?.activity; return resolve(uuid?.startsWith(".") ? `${actor.uuid}${uuid}` : uuid)?.item;
 };
 const formActive = (actor, flag, item) => effects(actor).some(e => e.active && e.flags.spikependium?.[flag] && sourceItem(e, actor)?.uuid === item.uuid);
 export function isGriffonSpellcaster(actor) {
   return Object.values(actor?.classes ?? {}).some(c => c.system.spellcasting?.progression && c.system.spellcasting.progression !== "none")
-    || actor?.items?.some(i => (i.type === "spell" && !/^(equipment:|consumable:|feat:griffon-sweet-bubble$)/.test(i.system.sourceItem ?? ""))
+    || actor?.items?.some(i => (i.type === "spell" && !/^(equipment:|weapon:|consumable:|feat:griffon-sweet-bubble$)/.test(i.system.sourceItem ?? ""))
       || (i.type === "feat" && !i.flags?.spikependium?.sweetLoan && !i.flags?.spikependium?.sweetTemplate && [...(i.system.activities?.values?.() ?? Object.values(i.system.activities ?? {}))].some(a => a.type === "cast")));
 }
 export function guardGriffonCasterAttunement(item, changes) {
@@ -25,11 +30,12 @@ export function canUseGriffonTwo(activity) {
     && ((activity.item.type === "spell" && activity.item.system.properties.has("vocal")) || flags.griffonCommandWord)) {
     ui.notifications.warn("Действующее безмолвие запрещает вербальное колдовство и командные слова."); return false;
   }
-  if (item.flags.spikependium?.griffonSpellcaster && !isGriffonSpellcaster(actor)) return false;
+  if (item.flags.spikependium?.griffonSpellcaster && !(item.flags.spikependium.griffonFocus && item.type === "weapon" && root.type === "attack") && !isGriffonSpellcaster(actor)) return false;
   if (id === "item:gs2:spirit-naga" && activity.type === "heal" && !actor?.statuses.has("dead")) {
     ui.notifications.warn("Это свойство используется после смерти, а не просто при 0 хитах."); return false;
   }
   if (flags.griffonCooldown && until(item) > game.time.worldTime) { ui.notifications.warn("Срок восстановления предмета ещё не прошёл."); return false; }
+  if (flags.griffonActivityCooldown && until(item, root.id) > game.time.worldTime) { ui.notifications.warn("Срок восстановления этого свойства ещё не прошёл."); return false; }
   if (flags.griffonLycanClaws && (!(actor.system.attributes.hp.value > 0) || !formActive(actor, "griffonLycanForm", item))) {
     ui.notifications.warn("Когти требуют активного звериного облика этого амулета."); return false;
   }
@@ -42,6 +48,8 @@ export async function prepareGriffonTwoUpdates(activity, config, updates) {
   const linked = activity.getLinkedActivity?.(config.cause?.activity);
   if (linked?.flags?.spikependium?.griffonCooldown && (until(linked.item) > game.time.worldTime
     || updates.item.find(i => i._id === linked.item.id)?.["system.uses.spent"] !== linked.item.system.uses.spent + 1)) return false;
+  if (linked?.flags?.spikependium?.griffonActivityCooldown && (until(linked.item, linked.id) > game.time.worldTime
+    || activitySpent(linked, activity, updates) !== linked.uses.spent + 1)) return false;
   pending.delete(activity); const item = activity.item, flags = activity.flags?.spikependium ?? {}, actor = activity.actor;
   if (flags.volleyAmmo && key(item) === "item:gs2:volleys") {
     const template = await fromUuid(flags.volleyAmmo);
@@ -58,11 +66,31 @@ export async function prepareGriffonTwoUpdates(activity, config, updates) {
     for (const old of actor.items.filter(i => i.flags.spikependium?.volleyAmmo)) if (!updates.delete.includes(old.id)) updates.delete.push(old.id);
     updates.create.push(data);
   }
+  if (flags.griffonActivityCooldown) {
+    if (!actor.isOwner || activitySpent(activity, activity, updates) !== activity.uses.spent + 1 || until(item, activity.id) > game.time.worldTime) return false;
+    let update = updates.item.find(i => i._id === item.id); if (!update) updates.item.push(update = { _id: item.id });
+    const nonce = foundry.utils.randomID(), path = `flags.spikependium.griffonCooldowns.${nonce}`;
+    Object.assign(update, { [`${path}.paid`]: 1, [`${path}.until`]: game.time.worldTime + flags.griffonActivityCooldown, [`${path}.activity`]: activity.id });
+    pending.set(activity, { nonce, path: `${path}.paid`, item: item.id }); return updates;
+  }
   if (!flags.griffonCooldown) return updates;
   const update = updates.item.find(i => i._id === item.id);
   if (!actor.isOwner || update?.["system.uses.spent"] !== item.system.uses.spent + 1 || until(item) > game.time.worldTime) return false;
   const nonce = foundry.utils.randomID(), pathRoot = `flags.spikependium.griffonCooldowns.${nonce}`;
-  update[`${pathRoot}.paid`] = 1; update[`${pathRoot}.until`] = game.time.worldTime + flags.griffonCooldown;
+  let duration = flags.griffonCooldown;
+  if (["1d6+1", "1d3"].includes(flags.griffonCooldownDaysRoll)) {
+    const roll = await new CONFIG.Dice.BasicRoll(flags.griffonCooldownDaysRoll).evaluate();
+    const [min,max]=flags.griffonCooldownDaysRoll==="1d3"?[1,3]:[2,7];
+    if (!Number.isInteger(roll.total) || roll.total < min || roll.total > max) return false;
+    duration = roll.total * 86400; updates.rolls.push(roll);
+  }
+  if (["2d6", "1d4"].includes(flags.griffonCooldownHoursRoll)) {
+    const roll = await new CONFIG.Dice.BasicRoll(flags.griffonCooldownHoursRoll).evaluate();
+    const [min,max]=flags.griffonCooldownHoursRoll==="1d4"?[1,4]:[2,12];
+    if (!Number.isInteger(roll.total) || roll.total < min || roll.total > max) return false;
+    duration = roll.total * 3600; updates.rolls.push(roll);
+  }
+  update[`${pathRoot}.paid`] = 1; update[`${pathRoot}.until`] = game.time.worldTime + duration;
   pending.set(activity, { nonce, path: `${pathRoot}.paid`, item: item.id }); return updates;
 }
 export function recordGriffonCooldown(activity, config, message) {
@@ -85,9 +113,12 @@ export async function syncGriffonTwo() {
   for (const actor of allActors().values()) {
     if (!actor.isOwner || (game.users.activeGM && !game.user.isActiveGM)) continue;
     for (const item of actor.items) {
-      if (["item:gs2:gateway", "item:gs2:lycanthrope"].includes(key(item)) && cooldowns(item).length) {
+      if ((["item:gs2:gateway", "item:gs2:lycanthrope"].includes(key(item)) || item.flags.spikependium?.griffonTimedRecovery) && cooldowns(item).some(([, c]) => !c.activity)) {
         const spent = until(item) > game.time.worldTime ? 1 : 0; if (item.system.uses.spent !== spent) await item.update({ "system.uses.spent": spent });
       }
+      for (const activity of item.system.activities?.values?.() ?? Object.values(item.system.activities ?? {})) if (activity.flags?.spikependium?.griffonActivityCooldown
+        && cooldowns(item).some(([, c]) => c.activity === activity.id) && until(item, activity.id) <= game.time.worldTime && activity.uses.spent > 0)
+        await item.update({ [`system.activities.${activity.id}.uses.spent`]: 0 });
       const ammo = item.flags.spikependium?.volleyAmmo;
       const combat = ammo?.combat && game.combats.get(ammo.combat.id);
       if (ammo && (ammo.created < game.time.worldTime || ammo.owner !== actor.uuid || !active(resolve(ammo.ring))
@@ -119,7 +150,7 @@ export async function griffonTwoUse(wrapped, ...args) {
     return result;
   } finally { if (tracked) using.delete(id); }
 }
-const activityTracked = a => !!a.flags?.spikependium?.griffonCooldown || !!a.flags?.spikependium?.volleyAmmo;
+const activityTracked = a => !!a.flags?.spikependium?.griffonCooldown || !!a.flags?.spikependium?.griffonActivityCooldown || !!a.flags?.spikependium?.volleyAmmo;
 const saveOrigin = message => game.messages.get(message.data?.system?.origin)?.getAssociatedActivity();
 function advantage(config) { for (const r of config.rolls) { r.options ??= {}; r.options.disadvantage ||= r.options.advantageMode === -1; r.options.advantage = true; if (r.options.advantageMode !== undefined) r.options.advantageMode = r.options.disadvantage ? 0 : 1; } }
 export function prepareImmutability(config, _dialog, message) {

@@ -1,0 +1,183 @@
+{
+  "_id": "CKvonVGSSUR3DsE3",
+  "name": "Переплетение судьбы",
+  "type": "spell",
+  "img": "icons/magic/time/hourglass-tilted-gray.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: бард, волшебник, жрец, колдун.</em></p><p>Реакцией на провал Теста к20 видимым существом в пределах 60 футов вы изменяете одну нить судьбы. Существо может перебросить этот Тест с Преимуществом и обязано использовать новый результат. При успехе оно получает [[/r 6d10]]{6к10} Временных хитов.</p><p><strong>Применение.</strong> Выберите свежую штатную карточку проверки, спасброска или атаки. Подтвердите видимость и согласие получателя; если СЛ проверки не указана в карточке, введите её по решению Мастера. Нужны точные токены на текущей сцене, расстояние до 60 футов с учётом высоты и Мастер либо права на получателя и карточку. Реакция и ячейка расходуются штатно. Новый результат заменяет исходный; преимущество сочетается с известной помехой. Успех определяется по СЛ или КД и выдаёт [[/r 6d10]]{6к10} временных хитов, сохраняя больший имеющийся запас. Повторная обработка не перебрасывает кубики и не восстанавливает потраченные временные хиты. Групповые карточки и уже разрешённые последствия броска сверяйте вручную; возврат расхода не отменяет перебросок и выданные временные хиты.</p><h3>Действия</h3><ul><li>[[/item activity=vRwlx3kgXFC1NRe3]]{Переплести судьбу}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "44",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "fates-intertwined",
+    "activation": {
+      "type": "reaction",
+      "value": 1,
+      "condition": "Видимое существо в пределах 60 футов проваливает Тест к20"
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 7,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "somatic"
+    ],
+    "range": {
+      "value": "60",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "div",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "vRwlx3kgXFC1NRe3": {
+        "_id": "vRwlx3kgXFC1NRe3",
+        "type": "utility",
+        "name": "Переплести судьбу",
+        "img": "icons/magic/time/hourglass-tilted-gray.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Видимое существо в пределах 60 футов проваливает Тест к20",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "fatesIntertwined": true
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "GcAbLCaR99k8zXDx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-fates-intertwined"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!CKvonVGSSUR3DsE3"
+}

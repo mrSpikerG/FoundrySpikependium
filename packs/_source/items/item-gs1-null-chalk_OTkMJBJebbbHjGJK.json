@@ -1,0 +1,586 @@
+{
+  "_id": "OTkMJBJebbbHjGJK",
+  "name": "Null Chalk",
+  "type": "consumable",
+  "img": "icons/commodities/gems/powder-raw-white.webp",
+  "system": {
+    "description": {
+      "value": "<p>Сначала определите содержимое нового мешочка: один бросок [[/r 1d4+1]]{1к4+1} задаёт число кусочков, повторный бросок после инициализации недоступен. Действием Магии израсходуйте кусочек, касаясь пола, стены или потолка: проведите непрерывную линию произвольной формы длиной до 50 футов и шириной 1 фут, в том числе через смежные поверхности. Кусочек после этого рассыпается. Преграда действует на 20 футов перпендикулярно поверхности. Магические эффекты через неё не проходят; от магии с противоположной стороны цели имеют полное укрытие. Пересекающий её магический предмет, кроме артефакта, теряет магию на 1 раунд. Небожитель, элементаль, фея, исчадие или нежить при первой попытке пересечения за ход совершает Харизму СЛ 16: провал — [[/r 2d8]]{2к8} силовым полем, скорость 0 до начала следующего собственного хода и отбрасывание от линии до 10 футов; успех — половина урона и проход. При возникновении линии через такое существо выберите сторону, куда его вытолкнуть. Линия существует 8 часов; разрыв минимум в 1 фут немедленно лишает её магии. Затереть такой разрыв можно за минуту. Для Рассеивания магии линия считается заклинанием 6-го уровня; успешное рассеивание подавляет её на минуту. Расход, отдельный спасбросок/урон и профиль остановки скорости настроены. Геометрию, восемь часов каждой линии, первое пересечение за ход, укрытие, отбрасывание, подавление предметов и разрывы пока отслеживает Мастер. Не выбирайте обычных гуманоидов или иных неподходящих существ для этого спасброска. Мешочек после последнего кусочка сохраняется пустым, чтобы разрешить действия уже начерченных линий.</p><p><em>Цена оценочная: половина цены очень редкого предмета по правилам 2024 для расходуемого магического предмета. Цена источником не задана. Оценка мешочка мела: 0,5 фунта. Источник массы не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=87bb2bf3ada13e65\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=labWqi2BD4KCZlRR]]{Новый мешочек: определить число кусочков (1к4+1)}</li><li>[[/item activity=pnZE2RzUFgTVSupF]]{Начертить одну линию: расход 1 кусочка}</li><li>[[/item activity=gESwFKr40ruUVtM2]]{Первое пересечение линии за ход: Харизма СЛ 16} · [[/damage activity=gESwFKr40ruUVtM2]]{Бросок урона} · [[/save activity=gESwFKr40ruUVtM2]]{Спасбросок цели}</li><li>[[/item activity=2TlFh6U1pFMe1nBi]]{Стереть разрыв не менее 1 фута: линия немагическая}</li><li>[[/item activity=5poYGqvpt6BA3Djw]]{Подтвердить рассеивание: подавить на минуту}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=87bb2bf3ada13e65",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-null-chalk",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
+    "price": {
+      "value": 20000,
+      "denomination": "gp"
+    },
+    "rarity": "veryRare",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "trinket",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "magicalBonus": null,
+    "uses": {
+      "max": "0",
+      "spent": 0,
+      "recovery": [],
+      "autoDestroy": false
+    },
+    "activities": {
+      "labWqi2BD4KCZlRR": {
+        "_id": "labWqi2BD4KCZlRR",
+        "type": "utility",
+        "name": "Новый мешочек: определить число кусочков (1к4+1)",
+        "img": "icons/commodities/gems/powder-raw-white.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "stationeryCommand": "initialize"
+          }
+        }
+      },
+      "pnZE2RzUFgTVSupF": {
+        "_id": "pnZE2RzUFgTVSupF",
+        "type": "utility",
+        "name": "Начертить одну линию: расход 1 кусочка",
+        "img": "icons/commodities/gems/powder-raw-white.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "touch",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "stationeryCommand": "draw"
+          }
+        }
+      },
+      "gESwFKr40ruUVtM2": {
+        "_id": "gESwFKr40ruUVtM2",
+        "type": "save",
+        "name": "Первое пересечение линии за ход: Харизма СЛ 16",
+        "img": "icons/commodities/gems/powder-raw-white.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "74TlVlZziFP1CMTx"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "cha"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "16"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "nullChalkCrossing": true
+          }
+        }
+      },
+      "2TlFh6U1pFMe1nBi": {
+        "_id": "2TlFh6U1pFMe1nBi",
+        "type": "utility",
+        "name": "Стереть разрыв не менее 1 фута: линия немагическая",
+        "img": "icons/commodities/gems/powder-raw-white.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "minute",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "stationeryCommand": "erase"
+          }
+        }
+      },
+      "5poYGqvpt6BA3Djw": {
+        "_id": "5poYGqvpt6BA3Djw",
+        "type": "utility",
+        "name": "Подтвердить рассеивание: подавить на минуту",
+        "img": "icons/commodities/gems/powder-raw-white.webp",
+        "sort": 500000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "stationeryCommand": "dispel"
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "74TlVlZziFP1CMTx",
+      "name": "Обнуляющий мел: скорость 0 до начала своего хода",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.multiplier",
+            "value": "0",
+            "type": "multiply",
+            "priority": null,
+            "phase": "initial",
+            "_id": "SMJ1agqW6xw9g2fx"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetStart",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!OTkMJBJebbbHjGJK.74TlVlZziFP1CMTx"
+    }
+  ],
+  "folder": "ZvAoWXjQRtetyftB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:null-chalk",
+      "originalName": "Null Chalk",
+      "stationery": "null-chalk",
+      "chalkInitialized": 0
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!OTkMJBJebbbHjGJK"
+}

@@ -1,0 +1,140 @@
+{
+  "_id": "g4rUZcuA2dqmO4t5",
+  "name": "Дерево стены древостража",
+  "type": "npc",
+  "img": "icons/environment/wilderness/tree-oak.webp",
+  "system": {
+    "abilities": {},
+    "attributes": {
+      "ac": {
+        "calcs": [
+          "natural"
+        ],
+        "flat": 13,
+        "override": null,
+        "formulas": []
+      },
+      "hp": {
+        "value": 20,
+        "max": 20,
+        "temp": 0,
+        "tempmax": 0,
+        "formula": ""
+      },
+      "movement": {
+        "speeds": {
+          "walk": "0"
+        },
+        "units": "ft",
+        "hover": false,
+        "bonus": "",
+        "special": "",
+        "ignoredDifficultTerrain": []
+      },
+      "senses": {
+        "ranges": {
+          "darkvision": null,
+          "blindsight": null,
+          "tremorsense": null,
+          "truesight": null
+        },
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": ""
+    },
+    "details": {
+      "biography": {
+        "value": "<p>Объект стены: основание 5 футов, высота до 20 футов; КД 13, 20 хитов, уязвимость огню. При 0 хитах или окончании стены исчезает. Дерево не получает собственных атак/ходов; характеристики, спасброски и прочие свойства в исходном описании не заданы — разрешайте их как для объекта. Геометрию/полное укрытие задаёт Мастер.</p>",
+        "public": ""
+      },
+      "alignment": "Нейтральный",
+      "type": {
+        "value": "custom",
+        "subtype": "",
+        "swarm": "",
+        "custom": "Объект — дерево магической стены"
+      },
+      "cr": 0,
+      "habitat": {
+        "custom": "",
+        "value": []
+      },
+      "treasure": {
+        "value": []
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "bypasses": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [
+          "fire"
+        ],
+        "bypasses": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": "",
+        "communication": {}
+      }
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=27b83ead21638f3e",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    }
+  },
+  "prototypeToken": {
+    "name": "Дерево стены древостража",
+    "displayName": 20,
+    "actorLink": false,
+    "disposition": 1,
+    "texture": {
+      "src": "icons/environment/wilderness/tree-oak.webp"
+    },
+    "width": 1,
+    "height": 1
+  },
+  "items": [],
+  "effects": [],
+  "folder": "eLtDMYSPKrO9keNE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "actor:gs2:arborguard-tree"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!actors!g4rUZcuA2dqmO4t5"
+}

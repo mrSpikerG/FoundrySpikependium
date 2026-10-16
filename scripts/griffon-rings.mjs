@@ -2,10 +2,12 @@ const resolve = uuid => uuid && fromUuidSync(uuid, { strict: false });
 const isActive = item => item?.system.equipped && (item.system.attunement !== "required" || item.system.attuned);
 const key = item => item?.flags?.spikependium?.key;
 const origin = message => game.messages.get(message.data?.system?.origin)?.getAssociatedActivity();
+export function hasGriffonClass(item) {
+  const required = [item.flags?.spikependium?.griffonClass].flat().filter(Boolean);
+  return !required.length || required.some(c => item.actor?.classes?.[c]?.system.levels > 0);
+}
 export function guardGriffonAttunement(item, changes) {
-  const required = item.flags?.spikependium?.griffonClass;
-  if (required && item.actor && (changes["system.attuned"] ?? changes.system?.attuned) === true
-    && !(item.actor.classes?.[required]?.system.levels > 0)) {
+  if (item.actor && (changes["system.attuned"] ?? changes.system?.attuned) === true && !hasGriffonClass(item)) {
     ui.notifications.warn("Настройка этого предмета требует указанного в описании класса."); return false;
   }
 }

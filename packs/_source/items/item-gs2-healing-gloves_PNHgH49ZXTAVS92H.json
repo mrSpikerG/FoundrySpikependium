@@ -1,0 +1,186 @@
+{
+  "_id": "PNHgH49ZXTAVS92H",
+  "name": "Gloves of Healing",
+  "type": "equipment",
+  "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройка не нужна. При сотворении заклинания 1-го уровня или выше, восстанавливающего хиты, выберите ровно одну его цель: она дополнительно восстанавливает хиты в размере вашего бонуса мастерства. Альтернатива — подходящее применение комплекта целителя для стабилизации либо восстановления хитов. После фактического получения добавочных хитов цель не получает их снова до собственного короткого или долгого отдыха, независимо от носителя/копии перчаток. Отдельная лечебная карточка использует ваш бонус мастерства, а факт расходования права отмечается на получателе одновременно с изменением хитов и сбрасывается завершённым отдыхом. Полностью здоровая цель право не тратит; ошибка записи хитов также его не расходует. Подходящее исходное заклинание/комплект целителя и выбор единственной цели подтверждайте вручную. Дистанция добавки совпадает с исходным лечением и указана как особая; подтвердите её по ситуации. Возврат исходного лечения не откатывает добавку и отметку цели.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 0,5 фунта для пары тканевых/кожаных перчаток или 2 фунта для пары металлических рукавиц; особый вес источник не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=1ebe3986fd7703e9\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=XHE1J4yKWfXef272]]{Одной подходящей цели лечения: дополнительные хиты по бонусу мастерства} · [[/heal activity=XHE1J4yKWfXef272]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=1ebe3986fd7703e9",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-gs2-healing-gloves",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": 1,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "XHE1J4yKWfXef272": {
+        "_id": "XHE1J4yKWfXef272",
+        "type": "heal",
+        "name": "Одной подходящей цели лечения: дополнительные хиты по бонусу мастерства",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Дистанция и допустимая цель исходного лечения",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "special",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "@prof"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "flags": {
+          "spikependium": {
+            "healingGloveBonus": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "IEgnNTFzxYTHqSK9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:healing-gloves",
+      "originalName": "Gloves of Healing",
+      "griffonGlove": "healing-gloves"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!PNHgH49ZXTAVS92H"
+}

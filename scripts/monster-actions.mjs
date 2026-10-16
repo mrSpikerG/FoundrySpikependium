@@ -197,8 +197,8 @@ export function prepareMonsterSave(config, dialog, message) {
 export async function useMonsterMultiattack(activity, config, results) {
   const rule = activity.flags.spikependium?.multiattack, actor = activity.actor;
   const level = actor.flags?.dnd5e?.summon?.level;
-  const count = rule?.count === "spell" && /^actor:au-(plant|dinosaur)-/.test(actor.flags?.spikependium?.key ?? "")
-    && Number.isInteger(level) && level >= 5 && level <= 9 ? Math.floor(level / 2) : rule?.count;
+  const count = rule?.count === "spell" && /^actor:au-(plant|dinosaur|combat-familiar)-/.test(actor.flags?.spikependium?.key ?? "")
+    && Number.isInteger(level) && level >= (actor.flags.spikependium.key.startsWith("actor:au-combat-familiar-") ? 2 : 5) && level <= 9 ? Math.floor(level / 2) : rule?.count;
   if (!rule || !Number.isSafeInteger(count) || count < 1 || !results?.message
     || results.message.flags.spikependium?.multiattack || results.message.author.id !== game.user.id || !usable(actor) || running.has(actor.uuid)) return;
   running.add(actor.uuid);

@@ -1,0 +1,1727 @@
+{
+  "repository": "https://github.com/foundryvtt/dnd5e",
+  "revision": "87e94dbd9f930135e0694cd7e7d49f210603cd2c",
+  "license": "CC-BY-4.0",
+  "records": [
+    {
+      "source": "packs/_source/equipment24/weapons/martial-melee/warhammer.yml",
+      "sha256": "a6ea407a4c924b65bc68276de3dca76e495678b67adbbfdba3395aa94eea0eea",
+      "document": {
+        "name": "Warhammer",
+        "system": {
+          "price": {
+            "value": 15,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 5,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": null,
+            "long": null,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": 0,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 8,
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "martialM",
+            "baseItem": "warhammer"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "ver"
+          ],
+          "proficient": null,
+          "activities": {
+            "jf99rIxqlwX1YLPc": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "5",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "melee",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "jf99rIxqlwX1YLPc",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {},
+          "mastery": "push",
+          "identifier": "warhammer"
+        },
+        "_id": "phbwepWarhammer0",
+        "type": "weapon",
+        "folder": "fd3qxAXCv2FhExPp",
+        "img": "icons/weapons/hammers/hammer-drilling-spiked.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425920237,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepWarhammer0"
+      }
+    },
+    {
+      "source": "packs/_source/equipment24/weapons/martial-ranged/hand-crossbow.yml",
+      "sha256": "037095f5d40237535dee678b913547517ded16fb2dcdaad455efe1505f8f6bda",
+      "document": {
+        "name": "Hand Crossbow",
+        "system": {
+          "price": {
+            "value": 75,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 3,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": 30,
+            "long": 120,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": true,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 6,
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "martialR",
+            "baseItem": "handcrossbow"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "amm",
+            "lgt",
+            "lod"
+          ],
+          "proficient": null,
+          "activities": {
+            "CJjRI7JX8tziGFSo": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "30",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "ranged",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "CJjRI7JX8tziGFSo",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {
+            "type": "crossbowBolt"
+          },
+          "mastery": "vex",
+          "identifier": "hand-crossbow"
+        },
+        "_id": "phbwepHandCrossb",
+        "type": "weapon",
+        "folder": "0qKr1rbesCSNE0MA",
+        "img": "icons/weapons/crossbows/crossbow-slotted.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425919025,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepHandCrossb"
+      }
+    },
+    {
+      "source": "packs/_source/equipment24/weapons/martial-ranged/heavy-crossbow.yml",
+      "sha256": "1d17cb4213262659ab8946f833f77c9df0294def352865a267033e31ff771e62",
+      "document": {
+        "name": "Heavy Crossbow",
+        "system": {
+          "price": {
+            "value": 50,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 18,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": 100,
+            "long": 400,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": true,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 10,
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "martialR",
+            "baseItem": "heavycrossbow"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "amm",
+            "hvy",
+            "lod",
+            "two"
+          ],
+          "proficient": null,
+          "activities": {
+            "bZgdThKc69XEv43i": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "100",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "ranged",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "bZgdThKc69XEv43i",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {
+            "type": "crossbowBolt"
+          },
+          "mastery": "push",
+          "identifier": "heavy-crossbow"
+        },
+        "_id": "phbwepHeavyCross",
+        "type": "weapon",
+        "folder": "0qKr1rbesCSNE0MA",
+        "img": "icons/weapons/crossbows/crossbow-loaded-black.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425919154,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepHeavyCross"
+      }
+    },
+    {
+      "source": "packs/_source/equipment24/weapons/martial-ranged/longbow.yml",
+      "sha256": "ee4856bf8e5242ec6b1053ed2066387c0645bb9e1d75faf7de50526246109f89",
+      "document": {
+        "name": "Longbow",
+        "system": {
+          "price": {
+            "value": 50,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 2,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": 150,
+            "long": 600,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": true,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 8,
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "martialR",
+            "baseItem": "longbow"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "amm",
+            "hvy",
+            "two"
+          ],
+          "proficient": null,
+          "activities": {
+            "b04WToYLVtgE03Dm": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "150",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "ranged",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "b04WToYLVtgE03Dm",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {
+            "type": "arrow"
+          },
+          "mastery": "slow",
+          "identifier": "longbow"
+        },
+        "_id": "phbwepLongbow000",
+        "type": "weapon",
+        "folder": "0qKr1rbesCSNE0MA",
+        "img": "icons/weapons/bows/longbow-recurve-leather-brown.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425919520,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepLongbow000"
+      }
+    },
+    {
+      "source": "packs/_source/equipment24/weapons/simple-melee/dagger.yml",
+      "sha256": "bb3197a711b21781e40fbc61537e8159ebad713cd374e62029ca8e00f0240b93",
+      "document": {
+        "name": "Dagger",
+        "system": {
+          "price": {
+            "value": 2,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 1,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": 20,
+            "long": 60,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": true,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "simpleM",
+            "baseItem": "dagger"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "fin",
+            "lgt",
+            "thr"
+          ],
+          "proficient": null,
+          "activities": {
+            "3SJSAL3pv9gKkAM9": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "20",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "melee",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "3SJSAL3pv9gKkAM9",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {},
+          "mastery": "nick",
+          "identifier": "dagger"
+        },
+        "_id": "phbwepDagger0000",
+        "type": "weapon",
+        "folder": "FL1Jee9DzStc7vM3",
+        "img": "icons/weapons/daggers/dagger-straight-blue.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425918352,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepDagger0000"
+      }
+    },
+    {
+      "source": "packs/_source/equipment24/weapons/simple-melee/mace.yml",
+      "sha256": "310b66848c0a4f492e58c8a1d7f0b3de5fd652823fd725452db48d54a1d080cf",
+      "document": {
+        "name": "Mace",
+        "system": {
+          "price": {
+            "value": 5,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 4,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": null,
+            "long": null,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": true,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 6,
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "simpleM",
+            "baseItem": "mace"
+          },
+          "magicalBonus": null,
+          "properties": [],
+          "proficient": null,
+          "activities": {
+            "KiHlb6kIDAvWmnhv": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "5",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "melee",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "KiHlb6kIDAvWmnhv",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {},
+          "mastery": "sap",
+          "identifier": "mace"
+        },
+        "_id": "phbwepMace000000",
+        "type": "weapon",
+        "folder": "FL1Jee9DzStc7vM3",
+        "img": "icons/weapons/maces/mace-flanged-steel.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425919708,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepMace000000"
+      }
+    },
+    {
+      "source": "packs/_source/equipment24/weapons/simple-melee/quarterstaff.yml",
+      "sha256": "8fe4778a166fbeec6660b9441be1a9d798c8f4c47ef0785829b518aa995f853c",
+      "document": {
+        "name": "Quarterstaff",
+        "system": {
+          "price": {
+            "value": 2,
+            "denomination": "sp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 4,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": null,
+            "long": null,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": 0,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 6,
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "simpleM",
+            "baseItem": "quarterstaff"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "ver"
+          ],
+          "proficient": null,
+          "activities": {
+            "XYVC9JOYrtFlLA1k": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "5",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "melee",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "XYVC9JOYrtFlLA1k",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {},
+          "mastery": "topple",
+          "identifier": "quarterstaff"
+        },
+        "_id": "phbwepQuartersta",
+        "type": "weapon",
+        "folder": "FL1Jee9DzStc7vM3",
+        "img": "icons/weapons/staves/staff-simple.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425919899,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepQuartersta"
+      }
+    },
+    {
+      "source": "packs/_source/equipment24/weapons/simple-melee/spear.yml",
+      "sha256": "2c7b8d89fea31e3068459c1e3460c760513624380a0513274c81ad5fbc726814",
+      "document": {
+        "name": "Spear",
+        "system": {
+          "price": {
+            "value": 1,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 3,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": 20,
+            "long": 60,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": 0,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 6,
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "simpleM",
+            "baseItem": "spear"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "thr",
+            "ver"
+          ],
+          "proficient": null,
+          "activities": {
+            "HiR3FA2Uc0oOAHU9": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "20",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "melee",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "HiR3FA2Uc0oOAHU9",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {},
+          "mastery": "sap",
+          "identifier": "spear"
+        },
+        "_id": "phbwepSpear00000",
+        "type": "weapon",
+        "folder": "FL1Jee9DzStc7vM3",
+        "img": "icons/weapons/polearms/spear-flared-green.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425920141,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepSpear00000"
+      }
+    }
+  ],
+  "spells": [
+    {
+      "name": "Cure Wounds",
+      "uuid": "Compendium.dnd5e.spells.Item.uUWb1wZgtMou0TVP",
+      "source": "packs/_source/spells/1st-level/cure-wounds.yml",
+      "sha256": "f4fa0a522d8dd3c5b9571d8a487746378d56abbcc3172be07eb10c2bef2cdfbd"
+    },
+    {
+      "name": "Branding Smite",
+      "uuid": "Compendium.dnd5e.spells.Item.7UwUjJ6owIQkEPrs",
+      "source": "packs/_source/spells/2nd-level/branding-smite.yml",
+      "sha256": "35fd28e1028cf6530fb4140e6f94f550ba0ff3a76c2a9090e6612a2bb684ddc3"
+    },
+    {
+      "name": "Dispel Magic",
+      "uuid": "Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8",
+      "source": "packs/_source/spells/3rd-level/dispel-magic.yml",
+      "sha256": "dec0cb1d63aed016bff60259389d4ac9a0c9f6abcb2606de8ced26f11b454ce0"
+    },
+    {
+      "name": "Heal",
+      "uuid": "Compendium.dnd5e.spells.Item.qcYitWoSMTnKkzM1",
+      "source": "packs/_source/spells/6th-level/heal.yml",
+      "sha256": "2364a629db6396aa2c5a988e5ddd644a38030a81ea52b64e9862c26b9ca71bce"
+    }
+  ]
+}

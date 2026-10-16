@@ -1,0 +1,207 @@
+{
+  "_id": "AtRL6haVCY22CMax",
+  "name": "Новобранец Могильного завета",
+  "type": "background",
+  "img": "icons/sundries/books/book-open-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Характеристики.</strong> Сила, Интеллект, Мудрость. Распределите между ними +2 и +1 либо по +1 каждой; максимум 20.</p><p><strong>Черта происхождения.</strong> @UUID[Compendium.spikependium.feats.Item.HiXWuqcXVyaFumA1].</p><p>Вы исследовали анатомию, некромантию и способы лечения в обществе учёных, посвятивших себя тайнам смерти. Стартовая книга посвящена анатомии.</p><p><strong>Применение.</strong> При добавлении предыстории штатные шаги предлагают распределение характеристик, владения и черту. Снаряжение выбирается штатным окном начального снаряжения: комплект А с 16 зм либо 50 зм. Инструмент, которым вы должны владеть, выбирайте после шага владений.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey\">Неудержимая магия</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "au-grave-covenant-recruit",
+    "advancement": [
+      {
+        "_id": "lhPLbR9tSEbf0Hc5",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 3,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [
+            "dex",
+            "con",
+            "cha"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Характеристики предыстории",
+        "hint": "+2 и +1 к разным характеристикам либо +1 ко всем трём; не выше 20."
+      },
+      {
+        "_id": "6o5dkSYW9S1qkxwM",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "skills:his",
+            "skills:med",
+            "tool:herb"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Владения предыстории",
+        "hint": ""
+      },
+      {
+        "_id": "tF8Mai3VtvEr8Yjz",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.feats.Item.HiXWuqcXVyaFumA1",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 0,
+        "title": "Черта происхождения",
+        "hint": ""
+      },
+      {
+        "_id": "35AnQhcDq72WPdYq",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "languages:standard:common"
+          ],
+          "choices": [
+            {
+              "count": 2,
+              "pool": [
+                "languages:standard:*"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Языки персонажа",
+        "hint": "Общий шаг создания персонажа по правилам 2024: Всеобщий и два стандартных языка. Дополнительных языков сверх этого предыстория не даёт."
+      }
+    ],
+    "startingEquipment": [
+      {
+        "_id": "bXFFNdP8Oh63FKTw",
+        "type": "OR",
+        "group": "",
+        "sort": 100000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "ySS79izpdaQ0YQj3",
+        "type": "AND",
+        "group": "bXFFNdP8Oh63FKTw",
+        "sort": 200000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "xlflk7EEd5acCbHD",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepDagger0000",
+        "count": null,
+        "group": "ySS79izpdaQ0YQj3",
+        "sort": 300000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "sRvwD0I5RQR9FE9c",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbtulHerbalismK",
+        "count": null,
+        "group": "ySS79izpdaQ0YQj3",
+        "sort": 301000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "r9oykNm6WBtbGSRX",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagBook0000000",
+        "count": null,
+        "group": "ySS79izpdaQ0YQj3",
+        "sort": 302000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "M6YGL0NLldL8nW4V",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagShovel00000",
+        "count": null,
+        "group": "ySS79izpdaQ0YQj3",
+        "sort": 303000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "RiwIiNZBlPLow69P",
+        "type": "currency",
+        "key": "gp",
+        "count": 16,
+        "group": "ySS79izpdaQ0YQj3",
+        "sort": 390000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "xW09HHyCDpGyh4oC",
+        "type": "currency",
+        "key": "gp",
+        "count": 50,
+        "group": "bXFFNdP8Oh63FKTw",
+        "sort": 400000,
+        "requiresProficiency": false
+      }
+    ],
+    "wealth": ""
+  },
+  "effects": [],
+  "folder": "66iq7tm6Hgr3maCI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "background:au-grave-covenant-recruit"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!AtRL6haVCY22CMax"
+}

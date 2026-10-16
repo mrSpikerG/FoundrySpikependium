@@ -1,0 +1,481 @@
+{
+  "_id": "zOp3LqOoTj6vDW2Y",
+  "name": "Огненная палочка Нерушимого круга",
+  "type": "equipment",
+  "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройка друидом. Горящий клинок за 2 заряда; Сотворение пламени бесплатно с [[/r 1d8]]{1к8} либо за заряд с [[/r 2d8]]{2к8}, атака +5. Клинок возникает над палочкой. При свежем провале Телосложения для концентрации на Горящем клинке именно этой палочки модуль предлагает потратить реакцию и заряд, заменив исход успехом без изменения костей. Кнопка реакции на листе выбирает тот же свежий провал. Отмена расхода отменяет этот успех. Нужна одна активная концентрация; несколько одновременных концентраций, уже прекращённый эффект и удалённые исходные карточки требуют Мастера. 7 зарядов, рассвет [[/r 1d6+1]]{1к6+1}. Последний заряд: при 1 на к20 палочка уничтожена.</p><p>Чтобы пользоваться магическими свойствами, отметьте предмет как экипированный и выполните настройку, если она требуется. Проверка последнего заряда выполняется при штатном расходе; уничтоженная запись остаётся с количеством 0 для возврата расхода, утратившая магию — как обычный предмет. Отмена расхода возвращает заряды и состояние; уже применённые последствия разрешайте отдельно.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес по обычному волшебной палочке 2024; особый вес в источнике не указан.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=c611fc07cab5a7b3\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=MHQC4qrtiVYFvItK]]{Горящий клинок — 2 заряда}</li><li>[[/item activity=63LJ9pmImHIbeUwH]]{Сотворение пламени: базовое}</li><li>[[/item activity=rtK371p3HKbImlFz]]{Сотворение пламени: как на 5-м уровне — 1 заряд}</li><li>[[/item activity=ejhGeXtldmEQNVgo]]{После провала концентрации своего Горящего клинка: успех}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=c611fc07cab5a7b3",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-unbroken-fire",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "7",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "formula",
+          "formula": "1d6+1"
+        }
+      ]
+    },
+    "activities": {
+      "MHQC4qrtiVYFvItK": {
+        "_id": "MHQC4qrtiVYFvItK",
+        "type": "cast",
+        "name": "Горящий клинок — 2 заряда",
+        "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "2",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "override": true,
+            "attack": "5",
+            "save": ""
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplFlameBlade"
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      },
+      "63LJ9pmImHIbeUwH": {
+        "_id": "63LJ9pmImHIbeUwH",
+        "type": "cast",
+        "name": "Сотворение пламени: базовое",
+        "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "override": true,
+            "attack": "5",
+            "save": ""
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplProduceFla"
+        },
+        "flags": {
+          "spikependium": {
+            "focusCantripDice": 1
+          }
+        }
+      },
+      "rtK371p3HKbImlFz": {
+        "_id": "rtK371p3HKbImlFz",
+        "type": "cast",
+        "name": "Сотворение пламени: как на 5-м уровне — 1 заряд",
+        "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "override": true,
+            "attack": "5",
+            "save": ""
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplProduceFla"
+        },
+        "flags": {
+          "spikependium": {
+            "focusCantripDice": 2
+          }
+        }
+      },
+      "ejhGeXtldmEQNVgo": {
+        "_id": "ejhGeXtldmEQNVgo",
+        "type": "utility",
+        "name": "После провала концентрации своего Горящего клинка: успех",
+        "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "focusBladeSuccess": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "92FFZm20GbB7iX1W",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:unbroken-fire",
+      "griffonFocus": "unbroken-fire",
+      "focusRuin": 0,
+      "griffonClass": "druid",
+      "focusLastCharge": "destroy"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!zOp3LqOoTj6vDW2Y"
+}

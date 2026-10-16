@@ -22,7 +22,7 @@ export function guardianRawTarget(attack, target, index = 0) {
 }
 export function guardianTarget(attack, target, index = 0) {
   const result = guardianRawTarget(attack, target, index);
-  return index === 0 && defensiveCharmOutcome(attack, result) === "miss" ? { ...result, isMiss: true } : result;
+  return thwackTarget(attack, index === 0 && defensiveCharmOutcome(attack, result) === "miss" ? { ...result, isMiss: true } : result, index);
 }
 export function guardianEvaluatedTargets(wrapped, ...args) {
   return wrapped(...args).map(target => guardianTarget(this.parent, target));
@@ -44,4 +44,5 @@ export async function captureAttackDamage(wrapped, config = {}, dialog = {}, mes
   return wrapped(config, dialog, message);
 }
 import { defensiveCharmOutcome } from "./performer-defense.mjs";
+import { thwackTarget } from "./griffon-thwack.mjs";
 

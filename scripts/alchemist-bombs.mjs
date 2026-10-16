@@ -1,5 +1,6 @@
 import { attackHitTargets } from "./companions.mjs";
 import { attackSource } from "./attack-source.mjs";
+import { prepareAlchemistReagentUpdates, paidAlchemistReagents, addAlchemistReagentDamage } from "./alchemist-reagents.mjs";
 
 // shortcut: simultaneous owners on different clients can race native resource updates; the GM arbitrates concurrent uses.
 const using = new Set(), prepared = new WeakMap();
@@ -68,7 +69,8 @@ export function prepareAlchemistBombUpdates(activity, _config, updates) {
     const nonce = foundry.utils.randomID(), frame = { nonce, actor: activity.actor.uuid, source: id, original: source.receipt.nonce };
     updates.actor[`flags.spikependium.bombSplashes.${frame.original}.spent`] = 1;
     updates.actor[`flags.spikependium.bombSplashCasts.${nonce}.spent`] = 1;
-    activity.updateSource({ "damage.parts": source.parts });
+    activity.updateSource({ "damage.parts": source.parts,
+      "save.dc": source.receipt.charged ? (activity.flags.spikependium.alchemistSplashDC ?? activity.save.dc) : { calculation: "", formula: "11" } });
     prepared.set(activity, frame); return updates;
   }
   const bomb = data(activity); if (!bomb) return updates;
@@ -87,11 +89,13 @@ export function prepareAlchemistBombUpdates(activity, _config, updates) {
   if (current === false || (turnPath && get(actor, turnPath) >= 1)) {
     ui.notifications.warn("В этом ходу бомба уже заряжалась. При нескольких боях выберите бой алхимика."); return false;
   }
+  const reagents = prepareAlchemistReagentUpdates(activity, _config, updates);
+  if (reagents === false) return false;
   const nonce = foundry.utils.randomID();
   updates.actor[castPath(nonce)] = 1;
   if (key(activity) === "alchemist:special-formula:painkiller") updates.actor[`flags.spikependium.painkillerUntil.${nonce}`] = game.time.worldTime + 60;
   if (turnPath) updates.actor[turnPath] = 1;
-  prepared.set(activity, { nonce, actor: actor.uuid, item: activity.item.id, activity: activity.id, resource: resource.id, charged: !!bomb.charged, turn: current });
+  prepared.set(activity, { nonce, actor: actor.uuid, item: activity.item.id, activity: activity.id, resource: resource.id, charged: !!bomb.charged, turn: current, ...(reagents ? { reagents } : {}) });
   return updates;
 }
 export function validateAlchemistSplashTargets(activity, config, message) {
@@ -121,13 +125,20 @@ export function paidAlchemistBomb(activity, message) {
   if (!data(activity) || message?.type !== "usage" || !message.author || !activity.actor.testUserPermission(message.author, "OWNER")
     || receipt?.actor !== activity.actor.uuid || receipt.item !== activity.item.id || receipt.activity !== activity.id
     || !/^[A-Za-z0-9]{16}$/.test(receipt.nonce ?? "") || get(activity.actor, castPath(receipt.nonce)) !== 1
-    || !message.system.deltas?.item?.[receipt.resource]?.some(d => d.keyPath === "system.uses.spent" && d.delta === 1)) return;
+    || !message.system.deltas?.item?.[receipt.resource]?.some(d => d.keyPath === "system.uses.spent" && d.delta === 1)
+    || !paidAlchemistReagents(receipt, message)) return;
   return receipt;
+}
+function rollUsage(config, message) {
+  // Native card buttons assign system.origin only after the pre-roll hooks.
+  const id = config.event?.target?.closest("[data-message-id]")?.dataset.messageId;
+  const value = id ?? message.data?.system?.origin;
+  const origin = typeof value === "string" ? game.messages.get(value) : value;
+  return origin?.type === "usage" ? origin : origin?.getOriginatingMessage?.();
 }
 export function guardAlchemistBombRoll(config, _dialog, message) {
   const activity = config.subject; if (!data(activity) && !splash(activity)) return;
-  const origin = game.messages.get(message.data?.system?.origin);
-  const usage = origin?.type === "usage" ? origin : origin?.getOriginatingMessage?.();
+  const usage = rollUsage(config, message);
   if (splash(activity)) {
     const frame = usage?.flags.spikependium?.alchemistSplash;
     const source = damageSource(activity, game.messages.get(frame?.source));
@@ -163,7 +174,47 @@ export function restoreAlchemistSplash(wrapped, options) {
   const activity = wrapped(options);
   const origin = this.type === "usage" ? this : this.getOriginatingMessage?.();
   const frame = origin?.flags.spikependium?.alchemistSplash, cached = origin?.getFlag("dnd5e", "item.data");
-  const parts = cached?.system?.activities?.[activity?.id]?.damage?.parts;
+  const stored = cached?.system?.activities?.[activity?.id], parts = stored?.damage?.parts;
   if (!splash(activity) || frame?.actor !== activity.actor?.uuid || cached?._id !== activity.item.id || !parts?.length) return activity;
-  return activity.item.clone({ [`system.activities.${activity.id}.damage.parts`]: parts }, { keepId: true }).system.activities.get(activity.id);
+  return activity.item.clone({ [`system.activities.${activity.id}.damage.parts`]: parts,
+    ...(stored.save?.dc ? { [`system.activities.${activity.id}.save.dc`]: stored.save.dc } : {}) }, { keepId: true }).system.activities.get(activity.id);
+}
+export function prepareAlchemistReagentDamage(config, _dialog, message) {
+  if (!data(config.subject)) return;
+  const usage = rollUsage(config, message);
+  const receipt = paidAlchemistBomb(config.subject, usage);
+  if (!receipt) return false;
+  return addAlchemistReagentDamage(config, receipt);
+}
+function blastShield(actor) {
+  return (actor?.classes?.alchemist?.system.levels ?? 0) >= 15 && actor.items.some(i => i.flags.spikependium?.key === "alchemist:blast-shield")
+    && (actor.appliedEffects ?? actor.effects ?? []).some(e => e.active && e.flags.spikependium?.alchemistBlastShield);
+}
+function ownBomb(actor, message) {
+  if (!blastShield(actor)) return false;
+  const origin = message?.type === "usage" ? message : message?.getOriginatingMessage?.(), activity = origin?.getAssociatedActivity?.();
+  if (activity?.actor?.uuid !== actor.uuid || !origin.author || !actor.testUserPermission(origin.author, "OWNER")) return false;
+  if (data(activity)) return !!paidAlchemistBomb(activity, origin);
+  const frame = origin.flags.spikependium?.alchemistSplash;
+  const source = game.messages.get(frame?.source), original = source?.getAssociatedActivity?.();
+  return !!splash(activity) && frame?.actor === actor.uuid && /^[A-Za-z0-9]{16}$/.test(frame.nonce ?? "")
+    && get(actor, `flags.spikependium.bombSplashCasts.${frame.nonce}.spent`) === 1
+    && get(actor, `flags.spikependium.bombSplashes.${frame.original}.spent`) === 1
+    && source?.type === "damage" && source.author && actor.testUserPermission(source.author, "OWNER")
+    && original?.actor?.uuid === actor.uuid && original.item.id === activity.item.id
+    && paidAlchemistBomb(original, source.getOriginatingMessage?.())?.nonce === frame.original;
+}
+export function alchemistBlastShieldSuccess(wrapped, ...args) {
+  const activity = this.parent.getOriginatingMessage?.()?.getAssociatedActivity?.(), abilities = activity?.save?.ability;
+  return (this.type === "ability" && (abilities?.has?.(this.ability) || abilities?.includes?.(this.ability))
+    && ownBomb(this.parent.getAssociatedActor(), this.parent)) || wrapped(...args);
+}
+export function alchemistBlastShieldDamage(wrapped, damages, options = {}) {
+  if (!Array.isArray(damages) || options.only === "healing" || !ownBomb(this, options.originatingMessage)) return wrapped(damages, options);
+  const harmful = d => !(d.type in CONFIG.DND5E.healingTypes) && d.type !== "maximum";
+  const result = wrapped(damages.map(d => harmful(d) ? { ...d, value: 0 } : d), options);
+  if (!Array.isArray(result)) return result;
+  for (const d of result) if (harmful(d)) { d.value = 0; (d.active ??= {}).multiplier = 0; }
+  result.amount = Math.trunc(result.filter(d => !["temphp", "maximum"].includes(d.type)).reduce((sum, d) => sum + d.value, 0) + Math.min(0, result.tempMax ?? 0));
+  return result;
 }

@@ -1,0 +1,327 @@
+{
+  "_id": "waTFYQwvDsq3DUGg",
+  "name": "Мантия монарха",
+  "type": "equipment",
+  "img": "icons/equipment/back/cloak-hooded-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Бонусным действием получите скорость полёта 30 футов до конца своего хода; профиль временный, зависания нет. Три заряда, на рассвете восстанавливается [[/r 1d3]]{1к3}. Когда видимое существо попадает по вам, реакцией за заряд получите половину урона этой атаки и телепортируйтесь до 15 футов в видимое свободное место. Там до конца текущего хода остаются бабочки: атаки по вам с помехой, только пока вы остаётесь в этом месте. Полёт, реакция, заряд и телепортация штатные. Половину исходного урона, видимость, свободное назначение и помеху бабочек подтверждайте вручную; общий профиль сопротивления не выдаётся.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 4 фунта по дорожному плащу; точный вес источник не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=6162f5dc79a1a9e7\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=4GWyr3xEz4IMEEVf]]{Крылья бабочки: полёт до конца хода}</li><li>[[/item activity=BfjuAzXqVTkCis49]]{Попадание видимого существа: половина урона и телепортация}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=6162f5dc79a1a9e7",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-monarch",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 4,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "3",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "formula",
+          "formula": "1d3"
+        }
+      ]
+    },
+    "activities": {
+      "4GWyr3xEz4IMEEVf": {
+        "_id": "4GWyr3xEz4IMEEVf",
+        "type": "transform",
+        "name": "Крылья бабочки: полёт до конца хода",
+        "img": "icons/equipment/back/cloak-hooded-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "W6MBgQkCQs7bWQWK"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      },
+      "BfjuAzXqVTkCis49": {
+        "_id": "BfjuAzXqVTkCis49",
+        "type": "teleport",
+        "name": "Попадание видимого существа: половина урона и телепортация",
+        "img": "icons/equipment/back/cloak-hooded-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "teleport": {
+          "override": false,
+          "units": "ft",
+          "value": "15"
+        },
+        "flags": {
+          "spikependium": {
+            "griffonCommandWord": false
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "W6MBgQkCQs7bWQWK",
+      "name": "Мантия монарха: полёт 30 футов до конца своего хода",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.speeds.fly",
+            "value": "30",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "gfTgOG8CcXrGLOvQ"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetEnd",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "cloakFlight": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!waTFYQwvDsq3DUGg.W6MBgQkCQs7bWQWK"
+    }
+  ],
+  "folder": "TeeCZnYpBcFr19Do",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:monarch",
+      "griffonCloak": "monarch",
+      "cloakBlanket": 0
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!waTFYQwvDsq3DUGg"
+}

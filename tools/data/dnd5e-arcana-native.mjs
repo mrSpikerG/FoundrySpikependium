@@ -357,3 +357,191 @@ export async function nativeRestItemRecovery({
       result.rolls.push(...rolls);
     }
   }
+
+// https://github.com/foundryvtt/dnd5e/blob/87e94dbd9f930135e0694cd7e7d49f210603cd2c/module/documents/active-effect.mjs
+export function nativeLanternExpiry(Base) { return class extends Base {
+  isExpiryEvent(event, context={}) {
+    const special = this.specialDuration;
+    if ( !special ) return super.isExpiryEvent(event, context);
+
+    // Out of combat, any time advancement expires the effect
+    if ( (event === "updateWorldTime") && !this.actor?.inCombat ) return true;
+
+    // Skip irrelevant events
+    const isStart = special.endsWith("Start");
+    if ( event !== (isStart ? "turnStart" : "turnEnd") ) return false;
+
+    // These expiries are only driven by the combat they were created in
+    if ( !this.start.combat ) return true;
+    const combat = context.combat ?? game.combat;
+    if ( combat !== this.start.combat ) return false;
+
+    // Re-derive the expiry-relevant combatant; affected actor for "target" or originating actor for "source"
+    // If they have left combat, expire once we are past the creation round
+    const origin = special.startsWith("target") ? this.actor : this.getSourceActor();
+    const [combatant] = combat.getCombatantsByActor(origin);
+    if ( !combatant ) return this.start.round < context.round;
+
+    // Only the origin's own turn edge triggers expiry
+    const originTurn = isStart ? (combat.combatant === combatant) : (combat.previous.combatantId === combatant.id);
+    if ( !originTurn ) return false;
+
+    // Skip the turn the effect was applied on
+    return (this.start.round !== context.round) || (this.start.turn !== context.turn);
+  }
+}; }
+
+// Exact method from module/data/item/templates/activities.mjs at the same pinned commit.
+export function nativeDeleteCachedActivities(options, userId) {
+    if ( (userId !== game.user.id) || !this.parent.isEmbedded ) return;
+
+    // If item has any Cast activities, clean up any cached spells
+    const spellIds = this.activities.getByType("cast").map(a => a.cachedSpell?.id).filter(_ => _);
+    if ( spellIds.length ) this.parent.actor.deleteEmbeddedDocuments("Item", spellIds);
+}
+
+// Exact method from module/documents/actor/actor.mjs at the same pinned commit.
+export async function nativeDuelUpdateDowned(options) {
+    const { autoApplyDowned } = dnd5e.settings;
+    if ( autoApplyDowned === "none" ) return;
+    const hp = this.system.attributes?.hp;
+    if ( !hp ) return;
+
+    // If non-zero, remove any auto-downed effects
+    if ( hp.value ) {
+      const autoEffects = this.effects.filter(e => e.getFlag("dnd5e", "autoDowned"));
+      return this.deleteEmbeddedDocuments("ActiveEffect", autoEffects.map(e => e.id));
+    }
+    const conditionEffects = this.effects.documentsByType.condition;
+    const isDead = conditionEffects.some(e => e.system.type === "dead");
+    const isUnconscious = conditionEffects.some(e => e.system.type === "unconscious");
+
+    // Do not auto-apply statuses outside of combat or if already dead
+    if ( !this.inCombat || isDead ) return;
+    const failedDeathSaves = this.system.attributes.death.failure >= 3;
+    let toApply = null;
+    if ( this.type === "npc" ) {
+      if ( !this.system.traits.important ) toApply = "dead";
+      else if ( autoApplyDowned !== "deadOnly" ) toApply = failedDeathSaves ? "dead" : "unconscious";
+    } else if ( (this.type === "character") && (autoApplyDowned === "all") ) {
+      toApply = failedDeathSaves ? "dead" : "unconscious";
+    }
+    if ( !toApply || ((toApply === "unconscious") && isUnconscious) ) return;
+    const effect = await ActiveEffect.implementation.fromStatusEffect(toApply);
+    const flags = { dnd5e: { autoDowned: true } };
+    if ( toApply === "dead" ) flags.core = { overlay: true };
+    effect.updateSource({ flags });
+    return ActiveEffect.implementation.create(effect, { parent: this, keepId: true });
+}
+
+let SteelActiveEffect, SteelItem;
+export function setSteelMindNativeHost(effect,item) { SteelActiveEffect=effect; SteelItem=item; }
+
+// documents/actor/actor.mjs: get concentration(); unchanged body (class import names injected above).
+export function nativeSteelConcentration() {
+    if ( this._lazy.concentration !== undefined ) return this._lazy.concentration;
+    const concentration = this._lazy.concentration = {
+      items: new Set(),
+      effects: new Set()
+    };
+
+    const limit = this.system.attributes?.concentration?.limit ?? 0;
+    if ( !limit ) return concentration;
+
+    for ( const effect of this.effects ) {
+      if ( !effect.active || !effect.statuses.has(CONFIG.specialStatusEffects.CONCENTRATING) ) continue;
+      const data = effect.getFlag("dnd5e", "item");
+      concentration.effects.add(effect);
+      if ( data ) {
+        let item = this.items.get(data.id);
+        if ( !item && (foundry.utils.getType(data.data) === "Object") ) {
+          item = new Item.implementation(data.data, { keepId: true, parent: this });
+        }
+        if ( item ) concentration.items.add(item);
+      }
+    }
+    return concentration;
+  }
+
+// documents/actor/actor.mjs: async endConcentration(target); unchanged body (class import names injected above).
+export async function nativeSteelEndConcentration(target) {
+    let effect;
+    const { effects } = this.concentration;
+
+    if ( !target ) {
+      return effects.reduce(async (acc, effect) => {
+        acc = await acc;
+        return acc.concat(await this.endConcentration(effect));
+      }, []);
+    }
+
+    if ( foundry.utils.getType(target) === "string" ) effect = effects.find(e => e.id === target);
+    else if ( target instanceof SteelActiveEffect ) effect = effects.has(target) ? target : null;
+    else if ( target instanceof SteelItem ) {
+      effect = effects.find(e => {
+        const data = e.getFlag("dnd5e", "item") ?? {};
+        return (data.id === target._id) || (data.data?._id === target._id);
+      });
+    }
+    if ( !effect ) return [];
+
+    /**
+     * A hook that is called before a concentration effect is deleted.
+     * @function dnd5e.preEndConcentration
+     * @memberof hookEvents
+     * @param {Actor5e} actor             The actor ending concentration.
+     * @param {SteelActiveEffect} effect     The ActiveEffect that will be deleted.
+     * @returns {boolean}                 Explicitly return false to prevent the effect from being deleted.
+     */
+    if ( Hooks.call("dnd5e.preEndConcentration", this, effect) === false) return [];
+
+    await effect.delete();
+
+    /**
+     * A hook that is called after a concentration effect is deleted.
+     * @function dnd5e.endConcentration
+     * @memberof hookEvents
+     * @param {Actor5e} actor             The actor ending concentration.
+     * @param {SteelActiveEffect} effect     The ActiveEffect that was deleted.
+     */
+    Hooks.callAll("dnd5e.endConcentration", this, effect);
+
+    return [effect];
+  }
+
+// documents/actor/actor.mjs: async challengeConcentration({ dc=10, ability=null }={}); unchanged body (class import names injected above).
+export async function nativeSteelChallenge({ dc=10, ability=null }={}) {
+    const isConcentrating = this.concentration.effects.size > 0;
+    if ( !isConcentrating ) return null;
+
+    const button = { dc, format: "short", type: "concentration" };
+    if ( ability in CONFIG.DND5E.abilities ) button.ability = ability;
+
+    return ChatMessage.implementation.create({
+      speaker: ChatMessage.implementation.getSpeaker({ actor: this }),
+      system: { broadcast: false, buttons: [button] },
+      type: "prompt",
+      whisper: game.users.filter(user => this.testUserPermission(user, "OWNER"))
+    });
+  }
+
+// documents/actor/actor.mjs: async promptConcentrationEnd(); unchanged body (class import names injected above).
+export async function nativeSteelPrompt() {
+    const isConcentrating = this.concentration.effects.size > 0;
+    if ( !isConcentrating ) return null;
+
+    return ChatMessage.implementation.create({
+      speaker: ChatMessage.implementation.getSpeaker({ actor: this }),
+      system: { broadcast: false, buttons: [{ type: "endConcentration" }] },
+      type: "prompt",
+      whisper: game.users.filter(user => this.testUserPermission(user, "OWNER"))
+    });
+  }
+
+// documents/active-effect.mjs: _shouldPromptConcentrationEnd(); unchanged body (class import names injected above).
+export function nativeSteelShouldPrompt() {
+    if ( !this.active || !(this.parent instanceof Actor) ) return false;
+    if ( dnd5e.settings.disableConcentration || !this.actor.concentration.effects.size ) return false;
+
+    return this.statuses.has("dead") || this.statuses.has("incapacitated");
+  }

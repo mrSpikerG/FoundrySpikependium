@@ -5,6 +5,8 @@ import { canUseArcanaSpell, recordArcanaCast, syncArcanaCast, syncArcanaRepeat, 
 import { observeCatnap, prepareCatnapRest, finishCatnap, canUseArcanaShake, awakeningChatButtons, awakeningChatAction, finishArcanaShake } from "../scripts/arcana-awakening.mjs";
 import { arcanaStartTurn, resumeArcanaTicks, recordArcanaTickDamage } from "../scripts/arcana-periodic.mjs";
 import { endEffectsOnDamage } from "../scripts/effects.mjs";
+import {preparePainTarget,capturePainTarget,painMovement,preparePainD20,preparePainSave,
+  finalizePainD20,finalizePainSave,refreshPainActors} from "../scripts/power-word-pain.mjs";
 import { prepareEffectData } from "./data/dnd5e-effect-application.mjs";
 import { NativeAdvantageModeField, nativeEffectDuration, nativeAppliedEffectChanges, nativeIncreaseExhaustion, nativePrepareMovement, setMovementContext,
   nativeRest, nativePerformBulkUpdate, nativeRestResourceRecovery, nativeRestSpellRecovery, nativeRestItemRecovery,
@@ -20,7 +22,7 @@ import { canUseArcanaStage, arcanaStageScaling } from "../scripts/arcana-stages.
 
 const documents = fs.readdirSync("packs/_source/spells").filter(name => name.startsWith("spell-au-"))
   .map(name => JSON.parse(fs.readFileSync(`packs/_source/spells/${name}`, "utf8"))).filter(doc => doc.effects[0]?.flags.spikependium?.arcanaSpell);
-assert.equal(documents.length, 14);
+assert.equal(documents.length, 22);
 const byKind = Object.fromEntries(documents.map(doc => [doc.effects[0].flags.spikependium.arcanaSpell, doc]));
 for (const [kind, level, school, page, duration, cost] of [
   ["iron-body", 8, "trs", 40, ["hour", "1"], 250], ["invulnerability", 9, "abj", 43, ["minute", "10"], 500],
@@ -186,6 +188,15 @@ function setup(kind = "instill-doubt") {
   const concentration = new Effect({ _id: "concentration", system: {}, duration: {}, flags: {} }, caster); caster.effects.push(concentration);
   const config = { data: { system: { targets: [{ actor: target.uuid, token: token.uuid }] } } };
   recordArcanaCast(activity, config);
+  if (kind === "wail-of-the-banshee") {
+    activity.type = "save"; activity.flags = { spikependium: { bansheeWail: true } };
+    target.system.attributes.hp.value = 51;
+    const receipt = { caster: caster.uuid, activity: activity.uuid, source: "Scene.scene.Token.caster", time: 0,
+      event: "WAILTEST00000001", targets: [{ actor: target.uuid, token: token.uuid, fatal: false }] };
+    caster.flags.spikependium = { bansheeCasts: { [receipt.event]: { ...receipt, active: 1 } } };
+    config.data.flags.spikependium.bansheeCast = receipt;
+    config.data.system.deltas = { actor: [{ keyPath: `flags.spikependium.bansheeCasts.${receipt.event}.active`, delta: 1 }] };
+  }
   const origin = makeMessage({ ...config.data, author: player, type: "usage", actor: caster, activity,
     system: { ...config.data.system, concentration: doc.system.properties.includes("concentration") ? concentration.id : null } });
   const combatant = { id: "turnTarget", actor: target, token };
@@ -331,7 +342,7 @@ for (const kind of ["instill-doubt", "fractured-perception"]) {
 
 const rules = fs.readdirSync("packs/_source/rules").filter(f => f.startsWith("journal-au-spell-lists_")); assert.equal(rules.length, 1);
 const pages = JSON.parse(fs.readFileSync(`packs/_source/rules/${rules[0]}`, "utf8")).pages;
-assert.deepEqual(pages.map(p => [p.system.identifier, p.system.spells.length]), [["bard", 8], ["wizard", 18], ["warlock", 13], ["sorcerer", 12], ["artificer", 2], ["druid", 5], ["ranger", 1], ["cleric",1]]);
+assert.deepEqual(pages.map(p => [p.system.identifier, p.system.spells.length]), [["bard", 13], ["wizard", 30], ["warlock", 23], ["sorcerer", 17], ["artificer", 5], ["druid", 7], ["ranger", 2], ["cleric",4], ["paladin",1]]);
 const auSpells = fs.readdirSync("packs/_source/spells").filter(name => name.startsWith("spell-au-"))
   .map(name => JSON.parse(fs.readFileSync(`packs/_source/spells/${name}`, "utf8")));
 for (const page of pages) for (const uuid of page.system.spells) assert.ok(auSpells.some(d => uuid.endsWith(`.Item.${d._id}`)));
@@ -889,4 +900,129 @@ for(const level of [5,6,7,8,9]){
     .find(d => d.flags?.spikependium?.key === "journal:au-spell-lists");
   assert.deepEqual(lists.pages.filter(p => p.system.spells.includes(`Compendium.spikependium.spells.Item.${doc._id}`)).map(p => p.system.identifier).sort(), ["sorcerer", "warlock", "wizard"]);
 }
-console.log("Arcana spells: native mechanics, Evasion aura range/concentration/advantage/damage, Amity minimum, components, saves/recovery/privacy and spell lists passed.");
+{
+  const { origin, target, save, combat, combatant } = setup("wail-of-the-banshee");
+  await syncArcanaCast(save(8, 16, "con"));
+  const deaf = target.effects.find(e => e.flags.spikependium?.arcanaSpell === "wail-of-the-banshee");
+  assert.ok(deaf); assert.deepEqual([...deaf.statuses], ["deafened"]); assert.equal(deaf.duration.value, 3600);
+  assert.equal(deaf.flags.dnd5e?.dependentOn, undefined, "вопль не требует концентрации");
+  await arcanaEndTurn.call(combat, async () => null, combatant); assert.equal(repeatCalls.length, 0, "у Оглохшего нет повторного спасброска");
+  const event = "forged-repeat", request = { event, token: combatant.token.uuid };
+  deaf.flags.spikependium.arcanaRepeatRequest = request;
+  const repeat = makeMessage({ type: "save", author: game.user, actor: target, rolls: [new D20(20, 16)],
+    flags: { spikependium: { arcanaRepeat: { ...request, effect: deaf.uuid, actor: target.uuid, origin: origin.uuid, dc: 16, ability: "con" } } },
+    system: { origin: origin.id, ability: "con" } });
+  await syncArcanaRepeat(repeat); assert.equal(target.effects.includes(deaf), true, "посторонний повтор не снимает глухоту");
+  const next = setup("wail-of-the-banshee"); await syncArcanaCast(next.save(20, 16, "con")); assert.equal(next.target.effects.length, 0);
+  const cancelled = setup("wail-of-the-banshee");
+  cancelled.caster.flags.spikependium.bansheeCasts.WAILTEST00000001.active = 0;
+  await syncArcanaCast(cancelled.save(8, 16, "con")); assert.equal(cancelled.target.effects.length, 0, "возврат расхода до применения блокирует глухоту");
+}
+// Слово силы: боль — без начального спасброска, порог до урона и отдельный повтор Телосложения.
+{
+ const d=byKind["power-word-pain"],a=Object.values(d.system.activities)[0];
+ assert.equal(d.name,"Слово силы: боль");assert.equal(d.system.source.page,"45");assert.equal(d.system.level,7);assert.equal(d.system.school,"enc");
+ assert.deepEqual(d.system.properties,["vocal"]);assert.equal(d.system.duration.value,"1");assert.equal(d.system.range.value,"60");
+ assert.deepEqual(a.save.ability,[]);assert.equal(a.save.dc.calculation,"spellcasting");assert.equal(a.damage.onSave,"none");
+ assert.equal(a.damage.parts[0].number,6);assert.equal(a.damage.parts[0].denomination,8);assert.deepEqual(a.damage.parts[0].types,["force"]);
+ assert.equal(d.effects[0].system.magical,true);assert.deepEqual(d.effects[0].statuses,["charmed"]);
+ assert.match(d.system.description.value,/\[\[\/damage 6d8 type=force\]\]/);
+ assert.doesNotMatch(d.system.description.value,/Спасбросок цели/);
+}
+for(const hp of [0,100,101,150]){
+ const h=setup("power-word-pain");h.target.system.attributes.hp.value=hp;h.target.system.attributes.hp.temp=500;
+ const msg={data:{system:{targets:[{actor:h.target.uuid,token:h.token.uuid}]}}};recordArcanaCast(h.activity,msg);
+ h.origin.flags.spikependium.arcanaCast=msg.data.flags.spikependium.arcanaCast;
+ h.target.system.attributes.hp.value=Math.max(0,hp-40);await syncArcanaCast(h.origin);await syncArcanaCast(h.origin);
+ assert.equal(h.target.effects.length,hp<=100?1:0,"порог берётся до урона без временных хитов");assert.equal(repeatCalls.length,0,"начального спасброска нет");
+}
+{
+ const h=setup("power-word-pain");h.target.system.traits.ci.value.add("charmed");await syncArcanaCast(h.origin);assert.equal(h.target.effects.length,0,"иммунитет блокирует Очарование");
+}
+{
+ const h=setup("power-word-pain");await syncArcanaCast(h.origin);const e=h.target.effects[0];assert.ok(e.active);
+ await arcanaEndTurn.call(h.combat,async()=>{},h.combatant);assert.equal(repeatCalls[0].config.ability,"con");assert.equal(h.target.effects.length,1);
+ savedTotal=20;h.combat.previous.round++;await arcanaEndTurn.call(h.combat,async()=>{},h.combatant);assert.equal(h.target.effects.length,0);
+ await syncArcanaCast(h.origin);assert.equal(h.target.effects.length,0,"успешно окончившаяся боль не накладывается снова");
+}
+function painMode(paths,advantage=false){
+ const model={_source:{}},field=new NativeAdvantageModeField();
+ for(const c of byKind["power-word-pain"].effects[0].system.changes){const path=c.key.slice(7);set(model,path,0);set(model,path,field._applyChangeAdd(0,Number(c.value),model,{key:path}));}
+ return NativeAdvantageModeField.combineFields(model,paths,{advantages:{count:Number(advantage)}});
+}
+for(const advantage of [false,true]){
+ const h=setup("power-word-pain");await syncArcanaCast(h.origin);
+ const modeData=painMode(["rolls.attack.mode"],advantage);
+ const config={subject:h.target,rolls:[{options:{advantage:modeData.advantage,disadvantage:modeData.disadvantage}}]};preparePainD20(config);const roll=config.rolls[0];
+ let mode;nativeD20ConfigureModifiers.call({validD20Roll:true,options:roll.options,constructor:{ADV_MODE:{NORMAL:0,ADVANTAGE:1,DISADVANTAGE:-1}},
+  d20:{options:{},applyFlag(){},applyAdvantage(v){mode=v;},applyRange(){}},resetFormula(){}});
+ assert.equal(mode,advantage?0:-1);assert.equal(finalizePainD20([roll],config),undefined);
+ h.target.effects[0].disabled=true;assert.equal(finalizePainD20([roll],config),false,"исчезновение боли в открытом окне требует актуального броска");
+}
+for(const ability of ["str","dex","con","int","wis","cha"]){
+ const h=setup("power-word-pain");await syncArcanaCast(h.origin);
+ const mode=painMode(["rolls.ability.save.mode",`abilities.${ability}.save.roll.mode`]);
+ const config={subject:h.target,ability,rolls:[{options:{disadvantage:mode.disadvantage}}]};preparePainSave(config);
+ assert.equal(config.rolls[0].options.disadvantage,ability!=="con");assert.equal(finalizePainSave(config.rolls,config),undefined);
+ // Проверка характеристики Телосложения по-прежнему с Помехой.
+ if(ability==="con")assert.equal(painMode(["rolls.ability.check.mode","abilities.con.check.roll.mode"]).disadvantage,true);
+}
+for(const units of ["ft","m"]){
+ const h=setup("power-word-pain");await syncArcanaCast(h.origin);
+ const convert=(v,from,to)=>from===to?v:from==="ft"?v*.3048:v/.3048;
+ Object.assign(dnd5e.utils,{convertLength:convert,defaultUnits:()=>"ft",simplifyBonus:n=>Number(n)||0});
+ setMovementContext({convertLength:convert,defaultUnits:()=>"ft",simplifyBonus:n=>Number(n)||0,ConditionData:{hasLevels:()=>false}});
+ const speeds={walk:convert(30,"ft",units),fly:convert(60,"ft",units),swim:0,climb:convert(5,"ft",units),burrow:0};
+ h.target.hasConditionEffect=()=>false;h.target.statuses.reduce=(fn,v)=>v;
+ const model={parent:h.target,abilities:{str:{value:20}},attributes:{movement:{speeds:structuredClone(speeds),units,bonus:0,multiplier:1}},
+  _source:{attributes:{movement:{speeds}}},traits:{}};
+ painMovement.call(model,()=>nativePrepareMovement.call(model,{}));
+ assert.equal(model.attributes.movement.speeds.walk,convert(10,"ft",units));assert.equal(model.attributes.movement.speeds.fly,convert(10,"ft",units));
+ assert.equal(model.attributes.movement.speeds.climb,convert(5,"ft",units));assert.equal(model.attributes.movement.speeds.swim,0);
+ assert.equal(model.attributes.movement.max,convert(10,"ft",units));assert.equal(model.attributes.movement.slowed,true);
+ assert.equal(model.attributes.movement.speeds.jump,10,"дальность прыжка не является способом перемещения");
+ assert.deepEqual(model._source.attributes.movement.speeds,speeds);
+}
+{
+ const h=setup("power-word-pain");await syncArcanaCast(h.origin);game.time.worldTime=60;
+ assert.equal(h.target.effects[0].active,false);const config={subject:h.target,rolls:[{options:{}}]};preparePainD20(config);assert.equal(config.rolls[0].options.disadvantage,undefined);
+}
+for(const invalid of [null,"distance","height","visible","noCard","target"]){
+ const h=setup("power-word-pain"),scene=h.token.parent;
+ scene.grid={units:"ft",measurePath:([a,b])=>({distance:Math.hypot(a.x-b.x,a.y-b.y,a.elevation-b.elevation)})};
+ const geometry=t=>Object.assign(t,{y:0,elevation:0,getOccupiedGridSpaceOffsets:()=>[],getCenterPoint(){return{x:this.x,y:this.y,elevation:this.elevation};}});
+ const source=geometry({uuid:"Scene.scene.Token.caster",actor:h.caster,parent:scene,x:0});geometry(h.token);h.token.x=60;
+ h.activity.consumption={spellSlot:true};h.activity.getUsageToken=()=>source;
+ const config={spikependium:{painVisible:true}},message={data:{system:{targets:[{actor:h.target.uuid,token:h.token.uuid}]}}};
+ if(invalid==="distance")h.token.x=60.1;if(invalid==="height")h.token.elevation=1;
+ if(invalid==="visible")config.spikependium.painVisible=false;if(invalid==="noCard")message.create=false;
+ if(invalid==="target")message.data.system.targets[0].token="Scene.other.Token.other";
+ assert.equal(capturePainTarget(h.activity,config,message),invalid?false:undefined);
+}
+{
+ const h=setup("power-word-pain");await syncArcanaCast(h.origin);
+ for(const [id,dc]of [["stronger",18],["later",12]]){
+  const caster=actor(id);game.actors.push(caster);game.time.worldTime++;
+  const item={...h.activity.item,uuid:`${caster.uuid}.Item.pain`},profile=new Effect(byKind["power-word-pain"].effects[0]);
+  profile.uuid=`${item.uuid}.ActiveEffect.${profile.id}`;item.effects=list([profile]);
+  const activity={...h.activity,actor:caster,item,uuid:`${item.uuid}.Activity.cast`,applicableEffects:[profile],save:{dc:{value:dc}}};
+  const config={data:{system:{targets:[{actor:h.target.uuid,token:h.token.uuid}]}}};recordArcanaCast(activity,config);
+  const origin=makeMessage({...config.data,type:"usage",author:h.player,actor:caster,activity});await syncArcanaCast(origin);
+ }
+ assert.equal(h.target.effects.length,3);assert.equal(h.target.effects.filter(e=>e.active).length,1);
+ const winner=h.target.effects.find(e=>e.active);assert.equal(fromUuidSync(winner.system.origin.message).flags.spikependium.arcanaCast.dc,18);
+ winner.disabled=true;assert.equal(h.target.effects.filter(e=>e.active).length,1);assert.equal(h.target.effects[0].active,true,"после выключения большей СЛ действует оставшаяся большая");
+}
+{
+ const h=setup("power-word-pain");h.activity.consumption={spellSlot:true};foundry.data??={};foundry.data.fields??={};
+ foundry.data.fields.BooleanField=class{constructor(data){Object.assign(this,data);}};
+ class Dialog{constructor(config){this.config=config;}async _prepareConsumptionContext(c){return c;}}
+ const config={spikependium:{painVisible:true}},dialog={applicationClass:Dialog};preparePainTarget(h.activity,config,dialog);assert.equal(dialog.configure,true);
+ const context=await new dialog.applicationClass(config)._prepareConsumptionContext({fields:[],inputs:{}});assert.equal(context.fields.length,1);assert.match(context.fields[0].field.label,/Слово силы: боль/);
+}
+{
+ const h=setup("power-word-pain");await syncArcanaCast(h.origin);let resets=0,active;
+ h.target.reset=()=>{resets++;active=h.target.effects.some(e=>e.active);};refreshPainActors();assert.equal(resets,1,"мировой и токеновый персонаж пересчитывается один раз");assert.equal(active,true);
+ world.delete(h.origin.uuid);refreshPainActors();assert.equal(active,false,"удаление исходной карточки снимает действующие штрафы при пересчёте");
+}
+console.log("Arcana spells: native mechanics, Evasion aura, Amity, components, saves/recovery/privacy, Banshee; Power Word Pain pre-damage HP/charm/immunity/repeat CON, native disadvantage/CON exception, movement cap/max/metres and target bounds, greatest DC without stacking, source refresh; spell lists passed.");

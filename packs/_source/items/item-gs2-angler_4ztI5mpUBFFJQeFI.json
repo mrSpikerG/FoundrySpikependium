@@ -1,0 +1,140 @@
+{
+  "_id": "4ztI5mpUBFFJQeFI",
+  "name": "Angler's Armor",
+  "type": "equipment",
+  "img": "icons/equipment/chest/breastplate-banded-steel.webp",
+  "system": {
+    "description": {
+      "value": "<p>Нося настроенный доспех, получаете скорость плавания 30 футов и удвоенные обычную и максимальную дистанции сетей. При рыбалке вылавливаете вдвое больше рыбы. Плавание и дистанции штатных сетей на листе пересчитываются автоматически, пока доспех надет и настроен; бонус нескольких таких доспехов не складывается. Для сети 2024 дистанция спасброска становится 30 футов, для сети-оружия 2014 удваиваются обе дистанции. Дополнительный улов и нестандартные самодельные сети учитывайте вручную.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха. Вес взят у базового доспеха 2024; отдельного веса в источнике нет.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=a7ae9f9133ee073f\">Сумка грифона — книга 2</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=a7ae9f9133ee073f",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-angler",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 45,
+      "units": "lb"
+    },
+    "price": {
+      "value": 450,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 14,
+      "magicalBonus": null,
+      "dex": 2
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "medium",
+      "baseItem": "scalemail"
+    },
+    "properties": [
+      "stealthDisadvantage",
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {}
+  },
+  "effects": [
+    {
+      "_id": "kdwTI4PK1CfK7znr",
+      "name": "Доспех рыболова: плавание 30 футов",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.speeds.swim",
+            "value": "30",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "GFzeBOJ5exH1AUx2"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!4ztI5mpUBFFJQeFI.kdwTI4PK1CfK7znr"
+    }
+  ],
+  "folder": "yF0IBHbFDAxZxF3L",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:angler",
+      "originalName": "Angler's Armor",
+      "griffonTwoArmor": "angler",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmScaleMail0"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!4ztI5mpUBFFJQeFI"
+}

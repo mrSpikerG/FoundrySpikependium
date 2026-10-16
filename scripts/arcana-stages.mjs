@@ -6,10 +6,28 @@ const captured=new WeakMap(),prepared=new WeakMap();
 const stage=activity=>activity?.item?.type==="spell"?activity.flags?.spikependium?.arcanaStage:undefined;
 const live=e=>e?.active&&!e.duration.expired&&!(Number.isFinite(e.duration.remaining)&&e.duration.remaining<=0);
 const keys={"lightning-ring":"spell:au-lightning-ring","grave-ground":"spell:au-grave-ground",
+  "waves-of-exhaustion":"spell:au-waves-of-exhaustion",
   "negative-energy-living":"spell:au-negative-energy-flood","negative-energy-undead":"spell:au-negative-energy-flood","detonate-burst":"spell:au-detonate"};
+export function arcanaStageLinkedActivity(wrapped,relativeUUID) {
+  const linked=wrapped(relativeUUID),cached=this.item.getFlag?.("dnd5e","cachedFor");
+  // An ongoing spell action does not repeat its original item's charges or activation cost.
+  if(stage(this)&&this.consumption.spellSlot===false&&(!relativeUUID||cached&&(relativeUUID===cached||linked?.relativeUUID===cached)))return null;
+  return linked;
+}
+export async function retainedSpellBulkUpdate(wrapped,updates,options={}) {
+  const retained=updates.item?.some(row=>row["flags.spikependium.lanternRetained"]===true||row["flags.spikependium.distanceRetained"]===true||row["flags.spikependium.dragonRetained"]===true||row["flags.spikependium.duelRetained"]===true);
+  if(!retained||!updates.delete?.length)return wrapped(updates,options);
+  // Native item deletion cleans up its cached spells; detach the retained copy before deleting its source.
+  const index=(updates.operations?.length??0)+(foundry.utils.isEmpty(updates.actor)?0:1)+(foundry.utils.isEmpty(updates.create)?0:1);
+  const result=await wrapped({...updates,delete:[]},options);
+  const {createOptions,updateOptions,deleteOptions,...common}=options;
+  const ids=updates.delete.filter(id=>this.items.has(id));
+  if(ids.length){const deleted=await this.deleteEmbeddedDocuments("Item",ids,{...common,...deleteOptions});if(Array.isArray(result))result.splice(index,0,deleted);}
+  return result;
+}
 function ongoing(activity){
   const kind=stage(activity),actor=activity.actor;
-  if(!["lightning-ring","grave-ground"].includes(kind)||activity.item.flags.spikependium?.key!==keys[kind])return;
+  if(!["lightning-ring","grave-ground","waves-of-exhaustion"].includes(kind)||activity.item.flags.spikependium?.key!==keys[kind])return;
   for(const effect of actor.effects){
     const origin=resolve(effect.system.origin?.message),info=arcanaCast(origin);
     if(effect.flags.spikependium?.arcanaOngoing===kind&&live(effect)&&info?.caster.uuid===actor.uuid
@@ -23,7 +41,7 @@ export function canUseArcanaStage(activity){
     ui.notifications.warn("Для семени Детонации выберите ровно одно существо.");return false;
   }
   const kind=stage(activity);if(!kind||activity.item.flags.spikependium?.key!==keys[kind])return true;
-  if(["lightning-ring","grave-ground"].includes(kind)){
+  if(["lightning-ring","grave-ground","waves-of-exhaustion"].includes(kind)){
     if(ongoing(activity))return true;
     ui.notifications.warn("Сначала создайте область этого заклинания и сохраняйте её концентрацию.");return false;
   }
@@ -100,6 +118,8 @@ export function arcanaStageDeltaLabel(wrapped,...args){
   const data=wrapped(...args);
   if(/^flags\.spikependium\.detonateBursts\.[A-Za-z0-9]{16}\.spent$/.test(this.keyPath))data.label="Взрыв Детонации";
   if(/^flags\.spikependium\.bloom(Casts|Healing)\.[A-Za-z0-9]{16}\.spent$/.test(this.keyPath))data.label="Увядание и цветение: лечение";
+  if(/^flags\.spikependium\.bansheeCasts\.[A-Za-z0-9]{16}\.active$/.test(this.keyPath))data.label="Вопль банши: накладывание";
+  if(/^flags\.spikependium\.wavePulses\.[A-Za-z0-9]{16}\.active$/.test(this.keyPath))data.label="Волны истощения: испустить волну";
   return data;
 }
 export function recordDetonateCast(activity,message){

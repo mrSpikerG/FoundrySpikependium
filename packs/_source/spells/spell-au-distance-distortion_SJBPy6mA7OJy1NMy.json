@@ -1,0 +1,533 @@
+{
+  "_id": "SJBPy6mA7OJy1NMy",
+  "name": "Искажение дистанции",
+  "type": "spell",
+  "img": "icons/magic/control/debuff-energy-hold-levitate-pink.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: бард, волшебник, изобретатель, колдун.</em></p><p>Вы создаёте иллюзорное пространственное искажение, заполняющее Сферу радиусом 60 футов с центром в точке в пределах дистанции. Для каждого существа, которое вы можете видеть в Сфере, вы можете выбрать один из следующих эффектов.</p><p><strong>Головокружительное удлинение.</strong> Существо совершает спасбросок Интеллекта. При провале оно получает [[/damage 2d10 type=psychic]]{2к10} урона Психической энергией, а Сфера становится для него Труднопроходимой местностью до конца его хода. При успехе урона и Труднопроходимой местности нет.</p><p><strong>Укороченное пространство.</strong> Скорость существа увеличивается на 20 футов до конца его следующего хода.</p><p>Пока заклинание активно, каждый раз, когда существо входит в Сферу или заканчивает в ней свой ход, вы можете выбрать заставить его получить один из эффектов заклинания. Заклинание может воздействовать на каждое существо только один раз за ход.</p><p><strong>Применение.</strong> Создайте и разместите одну штатную область. Затем выбирайте по одному видимому существу и нужному варианту; в окне подтвердите появление области, вход или конец хода и проверенную геометрию Сферы. Повторные воздействия бесплатны и не расходуют новую ячейку. Ограничение раз за ход общее для обоих вариантов данного сотворения и действует даже при успешном INT. Вне боя продвигайте игровое время и подтверждайте новый ход вручную.</p><p>На провалившую INT цель накладывается отдельный эффект: штатная область становится Труднопроходимой только для неё, сохраняя обычную скорость вне области и штатное игнорирование местности. Для этого нужен активный Мастер и включённый штатный учёт перемещения. Эффект удлинения заканчивается в конце текущего своего хода, ускорение — в конце следующего; ускорения одного заклинания не складываются. Ускорение учитывает единицы скорости персонажа. Вне боя сроки подтверждает Мастер.</p><p>Вход, видимость и высоту настоящей Сферы проверяет Мастер: штатная область сцены отображает её плоский срез. При объёмном перемещении настройте высоты области и сверяйте маршрут вручную. После расхода свитка временная копия заклинания сохраняет повторные действия до исходного срока, не позволяет нового сотворения и затем удаляется. Числа урона кликабельны; автоматическая связь эффектов использует оплаченные карточки. Изменение уже применённого урона, утраченные события и превращения требуют ручной сверки.</p><h3>Действия</h3><ul><li>[[/item activity=pmsk9p8Jc04TQKww]]{Создать искажение}</li><li>[[/item activity=a2qo6u3ZMjq171LR]]{Головокружительное удлинение} · [[/damage activity=a2qo6u3ZMjq171LR]]{Бросок урона} · [[/save activity=a2qo6u3ZMjq171LR]]{Спасбросок цели}</li><li>[[/item activity=uS0xLFhzFVc6Fko5]]{Укороченное пространство}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "42",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "distance-distortion",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "level": 4,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "range": {
+      "value": "120",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "ill",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "sphere",
+        "size": "60",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "pmsk9p8Jc04TQKww": {
+        "_id": "pmsk9p8Jc04TQKww",
+        "type": "utility",
+        "name": "Создать искажение",
+        "img": "icons/magic/control/debuff-energy-hold-levitate-pink.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "effects": [
+          {
+            "_id": "1yEaCEhxTWGeIlDt"
+          }
+        ],
+        "range": {
+          "value": "120",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "sphere",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "distanceStage": "cast"
+          }
+        }
+      },
+      "a2qo6u3ZMjq171LR": {
+        "_id": "a2qo6u3ZMjq171LR",
+        "type": "save",
+        "name": "Головокружительное удлинение",
+        "img": "icons/magic/control/debuff-energy-hold-levitate-pink.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "PPs6bYMKDkZRKKiL",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "spec",
+          "special": "В активной Сфере",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "psychic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "distanceStage": "slow",
+            "arcanaStage": "distance-distortion"
+          }
+        }
+      },
+      "uS0xLFhzFVc6Fko5": {
+        "_id": "uS0xLFhzFVc6Fko5",
+        "type": "utility",
+        "name": "Укороченное пространство",
+        "img": "icons/magic/control/debuff-energy-hold-levitate-pink.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "aIh84zDhK3tt8QI2"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "spec",
+          "special": "В активной Сфере",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "distanceStage": "fast",
+            "arcanaStage": "distance-distortion"
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "1yEaCEhxTWGeIlDt",
+      "name": "Искажение дистанции",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "distance-distortion"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!SJBPy6mA7OJy1NMy.1yEaCEhxTWGeIlDt"
+    },
+    {
+      "_id": "PPs6bYMKDkZRKKiL",
+      "name": "Головокружительное удлинение",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetEnd",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "distanceProfile": "slow"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!SJBPy6mA7OJy1NMy.PPs6bYMKDkZRKKiL"
+    },
+    {
+      "_id": "aIh84zDhK3tt8QI2",
+      "name": "Укороченное пространство: +20 футов",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.bonus",
+            "value": "20",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "91ISO0CwP0KKI3hM"
+          }
+        ],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetEnd",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "distanceProfile": "fast"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!SJBPy6mA7OJy1NMy.aIh84zDhK3tt8QI2"
+    }
+  ],
+  "folder": "DajrrvlBtzQLhOs9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-distance-distortion"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!SJBPy6mA7OJy1NMy"
+}

@@ -98,11 +98,11 @@ export async function releaseSoulPrison(effect, reason) {
     operations: [{ action: "delete", documentName: "ActiveEffect", parent: actor, ids: [effect.id] }]
   });
 }
-export function nearestSoulPrisonSpace(token, original) {
+export function nearestSoulPrisonSpace(token, original, allowed = () => true) {
   const scene = token.parent, grid = scene.grid, bounds = scene.dimensions?.sceneRect, size = token.getSize();
   const inside = point => !bounds || (point.x >= bounds.x && point.y >= bounds.y
     && point.x + size.width <= bounds.x + bounds.width && point.y + size.height <= bounds.y + bounds.height);
-  if (inside(original) && !occupied(token, original)) return { ...original };
+  if (inside(original) && allowed(original) && !occupied(token, original)) return { ...original };
   if (!bounds || ![bounds.x, bounds.y, bounds.width, bounds.height].every(Number.isFinite)) return null;
   function* positions() {
     if (grid.isGridless) {
@@ -134,7 +134,7 @@ export function nearestSoulPrisonSpace(token, original) {
     const rank = [distance, Math.hypot(point.x - original.x, point.y - original.y), point.y, point.x];
     const difference = bestRank ? rank.findIndex((value, index) => value !== bestRank[index]) : -1;
     const better = !bestRank || (difference >= 0 && rank[difference] < bestRank[difference]);
-    if (better && !occupied(token, point)) { best = point; bestRank = rank; }
+    if (better && allowed(point) && !occupied(token, point)) { best = point; bestRank = rank; }
   }
   return best;
 }

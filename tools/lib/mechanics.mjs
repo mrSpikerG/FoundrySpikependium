@@ -60,7 +60,7 @@ const DAMAGE_TYPES = {
   "дробящего": "bludgeoning", "колющего": "piercing", "рубящего": "slashing",
   "кислотой": "acid", "холодом": "cold", "огнём": "fire", "огнем": "fire",
   "электричеством": "lightning", "излучением": "radiant", "ядом": "poison", "звуком": "thunder",
-  "некротической энергией": "necrotic", "психической энергией": "psychic", "силовым полем": "force"
+  "некротической энергией": "necrotic", "психической энергией": "psychic", "силовым полем": "force", "чистой силой":"force", "чистой силы":"force"
 };
 export function inlineRolls(html = "") {
   // Не меняем атрибуты HTML, UUID, уже готовые броски и их подписи.
@@ -182,7 +182,7 @@ function enrichItem(item) {
     if (a.healing) link += ` · [[/heal activity=${a._id}]]{Бросок лечения}`;
     else if (a.damage?.parts.length || (a.type === "attack" && a.damage.includeBase && item.system.damage?.base?.number))
       link += ` · [[/damage activity=${a._id}]]{Бросок урона}`;
-    if (a.type === "save") link += ` · [[/save activity=${a._id}]]{Спасбросок цели}`;
+    if (a.type === "save" && a.save.ability.length) link += ` · [[/save activity=${a._id}]]{Спасбросок цели}`;
     return `<li>${link}</li>`;
   });
   item.system.description.value += `<h3>Действия</h3><ul>${links.join("")}</ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>`;

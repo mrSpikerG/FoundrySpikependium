@@ -1,0 +1,576 @@
+{
+  "_id": "0Ceh5eduLiOICuQu",
+  "name": "Traitor’s Gauntlet",
+  "type": "equipment",
+  "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p>Пара перчаток с одной латной перчаткой. В надетом настроенном комплекте удар рукой этой перчатки — волшебное оружие, [[/r 1d8]]{1к8} некротического + Сила. Бонусным действием командное слово делает немагическое рукопашное оружие в этой руке магическим: обычный урон оружия заменяется некротическим, добавляется [[/r 1d8]]{1к8} огня. Используйте штатное зачарование и выберите оружие; эффект можно включать/выключать. Модуль добавляет отдельную огненную часть к исходному урону и сохраняет крит, обычные сопротивления считаются по типам. Метательная атака усиления не получает. Снятый/отключённый источник и неэкипированное оружие подавляют зачарование. Конкретную руку, бросание/выпускание/убирание оружия отслеживайте вручную и снимайте профиль, когда связь оканчивается. Действием и вторым командным словом снятую латную перчатку можно подогнать под другую руку. Настройка накладывает проклятие: не желаете расставаться с перчаткой, держите её в досягаемости, перчатки нельзя снять. Изъян о тайных умыслах других даёт помеху Проницательности и Убеждению только при взаимодействии с дружественными существами и запрещает Помощь. Наложите постоянный профиль при подтверждении настройки; Мастер снимает его при разрешённом окончании проклятия. Условные проверки, Help и нежелание расставаться с предметом пока ручные; профиль не даёт общей помехи всем социальным броскам.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 0,5 фунта для пары тканевых/кожаных перчаток или 2 фунта для пары металлических рукавиц; особый вес источник не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=f732f38c585218b4\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=mh4fyXCi88D2bCHZ]]{Волшебный удар рукой в перчатке} · [[/damage activity=mh4fyXCi88D2bCHZ]]{Бросок урона}</li><li>[[/item activity=4WfJM55ttXV0QqHR]]{Командное слово: немагическое рукопашное оружие в этой руке}</li><li>[[/item activity=GAl1BiyEW2BzZy67]]{Снятая латная перчатка: подогнать под другую руку}</li><li>[[/item activity=tpC8aCOiQnLhJCTJ]]{Настройка: подтвердить постоянное проклятие}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=f732f38c585218b4",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-gs2-traitor",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": 1,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "mh4fyXCi88D2bCHZ": {
+        "_id": "mh4fyXCi88D2bCHZ",
+        "type": "attack",
+        "name": "Волшебный удар рукой в перчатке",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "5",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "attack": {
+          "ability": "str",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "melee",
+            "classification": "unarmed"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": false,
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 1,
+              "denomination": 8,
+              "bonus": "@mod",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      },
+      "4WfJM55ttXV0QqHR": {
+        "_id": "4WfJM55ttXV0QqHR",
+        "type": "enchant",
+        "name": "Командное слово: немагическое рукопашное оружие в этой руке",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "DXRa4WJOCIEBjyKw",
+            "level": {
+              "min": null,
+              "max": null
+            },
+            "riders": {
+              "activity": [],
+              "effect": [],
+              "item": []
+            }
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "enchant": {
+          "self": false
+        },
+        "restrictions": {
+          "allowMagical": false,
+          "categories": [
+            "simpleM",
+            "martialM"
+          ],
+          "properties": [],
+          "type": "weapon"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": true,
+          "requireIdentification": false,
+          "requireMagic": true
+        },
+        "flags": {
+          "spikependium": {
+            "griffonCommandWord": true
+          }
+        }
+      },
+      "GAl1BiyEW2BzZy67": {
+        "_id": "GAl1BiyEW2BzZy67",
+        "type": "utility",
+        "name": "Снятая латная перчатка: подогнать под другую руку",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "griffonCommandWord": true
+          }
+        }
+      },
+      "tpC8aCOiQnLhJCTJ": {
+        "_id": "tpC8aCOiQnLhJCTJ",
+        "type": "transform",
+        "name": "Настройка: подтвердить постоянное проклятие",
+        "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "iCveAbQDoKkpNG9a"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "DXRa4WJOCIEBjyKw",
+      "name": "Тёмное пламя перчатки предателя",
+      "img": "icons/svg/upgrade.svg",
+      "type": "enchantment",
+      "system": {
+        "changes": [
+          {
+            "key": "system.properties",
+            "value": "mgc",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "cynqyUN3an1p2K0m"
+          }
+        ]
+      },
+      "disabled": true,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "traitorWeapon": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!0Ceh5eduLiOICuQu.DXRa4WJOCIEBjyKw"
+    },
+    {
+      "_id": "iCveAbQDoKkpNG9a",
+      "name": "Проклятие предателя: не снимать перчатки",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "gloveTraitorCurse": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!0Ceh5eduLiOICuQu.iCveAbQDoKkpNG9a"
+    }
+  ],
+  "folder": "IEgnNTFzxYTHqSK9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:traitor",
+      "originalName": "Traitor’s Gauntlet",
+      "griffonGlove": "traitor"
+    },
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!0Ceh5eduLiOICuQu"
+}

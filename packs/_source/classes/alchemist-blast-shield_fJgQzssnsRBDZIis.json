@@ -5,7 +5,7 @@
   "img": "icons/tools/laboratory/vials-blue-pink.webp",
   "system": {
     "description": {
-      "value": "<p>Собственные бомбы не наносят вам урон; их спасброски автоматически успешны. Исключайте себя из целей урона собственной бомбы. Автоматическое распознавание всех формул и карточек собственной бомбы ещё не подключено.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
+      "value": "<p>Собственные бомбы не наносят вам урон; их спасброски автоматически успешны. Выключаемый пассивный эффект распознаёт оплаченные карточки обычных бомб, повреждающих формул и их взрыва: штатный результат подходящего спасброска становится успешным, урон по себе обнуляется. Чужие бомбы и лечение не меняются. Для самостоятельных дополнительных карточек без связи с исходной бомбой, длительных областей и отдельных затрат здоровья источник подтвердите вручную.</p><p>Источник: <a href=\"https://janglep.github.io/homebrew/class/395-alchemist/index.html\">Valda’s Spire of Secrets: Алхимик</a>.</p>",
       "chat": ""
     },
     "source": {
@@ -37,7 +37,50 @@
     "advancement": [],
     "enchant": {}
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "5EtzdWTb6pTkab1Z",
+      "name": "Защита от собственных бомб",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "alchemistBlastShield": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!fJgQzssnsRBDZIis.5EtzdWTb6pTkab1Z"
+    }
+  ],
   "folder": "l0yvsXLqwjOovkA3",
   "sort": 0,
   "ownership": {

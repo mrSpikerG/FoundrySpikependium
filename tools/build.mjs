@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import assert from "node:assert/strict";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
-import { MODULE_ID, BOOKS, getMissingIcons, getMissingRefs, ARTIFICER_CATALOG } from "./lib/core.mjs";
+import { MODULE_ID, BOOKS, getMissingIcons, getMissingRefs, ARTIFICER_CATALOG, utility } from "./lib/core.mjs";
 import { PACKS, REGISTRY, FOLDERS, EN_NAMES, uuidOf } from "./lib/docs.mjs";
 import { enrichDocument } from "./lib/mechanics.mjs";
 import { DRAGONMARK_TABLES } from "../src/content/feats.mjs";
@@ -16,8 +16,23 @@ import { BLUEPRINTS } from "../src/content/artificer.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = ["spells", "spells-psion-update", "arcana-unleashed-spells", "arcana-unleashed-spells-2", "arcana-unleashed-spells-3", "arcana-unleashed-summons", "creatures", "creatures-2", "monsters-mm25", "monsters-performers-mm25", "monsters-arcanaloth-mm25", "monsters-archhag-mm25", "monsters-assassins-bugbears-mm25", "monsters-bandits-mm25", "artificer", "psion", "subclasses-artificer",
   "subclasses-psion", "subclasses-fr", "subclasses-horror", "subclasses-arcane", "subclasses-villain", "subclasses-mystic",
-  "feats", "feats-villain", "arcana-unleashed-feats", "items", "griffons-saddlebag", "griffons-saddlebag-rings", "griffons-saddlebag-two-rings", "griffons-saddlebag-wearables", "griffons-saddlebag-armor", "griffons-saddlebag-sweets", "griffons-saddlebag-weapons", "griffons-saddlebag-two-shields", "griffons-saddlebag-two-armor", "griffons-saddlebag-two-weapons", "griffonid", "subclasses-griffon", "alchemist", "alchemist-formulas", "alchemist-discoveries", "subclasses-alchemist", "alchemist-special-formulas", "alchemist-grafts", "alchemist-creatures", "magus-spells", "magus", "subclasses-magus", "journals"];
+  "feats", "feats-villain", "arcana-unleashed-feats", "items", "griffons-saddlebag", "griffons-saddlebag-rings", "griffons-saddlebag-two-rings", "griffons-saddlebag-wearables", "griffons-saddlebag-armor", "griffons-saddlebag-sweets", "griffons-saddlebag-weapons", "griffons-saddlebag-foci", "griffons-saddlebag-two-shields", "griffons-saddlebag-two-armor", "griffons-saddlebag-two-weapons", "griffonid", "subclasses-griffon", "alchemist", "alchemist-formulas", "alchemist-discoveries", "subclasses-alchemist", "alchemist-special-formulas", "alchemist-grafts", "alchemist-creatures", "magus-spells", "magus", "subclasses-magus", "journals"];
 
+CONTENT.push("griffons-saddlebag-staves");
+CONTENT.push("griffons-saddlebag-stationery");
+CONTENT.push("griffons-saddlebag-two-gloves");
+CONTENT.push("griffons-saddlebag-two-cloaks");
+CONTENT.push("griffons-saddlebag-two-belts");
+CONTENT.push("griffons-saddlebag-two-boots");
+CONTENT.push("arcana-unleashed-backgrounds");
+CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-spells-4");
+CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-lantern");
+CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-distance");
+CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-dragon");
+CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-duel");
+CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-familiar");
+CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-schools");
+CONTENT.splice(CONTENT.indexOf("arcana-unleashed-feats"), 0, "arcana-unleashed-origin-feats");
 assert.equal(new Set(CONTENT).size, CONTENT.length, "Повторный раздел библиотеки");
 for (const file of fs.readdirSync(path.join(ROOT, "src/content")).filter(name => name.endsWith(".mjs"))) {
   if (/^export\s+(?:async\s+)?function\s+define\b/m.test(fs.readFileSync(path.join(ROOT, "src/content", file), "utf8")))
@@ -110,6 +125,8 @@ fs.writeFileSync(path.join(ROOT, "scripts/generated.mjs"),
   + `export const BLUEPRINTS = ${JSON.stringify(BLUEPRINTS.map(p => ({ ...p, blueprintUuid: uuidOf(p.key), uuid: p.moduleKey ? uuidOf(p.moduleKey) : p.uuid })), null, 2)};\n\n`
   + `export const TINKER_ITEMS = ${JSON.stringify(ARTIFICER_CATALOG.mundane, null, 2)};\n\n`
   + `export const FORGE_BASES = ${JSON.stringify(ARTIFICER_CATALOG.bases, null, 2)};\n\n`
+  + `export const SCHOOL_SPEED_PROFILE_UUID = ${JSON.stringify(uuidOf("feat:au-school-adept-trs"))};\n\n`
+  + `export const PAIN_FAILURE_ACTIVITY = ${JSON.stringify(utility("pain:failed-cast",{name:"Неудачная попытка сотворения",activation:"action",self:true,spellSlot:false}),null,2)};\n\n`
   + `export const SOURCE_BOOKS = ${JSON.stringify(BOOKS, null, 2)};\n`);
 
 /* -------------------------------------------- */

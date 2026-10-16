@@ -320,8 +320,8 @@ assert.equal(owner.effects.length, 0); assert.equal(source.actor.effects.length,
 assert.deepEqual(scene.regions.map(r => r.id), ["other-region"], "истечение снимает только эффекты и шаблоны этой ауры");
 console.error = log;
 console.log("Аура реликта: нативные эффекты и эманация, дистанция/высота/уровень, длительность и переключение, спасение/ActorDelta, обязательный уход, запрет до отдыха, частичные ошибки и старые эффекты: OK.");
-const init = [], registrations = new Map();
-globalThis.Hooks = { on() {}, once(event, callback) { if (event === "init") init.push(callback); } };
+const init = [], registrations = new Map(), listeners = new Map();
+globalThis.Hooks = { on(event, callback) { if (!listeners.has(event)) listeners.set(event, []); listeners.get(event).push(callback); }, once(event, callback) { if (event === "init") init.push(callback); } };
 globalThis.CONFIG = { DND5E: { activityConsumptionTypes: {}, activityTypes: Object.fromEntries(["utility", "save", "heal", "attack", "cast", "summon", "teleport"].map(type => [type, {}])),
   sourceBooks: {}, featureTypes: { feat: { subtypes: {} }, class: { subtypes: {} } } } };
 globalThis.libWrapper = { register(module, target, callback) {
@@ -332,4 +332,6 @@ dnd5e.registry = { spellLists: { register() {} } };
 await import("../scripts/spikependium.mjs"); init.at(-1)();
 assert(registrations.has("CONFIG.ActiveEffect.dataModels.base.prototype.evaluateCondition"));
 assert(registrations.has("CONFIG.DND5E.activityTypes.utility.documentClass.prototype.getAppliedEffectChanges"));
+const { prepareFocusCasting } = await import("../scripts/griffon-focus-casting.mjs"), { canUseGriffonTwo } = await import("../scripts/griffon-two-items.mjs");
+assert.ok(listeners.get("dnd5e.preUseActivity").indexOf(prepareFocusCasting) < listeners.get("dnd5e.preUseActivity").indexOf(canUseGriffonTwo), "снятие вербального компонента должно предшествовать проверке немоты");
 console.log("Инициализация интеграции: регистрации libWrapper без конфликтов: OK.");

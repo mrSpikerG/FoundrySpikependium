@@ -1,0 +1,1175 @@
+{
+  "_id": "fUdDclqcjr5Y2LdA",
+  "name": "Иллюзорный дракон",
+  "type": "spell",
+  "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Список: волшебник.</em></p><p>Собирая нити теневой материи из Царства Теней, вы создаёте Огромного дымчатого дракона в незанятом пространстве, которое видите в пределах 120 футов. Иллюзия существует на время Концентрации, до минуты, и занимает пространство, как если бы была существом. Она осязаема благодаря теневой материи, но обладает Иммунитетом ко всем типам урона и состояниям.</p><p>При появлении иллюзии каждый враг, который может её видеть, совершает спасбросок Мудрости. При провале он роняет всё, что несёт, и становится Испуганным на время заклинания. Если Испуганное таким образом существо заканчивает ход в пространстве, откуда не видит иллюзию, оно повторяет спасбросок, заканчивая состояние при успехе. Обычного повторного спасброска каждый ход нет.</p><p>Бонусным действием вы можете переместить иллюзию не более чем на 60 футов. В любой момент этого перемещения она может выдохнуть заряд энергии 60-футовым Конусом. Каждое существо в Конусе совершает спасбросок Интеллекта, получая [[/damage 6d6 type=acid]]{6к6} урона Кислотой, Холодом, Огнём, Электричеством, Некротической энергией или Ядом при провале либо половину при успехе. Тип выбирается при создании дракона и впоследствии не меняется.</p><p>Существо может действием Изучение совершить проверку Интеллекта (Расследование) против Сл спасбросков заклинателя. При успехе оно понимает, что дракон — иллюзия. Понимающее это существо видит сквозь дракона и совершает с Преимуществом спасброски для окончания вызванного им страха и против его дыхания. Первоначальный спасбросок от появления не получает этого Преимущества.</p><p><strong>Применение.</strong> При сотворении выберите стихию и разместите штатную область 15 × 15 футов для Огромной иллюзии. Это область, а не существо с выдуманными характеристиками или Хитами. Для каждого видящего её появление врага отдельно используйте бесплатный страх и подтвердите условия. Успешный WIS прекращает страх, повторное первоначальное воздействие на ту же цель заблокировано. Повторяйте WIS из исходной карточки только в конце хода цели, если она не видит дракона; подтвердите это в окне спасброска. В окнах атак и проверок Испуганной цели подтвердите видимость источника страха: тогда применяется Помеха с обычным сочетанием с Преимуществом.</p><p>Для Изучения добавьте наблюдателю @UUID[Compendium.spikependium.feats.Item.z0EIyFsUHtCAV4m3]{действие исследования иллюзии} из папки «Неудержимая магия → Действия». Оно расходует его собственное Действие и предлагает штатный INT (Расследование) против Сл выбранного дракона. Успех создаёт на наблюдателе переключаемый эффект распознавания; он даёт нужное Преимущество только для данного сотворения.</p><p>Для перемещения с дыханием используйте соответствующее Бонусное действие: новая ячейка не тратится, другая стихия не допускается. Перемещайте область вручную не более чем на 60 футов; разместите Конус из положения иллюзии в выбранный момент пути. Дыхание уже включает расход этого Бонусного действия, отдельное перемещение дополнительно не оплачивайте. Путь, занятость пространства, видимость, конец хода, бросаемые предметы и взаимодействие с реальным зрением разрешает Мастер. По окончании Концентрации или минуты исходная область удаляется. Автоматического блокирования прохода и перемещения области пока нет.</p><h3>Действия</h3><ul><li>[[/item activity=vLLnNqQCnoDRIXtU]]{Создать иллюзорного дракона}</li><li>[[/item activity=v7suUzJWpiJFgP10]]{Страх при появлении дракона} · [[/save activity=v7suUzJWpiJFgP10]]{Спасбросок цели}</li><li>[[/item activity=qIwc2H8oFa2blgUX]]{Переместить дракона без дыхания}</li><li>[[/item activity=ua4MAkPq8mjrEyfE]]{Перемещение и дыхание: Кислота} · [[/damage activity=ua4MAkPq8mjrEyfE]]{Бросок урона} · [[/save activity=ua4MAkPq8mjrEyfE]]{Спасбросок цели}</li><li>[[/item activity=j4lWWVtylkcejRV3]]{Перемещение и дыхание: Холод} · [[/damage activity=j4lWWVtylkcejRV3]]{Бросок урона} · [[/save activity=j4lWWVtylkcejRV3]]{Спасбросок цели}</li><li>[[/item activity=BICQknDO9odniDRm]]{Перемещение и дыхание: Огонь} · [[/damage activity=BICQknDO9odniDRm]]{Бросок урона} · [[/save activity=BICQknDO9odniDRm]]{Спасбросок цели}</li><li>[[/item activity=bwvJQH30EGK07IwR]]{Перемещение и дыхание: Электричество} · [[/damage activity=bwvJQH30EGK07IwR]]{Бросок урона} · [[/save activity=bwvJQH30EGK07IwR]]{Спасбросок цели}</li><li>[[/item activity=9Eg8H5KydJOY9Lp8]]{Перемещение и дыхание: Некротическая энергия} · [[/damage activity=9Eg8H5KydJOY9Lp8]]{Бросок урона} · [[/save activity=9Eg8H5KydJOY9Lp8]]{Спасбросок цели}</li><li>[[/item activity=llKhaE1aWXxctCr0]]{Перемещение и дыхание: Яд} · [[/damage activity=llKhaE1aWXxctCr0]]{Бросок урона} · [[/save activity=llKhaE1aWXxctCr0]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "41",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "illusory-dragon",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 8,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "somatic",
+      "concentration"
+    ],
+    "range": {
+      "value": "120",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "ill",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "cube",
+        "size": "15",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "vLLnNqQCnoDRIXtU": {
+        "_id": "vLLnNqQCnoDRIXtU",
+        "type": "utility",
+        "name": "Создать иллюзорного дракона",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "effects": [
+          {
+            "_id": "Lm1JCWGGoakq22Ig"
+          }
+        ],
+        "range": {
+          "value": "120",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cube",
+            "size": "15",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "dragonStage": "cast"
+          }
+        }
+      },
+      "v7suUzJWpiJFgP10": {
+        "_id": "v7suUzJWpiJFgP10",
+        "type": "save",
+        "name": "Страх при появлении дракона",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "AllB3Xh71iUXz9Nw",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "spec",
+          "special": "Любой враг, видящий появление иллюзии",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "dragonStage": "fear",
+            "arcanaStage": "illusory-dragon"
+          }
+        }
+      },
+      "qIwc2H8oFa2blgUX": {
+        "_id": "qIwc2H8oFa2blgUX",
+        "type": "utility",
+        "name": "Переместить дракона без дыхания",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "dragonStage": "move",
+            "arcanaStage": "illusory-dragon"
+          }
+        }
+      },
+      "ua4MAkPq8mjrEyfE": {
+        "_id": "ua4MAkPq8mjrEyfE",
+        "type": "save",
+        "name": "Перемещение и дыхание: Кислота",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "acid"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "dragonStage": "breath",
+            "arcanaStage": "illusory-dragon",
+            "dragonElement": "acid"
+          }
+        }
+      },
+      "j4lWWVtylkcejRV3": {
+        "_id": "j4lWWVtylkcejRV3",
+        "type": "save",
+        "name": "Перемещение и дыхание: Холод",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 500000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "cold"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "dragonStage": "breath",
+            "arcanaStage": "illusory-dragon",
+            "dragonElement": "cold"
+          }
+        }
+      },
+      "BICQknDO9odniDRm": {
+        "_id": "BICQknDO9odniDRm",
+        "type": "save",
+        "name": "Перемещение и дыхание: Огонь",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 600000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "dragonStage": "breath",
+            "arcanaStage": "illusory-dragon",
+            "dragonElement": "fire"
+          }
+        }
+      },
+      "bwvJQH30EGK07IwR": {
+        "_id": "bwvJQH30EGK07IwR",
+        "type": "save",
+        "name": "Перемещение и дыхание: Электричество",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 700000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "lightning"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "dragonStage": "breath",
+            "arcanaStage": "illusory-dragon",
+            "dragonElement": "lightning"
+          }
+        }
+      },
+      "9Eg8H5KydJOY9Lp8": {
+        "_id": "9Eg8H5KydJOY9Lp8",
+        "type": "save",
+        "name": "Перемещение и дыхание: Некротическая энергия",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 800000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "dragonStage": "breath",
+            "arcanaStage": "illusory-dragon",
+            "dragonElement": "necrotic"
+          }
+        }
+      },
+      "llKhaE1aWXxctCr0": {
+        "_id": "llKhaE1aWXxctCr0",
+        "type": "save",
+        "name": "Перемещение и дыхание: Яд",
+        "img": "icons/creatures/abilities/dragon-breath-purple.webp",
+        "sort": 900000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "poison"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "int"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "dragonStage": "breath",
+            "arcanaStage": "illusory-dragon",
+            "dragonElement": "poison"
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "Lm1JCWGGoakq22Ig",
+      "name": "Иллюзорный дракон",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "illusory-dragon"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!fUdDclqcjr5Y2LdA.Lm1JCWGGoakq22Ig"
+    },
+    {
+      "_id": "AllB3Xh71iUXz9Nw",
+      "name": "Иллюзорный дракон: Испуганный",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "frightened"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "illusory-dragon-fear"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!fUdDclqcjr5Y2LdA.AllB3Xh71iUXz9Nw"
+    },
+    {
+      "_id": "wTP7nR6IELlpopKv",
+      "name": "Иллюзорный дракон распознан",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "dragonKnowledgeProfile": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!fUdDclqcjr5Y2LdA.wTP7nR6IELlpopKv"
+    }
+  ],
+  "folder": "Bvw1Ei7rCkf9CFym",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-illusory-dragon"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!fUdDclqcjr5Y2LdA"
+}

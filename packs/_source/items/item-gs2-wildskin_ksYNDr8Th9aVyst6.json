@@ -1,0 +1,248 @@
+{
+  "_id": "ksYNDr8Th9aVyst6",
+  "name": "Wildskin Armor",
+  "type": "equipment",
+  "img": "icons/equipment/chest/vest-cloth-tattered-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройка друидом. Когда используете Дикий облик, можете раз до рассвета укрепить принятый облик: КД 14 + Ловкость (не более +2), если текущий КД не выше. Работает и при слиянии доспеха с обликом. Сразу после штатного превращения выделите свой звериный токен и нажмите кнопку на доспехе исходного друида: применение списывается там, а профиль КД автоматически накладывается только на выбранный связанный облик. Проверяются зверь, владелец и связь originalActor; подтвердите, что это именно Дикий облик. Профиль не улучшает гуманоидное тело, не переносится на следующий облик и не понижает более высокий КД. Отмена уже оплаченного применения сама не удаляет применённый профиль. Внешние модули превращения без штатной связи обрабатывайте вручную.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха. Вес взят у базового доспеха 2024; отдельного веса в источнике нет.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=514f5528fec967e4\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=S0f0RHYzdI2ofDOl]]{Только что принят Дикий облик: укрепить выделенного зверя}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=514f5528fec967e4",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-wildskin",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 12,
+      "units": "lb"
+    },
+    "price": {
+      "value": 410,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 12,
+      "magicalBonus": null,
+      "dex": 2
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "medium",
+      "baseItem": "hide"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "S0f0RHYzdI2ofDOl": {
+        "_id": "S0f0RHYzdI2ofDOl",
+        "type": "utility",
+        "name": "Только что принят Дикий облик: укрепить выделенного зверя",
+        "img": "icons/equipment/chest/vest-cloth-tattered-tan.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "9QqCBWLz1Ht5RsbY"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "griffonArmorPaid": true,
+            "wildskinGrant": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "9QqCBWLz1Ht5RsbY",
+      "name": "Дикая шкура: КД звериного облика",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.formulas",
+            "value": "14 + min(2, @abilities.dex.mod)",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "hPfsclkN1qegqMI5"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.wildskinActive\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "griffonWildskin": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!ksYNDr8Th9aVyst6.9QqCBWLz1Ht5RsbY"
+    }
+  ],
+  "folder": "yF0IBHbFDAxZxF3L",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:wildskin",
+      "originalName": "Wildskin Armor",
+      "griffonTwoArmor": "wildskin",
+      "griffonClass": "druid",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmHideArmor0"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ksYNDr8Th9aVyst6"
+}

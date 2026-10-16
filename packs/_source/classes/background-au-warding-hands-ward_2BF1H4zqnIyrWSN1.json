@@ -1,0 +1,243 @@
+{
+  "_id": "2BF1H4zqnIyrWSN1",
+  "name": "Подопечный Оберегающих дланей",
+  "type": "background",
+  "img": "icons/sundries/books/book-open-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Характеристики.</strong> Телосложение, Мудрость, Харизма. Распределите между ними +2 и +1 либо по +1 каждой; максимум 20.</p><p><strong>Черта происхождения.</strong> @UUID[Compendium.spikependium.feats.Item.Uy1pbuVUGQpEf4Hq].</p><p>Получив помощь Оберегающих дланей, вы освоили защитную магию и теперь можете помогать другим.</p><p><strong>Применение.</strong> При добавлении предыстории штатные шаги предлагают распределение характеристик, владения и черту. Снаряжение выбирается штатным окном начального снаряжения: комплект А с 40 зм либо 50 зм. Инструмент, которым вы должны владеть, выбирайте после шага владений.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey\">Неудержимая магия</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "au-warding-hands-ward",
+    "advancement": [
+      {
+        "_id": "RSn5wEPzk2StbFDK",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 3,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [
+            "str",
+            "dex",
+            "int"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Характеристики предыстории",
+        "hint": "+2 и +1 к разным характеристикам либо +1 ко всем трём; не выше 20."
+      },
+      {
+        "_id": "G3wcTcm9F1QEaD92",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "skills:med",
+            "skills:ins",
+            "tool:art:cook"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Владения предыстории",
+        "hint": ""
+      },
+      {
+        "_id": "foSbGCRZ3OI7J4gF",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.feats.Item.Uy1pbuVUGQpEf4Hq",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 0,
+        "title": "Черта происхождения",
+        "hint": ""
+      },
+      {
+        "_id": "8FPbCTqLAIDxAO0M",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "languages:standard:common"
+          ],
+          "choices": [
+            {
+              "count": 2,
+              "pool": [
+                "languages:standard:*"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Языки персонажа",
+        "hint": "Общий шаг создания персонажа по правилам 2024: Всеобщий и два стандартных языка. Дополнительных языков сверх этого предыстория не даёт."
+      }
+    ],
+    "startingEquipment": [
+      {
+        "_id": "fWTGAp4LsrSAPBwu",
+        "type": "OR",
+        "group": "",
+        "sort": 100000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "HJkh4ZyEQG1HUack",
+        "type": "AND",
+        "group": "fWTGAp4LsrSAPBwu",
+        "sort": 200000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "yhgTA63vB0royAqR",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbtulCooksUtens",
+        "count": null,
+        "group": "HJkh4ZyEQG1HUack",
+        "sort": 300000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "WEqFgzFORGJEIWsk",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagBlanket0000",
+        "count": null,
+        "group": "HJkh4ZyEQG1HUack",
+        "sort": 301000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "HiyZeZDTOFJL78qn",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagHealersKit0",
+        "count": null,
+        "group": "HJkh4ZyEQG1HUack",
+        "sort": 302000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "jFyKvrK3ZRdP2WUa",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagLamp0000000",
+        "count": null,
+        "group": "HJkh4ZyEQG1HUack",
+        "sort": 303000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "PU6IRs6Ihdjosmxo",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagOil00000000",
+        "count": 3,
+        "group": "HJkh4ZyEQG1HUack",
+        "sort": 304000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "PYJROy9Eo8OAg4b7",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagTinderbox00",
+        "count": null,
+        "group": "HJkh4ZyEQG1HUack",
+        "sort": 305000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "Kd6vWqDeCw2udV7w",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagClothesTrav",
+        "count": null,
+        "group": "HJkh4ZyEQG1HUack",
+        "sort": 306000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "PMRtGqGlu6IFgTBv",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagWaterskin00",
+        "count": null,
+        "group": "HJkh4ZyEQG1HUack",
+        "sort": 307000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "Pmkx1brIx8BSZPlh",
+        "type": "currency",
+        "key": "gp",
+        "count": 40,
+        "group": "HJkh4ZyEQG1HUack",
+        "sort": 390000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "kxAKFCJy5To2EKnF",
+        "type": "currency",
+        "key": "gp",
+        "count": 50,
+        "group": "fWTGAp4LsrSAPBwu",
+        "sort": 400000,
+        "requiresProficiency": false
+      }
+    ],
+    "wealth": ""
+  },
+  "effects": [],
+  "folder": "66iq7tm6Hgr3maCI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "background:au-warding-hands-ward"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!2BF1H4zqnIyrWSN1"
+}

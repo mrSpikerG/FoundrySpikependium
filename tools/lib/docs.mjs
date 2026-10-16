@@ -241,6 +241,14 @@ export function speciesItem(o) {
   });
 }
 
+/** Предыстория со штатными продвижениями и выбором стартового снаряжения. */
+export function backgroundItem(o) {
+  return itemBase("classes", o.key, o, "background", {
+    description: description(o), source: source(o.book, o.page), identifier: o.identifier,
+    advancement: o.advancement, startingEquipment: o.startingEquipment, wealth: ""
+  });
+}
+
 /* -------------------------------------------- */
 /*  Классы и подклассы                          */
 /* -------------------------------------------- */

@@ -28,7 +28,7 @@ assert.deepEqual(undead.healing.types,["temphp"]);assert.equal(undead.healing.nu
 const bloom=find("wither-and-bloom");assert.equal(bloom.system.properties.includes("concentration"),false);
 assert.equal(acts(bloom)[0].damage.parts[0].number,3);assert.equal(acts(bloom)[0].target.template.size,"10");
 const rules=fs.readdirSync("packs/_source/rules").filter(f=>f.startsWith("journal-au-spell-lists_")).map(f=>JSON.parse(fs.readFileSync("packs/_source/rules/"+f,"utf8")))[0];
-assert.equal(rules.pages.length,8);
+assert.equal(rules.pages.length,9);
 for(const [id,classes]of [["detonate",["wizard","warlock","sorcerer"]],["lightning-ring",["wizard","druid","warlock","sorcerer"]],
   ["grave-ground",["wizard","cleric","warlock"]],["negative-energy-flood",["wizard","warlock"]],["wither-and-bloom",["wizard","druid","sorcerer"]]]){
   for(const page of rules.pages){const data=page.system;assert.equal(page.type,"spells");

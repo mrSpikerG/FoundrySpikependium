@@ -26,6 +26,7 @@ assert.equal(inlineRolls(protectedMarkup), protectedMarkup);
 assert.equal(inlineRolls(inlineRolls('1к4')), inlineRolls('1к4'));
 assert.equal(inlineRolls('2к6 урона психической энергией'), '[[/damage 2d6 type=psychic]]{2к6} урона психической энергией');
 assert.equal(inlineRolls('1к4 рубящего урона'), '[[/damage 1d4 type=slashing]]{1к4} рубящего урона');
+assert.equal(inlineRolls('6к8 урона Чистой силой'), '[[/damage 6d8 type=force]]{6к8} урона Чистой силой');
 assert.equal(inlineRolls('1к6 + 1 режущего урона'), '[[/damage 1d6+1 type=slashing]]{1к6 + 1} режущего урона');
 assert.equal(md('[[/r 1d6]]{1к6}'), '<p>[[/r 1d6]]{1к6}</p>');
 for (const [deltas, paid] of [

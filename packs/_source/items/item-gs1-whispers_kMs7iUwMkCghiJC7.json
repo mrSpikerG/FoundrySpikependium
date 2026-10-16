@@ -1,0 +1,457 @@
+{
+  "_id": "kMs7iUwMkCghiJC7",
+  "name": "Палочка шёпотов",
+  "type": "equipment",
+  "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройка заклинателем. Пламя: яркий свет 5 футов, тусклый ещё 5; бонусным действием включается/выключается. Свет токена синхронизируется с экипировкой, настройкой и состоянием палочки. Сообщение бесплатно, Послание за 3 заряда. При запуске обычного вербального заклинания с листа выберите эту палочку в появившемся окне: на рабочей копии убирается только вербальный компонент. Списывается по заряду за фактически выбранный уровень ячейки 0–5; заговор бесплатен. Исходная запись заклинания не изменяется. Недостаток зарядов или выбор ячейки выше 5 отменяет применение до записи расходов; возврат расхода возвращает ячейку и заряды, но не откатывает уже сыгранные последствия. 7 зарядов, сумерки [[/r 1d6+1]]{1к6+1}. Последний заряд, 1 на к20: немагическая свеча с подсвечником.</p><p>Чтобы пользоваться магическими свойствами, отметьте предмет как экипированный и выполните настройку, если она требуется. Проверка последнего заряда выполняется при штатном расходе; уничтоженная запись остаётся с количеством 0 для возврата расхода, утратившая магию — как обычный предмет. Отмена расхода возвращает заряды и состояние; уже применённые последствия разрешайте отдельно.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес по обычному волшебной палочке 2024; особый вес в источнике не указан.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=4193bd1b14800efd\">Сумка грифона — книга 1 (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=Vr7QX7z0qT3ggELn]]{Сообщение}</li><li>[[/item activity=wi8YSprDfwaqLJMM]]{Послание — 3 заряда}</li><li>[[/item activity=ywNroq8aCjMIciK2]]{Зажечь свечное пламя}</li><li>[[/item activity=uwZwjCPq5vjcLjbI]]{Погасить свечное пламя}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS1",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=4193bd1b14800efd",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-whispers",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "7",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dusk",
+          "type": "formula",
+          "formula": "1d6+1"
+        }
+      ]
+    },
+    "activities": {
+      "Vr7QX7z0qT3ggELn": {
+        "_id": "Vr7QX7z0qT3ggELn",
+        "type": "cast",
+        "name": "Сообщение",
+        "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplMessage000"
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      },
+      "wi8YSprDfwaqLJMM": {
+        "_id": "wi8YSprDfwaqLJMM",
+        "type": "cast",
+        "name": "Послание — 3 заряда",
+        "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "3",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplSending000"
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      },
+      "ywNroq8aCjMIciK2": {
+        "_id": "ywNroq8aCjMIciK2",
+        "type": "utility",
+        "name": "Зажечь свечное пламя",
+        "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "focusFlame": 1
+          }
+        }
+      },
+      "uwZwjCPq5vjcLjbI": {
+        "_id": "uwZwjCPq5vjcLjbI",
+        "type": "utility",
+        "name": "Погасить свечное пламя",
+        "img": "icons/weapons/wands/wand-carved-stone-shard.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "focusFlame": 0
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "92FFZm20GbB7iX1W",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs1:whispers",
+      "griffonFocus": "whispers",
+      "focusRuin": 0,
+      "griffonSpellcaster": true,
+      "focusFlame": 1,
+      "focusLastCharge": "mundane"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!kMs7iUwMkCghiJC7"
+}

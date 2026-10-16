@@ -1,0 +1,367 @@
+{
+  "_id": "dJEwX8mT0nFnxTlk",
+  "name": "Волны истощения",
+  "type": "spell",
+  "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, колдун, чародей.</em></p><p>Бонусным действием окружите себя серым сиянием. Пока сохраняется концентрация, до 1 минуты, действием Магия можно испускать 60-футовый конус. Существо в конусе совершает спасбросок Телосложения; при провале получает один уровень Истощения. Это заклинание не повышает общий уровень Истощения выше 4. Полученные от него уровни исчезают при окончании заклинания.</p><p><strong>Применение.</strong> Сначала создайте сияние. Для волны разместите штатный конус, выберите попавшие в него существа и подтвердите область и укрытие. Повторная ячейка не расходуется. После провала модуль добавляет отдельный временный уровень с учётом обычного истощения, предела 4, иммунитета и Железного тела. Штрафы к тестам к20 и скорости рассчитываются штатной системой. Потеря концентрации удаляет только уровни этого сотворения. Обычное изменение истощения на листе при уменьшении снимает сначала обычные уровни, затем наиболее поздние временные. Отмена расхода волны не отменяет уже разрешённые спасброски; изменение результата спасброска снимает связанный временный уровень. При превращении или смене документа персонажа сверяйте временные уровни вручную. Вне текущей сцены и без подходящей исходной карточки разрешайте воздействие вручную.</p><h3>Действия</h3><ul><li>[[/item activity=iDAWxZcdcrluHn9x]]{Создать сияние}</li><li>[[/item activity=i9oytylFFctiKini]]{Испустить волну истощения} · [[/save activity=i9oytylFFctiKini]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "37",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "waves-of-exhaustion",
+    "activation": {
+      "type": "bonus",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 5,
+    "materials": {
+      "value": "кусочек сушёного мяса",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "nec",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "iDAWxZcdcrluHn9x": {
+        "_id": "iDAWxZcdcrluHn9x",
+        "type": "utility",
+        "name": "Создать сияние",
+        "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "effects": [
+          {
+            "_id": "gzt1uYxZfbEpF3YG"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "i9oytylFFctiKini": {
+        "_id": "i9oytylFFctiKini",
+        "type": "save",
+        "name": "Испустить волну истощения",
+        "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "cone",
+            "size": "60",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "arcanaStage": "waves-of-exhaustion"
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "gzt1uYxZfbEpF3YG",
+      "name": "Волны истощения",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "waves-of-exhaustion",
+          "arcanaOngoing": "waves-of-exhaustion"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!dJEwX8mT0nFnxTlk.gzt1uYxZfbEpF3YG"
+    },
+    {
+      "_id": "GKlUofH5Tc4GJEYW",
+      "name": "Волны истощения: временный уровень",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "exhaustion"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "waveExhaustionProfile": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!dJEwX8mT0nFnxTlk.GKlUofH5Tc4GJEYW"
+    }
+  ],
+  "folder": "eo23z098jphqsOls",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-waves-of-exhaustion"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!dJEwX8mT0nFnxTlk"
+}

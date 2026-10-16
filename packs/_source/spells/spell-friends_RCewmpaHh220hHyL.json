@@ -1,0 +1,239 @@
+{
+  "_id": "RCewmpaHh220hHyL",
+  "name": "Дружба",
+  "type": "spell",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p>Видимое существо в пределах 10 футов совершает спасбросок Мудрости: при провале оно очаровано на время концентрации, до 1 минуты. Не-гуманоид, участник сражения с вами и цель вашего предыдущего применения за последние 24 часа проходят спасбросок автоматически. Урон цели, ваша атака, нанесение вами урона или принуждение кого-либо к спасброску досрочно прекращают заклинание. По окончании цель узнаёт, что была очарована вами.</p><p><strong>Применение.</strong> Спасбросок, концентрация и состояние настроены штатно. Урон цели снимает эффект. Остальные причины досрочного окончания и ограничение 24 часов пока проверяйте вручную; завершите концентрацию на листе заклинателя.</p><p>Источник: <a href=\"https://next.dnd.su/spells/10523-friends/\">Книга игрока (2024)</a>.</p><h3>Действия</h3><ul><li>[[/item activity=JoxvwbZK0A8tBy8I]]{Дружба — спасбросок Мудрости} · [[/save activity=JoxvwbZK0A8tBy8I]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "PHB24",
+      "page": "",
+      "custom": "https://next.dnd.su/spells/10523-friends/",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "friends",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 0,
+    "materials": {
+      "value": "немного грима",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "somatic",
+      "material",
+      "concentration"
+    ],
+    "range": {
+      "value": "10",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "enc",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "JoxvwbZK0A8tBy8I": {
+        "_id": "JoxvwbZK0A8tBy8I",
+        "type": "save",
+        "name": "Дружба — спасбросок Мудрости",
+        "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "XRMxMlgiEm4zAfEi",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "wis"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "XRMxMlgiEm4zAfEi",
+      "name": "Дружба: очарование",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "charmed"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "endsOnDamage": true,
+          "friendsCharm": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!RCewmpaHh220hHyL.XRMxMlgiEm4zAfEi"
+    }
+  ],
+  "folder": "JO7NS1Tv4bnTbsDg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:friends"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!RCewmpaHh220hHyL"
+}

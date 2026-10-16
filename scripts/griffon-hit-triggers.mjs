@@ -75,8 +75,9 @@ function effectWindow(frame, expiry) {
   const turns = combat.turns.map((c, i) => c.actor?.uuid === actor?.uuid ? i : -1).filter(i => i >= 0);
   if (turns.length !== 1) return false;
   const boundaryRound = context.round + (turns[0] <= context.turn ? 1 : 0);
-  return combat.round < boundaryRound || (combat.round === boundaryRound && combat.turn <= turns[0]);
+  return combat.round < boundaryRound || (combat.round === boundaryRound && (expiry.endsWith("Start") ? combat.turn < turns[0] : combat.turn <= turns[0]));
 }
+export { effectWindow as griffonEffectWindow };
 async function profile(frame, source, predicate) {
   const actor = resolve(frame.actor), message = resolve(frame.attack), template = source.effects.find(predicate);
   if (!template || actor.effects.some(e => e.flags.spikependium?.weaponHit?.event === frame.event)) return;

@@ -37,7 +37,7 @@ export function alchemistBombActivity(activity, charged = true) {
   return activity;
 }
 export function alchemistSplashActivity(activity) {
-  activity.flags = { ...activity.flags, spikependium: { ...activity.flags?.spikependium, alchemistSplash: true } };
+  activity.flags = { ...activity.flags, spikependium: { ...activity.flags?.spikependium, alchemistSplash: true, alchemistSplashDC: structuredClone(activity.save.dc) } };
   return activity;
 }
 export function define() {

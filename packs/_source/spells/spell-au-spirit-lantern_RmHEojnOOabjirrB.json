@@ -1,0 +1,765 @@
+{
+  "_id": "RmHEojnOOabjirrB",
+  "name": "Фонарь духов",
+  "type": "spell",
+  "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, жрец, изобретатель, колдун.</em></p><p>На 10 минут вы призываете чёрный парящий призрачный фонарь, висящий над вами и испускающий Тусклый свет в пределах 60 футов. Концентрация не требуется. Когда в этом Тусклом свете умирает враг, фрагмент его души влетает в фонарь. Фонарь вмещает число фрагментов, равное модификатору вашей заклинательной характеристики. Фрагменты исчезают при окончании заклинания.</p><p>Бонусным действием потратьте один фрагмент для одного из следующих эффектов. В каждом случае выберите видимое существо в пределах 60 футов.</p><p><strong>Вытягивание жизни.</strong> Цель совершает спасбросок Телосложения, получая [[/damage 4d8 type=necrotic]]{4к8} урона Некротической энергией плюс ваш модификатор заклинательной характеристики при провале или половину этого урона при успехе. Этот эффект не лечит заклинателя.</p><p><strong>Восстановление нежити.</strong> Выбранная Нежить восстанавливает Хиты в количестве [[/r 4d8]]{4к8} плюс ваш модификатор заклинательной характеристики.</p><p><strong>Охрана союзника.</strong> До начала вашего следующего хода другие существа совершают с Помехой броски атаки по выбранному существу. Эффект не даёт Преимущества спасброскам Ловкости и не является действием Уклонение.</p><p><strong>Применение.</strong> Сначала призовите фонарь: запас начинается пустым, свет связан с исходным токеном. Модуль фиксирует положение токенов при добавлении штатного состояния смерти. Для фрагмента выберите погибшего и подтвердите, что это был враг и он находился именно в Тусклом свете фонаря; координаты сами по себе этого не доказывают. Подтверждение не расходует игрового действия; выполните его до следующего расхода фрагмента. Нулевые Хиты без смерти не подходят. Повторное подтверждение той же смерти не добавляет ещё один фрагмент.</p><p>Три Бонусных действия используют общий штатный запас заклинания и не расходуют новую ячейку. Подтвердите видимость цели. Лечение ограничено Нежитью, все броски и расход связаны с оплаченной карточкой. Успех CON уменьшает только урон Вытягивания жизни. Охрана использует отдельный эффект до начала следующего хода заклинателя; для атаки по нескольким целям с разными условиями совершайте отдельные броски. Вне боя срок охраны подтверждает Мастер.</p><p>«Погасить Фонарь духов» завершает фонарь и очищает оставшиеся фрагменты. Свет снимается с сохранением других источников и исходного освещения токена. При израсходованном свитке временная копия заклинания хранит фонарь и его действия до окончания исходных 10 минут; она не даёт нового сотворения без источника. Изменение уже применённых хитов, перенос души при превращении, пересечение нескольких фонарей одного заклинателя и возврат уже использованного фрагмента требуют сверки Мастером.</p><h3>Действия</h3><ul><li>[[/item activity=43A2k5N4gTJmv2f1]]{Призвать Фонарь духов}</li><li>[[/item activity=lYzvT41r0555Z0c1]]{Подтвердить фрагмент погибшего врага}</li><li>[[/item activity=vqCFHWUqFG7wCa8m]]{Вытягивание жизни} · [[/damage activity=vqCFHWUqFG7wCa8m]]{Бросок урона} · [[/save activity=vqCFHWUqFG7wCa8m]]{Спасбросок цели}</li><li>[[/item activity=XJA4nwck0E8BaH2l]]{Восстановление нежити} · [[/heal activity=XJA4nwck0E8BaH2l]]{Бросок лечения}</li><li>[[/item activity=yqN7GFdAHIcMwft8]]{Охрана союзника}</li><li>[[/item activity=i11hMuranxaWHOr0]]{Погасить Фонарь духов}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "45",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "spirit-lantern",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "10",
+      "units": "minute"
+    },
+    "level": 5,
+    "materials": {
+      "value": "чёрный фонарь",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "nec",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "0",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "43A2k5N4gTJmv2f1": {
+        "_id": "43A2k5N4gTJmv2f1",
+        "type": "transform",
+        "name": "Призвать Фонарь духов",
+        "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "10",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "VU92hBMAu5NUU1Pk"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "lanternStage": "cast"
+          }
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      },
+      "lYzvT41r0555Z0c1": {
+        "_id": "lYzvT41r0555Z0c1",
+        "type": "utility",
+        "name": "Подтвердить фрагмент погибшего врага",
+        "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "lanternStage": "collect",
+            "arcanaStage": "spirit-lantern"
+          }
+        }
+      },
+      "vqCFHWUqFG7wCa8m": {
+        "_id": "vqCFHWUqFG7wCa8m",
+        "type": "save",
+        "name": "Вытягивание жизни",
+        "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 4,
+              "denomination": 8,
+              "bonus": "@mod",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "lanternStage": "drain",
+            "arcanaStage": "spirit-lantern"
+          }
+        }
+      },
+      "XJA4nwck0E8BaH2l": {
+        "_id": "XJA4nwck0E8BaH2l",
+        "type": "heal",
+        "name": "Восстановление нежити",
+        "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "number": 4,
+          "denomination": 8,
+          "bonus": "@mod",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "flags": {
+          "spikependium": {
+            "lanternStage": "restore",
+            "arcanaStage": "spirit-lantern"
+          }
+        }
+      },
+      "yqN7GFdAHIcMwft8": {
+        "_id": "yqN7GFdAHIcMwft8",
+        "type": "utility",
+        "name": "Охрана союзника",
+        "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+        "sort": 500000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "yACoJyoo7DSfHpsQ"
+          }
+        ],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "lanternStage": "protect",
+            "arcanaStage": "spirit-lantern"
+          }
+        }
+      },
+      "i11hMuranxaWHOr0": {
+        "_id": "i11hMuranxaWHOr0",
+        "type": "utility",
+        "name": "Погасить Фонарь духов",
+        "img": "icons/sundries/lights/lantern-iron-yellow.webp",
+        "sort": 600000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "lanternStage": "end",
+            "arcanaStage": "spirit-lantern"
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "VU92hBMAu5NUU1Pk",
+      "name": "Фонарь духов",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "spirit-lantern"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!RmHEojnOOabjirrB.VU92hBMAu5NUU1Pk"
+    },
+    {
+      "_id": "yACoJyoo7DSfHpsQ",
+      "name": "Фонарь духов: охрана союзника",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceStart",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "lanternGuardProfile": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!RmHEojnOOabjirrB.yACoJyoo7DSfHpsQ"
+    }
+  ],
+  "folder": "eo23z098jphqsOls",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-spirit-lantern"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!RmHEojnOOabjirrB"
+}

@@ -1,0 +1,199 @@
+{
+  "_id": "QqU58BM5x8XnOoNg",
+  "name": "Ветроходы",
+  "type": "equipment",
+  "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Надетые сапоги позволяют нормально проходить труднопроходимую местность, созданную сильным ветром. Действием раз до рассвета: Газообразная форма на себе с концентрацией до 1 минуты, облако пара и листьев. Собственное перемещение в облике доступно только по вертикали; по горизонтали несёт ветер: при 5–10 милях/ч — на 10 футов за раунд, при умеренном или более сильном ветре от 10 миль/ч — на 20 футов. Если листья не могут последовать за вами, облик заканчивается. Связано заклинание SRD 2014, русская предметная копия, собственная цель, минута, концентрация и штатный расход/возврат. Силу ветра, горизонтальный снос, допустимые проходы и местность проверяет Мастер: общего иммунитета ко всей труднопроходимой местности нет.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 2 фунта за пару обуви; источник точного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=e23da1c164a9334d\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=FLu1AsC5DerZEc0B]]{Газообразная форма: облако листьев}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=e23da1c164a9334d",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-wind-riders",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "FLu1AsC5DerZEc0B": {
+        "_id": "FLu1AsC5DerZEc0B",
+        "type": "cast",
+        "name": "Газообразная форма: облако листьев",
+        "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute",
+          "special": "",
+          "override": true,
+          "concentration": true
+        },
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells.Item.2IWiZAJtOGDoKjiz"
+        },
+        "flags": {
+          "spikependium": {
+            "griffonCommandWord": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "JIPXlCLH7bDataFx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:wind-riders",
+      "griffonBoots": "wind-riders",
+      "bootOn": 0,
+      "bootSince": 0,
+      "bootBase": 0
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!QqU58BM5x8XnOoNg"
+}

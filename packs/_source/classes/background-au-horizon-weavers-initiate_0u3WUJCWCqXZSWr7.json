@@ -1,0 +1,234 @@
+{
+  "_id": "0u3WUJCWCqXZSWr7",
+  "name": "Посвящённый Ткачей горизонта",
+  "type": "background",
+  "img": "icons/sundries/books/book-open-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Характеристики.</strong> Ловкость, Телосложение, Мудрость. Распределите между ними +2 и +1 либо по +1 каждой; максимум 20.</p><p><strong>Черта происхождения.</strong> @UUID[Compendium.spikependium.feats.Item.UEG1ZoZ9YBVAfxER].</p><p>В странствиях вы встретили Ткачей горизонта и освоили у них основы телепортации.</p><p><strong>Применение.</strong> При добавлении предыстории штатные шаги предлагают распределение характеристик, владения и черту. Снаряжение выбирается штатным окном начального снаряжения: комплект А с 18 зм либо 50 зм. Инструмент, которым вы должны владеть, выбирайте после шага владений.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey\">Неудержимая магия</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "au-horizon-weavers-initiate",
+    "advancement": [
+      {
+        "_id": "n4qj74wuCYgZenIF",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 3,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [
+            "str",
+            "int",
+            "cha"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Характеристики предыстории",
+        "hint": "+2 и +1 к разным характеристикам либо +1 ко всем трём; не выше 20."
+      },
+      {
+        "_id": "qxxc4iqQrPRJbEiG",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "skills:acr",
+            "skills:sur",
+            "tool:art:weaver"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Владения предыстории",
+        "hint": ""
+      },
+      {
+        "_id": "Qu33pOVBKFMf19ER",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.feats.Item.UEG1ZoZ9YBVAfxER",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 0,
+        "title": "Черта происхождения",
+        "hint": ""
+      },
+      {
+        "_id": "4kGB1eJmRPm3TbZH",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "languages:standard:common"
+          ],
+          "choices": [
+            {
+              "count": 2,
+              "pool": [
+                "languages:standard:*"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Языки персонажа",
+        "hint": "Общий шаг создания персонажа по правилам 2024: Всеобщий и два стандартных языка. Дополнительных языков сверх этого предыстория не даёт."
+      }
+    ],
+    "startingEquipment": [
+      {
+        "_id": "QN7ym8y8bkLgp1Uz",
+        "type": "OR",
+        "group": "",
+        "sort": 100000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "BAHFTFaEx1hCAW8t",
+        "type": "AND",
+        "group": "QN7ym8y8bkLgp1Uz",
+        "sort": 200000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "FA2De6MT9R5VyQrr",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbwepShortbow00",
+        "count": null,
+        "group": "BAHFTFaEx1hCAW8t",
+        "sort": 300000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "aufobTy10VkIoy6X",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbamoArrows0000",
+        "count": 20,
+        "group": "BAHFTFaEx1hCAW8t",
+        "sort": 301000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "prdpCwPshGHENuxd",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbtulWeaversToo",
+        "count": null,
+        "group": "BAHFTFaEx1hCAW8t",
+        "sort": 302000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "vTZfTBMXwqzjVVsl",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagMap00000000",
+        "count": null,
+        "group": "BAHFTFaEx1hCAW8t",
+        "sort": 303000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "lNID6yLmq5SlaQGn",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagQuiver00000",
+        "count": null,
+        "group": "BAHFTFaEx1hCAW8t",
+        "sort": 304000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "TZNRDLuTqm9EN1wm",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagRope0000000",
+        "count": null,
+        "group": "BAHFTFaEx1hCAW8t",
+        "sort": 305000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "SSSwt99cR0hr3lLL",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagClothesTrav",
+        "count": null,
+        "group": "BAHFTFaEx1hCAW8t",
+        "sort": 306000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "XMcWKHP3kkQK0tlJ",
+        "type": "currency",
+        "key": "gp",
+        "count": 18,
+        "group": "BAHFTFaEx1hCAW8t",
+        "sort": 390000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "6VAZzF7hdPSswkTG",
+        "type": "currency",
+        "key": "gp",
+        "count": 50,
+        "group": "QN7ym8y8bkLgp1Uz",
+        "sort": 400000,
+        "requiresProficiency": false
+      }
+    ],
+    "wealth": ""
+  },
+  "effects": [],
+  "folder": "66iq7tm6Hgr3maCI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "background:au-horizon-weavers-initiate"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!0u3WUJCWCqXZSWr7"
+}

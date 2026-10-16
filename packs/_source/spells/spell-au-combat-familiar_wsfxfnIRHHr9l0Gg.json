@@ -1,0 +1,323 @@
+{
+  "_id": "wsfxfnIRHHr9l0Gg",
+  "name": "Боевой фамильяр",
+  "type": "spell",
+  "img": "icons/creatures/abilities/wings-birdlike-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, друид, колдун.</em></p><p>Призовите фамильяра в свободное пространство в пределах 10 футов. Он напоминает выбранное вами животное, но является Небожителем, Феей или Исчадием. Выберите облик: Громила, Летун или Ловчий. Используется соответствующий блок Боевого фамильяра. Он дружелюбен вам и вашим союзникам, самостоятельно бросает инициативу и действует в свой ход. Концентрация не нужна; длительность — 1 час. Алмаз не расходуется.</p><p>Фамильяр исчезает при окончании заклинания, при 0 хитах или вашей смерти, оставляя носимое снаряжение. При новом сотворении выберите прежнего или другого фамильяра. Одновременно может быть только один фамильяр; прежний боевой фамильяр заменяется новым.</p><p><strong>Имеющийся фамильяр.</strong> Если у вас уже есть фамильяр от <em>Призыв фамильяра</em>, вы усиливаете его вместо создания другого. Его параметры заменяются блоком Боевого фамильяра, но тип, мировоззрение, Хиты, Кости хитов и все умения от Призыва фамильяра сохраняются. Он может атаковать и получает Временные хиты в количестве Хитов Боевого фамильяра. Заклинание заканчивается, если временных хитов не остаётся; оставшиеся временные хиты исчезают при окончании, а фамильяр возвращается в прежний облик.</p><p><strong>Ячейка большего уровня.</strong> Используйте уровень ячейки в блоке статистики: КД 11 + уровень ячейки (+2 Громиле), Хиты 30 у Громилы или 20 у остальных + 5 за уровень ячейки выше 2-го; Талантливый и число атак равны половине уровня ячейки с округлением вниз.</p><p><strong>Применение.</strong> Новый фамильяр размещается штатным окном призыва с выбором облика и типа. Подтвердите свободное место и отсутствие другого обычного фамильяра. КД, хиты, бонусы проверок/спасбросков, атака заклинателя и урон масштабируются. Повторное размещение из одной оплаченной карточки запрещено. При окончании, 0 хитах или смерти заклинателя подключённый Мастер удаляет токен после сохранения снаряжения. Возврат расхода не восстанавливает уже исчезнувшего фамильяра. Для существующего обычного фамильяра используйте второе действие: расход ячейки штатный, но смену и возврат формы с сохранением исходных данных пока выполняйте вручную. Скрытное перемещение Ловчего и условие полёта для Облёта пока разрешает Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=IG3wVcgwG02uClof]]{Призвать боевого фамильяра}</li><li>[[/item activity=N4rw8HNLpmIJdinj]]{Усилить имеющегося фамильяра (ручная смена формы)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "35",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "combat-familiar",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "level": 2,
+    "materials": {
+      "value": "алмаз стоимостью не менее 25 зм",
+      "consumed": false,
+      "cost": 25,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material"
+    ],
+    "range": {
+      "value": "10",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "con",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "",
+        "type": "",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": false
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "IG3wVcgwG02uClof": {
+        "_id": "IG3wVcgwG02uClof",
+        "type": "summon",
+        "name": "Призвать боевого фамильяра",
+        "img": "icons/creatures/abilities/wings-birdlike-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "10",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "bonuses": {
+          "ac": "@item.level",
+          "hd": "",
+          "hp": "5 * (@item.level - 2)",
+          "attackDamage": "@item.level",
+          "saveDamage": "",
+          "healing": ""
+        },
+        "creatureSizes": [
+          "med"
+        ],
+        "creatureTypes": [
+          "celestial",
+          "fey",
+          "fiend"
+        ],
+        "match": {
+          "ability": "",
+          "attacks": true,
+          "disposition": true,
+          "proficiency": true,
+          "saves": true
+        },
+        "profiles": [
+          {
+            "_id": "LxSHlvqdvOCJHRE6",
+            "count": "1",
+            "name": "Громила",
+            "uuid": "Compendium.spikependium.creatures.Actor.zHz2eG47j6iLhhwL",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "lJCC9VuJKz7AskbV",
+            "count": "1",
+            "name": "Летун",
+            "uuid": "Compendium.spikependium.creatures.Actor.4hw2tqtsgFrFMwpC",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          },
+          {
+            "_id": "SpRP7bwzfiAxS7qe",
+            "count": "1",
+            "name": "Ловчий",
+            "uuid": "Compendium.spikependium.creatures.Actor.EHqfALCl4shwWQX0",
+            "cr": "",
+            "types": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "summon": {
+          "prompt": true,
+          "mode": ""
+        }
+      },
+      "N4rw8HNLpmIJdinj": {
+        "_id": "N4rw8HNLpmIJdinj",
+        "type": "utility",
+        "name": "Усилить имеющегося фамильяра (ручная смена формы)",
+        "img": "icons/creatures/abilities/wings-birdlike-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "10",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "enhanceCombatFamiliar": true
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "jzQHzwlAgBVmwkex",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-combat-familiar"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!wsfxfnIRHHr9l0Gg"
+}

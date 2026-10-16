@@ -4,6 +4,8 @@ import { hasStormFlight, stormFlightSpeed } from "./dragonmark-storm.mjs";
 import { alchemistBombDCBonus } from "./alchemist-discoveries.mjs";
 import { graftActiveState } from "./alchemist-grafts.mjs";
 import { sweetTurtleAC } from "./griffon-sweets.mjs";
+import { scornedArmorBonus, wildskinActive } from "./griffon-conditional-armor.mjs";
+import { myceliaTempActive, myceliaWithdrawalActive } from "./griffon-mycelia.mjs";
 
 export function magusMaskSpellChanges(wrapped, ...args) {
   const changes = wrapped(...args);
@@ -11,6 +13,12 @@ export function magusMaskSpellChanges(wrapped, ...args) {
     changes.push({ key: "system.properties", type: "add", value: "-concentration" });
   if (this.item.flags.spikependium?.key === "item:gs1:dark-fathom")
     changes.push({ key: "system.properties", type: "add", value: "-concentration" });
+  if (this.item.flags.spikependium?.key === "item:gs2:bramble") changes.push(
+    { key: "system.properties", type: "add", value: "-concentration" },
+    { key: "name", type: "override", value: "Шипы тернового баклера" },
+    { key: "system.source.custom", type: "override", value: this.item.system.source.custom },
+    { key: "system.description.value", type: "override", value: "<p>Заметная полоса шипов длиной 20 футов и шириной 15 футов у ваших ног. Держится 10 минут без концентрации. Это труднопроходимая местность; существо, перемещающееся в область или внутри неё, получает [[/damage 2d4 type=piercing]] за каждые пройденные 5 футов.</p><p>Шипы хорошо видны: стандартная маскировка заклинания и проверки её распознавания к этой версии не относятся. Щит находится в области и не даёт КД, пока не вернулся к обычной форме. Для досрочного окончания воспользуйтесь действием щита в пределах 5 футов от области; саму область удалите вручную.</p>" }
+  );
   return changes;
 }
 
@@ -21,7 +29,8 @@ export function conditionalState(actor, data) {
   const maximum = Number(data.scale?.phantom?.trinkets ?? tokens?.system.uses.max ?? 0);
   return { unarmored: !armor.length, lightArmorAllowed: !armor.some(i => i.system.type.value !== "light"),
     alchemistBombDC: alchemistBombDCBonus(actor, data),
-    graftActive: graftActiveState(actor), sweetTurtleAC: sweetTurtleAC(actor),
+    graftActive: graftActiveState(actor), sweetTurtleAC: sweetTurtleAC(actor), scornedAC: scornedArmorBonus(actor), wildskinActive: wildskinActive(actor),
+    myceliaTemp: myceliaTempActive(actor), myceliaWithdrawal: myceliaWithdrawalActive(actor),
     equippedShield: actor.items.some(i => i.type === "equipment" && i.system.equipped && i.system.type.value === "shield"),
     noOpportunityAttacks: noOpportunityAttacks(actor),
     hasSoulToken: !!tokens && maximum > tokens.system.uses.spent,
@@ -136,19 +145,21 @@ export function validateMutableForm(activity, config) {
   return activity.actor.effects.some(e => e.flags.spikependium?.mutableForm && !e.disabled && !e.duration.expired);
 }
 
-export function radiantLightUpdate(token, itemUuid, bright = 30, dim = 60) {
+export function radiantLightUpdate(token, itemUuid, bright = 30, dim = 60, enabled, legacy = { bright, dim }) {
   const previous = token.flags.spikependium?.radiantLight;
-  if (previous) {
-    const items = previous.items ?? [previous.itemUuid];
-    const remaining = items.includes(itemUuid) ? items.filter(id => id !== itemUuid) : [...items, itemUuid];
-    if (!remaining.length) return { "light.bright": previous.light.bright, "light.dim": previous.light.dim, "flags.spikependium.-=radiantLight": null };
-    return { "light.bright": Math.max(token.light.bright, bright), "light.dim": Math.max(token.light.dim, dim),
-      "flags.spikependium.radiantLight": { ...previous, items: remaining } };
-  }
-  return {
-    "light.bright": Math.max(token.light.bright, bright), "light.dim": Math.max(token.light.dim, dim),
-    "flags.spikependium.radiantLight": { itemUuid, light: token.light.toObject() }
-  };
+  const items = previous?.items ?? (previous ? [previous.itemUuid] : []), on = enabled ?? !items.includes(itemUuid);
+  const key = id => encodeURIComponent(id).replaceAll(".", "%2E");
+  const light = { ...(previous?.light ?? token.light.toObject()) }, radii = {};
+  for (const id of items) radii[key(id)] = previous?.radii?.[key(id)] ?? previous?.radii?.[id] ?? { ...legacy };
+  const applied = previous?.applied ?? { bright: Math.max(light.bright, ...items.map(id => radii[key(id)].bright)), dim: Math.max(light.dim, ...items.map(id => radii[key(id)].dim)) };
+  for (const key of ["bright", "dim"]) if (previous && token.light && token.light[key] !== applied[key]) light[key] = token.light[key];
+  const remaining = on ? [...items] : items.filter(id => id !== itemUuid);
+  if (on) { if (!remaining.includes(itemUuid)) remaining.push(itemUuid); radii[key(itemUuid)] = { bright, dim }; } else delete radii[key(itemUuid)];
+  if (!remaining.length) return { "light.bright": light.bright, "light.dim": light.dim, "flags.spikependium.-=radiantLight": null };
+  const next = { bright: Math.max(light.bright, ...remaining.map(id => radii[key(id)].bright)), dim: Math.max(light.dim, ...remaining.map(id => radii[key(id)].dim)) };
+  for (const oldKey of Object.keys(previous?.radii ?? {})) if (!(oldKey in radii) && !oldKey.includes(".")) radii[`-=${oldKey}`] = null;
+  return { "light.bright": next.bright, "light.dim": next.dim,
+    "flags.spikependium.radiantLight": { itemUuid: remaining[0], items: remaining, radii, light, applied: next } };
 }
 
 export async function toggleRadiantLight(activity) {

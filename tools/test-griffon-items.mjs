@@ -7,9 +7,11 @@ import { monsterEvasionDamage } from "../scripts/monster-evasion.mjs";
 const read = pack => fs.readdirSync(`packs/_source/${pack}`).filter(f => f.endsWith(".json"))
   .map(f => JSON.parse(fs.readFileSync(`packs/_source/${pack}/${f}`, "utf8")));
 const items = read("items").filter(d => /^item:gs[12]:/.test(d.flags?.spikependium?.key ?? ""));
-assert.equal(items.length, 129);
+assert.equal(items.length, 227);
+const nativeCandleWeight = JSON.parse(fs.readFileSync("tools/data/griffon-stationery.json", "utf8")).nativeCandle.document.system.weight.value;
+const nativeWeights = new Map([["item:gs1:anti-light", nativeCandleWeight], ["item:gs1:secret-scribe", 2 * nativeCandleWeight]]);
 for (const item of items) {
-  assert.ok(item.folder); assert.ok(item.system.price.value > 0); assert.ok(item.system.weight.value > 0);
+  assert.ok(item.folder); assert.ok(item.system.price.value > 0); assert.ok(item.system.weight.value > 0 || nativeWeights.get(item.flags.spikependium.key) === item.system.weight.value);
   assert.ok(item.system.description.value.includes("оценочн") || item.system.description.value.includes("по обычному амулету"));
   assert.ok(item.system.source.custom.startsWith("https://rpgd100.ru/content_pages/catalog_index?"));
   assert.equal(item.system.source.page, "");

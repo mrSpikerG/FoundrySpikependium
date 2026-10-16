@@ -1,0 +1,327 @@
+{
+  "_id": "JIateXe8pGz9c9oO",
+  "name": "Сапоги на подошве зорна",
+  "type": "equipment",
+  "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройка обязательна. Бонусным действием произнесите командное слово и щёлкните каблуками: скорость копания равна скорости ходьбы, чувство вибрации 30 футов. Пока свойство действует, вы точно определяете местоположение драгоценных металлов и камней в пределах этого чувства. Повторный щелчок прекращает эффект; источник не уточняет отдельный вид действия для прекращения. Общий запас — 10 минут до завершения долгого отдыха. Каждый отдельный отрезок расходует не менее 1 минуты. Кнопки включают/выключают штатный эффект и учитывают секунды по часам мира: запас 600 секунд, минимум 60 секунд за отдельный отрезок. Отрезок в 90 секунд расходует 90, а не 120 секунд; для нового включения нужна хотя бы минута остатка. Снятие сапог или потеря настройки завершает отрезок; завершённый долгий отдых восстанавливает запас. Короткий отдых не восстанавливает. Поиск сокровищ, контакт с подходящей поверхностью и допустимость копания проверяет Мастер; проход сквозь необработанный камень самим свойством не предоставлен.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 2 фунта за пару обуви; источник точного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=84109cca83562864\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=n4Z3EE7ae3CyCKoD]]{Щёлкнуть каблуками: включить подошву зорна}</li><li>[[/item activity=x525Atnz3CPivjq8]]{Снова щёлкнуть каблуками: прекратить копание}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=84109cca83562864",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-xorn-sole",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "600",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "n4Z3EE7ae3CyCKoD": {
+        "_id": "n4Z3EE7ae3CyCKoD",
+        "type": "utility",
+        "name": "Щёлкнуть каблуками: включить подошву зорна",
+        "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "bootCommand": "on",
+            "griffonCommandWord": true
+          }
+        }
+      },
+      "x525Atnz3CPivjq8": {
+        "_id": "x525Atnz3CPivjq8",
+        "type": "utility",
+        "name": "Снова щёлкнуть каблуками: прекратить копание",
+        "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "bootCommand": "off"
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "6Z7WhYh3wbGGNXBD",
+      "name": "Подошва зорна: копание и чувство вибрации",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.movement.speeds.burrow",
+            "value": "@attributes.movement.speeds.walk",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "hCPbW05p5evaXq1R"
+          },
+          {
+            "key": "system.attributes.senses.tremorsense",
+            "value": "30",
+            "type": "upgrade",
+            "priority": null,
+            "phase": "initial",
+            "_id": "zRGdvmrlb9dr9EtD"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "bootXorn": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!JIateXe8pGz9c9oO.6Z7WhYh3wbGGNXBD"
+    }
+  ],
+  "folder": "JIPXlCLH7bDataFx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:xorn-sole",
+      "griffonBoots": "xorn-sole",
+      "bootOn": 0,
+      "bootSince": 0,
+      "bootBase": 0
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!JIateXe8pGz9c9oO"
+}

@@ -1,0 +1,266 @@
+{
+  "_id": "15XTTpYjsWcA3Xke",
+  "name": "Танцевальные туфли Драмуса",
+  "type": "equipment",
+  "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройка бардом. Даже без настройки надетые туфли дают преимущество проверкам характеристик для танца. Есть отдельная штатная Харизма (Выступление) с преимуществом: при другой подходящей характеристике измените её в окне броска. Преимущество не распространяется на любые выступления или игру на инструменте. Если бард настроен на надетые туфли, шаги могут звучать музыкальными нотами и ноги становятся фокусировкой его бардовских заклинаний. Танец и игра на инструменте требуют отдельных проверок. Компоненты с указанной стоимостью и расходуемые материалы сохраняются; фокусировку ногами учитывайте при сотворении вручную.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 2 фунта за пару обуви; источник точного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=fd1927eae77e651a\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=01CWFYEYjEbDfqlv]]{Танец: Харизма (Выступление), преимущество даже без настройки}</li><li>[[/item activity=PMHAWWNmzibePIyk]]{Настроенный бард: использовать ноги как фокусировку}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=fd1927eae77e651a",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-dramus",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 400,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "01CWFYEYjEbDfqlv": {
+        "_id": "01CWFYEYjEbDfqlv",
+        "type": "check",
+        "name": "Танец: Харизма (Выступление), преимущество даже без настройки",
+        "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "check": {
+          "ability": "cha",
+          "associated": [
+            "prf"
+          ],
+          "bonus": "",
+          "dc": {
+            "calculation": "",
+            "formula": ""
+          },
+          "visible": true
+        },
+        "flags": {
+          "spikependium": {
+            "bootDance": true
+          }
+        }
+      },
+      "PMHAWWNmzibePIyk": {
+        "_id": "PMHAWWNmzibePIyk",
+        "type": "utility",
+        "name": "Настроенный бард: использовать ноги как фокусировку",
+        "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {}
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "JIPXlCLH7bDataFx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:dramus",
+      "griffonBoots": "dramus",
+      "bootOn": 0,
+      "bootSince": 0,
+      "bootBase": 0,
+      "griffonClass": "bard"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!15XTTpYjsWcA3Xke"
+}

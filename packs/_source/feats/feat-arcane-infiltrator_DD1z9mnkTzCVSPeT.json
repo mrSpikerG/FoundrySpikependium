@@ -1,0 +1,239 @@
+{
+  "_id": "DD1z9mnkTzCVSPeT",
+  "name": "Мистический лазутчик",
+  "type": "feat",
+  "img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Вы изучаете @UUID[Compendium.spikependium.spells.Item.RCewmpaHh220hHyL]{Дружбу} и выбираете для неё Интеллект, Мудрость или Харизму.</p><p><strong>Хитрый отвлекающий манёвр.</strong> Уклонение доступно бонусным действием число раз, равное бонусу владения, с восстановлением после долгого отдыха. Польза Уклонения действует до начала следующего вашего хода и теряется при недееспособности или скорости 0.</p><p><strong>Применение.</strong> Заклинательная характеристика выбирается штатным шагом. Уклонение применяет штатное состояние и расходует применение; эффект можно отключить на вкладке эффектов.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey\">Неудержимая магия</a>.</p><h3>Действия</h3><ul><li>[[/item activity=HIoCSnIAWt1rwcnq]]{Хитрый отвлекающий манёвр: Уклонение}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "arcane-infiltrator",
+    "type": {
+      "value": "feat",
+      "subtype": "origin"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "HIoCSnIAWt1rwcnq": {
+        "_id": "HIoCSnIAWt1rwcnq",
+        "type": "transform",
+        "name": "Хитрый отвлекающий манёвр: Уклонение",
+        "img": "icons/magic/defensive/illusion-evasion-echo-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "a8DfBg07B1jTGoqq"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "@prof"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "6S3sNllkygJE6BaS",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.RCewmpaHh220hHyL",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Дружба: заклинательная характеристика",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "a8DfBg07B1jTGoqq",
+      "name": "Уклонение",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceStart",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "dodging"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "endsOnIncapacitated": true,
+          "arcanaDodge": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!DD1z9mnkTzCVSPeT.a8DfBg07B1jTGoqq"
+    }
+  ],
+  "folder": "9PyqwBpBkWMzeKXz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:arcane-infiltrator"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!DD1z9mnkTzCVSPeT"
+}

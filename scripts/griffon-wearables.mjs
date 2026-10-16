@@ -1,4 +1,7 @@
 import { finishShieldMovement } from "./griffon-armor.mjs";
+import { finishSkygliderMovement } from "./griffon-two-shields.mjs";
+import { scorpioMovement, finishWildskinArmorClass } from "./griffon-conditional-armor.mjs";
+import { firstLightMovement } from "./griffon-two-weapons.mjs";
 const key = item => item?.flags?.spikependium?.key;
 const active = item => item?.system.equipped && (item.system.attunement !== "required" || item.system.attuned);
 const origin = (effect, actor) => effect.system.origin?.activity && fromUuidSync(effect.system.origin.activity, { relative: actor, strict: false });
@@ -6,8 +9,9 @@ const locks = new Set();
 
 // Apply the armor's speed penalty after native bonuses; its separate burrowing speed stays available.
 export function tectonicMovement(wrapped, ...args) {
-  const result = wrapped(...args), actor = this.parent;
-  if (!(actor.appliedEffects ?? actor.effects ?? []).some(e => e.active && !e.duration?.expired && e.flags.spikependium?.griffonTectonicArmor)) { finishShieldMovement(this); return result; }
+  const result = firstLightMovement.call(this, (...forward) => scorpioMovement.call(this, wrapped, ...forward), ...args), actor = this.parent;
+  finishWildskinArmorClass(this);
+  if (!(actor.appliedEffects ?? actor.effects ?? []).some(e => e.active && !e.duration?.expired && e.flags.spikependium?.griffonTectonicArmor)) { finishShieldMovement(this); finishSkygliderMovement(this); return result; }
   const movement = this.attributes.movement, types = Object.keys(CONFIG.DND5E.movementTypes);
   for (const type of types) if (type !== "burrow") movement.speeds[type] *= 0.5;
   movement.speed = movement.speeds.walk;
@@ -15,6 +19,7 @@ export function tectonicMovement(wrapped, ...args) {
   const base = Number(this._source.attributes.movement.speeds.walk || movement.fromSpecies?.walk);
   if (Number.isFinite(base)) movement.slowed = movement.speeds.walk <= base / 2;
   finishShieldMovement(this);
+  finishSkygliderMovement(this);
   return result;
 }
 

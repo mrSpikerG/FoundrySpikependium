@@ -1,0 +1,356 @@
+{
+  "_id": "g0lO7eGtFDdBlJyj",
+  "name": "Phoenix Breastplate",
+  "type": "equipment",
+  "img": "icons/equipment/chest/breastplate-collared-steel-grey.webp",
+  "system": {
+    "description": {
+      "value": "<p>КД +1 и сопротивление огню. Когда хиты опускаются до 0, но вы не погибаете сразу, можете вместо этого остаться с 1 хитом и вызвать огненный взрыв 30 футов. Враждебные существа: Ловкость СЛ 16, [[/r 3d10]]{3к10} огня, успех — половина. Вы и дружественные существа вместо урона восстанавливаете столько же хитов, сколько выпало на этих [[/r 3d10]]{3к10}. Следующее применение через [[/r 1d6+1]]{1к6+1} день по часам мира, отдых его не восстанавливает. При штатном применении урона модуль предлагает спасение перед записью 0 хитов и списывает ресурс вместе с заменой результата на 1. Мгновенную смерть от особых эффектов и необычные источники урона разрешайте вручную. Бросьте огненный урон оплаченной карточкой; кнопка лечения использует этот сохранённый результат без новых костей. Цели, враждебность/дружественность, дальность и применение лечения каждому получателю подтверждаются вручную. Откат ресурса и уже применённых последствий проверяйте отдельно.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха. Вес взят у базового доспеха 2024; отдельного веса в источнике нет.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=6fa91efbc3c7de46\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=shfZQNR6dp6JeyEk]]{При снижении до 0: спасение феникса и взрыв} · [[/damage activity=shfZQNR6dp6JeyEk]]{Бросок урона} · [[/save activity=shfZQNR6dp6JeyEk]]{Спасбросок цели}</li><li>[[/item activity=lFvFBrKjqN2dBpLu]]{Себя и союзников: лечение по сохранённым 3к10} · [[/heal activity=lFvFBrKjqN2dBpLu]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=6fa91efbc3c7de46",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-phoenix-armor",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 20,
+      "units": "lb"
+    },
+    "price": {
+      "value": 40400,
+      "denomination": "gp"
+    },
+    "rarity": "veryRare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 14,
+      "magicalBonus": 1,
+      "dex": 2
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "medium",
+      "baseItem": "breastplate"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "shfZQNR6dp6JeyEk": {
+        "_id": "shfZQNR6dp6JeyEk",
+        "type": "save",
+        "name": "При снижении до 0: спасение феникса и взрыв",
+        "img": "icons/equipment/chest/breastplate-collared-steel-grey.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "30",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "fire"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "16"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "griffonArmorPaid": true,
+            "griffonCooldown": 86400,
+            "griffonCooldownDaysRoll": "1d6+1",
+            "phoenixBurst": true
+          }
+        }
+      },
+      "lFvFBrKjqN2dBpLu": {
+        "_id": "lFvFBrKjqN2dBpLu",
+        "type": "heal",
+        "name": "Себя и союзников: лечение по сохранённым 3к10",
+        "img": "icons/equipment/chest/breastplate-collared-steel-grey.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "0"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "flags": {
+          "spikependium": {
+            "phoenixHealing": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "bw0DPbbBTmi7KOAa",
+      "name": "Феникс: сопротивление огню",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "fire",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "v9hltbIgbLAih84H"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!g0lO7eGtFDdBlJyj.bw0DPbbBTmi7KOAa"
+    }
+  ],
+  "folder": "yF0IBHbFDAxZxF3L",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:phoenix-armor",
+      "originalName": "Phoenix Breastplate",
+      "griffonTwoArmor": "phoenix-armor",
+      "griffonTimedRecovery": true,
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmBreastplat"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!g0lO7eGtFDdBlJyj"
+}

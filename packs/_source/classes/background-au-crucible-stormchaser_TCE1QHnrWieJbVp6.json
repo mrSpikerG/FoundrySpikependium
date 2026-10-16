@@ -1,0 +1,207 @@
+{
+  "_id": "TCE1QHnrWieJbVp6",
+  "name": "Охотник за бурями Горнила",
+  "type": "background",
+  "img": "icons/sundries/books/book-open-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Характеристики.</strong> Сила, Телосложение, Интеллект. Распределите между ними +2 и +1 либо по +1 каждой; максимум 20.</p><p><strong>Черта происхождения.</strong> @UUID[Compendium.spikependium.feats.Item.K0HGhQJa4jrGYftX].</p><p>Опасные опыты и изучение магических катастроф стали вашим обычным занятием среди Хранителей горнила.</p><p><strong>Применение.</strong> При добавлении предыстории штатные шаги предлагают распределение характеристик, владения и черту. Снаряжение выбирается штатным окном начального снаряжения: комплект А с 15 зм либо 50 зм. Инструмент, которым вы должны владеть, выбирайте после шага владений.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey\">Неудержимая магия</a>.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "au-crucible-stormchaser",
+    "advancement": [
+      {
+        "_id": "Why7uUWIJypcNldS",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 3,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 2,
+          "locked": [
+            "dex",
+            "wis",
+            "cha"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Характеристики предыстории",
+        "hint": "+2 и +1 к разным характеристикам либо +1 ко всем трём; не выше 20."
+      },
+      {
+        "_id": "9OvLCIgFwpdtSwSc",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "skills:ath",
+            "skills:nat",
+            "tool:art:glassblower"
+          ],
+          "choices": []
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Владения предыстории",
+        "hint": ""
+      },
+      {
+        "_id": "vvqCRBAzSvNYWjEH",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.feats.Item.K0HGhQJa4jrGYftX",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 0,
+        "title": "Черта происхождения",
+        "hint": ""
+      },
+      {
+        "_id": "PDoWtjKyFelC5EB3",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [
+            "languages:standard:common"
+          ],
+          "choices": [
+            {
+              "count": 2,
+              "pool": [
+                "languages:standard:*"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Языки персонажа",
+        "hint": "Общий шаг создания персонажа по правилам 2024: Всеобщий и два стандартных языка. Дополнительных языков сверх этого предыстория не даёт."
+      }
+    ],
+    "startingEquipment": [
+      {
+        "_id": "lZ73BoZkeIQLobcc",
+        "type": "OR",
+        "group": "",
+        "sort": 100000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "pUnLerAypmyKaZY5",
+        "type": "AND",
+        "group": "lZ73BoZkeIQLobcc",
+        "sort": 200000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "vXQMA3T2GMslqZpg",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbtulGlassblowe",
+        "count": null,
+        "group": "pUnLerAypmyKaZY5",
+        "sort": 300000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "EvpXBZ33XAykrui3",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagBackpack000",
+        "count": null,
+        "group": "pUnLerAypmyKaZY5",
+        "sort": 301000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "GvjowsXbn832jkXO",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagRope0000000",
+        "count": null,
+        "group": "pUnLerAypmyKaZY5",
+        "sort": 302000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "zBtYc0SplJ9iX2h6",
+        "type": "linked",
+        "key": "Compendium.dnd5e.equipment24.Item.phbagClothesTrav",
+        "count": null,
+        "group": "pUnLerAypmyKaZY5",
+        "sort": 303000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "7iG4R1MtvD10DZFP",
+        "type": "currency",
+        "key": "gp",
+        "count": 15,
+        "group": "pUnLerAypmyKaZY5",
+        "sort": 390000,
+        "requiresProficiency": false
+      },
+      {
+        "_id": "WGxfoHpzGvPGiwYa",
+        "type": "currency",
+        "key": "gp",
+        "count": 50,
+        "group": "lZ73BoZkeIQLobcc",
+        "sort": 400000,
+        "requiresProficiency": false
+      }
+    ],
+    "wealth": ""
+  },
+  "effects": [],
+  "folder": "66iq7tm6Hgr3maCI",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "background:au-crucible-stormchaser"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!TCE1QHnrWieJbVp6"
+}

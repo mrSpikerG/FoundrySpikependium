@@ -1,0 +1,253 @@
+{
+  "_id": "BOAUsBfCU6XKVCyy",
+  "name": "Пояс мшистого тролля",
+  "type": "equipment",
+  "img": "icons/equipment/waist/belt-buckle-square-leather-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Надетый настроенный пояс повышает Телосложение на 2, максимум до 20, штатным эффектом. В бою в начале своего хода восстановите [[/r 1d4+1]]{1к4+1} хит, если текущие хиты меньше половины максимальных. Полученный урон кислотой или огнём отключает регенерацию на час; падение до 0 хитов — до следующего рассвета. Модуль создаёт и применяет нативное лечение в начале подходящего хода, защищает от повторного применения и проверяет актуальное здоровье. Час блокировки записывается вместе с фактическим повреждением после сопротивлений/иммунитетов; временные хиты не обходят отключение. Нулевые хиты фиксируются и при прямом изменении листа. Рассвет использует штатный период восстановления и новое поколение счётчика, отдых сам по себе блокировку не снимает. Перенос пояса между персонажами, восстановление старых состояний и возврат уже применённых хитов после отмены карточки пока проверяет Мастер.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 1 фунт для кожаного пояса с застёжкой; источник точного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=064604a8ca41dddc\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=3vG2CaFSuQ3WUJSW]]{Начало своего хода: регенерация мшистого тролля} · [[/heal activity=3vG2CaFSuQ3WUJSW]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=064604a8ca41dddc",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-mosshide-troll-belt",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "3vG2CaFSuQ3WUJSW": {
+        "_id": "3vG2CaFSuQ3WUJSW",
+        "type": "heal",
+        "name": "Начало своего хода: регенерация мшистого тролля",
+        "img": "icons/equipment/waist/belt-buckle-square-leather-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "turnStart",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "number": 1,
+          "denomination": 4,
+          "bonus": "1",
+          "types": [
+            "healing"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "flags": {
+          "spikependium": {
+            "trollRegenerate": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "mvuS0hUkCAZ0Txm4",
+      "name": "Пояс мшистого тролля: Телосложение +2, не выше 20",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.abilities.con.value",
+            "value": "+2 <=20",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "LX64GgXcwzpkGDk0"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!BOAUsBfCU6XKVCyy.mvuS0hUkCAZ0Txm4"
+    }
+  ],
+  "folder": "W7dDsNeyOHLkmvBD",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:mosshide-troll-belt",
+      "griffonBelt": "mosshide-troll-belt",
+      "potionSlots": {},
+      "trollDawnEpoch": 0
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!BOAUsBfCU6XKVCyy"
+}

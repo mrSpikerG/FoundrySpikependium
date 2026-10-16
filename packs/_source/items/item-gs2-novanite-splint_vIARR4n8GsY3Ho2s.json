@@ -1,0 +1,643 @@
+{
+  "_id": "vIARR4n8GsY3Ho2s",
+  "name": "Novanite Armor (Splint Armor)",
+  "type": "equipment",
+  "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+  "system": {
+    "description": {
+      "value": "<p>КД +1. Действием с командным словом выберите видимое пространство в 30 футах, исчезните на Астральном плане до начала следующего своего хода, затем появитесь в выбранном месте. Повтор через 12 часов по времени мира. Если место занято существом или предметом: [[/r 3d6]]{3к6} силовым полем вам, появление в ближайшем свободном пространстве. При исчезновении и появлении другие существа в 10 футах: Сила СЛ 15, [[/r 3d6]]{3к6} силовым полем, половина при успехе; провал также притягивает до 10 футов при исчезновении либо отталкивает на 10 футов при появлении. Настроены КД, оплаченный маркер до следующего своего хода, таймер 12 часов, отдельные испытания и урон столкновения. Выбранное заранее место, перенос между планами, скрытие/возвращение токена, свободное пространство, ближайшая точка и принудительное движение пока выполняются Мастером вручную. Маркер не даёт телу иммунитетов. Кнопку прибытия используйте в начале следующего своего хода; в бою она не доступна раньше. Вне боя последовательность контролирует Мастер.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха. Вес взят у базового доспеха 2024; отдельного веса в источнике нет.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=2251cdfb4e78b33e\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=b2SV9ogO76cliaey]]{Выбрать место в 30 футах: уйти в Астрал}</li><li>[[/item activity=nz5Bau9lR5cLJ1vG]]{Начало следующего хода: прибыть в заранее выбранное место}</li><li>[[/item activity=wkpBuRNZHTlg1nrg]]{Исчезновение: притянуть — другие существа в 10 футах} · [[/damage activity=wkpBuRNZHTlg1nrg]]{Бросок урона} · [[/save activity=wkpBuRNZHTlg1nrg]]{Спасбросок цели}</li><li>[[/item activity=hOnH6HvaY6MvSEGt]]{Появление: оттолкнуть — другие существа в 10 футах} · [[/damage activity=hOnH6HvaY6MvSEGt]]{Бросок урона} · [[/save activity=hOnH6HvaY6MvSEGt]]{Спасбросок цели}</li><li>[[/item activity=VKDVsZuEoCY5siZm]]{Место прибытия занято: 3к6 силовым полем себе} · [[/damage activity=VKDVsZuEoCY5siZm]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=2251cdfb4e78b33e",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-novanite-splint",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 60,
+      "units": "lb"
+    },
+    "price": {
+      "value": 40200,
+      "denomination": "gp"
+    },
+    "rarity": "veryRare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 17,
+      "magicalBonus": 1,
+      "dex": 0
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "heavy",
+      "baseItem": "splint"
+    },
+    "properties": [
+      "stealthDisadvantage",
+      "mgc"
+    ],
+    "strength": 15,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "b2SV9ogO76cliaey": {
+        "_id": "b2SV9ogO76cliaey",
+        "type": "transform",
+        "name": "Выбрать место в 30 футах: уйти в Астрал",
+        "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "8ajZUnYVdwS6ACKE"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        },
+        "flags": {
+          "spikependium": {
+            "griffonArmorPaid": true,
+            "griffonCooldown": 43200,
+            "griffonCommandWord": true,
+            "novaniteDepart": true
+          }
+        }
+      },
+      "nz5Bau9lR5cLJ1vG": {
+        "_id": "nz5Bau9lR5cLJ1vG",
+        "type": "teleport",
+        "name": "Начало следующего хода: прибыть в заранее выбранное место",
+        "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "teleport": {
+          "override": false,
+          "units": "ft",
+          "value": "30"
+        },
+        "flags": {
+          "spikependium": {
+            "novaniteArrival": true
+          }
+        }
+      },
+      "wkpBuRNZHTlg1nrg": {
+        "_id": "wkpBuRNZHTlg1nrg",
+        "type": "save",
+        "name": "Исчезновение: притянуть — другие существа в 10 футах",
+        "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "10",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "str"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "novaniteWave": true
+          }
+        }
+      },
+      "hOnH6HvaY6MvSEGt": {
+        "_id": "hOnH6HvaY6MvSEGt",
+        "type": "save",
+        "name": "Появление: оттолкнуть — другие существа в 10 футах",
+        "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+        "sort": 400000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "10",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "str"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "novaniteWave": true
+          }
+        }
+      },
+      "VKDVsZuEoCY5siZm": {
+        "_id": "VKDVsZuEoCY5siZm",
+        "type": "damage",
+        "name": "Место прибытия занято: 3к6 силовым полем себе",
+        "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+        "sort": 500000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 6,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "flags": {
+          "spikependium": {
+            "novaniteWave": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "8ajZUnYVdwS6ACKE",
+      "name": "Нованит: на Астральном плане до начала следующего хода",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "sourceStart",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "novaniteAstral": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!vIARR4n8GsY3Ho2s.8ajZUnYVdwS6ACKE"
+    }
+  ],
+  "folder": "IhXpsSofbM8ht4uu",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:novanite-splint",
+      "originalName": "Novanite Armor (Splint Armor)",
+      "griffonTwoArmor": "novanite",
+      "griffonTimedRecovery": true,
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmSplintArmo"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!vIARR4n8GsY3Ho2s"
+}

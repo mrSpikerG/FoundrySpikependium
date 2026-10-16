@@ -1,19 +1,32 @@
-const KINDS = { "spell:au-iron-body": "iron-body", "spell:au-invulnerability": "invulnerability",
+import { bansheeCastPaid } from "./arcana-banshee.mjs";
+import { enervationCastPaid } from "./arcana-enervation.mjs";
+import { enthrallmentCastPaid, enthrallmentImmune } from "./arcana-enthrallment.mjs";
+import { lanternCastPaid } from "./arcana-lantern.mjs";
+import { distanceCastPaid } from "./arcana-distance.mjs";
+import { dragonCastPaid, dragonFearPaid } from "./arcana-dragon.mjs";
+
+const KINDS = { "spell:au-illusory-dragon":"illusory-dragon", "spell:au-distance-distortion":"distance-distortion", "spell:au-spirit-lantern":"spirit-lantern", "spell:au-enthrallment":"enthrallment", "spell:au-enervation":"enervation", "spell:au-iron-body": "iron-body", "spell:au-invulnerability": "invulnerability",
+  "spell:au-power-word-pain":"power-word-pain",
+  "spell:au-wail-of-the-banshee": "wail-of-the-banshee",
+  "spell:au-waves-of-exhaustion": "waves-of-exhaustion",
   "spell:au-zone-of-amity": "zone-of-amity",
   "spell:au-aura-of-evasion": "aura-of-evasion",
   "spell:au-lightning-ring":"lightning-ring", "spell:au-grave-ground":"grave-ground",
   "spell:au-instill-doubt": "instill-doubt", "spell:au-fractured-perception": "fractured-perception",
   "spell:au-mesmerizing-mirrors": "mesmerizing-mirrors", "spell:au-confusing-terrain": "confusing-terrain", "spell:au-putrid-burst": "putrid-burst",
   "spell:au-vision-of-ages": "vision-of-ages", "spell:au-catnap": "catnap", "spell:au-dissonant-tune": "dissonant-tune" };
-const ABILITIES = { "instill-doubt": "wis", "fractured-perception": "int", "mesmerizing-mirrors": "int", "confusing-terrain": "int", "putrid-burst": "con", "vision-of-ages": "int", "dissonant-tune": "con" };
-const MAX_TARGETS = { "mesmerizing-mirrors": 3, "confusing-terrain": 3, "putrid-burst": Infinity, catnap: 9, "dissonant-tune": Infinity };
-const CONDITION = { "mesmerizing-mirrors": "stunned", "putrid-burst": "poisoned", "vision-of-ages": "paralyzed", catnap: "unconscious" };
-const NON_CONCENTRATION = { "putrid-burst": 60, "vision-of-ages": 60, catnap: 600, "zone-of-amity": 600 };
+const ABILITIES = { "illusory-dragon-fear":"wis", enthrallment:"cha", enervation:"dex", "instill-doubt": "wis", "fractured-perception": "int", "mesmerizing-mirrors": "int", "confusing-terrain": "int", "putrid-burst": "con", "vision-of-ages": "int", "dissonant-tune": "con", "wail-of-the-banshee": "con" };
+const REPEAT_ABILITIES = {...ABILITIES,"power-word-pain":"con"};
+const MAX_TARGETS = { "mesmerizing-mirrors": 3, "confusing-terrain": 3, "putrid-burst": Infinity, catnap: 9, "dissonant-tune": Infinity, "wail-of-the-banshee": 10 };
+const CONDITION = { "illusory-dragon-fear":"frightened", enthrallment:"charmed", "power-word-pain":"charmed", "mesmerizing-mirrors": "stunned", "putrid-burst": "poisoned", "vision-of-ages": "paralyzed", catnap: "unconscious", "wail-of-the-banshee": "deafened" };
+const NON_CONCENTRATION = { "spirit-lantern":600, "power-word-pain":60, "putrid-burst": 60, "vision-of-ages": 60, catnap: 600, "zone-of-amity": 600, "wail-of-the-banshee": 3600 };
+const NO_REPEAT = new Set(["illusory-dragon-fear","enthrallment", "enervation", "dissonant-tune", "wail-of-the-banshee"]);
 const CURED = new Set(["paralyzed", "petrified", "poisoned"]);
-const SELF = new Set(["invulnerability","lightning-ring","grave-ground","zone-of-amity","aura-of-evasion"]);
+const SELF = new Set(["illusory-dragon","distance-distortion","spirit-lantern","invulnerability","lightning-ring","grave-ground","zone-of-amity","aura-of-evasion","waves-of-exhaustion"]);
 const syncing = new Map(), curing = new Set(), rolling = new Set();
 const resolve = uuid => uuid && fromUuidSync(uuid, { strict: false });
-const kind = activity => activity?.type !== "damage" && !activity?.flags?.spikependium?.arcanaShakeTemplate && !activity?.flags?.spikependium?.arcanaStage
+const kind = activity => activity?.item?.type==="spell" && activity.item.flags.spikependium?.key==="spell:au-illusory-dragon" && activity.flags?.spikependium?.dragonStage==="fear" ? "illusory-dragon-fear" : activity?.type !== "damage" && !activity?.flags?.spikependium?.arcanaShakeTemplate
+  && (!activity?.flags?.spikependium?.arcanaStage || activity?.item?.flags.spikependium?.key === "spell:au-enthrallment" && activity.flags.spikependium.arcanaStage === "enthrallment-target")
   && activity?.item?.type === "spell" ? KINDS[activity.item.flags.spikependium?.key] : undefined;
 const live = effect => !!effect?.active && !effect.duration.expired && !(Number.isFinite(effect.duration.remaining) && effect.duration.remaining <= 0);
 const actors = () => new Map([...game.actors, ...[...game.scenes].flatMap(scene => [...scene.tokens].map(t => t.actor))]
@@ -28,14 +41,23 @@ const immune = (actor, spell) => !!CONDITION[spell] && (actor.system.traits.ci?.
 
 export function arcanaSpellSuppression(wrapped, ...args) {
   const spell = this.flags.spikependium?.arcanaSpell, actor = this.actor;
+  if (spell === "illusory-dragon" && !dragonCastPaid(resolve(this.system.origin?.message))) return true;
+  if (spell === "illusory-dragon-fear" && !dragonFearPaid(resolve(this.system.origin?.message))) return true;
+  if (spell === "distance-distortion" && !distanceCastPaid(resolve(this.system.origin?.message))) return true;
+  if (spell === "spirit-lantern" && !lanternCastPaid(resolve(this.system.origin?.message))) return true;
+  if (spell === "enthrallment" && (!enthrallmentCastPaid(resolve(this.system.origin?.message)) || enthrallmentImmune(resolve(this.system.origin?.message)))) return true;
   if (spell === "dissonant-tune" && actor?.system.attributes.concentration?.ability && actor.system.attributes.concentration.ability !== "con") return true;
   if (!spell || !actor || (!MAX_TARGETS[spell] && !CONDITION[spell])) return wrapped(...args);
   if (immune(actor, spell) || (CONDITION[spell] && !this.statuses.has(CONDITION[spell]))) return true;
+  if (spell === "illusory-dragon-fear") return wrapped(...args);
+  if(spell==="power-word-pain"&&this.system.origin?.message&&!concentrating(arcanaCast(resolve(this.system.origin.message)),resolve(this.system.origin.message)))return true;
   const candidates = actor.effects.filter(effect => effect.flags.spikependium?.arcanaSpell === spell
+    && (spell !== "enthrallment" || !enthrallmentImmune(resolve(effect.system.origin?.message)))
     && !effect.disabled && !effect.duration.expired && !(Number.isFinite(effect.duration.remaining) && effect.duration.remaining <= 0)
     && (!CONDITION[spell] || effect.statuses.has(CONDITION[spell]))
     && (!effect.system.origin?.message || concentrating(arcanaCast(resolve(effect.system.origin.message)), resolve(effect.system.origin.message))));
-  candidates.sort((a, b) => (b.flags.dnd5e?.spellLevel ?? 0) - (a.flags.dnd5e?.spellLevel ?? 0)
+  candidates.sort((a, b) => (spell==="power-word-pain" ? (arcanaCast(resolve(b.system.origin?.message))?.receipt.dc??0)-(arcanaCast(resolve(a.system.origin?.message))?.receipt.dc??0) : 0)
+    || (spell==="power-word-pain"?0:(b.flags.dnd5e?.spellLevel ?? 0) - (a.flags.dnd5e?.spellLevel ?? 0))
     || (b.start?.time ?? 0) - (a.start?.time ?? 0) || b.id.localeCompare(a.id));
   return (candidates.length > 0 && candidates[0] !== this) || wrapped(...args);
 }
@@ -92,9 +114,12 @@ export function recordArcanaCast(activity, message) {
   if (!effect) return;
   foundry.utils.setProperty(message, "data.flags.spikependium.arcanaCast", { kind: spell, caster: activity.actor.uuid,
     activity: activity.uuid, effect: effect.toObject(), effectUuid: effect.uuid,
-    dc: ABILITIES[spell] ? activity.save.dc.value : null, level: activity.item.system.level,
+    dc: REPEAT_ABILITIES[spell] ? activity.save.dc.value : null,
+    level: spell === "enthrallment" ? message.data?.flags?.spikependium?.enthrallmentUse?.level : activity.item.system.level,
     time: game.time.worldTime, start: ActiveEffect.implementation.getEffectStart(),
     targets: SELF.has(spell)?[]:structuredClone(message.data?.system?.targets ?? []) });
+  if(spell==="power-word-pain")foundry.utils.setProperty(message,"data.flags.spikependium.arcanaCast.initialHP",
+    Object.fromEntries((message.data?.system?.targets??[]).map(t=>[t.actor.replaceAll(".","_"),resolve(t.actor)?.system.attributes.hp.value])));
   if (spell === "dissonant-tune") foundry.utils.setProperty(message, "data.flags.spikependium.arcanaCast.targetConcentration",
     (message.data?.system?.targets ?? []).map(target => ({ actor: target.actor,
       effects: resolve(target.actor)?.effects.filter(effect => effect.active && effect.system.type === "concentrating").map(effect => effect.uuid) ?? [] })));
@@ -104,6 +129,13 @@ export function recordArcanaCast(activity, message) {
 export function arcanaCast(origin) {
   const receipt = origin?.flags.spikependium?.arcanaCast, activity = origin?.getAssociatedActivity({ scaled: true });
   const caster = resolve(receipt?.caster);
+  if (receipt?.kind === "illusory-dragon" && !dragonCastPaid(origin)) return;
+  if (receipt?.kind === "illusory-dragon-fear" && !dragonFearPaid(origin)) return;
+  if (receipt?.kind === "distance-distortion" && !distanceCastPaid(origin)) return;
+  if (receipt?.kind === "spirit-lantern" && !lanternCastPaid(origin)) return;
+  if (receipt?.kind === "enthrallment" && !enthrallmentCastPaid(origin)) return;
+  if (receipt?.kind === "enervation" && !enervationCastPaid(origin)) return;
+  if (receipt?.kind === "wail-of-the-banshee" && !bansheeCastPaid(origin)) return;
   if (origin?.type !== "usage" || !receipt || kind(activity) !== receipt.kind || activity.uuid !== receipt.activity
     || !caster || !origin.author || !caster.testUserPermission(origin.author, "OWNER")
     || receipt.effect?.flags?.spikependium?.arcanaSpell !== receipt.kind) return;
@@ -181,6 +213,10 @@ function outcome(message, actor, ability, dc) {
 
 async function apply(origin, actor, target, info) {
   if (!actor.isOwner || !concentrating(info, origin)) return;
+  if(info.receipt.kind==="power-word-pain"){
+    const hp=info.receipt.initialHP?.[targetKey(actor)];if(!Number.isFinite(hp)||hp<0)return;
+    if(hp>100){if(!targetFlag(origin,actor,"Applied"))await setTargetFlag(origin,actor,"Applied",true);return;}
+  }
   const existing = actor.effects.find(e => e.system.origin?.message === origin.uuid && e.flags.spikependium?.arcanaSpell === info.receipt.kind);
   if (existing) {
     await cureIronBody(existing);
@@ -244,13 +280,14 @@ export async function syncArcanaCast(message) {
         if (!actor?.isOwner || !actor.system.isCreature || visited.has(actor.uuid) || targetFlag(origin, actor, "Ended")) continue;
         visited.add(actor.uuid);
         const ability = ABILITIES[info.receipt.kind];
-        const result = ability ? outcome(latestSave(origin, actor, target, info.receipt), actor, ability, info.receipt.dc) : "failure";
+        const result = info.receipt.kind === "enthrallment" && enthrallmentImmune(origin) ? "success"
+          : ability ? outcome(latestSave(origin, actor, target, info.receipt), actor, ability, info.receipt.dc) : "failure";
         if (!result) continue;
         if (result === "success") {
           const ids = actor.effects.filter(e => e.system.origin?.message === origin.uuid).map(e => e.id);
           if (ids.length) await actor.deleteEmbeddedDocuments("ActiveEffect", ids);
           if (targetFlag(origin, actor, "Applied")) await setTargetFlag(origin, actor, "Applied", false);
-          if (info.receipt.kind === "fractured-perception" && concentrating(info, origin)) await info.concentration.delete();
+          if (["enervation", "fractured-perception"].includes(info.receipt.kind) && concentrating(info, origin)) await info.concentration.delete();
         } else await apply(origin, actor, target, info);
       }
     } while (state.pending);
@@ -281,7 +318,8 @@ export function guardIronExhaustion(effect, data) {
     || (updateValue(data, "system.type") ?? effect.system.type) !== "exhaustion") return;
   if ((updateValue(data, "disabled") ?? effect.disabled) || (updateValue(data, "duration.expired") ?? effect.duration.expired)) return;
   const level = updateValue(data, "system.level") ?? effect.system.level ?? 1;
-  if (level > (actor.system.attributes.exhaustion ?? 0)) {
+  const ordinary = actor.effects.get(effect.id) ?? actor.effects.get(dnd5e.utils.staticID("dnd5eexhaustion"));
+  if (level > (ordinary?.system.level ?? 0)) {
     ui.notifications.warn("Железное тело: уровень истощения не может увеличиться, пока защитный эффект активен.");
     return false;
   }
@@ -291,10 +329,10 @@ export async function syncArcanaRepeat(message) {
   const request = message?.flags.spikependium?.arcanaRepeat;
   if (!request || message.type !== "save" || !game.user.isActiveGM || !message.author?.isGM) return;
   const effect = resolve(request.effect), actor = effect?.actor, origin = resolve(effect?.system.origin?.message), info = arcanaCast(origin);
-  if (!info || !actor?.isOwner || actor.uuid !== request.actor || !live(effect) || !concentrating(info, origin)
+  if (!info || NO_REPEAT.has(info.receipt.kind) || !actor?.isOwner || actor.uuid !== request.actor || !live(effect) || !concentrating(info, origin)
     || request.origin !== origin.uuid || request.event !== effect.flags.spikependium?.arcanaRepeatRequest?.event
     || message.getOriginatingMessage()?.uuid !== origin.uuid || message.getAssociatedActor()?.uuid !== actor.uuid
-    || request.dc !== info.receipt.dc || request.ability !== ABILITIES[info.receipt.kind]) return;
+    || request.dc !== info.receipt.dc || request.ability !== REPEAT_ABILITIES[info.receipt.kind]) return;
   if (outcome(message, actor, request.ability, request.dc) === "success") {
     await endArcanaEffect(effect);
   } else if (info.receipt.kind === "vision-of-ages" && outcome(message, actor, request.ability, request.dc) === "failure") {
@@ -305,7 +343,7 @@ export async function syncArcanaRepeat(message) {
 async function rollRepeat(effect, request) {
   if (!game.user.isActiveGM || rolling.has(effect.uuid) || !live(effect)) return;
   const actor = effect.actor, origin = resolve(effect.system.origin?.message), info = arcanaCast(origin);
-  if (!info || !concentrating(info, origin) || !actor.isOwner || !ABILITIES[info.receipt.kind] || info.receipt.kind === "dissonant-tune") return;
+  if (!info || !concentrating(info, origin) || !actor.isOwner || !REPEAT_ABILITIES[info.receipt.kind] || NO_REPEAT.has(info.receipt.kind)) return;
   const findCard = () => game.messages.find(m => m.author?.isGM && m.type === "save"
     && m.flags.spikependium?.arcanaRepeat?.event === request.event
     && m.flags.spikependium.arcanaRepeat.effect === effect.uuid && m.flags.spikependium.arcanaRepeat.origin === origin.uuid);
@@ -316,13 +354,13 @@ async function rollRepeat(effect, request) {
     else {
       const token = resolve(request.token);
       const hidden = token?.hidden || origin.blind || origin.whisper.length;
-      await actor.rollSavingThrow({ ability: ABILITIES[info.receipt.kind], target: info.receipt.dc }, { configure: false }, {
+      await actor.rollSavingThrow({ ability: REPEAT_ABILITIES[info.receipt.kind], target: info.receipt.dc }, { configure: false }, {
         rollMode: hidden ? "gm" : "public", data: {
           speaker: ChatMessage.getSpeaker({ actor, token, scene: token?.parent }),
           flavor: `${foundry.utils.escapeHTML(info.activity.item.name)} — повторный спасбросок в конце хода`,
           ...(origin.whisper.length ? { whisper: [...origin.whisper], blind: origin.blind } : {}),
           system: { origin: origin.id }, flags: { spikependium: { arcanaRepeat: { ...request, effect: effect.uuid,
-            actor: actor.uuid, origin: origin.uuid, dc: info.receipt.dc, ability: ABILITIES[info.receipt.kind] } } }
+            actor: actor.uuid, origin: origin.uuid, dc: info.receipt.dc, ability: REPEAT_ABILITIES[info.receipt.kind] } } }
         }
       });
       const card = findCard();
@@ -342,7 +380,7 @@ export async function arcanaEndTurn(wrapped, combatant) {
   if (!game.user.isActiveGM || !combatant?.actor || !Number.isInteger(this.previous?.round) || this.previous.round < 1) return result;
   const actor = combatant.actor;
   for (const effect of [...actor.effects]) {
-    if (!ABILITIES[effect.flags.spikependium?.arcanaSpell] || effect.flags.spikependium.arcanaSpell === "dissonant-tune" || !live(effect)) continue;
+    if (!REPEAT_ABILITIES[effect.flags.spikependium?.arcanaSpell] || NO_REPEAT.has(effect.flags.spikependium.arcanaSpell) || !live(effect)) continue;
     const event = `${this.id}:${this.previous.round}:${this.previous.turn}:${combatant.id}:${effect.uuid}`;
     if (effect.flags.spikependium?.arcanaRepeatRequest?.event === event) continue;
     const request = { event, token: combatant.token?.uuid, pending: true };

@@ -1,0 +1,2588 @@
+{
+  "repository": "https://github.com/foundryvtt/dnd5e",
+  "revision": "87e94dbd9f930135e0694cd7e7d49f210603cd2c",
+  "license": "CC-BY-4.0",
+  "records": [
+    {
+      "source": "packs/_source/spells24/1st-level/inflict-wounds.yml",
+      "sha256": "2acbc5715effed796f3c2a6af26aa9de6f15d23f21644460e294560f29740be0",
+      "document": {
+        "name": "Inflict Wounds",
+        "system": {
+          "description": {
+            "value": "<p>A creature you touch makes a Constitution saving throw, taking 2d10 Necrotic damage on a failed save or half as much damage on a successful one.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d10 for each spell slot level above 1.</p>",
+            "chat": ""
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "activation": {
+            "type": "action",
+            "condition": "",
+            "value": null
+          },
+          "duration": {
+            "value": "",
+            "units": "inst"
+          },
+          "target": {
+            "affects": {
+              "type": "creature",
+              "count": "1",
+              "choice": false,
+              "special": ""
+            },
+            "template": {
+              "units": "",
+              "contiguous": false,
+              "type": ""
+            }
+          },
+          "range": {
+            "units": "touch",
+            "special": ""
+          },
+          "uses": {
+            "max": "",
+            "recovery": [],
+            "spent": 0
+          },
+          "level": 1,
+          "school": "nec",
+          "properties": [
+            "vocal",
+            "somatic"
+          ],
+          "materials": {
+            "value": "",
+            "consumed": false,
+            "cost": 0,
+            "supply": 0
+          },
+          "preparation": {
+            "mode": "prepared",
+            "prepared": false
+          },
+          "activities": {
+            "dnd5eactivity000": {
+              "_id": "dnd5eactivity000",
+              "type": "save",
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                }
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "units": "inst",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "override": false
+              },
+              "target": {
+                "prompt": true,
+                "template": {
+                  "contiguous": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false
+              },
+              "damage": {
+                "onSave": "half",
+                "parts": [
+                  {
+                    "number": 2,
+                    "denomination": 10,
+                    "bonus": "",
+                    "types": [
+                      "necrotic"
+                    ],
+                    "custom": {
+                      "enabled": false,
+                      "formula": ""
+                    },
+                    "scaling": {
+                      "mode": "whole",
+                      "number": 1,
+                      "formula": ""
+                    }
+                  }
+                ]
+              },
+              "save": {
+                "ability": "con",
+                "dc": {
+                  "calculation": "spellcasting",
+                  "formula": ""
+                }
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              },
+              "sort": 0
+            }
+          },
+          "identifier": "inflict-wounds"
+        },
+        "_id": "phbsplInflictWou",
+        "type": "spell",
+        "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+        "effects": [],
+        "folder": "pBaAAtXBCq9FVEnL",
+        "sort": 1500000,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425960006,
+          "modifiedTime": 1745256795177,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbsplInflictWou"
+      },
+      "name": "Inflict Wounds",
+      "uuid": "Compendium.dnd5e.spells24.Item.phbsplInflictWou"
+    },
+    {
+      "source": "packs/_source/equipment24/adventuring-gear/spellcasting-focuses/arcane-focus/staff.yml",
+      "sha256": "98a430981975d4c3930a6c9fb80c5dc8eba0be57bd333bfca6f79853df73ef56",
+      "document": {
+        "name": "Staff",
+        "system": {
+          "description": {
+            "value": "<p>An @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{Arcane Focus} is bejeweled or carved to channel arcane magic. A Sorcerer, Warlock, or Wizard can use such an item as a Spellcasting Focus.</p><p>This item also functions as a @UUID[Compendium.dnd5e.equipment24.Item.phbwepQuartersta]{Quarterstaff}</p><section class=\"secret\" id=\"secret-wJ4SJVg9unbYSBJb\"><p><strong>Foundry Note</strong></p><p>This item has been configured with the additional properties of a Quarterstaff.</p></section>",
+            "chat": ""
+          },
+          "price": {
+            "value": 5,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 4,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": null,
+            "long": null,
+            "units": "",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": 0,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 6,
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "simpleM",
+            "baseItem": "quarterstaff"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "foc",
+            "ver"
+          ],
+          "proficient": null,
+          "activities": {
+            "5c4fPKVW51b3Ri3j": {
+              "type": "attack",
+              "_id": "5c4fPKVW51b3Ri3j",
+              "sort": 0,
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "scaling": {
+                  "allowed": false
+                },
+                "spellSlot": true,
+                "targets": []
+              },
+              "description": {},
+              "duration": {
+                "units": "inst",
+                "concentration": false,
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "contiguous": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false,
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              },
+              "attack": {
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {}
+              },
+              "damage": {
+                "critical": {},
+                "includeBase": true,
+                "parts": []
+              }
+            }
+          },
+          "ammunition": {},
+          "mastery": "topple",
+          "identifier": "staff"
+        },
+        "_id": "phbafcStaffalsoa",
+        "type": "weapon",
+        "folder": "5qvlWBbvYXzxqIa1",
+        "img": "icons/weapons/staves/staff-ornate-jeweled-blue.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425904833,
+          "modifiedTime": 1740680132082,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbafcStaffalsoa"
+      },
+      "name": "staff"
+    },
+    {
+      "source": "packs/_source/equipment24/weapons/simple-melee/quarterstaff.yml",
+      "sha256": "8fe4778a166fbeec6660b9441be1a9d798c8f4c47ef0785829b518aa995f853c",
+      "document": {
+        "name": "Quarterstaff",
+        "system": {
+          "description": {
+            "value": "",
+            "chat": ""
+          },
+          "price": {
+            "value": 2,
+            "denomination": "sp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 4,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": null,
+            "long": null,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": 0,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 6,
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "simpleM",
+            "baseItem": "quarterstaff"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "ver"
+          ],
+          "proficient": null,
+          "activities": {
+            "XYVC9JOYrtFlLA1k": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "5",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "melee",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "XYVC9JOYrtFlLA1k",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {},
+          "mastery": "topple",
+          "identifier": "quarterstaff"
+        },
+        "_id": "phbwepQuartersta",
+        "type": "weapon",
+        "folder": "FL1Jee9DzStc7vM3",
+        "img": "icons/weapons/staves/staff-simple.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425919899,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepQuartersta"
+      },
+      "name": "quarterstaff"
+    },
+    {
+      "source": "packs/_source/spells24/2nd-level/calm-emotions.yml",
+      "sha256": "6dec080bc1a9cca74fbe03bf987a29ffd6f757badbdb46cc8021d75b25f5a117",
+      "document": {
+        "name": "Calm Emotions",
+        "system": {
+          "description": {
+            "value": "<p>Each Humanoid in a 20-foot-radius Sphere centered on a point you choose within range must succeed on a Charisma saving throw or be affected by one of the following effects (choose for each creature):</p><ul><li>The creature has Immunity to the Charmed and Frightened conditions until the spell ends. If the creature was already Charmed or Frightened, those conditions are suppressed for the duration.</li><li>The creature becomes Indifferent about creatures of your choice that it's Hostile toward. This indifference ends if the target takes damage or witnesses its allies taking damage. When the spell ends, the creature's attitude returns to normal.</li></ul>",
+            "chat": ""
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "activation": {
+            "type": "action",
+            "condition": "",
+            "value": null
+          },
+          "duration": {
+            "value": "1",
+            "units": "minute"
+          },
+          "target": {
+            "affects": {
+              "choice": false
+            },
+            "template": {
+              "units": "ft",
+              "type": "sphere",
+              "size": "20",
+              "contiguous": false
+            }
+          },
+          "range": {
+            "value": "60",
+            "units": "ft"
+          },
+          "uses": {
+            "max": "",
+            "recovery": [],
+            "spent": 0
+          },
+          "level": 2,
+          "school": "enc",
+          "properties": [
+            "vocal",
+            "somatic",
+            "concentration"
+          ],
+          "materials": {
+            "value": "",
+            "consumed": false,
+            "cost": 0,
+            "supply": 0
+          },
+          "preparation": {
+            "mode": "prepared",
+            "prepared": false
+          },
+          "activities": {
+            "dnd5eactivity000": {
+              "_id": "dnd5eactivity000",
+              "type": "save",
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                }
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "units": "inst",
+                "override": false
+              },
+              "effects": [
+                {
+                  "_id": "xwyUvd93d4A5LHHH",
+                  "onSave": false
+                },
+                {
+                  "_id": "cb3KFq1j9UkOUV2l",
+                  "onSave": false
+                }
+              ],
+              "range": {
+                "override": false
+              },
+              "target": {
+                "prompt": true,
+                "template": {
+                  "contiguous": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false
+              },
+              "damage": {
+                "onSave": "half",
+                "parts": []
+              },
+              "save": {
+                "ability": "cha",
+                "dc": {
+                  "calculation": "spellcasting",
+                  "formula": ""
+                }
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              },
+              "sort": 0
+            }
+          },
+          "identifier": "calm-emotions"
+        },
+        "_id": "phbsplCalmEmotio",
+        "type": "spell",
+        "img": "icons/magic/sonic/explosion-shock-sound-wave.webp",
+        "effects": [
+          {
+            "name": "Calmed",
+            "origin": "Compendium.dnd5e.spells24.Item.phbsplCalmEmotio",
+            "duration": {
+              "value": 60,
+              "units": "seconds",
+              "expiry": "turnStart",
+              "expired": false
+            },
+            "disabled": false,
+            "flags": {},
+            "img": "icons/magic/holy/yin-yang-balance-symbol.webp",
+            "_id": "xwyUvd93d4A5LHHH",
+            "type": "base",
+            "system": {
+              "changes": [
+                {
+                  "key": "system.traits.ci.value",
+                  "value": "charmed",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "rCH88iFMJyYgbqbh"
+                },
+                {
+                  "key": "system.traits.ci.value",
+                  "value": "frightened",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "dyUq9QMzy18VmVmL"
+                }
+              ],
+              "magical": true
+            },
+            "description": "<p>The creature has Immunity to the Charmed and Frightened conditions until the spell ends. If the creature was already Charmed or Frightened, those conditions are suppressed for the duration.</p>",
+            "tint": "#ffffff",
+            "transfer": false,
+            "statuses": [],
+            "sort": 0,
+            "_stats": {
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "coreVersion": "14.364",
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.0",
+              "createdTime": 1783543974285,
+              "modifiedTime": 1783543974285,
+              "lastModifiedBy": "dnd5ebuilder0000",
+              "exportSource": null
+            },
+            "start": null,
+            "showIcon": 1,
+            "folder": null,
+            "_key": "!items.effects!phbsplCalmEmotio.xwyUvd93d4A5LHHH"
+          },
+          {
+            "name": "Indifference",
+            "origin": "Compendium.dnd5e.spells24.Item.phbsplCalmEmotio",
+            "duration": {
+              "value": 60,
+              "units": "seconds",
+              "expiry": "turnStart",
+              "expired": false
+            },
+            "disabled": false,
+            "flags": {},
+            "img": "icons/magic/symbols/question-stone-yellow.webp",
+            "type": "base",
+            "system": {
+              "changes": [],
+              "magical": true
+            },
+            "description": "<p>The creature becomes Indifferent about creatures of your choice that it’s Hostile toward. This indifference ends if the target takes damage or witnesses its allies taking damage. When the spell ends, the creature’s attitude returns to normal.</p>",
+            "tint": "#ffffff",
+            "transfer": false,
+            "statuses": [],
+            "sort": 0,
+            "_stats": {
+              "compendiumSource": "Compendium.dnd5e.spells24.Item.phbsplCalmEmotio.ActiveEffect.xwyUvd93d4A5LHHH",
+              "duplicateSource": null,
+              "coreVersion": "14.364",
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.0",
+              "createdTime": 1783543974285,
+              "modifiedTime": 1783543974285,
+              "lastModifiedBy": "dnd5ebuilder0000",
+              "exportSource": null
+            },
+            "_id": "cb3KFq1j9UkOUV2l",
+            "start": null,
+            "showIcon": 1,
+            "folder": null,
+            "_key": "!items.effects!phbsplCalmEmotio.cb3KFq1j9UkOUV2l"
+          }
+        ],
+        "folder": "3SjcO2acsFnWegp4",
+        "sort": 4700000,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "14.364",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425944343,
+          "modifiedTime": 1783543974284,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbsplCalmEmotio"
+      },
+      "name": "Calm Emotions",
+      "uuid": "Compendium.dnd5e.spells24.Item.phbsplCalmEmotio"
+    },
+    {
+      "source": "packs/_source/spells24/2nd-level/darkness.yml",
+      "sha256": "40fcfd4e355d37ae11b026fbd6d76b74b31fc7661da88bdba06b04b05fc8f14c",
+      "document": {
+        "name": "Darkness",
+        "system": {
+          "description": {
+            "value": "<p>For the duration, magical &amp;Reference[darkness] spreads from a point within range and fills a 15-foot-radius Sphere. Darkvision can't see through it, and nonmagical light can't illuminate it.</p><p>Alternatively, you cast the spell on an object that isn't being worn or carried, causing the Darkness to fill a 15-foot Emanation originating from that object. Covering that object with something opaque, such as a bowl or helm, blocks the Darkness.</p><p>If any of this spell's area overlaps with an area of Bright Light or Dim Light created by a spell of level 2 or lower, that other spell is dispelled.</p>",
+            "chat": ""
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "activation": {
+            "type": "action",
+            "condition": "",
+            "value": null
+          },
+          "duration": {
+            "value": "10",
+            "units": "minute"
+          },
+          "target": {
+            "affects": {
+              "choice": false
+            },
+            "template": {
+              "units": "ft",
+              "type": "sphere",
+              "size": "15",
+              "contiguous": false
+            }
+          },
+          "range": {
+            "value": "60",
+            "units": "ft"
+          },
+          "uses": {
+            "max": "",
+            "recovery": [],
+            "spent": 0
+          },
+          "level": 2,
+          "school": "evo",
+          "properties": [
+            "vocal",
+            "material",
+            "concentration"
+          ],
+          "materials": {
+            "value": "bat fur and a piece of coal",
+            "consumed": false,
+            "cost": 0,
+            "supply": 0
+          },
+          "preparation": {
+            "mode": "prepared",
+            "prepared": false
+          },
+          "activities": {
+            "dnd5eactivity000": {
+              "_id": "dnd5eactivity000",
+              "type": "utility",
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                }
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "units": "inst",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "override": false
+              },
+              "target": {
+                "prompt": true,
+                "template": {
+                  "contiguous": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false
+              },
+              "roll": {
+                "formula": "",
+                "name": "",
+                "prompt": false,
+                "visible": false
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              },
+              "sort": 0
+            }
+          },
+          "identifier": "darkness"
+        },
+        "_id": "phbsplDarkness00",
+        "type": "spell",
+        "img": "icons/magic/unholy/orb-rays-blue.webp",
+        "effects": [],
+        "folder": "3SjcO2acsFnWegp4",
+        "sort": 4200000,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425948837,
+          "modifiedTime": 1745256789926,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbsplDarkness00"
+      },
+      "name": "Darkness",
+      "uuid": "Compendium.dnd5e.spells24.Item.phbsplDarkness00"
+    },
+    {
+      "source": "packs/_source/spells24/5th-level/dispel-evil-and-good.yml",
+      "sha256": "b964c517f8da04b9d9db07f9b7312e0f912fa28ffac799411b75dc5e700852c7",
+      "document": {
+        "name": "Dispel Evil and Good",
+        "system": {
+          "description": {
+            "value": "<p>For the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions.</p><p><strong>Break Enchantment.</strong> As a Magic action, you touch a creature that is possessed by or has the &amp;Reference[Charmed] or &amp;Reference[Frightened] condition from one or more creatures of the types above. The target is no longer possessed, Charmed, or Frightened by such creatures.</p><p><strong>Dismissal.</strong> As a Magic action, you target one creature you can see within 5 feet of you that has one of the creature types above. The target must succeed on a Charisma saving throw or be sent back to its home plane if it isn't there already. If they aren't on their home plane, Undead are sent to the Shadowfell, and Fey are sent to the Feywild.</p>",
+            "chat": ""
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "activation": {
+            "type": "action",
+            "condition": "",
+            "value": null
+          },
+          "duration": {
+            "value": "1",
+            "units": "minute"
+          },
+          "target": {
+            "affects": {
+              "choice": false,
+              "count": "",
+              "type": ""
+            },
+            "template": {
+              "units": "",
+              "contiguous": false,
+              "type": ""
+            }
+          },
+          "range": {
+            "units": "self",
+            "special": ""
+          },
+          "uses": {
+            "max": "",
+            "recovery": [],
+            "spent": 0
+          },
+          "level": 5,
+          "school": "abj",
+          "properties": [
+            "vocal",
+            "somatic",
+            "material",
+            "concentration"
+          ],
+          "materials": {
+            "value": "powdered silver and iron",
+            "consumed": false,
+            "cost": 0,
+            "supply": 0
+          },
+          "preparation": {
+            "mode": "prepared",
+            "prepared": false
+          },
+          "activities": {
+            "dnd5eactivity000": {
+              "_id": "dnd5eactivity000",
+              "type": "save",
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": false
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "units": "inst",
+                "override": true
+              },
+              "effects": [],
+              "range": {
+                "override": true,
+                "units": "ft",
+                "special": "",
+                "value": "5"
+              },
+              "target": {
+                "prompt": true,
+                "template": {
+                  "contiguous": false,
+                  "units": "ft",
+                  "type": ""
+                },
+                "affects": {
+                  "choice": false,
+                  "count": "1",
+                  "type": "creature",
+                  "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+                },
+                "override": true
+              },
+              "damage": {
+                "onSave": "half",
+                "parts": []
+              },
+              "save": {
+                "ability": "cha",
+                "dc": {
+                  "calculation": "spellcasting",
+                  "formula": ""
+                }
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 100000,
+              "name": "Dismissal",
+              "img": "",
+              "appliedEffects": [
+                "RMeb9TUrFdhXMTzz"
+              ]
+            },
+            "eBbyE0du7mEJWDbZ": {
+              "type": "utility",
+              "name": "Break Enchantment",
+              "_id": "eBbyE0du7mEJWDbZ",
+              "sort": 300000,
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "scaling": {
+                  "allowed": false
+                },
+                "spellSlot": false,
+                "targets": []
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "units": "inst",
+                "concentration": false,
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "override": true,
+                "units": "touch",
+                "special": ""
+              },
+              "target": {
+                "template": {
+                  "contiguous": false,
+                  "units": "ft",
+                  "type": ""
+                },
+                "affects": {
+                  "choice": false,
+                  "count": "1",
+                  "type": "creature",
+                  "special": "Celestial, Elemental, Fey, Fiend, or Undead"
+                },
+                "override": true,
+                "prompt": false
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "roll": {
+                "prompt": false,
+                "visible": false,
+                "name": "",
+                "formula": ""
+              },
+              "img": "",
+              "appliedEffects": []
+            },
+            "0vS3We98acymzUXC": {
+              "type": "utility",
+              "name": "Cast",
+              "_id": "0vS3We98acymzUXC",
+              "sort": 0,
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "scaling": {
+                  "allowed": false
+                },
+                "spellSlot": true,
+                "targets": []
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "units": "inst",
+                "concentration": false,
+                "override": false
+              },
+              "effects": [
+                {
+                  "_id": "RMeb9TUrFdhXMTzz"
+                }
+              ],
+              "range": {
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "contiguous": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false,
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "roll": {
+                "prompt": false,
+                "visible": false,
+                "name": "",
+                "formula": ""
+              },
+              "img": "systems/dnd5e/icons/svg/trait-damage-immunities.svg",
+              "appliedEffects": [
+                "RMeb9TUrFdhXMTzz"
+              ]
+            }
+          },
+          "identifier": "dispel-evil-and-good"
+        },
+        "_id": "phbsplDispelEvil",
+        "type": "spell",
+        "img": "icons/magic/holy/yin-yang-balance-symbol.webp",
+        "effects": [
+          {
+            "name": "Dispelling Evil and Good",
+            "origin": "Compendium.dnd5e.spells24.Item.phbsplDispelEvil",
+            "duration": {
+              "value": 1,
+              "units": "rounds",
+              "expiry": "turnStart",
+              "expired": false
+            },
+            "disabled": false,
+            "flags": {},
+            "img": "icons/magic/light/orb-hands-humanoid-yellow.webp",
+            "_id": "RMeb9TUrFdhXMTzz",
+            "type": "base",
+            "system": {
+              "changes": [],
+              "magical": true
+            },
+            "description": "<p>For the duration, Celestials, Elementals, Fey, Fiends, and Undead have Disadvantage on attack rolls against you. You can end the spell early by using either of the following special functions: <strong>Break Enchantment</strong> or <strong>Dismissal</strong>.</p>",
+            "tint": "#ffffff",
+            "transfer": false,
+            "statuses": [],
+            "sort": 0,
+            "_stats": {
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "coreVersion": "14.364",
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.0",
+              "createdTime": 1783543974676,
+              "modifiedTime": 1783543974676,
+              "lastModifiedBy": "dnd5ebuilder0000",
+              "exportSource": null
+            },
+            "start": null,
+            "showIcon": 1,
+            "folder": null,
+            "_key": "!items.effects!phbsplDispelEvil.RMeb9TUrFdhXMTzz"
+          }
+        ],
+        "folder": "beZ8MTpWY2cMEUlp",
+        "sort": 2300000,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "14.364",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425950100,
+          "modifiedTime": 1783543974676,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbsplDispelEvil"
+      },
+      "name": "Dispel Evil and Good",
+      "uuid": "Compendium.dnd5e.spells24.Item.phbsplDispelEvil"
+    },
+    {
+      "source": "packs/_source/spells24/6th-level/circle-of-death.yml",
+      "sha256": "f6f7265359f704459547d6cb734d40c531f8571f89289a1db2c9a692b1cdbce2",
+      "document": {
+        "name": "Circle of Death",
+        "system": {
+          "description": {
+            "value": "<p>Negative energy ripples out in a 60-foot-radius Sphere from a point you choose within range. Each creature in that area makes a Constitution saving throw, taking 8d8 Necrotic damage on a failed save or half as much damage on a successful one.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 2d8 for each spell slot level above 6.</p>",
+            "chat": ""
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "activation": {
+            "type": "action",
+            "condition": "",
+            "value": null
+          },
+          "duration": {
+            "value": "",
+            "units": "inst"
+          },
+          "target": {
+            "affects": {
+              "choice": false,
+              "count": "",
+              "type": "creature",
+              "special": ""
+            },
+            "template": {
+              "units": "ft",
+              "contiguous": false,
+              "type": "sphere",
+              "size": "60",
+              "count": ""
+            }
+          },
+          "range": {
+            "units": "ft",
+            "special": "",
+            "value": "150"
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "level": 6,
+          "school": "nec",
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "materials": {
+            "value": "the powder of a crushed black pearl worth 500+ GP",
+            "consumed": false,
+            "cost": 0,
+            "supply": 0
+          },
+          "preparation": {
+            "mode": "prepared",
+            "prepared": false
+          },
+          "activities": {
+            "pgoDU7b0pl63pTw1": {
+              "type": "save",
+              "_id": "pgoDU7b0pl63pTw1",
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false
+                }
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "units": "inst",
+                "concentration": false,
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "contiguous": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false,
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "damage": {
+                "parts": [
+                  {
+                    "custom": {
+                      "enabled": false,
+                      "formula": ""
+                    },
+                    "number": 8,
+                    "denomination": "8",
+                    "bonus": "",
+                    "types": [
+                      "necrotic"
+                    ],
+                    "scaling": {
+                      "mode": "whole",
+                      "number": 2,
+                      "formula": ""
+                    }
+                  }
+                ],
+                "onSave": "half"
+              },
+              "save": {
+                "ability": "con",
+                "dc": {
+                  "calculation": "spellcasting",
+                  "formula": ""
+                }
+              },
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "identifier": "circle-of-death"
+        },
+        "_id": "phbsplCircleofDe",
+        "type": "spell",
+        "img": "icons/magic/death/skull-horned-goat-pentagram-red.webp",
+        "effects": [],
+        "folder": "8WmlLARx1Df3Ii9v",
+        "sort": 1900000,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425944926,
+          "modifiedTime": 1745256787926,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbsplCircleofDe"
+      },
+      "name": "Circle of Death",
+      "uuid": "Compendium.dnd5e.spells24.Item.phbsplCircleofDe"
+    },
+    {
+      "source": "packs/_source/spells24/1st-level/magic-missile.yml",
+      "sha256": "95d70f125132edbc32640e14d30eb1efe89bb71a0c09fad386b9fdf5793f8518",
+      "document": {
+        "name": "Magic Missile",
+        "system": {
+          "description": {
+            "value": "<p>You create three glowing darts of magical force. Each dart strikes a creature of your choice that you can see within range. A dart deals 1d4 + 1 Force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The spell creates one more dart for each spell slot level above 1.</p><p>[[2 + @item.level]]{Level [[lookup @item.level]] darts}</p>",
+            "chat": ""
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "activation": {
+            "type": "action",
+            "condition": "",
+            "value": null
+          },
+          "duration": {
+            "value": "",
+            "units": "inst"
+          },
+          "target": {
+            "affects": {
+              "type": "creature",
+              "count": "2 + @item.level",
+              "choice": false,
+              "special": ""
+            },
+            "template": {
+              "units": "",
+              "contiguous": false,
+              "type": ""
+            }
+          },
+          "range": {
+            "value": "120",
+            "units": "ft",
+            "special": ""
+          },
+          "uses": {
+            "max": "",
+            "recovery": [],
+            "spent": 0
+          },
+          "level": 1,
+          "school": "evo",
+          "properties": [
+            "vocal",
+            "somatic"
+          ],
+          "materials": {
+            "value": "",
+            "consumed": false,
+            "cost": 0,
+            "supply": 0
+          },
+          "preparation": {
+            "mode": "prepared",
+            "prepared": false
+          },
+          "activities": {
+            "dnd5eactivity000": {
+              "_id": "dnd5eactivity000",
+              "type": "damage",
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                }
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "units": "inst",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "override": false
+              },
+              "target": {
+                "prompt": true,
+                "template": {
+                  "contiguous": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false
+              },
+              "damage": {
+                "critical": {
+                  "allow": false,
+                  "bonus": ""
+                },
+                "parts": [
+                  {
+                    "custom": {
+                      "enabled": false,
+                      "formula": ""
+                    },
+                    "number": 1,
+                    "denomination": 4,
+                    "bonus": "1",
+                    "types": [
+                      "force"
+                    ],
+                    "scaling": {
+                      "mode": "",
+                      "number": 1
+                    }
+                  }
+                ]
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "identifier": "magic-missile"
+        },
+        "_id": "phbsplMagicMissi",
+        "type": "spell",
+        "img": "icons/magic/light/projectiles-pink-purple.webp",
+        "effects": [],
+        "folder": "pBaAAtXBCq9FVEnL",
+        "sort": 1100000,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425962402,
+          "modifiedTime": 1745256795784,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbsplMagicMissi"
+      },
+      "name": "Magic Missile",
+      "uuid": "Compendium.dnd5e.spells24.Item.phbsplMagicMissi"
+    },
+    {
+      "source": "packs/_source/spells24/cantrips/shillelagh.yml",
+      "sha256": "ac135e89ec41e00313130e7267cd52d727f5aa7f9a941362216f9fd9a3b4480e",
+      "document": {
+        "name": "Shillelagh",
+        "system": {
+          "description": {
+            "value": "<p>A Club or Quarterstaff you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. If the attack deals damage, it can be Force damage or the weapon's normal damage type (your choice).</p><p>The spell ends early if you cast it again or if you let go of the weapon.</p><p><strong>Cantrip Upgrade.</strong> The damage die changes when you reach levels 5 (d10), 11 (d12), and 17 (2d6).</p>",
+            "chat": ""
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": "",
+            "revision": 2
+          },
+          "activation": {
+            "type": "bonus",
+            "condition": "",
+            "value": null
+          },
+          "duration": {
+            "value": "1",
+            "units": "minute"
+          },
+          "target": {
+            "affects": {
+              "choice": false,
+              "count": "1",
+              "type": "object",
+              "special": "held Club or Quarterstaff"
+            },
+            "template": {
+              "units": "",
+              "contiguous": false,
+              "type": ""
+            }
+          },
+          "range": {
+            "units": "self",
+            "special": ""
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "level": 0,
+          "school": "trs",
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "materials": {
+            "value": "mistletoe",
+            "consumed": false,
+            "cost": 0,
+            "supply": 0
+          },
+          "preparation": {
+            "mode": "always",
+            "prepared": false
+          },
+          "activities": {
+            "B4nxtIzrCEGEzq1T": {
+              "type": "enchant",
+              "_id": "B4nxtIzrCEGEzq1T",
+              "sort": 0,
+              "activation": {
+                "type": "action",
+                "value": null,
+                "override": false
+              },
+              "consumption": {
+                "scaling": {
+                  "allowed": false
+                },
+                "spellSlot": true,
+                "targets": []
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "units": "inst",
+                "concentration": false,
+                "override": false
+              },
+              "effects": [
+                {
+                  "_id": "QPsqj6jfS0iXSrTs",
+                  "level": {
+                    "min": null,
+                    "max": 4
+                  },
+                  "riders": {
+                    "activity": [],
+                    "effect": [],
+                    "item": []
+                  }
+                },
+                {
+                  "_id": "Oy8fnNNzPmehxXio",
+                  "level": {
+                    "min": 5,
+                    "max": 10
+                  },
+                  "riders": {
+                    "activity": [],
+                    "effect": [],
+                    "item": []
+                  }
+                },
+                {
+                  "_id": "advnpQaBnsbuv02y",
+                  "level": {
+                    "min": 11,
+                    "max": 16
+                  },
+                  "riders": {
+                    "activity": [],
+                    "effect": [],
+                    "item": []
+                  }
+                },
+                {
+                  "_id": "X9xoN8qHUiCc4SZR",
+                  "level": {
+                    "min": 17,
+                    "max": null
+                  },
+                  "riders": {
+                    "activity": [],
+                    "effect": [],
+                    "item": []
+                  }
+                }
+              ],
+              "range": {
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "contiguous": false,
+                  "units": "ft"
+                },
+                "affects": {
+                  "choice": false
+                },
+                "override": false,
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "enchant": {},
+              "restrictions": {
+                "allowMagical": true,
+                "categories": [
+                  "simpleM"
+                ],
+                "properties": [],
+                "type": "weapon"
+              },
+              "name": "Imbue Weapon",
+              "img": "",
+              "appliedEffects": [
+                "QPsqj6jfS0iXSrTs",
+                "Oy8fnNNzPmehxXio",
+                "advnpQaBnsbuv02y",
+                "X9xoN8qHUiCc4SZR"
+              ]
+            },
+            "ONVab5lmTqJwwMBC": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": null,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "value": "",
+                "units": "",
+                "special": "",
+                "override": false,
+                "concentration": false
+              },
+              "effects": [],
+              "range": {
+                "units": "",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": true,
+                "override": false
+              },
+              "attack": {
+                "ability": "spellcasting",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "melee",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "ONVab5lmTqJwwMBC",
+              "name": "Spellcasting Attack",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "identifier": "shillelagh"
+        },
+        "_id": "phbsplShillelagh",
+        "type": "spell",
+        "img": "icons/magic/nature/root-vine-coiled-crook.webp",
+        "effects": [
+          {
+            "type": "enchantment",
+            "name": "Shillelagh (1d8)",
+            "img": "icons/magic/nature/root-vine-coiled-crook.webp",
+            "disabled": false,
+            "_id": "QPsqj6jfS0iXSrTs",
+            "system": {
+              "changes": [
+                {
+                  "key": "system.damage.base.denomination",
+                  "value": 8,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "pYAYnvIpQGh5kCw6"
+                },
+                {
+                  "key": "system.damage.base.types",
+                  "value": "force",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "gAGXWQkjfbtvMGfs"
+                },
+                {
+                  "key": "system.damage.base.number",
+                  "value": 1,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "MUBHi0ncRSWCA0GG"
+                },
+                {
+                  "key": "name",
+                  "value": "{} Shillelagh",
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "OBtwF1jAWFIoX4El"
+                },
+                {
+                  "key": "system.damage.base.custom.enabled",
+                  "value": 0,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "03xEhyGMEJ4LHFNN"
+                },
+                {
+                  "key": "activities[attack].attack.ability",
+                  "value": "none",
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "vSDUdoixaFCk3ymh"
+                },
+                {
+                  "key": "activities[attack].attack.bonus",
+                  "value": "max(@abilities.str.mod, @attributes.spell.mod)",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "mCmtoOSlOnkKNBm0"
+                },
+                {
+                  "key": "system.damage.base.bonus",
+                  "value": "max(@abilities.str.mod, @attributes.spell.mod)",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "jZ50QZzHsfP5w6xR"
+                }
+              ]
+            },
+            "duration": {
+              "value": 60,
+              "units": "seconds",
+              "expiry": "turnStart",
+              "expired": false
+            },
+            "description": "",
+            "origin": null,
+            "tint": "#ffffff",
+            "transfer": false,
+            "statuses": [],
+            "sort": 0,
+            "flags": {},
+            "_stats": {
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "coreVersion": "14.364",
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.0",
+              "createdTime": 1725554262842,
+              "modifiedTime": 1783543976826,
+              "lastModifiedBy": "dnd5ebuilder0000",
+              "exportSource": null
+            },
+            "start": null,
+            "showIcon": 1,
+            "folder": null,
+            "_key": "!items.effects!phbsplShillelagh.QPsqj6jfS0iXSrTs"
+          },
+          {
+            "type": "enchantment",
+            "name": "Shillelagh (1d10)",
+            "img": "icons/magic/nature/root-vine-coiled-crook.webp",
+            "disabled": false,
+            "system": {
+              "changes": [
+                {
+                  "key": "system.damage.base.denomination",
+                  "value": 10,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "H1GK0PcFlp6nwTeT"
+                },
+                {
+                  "key": "system.damage.base.types",
+                  "value": "force",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "VdxMh8t2JA6O00mq"
+                },
+                {
+                  "key": "system.damage.base.number",
+                  "value": 1,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "PtBGHi5vIhp4MEY4"
+                },
+                {
+                  "key": "name",
+                  "value": "{} (Shillelagh)",
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "7F4QoksDul0RLY11"
+                },
+                {
+                  "key": "system.damage.base.custom.enabled",
+                  "value": 0,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "h8FtbtiAU6BsOgRV"
+                },
+                {
+                  "key": "activities[attack].attack.ability",
+                  "value": "none",
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "Zc8fAXfpZfo3Ojy9"
+                },
+                {
+                  "key": "activities[attack].attack.bonus",
+                  "value": "max(@abilities.str.mod, @attributes.spell.mod)",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "lqa8iNTwmJXXRgsB"
+                },
+                {
+                  "key": "system.damage.base.bonus",
+                  "value": "max(@abilities.str.mod, @attributes.spell.mod)",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "g3yMikO7UORmgqIi"
+                }
+              ]
+            },
+            "duration": {
+              "value": 60,
+              "units": "seconds",
+              "expiry": "turnStart",
+              "expired": false
+            },
+            "description": "",
+            "origin": null,
+            "tint": "#ffffff",
+            "transfer": false,
+            "statuses": [],
+            "sort": 0,
+            "flags": {},
+            "_stats": {
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "coreVersion": "14.364",
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.0",
+              "createdTime": 1725555103514,
+              "modifiedTime": 1783543976827,
+              "lastModifiedBy": "dnd5ebuilder0000",
+              "exportSource": null
+            },
+            "_id": "Oy8fnNNzPmehxXio",
+            "start": null,
+            "showIcon": 1,
+            "folder": null,
+            "_key": "!items.effects!phbsplShillelagh.Oy8fnNNzPmehxXio"
+          },
+          {
+            "type": "enchantment",
+            "name": "Shillelagh (1d12)",
+            "img": "icons/magic/nature/root-vine-coiled-crook.webp",
+            "disabled": false,
+            "system": {
+              "changes": [
+                {
+                  "key": "system.damage.base.denomination",
+                  "value": 12,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "lOeCQWFja7pZbpdv"
+                },
+                {
+                  "key": "system.damage.base.types",
+                  "value": "force",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "Ld4VCKewI1ucfJ5B"
+                },
+                {
+                  "key": "system.damage.base.number",
+                  "value": 1,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "m0XWYAIo7tgchqC7"
+                },
+                {
+                  "key": "name",
+                  "value": "{} (Shillelagh)",
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "g3HPicsMrqvvxUuU"
+                },
+                {
+                  "key": "system.damage.base.custom.enabled",
+                  "value": 0,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "jIDqFS1e8RFzlP64"
+                },
+                {
+                  "key": "activities[attack].attack.ability",
+                  "value": "none",
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "EdRqczxUPiWdLVFx"
+                },
+                {
+                  "key": "activities[attack].attack.bonus",
+                  "value": "max(@abilities.str.mod, @attributes.spell.mod)",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "3NF90DmF28s8wTxo"
+                },
+                {
+                  "key": "system.damage.base.bonus",
+                  "value": "max(@abilities.str.mod, @attributes.spell.mod)",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "7O8Q7FhzfUOfvcUn"
+                }
+              ]
+            },
+            "duration": {
+              "value": 60,
+              "units": "seconds",
+              "expiry": "turnStart",
+              "expired": false
+            },
+            "description": "",
+            "origin": null,
+            "tint": "#ffffff",
+            "transfer": false,
+            "statuses": [],
+            "sort": 0,
+            "flags": {},
+            "_stats": {
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "coreVersion": "14.364",
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.0",
+              "createdTime": 1725555133416,
+              "modifiedTime": 1783543976827,
+              "lastModifiedBy": "dnd5ebuilder0000",
+              "exportSource": null
+            },
+            "_id": "advnpQaBnsbuv02y",
+            "start": null,
+            "showIcon": 1,
+            "folder": null,
+            "_key": "!items.effects!phbsplShillelagh.advnpQaBnsbuv02y"
+          },
+          {
+            "type": "enchantment",
+            "name": "Shillelagh (2d6)",
+            "img": "icons/magic/nature/root-vine-coiled-crook.webp",
+            "disabled": false,
+            "system": {
+              "changes": [
+                {
+                  "key": "system.damage.base.denomination",
+                  "value": 6,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "r8ZsrBzfEvLT8zA0"
+                },
+                {
+                  "key": "system.damage.base.types",
+                  "value": "force",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "oHlF69f60CNzRVhw"
+                },
+                {
+                  "key": "system.damage.base.number",
+                  "value": 2,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "jUDooSOnfcMspio7"
+                },
+                {
+                  "key": "name",
+                  "value": "{} (Shillelagh)",
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "DndfTOGFmdjQ4FZO"
+                },
+                {
+                  "key": "system.damage.base.custom.enabled",
+                  "value": 0,
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "QQnZpV3Oo0bJ3RE5"
+                },
+                {
+                  "key": "activities[attack].attack.ability",
+                  "value": "none",
+                  "priority": null,
+                  "type": "override",
+                  "phase": "initial",
+                  "_id": "4CNAdEfvyniF84q6"
+                },
+                {
+                  "key": "activities[attack].attack.bonus",
+                  "value": "max(@abilities.str.mod, @attributes.spell.mod)",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "GkhVFtR7M84yfPj5"
+                },
+                {
+                  "key": "system.damage.base.bonus",
+                  "value": "max(@abilities.str.mod, @attributes.spell.mod)",
+                  "priority": null,
+                  "type": "add",
+                  "phase": "initial",
+                  "_id": "cnutYg4uQeiAIEb8"
+                }
+              ]
+            },
+            "duration": {
+              "value": 60,
+              "units": "seconds",
+              "expiry": "turnStart",
+              "expired": false
+            },
+            "description": "",
+            "origin": null,
+            "tint": "#ffffff",
+            "transfer": false,
+            "statuses": [],
+            "sort": 0,
+            "flags": {},
+            "_stats": {
+              "compendiumSource": null,
+              "duplicateSource": null,
+              "coreVersion": "14.364",
+              "systemId": "dnd5e",
+              "systemVersion": "6.0.0",
+              "createdTime": 1725555207760,
+              "modifiedTime": 1783543976827,
+              "lastModifiedBy": "dnd5ebuilder0000",
+              "exportSource": null
+            },
+            "_id": "X9xoN8qHUiCc4SZR",
+            "start": null,
+            "showIcon": 1,
+            "folder": null,
+            "_key": "!items.effects!phbsplShillelagh.X9xoN8qHUiCc4SZR"
+          }
+        ],
+        "folder": "4FhsY9FJQd7h7MZb",
+        "sort": 112500,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "14.364",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425970676,
+          "modifiedTime": 1783543976826,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbsplShillelagh"
+      },
+      "name": "Shillelagh",
+      "uuid": "Compendium.dnd5e.spells24.Item.phbsplShillelagh"
+    },
+    {
+      "source": "packs/_source/equipment24/weapons/martial-ranged/longbow.yml",
+      "sha256": "ee4856bf8e5242ec6b1053ed2066387c0645bb9e1d75faf7de50526246109f89",
+      "document": {
+        "name": "Longbow",
+        "system": {
+          "description": {
+            "value": "",
+            "chat": ""
+          },
+          "price": {
+            "value": 50,
+            "denomination": "gp"
+          },
+          "source": {
+            "custom": "",
+            "rules": "2024",
+            "license": "CC-BY-4.0",
+            "book": ""
+          },
+          "identified": true,
+          "unidentified": {
+            "description": ""
+          },
+          "container": null,
+          "quantity": 1,
+          "weight": {
+            "value": 2,
+            "units": "lb"
+          },
+          "rarity": "",
+          "attunement": "",
+          "attuned": false,
+          "equipped": false,
+          "cover": null,
+          "crewed": false,
+          "range": {
+            "value": 150,
+            "long": 600,
+            "units": "ft",
+            "reach": null
+          },
+          "uses": {
+            "max": "",
+            "spent": 0,
+            "recovery": []
+          },
+          "damage": {
+            "versatile": {
+              "number": null,
+              "denomination": null,
+              "bonus": "",
+              "types": [],
+              "custom": {
+                "enabled": true,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "base": {
+              "number": 1,
+              "denomination": 8,
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false
+              },
+              "scaling": {
+                "number": 1
+              },
+              "bonus": ""
+            }
+          },
+          "armor": {
+            "value": null
+          },
+          "hp": {
+            "value": null,
+            "max": null,
+            "dt": null,
+            "conditions": ""
+          },
+          "type": {
+            "value": "martialR",
+            "baseItem": "longbow"
+          },
+          "magicalBonus": null,
+          "properties": [
+            "amm",
+            "hvy",
+            "two"
+          ],
+          "proficient": null,
+          "activities": {
+            "b04WToYLVtgE03Dm": {
+              "type": "attack",
+              "activation": {
+                "type": "action",
+                "value": 1,
+                "condition": "",
+                "override": false
+              },
+              "consumption": {
+                "targets": [],
+                "scaling": {
+                  "allowed": false,
+                  "max": ""
+                },
+                "spellSlot": true
+              },
+              "description": {
+                "chatFlavor": ""
+              },
+              "duration": {
+                "concentration": false,
+                "value": "",
+                "units": "inst",
+                "special": "",
+                "override": false
+              },
+              "effects": [],
+              "range": {
+                "value": "150",
+                "units": "ft",
+                "special": "",
+                "override": false
+              },
+              "target": {
+                "template": {
+                  "count": "",
+                  "contiguous": false,
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "height": "",
+                  "units": ""
+                },
+                "affects": {
+                  "count": "",
+                  "type": "",
+                  "choice": false,
+                  "special": ""
+                },
+                "prompt": false,
+                "override": false
+              },
+              "attack": {
+                "ability": "",
+                "bonus": "",
+                "critical": {
+                  "threshold": null
+                },
+                "flat": false,
+                "type": {
+                  "value": "ranged",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "critical": {
+                  "bonus": ""
+                },
+                "includeBase": true,
+                "parts": []
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": [],
+                "max": ""
+              },
+              "sort": 0,
+              "_id": "b04WToYLVtgE03Dm",
+              "name": "",
+              "img": "",
+              "appliedEffects": []
+            }
+          },
+          "ammunition": {
+            "type": "arrow"
+          },
+          "mastery": "slow",
+          "identifier": "longbow"
+        },
+        "_id": "phbwepLongbow000",
+        "type": "weapon",
+        "folder": "0qKr1rbesCSNE0MA",
+        "img": "icons/weapons/bows/longbow-recurve-leather-brown.webp",
+        "effects": [],
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "dnd5e": {
+            "riders": {
+              "activity": [],
+              "effect": []
+            }
+          }
+        },
+        "_stats": {
+          "duplicateSource": null,
+          "coreVersion": "13.344",
+          "systemId": "dnd5e",
+          "systemVersion": "4.4.0",
+          "createdTime": 1724425919520,
+          "modifiedTime": 1745431704598,
+          "lastModifiedBy": "dnd5ebuilder0000",
+          "exportSource": null
+        },
+        "_key": "!items!phbwepLongbow000"
+      },
+      "name": "longbow"
+    }
+  ]
+}

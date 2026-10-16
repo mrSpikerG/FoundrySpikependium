@@ -1,0 +1,162 @@
+{
+  "_id": "4rOk23WfNutxyvuA",
+  "name": "Адепт школы Ограждения",
+  "type": "feat",
+  "img": "icons/sundries/books/book-open-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Повышение характеристики.</strong> Увеличьте Интеллект, Мудрость или Харизму на 1, максимум до 20.</p><p><strong>Дополнительные заклинания.</strong> Когда вам становятся доступны ячейки указанного уровня, соответствующее заклинание и заклинания меньших уровней из таблицы всегда подготовлены. Доступность определяется максимумом ячеек, а не оставшимся запасом; учитываются Магия договора и мультикласс.</p><ul><li><p>Ячейка 1: @UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{Щит}</p></li><li><p>Ячейка 2: @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{Малое восстановление}</p></li><li><p>Ячейка 3: @UUID[Compendium.dnd5e.spells24.Item.phbProtectionFro]{Защита от энергии}</p></li><li><p>Ячейка 4: @UUID[Compendium.dnd5e.spells24.Item.phbsplBanishment]{Изгнание}</p></li><li><p>Ячейка 5: @UUID[Compendium.dnd5e.spells24.Item.phbsplMassCureWo]{Множественное лечение ран}</p></li></ul><p><strong>Защитные чары.</strong> При сотворении заклинания школы Ограждения с использованием ячейки вы или одно видимое вами существо в пределах 30 футов получаете Временные хиты, равные удвоенному уровню потраченной ячейки. Временные хиты не складываются.</p><p><strong>Применение.</strong> При добавлении черты используйте штатный мастер для выбора +1 к характеристике. Заклинания выдаются штатным продвижением и дополняются автоматически при получении ячеек нового уровня. После потери соответствующих ячеек предоставленная копия перестаёт быть всегда подготовленной и блокируется, сохраняя пользовательские изменения; при возвращении ячеек снова доступна. Самостоятельно полученные копии того же заклинания сохраняются. Стойкий призыв добавляет бонус к подходящему спасброску Концентрации. Восстановление Вмешательства при расходе ячейки Прорицания учитывается штатно.</p><p><strong>Защитные чары в Foundry.</strong> В окне сотворения выбирается заклинатель либо отмеченный токен в пределах 30 футов; видимость другой цели подтверждается флажком. Учитывается реальный уровень потраченной личной ячейки или ячейки Договора, высота и единицы сцены. Выдаётся удвоенный уровень ячейки во Временных хитах; больший имеющийся запас сохраняется. Бесплатное сотворение и расход предмета бонуса не дают. Отмена расхода не отнимает уже выданные Временные хиты.</p><p>Кости хитов, применение Преимущества/Помехи Вмешательства, исключение компонентов и распознавание иллюзий пока разрешайте вручную.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "30",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "school-adept-abj",
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "Сотворение заклинаний или Магия договора",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": [
+        "feat:spellcasting",
+        "feat:pact-magic"
+      ]
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "Fr3a5m4h8O5gZnVm",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [
+            "str",
+            "dex",
+            "con"
+          ],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Интеллект, Мудрость или Харизма +1",
+        "hint": ""
+      },
+      {
+        "_id": "iSnjeDQ55h43dOdX",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplShield0000",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplLesserRest",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbProtectionFro",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplBanishment",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplMassCureWo",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Заклинания школы по доступным ячейкам",
+        "hint": "Выдаются только уровни, для которых у персонажа есть ячейки; дальнейшие уровни добавляются автоматически."
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "E74yHA9pRQjiMBTf",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:au-school-adept-abj",
+      "schoolAdept": {
+        "school": "abj",
+        "spells": [
+          {
+            "level": 1,
+            "uuid": "Compendium.dnd5e.spells24.Item.phbsplShield0000"
+          },
+          {
+            "level": 2,
+            "uuid": "Compendium.dnd5e.spells24.Item.phbsplLesserRest"
+          },
+          {
+            "level": 3,
+            "uuid": "Compendium.dnd5e.spells24.Item.phbProtectionFro"
+          },
+          {
+            "level": 4,
+            "uuid": "Compendium.dnd5e.spells24.Item.phbsplBanishment"
+          },
+          {
+            "level": 5,
+            "uuid": "Compendium.dnd5e.spells24.Item.phbsplMassCureWo"
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!4rOk23WfNutxyvuA"
+}

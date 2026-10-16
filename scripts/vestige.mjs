@@ -7,7 +7,7 @@ const physicalItems = actor => actor.items.filter(item => item.system.quantity !
 
 export async function dropVestigeGear(token) {
   const source = token.actor;
-  if (!source?.flags.spikependium?.key?.startsWith("actor:vestige-")) return true;
+  if (!/^actor:(vestige-|au-combat-familiar-)/.test(source?.flags.spikependium?.key ?? "")) return true;
   if (!game.user.isActiveGM || !source.isOwner || dropping.has(source.uuid)) return false;
   dropping.add(source.uuid);
   try {
@@ -29,7 +29,7 @@ export async function dropVestigeGear(token) {
         prototypeToken: { name: "Оставленное снаряжение", actorLink: true, texture: { src: IMAGE }, width: 1, height: 1 },
         flags: { spikependium: { vestigeDrop: { source: token.uuid, actor: source.uuid, state: "prepared", items, currency } } }
       }, { keepId: true });
-      if (!loot) throw Error("Не удалось сохранить снаряжение реликта");
+      if (!loot) throw Error("Не удалось сохранить снаряжение спутника");
     }
     const record = loot.flags.spikependium.vestigeDrop;
     if (record.actor !== source.uuid || !loot.isOwner) throw Error("Источник сохранённого снаряжения изменился");
@@ -41,7 +41,7 @@ export async function dropVestigeGear(token) {
     }
     const currentCoins = source.system.currency;
     if (Object.values(currentCoins).some(n => n > 0) && comparable(currentCoins) !== comparable(record.currency))
-      throw Error("Монеты реликта изменились во время исчезновения");
+      throw Error("Монеты спутника изменились во время исчезновения");
     if (comparable(loot.system.currency) !== comparable(record.currency)) throw Error("Сохранённые монеты уже изменены");
     if (!token.parent.tokens.some(t => t.id === token.id && t.actor.uuid === source.uuid)) throw Error("Исходный токен исчез до передачи снаряжения");
     if (!token.parent.tokens.some(t => t.actorId === loot.id)) {
@@ -63,8 +63,8 @@ export async function dropVestigeGear(token) {
     await loot.setFlag("spikependium", "vestigeDrop.state", "done");
     return true;
   } catch (error) {
-    console.error("Spikependium: оставленное снаряжение реликта", error);
-    ui.notifications.error("Исчезновение реликта остановлено: не удалось закончить передачу снаряжения. Проверьте исходный лист и сохранённый инвентарь в разделе персонажей перед ручными действиями.");
+    console.error("Spikependium: оставленное снаряжение спутника", error);
+    ui.notifications.error("Исчезновение спутника остановлено: не удалось закончить передачу снаряжения. Проверьте исходный лист и сохранённый инвентарь в разделе персонажей перед ручными действиями.");
     return false;
   } finally { dropping.delete(source.uuid); }
 }

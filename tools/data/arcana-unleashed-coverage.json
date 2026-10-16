@@ -2,8 +2,8 @@
   "book": "AU",
   "titleOnWebsite": "Магия необузданная",
   "titleInModule": "Неудержимая магия",
-  "checkedOn": "2026-10-14",
-  "moduleVersion": "1.84.0",
+  "checkedOn": "2026-10-17",
+  "moduleVersion": "1.141.0",
   "source": "https://ruleholder.com/sourcebooks/au",
   "scope": "Book content inventory compared with generated compendium sources; not a live Foundry automation test.",
   "chapterSnapshots": [
@@ -133,68 +133,90 @@
     },
     "backgrounds": {
       "total": 10,
-      "imported": 0,
+      "imported": 10,
       "entries": [
         {
           "name": "Агент Девятого пера",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-ninth-quill-agent",
+          "moduleName": "Агент Девятого пера"
         },
         {
           "name": "Артист Фантасмагорического цирка",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-phantasmagoria-performer",
+          "moduleName": "Артист Фантасмагорического цирка"
         },
         {
           "name": "Дрессировщик фамильяров",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-familiar-trainer",
+          "moduleName": "Дрессировщик фамильяров"
         },
         {
           "name": "Новобранец Могильного завета",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-grave-covenant-recruit",
+          "moduleName": "Новобранец Могильного завета"
         },
         {
           "name": "Охотник за бурями Горнила",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-crucible-stormchaser",
+          "moduleName": "Охотник за бурями Горнила"
         },
         {
           "name": "Подопечный Оберегающих дланей",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-warding-hands-ward",
+          "moduleName": "Подопечный Оберегающих дланей"
         },
         {
           "name": "Подопытный Космического рассвета",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-cosmic-dawn-subject",
+          "moduleName": "Подопытный Космического рассвета"
         },
         {
           "name": "Посвящённый Ткачей горизонта",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-horizon-weavers-initiate",
+          "moduleName": "Посвящённый Ткачей горизонта"
         },
         {
           "name": "Ученик провидца",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-seer-apprentice",
+          "moduleName": "Ученик провидца"
         },
         {
           "name": "Шпион Самоцветного конклава",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "notImported"
+          "status": "imported",
+          "key": "background:au-gemstone-conclave-spy",
+          "moduleName": "Шпион Самоцветного конклава"
         }
       ]
     },
     "feats": {
       "total": 29,
-      "imported": 9,
+      "imported": 21,
       "entries": [
         {
           "name": "Друг фамильяра",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#cherty-proiskhozhdeniya-drug-familyara",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:familiar-friend",
+          "moduleName": "Друг фамильяра"
         },
         {
           "name": "Мистическая перегрузка",
@@ -227,7 +249,9 @@
         {
           "name": "Мистический лазутчик",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#cherty-proiskhozhdeniya-misticheskiy-lazutchik",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:arcane-infiltrator",
+          "moduleName": "Мистический лазутчик"
         },
         {
           "name": "Мистический оберег",
@@ -253,47 +277,65 @@
         {
           "name": "Прыгающий через порталы",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#cherty-proiskhozhdeniya-prygayushchiy-cherez-portaly",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:portal-hopper",
+          "moduleName": "Прыгающий через порталы"
         },
         {
           "name": "Адепт школы Воплощения",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-voploshcheniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-school-adept-con",
+          "moduleName": "Адепт школы Призыва"
         },
         {
           "name": "Адепт школы Иллюзии",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-illyuzii",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-school-adept-ill",
+          "moduleName": "Адепт школы Иллюзии"
         },
         {
           "name": "Адепт школы Некромантии",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-nekromantii",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-school-adept-nec",
+          "moduleName": "Адепт школы Некромантии"
         },
         {
           "name": "Адепт школы Очарования",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-ocharovaniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-school-adept-enc",
+          "moduleName": "Адепт школы Очарования"
         },
         {
           "name": "Адепт школы Превращения",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-prevrashcheniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-school-adept-trs",
+          "moduleName": "Адепт школы Преобразования"
         },
         {
           "name": "Адепт школы Преграждения",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-pregrazhdeniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-school-adept-abj",
+          "moduleName": "Адепт школы Ограждения"
         },
         {
           "name": "Адепт школы Прорицания",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-proritsaniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-school-adept-div",
+          "moduleName": "Адепт школы Прорицания"
         },
         {
           "name": "Адепт школы Эвокации",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-evokatsii",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-school-adept-evo",
+          "moduleName": "Адепт школы Воплощения"
         },
         {
           "name": "Воинственный фамильяр",
@@ -347,7 +389,10 @@
         {
           "name": "Дар железного разума",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#epicheskie-dary-dar-zheleznogo-razuma",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-boon-of-steel-mind",
+          "moduleName": "Дар стального разума",
+          "page": 33
         },
         {
           "name": "Дар мастерства школы магии",
@@ -358,7 +403,7 @@
     },
     "spells": {
       "total": 33,
-      "imported": 21,
+      "imported": 33,
       "entries": [
         {
           "name": "Аура изворотливости",
@@ -370,7 +415,9 @@
         {
           "name": "Боевой фамильяр",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-boevoy-familyar",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-combat-familiar",
+          "moduleName": "Боевой фамильяр"
         },
         {
           "name": "Взгляд в прошлое",
@@ -389,12 +436,16 @@
         {
           "name": "Вой баньши",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-voy-banshi",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-wail-of-the-banshee",
+          "moduleName": "Вопль банши"
         },
         {
           "name": "Волны утомления",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-volny-utomleniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-waves-of-exhaustion",
+          "moduleName": "Волны истощения"
         },
         {
           "name": "Гнилостный взрыв",
@@ -441,17 +492,23 @@
         {
           "name": "Иллюзорный дракон",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-illyuzornyy-drakon",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-illusory-dragon",
+          "moduleName": "Иллюзорный дракон"
         },
         {
           "name": "Искажённое расстояние",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-iskazhyonnoe-rasstoyanie",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-distance-distortion",
+          "moduleName": "Искажение дистанции"
         },
         {
           "name": "Истощение",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-istoshchenie",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-enervation",
+          "moduleName": "Обессиливание"
         },
         {
           "name": "Кольцо молний",
@@ -470,7 +527,9 @@
         {
           "name": "Миг предвидения",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-mig-predvideniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-moment-of-prescience",
+          "moduleName": "Момент предвидения"
         },
         {
           "name": "Могильная земля",
@@ -496,17 +555,23 @@
         {
           "name": "Оцепенение",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-otsepenenie",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-enthrallment",
+          "moduleName": "Заворожение"
         },
         {
           "name": "Переплетение судьбы",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-perepletenie-sudby",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-fates-intertwined",
+          "moduleName": "Переплетение судьбы"
         },
         {
           "name": "Поле для дуэли",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-pole-dlya-dueli",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-dueling-ground",
+          "moduleName": "Место для дуэли"
         },
         {
           "name": "Призыв духа динозавра",
@@ -546,7 +611,8 @@
         {
           "name": "Слово силы: боль",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-slovo-sily-bol",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-power-word-pain"
         },
         {
           "name": "Увядание и цветение",
@@ -558,7 +624,9 @@
         {
           "name": "Фонарь духов",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya#zaklinaniya-ot-a-do-ya-fonar-dukhov",
-          "status": "notImported"
+          "status": "imported",
+          "key": "spell:au-spirit-lantern",
+          "moduleName": "Фонарь духов"
         },
         {
           "name": "Шаткая опора",
@@ -571,22 +639,25 @@
     },
     "spellCompanionProfiles": {
       "total": 9,
-      "imported": 6,
+      "imported": 9,
       "entries": [
         {
           "name": "Боевой фамильяр (Громила)",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "actor:au-combat-familiar-bruiser"
         },
         {
           "name": "Боевой фамильяр (Летун)",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "actor:au-combat-familiar-flyer"
         },
         {
           "name": "Боевой фамильяр (Ловчий)",
           "url": "https://ruleholder.com/sourcebooks/au/zaklinaniya",
-          "status": "notImported"
+          "status": "imported",
+          "key": "actor:au-combat-familiar-skulker"
         },
         {
           "name": "Дух динозавра (анкилозавр)",
@@ -1076,8 +1147,14 @@
     {
       "key": "journal:au-spell-lists",
       "name": "Неудержимая магия — списки заклинаний",
-      "status": "partial",
-      "note": "Lists contain the 21 imported spells, not all 33 book spells."
+      "status": "imported",
+      "note": "Все 33 заклинания представлены в списках девяти классов; автоматизация ещё дорабатывается."
+    },
+    {
+      "key": "feature:au-dragon-study",
+      "name": "Изучить иллюзорного дракона",
+      "status": "imported",
+      "note": "Вспомогательное действие наблюдателя, не книжная черта"
     }
   ],
   "missingRuleSections": [],
@@ -1086,8 +1163,8 @@
     "Imported means the document exists; this inventory does not certify every mechanical field or runtime behavior.",
     "Different Russian translations are matched by spell/feat rules; names alone are not used as evidence of missing content.",
     "47 magic item entries and 5 evolving item families count designs, not every rarity or base-weapon variant.",
-    "Some website spell descriptions contain unresolved numeric placeholders (e.g. sphere radius); those fields need another source before implementation.",
-    "The website supplies chapters missing from the local PDF; missingChapters in the PDF inventory remains a description of that PDF only."
+    "The website supplies chapters missing from the local PDF; missingChapters in the PDF inventory remains a description of that PDF only.",
+    "Предыстории перенесены с нативными продвижениями; расход перемещения Шага сквозь портал и событийные условия Дружбы ещё не автоматизированы."
   ],
   "userScope": {
     "updatedOn": "2026-10-15",
@@ -1125,5 +1202,109 @@
       "name": "Отголосок-спутник: сверка книжной версии и её параметров",
       "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#pokrovitelstvo-otgoloska-koldun"
     }
-  ]
+  ],
+  "sourceReconciliation": {
+    "checkedOn": "2026-10-16",
+    "pdf": "docs/Arcana_Unleashed_RUS.pdf",
+    "sha256": "06625a9284231aec0f2467c80f24f5e0add9a5ef53869036da0e8e43c3c2b73c",
+    "policy": "Параметры и правила взяты из предоставленного PDF; сайт дополняет отсутствующие главы и используется для сопоставления названий.",
+    "corrections": [
+      {
+        "websiteName": "Волны утомления",
+        "moduleName": "Волны истощения",
+        "page": 37,
+        "field": "Размер конуса",
+        "value": "60 футов",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Искажённое расстояние",
+        "moduleName": "Искажение дистанции",
+        "page": 42,
+        "field": "Радиус сферы",
+        "value": "60 футов",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Поле для дуэли",
+        "moduleName": "Место для дуэли",
+        "page": 43,
+        "field": "Радиус сферы",
+        "value": "15 футов",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Переплетение судьбы",
+        "moduleName": "Переплетение судьбы",
+        "page": 44,
+        "field": "Награда за успешный новый тест",
+        "value": "6к10 временных хитов",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Вой баньши",
+        "moduleName": "Вопль банши",
+        "page": 37,
+        "field": "Состояние после провала при более чем 50 хитах",
+        "value": "Оглохший на 1 час; не Оглушённый",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Боевой фамильяр",
+        "moduleName": "Боевой фамильяр",
+        "page": 35,
+        "field": "Школа, типы и масштабирование блока",
+        "value": "Призыв; Небожитель/Фея/Исчадие; КД 11 + уровень ячейки (+2 Громиле); 30/20 Хитов + 5 за уровень ячейки выше 2-го; атака заклинателя",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Адепт школы Воплощения / Адепт школы Эвокации",
+        "moduleName": "Адепт школы Призыва / Адепт школы Воплощения",
+        "page": "29–31",
+        "field": "Соответствие школ",
+        "value": "Призыв (con) — Стойкий призыв; Воплощение (evo) — Усиленное воплощение; названия модулей по PDF",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Миг предвидения",
+        "moduleName": "Момент предвидения",
+        "page": 43,
+        "field": "Замена результата",
+        "value": "По выбору пользователя заменяется выпавшая к20, а не итог теста; модификаторы и остальные кубики сохраняются",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Слово силы: боль",
+        "moduleName": "Слово силы: боль",
+        "page": 45,
+        "field": "Версия правил PDF",
+        "value": "6к8 Чистой силой без начального спасброска; при 100 Хитах или меньше до урона — Очарование, скорость не более 10 футов и Помеха кроме спасбросков Телосложения; минута без концентрации",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Истощение",
+        "moduleName": "Обессиливание",
+        "page": 44,
+        "field": "Правила предоставленного PDF",
+        "value": "Начальный DEX 6к8, при успехе половина и конец; последующие свои ходы 2к8 бонусным действием; лечение половины нанесённого некротического урона; ячейка усиливает только начальный урон",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Оцепенение",
+        "moduleName": "Заворожение",
+        "page": 40,
+        "field": "Версия правил PDF",
+        "value": "CHA, Очарование и Недееспособность, движение в свой ход, 4к8 психического урона в конце хода в 5 футах; последующий выбор другого существа не содержит окончания на прежних целях; успешный спасбросок исключает повторный выбор в этом сотворении",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Дар железного разума",
+        "moduleName": "Дар стального разума",
+        "page": 33,
+        "field": "Версия правил PDF",
+        "value": "Любая характеристика +1 до 30; концентрация не теряется от урона и обычной Недееспособности; замена концентрации, Окаменение, Бессознательность и смерть сохраняют окончание",
+        "status": "imported"
+      }
+    ]
+  }
 }

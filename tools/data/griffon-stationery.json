@@ -1,0 +1,191 @@
+{
+  "book": "GS1",
+  "rules": "2024",
+  "checkedOn": "2026-10-16",
+  "entries": [
+    {
+      "name": "Свеча анти-света [Candle of Anti-Light]",
+      "key": "item:gs1:anti-light",
+      "url": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=489db3bea0a4bf9a",
+      "sha256": "201c3308f984f1ee2ce12777758333198303a7274d78e4b04ce4a16d0825d56e"
+    },
+    {
+      "name": "Набор свечей тайного писца [Set of Secret Scribe Candles]",
+      "key": "item:gs1:secret-scribe",
+      "url": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=ded7f4845c155824",
+      "sha256": "b6364c9da452445b2c5bbfef34fd578278ebf27e9729978f079879be63ce88fd"
+    },
+    {
+      "name": "Обнуляющий мел [Null Chalk]",
+      "key": "item:gs1:null-chalk",
+      "url": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_one_24&entry=87bb2bf3ada13e65",
+      "sha256": "06c18ea9b820cbd63c97c1a66b4ea094fdea0adaa9e86f3fc6f995bb9ea9d8a6"
+    }
+  ],
+  "nativeCandle": {
+    "source": "https://github.com/foundryvtt/dnd5e/blob/87e94dbd9f930135e0694cd7e7d49f210603cd2c/packs/_source/equipment24/adventuring-gear/candle.yml",
+    "sha256": "3339fb3d665b98d88a575d5cc160ead850c7ad474ca66c9e52117d15f0f9ee89",
+    "document": {
+      "name": "Candle",
+      "system": {
+        "description": {
+          "value": "<p>For 1 hour, a lit Candle sheds Bright Light in a 5-foot radius and Dim Light for an additional 5 feet.</p>",
+          "chat": ""
+        },
+        "price": {
+          "value": 1,
+          "denomination": "cp"
+        },
+        "source": {
+          "custom": "",
+          "rules": "2024",
+          "license": "CC-BY-4.0",
+          "book": ""
+        },
+        "identified": true,
+        "unidentified": {
+          "description": ""
+        },
+        "container": null,
+        "quantity": 1,
+        "weight": {
+          "value": 0,
+          "units": "lb"
+        },
+        "rarity": "",
+        "attunement": "",
+        "attuned": false,
+        "equipped": false,
+        "uses": {
+          "max": "1",
+          "autoDestroy": true,
+          "spent": 0,
+          "recovery": []
+        },
+        "damage": {
+          "base": {
+            "number": null,
+            "denomination": null,
+            "types": [],
+            "custom": {
+              "enabled": false
+            },
+            "scaling": {
+              "number": 1
+            }
+          },
+          "replace": false
+        },
+        "type": {
+          "value": "trinket",
+          "subtype": ""
+        },
+        "magicalBonus": null,
+        "properties": [],
+        "activities": {
+          "8kldn9CuzuAz7dVb": {
+            "type": "utility",
+            "_id": "8kldn9CuzuAz7dVb",
+            "sort": 0,
+            "activation": {
+              "type": "",
+              "value": null,
+              "override": false,
+              "condition": ""
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": [
+                {
+                  "type": "itemUses",
+                  "value": "1",
+                  "target": "",
+                  "scaling": {}
+                }
+              ]
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [],
+            "range": {
+              "override": false,
+              "units": "self",
+              "special": ""
+            },
+            "target": {
+              "template": {
+                "contiguous": false,
+                "units": "ft",
+                "type": ""
+              },
+              "affects": {
+                "choice": false,
+                "count": "",
+                "type": ""
+              },
+              "override": false,
+              "prompt": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "roll": {
+              "prompt": false,
+              "visible": false,
+              "name": "",
+              "formula": ""
+            },
+            "name": "Light",
+            "img": "systems/dnd5e/icons/svg/trait-damage-immunities.svg",
+            "appliedEffects": []
+          }
+        },
+        "identifier": "candle"
+      },
+      "_id": "phbagCandle00000",
+      "type": "consumable",
+      "folder": "uDk4FBYfcP2JnX6t",
+      "img": "icons/sundries/lights/candle-unlit-tan.webp",
+      "effects": [],
+      "sort": 6550000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "dnd5e": {
+          "riders": {
+            "activity": [],
+            "effect": []
+          }
+        }
+      },
+      "_stats": {
+        "duplicateSource": null,
+        "coreVersion": "13.344",
+        "systemId": "dnd5e",
+        "systemVersion": "4.4.0",
+        "createdTime": 1724425907147,
+        "modifiedTime": 1740680133416,
+        "lastModifiedBy": "dnd5ebuilder0000",
+        "exportSource": null
+      },
+      "_key": "!items!phbagCandle00000"
+    }
+  },
+  "pendingAutomation": [
+    "Null Chalk: geometry, individual line lifetime/suppression, first crossing each turn, cover against magic, magical item suppression and pushback",
+    "Secret Scribe: physical pages, separated candle locations and completed minute are adjudicated by participants",
+    "Anti-Light: dropped candle placement, unusual vision, magical light priority, late refund consequences and live rendering"
+  ]
+}

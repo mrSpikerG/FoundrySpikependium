@@ -1,0 +1,260 @@
+{
+  "_id": "1wK9d4OfweMAfajk",
+  "name": "Вопль банши",
+  "type": "spell",
+  "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, колдун, чародей.</em></p><p>Выберите до десяти слышащих вас существ в пределах 60 футов. Цель с 50 хитами или меньше умирает. Цель с большим числом хитов совершает спасбросок Телосложения: провал — [[/damage 12d10 type=psychic]]{12к10} урона психической энергией и состояние &Reference[deafened]{Оглохший} на 1 час; успех — половина урона без состояния. Неспособная слышать цель не затрагивается.</p><p><strong>Применение.</strong> Отметьте цели и подтвердите слышимость в окне накладывания. Модуль проверяет количество, расстояние с учётом высоты и известное состояние Оглохший. Порог хитов фиксируется при расходе. Для целей с большим числом хитов доступны штатный спасбросок и урон; Оглохший применяется после провала и не требует повторных спасбросков. Цели под порогом обрабатывает подключённый Мастер: хиты становятся 0 и добавляется штатное состояние смерти. Поддерживается поглощение этого исхода активным Оберегом от смерти. Иные особые защиты разрешает Мастер. Если цель перестала соответствовать порогу, дальности или слышимости до обработки, автоматическая смерть откладывается для проверки.</p><p><strong>Источник.</strong> Правила взяты из предоставленного PDF, стр. 37: состояние Оглохший. В веб-переводе этого места указано другое состояние. Отмена расхода после разрешения смерти, урона или снятия Оберега от смерти не отменяет эти последствия.</p><h3>Действия</h3><ul><li>[[/item activity=wszWaYLKNoQ0kzDE]]{Вопль банши} · [[/damage activity=wszWaYLKNoQ0kzDE]]{Бросок урона} · [[/save activity=wszWaYLKNoQ0kzDE]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "37",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "wail-of-the-banshee",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 9,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal"
+    ],
+    "range": {
+      "value": "60",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "nec",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "10",
+        "type": "creature",
+        "choice": true,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "wszWaYLKNoQ0kzDE": {
+        "_id": "wszWaYLKNoQ0kzDE",
+        "type": "save",
+        "name": "Вопль банши",
+        "img": "icons/magic/death/skull-humanoid-crown-white-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "6uHwh14GCp6UAFpf",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "10",
+            "type": "creature",
+            "choice": true,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 12,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "psychic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "con"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "bansheeWail": true
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "6uHwh14GCp6UAFpf",
+      "name": "Вопль банши: Оглохший",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 3600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "deafened"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "wail-of-the-banshee"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!1wK9d4OfweMAfajk.6uHwh14GCp6UAFpf"
+    }
+  ],
+  "folder": "hgwg2ooHTR3ujmye",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-wail-of-the-banshee"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!1wK9d4OfweMAfajk"
+}

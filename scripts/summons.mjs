@@ -31,6 +31,7 @@ export function prepareSummon(activity, profile, config) {
   const level = id => caster.classes[id]?.system.levels ?? 0;
   let checkBonus;
   if (key === "actor:homunculus-servant") checkBonus = activity.item.system.level;
+  if (key?.startsWith("actor:au-combat-familiar-")) checkBonus = Math.floor(activity.item.system.level / 2);
   if (key === "actor:purple-dragon-companion") checkBonus = Math.floor(prof / 2);
   if (key?.startsWith("actor:vestige-")) checkBonus = prof;
   if (checkBonus != null) for (const ability of ["str", "dex", "con", "int", "wis", "cha"]) {

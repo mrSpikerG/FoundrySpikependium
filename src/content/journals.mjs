@@ -242,22 +242,31 @@ export function define() {
     warlock: ["Крепость интеллекта", "Психический крик", "Психическое копьё Раулотима", "Призыв сущности астрала", "Телекинетическое давление", "Кровоточащая тьма", "След эктоплазмы", "Везде враги"],
     wizard: ["Крепость интеллекта", "Психическое копьё Раулотима", "Призыв сущности астрала", "Психическая плеть Таши", "Жуткое иссушение Аби-Далзима", "Кровоточащая тьма", "Везде враги", "Ментальная тюрьма", "Псионический взрыв"]
   };
-  const RU = { bard: "Бард", cleric: "Жрец", sorcerer: "Чародей", warlock: "Колдун", wizard: "Волшебник", artificer: "Изобретатель", druid: "Друид", ranger: "Следопыт" };
+  for (const id of ["bard", "sorcerer", "warlock", "wizard"]) additions[id].push("Дружба");
+  const RU = { bard: "Бард", cleric: "Жрец", sorcerer: "Чародей", warlock: "Колдун", wizard: "Волшебник", artificer: "Изобретатель", druid: "Друид", ranger: "Следопыт",paladin:"Паладин" };
   journal({
-    key: "journal:spell-list-additions", folder: fLists, name: "Дополнения UA к спискам классов", sort: 300,
+    key: "journal:spell-list-additions", folder: fLists, name: "Дополнения к спискам классов", sort: 300,
     pages: Object.entries(additions).map(([id, names]) => ({
       name: `${RU[id]} (UA)`,
-      html: `<p>Новые заклинания UA, которые добавляются в список заклинаний класса «${RU[id]}».</p>`,
+      html: `<p>Перенесённые модулем заклинания, дополняющие штатный список класса «${RU[id]}».</p>`,
       spells: { type: "class", identifier: id, uuids: names.map(spellUuid).filter(Boolean) }
     }))
   });
 
   journal({ key: "journal:au-spell-lists", folder: fLists, name: "Неудержимая магия — списки заклинаний", sort: 400,
-    pages: ["bard", "wizard", "warlock", "sorcerer", "artificer", "druid", "ranger", "cleric"].map(id => ({ name: `${RU[id]} (Неудержимая магия)`,
+    pages: ["bard", "wizard", "warlock", "sorcerer", "artificer", "druid", "ranger", "cleric","paladin"].map(id => ({ name: `${RU[id]} (Неудержимая магия)`,
       html: "<p>Заклинания, уже перенесённые из предоставленного PDF. Полный перенос книги продолжается.</p>",
       spells: { type: "class", identifier: id, uuids: [
+        "Место для дуэли",
+        ...(["bard", "wizard", "cleric", "warlock"].includes(id) ? ["Переплетение судьбы"] : []),
+          ...(["bard", "wizard", "warlock"].includes(id) ? ["Заворожение"] : []),
+          ...(["wizard", "cleric", "artificer", "warlock"].includes(id) ? ["Фонарь духов"] : []),
+          ...(["bard", "wizard", "artificer", "warlock"].includes(id) ? ["Искажение дистанции"] : []),
+          ...(id === "wizard" ? ["Иллюзорный дракон"] : []),
+        ...(["bard", "wizard", "warlock", "sorcerer"].includes(id) ? ["Слово силы: боль"] : []),
+        ...(["wizard", "druid", "warlock"].includes(id) ? ["Боевой фамильяр"] : []),
         ...(["bard", "wizard", "warlock", "sorcerer"].includes(id) ? ["Насаждение сомнений", "Расколотое восприятие", "Завораживающие зеркала"] : []),
-        ...(["wizard", "warlock", "sorcerer"].includes(id) ? ["Железное тело", "Аура увёртливости"] : []), ...(id === "wizard" ? ["Неуязвимость"] : []),
+          ...(["wizard", "warlock", "sorcerer"].includes(id) ? ["Обессиливание", "Железное тело", "Аура увёртливости"] : []), ...(id === "wizard" ? ["Неуязвимость", "Момент предвидения"] : []),
         ...(["bard", "wizard", "artificer", "warlock"].includes(id) ? ["Неясная местность"] : []),
         ...(["wizard", "druid", "warlock", "sorcerer"].includes(id) ? ["Гнойный взрыв"] : []),
         ...(["bard", "wizard", "warlock", "sorcerer"].includes(id) ? ["Видение уходящих эпох"] : []),
@@ -267,6 +276,8 @@ export function define() {
         ...(["bard", "wizard", "sorcerer"].includes(id) ? ["Сбивающий мотив"] : []),
         ...(id === "wizard" ? ["Взгляд в прошлое", "Изыскания Морденкайнена"] : []),
         ...(["wizard","warlock","sorcerer"].includes(id)?["Детонация"]:[]),
+        ...(["wizard","warlock","sorcerer"].includes(id)?["Вопль банши"]:[]),
+        ...(["wizard","warlock","sorcerer"].includes(id)?["Волны истощения"]:[]),
         ...(["wizard","druid","warlock","sorcerer"].includes(id)?["Круговая молния"]:[]),
         ...(["wizard","cleric","warlock"].includes(id)?["Кладбищенская земля"]:[]),
         ...(["wizard","warlock"].includes(id)?["Поток негативной энергии"]:[]),

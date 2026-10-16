@@ -1,0 +1,358 @@
+{
+  "_id": "Cq51Gk9s9H0Vb04v",
+  "name": "Обессиливание",
+  "type": "spell",
+  "img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: волшебник, колдун, чародей.</em></p><p>Выберите одно видимое существо в пределах 60 футов. Оно совершает спасбросок Ловкости. При провале получает [[/damage 6d8 type=necrotic]]{6к8} урона Некротической энергией; пока сохраняется Концентрация, до 1 минуты, в каждый свой последующий ход вы можете Бонусным действием автоматически нанести этой цели [[/damage 2d8 type=necrotic]]{2к8} урона Некротической энергией. При успехе цель получает половину начального урона, и заклинание заканчивается. Связь также заканчивается, если цель оказывается дальше 60 футов или получает Полное укрытие от вас.</p><p>Всякий раз, когда это заклинание наносит цели некротический урон, вы восстанавливаете Хиты в количестве половины нанесённого урона, округляя вниз. При ячейке выше 5-го уровня только начальный урон увеличивается на [[/damage 1d8 type=necrotic]]{1к8} урона Некротической энергией за уровень ячейки.</p><p><strong>Применение.</strong> Выберите точный токен цели и подтвердите видимость и отсутствие Полного укрытия. Штатная карточка предлагает спасбросок и урон. После провала появляется связанный эффект, после успеха Концентрация заканчивается. Для последующих своих ходов используйте «Поддержать Обессиливание»: расходуется Бонусное действие без новой ячейки, цель остаётся прежней. В бою требуется ход исходного токена заклинателя; вне боя продвигайте игровое время и подтверждайте наступление следующего своего хода.</p><p>При штатном применении урона из связанной карточки лечение вычисляется после спасброска, сопротивлений, уязвимости и округления системы, включая урон по Временным хитам. Оно не выдаётся повторно за ту же активацию. Нужны подключённый Мастер либо права на обоих участников. Дистанция и высота проверяются по исходным токенам; выход за пределы дальности завершает связь. Полное укрытие подтверждает пользователь: при его появлении завершите Концентрацию на листе. Изменение уже применённого урона, возврат расхода и превращение участников требуют сверки последствий Мастером.</p><h3>Действия</h3><ul><li>[[/item activity=plvMeHUcBGGHy3Ic]]{Создать связь Обессиливания} · [[/damage activity=plvMeHUcBGGHy3Ic]]{Бросок урона} · [[/save activity=plvMeHUcBGGHy3Ic]]{Спасбросок цели}</li><li>[[/item activity=xcgvVcns0jpPzZNR]]{Поддержать Обессиливание} · [[/damage activity=xcgvVcns0jpPzZNR]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "44",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "enervation",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 5,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "concentration"
+    ],
+    "range": {
+      "value": "60",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "nec",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "plvMeHUcBGGHy3Ic": {
+        "_id": "plvMeHUcBGGHy3Ic",
+        "type": "save",
+        "name": "Создать связь Обессиливания",
+        "img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "SjlqaOw6D2NoArRd",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "whole",
+                "number": 1,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "dex"
+          ],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      },
+      "xcgvVcns0jpPzZNR": {
+        "_id": "xcgvVcns0jpPzZNR",
+        "type": "damage",
+        "name": "Поддержать Обессиливание",
+        "img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "critical": {
+            "allow": false,
+            "bonus": ""
+          },
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 2,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "necrotic"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "flags": {
+          "spikependium": {
+            "arcanaStage": "enervation"
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "SjlqaOw6D2NoArRd",
+      "name": "Обессиливание: связь",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "enervation"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!Cq51Gk9s9H0Vb04v.SjlqaOw6D2NoArRd"
+    }
+  ],
+  "folder": "eo23z098jphqsOls",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-enervation"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!Cq51Gk9s9H0Vb04v"
+}

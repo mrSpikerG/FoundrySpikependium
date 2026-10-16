@@ -30,7 +30,8 @@ export const SPELL_LISTS = [
   "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.H7GRSzGI4y6VGqEQ",
   "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.cEwHOfaivAFAMT6V",
   "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.ouh9gH5fbq8JlXUF",
-  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.K9x4zipr5vUhmhjA"
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.K9x4zipr5vUhmhjA",
+  "Compendium.spikependium.rules.JournalEntry.eyBsZEk9RRJmbkOG.JournalEntryPage.LblvLA9VHhosuEwk"
 ];
 
 export const WILD_TALENTS = [
@@ -2151,7 +2152,90 @@ export const FORGE_BASES = [
   }
 ];
 
+export const SCHOOL_SPEED_PROFILE_UUID = "Compendium.spikependium.feats.Item.BhuHhest08yCT7Gc";
+
+export const PAIN_FAILURE_ACTIVITY = {
+  "_id": "16HWghY2HAx1A4PI",
+  "type": "utility",
+  "name": "Неудачная попытка сотворения",
+  "img": "",
+  "sort": 0,
+  "activation": {
+    "type": "action",
+    "value": 1,
+    "condition": "",
+    "override": true
+  },
+  "consumption": {
+    "targets": [],
+    "scaling": {
+      "allowed": false,
+      "max": ""
+    },
+    "spellSlot": false
+  },
+  "description": {
+    "chatFlavor": "",
+    "value": ""
+  },
+  "duration": {
+    "value": "",
+    "units": "inst",
+    "special": "",
+    "override": false,
+    "concentration": false
+  },
+  "effects": [],
+  "range": {
+    "value": "",
+    "units": "self",
+    "special": "",
+    "override": true
+  },
+  "target": {
+    "template": {
+      "count": "",
+      "contiguous": false,
+      "type": "",
+      "size": "",
+      "width": "",
+      "height": "",
+      "units": "ft"
+    },
+    "affects": {
+      "count": "1",
+      "type": "self",
+      "choice": false,
+      "special": ""
+    },
+    "prompt": true,
+    "override": true
+  },
+  "uses": {
+    "spent": 0,
+    "recovery": [],
+    "max": ""
+  },
+  "visibility": {
+    "identifier": "",
+    "level": {
+      "min": null,
+      "max": null
+    },
+    "requireAttunement": false,
+    "requireIdentification": false,
+    "requireMagic": false
+  },
+  "roll": {
+    "formula": "",
+    "name": "",
+    "prompt": false,
+    "visible": false
+  }
+};
+
 export const SOURCE_BOOKS = {
+  "PHB24": "Книга игрока (2024)",
   "GS1": "Сумка грифона — книга 1 (2024)",
   "GS2": "Сумка грифона — книга 2",
   "VSS": "Valda’s Spire of Secrets: Алхимик",

@@ -1,0 +1,295 @@
+{
+  "_id": "wlljy0AspIj3VxnH",
+  "name": "Друг фамильяра",
+  "type": "feat",
+  "img": "icons/creatures/mammals/spirit-deer-herd-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Верный спутник.</strong> @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili]{Призыв фамильяра} всегда подготовлен. Выберите Интеллект, Мудрость или Харизму. Один раз до следующего долгого отдыха его можно сотворить без ячейки и материальных компонентов; обычное сотворение ячейками остаётся доступным.</p><p><strong>Укреплённый фамильяр.</strong> При сотворении максимум и текущие хиты фамильяра увеличиваются на удвоенный уровень персонажа.</p><p><strong>Друг-помощник.</strong> Для проверки с навыком, которым вы владеете, фамильяр в пределах 5 футов может дать преимущество. Число применений равно бонусу владения; все возвращаются после долгого отдыха.</p><p><strong>Применение.</strong> Штатный призыв добавляет хиты создаваемому фамильяру. В окне проверки выберите фамильяра: проверяются владение навыком и расстояние, применение расходуется вместе с подтверждённым броском и входит в его штатную отмену расхода. Отмена окна не тратит применение.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey\">Неудержимая магия</a>.</p><h3>Действия</h3><ul><li>[[/item activity=jIcnUFWAbaehXnta]]{Призыв фамильяра без ячейки и материалов}</li><li>[[/item activity=JNEf6B6001HtbwL4]]{Друг-помощник}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "familiar-friend",
+    "type": {
+      "value": "feat",
+      "subtype": "origin"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "jIcnUFWAbaehXnta": {
+        "_id": "jIcnUFWAbaehXnta",
+        "type": "cast",
+        "name": "Призыв фамильяра без ячейки и материалов",
+        "img": "icons/creatures/mammals/spirit-deer-herd-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "1"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "attack": "",
+            "save": "",
+            "override": false
+          },
+          "level": 1,
+          "properties": [
+            "material"
+          ],
+          "spellbook": false,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplFindFamili"
+        },
+        "flags": {
+          "spikependium": {
+            "originGrantedAbility": true
+          }
+        }
+      },
+      "JNEf6B6001HtbwL4": {
+        "_id": "JNEf6B6001HtbwL4",
+        "type": "utility",
+        "name": "Друг-помощник",
+        "img": "icons/creatures/mammals/spirit-deer-herd-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "@prof"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "familiarHelp": true
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "fDigan46mXu28ieG",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.dnd5e.spells24.Item.phbsplFindFamili",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Призыв фамильяра: заклинательная характеристика",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "9PyqwBpBkWMzeKXz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:familiar-friend"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!wlljy0AspIj3VxnH"
+}

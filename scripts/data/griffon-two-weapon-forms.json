@@ -1,0 +1,110 @@
+[
+  {
+    "system": {
+      "type": {
+        "value": "simpleM",
+        "baseItem": "mace"
+      },
+      "range": {
+        "value": null,
+        "long": null,
+        "units": "ft",
+        "reach": null
+      },
+      "damage": {
+        "versatile": {
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [],
+          "custom": {
+            "enabled": true,
+            "formula": ""
+          },
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "base": {
+          "number": 1,
+          "denomination": 6,
+          "types": [
+            "bludgeoning"
+          ],
+          "custom": {
+            "enabled": false
+          },
+          "scaling": {
+            "number": 1
+          },
+          "bonus": ""
+        }
+      },
+      "mastery": "sap",
+      "properties": [],
+      "weight": {
+        "value": 4,
+        "units": "lb"
+      },
+      "proficient": null,
+      "ammunition": {}
+    }
+  },
+  {
+    "system": {
+      "type": {
+        "value": "simpleM",
+        "baseItem": "quarterstaff"
+      },
+      "range": {
+        "value": null,
+        "long": null,
+        "units": "ft",
+        "reach": null
+      },
+      "damage": {
+        "versatile": {
+          "number": null,
+          "denomination": 0,
+          "bonus": "",
+          "types": [],
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        },
+        "base": {
+          "number": 1,
+          "denomination": 6,
+          "types": [
+            "bludgeoning"
+          ],
+          "custom": {
+            "enabled": false
+          },
+          "scaling": {
+            "number": 1
+          },
+          "bonus": ""
+        }
+      },
+      "mastery": "topple",
+      "properties": [
+        "ver"
+      ],
+      "weight": {
+        "value": 4,
+        "units": "lb"
+      },
+      "proficient": null,
+      "ammunition": {}
+    }
+  }
+]

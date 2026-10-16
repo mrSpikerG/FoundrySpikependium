@@ -1,0 +1,360 @@
+{
+  "book": "GS2",
+  "rules": "2014",
+  "checkedOn": "2026-10-16",
+  "revision": "87e94dbd9f930135e0694cd7e7d49f210603cd2c",
+  "entries": [
+    {
+      "name": "Ветроходы [Wind Riders]",
+      "url": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=e23da1c164a9334d",
+      "status": "imported-partial-automation",
+      "key": "item:gs2:wind-riders",
+      "rarity": "rare",
+      "attunement": "",
+      "sha256": "8acdbd650af9c2d9289f7f964a79d26a6f3d3bfc184aba3581abdea63aeedde7"
+    },
+    {
+      "name": "Парящие сапоги светозавесы [Lightscreen Hover Boots]",
+      "url": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=b351afe192f4a9c6",
+      "status": "imported-partial-automation",
+      "key": "item:gs2:lightscreen",
+      "rarity": "rare",
+      "attunement": "required",
+      "sha256": "cf0464b95e8eb4515f6eeed695e459c7e03f125dd517d9eab21e2db8cda0a404"
+    },
+    {
+      "name": "Призрачные ходоки [Phantom Walkers]",
+      "url": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=43ce4f06a88ce5d8",
+      "status": "imported-partial-automation",
+      "key": "item:gs2:phantom-walkers",
+      "rarity": "uncommon",
+      "attunement": "",
+      "sha256": "2dd5dfcada0f65d1dd00590904c766b12034d8a73aa32ef9da1cd2f544736cbd"
+    },
+    {
+      "name": "Сапоги возвращения [Homeward Boots]",
+      "url": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=9bffef7e2d49b61e",
+      "status": "imported-partial-automation",
+      "key": "item:gs2:homeward",
+      "rarity": "rare",
+      "attunement": "required",
+      "sha256": "533c2f1bb880de449e682947322e5e01f3ca5f388976fea0080769acbdda1c90"
+    },
+    {
+      "name": "Сапоги на подошве зорна [Xorn-Sole Boots]",
+      "url": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=84109cca83562864",
+      "status": "imported-partial-automation",
+      "key": "item:gs2:xorn-sole",
+      "rarity": "rare",
+      "attunement": "required",
+      "sha256": "316fb2a9c51b8a1ccdf33d88e4b8e20bf5677f89ccaa1c0c2b7d2a89237b18fe"
+    },
+    {
+      "name": "Танцевальные туфли Драмуса [Dramus's Dancing Shoes]",
+      "url": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=fd1927eae77e651a",
+      "status": "imported-partial-automation",
+      "key": "item:gs2:dramus",
+      "rarity": "uncommon",
+      "attunement": "required",
+      "sha256": "e8cf9056aeaf047f99a2b4212a7db981d4cfdf6048e00d8c6121e731e137270c"
+    }
+  ],
+  "spell": {
+    "name": "Gaseous Form",
+    "ru": "Газообразная форма: облако листьев",
+    "uuid": "Compendium.dnd5e.spells.Item.2IWiZAJtOGDoKjiz",
+    "document": {
+      "_id": "2IWiZAJtOGDoKjiz",
+      "name": "Gaseous Form",
+      "ownership": {
+        "default": 0
+      },
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.</p><p>While in this form, the target's only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when &amp;reference[stunned apply=false] or otherwise &amp;reference[incapacitated apply=false].</p><p>While in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "",
+          "book": "",
+          "page": "",
+          "license": "CC-BY-4.0",
+          "rules": "2014"
+        },
+        "activation": {
+          "type": "action",
+          "condition": "",
+          "value": 1
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour"
+        },
+        "target": {
+          "affects": {
+            "type": "creature",
+            "count": "1",
+            "choice": false,
+            "special": ""
+          },
+          "template": {
+            "units": "",
+            "contiguous": false,
+            "type": ""
+          }
+        },
+        "range": {
+          "units": "touch",
+          "special": ""
+        },
+        "uses": {
+          "max": "",
+          "recovery": [],
+          "spent": 0
+        },
+        "level": 3,
+        "school": "trs",
+        "materials": {
+          "value": "A bit of gauze and a wisp of smoke",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "properties": [
+          "vocal",
+          "somatic",
+          "material",
+          "concentration"
+        ],
+        "activities": {
+          "dnd5eactivity000": {
+            "_id": "dnd5eactivity000",
+            "type": "utility",
+            "activation": {
+              "type": "action",
+              "value": null,
+              "override": false
+            },
+            "consumption": {
+              "targets": [],
+              "scaling": {
+                "allowed": false,
+                "max": ""
+              },
+              "spellSlot": true
+            },
+            "description": {
+              "chatFlavor": ""
+            },
+            "duration": {
+              "units": "inst",
+              "concentration": false,
+              "override": false
+            },
+            "effects": [
+              {
+                "_id": "gICakgyAi1hrs8ug",
+                "level": {}
+              }
+            ],
+            "range": {
+              "override": false
+            },
+            "target": {
+              "prompt": true,
+              "template": {
+                "contiguous": false,
+                "units": "ft"
+              },
+              "affects": {
+                "choice": false
+              },
+              "override": false
+            },
+            "roll": {
+              "formula": "",
+              "name": "",
+              "prompt": false,
+              "visible": false
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": [],
+              "max": ""
+            },
+            "sort": 0,
+            "name": "Cast",
+            "img": "",
+            "visibility": {
+              "level": {
+                "min": null,
+                "max": null
+              }
+            }
+          }
+        },
+        "identifier": "gaseous-form"
+      },
+      "sort": 0,
+      "flags": {},
+      "img": "icons/magic/air/wind-tornado-cyclone-white.webp",
+      "effects": [
+        {
+          "name": "Gaseous Form",
+          "img": "icons/magic/air/wind-tornado-cyclone-white.webp",
+          "origin": "Compendium.dnd5e.spells.Item.2IWiZAJtOGDoKjiz",
+          "transfer": false,
+          "_id": "gICakgyAi1hrs8ug",
+          "type": "base",
+          "system": {
+            "changes": [
+              {
+                "key": "system.abilities.str.save.roll.mode",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.abilities.dex.save.roll.mode",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.abilities.con.save.roll.mode",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.attributes.movement.fly",
+                "type": "override",
+                "value": 10,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.attributes.movement.walk",
+                "type": "override",
+                "value": 0,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.attributes.movement.swim",
+                "type": "override",
+                "value": 0,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.attributes.movement.climb",
+                "type": "override",
+                "value": 0,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.attributes.movement.burrow",
+                "type": "override",
+                "value": 0,
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.traits.dr.value",
+                "type": "add",
+                "value": "bludgeoning",
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.traits.dr.value",
+                "type": "add",
+                "value": "piercing",
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.traits.dr.value",
+                "type": "add",
+                "value": "slashing",
+                "phase": "initial",
+                "priority": null
+              },
+              {
+                "key": "system.traits.dr.bypasses",
+                "type": "add",
+                "value": "mgc",
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "disabled": false,
+          "start": null,
+          "duration": {
+            "value": 1,
+            "units": "hours",
+            "expiry": "turnStart",
+            "expired": false
+          },
+          "description": "<p>You have been transformed, along with everything you are wearing and carrying, into a misty cloud for the duration. The spell ends if you drop to 0 hit points.</p><p>While in this form, your only method of movement is a flying speed of 10 feet. You can enter and occupy the space of another creature. You have resistance to nonmagical damage, and you have advantage on Strength, Dexterity, and Constitution saving throws. You can pass through small holes, narrow openings, and even mere cracks, though you treat liquids as though they were solid surfaces. You can't fall and remain hovering in the air even when &amp;reference[stunned apply=false] or otherwise &amp;reference[incapacitated apply=false].</p><p>While in the form of a misty cloud, you can't talk or manipulate objects, and any objects you were carrying or holding can't be dropped, used, or otherwise interacted with. You can't attack or cast spells.</p>",
+          "tint": "#ffffff",
+          "statuses": [
+            "transformed"
+          ],
+          "showIcon": 1,
+          "folder": null,
+          "sort": 0,
+          "flags": {
+            "dnd5e": {
+              "riders": {
+                "statuses": []
+              }
+            }
+          },
+          "_stats": {
+            "coreVersion": "14.361",
+            "systemId": "dnd5e",
+            "systemVersion": "6.0.0",
+            "createdTime": 1781359773544,
+            "modifiedTime": 1783720892792,
+            "lastModifiedBy": "dnd5ebuilder0000",
+            "compendiumSource": null,
+            "duplicateSource": null,
+            "exportSource": null
+          },
+          "_key": "!items.effects!2IWiZAJtOGDoKjiz.gICakgyAi1hrs8ug"
+        }
+      ],
+      "folder": "5Si35RRLLaaoWvC3",
+      "_stats": {
+        "duplicateSource": null,
+        "coreVersion": "14.361",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.0",
+        "createdTime": 1725037345979,
+        "modifiedTime": 1781359914779,
+        "lastModifiedBy": "dnd5ebuilder0000",
+        "exportSource": null
+      },
+      "_key": "!items!2IWiZAJtOGDoKjiz"
+    }
+  },
+  "pendingAutomation": [
+    "Wind-driven horizontal movement, wind-only difficult terrain and premature leaf-separation ending",
+    "Lightscreen path/walls/forced displacement, 1-foot hover geometry and the exact opportunity-free extra movement path",
+    "Phantom trail geometry, tracking DC +5 and treasure detection through stone; native buttons preserve the source limits",
+    "Late refunds after other uses/time/rest and restoring already applied movement/effects",
+    "Homeward plane-of-existence checks, nearest unoccupied landing outside a completely filled circle, and late world-state rollback; native proprietary Region internals require live verification"
+  ]
+}

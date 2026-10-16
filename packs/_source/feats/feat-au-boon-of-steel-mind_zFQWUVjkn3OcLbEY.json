@@ -1,0 +1,130 @@
+{
+  "_id": "zFQWUVjkn3OcLbEY",
+  "name": "Дар стального разума",
+  "type": "feat",
+  "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Повышение характеристики.</strong> Увеличьте одну характеристику на 1, максимум до 30.</p><p><strong>Непоколебимая концентрация.</strong> При поддержании Концентрации на эффекте вы теряете её только при сотворении заклинания или активации другого эффекта, требующего Концентрации, если становитесь Окаменевшим или Бессознательным, либо умираете.</p><p><strong>Применение.</strong> При добавлении черты штатный шаг предлагает выбрать характеристику. Включённый постоянный эффект «Непоколебимая концентрация» отменяет запросы и броски для поддержания Концентрации, включая проверки от урона; Недееспособность, Ошеломление и Паралич сами по себе её не прекращают. Окаменение, Бессознательность и Смерть автоматически завершают текущую Концентрацию штатным способом вместе с зависимыми эффектами. Новая Концентрация и истечение длительности обрабатываются системой как обычно. Эффект можно отключить на листе. Мастер сохраняет возможность вручную удалить эффект или закончить Концентрацию.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "33",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "boon-of-steel-mind",
+    "type": {
+      "value": "feat",
+      "subtype": "epicBoon"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": 19,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "mLySlYQNFwRnHmP0",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [],
+          "recommendation": null,
+          "max": 30
+        },
+        "value": {},
+        "level": 0,
+        "title": "Любая характеристика +1 (максимум 30)",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "5xKp2qMYA98QOv8u",
+      "name": "Непоколебимая концентрация",
+      "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "steelMind": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!zFQWUVjkn3OcLbEY.5xKp2qMYA98QOv8u"
+    }
+  ],
+  "folder": "x7E1MhoH0QBKq4E6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:au-boon-of-steel-mind"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!zFQWUVjkn3OcLbEY"
+}

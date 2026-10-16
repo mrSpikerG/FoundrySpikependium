@@ -43,6 +43,7 @@ function fresh(card) {
   const actor = card.getAssociatedActor?.();
   return [...game.messages].filter(m => m.type === "save" && m.getAssociatedActor?.()?.uuid === actor?.uuid).at(-1)?.uuid === card.uuid;
 }
+export { fresh as originSaveFresh };
 export function recordOriginSaveWindow(card) {
   if (card.type === "save") card.updateSource({ "flags.spikependium.originSaveWindow": { time:game.time.worldTime,turn:turn() } });
   const origin=card.type==="usage"?card:card.getOriginatingMessage?.();

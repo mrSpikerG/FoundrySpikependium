@@ -1,0 +1,317 @@
+{
+  "_id": "5FuLE0zJ8FLve1LA",
+  "name": "Слово силы: боль",
+  "type": "spell",
+  "img": "icons/magic/control/debuff-chains-ropes-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: бард, волшебник, колдун, чародей.</em></p><p>Выберите одно видимое существо в пределах 60 футов. Оно получает [[/damage 6d8 type=force]]{6к8} урона Чистой силой без начального спасброска. Если до этого урона у него было 100 Хитов или меньше, оно также становится Очарованным на 1 минуту. Концентрация не требуется.</p><p>Пока цель Очарована, её Скорость не может превышать 10 футов. Все её Тесты к20 совершаются с Помехой, кроме спасбросков Телосложения. При попытке сотворить заклинание она сначала совершает спасбросок Телосложения. При провале заклинание не действует; использованное Действие, Бонусное действие или Реакция тратится впустую, а ячейка не расходуется. В конце каждого своего хода цель повторяет спасбросок Телосложения, заканчивая заклинание на себе при успехе.</p><p><strong>Применение.</strong> Подтвердите видимость отмеченной цели. Число Хитов фиксируется до броска урона, временные хиты не учитываются. Штатная карточка бросает полный урон и накладывает подходящий эффект; первичного спасброска нет. Ограничение Скорости учитывает единицы персонажа и все способы перемещения. Помеха сочетается с Преимуществом штатно. Подключённый Мастер разрешает повторные спасброски в конце хода. Перед новым сотворением автоматически проводится спасбросок Телосложения. При провале исходное заклинание останавливается, отдельная карточка учитывает только использованное действие; ячейка, материалы и заряды сохраняются, текущая Концентрация не заменяется. Для нестандартного действия при необходимости отметьте «Это новое сотворение заклинания»; повторное действие уже активного заклинания не является новым сотворением. Утраченный несохранённый спасбросок, незавершённую попытку из прошлого момента, уже применённый урон после отмены и повторные спасброски вне боя сверяет Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=nk5bZ2zHJVyGVFKD]]{Произнести слово силы} · [[/damage activity=nk5bZ2zHJVyGVFKD]]{Бросок урона}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "45",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "power-word-pain",
+    "activation": {
+      "type": "action",
+      "value": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "level": 7,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal"
+    ],
+    "range": {
+      "value": "60",
+      "units": "ft",
+      "special": ""
+    },
+    "school": "enc",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "nk5bZ2zHJVyGVFKD": {
+        "_id": "nk5bZ2zHJVyGVFKD",
+        "type": "save",
+        "name": "Произнести слово силы",
+        "img": "icons/magic/control/debuff-chains-ropes-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "LvGBea1fxS8PcnRR"
+          }
+        ],
+        "range": {
+          "value": "60",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 6,
+              "denomination": 8,
+              "bonus": "",
+              "types": [
+                "force"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [],
+          "dc": {
+            "calculation": "spellcasting",
+            "formula": ""
+          },
+          "bonus": ""
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "LvGBea1fxS8PcnRR",
+      "name": "Слово силы: боль",
+      "img": "icons/magic/control/debuff-chains-ropes-purple.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.rolls.attack.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "7cjHGsPvBREqOvHw"
+          },
+          {
+            "key": "system.rolls.ability.check.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "PXoWOkw05b3sZhgK"
+          },
+          {
+            "key": "system.attributes.death.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "rizUt3jJzbT3QoXL"
+          },
+          {
+            "key": "system.abilities.str.save.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "uFAFiiiDsw1VViL9"
+          },
+          {
+            "key": "system.abilities.dex.save.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "DAcZMESVqAiyxF00"
+          },
+          {
+            "key": "system.abilities.int.save.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "V0xlN15czegjEJHb"
+          },
+          {
+            "key": "system.abilities.wis.save.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "cgRyroa3wn8RZbSP"
+          },
+          {
+            "key": "system.abilities.cha.save.roll.mode",
+            "value": "-1",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "QiZZpH5dfH1BtiJo"
+          }
+        ],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 60,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "charmed"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "arcanaSpell": "power-word-pain"
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!5FuLE0zJ8FLve1LA.LvGBea1fxS8PcnRR"
+    }
+  ],
+  "folder": "GcAbLCaR99k8zXDx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-power-word-pain"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!5FuLE0zJ8FLve1LA"
+}

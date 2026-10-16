@@ -1,0 +1,495 @@
+{
+  "_id": "IqV9OzletuEPUUfb",
+  "name": "Арбалет-тягун",
+  "type": "weapon",
+  "img": "icons/weapons/crossbows/crossbow-loaded-black.webp",
+  "system": {
+    "description": {
+      "value": "<p>Три заряда, [[/r 1d3]]{1к3} восстанавливается на рассвете. Действием за заряд с командным словом выстрелите болтом в видимую точку земли в обычной дистанции арбалета. В радиусе 20 футов: Сила СЛ 15; провал притягивает до 15 футов, успех — на 5. Область труднопроходима до начала следующего вашего хода. В начале того хода она взрывается водой: Сила СЛ 15, [[/r 3d10]]{3к10} дробящего/половина; провал сбивает с ног. Вода гасит немагическое пламя и исчезает. Настроены атака, заряды, отдельные испытания/области и профиль Сбитый с ног только при провале. Выберите в расходах специального выстрела стопку болтов: заряд и один болт списываются штатно. Оплаченный выстрел ставит волну в очередь. В начале следующего вашего хода активный Мастер получает карточку на исходной сцене; при отмене окна повторите её кнопкой на карточке выстрела. Волна доступна один раз, сохраняется после удаления оружия; возврат исходного расхода отменяет очередь и убирает её шаблон. Вне боя отсчёт идёт по шести секундам мирового времени. Заново выберите существ, которые сейчас находятся в области. Точка на видимой земле, перемещение, труднопроходимость и тушение огня ручные.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового оружия. Вес по базовому оружию 2024; источник особого веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=3d9a91a10e33644e\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=5wnylx4pKDm0EntJ]]{Атака оружием} · [[/damage activity=5wnylx4pKDm0EntJ]]{Бросок урона}</li><li>[[/item activity=rQCYynpq7TkjtSZi]]{Болт в землю: притянуть существ радиусом 20 футов} · [[/save activity=rQCYynpq7TkjtSZi]]{Спасбросок цели}</li><li>[[/item activity=35PCbcUPG0Fbzvg0]]{Начало следующего хода: взрыв воды} · [[/damage activity=35PCbcUPG0Fbzvg0]]{Бросок урона} · [[/save activity=35PCbcUPG0Fbzvg0]]{Спасбросок цели}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=3d9a91a10e33644e",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-gs2-riptide",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 18,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4050,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "martialR",
+      "baseItem": "heavycrossbow"
+    },
+    "ammunition": {
+      "type": "crossbowBolt"
+    },
+    "damage": {
+      "versatile": {
+        "number": null,
+        "denomination": null,
+        "bonus": "",
+        "types": [],
+        "custom": {
+          "enabled": true,
+          "formula": ""
+        },
+        "scaling": {
+          "mode": "",
+          "number": null,
+          "formula": ""
+        }
+      },
+      "base": {
+        "number": 1,
+        "denomination": 10,
+        "types": [
+          "piercing"
+        ],
+        "custom": {
+          "enabled": false
+        },
+        "scaling": {
+          "number": 1
+        },
+        "bonus": ""
+      }
+    },
+    "magicalBonus": null,
+    "properties": [
+      "amm",
+      "hvy",
+      "lod",
+      "two",
+      "mgc"
+    ],
+    "proficient": null,
+    "range": {
+      "value": 100,
+      "long": 400,
+      "units": "ft",
+      "reach": null
+    },
+    "mastery": "push",
+    "uses": {
+      "max": "3",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "formula",
+          "formula": "1d3"
+        }
+      ]
+    },
+    "activities": {
+      "5wnylx4pKDm0EntJ": {
+        "_id": "5wnylx4pKDm0EntJ",
+        "type": "attack",
+        "name": "Атака оружием",
+        "img": "icons/weapons/crossbows/crossbow-loaded-black.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "attack": {
+          "ability": "",
+          "bonus": "",
+          "critical": {
+            "threshold": null
+          },
+          "flat": false,
+          "type": {
+            "value": "",
+            "classification": "weapon"
+          }
+        },
+        "damage": {
+          "critical": {
+            "bonus": ""
+          },
+          "includeBase": true,
+          "parts": []
+        }
+      },
+      "rQCYynpq7TkjtSZi": {
+        "_id": "rQCYynpq7TkjtSZi",
+        "type": "save",
+        "name": "Болт в землю: притянуть существ радиусом 20 футов",
+        "img": "icons/weapons/crossbows/crossbow-loaded-black.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            },
+            {
+              "type": "material",
+              "target": "consumable:bolts",
+              "value": "1",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "100",
+          "units": "ft",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "20",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "none",
+          "parts": []
+        },
+        "save": {
+          "ability": [
+            "str"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "gs2Charge": true,
+            "griffonCommandWord": true,
+            "riptideStart": true
+          }
+        }
+      },
+      "35PCbcUPG0Fbzvg0": {
+        "_id": "35PCbcUPG0Fbzvg0",
+        "type": "save",
+        "name": "Начало следующего хода: взрыв воды",
+        "img": "icons/weapons/crossbows/crossbow-loaded-black.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "A6RJy1AtcLjybJdn",
+            "onSave": false
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "radius",
+            "size": "20",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "damage": {
+          "onSave": "half",
+          "parts": [
+            {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "number": 3,
+              "denomination": 10,
+              "bonus": "",
+              "types": [
+                "bludgeoning"
+              ],
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            }
+          ]
+        },
+        "save": {
+          "ability": [
+            "str"
+          ],
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "bonus": ""
+        },
+        "flags": {
+          "spikependium": {
+            "riptideWave": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "A6RJy1AtcLjybJdn",
+      "name": "Арбалет-тягун: сбит с ног",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [
+        "prone"
+      ],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!IqV9OzletuEPUUfb.A6RJy1AtcLjybJdn"
+    }
+  ],
+  "folder": "qsoxBBPHyYFfp1DZ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:riptide",
+      "griffonTwoWeapon": "riptide",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbwepHeavyCross"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!IqV9OzletuEPUUfb"
+}

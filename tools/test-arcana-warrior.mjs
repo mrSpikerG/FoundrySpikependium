@@ -14,6 +14,13 @@ assert.deepEqual(choice.configuration.restriction, { type: "spell", subtype: "",
 assert.ok(choice.configuration.pool.some(i => i.uuid.endsWith("phbsplMageHand00")));
 assert.ok(choice.configuration.pool.some(i => i.uuid.endsWith("phbsplRayofFrost")));
 assert.equal(new Set(choice.configuration.pool.map(p => p.uuid)).size, choice.configuration.pool.length);
+const friends = fs.readdirSync("packs/_source/spells").map(f => JSON.parse(fs.readFileSync(`packs/_source/spells/${f}`, "utf8")))
+  .find(d => d.flags?.spikependium?.key === "spell:friends");
+const friendsUuid = `Compendium.spikependium.spells.Item.${friends._id}`;
+assert.ok(choice.configuration.pool.some(p => p.uuid === friendsUuid), "перенесённая Дружба доступна в выборе");
+const additions = fs.readdirSync("packs/_source/rules").map(f => JSON.parse(fs.readFileSync(`packs/_source/rules/${f}`, "utf8")))
+  .find(d => d.flags?.spikependium?.key === "journal:spell-list-additions");
+assert.deepEqual(additions.pages.filter(p => p.system.spells.includes(friendsUuid)).map(p => p.system.identifier).sort(), ["bard", "sorcerer", "warlock", "wizard"]);
 globalThis.foundry = { utils: { deepClone: structuredClone } };
 const actor = { system: { details: { level: 4 } } };
 let prepared;

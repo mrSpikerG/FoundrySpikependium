@@ -1,7 +1,18 @@
 import { advItemGrant, advItemChoice, advASI, advTrait, spellConfig, srdSpellUuid, utility, cast, heal, effect, change, LR, useActivity } from "../../tools/lib/core.mjs";
-import { feat, folder } from "../../tools/lib/docs.mjs";
+import { feat, folder, ref } from "../../tools/lib/docs.mjs";
 
 export function define() {
+  feat({ key: "feat:au-boon-of-steel-mind", identifier: "boon-of-steel-mind", name: "Дар стального разума", subtype: "epicBoon", level: 19,
+    folder: folder("feats", "Неудержимая магия/Эпические дары"), book: "AU", page: 33, img: "icons/magic/defensive/barrier-shield-dome-blue-purple",
+    desc: `**Повышение характеристики.** Увеличьте одну характеристику на 1, максимум до 30.
+
+**Непоколебимая концентрация.** При поддержании Концентрации на эффекте вы теряете её только при сотворении заклинания или активации другого эффекта, требующего Концентрации, если становитесь Окаменевшим или Бессознательным, либо умираете.
+
+**Применение.** При добавлении черты штатный шаг предлагает выбрать характеристику. Включённый постоянный эффект «Непоколебимая концентрация» отменяет запросы и броски для поддержания Концентрации, включая проверки от урона; Недееспособность, Ошеломление и Паралич сами по себе её не прекращают. Окаменение, Бессознательность и Смерть автоматически завершают текущую Концентрацию штатным способом вместе с зависимыми эффектами. Новая Концентрация и истечение длительности обрабатываются системой как обычно. Эффект можно отключить на листе. Мастер сохраняет возможность вручную удалить эффект или закончить Концентрацию.`,
+    advancement: [advASI("au:boon-of-steel-mind:asi", 0, { points: 1, cap: 1, max: 30, title: "Любая характеристика +1 (максимум 30)" })],
+    effects: [effect("au:boon-of-steel-mind:concentration", { name: "Непоколебимая концентрация", transfer: true,
+      img: "icons/magic/defensive/barrier-shield-dome-blue-purple", flags: { spikependium: { steelMind: true } } })]
+  });
   const resilience = utility("au:spell-resilient:save", { name: "Стойкий к магии", activation: "special", self: true,
     condition: "Вы провалили спасбросок против заклинания или магического эффекта", roll: "1d6", rollName: "Бонус к магическому спасброску",
     usesMax: "@prof", usesRecovery: [LR], consume: [useActivity()], spellSlot: false });
@@ -25,9 +36,9 @@ export function define() {
     img: "icons/skills/melee/hand-grip-sword-red",
     desc: `Вы изучаете два заговора волшебника. Рекомендуемые варианты — [[Волшебная рука]] и [[Луч холода]]. Выберите для обоих одну заклинательную характеристику: Интеллект, Мудрость или Харизму. При каждом получении нового уровня можно заменить один из этих заговоров другим заговором волшебника.
 
-**Применение.** Добавление черты открывает штатный выбор двух заговоров и общей характеристики. Каталог содержит доступные заговоры SRD; другой заговор волшебника можно перетащить из установленной библиотеки. При последующих повышениях уровня штатный мастер продвижения предлагает необязательную замену одного заговора, включая повышение в другом классе. Шаги замены не выдаются задним числом.`,
+**Применение.** Добавление черты открывает штатный выбор двух заговоров и общей характеристики. Каталог содержит доступные заговоры SRD и перенесённую модулем Дружбу; другой заговор волшебника можно перетащить из установленной библиотеки. При последующих повышениях уровня штатный мастер продвижения предлагает необязательную замену одного заговора, включая повышение в другом классе. Шаги замены не выдаются задним числом.`,
     advancement: [advItemChoice("au:magic-warrior:cantrips", 0, { title: "Два заговора волшебника", count: 2, type: "spell", restrictType: "spell",
-      list: ["class:wizard"], spellLevel: "0", pool: wizardCantrips.map(srdSpellUuid).filter(Boolean), spell: spellConfig({ abilities: ["int", "wis", "cha"], always: false }) })]
+      list: ["class:wizard"], spellLevel: "0", pool: wizardCantrips.map(n => n === "Friends" ? ref("spell:friends") : srdSpellUuid(n)).filter(Boolean), spell: spellConfig({ abilities: ["int", "wis", "cha"], always: false }) })]
   });
   const F = folder("feats", "Неудержимая магия/Происхождение");
   const artist = utility("au:magic-artist:inspiration", { name: "Вдохновляющая магия", activation: "special",

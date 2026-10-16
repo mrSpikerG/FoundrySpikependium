@@ -1,0 +1,404 @@
+{
+  "_id": "H42Z7CrfxGWZzJH8",
+  "name": "Место для дуэли",
+  "type": "spell",
+  "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Списки: бард, волшебник, друид, жрец, изобретатель, колдун, паладин, следопыт, чародей.</em></p><p>Вы создаёте магическое место для дуэли — светящийся рунический круг в виде Сферы радиусом 15 футов с центром в точке на земле, которой касаетесь. При создании назначьте целями двух согласных существ в Сфере. Заклинание длится час и заканчивается досрочно, если в Сферу входит нецелевое существо.</p><p>Если Хиты цели опускаются до 0, пока она в месте для дуэли, она становится Стабилизированной и телепортируется в ближайшее незанятое пространство вне него. Если эффект мгновенно убил бы цель без нанесения урона, она не умирает: её Хиты опускаются до 0, она становится Бессознательной и Стабилизированной и телепортируется наружу таким же образом.</p><p>Когда в месте для дуэли остаётся только одна цель, руны ненадолго вспыхивают словно корона вокруг её головы. Это не заканчивает заклинание.</p><p><strong>Использование ячейки большего уровня.</strong> За каждый уровень ячейки выше второго можно выбрать ещё одно согласное существо. Знамя не расходуется.</p><p><strong>Применение.</strong> Выберите от двух существ до уровня ячейки, подтвердите их согласие, касание земли и наличие знамени, затем разместите одну штатную Сферу. На каждом участнике появляется отдельный переключаемый эффект, действующий только внутри исходной области. Исходные токены сохраняются: другие копии персонажа не получают защиту.</p><p>Обычное снижение Хитов до 0 запускает стабилизацию и перенос. Штатное добавление смерти участнику с положительными Хитами в области также перехватывается; при уже нулевых Хитах и для неподдержанного смертельного эффекта используйте отдельное бесплатное действие до разрешения смерти. Оно не лечит и не возвращает уже погибшего. Участник, вышедший из области, теряет защиту, но остаётся выбранной целью и может вернуться. Вход постороннего завершает площадку; обычный выход участника и появление единственного оставшегося не завершают её.</p><p>Ближайшее свободное место автоматически ищется на том же уровне и высоте сцены с квадратной или шестиугольной сеткой. Перенос использует штатную телепортацию, не тратит скорость и не проверяет пересечение стен на пути. Объёмную геометрию, полёт, карту без сетки, неизвестные движку препятствия и другую высоту разрешает Мастер. При отсутствии подходящего места запрос сохраняется; неизвестный исход начатого перемещения автоматически не повторяется. Стабилизация сохраняется после окончания площадки и прекращается при лечении или новом уроне.</p><p>После расхода свитка временная копия хранит действия до исходного срока, не позволяет нового сотворения и затем удаляется. «Завершить Место для дуэли» или удаление области заканчивает заклинание; отмена расхода не возвращает уже применённые Хиты и телепортацию. Ритуальное время, объёмные пересечения, перемещение без штатных событий, превращения и исправление уже разрешённой смерти требуют сверки Мастером. Визуальную вспышку короны показывает Мастер.</p><h3>Действия</h3><ul><li>[[/item activity=EI5FAVg684UNHqky]]{Создать Место для дуэли}</li><li>[[/item activity=vDla1NpSMZcq7Rud]]{Защитить от мгновенной смерти без урона}</li><li>[[/item activity=6xVyLhZWKDjh4ts7]]{Завершить Место для дуэли}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "43",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "dueling-ground",
+    "activation": {
+      "type": "minute",
+      "value": 10,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "hour"
+    },
+    "level": 2,
+    "materials": {
+      "value": "шёлковое знамя стоимостью не менее 100 ЗМ",
+      "consumed": false,
+      "cost": 100,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic",
+      "material",
+      "ritual"
+    ],
+    "range": {
+      "value": "",
+      "units": "touch",
+      "special": ""
+    },
+    "school": "abj",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "sphere",
+        "size": "15",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "@item.level",
+        "type": "creature",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "EI5FAVg684UNHqky": {
+        "_id": "EI5FAVg684UNHqky",
+        "type": "utility",
+        "name": "Создать Место для дуэли",
+        "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "minute",
+          "value": 10,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "n3vlC9rDhhs5dHj6"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "touch",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "sphere",
+            "size": "15",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "@item.level",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "duelStage": "cast"
+          }
+        }
+      },
+      "vDla1NpSMZcq7Rud": {
+        "_id": "vDla1NpSMZcq7Rud",
+        "type": "utility",
+        "name": "Защитить от мгновенной смерти без урона",
+        "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "spec",
+          "special": "Участник в исходной Сфере",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "duelStage": "protect",
+            "arcanaStage": "dueling-ground"
+          }
+        }
+      },
+      "6xVyLhZWKDjh4ts7": {
+        "_id": "6xVyLhZWKDjh4ts7",
+        "type": "utility",
+        "name": "Завершить Место для дуэли",
+        "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": true,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "duelStage": "end",
+            "arcanaStage": "dueling-ground"
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [
+    {
+      "_id": "n3vlC9rDhhs5dHj6",
+      "name": "Участник Места для дуэли",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 3600,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "duelParticipantProfile": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!H42Z7CrfxGWZzJH8.n3vlC9rDhhs5dHj6"
+    }
+  ],
+  "folder": "jzQHzwlAgBVmwkex",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-dueling-ground"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!H42Z7CrfxGWZzJH8"
+}

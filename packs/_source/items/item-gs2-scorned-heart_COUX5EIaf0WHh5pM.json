@@ -1,0 +1,368 @@
+{
+  "_id": "COUX5EIaf0WHh5pM",
+  "name": "Scorned Heart Breastplate",
+  "type": "equipment",
+  "img": "icons/equipment/chest/breastplate-collared-steel-grey.webp",
+  "system": {
+    "description": {
+      "value": "<p>Нося настроенную кирасу, получаете +1 КД за каждых двух союзников в 10 футах, не более +2. Выделите союзников целями и нажмите «Указать союзников»: их токены сохраняются, расстояние/КД пересчитываются автоматически. Цвет токена не определяет союз. Для расчёта нужен один ваш токен на текущей сцене; при нескольких токенах одного персонажа разрешайте бонус вручную. Повторная кнопка с пустыми целями очищает список; выбор союзников и его изменения подтверждает игрок. Реакцией раз до рассвета доступно Адское возмездие 3-го круга, СЛ 15.</p><p>Проклятие: настройка создаёт отдельный эффект на персонаже. Снятие кирасы, передача или прекращение настройки его не оканчивают. Пока прокляты, совершаете с помехой спасброски от очарования и проверки Харизмы при взаимодействии с привлекательным для вас существом. Связанные профили Очарован распознаются автоматически; привлекательность и неизвестные причины спасбросков подтверждайте вручную. После Снятия проклятия или подобной магии удалите эффект с персонажа: он не возвращается от обычного обновления листа, но новая настройка снова проклинает.</p><p><em>Цена оценочная: ориентир по редкости 2024 плюс цена базового доспеха. Вес взят у базового доспеха 2024; отдельного веса в источнике нет.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=3205ab6f660cbd3d\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=KFbtcXZo2fYdf4SG]]{Адское возмездие — 3-й круг, СЛ 15}</li><li>[[/item activity=vTMzmvDqEEHeiwYV]]{Указать союзников из выбранных целей (пусто — очистить)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=3205ab6f660cbd3d",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-scorned-heart",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 20,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4400,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": 14,
+      "magicalBonus": null,
+      "dex": 2
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "medium",
+      "baseItem": "breastplate"
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "dawn",
+          "type": "recoverAll",
+          "formula": ""
+        }
+      ]
+    },
+    "activities": {
+      "KFbtcXZo2fYdf4SG": {
+        "_id": "KFbtcXZo2fYdf4SG",
+        "type": "cast",
+        "name": "Адское возмездие — 3-й круг, СЛ 15",
+        "img": "icons/equipment/chest/breastplate-collared-steel-grey.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "spell": {
+          "ability": "",
+          "challenge": {
+            "override": true,
+            "attack": "",
+            "save": "15"
+          },
+          "level": 3,
+          "properties": [],
+          "spellbook": true,
+          "uuid": "Compendium.dnd5e.spells24.Item.phbsplHellishReb"
+        },
+        "flags": {
+          "spikependium": {
+            "griffonArmorPaid": true
+          }
+        }
+      },
+      "vTMzmvDqEEHeiwYV": {
+        "_id": "vTMzmvDqEEHeiwYV",
+        "type": "utility",
+        "name": "Указать союзников из выбранных целей (пусто — очистить)",
+        "img": "icons/equipment/chest/breastplate-collared-steel-grey.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "scornedAllies": true
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "16d54x77hv7HdTdp",
+      "name": "Отвергнутое сердце: КД от союзников",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.attributes.ac.bonus",
+            "value": "@spikependium.scornedAC",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "9Czi8Llzr85yB5rw"
+          }
+        ]
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!COUX5EIaf0WHh5pM.16d54x77hv7HdTdp"
+    },
+    {
+      "_id": "nzHFauAaIWV51dCh",
+      "name": "Проклятие отвергнутого сердца",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "Помеха спасбросков от очарования и проверок Харизмы при общении с привлекательным для вас существом. Сохраняется после снятия/прекращения настройки. После Снятия проклятия или аналогичной магии удалите этот эффект с персонажа.",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "scornedCurse": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!COUX5EIaf0WHh5pM.nzHFauAaIWV51dCh"
+    }
+  ],
+  "folder": "yF0IBHbFDAxZxF3L",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:scorned-heart",
+      "originalName": "Scorned Heart Breastplate",
+      "griffonTwoArmor": "scorned-heart",
+      "nativeBase": "Compendium.dnd5e.equipment24.Item.phbarmBreastplat"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!COUX5EIaf0WHh5pM"
+}

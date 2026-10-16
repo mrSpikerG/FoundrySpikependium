@@ -1,0 +1,404 @@
+{
+  "_id": "3YDVAGxhyLlVfK5O",
+  "name": "Парящие сапоги светозавесы",
+  "type": "equipment",
+  "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>Настройка обязательна. Бонусным действием щёлкните каблуками: парение в 1 футе над полом с перемещением по скорости ходьбы, яркий голубой свет 5 футов и ещё 5 футов тусклого. Кнопки переключают свет; свободного полёта не дают. Действием: яркий свет 40 футов и ещё 40 тусклого до конца вашего хода; немедленно переместитесь до скорости ходьбы по горизонтальной или вертикальной поверхности, включая потолок. Только это добавочное перемещение не провоцирует атак. След становится полупрозрачной непроходимой стеной толщиной 1/4 дюйма и высотой до 10 футов, перпендикулярной поверхности, кроме вашего конечного пространства. Пересечённые существа выталкиваются на выбранную вами сторону. Стена существует до начала следующего вашего хода, невосприимчива ко всему урону и Рассеиванию магии, но уничтожается Распадом. После свойства нужна задержка [[/r 1d4]]{1к4} часа: один бросок встроен в штатную карточку, отдых её не сбрасывает. Сам путь, краткое исключение провоцированных атак, геометрию стены и вытеснение пока выполняет Мастер; временный эффект управляет усиленным светом.</p><p><em>Цена оценочная: ориентир по редкости из правил 2024 года; в карточке источника цена не указана. Вес оценочный: 2 фунта за пару обуви; источник точного веса не задаёт.</em></p><p>Источник: <a href=\"https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=b351afe192f4a9c6\">Сумка грифона — книга 2</a>.</p><h3>Действия</h3><ul><li>[[/item activity=tVXeOM1MiWmhD77p]]{Щёлкнуть каблуками: парение над полом}</li><li>[[/item activity=AB9kz8CLE61l9Bm3]]{Прекратить парение: подтвердить окончание}</li><li>[[/item activity=PGY9oXV3G9LkofOC]]{Световая стена: движение до скорости ходьбы, задержка 1к4 часа}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "GS2",
+      "page": "",
+      "custom": "https://rpgd100.ru/content_pages/catalog_index?catalog=%2Fcontent_pages%2Fmaterials%2Fthe_griffons_saddlebag_book_two_5e&entry=b351afe192f4a9c6",
+      "rules": "2014",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "griffon-lightscreen",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 2,
+      "units": "lb"
+    },
+    "price": {
+      "value": 4000,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "armor": {
+      "value": null,
+      "magicalBonus": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "clothing",
+      "baseItem": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "strength": null,
+    "proficient": null,
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "tVXeOM1MiWmhD77p": {
+        "_id": "tVXeOM1MiWmhD77p",
+        "type": "utility",
+        "name": "Щёлкнуть каблуками: парение над полом",
+        "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "bootCommand": "on"
+          }
+        }
+      },
+      "AB9kz8CLE61l9Bm3": {
+        "_id": "AB9kz8CLE61l9Bm3",
+        "type": "utility",
+        "name": "Прекратить парение: подтвердить окончание",
+        "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "bootCommand": "off"
+          }
+        }
+      },
+      "PGY9oXV3G9LkofOC": {
+        "_id": "PGY9oXV3G9LkofOC",
+        "type": "transform",
+        "name": "Световая стена: движение до скорости ходьбы, задержка 1к4 часа",
+        "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "N4gWKp8xEFV2TNBA"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "profiles": [],
+        "settings": null,
+        "transform": {
+          "mode": "form",
+          "formless": true,
+          "customize": false,
+          "preset": ""
+        },
+        "flags": {
+          "spikependium": {
+            "griffonCommandWord": true,
+            "griffonCooldown": 3600,
+            "griffonCooldownHoursRoll": "1d4"
+          }
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "N4gWKp8xEFV2TNBA",
+      "name": "Сапоги светозавесы: яркий свет до конца своего хода",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "targetEnd",
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "bootFlare": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!3YDVAGxhyLlVfK5O.N4gWKp8xEFV2TNBA"
+    }
+  ],
+  "folder": "JIPXlCLH7bDataFx",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "item:gs2:lightscreen",
+      "griffonBoots": "lightscreen",
+      "bootOn": 0,
+      "bootSince": 0,
+      "bootBase": 0,
+      "griffonTimedRecovery": true
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!3YDVAGxhyLlVfK5O"
+}

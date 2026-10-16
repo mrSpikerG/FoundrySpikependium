@@ -373,6 +373,10 @@
           "spikependium": {
             "alchemistSplash": {
               "fullDamage": true
+            },
+            "alchemistSplashDC": {
+              "calculation": "",
+              "formula": "8 + @prof + @abilities.int.mod + @spikependium.alchemistBombDC"
             }
           }
         }

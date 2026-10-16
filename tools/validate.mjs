@@ -11,6 +11,9 @@ const SRD = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/srd.json"), "
 const webSources = new Map(JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/external-content-inventory.json"), "utf8")).sources
   .map(s => [s.id, new Set([...(s.entries ? s.entries.map(e => e.url) : [s.url]), ...(s.characterOptions ? [s.characterOptions.url] : [])])]));
 const ICONS = new Set(fs.readFileSync(path.join(ROOT, "tools/data/icons.txt"), "utf8").split(/\r?\n/).filter(Boolean));
+const nativeCandleWeight = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/griffon-stationery.json"), "utf8")).nativeCandle.document.system.weight.value;
+const nativeWeights = new Map([["item:gs1:anti-light", nativeCandleWeight], ["item:gs1:secret-scribe", 2 * nativeCandleWeight]]);
+const coverageUrls = new Set(JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/arcana-unleashed-coverage.json"), "utf8")).chapterSnapshots.map(s => s.url));
 
 const ID = /^[A-Za-z0-9]{16}$/;
 const errors = [];
@@ -20,6 +23,14 @@ const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
 const bookPages = { "MM25": 385, "AU": 160, "UA-EB": 16, "UA-FR": 10, "UA-HS": 9, "UA-PS": 13, "UA-PU": 15, "UA-AS": 10, "UA-AU": 9, "UA-MS": 6, "UA-VO": 11, "UA-VO2": 5 };
 function checkSource(where, source) {
   if (!source || !BOOKS[source.book]) return err(where, "нет известного источника");
+  if (source.book === "AU" && source.page === "" && coverageUrls.has(source.custom)) {
+    if (source.rules !== "2024") err(where, "неверная редакция Неудержимой магии");
+    return;
+  }
+  if (source.book === "PHB24" && source.custom === "https://next.dnd.su/spells/10523-friends/" && source.page === "") {
+    if (source.rules !== "2024") err(where, "неверная редакция Книги игрока");
+    return;
+  }
   if (["GS1", "GS2", "VSS", "EfC", "TT", "CAB", "MM14"].includes(source.book)) {
     if (!webSources.get(["EfC", "TT", "CAB"].includes(source.book) ? "VSS" : source.book)?.has(source.custom)) err(where, "нет точной ссылки на карточку в реестре веб-источника");
     if (source.page !== "") err(where, "номер страницы веб-источника не подтверждён");
@@ -34,6 +45,10 @@ function checkSource(where, source) {
 
 // SRD-идентификаторы, на которые разрешено ссылаться.
 const srdIds = new Set([
+  JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/griffon-two-boots.json"), "utf8")).spell.uuid,
+  ...JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/griffon-two-cloaks.json"), "utf8")).spells.map(s => s.uuid),
+  ...JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/griffon-two-gloves.json"), "utf8")).spells.map(s => s.uuid),
+  ...JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/griffon-two-weapon-bases.json"), "utf8")).spells.map(s => s.uuid),
   ...Object.values(SRD.spells).map(s => `Compendium.dnd5e.spells24.Item.${s.id}`),
   ...Object.values(SRD.items).map(s => `Compendium.dnd5e.equipment24.Item.${s.id}`),
   ...JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/alchemist-starting-gear.json"), "utf8")).gear.map(g => g.uuid),
@@ -162,7 +177,7 @@ for ( const [pack, list] of Object.entries(byPack) ) {
     if (pack === "items") {
       if (!Number.isFinite(data.system.price.value) || data.system.price.value <= 0 || data.system.price.denomination !== "gp") err(where, "нет корректной цены в зм");
       if (!Number.isFinite(data.system.weight.value) || data.system.weight.value < 0 || data.system.weight.units !== "lb") err(where, "неверный вес");
-      if (data.type !== "weapon" && data.system.weight.value === 0) err(where, "не заполнен вес физического предмета");
+      if (data.type !== "weapon" && data.system.weight.value === 0 && nativeWeights.get(data.flags.spikependium?.key) !== 0) err(where, "не заполнен вес физического предмета");
     }
     if ( TYPE[pack] === "Item" ) { checkItem(where, data); checkHtml(where, data.system?.description?.value); }
     if ( TYPE[pack] === "Actor" ) {
@@ -174,7 +189,7 @@ for ( const [pack, list] of Object.entries(byPack) ) {
         for (const activity of Object.values(it.system.activities ?? {})) {
           const rule = activity.flags?.spikependium?.multiattack;
           if (!rule) continue;
-          const scaled = rule.count === "spell" && /^actor:au-(plant|dinosaur)-/.test(data.flags.spikependium?.key ?? "");
+          const scaled = rule.count === "spell" && /^actor:au-(plant|dinosaur|combat-familiar)-/.test(data.flags.spikependium?.key ?? "");
           if (!scaled && (!Number.isSafeInteger(rule.count) || rule.count < 1)) err(where, "неверное число атак мультиатаки");
           const weapons = rule.weapons ?? [rule.weapon];
           if (!Array.isArray(weapons) || !weapons.length || new Set(weapons).size !== weapons.length
@@ -229,7 +244,7 @@ for ( const [pack, list] of Object.entries(byPack) ) {
   const CLASSES = new Set(["artificer", "psion", "barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard",
     ...[...docs.values()].filter(d => d.type === "class").map(d => d.system.identifier)]);
   const ABIL = new Set(["str", "dex", "con", "int", "wis", "cha"]);
-  const OK = [/^@prof$/, /^@scaling$/, /^@mod$/, /^@item\.(uses\.(spent|max|value)|level)$/, /^@attributes\.(spell\.mod|movement\.walk|hp\.max|hd\.\w+)$/, /^@details\.level$/, /^@spikependium\.alchemistBombDC$/];
+  const OK = [/^@prof$/, /^@scaling$/, /^@mod$/, /^@item\.(uses\.(spent|max|value)|level)$/, /^@attributes\.(spell\.mod|movement\.(walk|max)|hp\.max|hd\.\w+)$/, /^@details\.level$/, /^@spikependium\.alchemistBombDC$/, /^@flags\.dnd5e\.summon\.mod$/];
   const checkFormula = (where, formula) => {
     if ( typeof formula !== "string" || !formula.includes("@") ) return;
     for ( const m of formula.matchAll(/@[a-zA-Z][\w.-]*/g) ) {

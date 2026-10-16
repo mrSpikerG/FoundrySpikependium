@@ -75,6 +75,11 @@ reset(); duringCreate = () => { source.system.currency.gp = 100; };
 assert.equal(await dropVestigeGear(token), false); assert.equal(source.system.currency.gp, 100);
 reset(); duringCreate = async () => { assert.equal(await dropVestigeGear(token), false); };
 assert.equal(await dropVestigeGear(token), true); assert.equal(createdActors, 1);
+for (const variant of ["bruiser", "flyer", "skulker"]) {
+  reset(); source.flags.spikependium.key = `actor:au-combat-familiar-${variant}`;
+  assert.equal(await dropVestigeGear(token), true); assert.equal(createdActors, 1); assert.equal(createdTokens, 1);
+  assert.equal(source.items.has("blade"), false); assert.deepEqual(source.system.currency, { cp:0,sp:0,ep:0,gp:0,pp:0 });
+}
 reset(); game.user.isActiveGM = false;
 assert.equal(await dropVestigeGear(token), false); assert.equal(createdActors, 0);
 reset(); source.isOwner = false;

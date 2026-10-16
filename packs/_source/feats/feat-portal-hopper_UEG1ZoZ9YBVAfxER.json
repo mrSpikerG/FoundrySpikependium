@@ -1,0 +1,186 @@
+{
+  "_id": "UEG1ZoZ9YBVAfxER",
+  "name": "Прыгающий через порталы",
+  "type": "feat",
+  "img": "icons/magic/movement/portal-vortex-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Потусторонняя стойкость.</strong> Выберите сопротивление некротическому урону, излучению или психической энергии.</p><p><strong>Шаг сквозь портал.</strong> Потратив 15 футов перемещения, телепортируйтесь в видимое свободное место в пределах 15 футов. Число применений равно бонусу владения, не чаще одного раза за ход; восстановление после долгого отдыха.</p><p><strong>Применение.</strong> Сопротивление выбирается штатным шагом и применяется автоматически. Действие расходует применение, ограничено разом за ход в активном бою и открывает штатное планирование телепортации. Доступные 15 футов перемещения, их расход и видимость места пока подтвердите вручную. Отмена самого планирования после использования не возвращает уже оплаченное применение: используйте штатную отмену расхода в карточке.</p><p>Источник: <a href=\"https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey\">Неудержимая магия</a>.</p><h3>Действия</h3><ul><li>[[/item activity=F07Frg0sgjc1Lwqx]]{Шаг сквозь портал}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "",
+      "custom": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "portal-hopper",
+    "type": {
+      "value": "feat",
+      "subtype": "origin"
+    },
+    "requirements": "",
+    "prerequisites": {
+      "level": null,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "F07Frg0sgjc1Lwqx": {
+        "_id": "F07Frg0sgjc1Lwqx",
+        "type": "teleport",
+        "name": "Шаг сквозь портал",
+        "img": "icons/magic/movement/portal-vortex-orange.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Потратьте 15 футов перемещения; не чаще одного раза за ход. Выберите видимое свободное место.",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "activityUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [
+            {
+              "period": "lr",
+              "type": "recoverAll"
+            }
+          ],
+          "max": "@prof"
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "teleport": {
+          "override": false,
+          "units": "ft",
+          "value": "15"
+        },
+        "flags": {
+          "spikependium": {
+            "oncePerTurn": true,
+            "group": "portal-hopper"
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "F1cmNmT5YBJSQCwK",
+        "type": "Trait",
+        "configuration": {
+          "mode": "default",
+          "allowReplacements": false,
+          "grants": [],
+          "choices": [
+            {
+              "count": 1,
+              "pool": [
+                "dr:necrotic",
+                "dr:radiant",
+                "dr:psychic"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "chosen": []
+        },
+        "level": 0,
+        "title": "Потусторонняя стойкость",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "9PyqwBpBkWMzeKXz",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:portal-hopper"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!UEG1ZoZ9YBVAfxER"
+}

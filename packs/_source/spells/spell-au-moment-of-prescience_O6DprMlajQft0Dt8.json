@@ -1,0 +1,184 @@
+{
+  "_id": "O6DprMlajQft0Dt8",
+  "name": "Момент предвидения",
+  "type": "spell",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Список: волшебник.</em></p><p>Реакцией на собственный провал Теста к20 или попадание существа по вам вы обращаетесь к своему шестому чувству. Замените выпавшую к20 своего проваленного теста на 20 либо выпавшую к20 вызвавшей реакцию атаки на 1. Модификаторы и остальные кубики сохраняются. Эта трактовка замены к20 выбрана пользователем для модуля.</p><p><strong>Применение.</strong> В штатном окне сотворения выберите свежую карточку и конкретный бросок. Для собственного теста без указанной СЛ введите СЛ по решению Мастера; инициатива не является проваленным тестом. Для входящей атаки должно быть установлено попадание по вашему токену. Дальность до нападающего и его видимость не ограничиваются этим заклинанием. Реакция и ячейка расходуются штатно. Нужен подключённый активный Мастер либо права на исходную карточку. Преимущество и Помеха не перебрасываются: заменяется только уже выбранная к20, отброшенные результаты сохраняются.</p><p>Повторная обработка и переподключение не бросают кубики заново. Возврат расхода восстанавливает исходный результат, если карточка не менялась после этой замены. Если другой эффект уже изменил бросок, новая запись не затирается: требуется решение Мастера. Уже применённые урон, состояния, испытание смерти и утрата Концентрации автоматически не пересчитываются.</p><h3>Действия</h3><ul><li>[[/item activity=BLEgElWm1BlcJGB6]]{Изменить выпавшую к20}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "43",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "moment-of-prescience",
+    "activation": {
+      "type": "reaction",
+      "value": 1,
+      "condition": "Вы проваливаете Тест к20 либо существо попадает по вам броском атаки"
+    },
+    "duration": {
+      "value": "",
+      "units": "inst"
+    },
+    "level": 8,
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "method": "spell",
+    "prepared": 0,
+    "properties": [
+      "vocal",
+      "somatic"
+    ],
+    "range": {
+      "value": "",
+      "units": "self",
+      "special": ""
+    },
+    "school": "div",
+    "sourceItem": "",
+    "target": {
+      "template": {
+        "count": "",
+        "contiguous": false,
+        "type": "",
+        "size": "",
+        "width": "",
+        "height": "",
+        "units": "ft"
+      },
+      "affects": {
+        "count": "1",
+        "type": "self",
+        "choice": false,
+        "special": ""
+      },
+      "prompt": true,
+      "override": true
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "BLEgElWm1BlcJGB6": {
+        "_id": "BLEgElWm1BlcJGB6",
+        "type": "utility",
+        "name": "Изменить выпавшую к20",
+        "img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "reaction",
+          "value": 1,
+          "condition": "Вы проваливаете Тест к20 либо существо попадает по вам броском атаки",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "momentOfPrescience": true
+          }
+        }
+      }
+    },
+    "ability": ""
+  },
+  "effects": [],
+  "folder": "Bvw1Ei7rCkf9CFym",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "spell:au-moment-of-prescience"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!O6DprMlajQft0Dt8"
+}
