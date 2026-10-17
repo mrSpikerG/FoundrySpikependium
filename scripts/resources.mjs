@@ -44,8 +44,13 @@ import { prepareFateUpdates } from "./arcana-fate.mjs";
 import { prepareForeknowledgeUpdates } from "./arcana-foreknowledge.mjs";
 import {preparePainCastingUpdates} from "./pain-casting.mjs";
 import { prepareCombatFamiliarUpdates } from "./combat-familiar.mjs";
+import { prepareOtherworldlyUpdates } from "./otherworldly-familiar.mjs";
+import { prepareElementalUpdates } from "./elemental-familiar.mjs";
+import { prepareWarlikeUpdates } from "./warlike-familiar.mjs";
+import { prepareTrickUpdates } from "./spell-trickster.mjs";
 import { schoolSlotRecharge } from "./arcana-schools.mjs";
 import { prepareSchoolBenefitUpdates } from "./school-cast-benefits.mjs";
+import { prepareSpellMightUpdates } from "./arcana-spell-might.mjs";
 import { prepareCunningUpdates } from "./cunning-actions.mjs";
 import { prepareBloomUpdates } from "./arcana-bloom.mjs";
 import { prepareAnimationUpdates } from "./magus-animation.mjs";
@@ -59,6 +64,28 @@ import { prepareGriffonTwoArmorUpdates } from "./griffon-two-armor.mjs";
 import { prepareConditionalArmorUpdates } from "./griffon-conditional-armor.mjs";
 import { prepareArtifactArmorUpdates } from "./griffon-artifact-armor.mjs";
 import { prepareTwoWeaponUpdates } from "./griffon-two-weapons.mjs";
+import { prepareConjurerRecharge } from "./book-conjurer.mjs";
+import { prepareDurableUpdates } from "./conjurer-durable.mjs";
+
+export function grantedSpellUsageConfig(wrapped, ...args) {
+  const config = wrapped(...args), item = this.item;
+  if (item?.type !== "spell" || config.consume === false) return config;
+  const [featId, advancementId] = item.flags.dnd5e?.advancementOrigin?.split(".") ?? [];
+  const feat = this.actor?.items.get(featId);
+  const advancement = feat?.system.advancement?.find(a => (a.id ?? a._id) === advancementId);
+  const uses = advancement?.configuration.spell?.uses;
+  const added = advancement?.value.added ?? {};
+  const granted = advancement?.type === "ItemGrant" ? Object.hasOwn(added, item.id)
+    : advancement?.type === "ItemChoice" && Object.values(added).some(ids => Object.hasOwn(ids, item.id));
+  if (!feat?.flags.spikependium?.key || !granted || !uses?.max || !uses.per || uses.requireSlot) return config;
+  const linked = this.getLinkedActivity(config.cause?.activity);
+  if (linked?.type !== "forward" || linked.item.uuid !== item.uuid
+    || !linked.consumption.targets.some(t => t.type === "itemUses" && !t.target && Number(t.value) === 1)) return config;
+  // Native Forward disables base resources as well as slots; these grants waive only the slot.
+  config.consume = { ...config.consume, resources: true, spellSlot: false };
+  config.cause.resources = true;
+  return config;
+}
 
 export function showResourceConsumption(activity, config, message) {
   const deltas = message.data?.system?.deltas;
@@ -159,6 +186,9 @@ export async function prepareResourceUpdates(wrapped, config, ...args) {
       if (updates) updates = prepareFateUpdates(this, config, updates);
       if (updates) updates = prepareForeknowledgeUpdates(this, config, updates);
       if (updates) updates = prepareCombatFamiliarUpdates(this, config, updates);
+      if (updates) updates = prepareOtherworldlyUpdates(this, config, updates);
+      if (updates) updates = prepareElementalUpdates(this, config, updates);
+      if (updates) updates = prepareWarlikeUpdates(this, config, updates);
       if (updates) updates = prepareBloomUpdates(this, config, updates);
       if (updates) updates = prepareAnimationUpdates(this, config, updates);
       if (updates) updates = prepareAlchemistBombUpdates(this, config, updates);
@@ -193,7 +223,11 @@ export async function prepareResourceUpdates(wrapped, config, ...args) {
       if (updates) updates = await prepareArcanistUpdates(this, config, updates);
       if (updates) updates = schoolSlotRecharge(this, config, updates);
       if (updates) updates = prepareSchoolBenefitUpdates(this, config, updates);
+      if (updates) updates = prepareSpellMightUpdates(this, config, updates);
       if (updates) updates = preparePainCastingUpdates(this,config,updates);
+      if (updates) updates = prepareTrickUpdates(this,config,updates);
+      if (updates) updates = prepareConjurerRecharge(this,config,updates);
+      if (updates) updates = prepareDurableUpdates(this,config,updates);
       if (updates && (this.flags.spikependium?.forge || isLifeTransfer(this))) updates.spikependium = { ...updates.spikependium,
         numericFlags: Object.entries(updates.actor).filter(([path, value]) => path.startsWith("flags.spikependium.") && typeof value === "number")
           .map(([keyPath, value]) => ({ keyPath, delta: value - (foundry.utils.getProperty(this.actor, keyPath) ?? 0) })) };

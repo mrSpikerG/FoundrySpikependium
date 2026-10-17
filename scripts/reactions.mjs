@@ -42,7 +42,7 @@ export function canUseReaction(activity, config = {}) {
   return false;
 }
 export async function reactionUse(wrapped, config = {}, ...args) {
-  if (!isReaction(this) || this.type === "cast" || exempt(config)) return wrapped(config, ...args);
+  if (!isReaction(this) || ["cast","forward"].includes(this.type) || exempt(config)) return wrapped(config, ...args);
   const actor = this.actor;
   if (using.has(actor.uuid)) {
     ui.notifications.warn("Сначала завершите уже открытое действие реакции этого персонажа.");
@@ -58,7 +58,7 @@ export async function reactionUse(wrapped, config = {}, ...args) {
 }
 export function prepareReactionUpdates(activity, config, updates) {
   prepared.delete(activity);
-  if (!isReaction(activity) || activity.type === "cast" || exempt(config)) return updates;
+  if (!isReaction(activity) || ["cast","forward"].includes(activity.type) || exempt(config)) return updates;
   if (!activity.actor.isOwner || !canUseReaction(activity, config)) return false;
   const combat = combatFor(activity.actor);
   if (!combat && game.combats.some(c => c.started && c.getCombatantsByActor(activity.actor).length)) {

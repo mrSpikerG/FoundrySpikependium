@@ -87,9 +87,9 @@ export async function consumeArcanaMaterial(config, updates) {
 }
 
 export function canUseArcanaSpell(activity) {
-  // shortcut: комбинированные умения без отдельного действия Рывок разрешает Мастер; расширить при появлении штатного выбора действия в dnd5e.
+  // shortcut: other combined Dash actions need a rule flag before they can be identified without relying on their names.
   if (activity?.actor?.effects?.some(effect => effect.flags.spikependium?.arcanaSpell === "confusing-terrain" && live(effect))
-    && (activity.item?.system.identifier === "dash" || activity.identifier === "dash"
+    && (activity.item?.system.identifier === "dash" || activity.identifier === "dash" || activity.flags?.spikependium?.spellTrickEscape
       || (activity.type === "utility" && activity.item?.type === "feat" && ["dash", "рывок"].includes((activity.name ?? "").toLowerCase())))) {
     ui.notifications.warn("Неясная местность: Рывок недоступен, пока действует эффект."); return false;
   }

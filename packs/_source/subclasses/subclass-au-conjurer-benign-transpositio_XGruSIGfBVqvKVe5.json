@@ -1,0 +1,239 @@
+{
+  "_id": "XGruSIGfBVqvKVe5",
+  "name": "Безопасное перемещение",
+  "type": "feat",
+  "img": "icons/magic/movement/trail-streak-impact-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Бонусным действием вы телепортируетесь на расстояние не более 30 футов в видимое вами незанятое пространство. В качестве альтернативы вы можете выбрать пространство в пределах этой дистанции, занятое Средним или меньшим существом. Если это существо согласно, вы оба телепортируетесь, меняясь местами.</p><p>Вы можете использовать это умение количество раз, равное вашему модификатору Интеллекта (минимум один), и восстанавливаете все потраченные использования после окончания Долгого отдыха.</p><p>Штатное действие телепортации расходует применение; с 6-го уровня используйте вариант на 60 футов. Видимость, свободное место, размер и согласие при обмене подтверждает Мастер. Обмен двумя существами выполняется вручную, с одним расходом применения.</p><h3>Действия</h3><ul><li>[[/item activity=E78HlgoEcbIsXt9H]]{Телепортироваться до 30 футов}</li><li>[[/item activity=RtH6Xf6EtonuYpSG]]{Телепортироваться до 60 футов}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "20",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "au-conjurer-benign-transposition",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Призыватель",
+    "prerequisites": {
+      "level": 3,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "max(1, @abilities.int.mod)",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "E78HlgoEcbIsXt9H": {
+        "_id": "E78HlgoEcbIsXt9H",
+        "type": "teleport",
+        "name": "Телепортироваться до 30 футов",
+        "img": "icons/magic/movement/trail-streak-impact-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "wizard",
+          "level": {
+            "min": null,
+            "max": 5
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "teleport": {
+          "override": false,
+          "units": "ft",
+          "value": "30"
+        }
+      },
+      "RtH6Xf6EtonuYpSG": {
+        "_id": "RtH6Xf6EtonuYpSG",
+        "type": "teleport",
+        "name": "Телепортироваться до 60 футов",
+        "img": "icons/magic/movement/trail-streak-impact-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "wizard",
+          "level": {
+            "min": 6,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "teleport": {
+          "override": false,
+          "units": "ft",
+          "value": "60"
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "njbHcOeMeCYPJqra",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:au-conjurer:benign-transposition"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!XGruSIGfBVqvKVe5"
+}

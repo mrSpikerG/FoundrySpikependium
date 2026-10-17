@@ -7,6 +7,7 @@ const resource = actor => feature(actor)?.system.activities.find(a => a.flags.sp
 const familiarSpell = activity => activity?.type === "summon" && activity.item?.type === "spell" && activity.item.system.identifier === "find-familiar";
 
 export function prepareFamiliarToken(activity, _profile, config) {
+  if(familiarSpell(activity)&&activity.actor)config.actorUpdates["flags.spikependium.nativeFamiliar"]={caster:activity.actor.uuid,source:activity.item.uuid};
   const feat = feature(activity.actor), level = activity.actor?.system.details.level;
   if (!familiarSpell(activity) || !feat || !Number.isSafeInteger(level) || level < 1) return;
   const hp = config.actor.system.attributes.hp, updates = config.actorUpdates;

@@ -545,3 +545,65 @@ export function nativeSteelShouldPrompt() {
 
     return this.statuses.has("dead") || this.statuses.has("incapacitated");
   }
+
+// dice/basic-roll.mjs: unchanged pinned buildConfigure body.
+export async function nativeSpellMightBuildConfigure(config={}, dialog={}, message={}) {
+    config.hookNames = [...(config.hookNames ?? []), ""];
+
+    /**
+     * A hook event that fires before a roll is performed. Multiple hooks may be called depending on the rolling
+     * method (e.g. `dnd5e.preRollSkill`, `dnd5e.preRollAbilityCheck`, `dnd5e.preRoll`). Exact contents of the
+     * configuration object will also change based on the roll type, but the same objects will always be present.
+     * @function dnd5e.preRoll
+     * @memberof hookEvents
+     * @param {BasicRollProcessConfiguration} config   Configuration data for the pending roll.
+     * @param {BasicRollDialogConfiguration} dialog    Presentation data for the roll configuration dialog.
+     * @param {BasicRollMessageConfiguration} message  Configuration data for the roll's message.
+     * @returns {boolean}                              Explicitly return `false` to prevent the roll.
+     */
+    for ( const hookName of config.hookNames ) {
+      if ( Hooks.call(`dnd5e.preRoll${hookName.capitalize()}`, config, dialog, message) === false ) return [];
+      if ( Hooks.call(`dnd5e.preRoll${hookName.capitalize()}V2`, config, dialog, message) === false ) return [];
+    }
+
+    this.applyKeybindings(config, dialog, message);
+    dialog.sheet ??= foundry.applications.instances.get(config.event?.target?.closest(".application")?.id);
+
+    let rolls;
+    if ( dialog.configure === false ) {
+      rolls = config.rolls?.map((r, index) => {
+        dialog.options?.buildConfig?.(config, r, null, index);
+        for ( const hookName of config.hookNames ) {
+          Hooks.callAll(`dnd5e.postBuild${hookName.capitalize()}RollConfig`, config, r, index);
+        }
+        return this.fromConfig(r, config);
+      }) ?? [];
+    } else {
+      const DialogClass = dialog.applicationClass ?? this.DefaultConfigurationDialog;
+      rolls = await DialogClass.configure(config, dialog, message);
+    }
+
+    // Store the roll type in roll.options so it can be accessed from only the roll
+    const rollType = foundry.utils.getProperty(message, "data.type");
+    if ( rollType && (rollType !== "base") ) rolls.forEach(roll => roll.options.rollType ??= rollType);
+
+    /**
+     * A hook event that fires after roll configuration is complete, but before the roll is evaluated.
+     * Multiple hooks may be called depending on the rolling method (e.g. `dnd5e.postSkillCheckRollConfiguration`,
+     * `dnd5e.postAbilityTestRollConfiguration`, and `dnd5e.postRollConfiguration` for skill checks). Exact contents of
+     * the configuration object will also change based on the roll type, but the same objects will always be present.
+     * @function dnd5e.postRollConfiguration
+     * @memberof hookEvents
+     * @param {BasicRoll[]} rolls                      Rolls that have been constructed but not evaluated.
+     * @param {BasicRollProcessConfiguration} config   Configuration information for the roll.
+     * @param {BasicRollDialogConfiguration} dialog    Configuration for the roll dialog.
+     * @param {BasicRollMessageConfiguration} message  Configuration for the roll message.
+     * @returns {boolean}                              Explicitly return `false` to prevent rolls.
+     */
+    for ( const hookName of config.hookNames ) {
+      const name = `dnd5e.post${hookName.capitalize()}RollConfiguration`;
+      if ( Hooks.call(name, rolls, config, dialog, message) === false ) return [];
+    }
+
+    return rolls;
+  }

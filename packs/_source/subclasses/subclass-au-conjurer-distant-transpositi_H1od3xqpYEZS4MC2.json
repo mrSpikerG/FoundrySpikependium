@@ -1,0 +1,321 @@
+{
+  "_id": "H1od3xqpYEZS4MC2",
+  "name": "Далёкое перемещение",
+  "type": "feat",
+  "img": "icons/magic/movement/portal-vortex-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Радиус вашего Безопасного перемещения увеличивается до 60 футов. Кроме того, вы можете восстановить одно его использование, потратив ячейку заклинаний 3-го уровня или выше (действие не требуется).</p><p>Короткий отдых сам по себе применения не восстанавливает. Для восстановления выберите штатную ячейку 3-го уровня или выше либо отдельный вариант Магии договора при подходящем уровне её ячеек.</p><h3>Действия</h3><ul><li>[[/item activity=YZQpQJnamrL909T5]]{Восстановить одно применение (ячейка 3-го уровня или выше)}</li><li>[[/item activity=rmwX02WbhD9L1mC1]]{Восстановить одно применение (Магия договора)}</li><li>[[/item activity=A3EbeJ8cQDW0GKhv]]{Восстановить одно применение (ячейка 3-го уровня или выше) (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "21",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "au-conjurer-distant-transposition",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Призыватель",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "YZQpQJnamrL909T5": {
+        "_id": "YZQpQJnamrL909T5",
+        "type": "utility",
+        "name": "Восстановить одно применение (ячейка 3-го уровня или выше)",
+        "img": "icons/magic/movement/portal-vortex-orange.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "3",
+              "scaling": {
+                "mode": "level",
+                "formula": ""
+              }
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "feat:au-conjurer-benign-transposition",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": true,
+            "max": "7"
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "conjurerRecharge": {
+              "kind": "benign",
+              "pact": false
+            }
+          }
+        }
+      },
+      "rmwX02WbhD9L1mC1": {
+        "_id": "rmwX02WbhD9L1mC1",
+        "type": "utility",
+        "name": "Восстановить одно применение (Магия договора)",
+        "img": "icons/magic/movement/portal-vortex-orange.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "attribute",
+              "value": "1",
+              "target": "spells.pact.value",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "feat:au-conjurer-benign-transposition",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "conjurerRecharge": {
+              "kind": "benign",
+              "pact": true
+            }
+          }
+        }
+      },
+      "A3EbeJ8cQDW0GKhv": {
+        "_id": "A3EbeJ8cQDW0GKhv",
+        "type": "forward",
+        "name": "Восстановить одно применение (ячейка 3-го уровня или выше) (Магия договора)",
+        "sort": 100001,
+        "img": "icons/magic/movement/portal-vortex-orange.webp",
+        "activity": {
+          "id": "YZQpQJnamrL909T5"
+        },
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "feat:au-conjurer-benign-transposition",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 5,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 3
+            }
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "njbHcOeMeCYPJqra",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:au-conjurer:distant-transposition"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!H1od3xqpYEZS4MC2"
+}

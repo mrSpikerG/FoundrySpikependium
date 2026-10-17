@@ -213,7 +213,7 @@ for (const profile of toolTransform.effects) {
   assert.ok(shape.system.changes.some(c => c.key === `system.activities.${toolCheck._id}.check.bonus` && c.value === ""));
 }
 assert.equal(manifold.effects.find(e => e.name === "Инструменты кузнеца").system.changes.find(c => c.key === "system.weight.value").value, "8");
-assert.equal([...docs.values()].filter(d => d.type === "subclass").length, 69);
+assert.equal([...docs.values()].filter(d => d.type === "subclass").length, 70);
 for (const [key, book, page] of [
   ["feat:greater-handling", "UA-EB", "14"], ["feat:greater-warding", "UA-EB", "15"],
   ["spell:intellect-fortress", "UA-PU", "13"], ["spell:summon-astral-entity", "UA-PU", "15"],
@@ -330,7 +330,7 @@ const slotToFocus = Object.values(doc("subclass:warrior-of-mystic-arts:mystic-fo
 assert.equal(slotToFocus.consumption.scaling.max, "9");
 for (const item of allItems) for (const identifier of item.system?.prerequisites?.items ?? [])
   assert.ok(allItems.some(i => `${i.type}:${i.system?.identifier}` === identifier)
-    || Object.values(SRD.classFeatures).some(i => `${i.type}:${i.identifier}` === identifier), `Не найдена предпосылка ${identifier}`);
+    || [...Object.values(SRD.classFeatures),...Object.values(SRD.feats ?? {})].some(i => `${i.type}:${i.identifier}` === identifier), `Не найдена предпосылка ${identifier}`);
 for (const key of ["handling", "scribing", "sentinel"]) {
   const modifier = Object.values(doc(`feat:greater-${key}`).system.activities).find(a => a._id === makeId(`activity:greater:${key}:mod`));
   assert.equal(modifier.uses.max, "");

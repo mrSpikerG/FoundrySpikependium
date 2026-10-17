@@ -7,6 +7,7 @@ import {nativeApplyDamage,nativeCalculateDamage} from "./data/dnd5e-guardian-nat
 import {nativeConsume,nativeRefund,getDeltas} from "./data/dnd5e-reaction-native.mjs";
 import {prepareEffectData} from "./data/dnd5e-effect-application.mjs";
 import {nativeAppliedEffectChanges} from "./data/dnd5e-arcana-native.mjs";
+import {prepareSpellMightDamage,finalizeSpellMightDamage,spellMightCalculateDamage,recordSpellMightDamage,resumeSpellMightFalls} from "../scripts/arcana-spell-might.mjs";
 const read=pack=>fs.readdirSync(`packs/_source/${pack}`).map(f=>JSON.parse(fs.readFileSync(`packs/_source/${pack}/${f}`,"utf8")));
 const doc=read("spells").find(d=>d.flags?.spikependium?.key==="spell:au-enthrallment");assert.ok(doc);
 assert.equal(doc.name,"Заворожение");assert.equal(doc.system.source.page,"40");assert.equal(doc.system.level,7);assert.equal(doc.system.school,"enc");
@@ -135,4 +136,21 @@ s=setup();origin=await use(s);await save(s,origin);const forged=message("usage",
 // Native action dialog; helper damage is not a freely repeatable inventory action.
 s=setup();class Base{async _prepareConsumptionContext(){return{fields:[],inputs:{createCheckboxInput(){}}};}}
 const dialog={applicationClass:Base},msg={};prepareEnthrallment(s.cast,{},dialog,msg);const window=new dialog.applicationClass();window.config={};assert.equal((await window._prepareConsumptionContext({},{})).fields[0].name,"spikependium.enthrallmentVisible");assert.equal(msg.hasConsumption,true);assert.equal(prepareEnthrallment(s.damage,{},dialog,{}),false);
-console.log("Enthrallment: native payment/refund and dependent conditions, target selection and per-cast save immunity, end-turn damage/range/height/exact tokens, slot scaling, native reductions, saved-roll recovery, no replay/late/unsaved rerolls, audience and forged-card guards passed.");
+// The actual end-turn path preserves headless configuration and a paid Boon's saved choice.
+for(const minimum of [true,false]){
+ s=setup();origin=await use(s);await save(s,origin);const event="M".repeat(16),feat={id:"boon",uuid:`${s.caster.uuid}.Item.boon`,actor:s.caster,flags:{spikependium:{key:"feat:au-boon-of-spell-might"}}};
+ s.caster.items.push(feat);s.caster.items.has=id=>s.caster.items.some(i=>i.id===id);world.set(feat.uuid,feat);
+ const r={event,caster:s.caster.uuid,item:s.item.uuid,activity:s.cast.uuid,feat:feat.uuid,time:game.time.worldTime,slot:"spell7",level:7,minimum};
+ set(s.caster,`flags.spikependium.spellMight.${event}`,{data:[r],active:1});origin.flags.spikependium.spellMight=clone(r);origin.system.deltas.actor.push({keyPath:`flags.spikependium.spellMight.${event}.active`,delta:1},{keyPath:"system.spells.spell7.value",delta:-1});origin.system.deltas.item={boon:[{keyPath:"system.uses.spent",delta:1}]};
+ const old=Hooks.call;Hooks.call=(h,...args)=>{if(h==="dnd5e.preApplyDamage")recordSpellMightDamage(...args);return old(h,...args);};
+ Effect.fromStatusEffect=async status=>({toObject:()=>({type:"condition",system:{type:status},statuses:[status],flags:{}})});
+ s.target.calculateDamage=(d,o)=>spellMightCalculateDamage.call(s.target,(...args)=>nativeCalculateDamage.call(s.target,...args),d,o);
+ s.damage.rollDamage=async(config,dialog,msg)=>{const cfg={...config,subject:s.damage},roll=new Damage(0);roll._evaluated=false;roll.dice=[{number:4,faces:8,modifiers:[]}];roll.resetFormula=()=>{};
+  roll.toJSON=()=>({total:roll.total,options:roll.options,modifiers:clone(roll.dice[0].modifiers)});prepareSpellMightDamage(cfg,dialog,msg);assert.equal(dialog.configure,false);assert.equal(dialog.applicationClass,undefined);
+  finalizeSpellMightDamage([roll],cfg,dialog,msg);assert.deepEqual(roll.dice[0].modifiers,minimum?["min3"]:[]);roll.total=minimum?12:4;roll._evaluated=true;
+  return [message("damage",s.damage,{...msg.data,rolls:[roll]})];};
+ try{await end(s);await resumeSpellMightFalls(s.target);assert.equal(s.target.system.attributes.hp.value,minimum?48:56);assert.equal(s.target.effects.filter(e=>e.statuses.has("prone")).length,1);
+  await end(s);await resumeSpellMightFalls(s.target);assert.equal(s.target.effects.filter(e=>e.statuses.has("prone")).length,1);assert.equal(s.target.system.attributes.hp.value,minimum?48:56);
+ }finally{Hooks.call=old;}
+}
+console.log("Enthrallment: native payment/refund and dependent conditions, target selection and per-cast save immunity, end-turn damage/range/height/exact tokens, slot scaling, native reductions, saved-roll recovery, no replay/late/unsaved rerolls, audience and forged-card guards; headless Spell Might minimum/decline and one native Prone passed.");

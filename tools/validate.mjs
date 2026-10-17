@@ -107,7 +107,8 @@ function checkItem(where, item) {
     for (const t of a.consumption?.targets ?? []) {
       if (t.type === "itemUses" && !t.target && !item.system.uses?.max) err(where, "расход предмета без счётчика применений");
       if (t.type === "activityUses" && !a.uses?.max) err(where, "расход действия без счётчика применений");
-      if (t.type === "spellSlots" && Number(t.value) > 0 && (!a.consumption.scaling.allowed || t.scaling.mode !== "level"))
+      const fixedSlot = a.consumption.scaling.allowed === false && t.scaling?.mode === "" && /^[1-9]$/.test(t.target);
+      if (t.type === "spellSlots" && Number(t.value) > 0 && !fixedSlot && (!a.consumption.scaling.allowed || t.scaling.mode !== "level"))
         err(where, "уровень расходуемой ячейки не связан с выбранным усилением");
     }
     if (a.type === "summon") {
@@ -244,7 +245,7 @@ for ( const [pack, list] of Object.entries(byPack) ) {
   const CLASSES = new Set(["artificer", "psion", "barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard",
     ...[...docs.values()].filter(d => d.type === "class").map(d => d.system.identifier)]);
   const ABIL = new Set(["str", "dex", "con", "int", "wis", "cha"]);
-  const OK = [/^@prof$/, /^@scaling$/, /^@mod$/, /^@item\.(uses\.(spent|max|value)|level)$/, /^@attributes\.(spell\.mod|movement\.(walk|max)|hp\.max|hd\.\w+)$/, /^@details\.level$/, /^@spikependium\.alchemistBombDC$/, /^@flags\.dnd5e\.summon\.mod$/];
+  const OK = [/^@prof$/, /^@scaling$/, /^@mod$/, /^@item\.(uses\.(spent|max|value)|level)$/, /^@attributes\.(spell\.mod|movement\.(walk|max)|hp\.max|hd\.\w+)$/, /^@details\.level$/, /^@spikependiumSpellTrickUses$/, /^@spikependium\.alchemistBombDC$/, /^@flags\.dnd5e\.summon\.mod$/];
   const checkFormula = (where, formula) => {
     if ( typeof formula !== "string" || !formula.includes("@") ) return;
     for ( const m of formula.matchAll(/@[a-zA-Z][\w.-]*/g) ) {

@@ -47,6 +47,123 @@ export const WILD_TALENTS = [
   "feat:pyrokinesis"
 ];
 
+export const CONJURER_DURABLE_EFFECT = {
+  "_id": "EdE08JO9inupomob",
+  "name": "Надёжные вызовы: Сопротивления",
+  "img": "icons/magic/defensive/shield-barrier-blue.webp",
+  "type": "base",
+  "system": {
+    "changes": [
+      {
+        "key": "system.traits.dr.value",
+        "value": "acid",
+        "type": "add",
+        "priority": null,
+        "phase": "initial",
+        "_id": "XqcpIn7VxZ9UVZHA"
+      },
+      {
+        "key": "system.traits.dr.value",
+        "value": "bludgeoning",
+        "type": "add",
+        "priority": null,
+        "phase": "initial",
+        "_id": "xCJSwa71yqM7HEdg"
+      },
+      {
+        "key": "system.traits.dr.value",
+        "value": "cold",
+        "type": "add",
+        "priority": null,
+        "phase": "initial",
+        "_id": "RzltTjbUh0gNSGYh"
+      },
+      {
+        "key": "system.traits.dr.value",
+        "value": "fire",
+        "type": "add",
+        "priority": null,
+        "phase": "initial",
+        "_id": "c356hAHYxKU5ZQEt"
+      },
+      {
+        "key": "system.traits.dr.value",
+        "value": "lightning",
+        "type": "add",
+        "priority": null,
+        "phase": "initial",
+        "_id": "GLz4WEHejEuKFPEb"
+      },
+      {
+        "key": "system.traits.dr.value",
+        "value": "piercing",
+        "type": "add",
+        "priority": null,
+        "phase": "initial",
+        "_id": "Z7OaxWwBVZRzE1V7"
+      },
+      {
+        "key": "system.traits.dr.value",
+        "value": "poison",
+        "type": "add",
+        "priority": null,
+        "phase": "initial",
+        "_id": "fFN59EV4qDAnImXR"
+      },
+      {
+        "key": "system.traits.dr.value",
+        "value": "slashing",
+        "type": "add",
+        "priority": null,
+        "phase": "initial",
+        "_id": "WXJ7NIUiZ8pIgWEO"
+      },
+      {
+        "key": "system.traits.dr.value",
+        "value": "thunder",
+        "type": "add",
+        "priority": null,
+        "phase": "initial",
+        "_id": "CYeWu1BkcIXP1VX3"
+      }
+    ],
+    "conditions": "{\"k\":\"spikependium.conjurerDurableActive\",\"v\":true}"
+  },
+  "disabled": false,
+  "transfer": false,
+  "duration": {
+    "value": null,
+    "units": "seconds",
+    "expiry": null,
+    "expired": false
+  },
+  "description": "Действует, пока у существа остаются Временные хиты именно от Надёжных вызовов. Новый запас другого источника не восстанавливает эти Сопротивления.",
+  "origin": null,
+  "statuses": [],
+  "tint": "#ffffff",
+  "flags": {
+    "spikependium": {
+      "conjurerDurableTemplate": true
+    }
+  },
+  "sort": 0,
+  "start": null,
+  "showIcon": 1,
+  "folder": null,
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items.effects!40epZoHq8TlKwStE.EdE08JO9inupomob"
+};
+
 export const DRAGONMARK_TABLES = {
   "mark-of-detection": [
     "Compendium.dnd5e.spells24.Item.phbsplDetectEvil",

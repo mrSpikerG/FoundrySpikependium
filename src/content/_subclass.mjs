@@ -9,8 +9,9 @@ import { feature, subclassItem, folder, md, spellTable } from "../../tools/lib/d
  * }
  */
 export function makeSubclass(o) {
-  const subFolder = folder("subclasses", `${o.cls}/${o.name}`);
-  const clsFolder = folder("subclasses", o.cls);
+  const parent = [o.cls, o.group].filter(Boolean).join("/");
+  const subFolder = folder("subclasses", `${parent}/${o.name}`);
+  const clsFolder = folder("subclasses", parent);
   const grants = {};
   const add = (lvl, key) => (grants[lvl] ??= []).push(key);
 

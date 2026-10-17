@@ -1,0 +1,271 @@
+{
+  "_id": "40epZoHq8TlKwStE",
+  "name": "Надёжные вызовы",
+  "type": "feat",
+  "img": "icons/magic/defensive/shield-barrier-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы сотворяете заклинание школы Призыва для призыва или создания существа с тратой ячейки заклинаний, это существо при появлении получает Временные хиты, равные вашему удвоенному уровню Волшебника. Пока у существа есть эти Временные хиты, оно имеет Сопротивление всем типам урона, кроме урона Силовым полем, Некротической и Психической энергией и Излучением.</p><p>При штатном размещении существ из заклинания школы Призыва с фактическим расходом обычной или договорной ячейки Временные хиты и условный эффект Сопротивлений выдаются автоматически. Если у существа уже есть другой запас Временных хитов, выберите один источник; запасы не складываются. Бесплатное или ритуальное сотворение преимущества не даёт. Частичная потеря этих Временных хитов сохраняет эффект; обнуление или замена новым запасом прекращает его. Чужие Временные хиты не возобновляют преимущество.</p><p>Ручное действие выдаёт только Временные хиты для созданий, размещаемых вне штатного Призыва; в этом случае источник и Сопротивления настраивает Мастер. При ручной замене запаса меньшим числом от другого источника удалите прежний эффект Надёжных вызовов. Возврат ячейки отключает зависимые Сопротивления; уже созданных существ и применённые Временные хиты откатывайте вручную.</p><h3>Действия</h3><ul><li>[[/item activity=0QHMwIhyAaVUCPrX]]{Ручное назначение Временных хитов} · [[/heal activity=0QHMwIhyAaVUCPrX]]{Бросок лечения}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "21",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "au-conjurer-durable-summons",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Призыватель",
+    "prerequisites": {
+      "level": 6,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "0QHMwIhyAaVUCPrX": {
+        "_id": "0QHMwIhyAaVUCPrX",
+        "type": "heal",
+        "name": "Ручное назначение Временных хитов",
+        "img": "icons/magic/defensive/shield-barrier-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Существо появилось от заклинания Призыва с расходом ячейки",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "creature",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "healing": {
+          "custom": {
+            "enabled": true,
+            "formula": "2 * @classes.wizard.levels"
+          },
+          "number": null,
+          "denomination": null,
+          "bonus": "",
+          "types": [
+            "temphp"
+          ],
+          "scaling": {
+            "mode": "",
+            "number": null,
+            "formula": ""
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "EdE08JO9inupomob",
+      "name": "Надёжные вызовы: Сопротивления",
+      "img": "icons/magic/defensive/shield-barrier-blue.webp",
+      "type": "base",
+      "system": {
+        "changes": [
+          {
+            "key": "system.traits.dr.value",
+            "value": "acid",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "XqcpIn7VxZ9UVZHA"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "bludgeoning",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "xCJSwa71yqM7HEdg"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "cold",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "RzltTjbUh0gNSGYh"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "fire",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "c356hAHYxKU5ZQEt"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "lightning",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "GLz4WEHejEuKFPEb"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "piercing",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "Z7OaxWwBVZRzE1V7"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "poison",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "fFN59EV4qDAnImXR"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "slashing",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "WXJ7NIUiZ8pIgWEO"
+          },
+          {
+            "key": "system.traits.dr.value",
+            "value": "thunder",
+            "type": "add",
+            "priority": null,
+            "phase": "initial",
+            "_id": "CYeWu1BkcIXP1VX3"
+          }
+        ],
+        "conditions": "{\"k\":\"spikependium.conjurerDurableActive\",\"v\":true}"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "Действует, пока у существа остаются Временные хиты именно от Надёжных вызовов. Новый запас другого источника не восстанавливает эти Сопротивления.",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "conjurerDurableTemplate": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!40epZoHq8TlKwStE.EdE08JO9inupomob"
+    }
+  ],
+  "folder": "njbHcOeMeCYPJqra",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:au-conjurer:durable-summons"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!40epZoHq8TlKwStE"
+}

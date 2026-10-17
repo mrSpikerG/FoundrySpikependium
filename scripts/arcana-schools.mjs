@@ -1,4 +1,8 @@
 const school = item => item?.type === "feat" && item.flags.spikependium?.schoolAdept;
+const familiarASI = item => ["feat:au-soothing-familiar","feat:au-otherworldly-familiar","feat:au-elemental-familiar","feat:au-warlike-familiar"].includes(item?.flags?.spikependium?.key);
+const cappedASI = item => school(item) || familiarASI(item) || ["feat:au-magic-expert","feat:au-spell-trickster","feat:au-boon-of-school-mastery"].includes(item?.flags?.spikependium?.key);
+const asiMax = item => item?.flags?.spikependium?.key === "feat:au-boon-of-school-mastery" ? 30 : 20;
+const asiAbilities = item => familiarASI(item) ? ["str","dex","con","int","wis","cha"] : ["int","wis","cha"];
 const maxSlot = actor => Math.max(0, ...Object.entries(actor.system.spells ?? {}).filter(([key,s]) => /^(spell[1-9]|pact)$/.test(key) && s.max > 0)
   .map(([key,s]) => key === "pact" ? s.level ?? 0 : Number(key.slice(5))));
 const allowed = (item, actor) => school(item)?.spells.filter(s => s.level <= maxSlot(actor)).map(s => s.uuid) ?? [];
@@ -7,23 +11,23 @@ const grant = item => item.system.advancement.find(a => a.type === "ItemGrant");
 const authority = actor => game.users.activeGM ? game.user.isActiveGM : [...game.users].filter(u => u.active && actor.testUserPermission(u,"OWNER"))
   .sort((a,b) => a.id.localeCompare(b.id))[0]?.id === game.user.id;
 export function schoolASICanImprove(wrapped,ability) {
-  if (!school(this.item) || !this.actor) return wrapped(ability);
-  return ["int","wis","cha"].includes(ability)
-    && (this.actor.system._source.abilities[ability].value < 20 || (this.value.assignments?.[ability] ?? 0) > 0) && wrapped(ability);
+  if (!cappedASI(this.item) || !this.actor) return wrapped(ability);
+  return asiAbilities(this.item).includes(ability)
+    && (this.actor.system._source.abilities[ability].value < asiMax(this.item) || (this.value.assignments?.[ability] ?? 0) > 0) && wrapped(ability);
 }
 export function schoolASIApply(wrapped,level,data,options={}) {
-  if (!school(this.item)) return wrapped(level,data,options);
-  if (data.type === "feat") throw Error("Адепт школы позволяет только +1 к Интеллекту, Мудрости или Харизме");
+  if (!cappedASI(this.item)) return wrapped(level,data,options);
+  if (data.type === "feat") throw Error("Эта черта позволяет только повысить выбранную характеристику на 1");
   const previous = this.value.assignments ?? {}, deltas = data.assignments ?? {};
   const next = {...previous};
   for (const [ability,delta] of Object.entries(deltas)) {
     if (!delta) continue;
-    if (!["int","wis","cha"].includes(ability) || !Number.isInteger(delta)
-      || delta > 0 && this.actor.system._source.abilities[ability].value + delta > 20) throw Error("Адепт школы: недопустимое повышение характеристики или превышение 20");
+    if (!asiAbilities(this.item).includes(ability) || !Number.isInteger(delta)
+      || delta > 0 && this.actor.system._source.abilities[ability].value + delta > asiMax(this.item)) throw Error(`Недопустимое повышение характеристики или превышение ${asiMax(this.item)}`);
     next[ability] = (next[ability] ?? 0) + delta;
   }
   if (Object.values(next).some(n => n < 0 || n > 1) || Object.values(next).reduce((sum,n)=>sum+n,0) > 1)
-    throw Error("Адепт школы даёт суммарно одно очко характеристики");
+    throw Error("Эта черта даёт суммарно одно очко характеристики");
   return wrapped(level,data,options);
 }
 export async function schoolGrantApply(wrapped, level, data = {}, options = {}) {

@@ -1,0 +1,207 @@
+{
+  "_id": "okcFcxjUi46yaOou",
+  "name": "Призыватель",
+  "type": "subclass",
+  "img": "icons/magic/movement/portal-vortex-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><em>Делайте шаги через пространство и призывайте существ из ниоткуда</em></p><p>Призыватель считает расстояние и материю примерными ориентирами, а не физическими законами. Он овладевает магией, которая мгновенно перемещает существ через пространство и призывает существ сражаться на его стороне.</p><p>Книжная редакция из «Неудержимой магии», отдельная от версии UA. Заклинания специалиста выбираются при повышении уровня Волшебника. Условия телепортации, обмен местами, дополнительные эффекты призыва и Расщеплённый призыв описаны в соответствующих особенностях.</p><p><em>Перевод: Koroz.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "20",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "conjurer-au",
+    "classIdentifier": "wizard",
+    "advancement": [
+      {
+        "_id": "4IcoV6FqSIktlxAU",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.XGruSIGfBVqvKVe5",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.v9ZkAejtTFHozG17",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 3,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "fK8hnOOXoL5DTpVz",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.H1od3xqpYEZS4MC2",
+              "optional": false
+            },
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.40epZoHq8TlKwStE",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 6,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "Z8rAjBc0E8BBB9Ow",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.GUKIgvClB6KEe9d5",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 10,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "yS9vedAfoAyS9I2a",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.subclasses.Item.GYQwn1BjRLQjok1C",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": null
+        },
+        "value": {},
+        "level": 14,
+        "title": "Умения подкласса",
+        "hint": ""
+      },
+      {
+        "_id": "BNBInxcH2r6nPnmN",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "3": {
+              "count": 2,
+              "replacement": false
+            },
+            "5": {
+              "count": 1,
+              "replacement": false
+            },
+            "7": {
+              "count": 1,
+              "replacement": false
+            },
+            "9": {
+              "count": 1,
+              "replacement": false
+            },
+            "11": {
+              "count": 1,
+              "replacement": false
+            },
+            "13": {
+              "count": 1,
+              "replacement": false
+            },
+            "15": {
+              "count": 1,
+              "replacement": false
+            },
+            "17": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [
+              "class:wizard"
+            ],
+            "level": "availableNoCantrips",
+            "school": [
+              "con"
+            ]
+          },
+          "spell": {
+            "ability": [
+              "int"
+            ],
+            "method": "spell",
+            "prepared": 0,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "title": "Специалист школы Призыва: заклинания для книги",
+        "hint": "На 3-м уровне — два заклинания 1-го или 2-го уровня; затем одно строго нового уровня ячеек Волшебника. Не становятся всегда подготовленными."
+      }
+    ],
+    "spellcasting": {
+      "progression": "none",
+      "ability": "",
+      "preparation": {
+        "formula": ""
+      }
+    }
+  },
+  "effects": [],
+  "folder": "JYN7WqIRLfTo8KMh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:au-conjurer",
+      "conjurationSavant": "BNBInxcH2r6nPnmN"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!okcFcxjUi46yaOou"
+}

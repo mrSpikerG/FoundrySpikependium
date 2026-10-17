@@ -1,0 +1,184 @@
+{
+  "_id": "JkymTfDQxDZpFjN7",
+  "name": "Дар освоения школы магии",
+  "type": "feat",
+  "img": "icons/sundries/books/book-open-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Повышение характеристики.</strong> Увеличьте Интеллект, Мудрость или Харизму на 1, максимум до 30.</p><p><strong>Освоенная школа.</strong> Выберите одну школу: Воплощение, Иллюзия, Некромантия, Ограждение, Очарование, Преобразование, Призыв или Прорицание.</p><p><strong>Рутинное сотворение.</strong> Выберите заклинание 1-го уровня этой школы из списка заклинаний вашего класса. Оно всегда подготовлено; вы можете сотворять его без траты ячейки и компонентов.</p><p><strong>Фирменный арканум.</strong> Выберите заклинание этой школы 7-го уровня или ниже. Оно всегда подготовлено. Один раз сотворите его без траты ячейки; это применение восстанавливается после Долгого отдыха. Компоненты сохраняются.</p><p>Оба подготовленных заклинания также можно сотворять с подходящими ячейками. Дар можно получить повторно, каждый раз выбирая новую школу.</p><p><strong>Применение.</strong> При добавлении выберите ещё не освоенную этим даром школу и свой класс. Оба заклинания используют характеристику выбранного класса; для арканума это согласованная трактовка неуказанной в источнике характеристики. Штатные шаги предлагают повышение характеристики и два заклинания с отдельными ограничениями. Сначала завершите оба выбора. Рутинное заклинание выдаётся как обычная всегда подготовленная копия, а отдельное Рутинное сотворение на черте открывает его штатное действие без компонентов и ячейки, строго на 1-м уровне. Обычная копия сохраняет компоненты, ячейки и повышение уровня. У арканума есть отдельное бесплатное применение за Долгий отдых; обычные сотворения не расходуют его. Если выбран заговор, его предоставленная этим даром копия требует бесплатного применения, а самостоятельно изученные копии не меняются. При удалении исходной черты или изменении класса/списка перепроверьте связи; другие копии заклинаний не удаляются.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "33",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "boon-of-school-mastery",
+    "type": {
+      "value": "feat",
+      "subtype": "epicBoon"
+    },
+    "requirements": "Сотворение заклинаний или Магия договора",
+    "prerequisites": {
+      "level": 19,
+      "repeatable": true,
+      "items": [
+        "feat:spellcasting",
+        "feat:pact-magic"
+      ]
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "RJaIZTdCVTdG8FyH",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [
+            "str",
+            "dex",
+            "con"
+          ],
+          "recommendation": null,
+          "max": 30
+        },
+        "value": {},
+        "level": 0,
+        "title": "Интеллект, Мудрость или Харизма +1 (максимум 30)",
+        "hint": ""
+      },
+      {
+        "_id": "Hwxw4d4YLe9uy9KW",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "0": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "1",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "",
+              "per": "",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Рутинное сотворение: заклинание 1-го уровня",
+        "hint": "Заклинание выбранной школы из списка выбранного класса. Всегда подготовлено; отдельное действие на черте позволяет сотворять его без ячейки и компонентов на 1-м уровне."
+      },
+      {
+        "_id": "muSFd6nwjGwZycNx",
+        "type": "ItemChoice",
+        "configuration": {
+          "allowDrops": true,
+          "choices": {
+            "0": {
+              "count": 1,
+              "replacement": false
+            }
+          },
+          "pool": [],
+          "restriction": {
+            "type": "",
+            "subtype": "",
+            "list": [],
+            "level": "available",
+            "school": []
+          },
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          },
+          "type": "spell"
+        },
+        "value": {
+          "added": {},
+          "replaced": {}
+        },
+        "level": 0,
+        "title": "Фирменный арканум: заклинание до 7-го уровня",
+        "hint": "Заклинание выбранной школы, не выше 7-го уровня. Список класса не ограничивает выбор. Всегда подготовлено, одно бесплатное сотворение за Долгий отдых; компоненты сохраняются."
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "x7E1MhoH0QBKq4E6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:au-boon-of-school-mastery",
+      "schoolMasteryChoices": {
+        "routine": "Hwxw4d4YLe9uy9KW",
+        "signature": "muSFd6nwjGwZycNx"
+      }
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!JkymTfDQxDZpFjN7"
+}

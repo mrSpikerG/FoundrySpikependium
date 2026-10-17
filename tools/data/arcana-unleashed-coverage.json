@@ -3,7 +3,7 @@
   "titleOnWebsite": "Магия необузданная",
   "titleInModule": "Неудержимая магия",
   "checkedOn": "2026-10-17",
-  "moduleVersion": "1.141.0",
+  "moduleVersion": "1.152.0",
   "source": "https://ruleholder.com/sourcebooks/au",
   "scope": "Book content inventory compared with generated compendium sources; not a live Foundry automation test.",
   "chapterSnapshots": [
@@ -47,7 +47,7 @@
   "sections": {
     "subclasses": {
       "total": 8,
-      "imported": 0,
+      "imported": 1,
       "entries": [
         {
           "name": "Мистический лучник (Воин)",
@@ -62,12 +62,19 @@
         {
           "name": "Воплотитель (Волшебник)",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey",
-          "status": "uaDraftNeedsBookComparison",
+          "status": "imported",
           "uaDraft": {
             "key": "subclass:conjurer",
             "moduleName": "Conjurer",
             "source": "UA-AU"
-          }
+          },
+          "key": "subclass:au-conjurer",
+          "moduleName": "Призыватель",
+          "pages": [
+            20,
+            21
+          ],
+          "basis": "Provided Arcana_Unleashed_RUS.pdf, printed pages 20–21; separate book edition, UA retained."
         },
         {
           "name": "Мастер Превращения (Волшебник)",
@@ -209,7 +216,7 @@
     },
     "feats": {
       "total": 29,
-      "imported": 21,
+      "imported": 29,
       "entries": [
         {
           "name": "Друг фамильяра",
@@ -340,27 +347,42 @@
         {
           "name": "Воинственный фамильяр",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-voinstvennyy-familyar",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-warlike-familiar",
+          "moduleName": "Воинственный фамильяр",
+          "page": 31
         },
         {
           "name": "Знаток магии",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-znatok-magii",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-magic-expert",
+          "moduleName": "Знаток магии",
+          "page": 31
         },
         {
           "name": "Магическая уловка",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-magicheskaya-ulovka",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-spell-trickster",
+          "moduleName": "Хитроумный заклинатель",
+          "page": 33
         },
         {
           "name": "Потусторонний фамильяр",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-potustoronniy-familyar",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-otherworldly-familiar",
+          "moduleName": "Потусторонний фамильяр",
+          "page": 31
         },
         {
           "name": "Стихийный фамильяр",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-stikhiynyy-familyar",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-elemental-familiar",
+          "moduleName": "Стихийный фамильяр",
+          "page": 32
         },
         {
           "name": "Стойкий к заклинаниям",
@@ -372,7 +394,10 @@
         {
           "name": "Успокаивающий фамильяр",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-uspokaivayushchiy-familyar",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-soothing-familiar",
+          "moduleName": "Утешающий фамильяр",
+          "page": 32
         },
         {
           "name": "Мистический воин",
@@ -384,7 +409,10 @@
         {
           "name": "Дар всплеска магической мощи",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#epicheskie-dary-dar-vspleska-magicheskoy-moshchi",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-boon-of-spell-might",
+          "moduleName": "Дар сокрушительной силы заклинаний",
+          "page": 33
         },
         {
           "name": "Дар железного разума",
@@ -397,7 +425,10 @@
         {
           "name": "Дар мастерства школы магии",
           "url": "https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#epicheskie-dary-dar-masterstva-shkoly-magii",
-          "status": "notImported"
+          "status": "imported",
+          "key": "feat:au-boon-of-school-mastery",
+          "moduleName": "Дар освоения школы магии",
+          "page": 33
         }
       ]
     },
@@ -1204,7 +1235,7 @@
     }
   ],
   "sourceReconciliation": {
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-17",
     "pdf": "docs/Arcana_Unleashed_RUS.pdf",
     "sha256": "06625a9284231aec0f2467c80f24f5e0add9a5ef53869036da0e8e43c3c2b73c",
     "policy": "Параметры и правила взяты из предоставленного PDF; сайт дополняет отсутствующие главы и используется для сопоставления названий.",
@@ -1303,6 +1334,30 @@
         "page": 33,
         "field": "Версия правил PDF",
         "value": "Любая характеристика +1 до 30; концентрация не теряется от урона и обычной Недееспособности; замена концентрации, Окаменение, Бессознательность и смерть сохраняют окончание",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Дар всплеска магической мощи",
+        "moduleName": "Дар сокрушительной силы заклинаний",
+        "page": 33,
+        "field": "Версия правил PDF",
+        "value": "INT/WIS/CHA +1 до 30; Перегрузка при сотворении за ячейку: 1/2 на костях урона как 3, получившие урон Сбиты с ног; восстановление при инициативе либо Коротком/Долгом отдыхе",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Успокаивающий фамильяр",
+        "moduleName": "Утешающий фамильяр",
+        "page": "32–33",
+        "field": "Версия правил PDF",
+        "value": "Любая характеристика +1 до 20; в пределах 120 футов от владельца фамильяр даёт 5-футовую Эманацию: союзник внутри неё может считать 1/2 на костях лечения за 3; получателю лечения не требуется находиться в Эманации",
+        "status": "imported"
+      },
+      {
+        "websiteName": "Потусторонний фамильяр",
+        "moduleName": "Потусторонний фамильяр",
+        "page": "31–32",
+        "field": "Версия правил PDF",
+        "value": "Любая характеристика +1 до 20; необязательное усиление при Обретении фамильяра: сопротивление Звуку/Излучению/Некротической/Психической энергии/Яду и Фазовое перемещение до нового сотворения; выталкивание в последнее свободное место не наносит урон",
         "status": "imported"
       }
     ]

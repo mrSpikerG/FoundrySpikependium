@@ -1,0 +1,132 @@
+{
+  "_id": "uBNlwevqhx5zSVNR",
+  "name": "Утешающий фамильяр",
+  "type": "feat",
+  "img": "icons/magic/life/heart-hand-gold-green.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Повышение характеристики.</strong> Увеличьте одну характеристику на 1, максимум до 20.</p><p><strong>Исцеляющий маяк.</strong> Пока ваш фамильяр находится в пределах 120 футов от вас, положительная энергия заполняет исходящую от него 5-футовую Эманацию. Каждый раз, когда союзник в этой Эманации бросает кость для определения количества восстановленных Хитов существа, он может считать результат 1 или 2 как 3.</p><p><strong>Применение.</strong> При добавлении черты штатный шаг предлагает характеристику. Постоянный эффект Исцеляющий маяк можно отключить на листе. В окне броска лечения или Кости хитов выберите маяк: вы подтверждаете союзность фамильяру и отсутствие Полного укрытия, перекрывающего Эманацию. Модуль проверяет связь фамильяра с владельцем, одну сцену и уровень карты, расстояние от владельца до фамильяра не более 120 футов и от фамильяра до бросающего не более 5 футов. Получатель лечения может находиться дальше: в Эманации должен быть именно бросающий. Выбранный минимум 3 применяется к обычным костям лечения, включая вложенную формулу Кости хитов; прибавки, урон и Временные хиты не изменяются. Несколько маяков не складываются. Для обычного фамильяра используется штатный призыв; для Боевого фамильяра проверяется его действующее сотворение. Полное укрытие, союзность, выбор отдельных результатов после броска, ручные связи старых фамильяров и броски вне штатного процесса разрешает Мастер.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "32",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "soothing-familiar",
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "Друг фамильяра",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": [
+        "feat:familiar-friend"
+      ]
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "M0StND0IwET7YFRI",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Любая характеристика +1 (максимум 20)",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "ibVCfiCMxdkV4wsx",
+      "name": "Исцеляющий маяк",
+      "img": "icons/magic/life/heart-hand-gold-green.webp",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "soothingBeacon": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!uBNlwevqhx5zSVNR.ibVCfiCMxdkV4wsx"
+    }
+  ],
+  "folder": "6UtLiolDyU9n3JG3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:au-soothing-familiar"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!uBNlwevqhx5zSVNR"
+}

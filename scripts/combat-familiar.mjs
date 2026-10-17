@@ -70,6 +70,10 @@ function valid(r, a) {
     && JSON.stringify(r) === JSON.stringify(Object.fromEntries(Object.entries(record).filter(([k]) => !["active","placed"].includes(k))))
     && (!a || supported(a) && a.uuid === r.activity && a.item.uuid === r.item && a.actor.uuid === r.caster && a.item.system.level === r.level);
 }
+export function combatFamiliarCaster(token) {
+  const r=token?.flags?.spikependium?.combatFamiliar;
+  return token?.actor?.flags.spikependium?.key?.startsWith(prefix)&&token.actor.flags.dnd5e?.summon?.origin===r?.item&&valid(r)?resolve(r.caster):null;
+}
 export function canPlaceCombatFamiliar(a) {
   if (!supported(a)) return;
   const r = casts.get(a), caster = resolve(r?.caster);

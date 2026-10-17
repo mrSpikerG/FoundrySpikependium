@@ -1,7 +1,8 @@
 import { incapacitated } from "./effects.mjs";
+import { trickHideValid, trickHidingEffects, keepSneakySpell, keepSneakyAttack } from "./spell-trickster.mjs";
 
 const applying = new Set(), rolling = new Set();
-const isHide = a => a?.type === "check" && a.actor?.flags.spikependium?.key === "actor:mm25:assassin"
+const isHide = a => a?.type === "check" && (a.actor?.flags.spikependium?.key === "actor:mm25:assassin" || a.item?.flags.spikependium?.key === "feat:au-spell-trickster")
   && a.flags.spikependium?.cunningHide === true;
 export function prepareHideDialog(activity, _config, dialog) {
   if (!isHide(activity)) return;
@@ -33,7 +34,7 @@ function info(origin) {
     || !origin.author || !actor.testUserPermission(origin.author, "OWNER")) return;
   const paid = !receipt.payment || (/^flags\.spikependium\.hideCasts\.[A-Za-z0-9]{16}\.spent$/.test(receipt.payment)
     && foundry.utils.getProperty(actor, receipt.payment) === 1);
-  return { activity, actor, receipt, paid, ended: receipt.epoch !== (actor.flags.spikependium?.hideEpoch ?? 0) };
+  return { activity, actor, receipt, paid: paid && trickHideValid(origin), ended: receipt.epoch !== (actor.flags.spikependium?.hideEpoch ?? 0) };
 }
 export async function rollHide(activity, _config, results) {
   const origin = results?.message;
@@ -81,7 +82,8 @@ export async function syncHide(message) {
     const { action, data } = await tray._prepareEffectData(source, actor);
     if (!info(origin)?.paid || info(origin)?.ended || origin.flags.spikependium.hideEnded) return;
     data.system.magical = false; data.flags.spikependium ??= {};
-    data.flags.spikependium.cunningHide = { origin: origin.uuid, dc: roll.total, payment: receipt.payment, actor: actor.uuid, epoch: receipt.epoch };
+    data.flags.spikependium.cunningHide = { origin: origin.uuid, dc: roll.total, payment: receipt.payment, actor: actor.uuid, epoch: receipt.epoch,
+      ...(activity.flags.spikependium?.spellTrickEscape ? { spellTrick: true } : {}) };
     data.name = `Засада: Сл обнаружения ${roll.total}`;
     await foundry.documents.modifyBatch([
       { action, documentName: "ActiveEffect", parent: actor, ...(action === "create" ? { data: [data] } : { updates: [data] }) },
@@ -90,17 +92,19 @@ export async function syncHide(message) {
   } finally { applying.delete(origin.uuid); }
 }
 export async function endHide(actor) {
-  if (!actor?.isOwner || actor.flags.spikependium?.key !== "actor:mm25:assassin") return;
-  const effects = actor.effects.filter(e => e.flags.spikependium?.cunningHide);
-  await actor.performBulkUpdate({ actor: { "flags.spikependium.hideEpoch": (actor.flags.spikependium.hideEpoch ?? 0) + 1 },
+  if (!actor?.isOwner) return;
+  const effects = trickHidingEffects(actor);
+  if (!effects.length && actor.flags.spikependium?.key !== "actor:mm25:assassin"
+    && !actor.items?.some?.(i=>i.flags?.spikependium?.key==="feat:au-spell-trickster")) return;
+  await actor.performBulkUpdate({ actor: { "flags.spikependium.hideEpoch": (actor.flags.spikependium?.hideEpoch ?? 0) + 1 },
     operations: effects.length ? [{ action: "delete", documentName: "ActiveEffect", parent: actor, ids: effects.map(e => e.id) }] : [] });
 }
 export async function endHideOnAttack(rolls, { subject } = {}) {
-  if (rolls.some(r => r._evaluated)) await endHide(subject?.actor);
+  if (rolls.some(r => r._evaluated) && !await keepSneakyAttack(rolls,subject)) await endHide(subject?.actor);
 }
-export async function endHideOnSpell(activity) {
+export async function endHideOnSpell(activity,config,results) {
   const properties = activity?.item?.system?.properties;
-  if (activity?.item?.type === "spell" && (properties?.has?.("vocal") || properties?.includes?.("vocal"))) await endHide(activity.actor);
+  if (activity?.item?.type === "spell" && (properties?.has?.("vocal") || properties?.includes?.("vocal")) && !await keepSneakySpell(activity,config,results)) await endHide(activity.actor);
 }
 export async function cleanHide() {
   if (game.users.activeGM && game.user.id !== game.users.activeGM.id) return;
@@ -109,8 +113,9 @@ export async function cleanHide() {
     if (!actor.isOwner) continue;
     const invalid = actor.effects.filter(e => {
       const hide = e.flags.spikependium?.cunningHide;
+      const origin=hide?.spellTrick ? fromUuidSync(hide.origin,{strict:false}) : null;
       return hide && (hide.epoch !== (actor.flags.spikependium?.hideEpoch ?? 0)
-        || (hide.payment && foundry.utils.getProperty(actor, hide.payment) !== 1));
+        || (hide.payment && foundry.utils.getProperty(actor, hide.payment) !== 1) || hide.spellTrick && (!origin || !trickHideValid(origin)));
     });
     if (invalid.length) await actor.deleteEmbeddedDocuments("ActiveEffect", invalid.map(e => e.id));
   }

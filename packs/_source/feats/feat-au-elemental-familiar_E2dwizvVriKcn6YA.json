@@ -1,0 +1,174 @@
+{
+  "_id": "E2dwizvVriKcn6YA",
+  "name": "Стихийный фамильяр",
+  "type": "feat",
+  "img": "icons/magic/fire/explosion-embers-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Повышение характеристики.</strong> Увеличьте одну характеристику на 1, максимум до 20.</p><p><strong>Стихийная энергия.</strong> Когда вы сотворяете @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili]{Обретение фамильяра}, выберите урон Кислотой, Холодом, Огнём, Электричеством или Звуком. До следующего сотворения Обретения фамильяра ваш фамильяр получает следующие преимущества.</p><p><strong>Стихийное сопротивление.</strong> Фамильяр получает Сопротивление выбранному типу урона.</p><p><strong>Энергетический импульс.</strong> Бонусным действием прикажите фамильяру выпустить стихийную энергию. Фамильяр должен находиться в пределах 120 футов от вас и расходует Реакцию. Каждое существо в исходящей от него 5-футовой Эманации совершает спасбросок Ловкости со СЛ 8 + ваш модификатор заклинательной характеристики для Обретения фамильяра + ваш Бонус владения. При провале цель получает [[/r 2d4]]{2к4} урона выбранного типа; если она Средняя или меньше, также становится Сбитой с ног. При успехе последствий нет.</p><p><strong>Применение.</strong> Штатный шаг предлагает любую характеристику. Стихия выбирается при сотворении, сопротивление и действие импульса добавляются фамильяру. Сначала отметьте затронутые существа, затем используйте приказ на владельце. Модуль открывает штатную Реакцию фамильяра и проверяет связь, сцену, уровень карты, расстояния, доступность Реакции и выбранные цели. Подтвердите, что отмечены все затронутые существа и учтено Полное укрытие. Отмена до расхода Реакции возвращает приказ в том же игровом моменте; уже состоявшийся импульс не повторяется из того же приказа. Урон и состояние применяются штатными кнопками карточки после спасбросков. Размер цели для сбивания сохраняется при импульсе, иммунитет учитывается. Следующее Обретение фамильяра прекращает прежнее сопротивление и действие. При неизвестном результате расхода или создания карточки, смене формы и одновременном управлении с разных клиентов нужна проверка Мастера; уже применённые последствия при возврате расхода проверяются вручную.</p><h3>Действия</h3><ul><li>[[/item activity=Y9qeyPtdo9tL2RKD]]{Приказать: Энергетический импульс}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "32",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "elemental-familiar",
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "Друг фамильяра",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": [
+        "feat:familiar-friend"
+      ]
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {
+      "Y9qeyPtdo9tL2RKD": {
+        "_id": "Y9qeyPtdo9tL2RKD",
+        "type": "utility",
+        "name": "Приказать: Энергетический импульс",
+        "img": "icons/magic/fire/explosion-embers-orange.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "elementalFamiliarCommand": true
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "gSCAW3YxiFIRMM7Z",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Любая характеристика +1 (максимум 20)",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "6UtLiolDyU9n3JG3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:au-elemental-familiar"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!E2dwizvVriKcn6YA"
+}

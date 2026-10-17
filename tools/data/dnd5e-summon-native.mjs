@@ -9,6 +9,29 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 // MIT: foundryvtt/dnd5e 87e94dbd9f930135e0694cd7e7d49f210603cd2c; only superclass sorting delegation is supplied by the test host.
 const _loc = key => key, staticID = key => key.slice(0,16), simplifyBonus = value => Number(value);
+// Exact SaveActivity.rollDamage from the same pinned revision; superclass supplied by tests.
+export function nativeElementalSaveRollDamage(Base){return class extends Base{
+  async rollDamage(config={}, dialog={}, message={}) {
+    message = foundry.utils.mergeObject({
+      "data.system.onSave": this.damage.onSave
+    }, message);
+    return super.rollDamage(config, dialog, message);
+  }
+};}
+// Exact SummonActivity._finalizeUsage; the superclass is supplied by tests.
+export function nativeSummonFinalizer(Base){return class extends Base{
+  async _finalizeUsage(config, results) {
+    await super._finalizeUsage(config, results);
+    if ( config.create?.summons ) {
+      try {
+        results.summoned = await this.placeSummons(config.summons);
+      } catch (err) {
+        results.summoned = [];
+        Hooks.onError("SummonActivity#use", err, { log: "error", notify: "error" });
+      }
+    }
+  }
+};}
 export async function nativeSummonChanges(actor, profile, options) {
     const actorUpdates = { effects: [], items: [] };
     const tokenUpdates = {};
@@ -287,4 +310,153 @@ export function nativeSortCombatants(a, b) {
 
     // Otherwise sort based on combatant name
     return a.name.localeCompare(b.name, game.i18n.lang);
+  }
+
+// Exact getTokenData at the same pinned revision.
+export async function nativeDurableTokenData({ actor, placement, tokenUpdates, actorUpdates }) {
+    if ( actor.prototypeToken.randomImg && !game.user.can("FILES_BROWSE") ) {
+      tokenUpdates.texture ??= {};
+      tokenUpdates.texture.src ??= actor.img;
+      ui.notifications.warn("DND5E.SUMMON.Warning.Wildcard", { localize: true });
+    }
+
+    delete placement.prototypeToken;
+    const tokenDocument = await actor.getTokenDocument(foundry.utils.mergeObject(placement, tokenUpdates));
+
+    // Linked summons require more explicit updates before token creation
+    if ( tokenDocument.actorLink ) {
+      const { effects, items, ...rest } = actorUpdates;
+      const { newEffects, oldEffects } = effects.reduce((acc, curr) => {
+        const target = tokenDocument.actor.effects.get(curr._id) ? "oldEffects" : "newEffects";
+        acc[target].push(curr);
+        return acc;
+      }, { newEffects: [], oldEffects: [] });
+
+      await foundry.documents.modifyBatch([
+        { action: "update", documentName: "Actor", updates: [{ _id: tokenDocument.actor.id, ...rest }] },
+        { action: "update", documentName: "Item", updates: items, parent: tokenDocument.actor },
+        { action: "update", documentName: "ActiveEffect", updates: oldEffects, parent: tokenDocument.actor },
+        { action: "create", documentName: "ActiveEffect", data: newEffects, parent: tokenDocument.actor, keepId: true }
+      ]);
+    }
+
+    // Unlinked summons can take actor delta directly
+    else {
+      tokenDocument.updateSource({ delta: actorUpdates });
+      if ( actor.prototypeToken.appendNumber ) TokenPlacement.adjustAppendedNumber(tokenDocument, placement);
+    }
+
+    return tokenDocument.toObject();
+  }
+
+// Exact placeSummons at the same pinned revision.
+export async function nativeDurablePlace(options) {
+    if ( !this.canSummon || !canvas.scene ) return;
+
+    const profile = this.profiles.find(p => p._id === options?.profile);
+    if ( !profile ) throw new Error(
+      _loc("DND5E.SUMMON.Warning.NoProfile", { profileId: options.profile, item: this.item.name })
+    );
+
+    /**
+     * A hook event that fires before summoning is performed.
+     * @function dnd5e.preSummon
+     * @memberof hookEvents
+     * @param {SummonActivity} activity         The activity that is performing the summoning.
+     * @param {SummonsProfile} profile          Profile used for summoning.
+     * @param {SummoningConfiguration} options  Additional summoning options.
+     * @returns {boolean}                       Explicitly return `false` to prevent summoning.
+     */
+    if ( Hooks.call("dnd5e.preSummon", this, profile, options) === false ) return;
+
+    // Fetch the actor that will be summoned
+    const summonUuid = this.summon.mode === "cr" ? await this.queryActor(profile) : profile.uuid;
+    if ( !summonUuid ) return;
+    const fetchOptions = {
+      folderId: this.actor?.folder?.id ?? null,
+      origin: { key: "flags.dnd5e.summon.origin", value: this.item?.uuid }
+    };
+    const actor = await dnd5e.documents.Actor5e.fetchExisting(summonUuid, fetchOptions);
+
+    // Verify ownership of actor
+    if ( !actor.isOwner ) {
+      throw new Error(_loc("DND5E.SUMMON.Warning.NoOwnership", { actor: actor.name }));
+    }
+
+    const tokensData = [];
+    try {
+      // Figure out where to place the summons
+      const placements = await this.getPlacement(actor.prototypeToken, profile, options);
+
+      for ( const placement of placements ) {
+        // Prepare changes to actor data, re-calculating per-token for potentially random values
+        const tokenUpdateData = {
+          actor,
+          placement,
+          ...(await this.getChanges(actor, profile, options))
+        };
+
+        /**
+         * A hook event that fires before a specific token is summoned. After placement has been determined but before
+         * the final token data is constructed.
+         * @function dnd5e.preSummonToken
+         * @memberof hookEvents
+         * @param {SummonActivity} activity         The activity that is performing the summoning.
+         * @param {SummonsProfile} profile          Profile used for summoning.
+         * @param {TokenUpdateData} config          Configuration for creating a modified token.
+         * @param {SummoningConfiguration} options  Additional summoning options.
+         * @returns {boolean}                       Explicitly return `false` to prevent this token from being summoned.
+         */
+        if ( Hooks.call("dnd5e.preSummonToken", this, profile, tokenUpdateData, options) === false ) continue;
+
+        // Create a token document and apply updates
+        const tokenData = await this.getTokenData(tokenUpdateData);
+
+        /**
+         * A hook event that fires after token creation data is prepared, but before summoning occurs.
+         * @function dnd5e.summonToken
+         * @memberof hookEvents
+         * @param {SummonActivity} activity         The activity that is performing the summoning.
+         * @param {SummonsProfile} profile          Profile used for summoning.
+         * @param {object} tokenData                Data for creating a token.
+         * @param {SummoningConfiguration} options  Additional summoning options.
+         */
+        Hooks.callAll("dnd5e.summonToken", this, profile, tokenData, options);
+
+        tokensData.push(tokenData);
+      }
+    } catch (err) {
+      Hooks.onError("SummonActivity#placeSummons", err, {
+        msg: _loc("DND5E.SUMMON.Warning.PlaceTokens"),
+        log: "error",
+        notify: "error"
+      });
+    }
+
+    const createdTokens = await canvas.scene.createEmbeddedDocuments("Token", tokensData, {
+      dnd5e: { autoRollNPCHP: "no" }
+    });
+
+    /**
+     * A hook event that fires when summoning is complete.
+     * @function dnd5e.postSummon
+     * @memberof hookEvents
+     * @param {SummonActivity} activity         The activity that is performing the summoning.
+     * @param {SummonsProfile} profile          Profile used for summoning.
+     * @param {Token5e[]} tokens                Tokens that have been created.
+     * @param {SummoningConfiguration} options  Additional summoning options.
+     */
+    Hooks.callAll("dnd5e.postSummon", this, profile, createdTokens, options);
+
+    return createdTokens;
+  }
+
+// Exact applyTempHP at the same pinned revision.
+export async function nativeDurableTempHP(amount=0) {
+    amount = parseInt(amount);
+    const hp = this.system.attributes.hp;
+
+    // Update the actor if the new amount is greater than the current
+    const tmp = parseInt(hp.temp) || 0;
+    return amount > tmp ? this.update({"system.attributes.hp.temp": amount}) : this;
   }

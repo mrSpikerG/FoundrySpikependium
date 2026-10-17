@@ -1,0 +1,120 @@
+{
+  "_id": "ZNsKreQlmvAaTJgG",
+  "name": "Воинственный фамильяр",
+  "type": "feat",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Повышение характеристики.</strong> Увеличьте одну характеристику на 1, максимум до 20.</p><p><strong>Боевой фамильяр.</strong> У вас всегда подготовлен @UUID[Compendium.spikependium.spells.Item.wsfxfnIRHHr9l0Gg]{Боевой фамильяр}. Один раз сотворите его без траты ячейки; применение восстанавливается после Долгого отдыха. Доступны и обычные ячейки подходящего уровня. Заклинательная характеристика совпадает с выбранной для Верного спутника черты Друг фамильяра.</p><p><strong>Перехват атаки.</strong> Когда по существу в пределах 5 футов от вашего фамильяра попадают броском атаки, фамильяр может Реакцией добавить ваш Бонус владения к Классу Защиты этого существа против этой атаки, потенциально обращая попадание в промах.</p><p><strong>Применение.</strong> Завершите штатный выбор характеристики в Друге фамильяра. При добавлении этой черты шаг повышения предлагает любую характеристику, а заклинание наследует характеристику Верного спутника. Бесплатное сотворение имеет отдельное применение за Долгий отдых; обычные ячейки сохраняются. Действие Перехват атаки появляется у связанного обычного или Боевого фамильяра, включая уже призванного. Используйте его с листа фамильяра до применения урона и выберите свежее попадание. Расходуется именно Реакция фамильяра. Бонус КБ сохраняется только для выбранного броска и цели, не меняя общий КБ; натуральная 20 остаётся попаданием. Возврат расхода отменяет бонус, но уже применённые последствия проверяет Мастер. Групповые броски, неоднозначные связи токенов, ручной урон, неизвестный результат публикации и одновременное управление с разных клиентов требуют проверки Мастера.</p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "31",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "warlike-familiar",
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "Друг фамильяра",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": [
+        "feat:familiar-friend"
+      ]
+    },
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "activities": {},
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "ugn3HhglcgT1qbGw",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Любая характеристика +1 (максимум 20)",
+        "hint": ""
+      },
+      {
+        "_id": "EW7FgxactOVCIytk",
+        "type": "ItemGrant",
+        "configuration": {
+          "items": [
+            {
+              "uuid": "Compendium.spikependium.spells.Item.wsfxfnIRHHr9l0Gg",
+              "optional": false
+            }
+          ],
+          "optional": false,
+          "spell": {
+            "ability": [
+              "int",
+              "wis",
+              "cha"
+            ],
+            "method": "spell",
+            "prepared": 2,
+            "uses": {
+              "max": "1",
+              "per": "lr",
+              "requireSlot": false
+            }
+          }
+        },
+        "value": {},
+        "level": 0,
+        "title": "Боевой фамильяр: характеристика Друга фамильяра",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "6UtLiolDyU9n3JG3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:au-warlike-familiar"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!ZNsKreQlmvAaTJgG"
+}

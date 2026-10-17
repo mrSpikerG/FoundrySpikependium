@@ -25,6 +25,7 @@ CONTENT.push("griffons-saddlebag-two-cloaks");
 CONTENT.push("griffons-saddlebag-two-belts");
 CONTENT.push("griffons-saddlebag-two-boots");
 CONTENT.push("arcana-unleashed-backgrounds");
+CONTENT.push("subclasses-arcana-unleashed");
 CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-spells-4");
 CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-lantern");
 CONTENT.splice(CONTENT.indexOf("journals"), 0, "arcana-unleashed-distance");
@@ -117,10 +118,13 @@ for ( const [key, { doc }] of REGISTRY ) {
   if ( !doc.pages ) continue;
   doc.pages.forEach(p => { if ( p.type === "spells" ) spellLists.push(`${uuidOf(key)}.JournalEntryPage.${p._id}`); });
 }
+const conjurerDurable = REGISTRY.get("subclass:au-conjurer:durable-summons").doc.effects.find(e => e.flags.spikependium?.conjurerDurableTemplate);
+assert.ok(conjurerDurable, "Нет шаблона Надёжных вызовов");
 fs.writeFileSync(path.join(ROOT, "scripts/generated.mjs"),
   `// Файл создаётся сборщиком (tools/build.mjs). Не редактируйте вручную.\n`
   + `export const SPELL_LISTS = ${JSON.stringify(spellLists, null, 2)};\n\n`
   + `export const WILD_TALENTS = ${JSON.stringify(wildTalents, null, 2)};\n\n`
+  + `export const CONJURER_DURABLE_EFFECT = ${JSON.stringify(conjurerDurable, null, 2)};\n\n`
   + `export const DRAGONMARK_TABLES = ${JSON.stringify(DRAGONMARK_TABLES, null, 2)};\n\n`
   + `export const BLUEPRINTS = ${JSON.stringify(BLUEPRINTS.map(p => ({ ...p, blueprintUuid: uuidOf(p.key), uuid: p.moduleKey ? uuidOf(p.moduleKey) : p.uuid })), null, 2)};\n\n`
   + `export const TINKER_ITEMS = ${JSON.stringify(ARTIFICER_CATALOG.mundane, null, 2)};\n\n`

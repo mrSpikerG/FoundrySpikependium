@@ -59,7 +59,7 @@ import { prepareSummon, canRefuel, hasReanimatedCompanion } from "./summons.mjs"
 import { prepareFeatSave, preparePactUsage, prepareGrantedSpell, prepareSpiritsGuidance, prepareAbilityAdvancement, prepareFormConsumption, toggleRadiantLight, conditionalState, applyTurnLimit, prepareUpdatedSpell, validateMutableForm, magusMaskSpellChanges } from "./mechanics.mjs";
 import { prepareChoiceDialog, applyChoiceConsumption, refundResearch } from "./choices.mjs";
 import { prepareAuraCondition, refreshSceneAuras, endEffectsOnDamage, endSceneEffects, applySelfEffects } from "./effects.mjs";
-import { prepareResourceUpdates, postHitDieDamage, limitRestoration, showResourceConsumption } from "./resources.mjs";
+import { prepareResourceUpdates, postHitDieDamage, limitRestoration, showResourceConsumption, grantedSpellUsageConfig } from "./resources.mjs";
 import { commandCompanion, canCompanionAct, updateCompanions, recordCompanionRest, recordCompanionDeath, canUseCompanionDeath, recordCompanionStatus, isLifeTransfer, prepareCompanionUsage, rollLifeHealing, canCreateCompanionMessage, prepareCompanionDamage, calculateCompanionDamage, rollCompanionStrike, prepareCompanionAbsorption, bigExplosionDamageConfig, validateExplosionBonus, recordWetHits, triggerWetResponses } from "./companions.mjs";
 import { prepareBlueprintAdvancement, finishForge, cleanForgeItems } from "./forge.mjs";
 import { addDrainedSlots, expireDrainedSlots, recordForgeConsumption, restoreForgeSelection, refundTinkering, recordSoulDamage, resetSoulDeath } from "./tinker.mjs";
@@ -336,14 +336,70 @@ import { recordArtistIllusion, prepareArtistDialog, captureArtistInspiration, re
 import { prepareAmityCheck, buildAmityCheck, finalizeAmityCheck } from "./arcana-amity.mjs";
 import { monsterEvasionDamage } from "./monster-evasion.mjs";
 import { prepareEvasionSave, buildEvasionSave, finalizeEvasionSave } from "./arcana-evasion.mjs";
-import { magicWarriorAdd } from "./arcana-warrior.mjs";
+import { magicWarriorAdd,magicWarriorCreate } from "./arcana-warrior.mjs";
+import {prepareElementalDialog,elementalRequiresDialog,canUseElemental,captureElemental,recordElementalConsumption,recordElementalUsage,elementalUse,guardElementalRoll,guardElementalDamage,refundElemental,elementalEffectChanges,elementalDeltaLabel} from "./elemental-familiar.mjs";
+import {prepareWarlikeAdvancement,warlikeGrantApply,prepareWarlikeSpell,syncWarlikeFamiliars,prepareWarlikeDialog,warlikeRequiresDialog,warlikeUse,captureWarlike,recordWarlikeConsumption,guardWarlikeDamage,refreshWarlike,refundWarlike,warlikeDeltaLabel} from "./warlike-familiar.mjs";
+import {trickItemRollData,prepareTrickDialog,trickRequiresDialog,captureTrick,recordTrickConsumption,syncTrickDash,trickUse,prepareSneakyAttack,finalizeSneakyAttack,cleanTrick,refundTrick,trickDeltaLabel,trickEndTurn} from "./spell-trickster.mjs";
+Hooks.on("dnd5e.preUseActivity",prepareTrickDialog);
+Hooks.on("dnd5e.preActivityConsumption",captureTrick);
+Hooks.on("dnd5e.postActivityConsumption",recordTrickConsumption);
+Hooks.on("dnd5e.preRollAttackV2",prepareSneakyAttack);
+Hooks.on("dnd5e.postAttackRollConfiguration",finalizeSneakyAttack);
+for(const hook of ["createChatMessage","updateChatMessage"])Hooks.on(hook,m=>syncTrickDash(m).catch(error=>console.error("Spikependium: Скрывающие заклинания",error)));
+for(const hook of ["ready","updateUser","updateActor","updateActorDelta","updateChatMessage","deleteChatMessage","updateCombat","deleteCombat","updateWorldTime","deleteItem","updateActiveEffect","deleteActiveEffect"])
+ Hooks.on(hook,()=>cleanTrick().catch(error=>console.error("Spikependium: Подлое сотворение",error)));
+Hooks.on("dnd5e.preAdvancementManagerRender",prepareWarlikeAdvancement);
+for(const hook of ["dnd5e.preUseActivity","dnd5e.preActivityConsumption"])Hooks.on(hook,prepareWarlikeSpell);
+Hooks.on("dnd5e.preUseActivity",prepareWarlikeDialog);
+Hooks.on("dnd5e.preActivityConsumption",captureWarlike);
+Hooks.on("dnd5e.postActivityConsumption",recordWarlikeConsumption);
+Hooks.on("dnd5e.preApplyDamage",guardWarlikeDamage);
+for(const hook of ["ready","canvasReady","updateUser","createToken","updateToken","deleteToken","createItem","updateItem","deleteItem","updateActor","updateActorDelta"])
+ Hooks.on(hook,()=>syncWarlikeFamiliars().catch(error=>console.error("Spikependium: Воинственный фамильяр",error)));
+for(const hook of ["createChatMessage","updateChatMessage","deleteChatMessage","updateActor","updateActorDelta"])
+ Hooks.on(hook,document=>refreshWarlike(document).catch(error=>console.error("Spikependium: Перехват атаки",error)));
+Hooks.on("dnd5e.preUseActivity",canUseElemental);
+Hooks.on("dnd5e.preUseActivity",prepareElementalDialog);
+Hooks.on("dnd5e.preActivityConsumption",captureElemental);
+Hooks.on("dnd5e.postActivityConsumption",recordElementalConsumption);
+Hooks.on("dnd5e.preCreateUsageMessage",recordElementalUsage);
+for(const hook of ["dnd5e.preRollDamageV2","dnd5e.preRollSavingThrowV2"])Hooks.on(hook,guardElementalRoll);
+Hooks.on("dnd5e.preApplyDamage",guardElementalDamage);
+import {prepareOtherworldlyDialog,canConsumeOtherworldly,recordOtherworldlyConsumption,recordOtherworldlyCast,canPlaceOtherworldly,prepareOtherworldlyToken,recordOtherworldlyPlaced,placeOtherworldlySummons,otherworldlyChatAction,otherworldlySuppression,cleanOtherworldlyFamiliars,otherworldlyDeltaLabel} from "./otherworldly-familiar.mjs";
+Hooks.on("dnd5e.preUseActivity",prepareOtherworldlyDialog);
+Hooks.on("dnd5e.preActivityConsumption",canConsumeOtherworldly);
+Hooks.on("dnd5e.postActivityConsumption",recordOtherworldlyConsumption);
+Hooks.on("dnd5e.preCreateUsageMessage",recordOtherworldlyCast);
+Hooks.on("dnd5e.preSummon",canPlaceOtherworldly);
+Hooks.on("dnd5e.preSummonToken",prepareOtherworldlyToken);
+Hooks.on("dnd5e.postSummon",(...args)=>recordOtherworldlyPlaced(...args).catch(error=>console.error("Spikependium: Потусторонний фамильяр",error)));
+for(const hook of ["ready","canvasReady","updateUser","updateActor","updateActorDelta","createToken","updateToken","deleteToken","createActiveEffect","updateActiveEffect","deleteActiveEffect"])
+ Hooks.on(hook,()=>cleanOtherworldlyFamiliars().catch(error=>console.error("Spikependium: Потусторонняя сила",error)));
+import {magicExpertDrop,magicExpertCreate,magicExpertContext,magicExpertCounts,magicExpertApply,canUseMagicExpertSpell} from "./magic-expert.mjs";
+import {schoolMasteryDrop,schoolMasteryCreate,schoolMasteryContext,schoolMasteryApply,schoolMasteryMaxLevel,prepareSchoolMastery,schoolMasteryUse,schoolMasteryCachedSpell} from "./school-mastery.mjs";
+import {conjurerSavantContext,conjurerSavantApply,conjurerSavantMax,prepareConjurerConcentration} from "./book-conjurer.mjs";
+import {recordDurableConsumption,recordDurableUsage,durableChatAction,placeDurableSummons,durableTokenData,durableCondition,recordDurableCalculation,recordDurableDamage,guardDurableHP,refreshDurable,durableDeltaLabel} from "./conjurer-durable.mjs";
+Hooks.on("dnd5e.postActivityConsumption",recordDurableConsumption);
+Hooks.on("dnd5e.preCreateUsageMessage",recordDurableUsage);
+Hooks.on("dnd5e.calculateDamage",recordDurableCalculation);
+Hooks.on("dnd5e.preApplyDamage",recordDurableDamage);
+Hooks.on("preUpdateActor",guardDurableHP);
+Hooks.on("preUpdateActorDelta",(delta,changes)=>guardDurableHP(delta.parent.actor,changes));
+for(const hook of ["ready","canvasReady","deleteActor","deleteToken"])Hooks.on(hook,document=>refreshDurable(document));
+Hooks.on("updateActor",refreshDurable);
+Hooks.on("updateActorDelta",(delta,changes)=>refreshDurable(delta.parent.actor,changes));
+Hooks.on("preUpdateActor",prepareConjurerConcentration);
+Hooks.on("preUpdateActorDelta",(delta,changes,options)=>prepareConjurerConcentration(delta.parent.actor,changes,options));
+for(const hook of ["dnd5e.preUseLinkedSpell","dnd5e.preUseActivity","dnd5e.preActivityConsumption"])Hooks.on(hook,prepareSchoolMastery);
+for(const hook of ["dnd5e.preUseActivity","dnd5e.preActivityConsumption"])Hooks.on(hook,canUseMagicExpertSpell);
 import { schoolASICanImprove, schoolASIApply, schoolGrantApply, syncSchoolSpells, canUseSchoolSpell, prepareSchoolConcentration, buildSchoolConcentration, finalizeSchoolConcentration, schoolError } from "./arcana-schools.mjs";
 import { prepareSchoolBenefitDialog, captureSchoolBenefit, recordSchoolBenefitConsumption, recordSchoolBenefitUsage,
   resumeSchoolBenefits, schoolSpeedSuppression, schoolSpeedChange, cleanSchoolSpeed, schoolBenefitDeltaLabel, schoolBenefitError } from "./school-cast-benefits.mjs";
 import { prepareBloomDialog, captureBloom, canUseBloom, recordBloomConsumption, recordBloomArea, registerBloomDice,
   bloomChatButtons, bloomChatAction, syncBloomHealing, recordBloomHealing, resumeBloomHealing, rollBloomHealing } from "./arcana-bloom.mjs";
 import { prepareBugbearGrab, canUseBugbearGrab } from "./bugbear-grab.mjs";
-import { cunningUse, recordCunningConsumption, cunningDeltaLabel } from "./cunning-actions.mjs";
+import { cunningUse, prepareCunningMessage, recordCunningConsumption, cunningDeltaLabel, refundCunning } from "./cunning-actions.mjs";
+Hooks.on("dnd5e.preUseActivity",prepareCunningMessage);
 import { recordDisengageUse, syncDisengage, cleanDisengage, resumeDisengage } from "./cunning-disengage.mjs";
 import { prepareHideDialog, canUseHide, recordHideUse, rollHide, canRollHide, syncHide, endHideOnAttack, endHideOnSpell, cleanHide, resumeHide } from "./cunning-hide.mjs";
 import { canUseOriginSurge, prepareOriginSurge, finalizeOriginSurge, consumeOriginSurge } from "./arcana-surge.mjs";
@@ -352,6 +408,23 @@ import {preparePainTarget,capturePainTarget,painMovement,preparePainD20,prepareP
   finalizePainD20,finalizePainSave,refreshPainActors} from "./power-word-pain.mjs";
 import {preparePainCasting,painConsume,recordPainCastingConsumption,recordPainCastingCard,resumePainFailures,painCastingDeltaLabel} from "./pain-casting.mjs";
 import {preserveModuleMessagePrivacy} from "./message-privacy.mjs";
+import {prepareSoothingHealing,finalizeSoothingHealing,soothingEvaluate,soothingDie} from "./soothing-beacon.mjs";
+for(const hook of ["dnd5e.preRollDamageV2","dnd5e.preRollHitDieV2"])Hooks.on(hook,prepareSoothingHealing);
+for(const hook of ["dnd5e.postDamageRollConfiguration","dnd5e.postHitDieRollConfiguration"])Hooks.on(hook,finalizeSoothingHealing);
+import { prepareSpellMight, captureSpellMight, recordSpellMightConsumption, recordSpellMightUsage, spellMightUse,
+  prepareSpellMightDamage, finalizeSpellMightDamage, recordSpellMightDamage, resumeSpellMightFalls, refundSpellMight,
+  spellMightDeltaLabel, spellMightError, spellMightCalculateDamage } from "./arcana-spell-might.mjs";
+Hooks.on("dnd5e.preUseActivity", prepareSpellMight);
+Hooks.on("dnd5e.preActivityConsumption", captureSpellMight);
+Hooks.on("dnd5e.postActivityConsumption", recordSpellMightConsumption);
+Hooks.on("dnd5e.preCreateUsageMessage", recordSpellMightUsage);
+Hooks.on("dnd5e.preRollDamageV2", prepareSpellMightDamage);
+Hooks.on("dnd5e.postDamageRollConfiguration", finalizeSpellMightDamage);
+Hooks.on("dnd5e.preApplyDamage", recordSpellMightDamage);
+for (const hook of ["updateActor", "updateActorDelta", "dnd5e.applyDamage", "createActiveEffect", "updateActiveEffect", "deleteActiveEffect"])
+  Hooks.on(hook, document => resumeSpellMightFalls(document).catch(spellMightError));
+for (const hook of ["ready", "canvasReady", "updateUser", "updateChatMessage"])
+  Hooks.on(hook, () => resumeSpellMightFalls().catch(spellMightError));
 import { steelMindChallenge, steelMindRoll, steelMindPrompt, guardSteelMindSave, syncSteelMind, steelMindError } from "./arcana-steel-mind.mjs";
 Hooks.on("dnd5e.preRollSavingThrowV2", guardSteelMindSave);
 for (const hook of ["createActiveEffect", "updateActiveEffect", "deleteActiveEffect", "updateActor", "updateActorDelta",
@@ -740,7 +813,7 @@ Hooks.on("dnd5e.preActivityConsumption", canUseHide);
 Hooks.on("dnd5e.preCreateUsageMessage", recordHideUse);
 Hooks.on("dnd5e.preRollAbilityCheckV2", canRollHide);
 Hooks.on("dnd5e.postUseActivity", (...args) => rollHide(...args).catch(monsterError));
-Hooks.on("dnd5e.postUseActivity", activity => endHideOnSpell(activity).catch(monsterError));
+Hooks.on("dnd5e.postUseActivity", (...args) => endHideOnSpell(...args).catch(monsterError));
 Hooks.on("dnd5e.rollAttack", (...args) => endHideOnAttack(...args).catch(monsterError));
 for (const hook of ["createChatMessage", "updateChatMessage"])
   Hooks.on(hook, message => syncHide(message).catch(monsterError));
@@ -765,6 +838,7 @@ for (const hook of ["createChatMessage", "updateChatMessage"])
   Hooks.on(hook, message => syncArtistInspiration(message).catch(artistError));
 Hooks.on("ready", () => resumeArtistInspirations().catch(artistError));
 Hooks.on("dnd5e.preUseActivity", prepareOriginGrantedAbility);
+Hooks.on("dnd5e.preUseLinkedSpell", prepareOriginGrantedAbility);
 Hooks.on("dnd5e.preActivityConsumption", prepareOriginGrantedAbility);
 Hooks.on("dnd5e.preActivityConsumption", canUseOriginSurge);
 Hooks.on("dnd5e.preUseActivity", canUseOriginSurge);
@@ -1238,8 +1312,13 @@ Hooks.on("dnd5e.preUseActivity", (activity, config, dialog, message) => {
 });
 
 Hooks.once("init", () => {
-  libWrapper.register(MODULE_ID, "dnd5e.applications.advancement.AdvancementManager.forItemAdd", magicWarriorAdd, "WRAPPER");
-  libWrapper.register(MODULE_ID, "dnd5e.documents.advancement.ItemGrantAdvancement.prototype.apply", schoolGrantApply, "WRAPPER");
+  libWrapper.register(MODULE_ID, "dnd5e.applications.advancement.AdvancementManager.forNewItem", magicWarriorAdd, "WRAPPER");
+  libWrapper.register(MODULE_ID, "dnd5e.applications.actor.BaseActorSheet.prototype._onDropSingleItem", function(wrapped,...args){return schoolMasteryDrop.call(this,(...next)=>magicExpertDrop.call(this,wrapped,...next),...args);}, "WRAPPER");
+  libWrapper.register(MODULE_ID, "dnd5e.documents.advancement.Advancement.prototype.createItemData", function(wrapped,...args){
+    return schoolMasteryCreate.call(this,(...school)=>magicExpertCreate.call(this,(...next)=>magicWarriorCreate.call(this,wrapped,...next),...school),...args);
+  }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "dnd5e.documents.advancement.ItemChoiceAdvancement.prototype.getCounts", magicExpertCounts, "WRAPPER");
+  libWrapper.register(MODULE_ID, "dnd5e.documents.advancement.ItemGrantAdvancement.prototype.apply", function(wrapped,...args){return warlikeGrantApply.call(this,(...next)=>schoolGrantApply.call(this,wrapped,...next),...args);}, "WRAPPER");
   libWrapper.register(MODULE_ID, "dnd5e.documents.advancement.AbilityScoreImprovementAdvancement.prototype.canImprove", schoolASICanImprove, "WRAPPER");
   libWrapper.register(MODULE_ID, "dnd5e.documents.advancement.AbilityScoreImprovementAdvancement.prototype.apply", schoolASIApply, "WRAPPER");
   registerArcanaMaterials();
@@ -1247,11 +1326,11 @@ Hooks.once("init", () => {
   registerMagusDice();
   registerAnimatedStrike();
   libWrapper.register(MODULE_ID, "CONFIG.Combat.documentClass.prototype._onEndTurn", function(wrapped, ...args) {
-    return soulPrisonEndTurn.call(this, (...prison) => soulTomeEndTurn.call(this, (...next) => abolethEndTurn.call(this, (...inner) => arcanaEndTurn.call(this, (...forward) => enthrallmentEndTurn.call(this, (...enthrall) => distanceEndTurn.call(this,(...distance)=>twoWeaponEndTurn.call(this, wrapped, ...distance),...enthrall), ...forward), ...inner), ...next), ...prison), ...args);
+    return trickEndTurn.call(this,(...trick)=>soulPrisonEndTurn.call(this, (...prison) => soulTomeEndTurn.call(this, (...next) => abolethEndTurn.call(this, (...inner) => arcanaEndTurn.call(this, (...forward) => enthrallmentEndTurn.call(this, (...enthrall) => distanceEndTurn.call(this,(...distance)=>twoWeaponEndTurn.call(this, wrapped, ...distance),...enthrall), ...forward), ...inner), ...next), ...prison),...trick), ...args);
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Combat.documentClass.prototype._sortCombatants", sortArcanaSpirits, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype._onChatAction", function(wrapped, ...args) {
-    return combatFamiliarChatAction.call(this, (...familiar) => alchemistSummonChatAction.call(this, (...alchemist) => animationChatAction.call(this, (...next) => arcanaSummonChatAction.call(this, wrapped, ...next), ...alchemist), ...familiar), ...args);
+    return durableChatAction.call(this,(...durable)=>otherworldlyChatAction.call(this, (...other)=>combatFamiliarChatAction.call(this, (...familiar) => alchemistSummonChatAction.call(this, (...alchemist) => animationChatAction.call(this, (...next) => arcanaSummonChatAction.call(this, wrapped, ...next), ...alchemist), ...familiar), ...other),...durable), ...args);
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype.getChanges", animatedWeaponChanges, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.attack.documentClass.prototype._usageChatButtons", escapeChatButtons, "WRAPPER");
@@ -1284,7 +1363,8 @@ Hooks.once("init", () => {
     return abolethWaterAction.call(this, (...next) => awakeningChatAction.call(this, wrapped, ...next), ...args);
   }, "WRAPPER");
   for (const type of Object.keys(CONFIG.DND5E.activityTypes)) {
-    libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype._requiresConfigurationDialog`, requireConduitCastingDialog, "WRAPPER");
+    if (type !== "summon") libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype._prepareUsageConfig`, grantedSpellUsageConfig, "WRAPPER");
+    libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype._requiresConfigurationDialog`, function(wrapped,...args){return trickRequiresDialog.call(this,(...trick)=>warlikeRequiresDialog.call(this,(...war)=>elementalRequiresDialog.call(this,(...next)=>requireConduitCastingDialog.call(this,wrapped,...next),...war),...trick),...args);}, "WRAPPER");
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.getUsageToken`, function(wrapped, ...args) {
       return vestigeAuraUsageToken.call(this, (...forward) => conduitUsageToken.call(this, wrapped, ...forward), ...args);
     }, "WRAPPER");
@@ -1294,8 +1374,8 @@ Hooks.once("init", () => {
       return painConsume.call(this,(...pain)=>arcanistConsume.call(this,(...lantern)=>lanternConsume.call(this,wrapped,...lantern),...pain),...args);
     }, "WRAPPER");
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.refund`, function(wrapped, ...args) {
-      return refundResearch.call(this, (...outer) => refundArcanaEscape.call(this,
-        (...next) => refundTinkering.call(this, (...lantern) => refundLantern.call(this, wrapped, ...lantern), ...next), ...outer), ...args);
+      return refundCunning.call(this,(...cunning)=>refundTrick.call(this,(...trick)=>refundWarlike.call(this,(...war)=>refundElemental.call(this,(...elemental)=>refundResearch.call(this, (...outer) => refundArcanaEscape.call(this,
+        (...next) => refundTinkering.call(this, (...lantern) => refundLantern.call(this, (...might) => refundSpellMight.call(this, wrapped, ...might), ...lantern), ...next), ...outer), ...elemental), ...war),...trick),...cunning), ...args);
     }, "WRAPPER");
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype._prepareConsumeResourceUsageConfig`, restoreForgeSelection, "WRAPPER");
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.getRollData`, storedActivityRollData, "WRAPPER");
@@ -1303,7 +1383,7 @@ Hooks.once("init", () => {
   }
   libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype._prepareSpellcasting", addDrainedSlots, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Actor.documentClass.prototype.calculateDamage", function(wrapped, ...args) {
-    return beltCalculateDamage.call(this, (...belt)=>alchemistBlastShieldDamage.call(this, (...bomb) => artifactCalculateDamage.call(this, (...artifact) => monsterEvasionDamage.call(this, (...next) => calculateCompanionDamage.call(this, wrapped, ...next), ...artifact), ...bomb), ...belt), ...args);
+    return spellMightCalculateDamage.call(this, (...might)=>beltCalculateDamage.call(this, (...belt)=>alchemistBlastShieldDamage.call(this, (...bomb) => artifactCalculateDamage.call(this, (...artifact) => monsterEvasionDamage.call(this, (...next) => calculateCompanionDamage.call(this, wrapped, ...next), ...artifact), ...bomb), ...belt), ...might), ...args);
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ChatMessage.dataModels.save.prototype.forceSuccess", function(wrapped, ...args) {
     return focusBladeSuccess.call(this, (...focus) => alchemistBlastShieldSuccess.call(this, wrapped, ...focus), ...args);
@@ -1337,8 +1417,10 @@ Hooks.once("init", () => {
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Dice.DamageRoll.build", finishConduitRoll, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Dice.DamageRoll.buildEvaluate", function(wrapped, ...args) {
-    return groundDamage.call(this, (...next) => consumeOriginSurge.call(this, (...forward) => medzoDamageEvaluate.call(this, wrapped, ...forward), ...next), ...args);
+    return soothingEvaluate.call(this, (...healing)=>groundDamage.call(this, (...next) => consumeOriginSurge.call(this, (...forward) => medzoDamageEvaluate.call(this, wrapped, ...forward), ...next), ...healing), ...args);
   }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Dice.BasicRoll.buildEvaluate", soothingEvaluate, "WRAPPER");
+  libWrapper.register(MODULE_ID, "foundry.dice.terms.Die.prototype.evaluate", soothingDie, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Dice.D20Roll.buildEvaluate", function(wrapped, ...args) {
     return consumeFamiliarHelp.call(this, (...familiar) => medzoAttackEvaluate.call(this, (...medzo) => shieldD20Evaluate.call(this, (...shield) => consumeMakingAttack.call(this, (...forward) => consumeFortitudeSave.call(this, wrapped, ...forward), ...shield), ...medzo), ...familiar), ...args);
   }, "WRAPPER");
@@ -1348,8 +1430,8 @@ Hooks.once("init", () => {
   for (const method of ["_onCreateDescendantDocuments", "_onDeleteDescendantDocuments"])
     libWrapper.register(MODULE_ID, `CONFIG.Actor.documentClass.prototype.${method}`, syncWaveBaseCondition, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ActiveEffect.documentClass.prototype.isSuppressed", function(wrapped, ...args) {
-    return schoolSpeedSuppression.call(this, (...school) => waveSuppression.call(this, (...wave) => bootsEffectSuppression.call(this, (...boots)=>cloakEffectSuppression.call(this, (...cloaks) => gauntletEffectSuppression.call(this, (...gloves) => focusEffectSuppression.call(this, (...focus) => arcanaSpellSuppression.call(this, (...outer) => hollowArmorSuppression.call(this,
-      (...forward) => makingSuppression.call(this, (...lantern) => lanternGuardSuppression.call(this, (...distance)=>distanceSuppression.call(this,(...dragon)=>dragonSuppression.call(this,(...duel)=>duelSuppression.call(this,wrapped,...duel),...dragon),...distance), ...lantern), ...forward), ...outer), ...focus), ...gloves), ...cloaks), ...boots), ...wave), ...school), ...args);
+    return otherworldlySuppression.call(this, (...other)=>schoolSpeedSuppression.call(this, (...school) => waveSuppression.call(this, (...wave) => bootsEffectSuppression.call(this, (...boots)=>cloakEffectSuppression.call(this, (...cloaks) => gauntletEffectSuppression.call(this, (...gloves) => focusEffectSuppression.call(this, (...focus) => arcanaSpellSuppression.call(this, (...outer) => hollowArmorSuppression.call(this,
+      (...forward) => makingSuppression.call(this, (...lantern) => lanternGuardSuppression.call(this, (...distance)=>distanceSuppression.call(this,(...dragon)=>dragonSuppression.call(this,(...duel)=>duelSuppression.call(this,wrapped,...duel),...dragon),...distance), ...lantern), ...forward), ...outer), ...focus), ...gloves), ...cloaks), ...boots), ...wave), ...school), ...other), ...args);
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ActiveEffect.documentClass.applyChange", function(wrapped,...args){
     return schoolSpeedChange.call(this, (...school) => bootsEffectChange.call(this,(...boots)=>cloakEffectChange.call(this,(...cloak)=>anatomyStrideChange.call(this,(...next)=>makingEffectChange.call(this,(...distance)=>distanceSpeedChange.call(this,wrapped,...distance),...next),...cloak),...boots),...school), ...args);
@@ -1370,8 +1452,8 @@ Hooks.once("init", () => {
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ChatMessage.documentClass.prototype.getAssociatedItem", restoreWhispersItem, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.Item.documentClass.prototype._preUpdate", preserveStoredCache, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.Item.documentClass.prototype.getRollData", storedItemRollData, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.cast.documentClass.prototype.getCachedSpellData", function(wrapped,...args){return bootsCachedSpell.call(this,(...boots)=>cloakCachedSpell.call(this,(...cloaks)=>gauntletCachedSpell.call(this,(...gloves)=>storedCachedSpell.call(this,wrapped,...gloves),...cloaks),...boots),...args);}, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.Item.documentClass.prototype.getRollData", function(wrapped,...args){return trickItemRollData.call(this,(...next)=>storedItemRollData.call(this,wrapped,...next),...args);}, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.cast.documentClass.prototype.getCachedSpellData", function(wrapped,...args){return schoolMasteryCachedSpell.call(this,(...school)=>bootsCachedSpell.call(this,(...boots)=>cloakCachedSpell.call(this,(...cloaks)=>gauntletCachedSpell.call(this,(...gloves)=>storedCachedSpell.call(this,wrapped,...gloves),...cloaks),...boots),...school),...args);}, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.cast.documentClass.prototype.getSpellChanges", function(wrapped, ...args) {
     return gauntletSpellChanges.call(this,(...gloves)=>focusSpellChanges.call(this, (...focus) => magusMaskSpellChanges.call(this, wrapped, ...focus), ...gloves), ...args);
   }, "WRAPPER");
@@ -1380,7 +1462,7 @@ Hooks.once("init", () => {
     return rollBloomHealing.call(this, (...bloom) => rollRavenousHealing.call(this, (...forward) => rollLifeHealing.call(this, (...lantern) => lanternRollDamage.call(this, wrapped, ...lantern), ...forward), ...bloom), ...args);
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.save.documentClass.prototype.getDamageConfig", bigExplosionDamageConfig, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.save.documentClass.prototype.getAppliedEffectChanges", thinEffectChanges, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.save.documentClass.prototype.getAppliedEffectChanges", function(wrapped,...args){return elementalEffectChanges.call(this,(...next)=>thinEffectChanges.call(this,wrapped,...next),...args);}, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.attack.documentClass.prototype.rollAttack", function(wrapped, config, ...args) {
     return thwackCounterAttack.call(this, (...parry) => staffFollowupAttack.call(this, (...followup) => staffAttackRoll.call(this, (...staffArgs) => twoWeaponAttack.call(this, (...twoArgs) => griffonWeaponAttack.call(this, (...weaponArgs) => handlingRollAttack.call(this, (next, ...forward) => isHandlingAttack(this, next)
       ? wrapped(next, ...forward) : rollCompanionStrike.call(this, wrapped, next, ...forward), ...weaponArgs), ...twoArgs), ...staffArgs), ...followup), ...parry), config, ...args);
@@ -1397,13 +1479,17 @@ Hooks.once("init", () => {
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.AbilityScoreImprovement.documentClass.metadata.apps.flow.prototype._prepareContentContext", alchemistASIContext, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.AbilityScoreImprovement.documentClass.metadata.apps.flow.prototype._onDrop", alchemistASIDrop, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.AbilityScoreImprovement.documentClass.metadata.apps.flow.prototype._onRender", alchemistASIRender, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.ItemChoice.documentClass.metadata.apps.flow.prototype._prepareContentContext", alchemistReplacementContext, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.ItemChoice.documentClass.prototype.apply", alchemistReplaceDiscovery, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.ItemChoice.documentClass.metadata.apps.flow.prototype._prepareContentContext", function(wrapped,...args){
+    return conjurerSavantContext.call(this,(...book)=>schoolMasteryContext.call(this,(...school)=>magicExpertContext.call(this,(...next)=>alchemistReplacementContext.call(this,wrapped,...next),...school),...book),...args);
+  }, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.ItemChoice.documentClass.prototype.apply", function(wrapped,...args){
+    return conjurerSavantApply.call(this,(...book)=>schoolMasteryApply.call(this,(...school)=>magicExpertApply.call(this,(...next)=>alchemistReplaceDiscovery.call(this,wrapped,...next),...school),...book),...args);
+  }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.ItemChoice.documentClass.prototype._restoreReplacedItem", alchemistRestoreDiscovery, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.ItemChoice.documentClass.metadata.apps.flow.prototype._maxSpellSlotLevel", dynamoMaxSpellLevel, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.advancementTypes.ItemChoice.documentClass.metadata.apps.flow.prototype._maxSpellSlotLevel", function(wrapped,...args){return conjurerSavantMax.call(this,(...book)=>schoolMasteryMaxLevel.call(this,(...next)=>dynamoMaxSpellLevel.call(this,wrapped,...next),...book),...args);}, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.ActiveEffect.dataModels.base.prototype.evaluateCondition", function(wrapped, data) {
-    return animatedShieldCondition.call(this, next => prepareVestigeAuraCondition.call(this,
-      inner => prepareAuraCondition.call(this, wrapped, inner), next), data);
+    return durableCondition.call(this,(...durable)=>animatedShieldCondition.call(this, next => prepareVestigeAuraCondition.call(this,
+      inner => prepareAuraCondition.call(this, wrapped, inner), next),...durable), data);
   }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.utility.documentClass.prototype.getAppliedEffectChanges", function(wrapped, ...args) {
     return animatedShieldChanges.call(this, (...next) => extraTargetEffectChanges.call(this, (...forward) => vestigeCurseChanges.call(this,
@@ -1421,17 +1507,21 @@ Hooks.once("init", () => {
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype._prepareUsageScaling`, function(wrapped,...args){return arcanaStageScaling.call(this,(...dragon)=>dragonScaling.call(this,wrapped,...dragon),...args);}, "WRAPPER");
   for (const type of Object.keys(CONFIG.DND5E.activityTypes))
     libWrapper.register(MODULE_ID, `CONFIG.DND5E.activityTypes.${type}.documentClass.prototype.use`, function(wrapped, config, ...args) {
-      return waveUse.call(this, (waveConfig, ...waveArgs) => defensiveCharmUse.call(this, (defense, ...inner) => performerDodgeUse.call(this, (dodge, ...outer) => hollowActionUse.call(this, (next, ...forward) => reactionUse.call(this, (cunning, ...rest) => cunningUse.call(this, (boost,...tail)=>griffonUse.call(this,(next,...rest)=>resilientSaveUse.call(this,(...bomb)=>alchemistBombUse.call(this,(...craft)=>alchemistCreationUse.call(this,(...lantern)=>lanternUse.call(this,(...distance)=>distanceUse.call(this,(...dragon)=>dragonUse.call(this,(...duel)=>duelUse.call(this,wrapped,...duel),...dragon),...distance),...lantern),...craft),...bomb),next,...rest),boost,...tail), cunning, ...rest), next, ...forward), dodge, ...outer), defense, ...inner), waveConfig, ...waveArgs), config, ...args);
+      return schoolMasteryUse.call(this,(...school)=>trickUse.call(this,(...trick)=>warlikeUse.call(this,(...war)=>elementalUse.call(this,(...elemental)=>waveUse.call(this, (waveConfig, ...waveArgs) => defensiveCharmUse.call(this, (defense, ...inner) => performerDodgeUse.call(this, (dodge, ...outer) => hollowActionUse.call(this, (next, ...forward) => reactionUse.call(this, (cunning, ...rest) => cunningUse.call(this, (boost,...tail)=>griffonUse.call(this,(next,...rest)=>resilientSaveUse.call(this,(...bomb)=>alchemistBombUse.call(this,(...craft)=>alchemistCreationUse.call(this,(...lantern)=>lanternUse.call(this,(...distance)=>distanceUse.call(this,(...dragon)=>dragonUse.call(this,(...duel)=>duelUse.call(this,(...might)=>spellMightUse.call(this,wrapped,...might),...duel),...dragon),...distance),...lantern),...craft),...bomb),next,...rest),boost,...tail), cunning, ...rest), next, ...forward), dodge, ...outer), defense, ...inner), waveConfig, ...waveArgs), ...elemental),...war),...trick),...school), config, ...args);
     }, "WRAPPER");
   libWrapper.register(MODULE_ID, "dnd5e.dataModels.chatMessage.fields.IndividualDeltaField.processDelta", function(wrapped, ...args) {
-    return painCastingDeltaLabel.call(this, (...pain) => foreknowledgeDeltaLabel.call(this, (...prescience) => schoolBenefitDeltaLabel.call(this, (...school) => combatFamiliarDeltaLabel.call(this, (...familiar) => fateDeltaLabel.call(this, (...fate) => arcanaStageDeltaLabel.call(this,(...stage)=>originSaveBoostDeltaLabel.call(this,(...bonus)=>defenseDeltaLabel.call(this, (...defense) => relentlessDeltaLabel.call(this, (...outer) => hollowActionDeltaLabel.call(this,
-      (...forward) => reactionDeltaLabel.call(this, (...cunning) => cunningDeltaLabel.call(this, (...bomb) => alchemistBombDeltaLabel.call(this, (...focus) => focusCastingDeltaLabel.call(this, (...staff) => staffDeltaLabel.call(this, (...hit) => staffHitDeltaLabel.call(this, (...followup) => staffFollowupDeltaLabel.call(this, (...parry) => thwackDeltaLabel.call(this, (...stationery) => stationeryDeltaLabel.call(this, (...arcanist) => arcanistDeltaLabel.call(this, (...cloak) => cloakDeltaLabel.call(this, (...belt)=>beltDeltaLabel.call(this, (...boots)=>bootsDeltaLabel.call(this, (...home)=>homewardDeltaLabel.call(this, (...enervation) => enervationDeltaLabel.call(this, (...enthrall) => enthrallmentDeltaLabel.call(this, (...lantern) => lanternDeltaLabel.call(this, (...distance)=>distanceDeltaLabel.call(this,(...dragon)=>dragonDeltaLabel.call(this,(...duel)=>duelDeltaLabel.call(this,wrapped,...duel),...dragon),...distance), ...lantern), ...enthrall), ...enervation), ...home), ...boots), ...belt), ...cloak), ...arcanist), ...stationery), ...parry), ...followup), ...hit), ...staff), ...focus), ...bomb), ...cunning), ...forward), ...outer), ...defense), ...bonus), ...stage), ...fate), ...familiar), ...school), ...prescience), ...pain), ...args);
+    const result = painCastingDeltaLabel.call(this, (...pain) => foreknowledgeDeltaLabel.call(this, (...prescience) => schoolBenefitDeltaLabel.call(this, (...school) => combatFamiliarDeltaLabel.call(this, (...familiar) => fateDeltaLabel.call(this, (...fate) => arcanaStageDeltaLabel.call(this,(...stage)=>originSaveBoostDeltaLabel.call(this,(...bonus)=>defenseDeltaLabel.call(this, (...defense) => relentlessDeltaLabel.call(this, (...outer) => hollowActionDeltaLabel.call(this,
+      (...forward) => reactionDeltaLabel.call(this, (...cunning) => cunningDeltaLabel.call(this, (...bomb) => alchemistBombDeltaLabel.call(this, (...focus) => focusCastingDeltaLabel.call(this, (...staff) => staffDeltaLabel.call(this, (...hit) => staffHitDeltaLabel.call(this, (...followup) => staffFollowupDeltaLabel.call(this, (...parry) => thwackDeltaLabel.call(this, (...stationery) => stationeryDeltaLabel.call(this, (...arcanist) => arcanistDeltaLabel.call(this, (...cloak) => cloakDeltaLabel.call(this, (...belt)=>beltDeltaLabel.call(this, (...boots)=>bootsDeltaLabel.call(this, (...home)=>homewardDeltaLabel.call(this, (...enervation) => enervationDeltaLabel.call(this, (...enthrall) => enthrallmentDeltaLabel.call(this, (...lantern) => lanternDeltaLabel.call(this, (...distance)=>distanceDeltaLabel.call(this,(...dragon)=>dragonDeltaLabel.call(this,(...duel)=>duelDeltaLabel.call(this,(...might)=>spellMightDeltaLabel.call(this,wrapped,...might),...duel),...dragon),...distance), ...lantern), ...enthrall), ...enervation), ...home), ...boots), ...belt), ...cloak), ...arcanist), ...stationery), ...parry), ...followup), ...hit), ...staff), ...focus), ...bomb), ...cunning), ...forward), ...outer), ...defense), ...bonus), ...stage), ...fate), ...familiar), ...school), ...prescience), ...pain), ...args);
+    return durableDeltaLabel.call(this,()=>trickDeltaLabel.call(this,()=>warlikeDeltaLabel.call(this,()=>elementalDeltaLabel.call(this,()=>otherworldlyDeltaLabel.call(this,()=>result,...args),...args),...args),...args),...args);
   }, "WRAPPER");
-  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype._prepareUsageConfig", prepareVestigeRestConfig, "WRAPPER");
+  libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype._prepareUsageConfig", function(wrapped,...args) {
+    return grantedSpellUsageConfig.call(this,(...next)=>prepareVestigeRestConfig.call(this,wrapped,...next),...args);
+  }, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype._finalizeMessageConfig", recordVestigeFormConfig, "WRAPPER");
   libWrapper.register(MODULE_ID, "CONFIG.DND5E.activityTypes.summon.documentClass.prototype.placeSummons", function(wrapped, ...args) {
-    return placeAlchemistSummons.call(this, (...next) => placeVestigeRestForm.call(this, wrapped, ...next), ...args);
+    return placeDurableSummons.call(this,(...durable)=>placeOtherworldlySummons.call(this,(...other)=>placeAlchemistSummons.call(this, (...next) => placeVestigeRestForm.call(this, wrapped, ...next), ...other),...durable), ...args);
   }, "WRAPPER");
+  libWrapper.register(MODULE_ID,"CONFIG.DND5E.activityTypes.summon.documentClass.prototype.getTokenData",durableTokenData,"WRAPPER");
   const cfg = CONFIG.DND5E;
 
   // Источники (книги) для поля «Источник» на листах предметов.

@@ -4,6 +4,7 @@ import { canUseArcanaSpell, recordArcanaCast, syncArcanaCast, syncArcanaRepeat, 
   guardIronExhaustion, arcanaEndTurn, resumeArcanaSpells, registerArcanaMaterials, consumeArcanaMaterial, arcanaSpellSuppression, canConsumeArcanaSpell } from "../scripts/arcana-spells.mjs";
 import { observeCatnap, prepareCatnapRest, finishCatnap, canUseArcanaShake, awakeningChatButtons, awakeningChatAction, finishArcanaShake } from "../scripts/arcana-awakening.mjs";
 import { arcanaStartTurn, resumeArcanaTicks, recordArcanaTickDamage } from "../scripts/arcana-periodic.mjs";
+import {prepareSpellMightDamage,finalizeSpellMightDamage,spellMightCalculateDamage,recordSpellMightDamage,resumeSpellMightFalls} from "../scripts/arcana-spell-might.mjs";
 import { endEffectsOnDamage } from "../scripts/effects.mjs";
 import {preparePainTarget,capturePainTarget,painMovement,preparePainD20,preparePainSave,
   finalizePainD20,finalizePainSave,refreshPainActors} from "../scripts/power-word-pain.mjs";
@@ -443,6 +444,7 @@ for (const kind of ["mesmerizing-mirrors", "confusing-terrain"]) {
 let tickRolls, failTick, duringTick;
 function poisonSetup() {
   const values = setup("putrid-burst"); values.origin.system.concentration = null; tickRolls = 0; failTick = false; duringTick = null;
+  Object.assign(values.combat,{uuid:`Combat.${values.combat.id}`,started:true,combatant:values.combatant});world.set(values.combat.uuid,values.combat);
   values.activity.item.system.activities.push({ type: "damage", consumption: { spellSlot: false },
     async rollDamage(config, dialog, message) {
       assert.deepEqual(config, { scaling: 0, isCritical: false }); assert.equal(dialog.configure, false); tickRolls++;
@@ -487,8 +489,15 @@ function poisonSetup() {
   await syncArcanaCast(save()); failTick = true; const log = console.error; console.error = () => {};
   try { await arcanaStartTurn.call(combat, async () => {}, combatant); } finally { console.error = log; }
   assert.equal(target.effects[0].flags.spikependium.arcanaTickRequest.pending, true);
-  failTick = false; await resumeArcanaTicks(); assert.equal(tickRolls, 2); assert.equal(target.system.attributes.hp.value, 32);
-  await resumeArcanaTicks(); assert.equal(tickRolls, 2);
+  failTick = false; await resumeArcanaTicks(); assert.equal(tickRolls, 1); assert.equal(target.system.attributes.hp.value, 40);
+  assert.equal(target.effects[0].flags.spikependium.arcanaTickRequest.warned,true,"an unknown roll result is not rolled again");
+  await resumeArcanaTicks(); assert.equal(tickRolls, 1);
+}
+{
+  const { target, save, combat, combatant }=poisonSetup();await syncArcanaCast(save());failTick=true;
+  const log=console.error;console.error=()=>{};try{await arcanaStartTurn.call(combat,async()=>{},combatant);}finally{console.error=log;}
+  combat.current.turn++;failTick=false;await resumeArcanaTicks();assert.equal(tickRolls,1);assert.equal(target.system.attributes.hp.value,40);
+  assert.equal(target.effects[0].flags.spikependium.arcanaTickRequest.manual,true,"past turns cannot receive delayed damage");
 }
 {
   const { target, save, combat, combatant, gm } = poisonSetup(); await syncArcanaCast(save());
@@ -496,6 +505,29 @@ function poisonSetup() {
   await arcanaStartTurn.call(combat, async () => {}, combatant); assert.equal(target.system.attributes.hp.value, 40);
   game.user = { id: "newGM", isGM: true, isActiveGM: true }; game.users.activeGM = game.user;
   await resumeArcanaTicks(); assert.equal(tickRolls, 1); assert.equal(target.system.attributes.hp.value, 32);
+}
+for(const minimum of [true,false]){
+  const {caster,target,activity,origin,save,combat,combatant}=poisonSetup();await syncArcanaCast(save());const event="M".repeat(16),feat={id:"boon",uuid:`${caster.uuid}.Item.boon`,actor:caster,flags:{spikependium:{key:"feat:au-boon-of-spell-might"}}};
+  caster.items.push(feat);caster.items.has=id=>caster.items.some(i=>i.id===id);world.set(feat.uuid,feat);
+  const r={event,caster:caster.uuid,item:activity.item.uuid,activity:activity.uuid,feat:feat.uuid,time:game.time.worldTime,slot:"spell4",level:4,minimum};
+  set(caster,`flags.spikependium.spellMight.${event}`,{data:[r],active:1});origin.flags.spikependium.spellMight=structuredClone(r);
+  origin.system.deltas={actor:[{keyPath:`flags.spikependium.spellMight.${event}.active`,delta:1},{keyPath:"system.spells.spell4.value",delta:-1}],item:{boon:[{keyPath:"system.uses.spent",delta:1}]}};
+  const old=Hooks.call,oldID=foundry.utils.randomID;foundry.utils.randomID=()=>String(++serial).padStart(16,"0");Hooks.call=(h,...args)=>{if(h==="dnd5e.preApplyDamage")recordSpellMightDamage(...args);return old(h,...args);};
+  target.calculateDamage=(d,o)=>spellMightCalculateDamage.call(target,(...args)=>nativeCalculateDamage.call(target,...args),d,o);
+  const tick=activity.item.system.activities.find(a=>a.type==="damage");Object.assign(tick,{actor:caster,item:activity.item,uuid:`${activity.item.uuid}.Activity.tick`});
+  tick.rollDamage=async(config,dialog,message)=>{const cfg={...config,subject:tick},roll=new Damage(0);roll._evaluated=false;roll.dice=[{number:2,faces:10,modifiers:[]}];roll.resetFormula=()=>{};
+    roll.toJSON=()=>({total:roll.total,options:roll.options,modifiers:structuredClone(roll.dice[0].modifiers)});prepareSpellMightDamage(cfg,dialog,message);assert.equal(dialog.configure,false);assert.equal(dialog.applicationClass,undefined);
+    finalizeSpellMightDamage([roll],cfg,dialog,message);assert.deepEqual(roll.dice[0].modifiers,minimum?["min3"]:[]);roll.total=minimum?6:2;roll._evaluated=true;
+    return [makeMessage({...message.data,type:"damage",author:game.user,rolls:[roll],actor:caster,activity:tick})];};
+  try{await arcanaStartTurn.call(combat,async()=>{},combatant);await resumeSpellMightFalls(target);assert.equal(target.system.attributes.hp.value,minimum?38:40);assert.equal(target.system.attributes.hp.temp,minimum?0:2);
+    assert.equal(target.effects.filter(e=>e.statuses.has("prone")).length,1);await resumeArcanaTicks();await resumeSpellMightFalls(target);assert.equal(target.effects.filter(e=>e.statuses.has("prone")).length,1);
+  }finally{Hooks.call=old;foundry.utils.randomID=oldID;}
+}
+{
+  const {target,save,combat,combatant,gm}=poisonSetup();await syncArcanaCast(save());let saved;
+  duringTick=card=>{saved=card;game.user={...gm,isActiveGM:false};};await arcanaStartTurn.call(combat,async()=>{},combatant);
+  game.user=gm;combat.current.turn++;saved.flags.spikependium.arcanaTick.turn=combat.current.turn;
+  await target.applyDamage([{type:"poison",value:12}],{originatingMessage:saved});assert.equal(target.system.attributes.hp.value,40,"edited card frame cannot replace the saved original turn");
 }
 {
   registerArcanaMaterials(); assert.equal(CONFIG.DND5E.activityConsumptionTypes.spikependiumMaterial.consume, consumeArcanaMaterial);

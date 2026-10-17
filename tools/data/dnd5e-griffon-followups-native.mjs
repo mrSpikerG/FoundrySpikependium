@@ -10,7 +10,23 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Source: foundryvtt/dnd5e 87e94dbd9f930135e0694cd7e7d49f210603cd2c.
 Exact method bodies; localization/formatting and host services are supplied by tests.
 */
-// Exact CastActivity.use and BasicRoll.buildPost at the pinned commit. Host services supplied by tests.
+// Exact ForwardActivity.use, CastActivity.use and BasicRoll.buildPost at the pinned commit. Host services supplied by tests.
+export async function nativeMasteryForwardUse(usage={}, dialog={}, message={}) {
+    const usageConfig = foundry.utils.mergeObject({
+      cause: {
+        activity: this.relativeUUID
+      },
+      consume: {
+        resources: false,
+        spellSlot: false
+      }
+    }, usage);
+
+    const activity = this.item.system.activities.get(this.activity.id);
+    if ( !activity ) ui.notifications.error("DND5E.FORWARD.Warning.NoActivity", { localize: true });
+    return activity?.use(usageConfig, dialog, message);
+  }
+
 export async function nativeStaffCastUse(usage={}, dialog={}, message={}) {
     if ( !this.item.isEmbedded || this.item.pack ) return;
     if ( !this.item.isOwner ) {

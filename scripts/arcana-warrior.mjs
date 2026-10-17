@@ -7,3 +7,8 @@ export function magicWarriorAdd(wrapped, actor, itemData, ...args) {
     ...Object.fromEntries(Array.from({ length: 20 - level }, (_, i) => [String(level + i + 1), { count: 0, replacement: true }])) };
   return wrapped(actor, data, ...args);
 }
+
+export async function magicWarriorCreate(wrapped,...args) {
+  const data=await wrapped(...args);
+  return magicWarriorAdd((_actor,item)=>item,this.actor,data);
+}

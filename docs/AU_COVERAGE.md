@@ -1,26 +1,26 @@
 # Сверка «Магии необузданной»
 
-Проверено 2026-10-14 по [полной книге на Ruleholder](https://ruleholder.com/sourcebooks/au) при первоначальной сверке версии 1.84.0. Реестр обновлён 2026-10-17 для локальной версии 1.141.0. Прочитаны все девять страниц глав; заголовки повторной загрузки совпали с предыдущей сверкой. Состав документов сопоставлен с исходниками компендиумов.
+Проверено 2026-10-14 по [полной книге на Ruleholder](https://ruleholder.com/sourcebooks/au) при первоначальной сверке версии 1.84.0. Реестр обновлён 2026-10-17 для локальной версии 1.152.0. Прочитаны все девять страниц глав; заголовки повторной загрузки совпали с предыдущей сверкой. Состав документов сопоставлен с исходниками компендиумов.
 
 **Книга перенесена частично.** Наличие документа не означает полной автоматизации его правил. В модуле используется название «Неудержимая магия»; различия перевода названий учтены.
 
 | Раздел | Перенесено / всего |
 | --- | ---: |
-| Подклассы | 0/8 |
+| Подклассы | 1/8 |
 | Предыстории | 10/10 |
-| Черты | 21/29 |
+| Черты | 29/29 |
 | Заклинания | 33/33 |
 | Профили призываемых существ | 9/9 |
 | Магические предметы | 0/47 |
 | Семейства развивающихся предметов | 0/5 |
 | Бестиарий | 0/19 |
 
-Все восемь концепций подклассов представлены черновиками UA. Их окончательные книжные версии не подтверждены сравнением каждой особенности, поэтому в таблице они не засчитываются. Семейства предметов считаются по замыслам, а не по каждой редкости или варианту оружия.
+Все восемь концепций подклассов представлены черновиками UA. Отдельно перенесён книжный Призыватель по PDF, стр. 20–21; на сайте — Воплотитель. Остальные семь окончательных подклассов пока не засчитываются. Семейства предметов считаются по замыслам, а не по каждой редкости или варианту оружия.
 
 ## Подклассы
 
 - [Мистический лучник (Воин)](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey) — есть черновик UA; книжная версия не сверена.
-- [Воплотитель (Волшебник)](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey) — есть черновик UA; книжная версия не сверена.
+- [Воплотитель (Волшебник)](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey) — перенесён отдельный книжный «Призыватель», PDF, стр. 20–21. Надёжные вызовы автоматизированы для штатного Призыва; Расщеплённый призыв ещё не завершён.
 - [Мастер Превращения (Волшебник)](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey) — есть черновик UA; книжная версия не сверена.
 - [Некромант (Волшебник)](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey) — есть черновик UA; книжная версия не сверена.
 - [Очарователь (Волшебник)](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey) — есть черновик UA; книжная версия не сверена.
@@ -63,17 +63,17 @@
 - [Адепт школы Преграждения](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-pregrazhdeniya) — перенесено; в модуле: «Адепт школы Ограждения», PDF, стр. 30.
 - [Адепт школы Прорицания](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-proritsaniya) — перенесено; в модуле: «Адепт школы Прорицания», PDF, стр. 31.
 - [Адепт школы Эвокации](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-adept-shkoly-evokatsii) — перенесено; в модуле: «Адепт школы Воплощения», PDF, стр. 29.
-- [Воинственный фамильяр](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-voinstvennyy-familyar) — не перенесено.
-- [Знаток магии](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-znatok-magii) — не перенесено.
-- [Магическая уловка](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-magicheskaya-ulovka) — не перенесено.
-- [Потусторонний фамильяр](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-potustoronniy-familyar) — не перенесено.
-- [Стихийный фамильяр](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-stikhiynyy-familyar) — не перенесено.
+- [Воинственный фамильяр](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-voinstvennyy-familyar) — перенесено, PDF, стр. 31.
+- [Знаток магии](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-znatok-magii) — перенесено, PDF, стр. 31.
+- [Магическая уловка](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-magicheskaya-ulovka) — перенесено как «Хитроумный заклинатель», PDF, стр. 33.
+- [Потусторонний фамильяр](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-potustoronniy-familyar) — перенесено, PDF, стр. 31–32.
+- [Стихийный фамильяр](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-stikhiynyy-familyar) — перенесено, PDF, стр. 32.
 - [Стойкий к заклинаниям](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-stoykiy-k-zaklinaniyam) — перенесено.
-- [Успокаивающий фамильяр](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-uspokaivayushchiy-familyar) — не перенесено.
+- [Успокаивающий фамильяр](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#universalnye-cherty-uspokaivayushchiy-familyar) — перенесено как «Утешающий фамильяр», PDF, стр. 32–33.
 - [Мистический воин](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#boevoy-stil-misticheskiy-voin) — перенесено; в модуле: «Магический воин».
-- [Дар всплеска магической мощи](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#epicheskie-dary-dar-vspleska-magicheskoy-moshchi) — не перенесено.
+- [Дар всплеска магической мощи](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#epicheskie-dary-dar-vspleska-magicheskoy-moshchi) — перенесено как «Дар сокрушительной силы заклинаний», PDF, стр. 33: выбор характеристики до 30, расход при сотворении, минимум 3 на костях урона и штатное Сбит с ног; восстановление на инициативе и отдыхе. Несвязанные источники урона остаются ручными.
 - [Дар железного разума](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#epicheskie-dary-dar-zheleznogo-razuma) — перенесено как «Дар стального разума», PDF, стр. 33: выбор характеристики до 30, переключаемая защита Концентрации от урона и обычной Недееспособности; Окаменение, Бессознательность и Смерть завершают её штатно.
-- [Дар мастерства школы магии](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#epicheskie-dary-dar-masterstva-shkoly-magii) — не перенесено.
+- [Дар мастерства школы магии](https://ruleholder.com/sourcebooks/au/varianty-dlya-personazhey#epicheskie-dary-dar-masterstva-shkoly-magii) — перенесено как «Дар освоения школы магии», PDF, стр. 33.
 
 ## Заклинания
 

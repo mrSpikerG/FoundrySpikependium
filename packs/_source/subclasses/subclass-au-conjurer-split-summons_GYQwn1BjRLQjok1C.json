@@ -1,0 +1,412 @@
+{
+  "_id": "GYQwn1BjRLQjok1C",
+  "name": "Расщеплённый призыв",
+  "type": "feat",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Когда вы используете ячейку заклинания, чтобы сотворить заклинание школы Призыва, призывающее духа, чей блок статистики включён в описание заклинания, например Вызов аберрации, вы можете изменить заклинание так, чтобы вместо одного существа призвать двух. Оба существа имеют один и тот же тип, используют блок статистики и правила, указанные в заклинании, и появляются в разных незанятых пространствах по вашему выбору в пределах дистанции, но максимум Хитов и текущие Хиты призванных существ уменьшаются вдвое. Если вы теряете Концентрацию на заклинании, оба существа исчезают.</p><p>После использования этого умения для изменения заклинания подобным образом вы не можете делать это снова, пока не завершите Долгий отдых. Вы также можете восстановить использование этого умения, потратив ячейку заклинаний 5-го уровня (действие не требуется).</p><p>Действие на черте расходует применение; подходит только дух с блоком статистики в описании заклинания. Разместите второго духа вручную, уменьшите максимум и текущие Хиты каждого вдвое и свяжите обоих с той же Концентрацией. Автоматическое удвоение призыва и пересчёт Хитов пока не подключены. Восстановление требует именно ячейку 5-го уровня, как в PDF; для ячейки Магии договора есть отдельный вариант.</p><h3>Действия</h3><ul><li>[[/item activity=tYYH7gWlQglK6Eyv]]{Применить Расщеплённый призыв}</li><li>[[/item activity=eGZ6g3powKe3tCVX]]{Восстановить одно применение (ячейка 5-го уровня)}</li><li>[[/item activity=RGr2ApqsYsFUJL1U]]{Восстановить одно применение (Магия договора)}</li><li>[[/item activity=6fZecIOkbVYfCQzL]]{Восстановить одно применение (ячейка 5-го уровня) (Магия договора)}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "21",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "au-conjurer-split-summons",
+    "type": {
+      "value": "class",
+      "subtype": ""
+    },
+    "requirements": "Призыватель",
+    "prerequisites": {
+      "level": 14,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "1",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "tYYH7gWlQglK6Eyv": {
+        "_id": "tYYH7gWlQglK6Eyv",
+        "type": "utility",
+        "name": "Применить Расщеплённый призыв",
+        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Сотворение Призыва за ячейку с духом из описания заклинания",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        }
+      },
+      "eGZ6g3powKe3tCVX": {
+        "_id": "eGZ6g3powKe3tCVX",
+        "type": "utility",
+        "name": "Восстановить одно применение (ячейка 5-го уровня)",
+        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "spellSlots",
+              "value": "1",
+              "target": "5",
+              "scaling": {
+                "mode": "",
+                "formula": ""
+              }
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "conjurerRecharge": {
+              "kind": "split",
+              "pact": false
+            }
+          }
+        }
+      },
+      "RGr2ApqsYsFUJL1U": {
+        "_id": "RGr2ApqsYsFUJL1U",
+        "type": "utility",
+        "name": "Восстановить одно применение (Магия договора)",
+        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "attribute",
+              "value": "1",
+              "target": "spells.pact.value",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": true
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "conjurerRecharge": {
+              "kind": "split",
+              "pact": true
+            }
+          }
+        }
+      },
+      "6fZecIOkbVYfCQzL": {
+        "_id": "6fZecIOkbVYfCQzL",
+        "type": "forward",
+        "name": "Восстановить одно применение (ячейка 5-го уровня) (Магия договора)",
+        "sort": 200001,
+        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+        "activity": {
+          "id": "eGZ6g3powKe3tCVX"
+        },
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": false
+        },
+        "consumption": {
+          "spellSlot": false,
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "targets": [
+            {
+              "type": "attribute",
+              "target": "spells.pact.value",
+              "value": "1",
+              "scaling": {}
+            },
+            {
+              "type": "itemUses",
+              "value": "-1",
+              "target": "",
+              "scaling": {}
+            }
+          ]
+        },
+        "visibility": {
+          "identifier": "warlock",
+          "level": {
+            "min": 9,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "flags": {
+          "spikependium": {
+            "pact": {
+              "minimum": 5
+            }
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [],
+    "enchant": {}
+  },
+  "effects": [],
+  "folder": "njbHcOeMeCYPJqra",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "subclass:au-conjurer:split-summons"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!GYQwn1BjRLQjok1C"
+}

@@ -1,0 +1,505 @@
+{
+  "_id": "wkLJXJAnKaWIzau1",
+  "name": "Хитроумный заклинатель",
+  "type": "feat",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Повышение характеристики.</strong> Увеличьте Интеллект, Мудрость или Харизму на 1, максимум до 20.</p><p><strong>Скрывающие заклинания.</strong> После сотворения заклинания со временем сотворения 1 действие с использованием ячейки вы можете одним Бонусным действием совершить и Рывок, и Засаду. Число применений равно модификатору повышенной этой чертой характеристики; все применения восстанавливаются после Долгого отдыха.</p><p><strong>Подлое сотворение.</strong> Если вы Невидимы благодаря действию Засада, сотворение заклинания с Вербальным компонентом или совершение атаки заклинанием не заканчивает это состояние, если вы завершаете ход за Укрытием на три четверти или Полным укрытием.</p><p><strong>Применение.</strong> Завершите штатное повышение характеристики: от выбранной характеристики рассчитывается запас применений. После штатного сотворения за обычную ячейку или ячейку Магии договора используйте Скрывающие заклинания и выберите исходное сотворение того же хода. Подтвердите условия Засады; модуль расходует применение и Бонусное действие, выполняет штатную проверку Ловкости (Скрытность) СЛ 15 и при успехе создаёт Невидимость со СЛ обнаружения, равной результату. Рывок предоставляется и при провале Засады. Скорость не удваивается: штатная линейка измеряет путь, дополнительную дистанцию учитывайте как обычный Рывок.</p><p>Для сохранения Засады отметьте Подлое сотворение в окне заклинания или атаки заклинанием. В конце собственного хода подтвердите укрытие: при отсутствии подтверждения заканчивается только сохранённая Засада, а Невидимость от других источников остаётся. Постоянный эффект Подлое сотворение можно отключить. Поддерживаются Засада этой черты и штатный эффект hiding. Обычные атаки заканчивают Засаду. Громкий звук, обнаружение врагом, укрытие и пропущенные события разрешает Мастер; для незавершённого подтверждения есть отдельное действие. Сотворение вне своего хода и вне боя, и уже разрешённые броски при невыполнении обещанного укрытия требуют решения Мастера.</p><h3>Действия</h3><ul><li>[[/item activity=E1F77C0huW88Y22e]]{Скрывающие заклинания: Рывок и Засада}</li><li>[[/item activity=gbEIQk8rNggbpkKq]]{Засада действием}</li><li>[[/item activity=IPe0DLYiorLXTAKF]]{Подлое сотворение: подтвердить конец хода}</li></ul><p><em>Использование действия учитывает его расход ресурсов. Отдельный бросок урона или лечения только бросает кости. Временную форму можно снять, выбрав «Без формы»; остальные эффекты включаются и выключаются на вкладке эффектов.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "book": "AU",
+      "page": "33",
+      "custom": "",
+      "rules": "2024",
+      "revision": 1,
+      "license": ""
+    },
+    "identifier": "spell-trickster",
+    "type": {
+      "value": "feat",
+      "subtype": "general"
+    },
+    "requirements": "Сотворение заклинаний или Магия договора",
+    "prerequisites": {
+      "level": 4,
+      "repeatable": false,
+      "items": []
+    },
+    "uses": {
+      "max": "@spikependiumSpellTrickUses",
+      "spent": 0,
+      "recovery": [
+        {
+          "period": "lr",
+          "type": "recoverAll"
+        }
+      ]
+    },
+    "activities": {
+      "E1F77C0huW88Y22e": {
+        "_id": "E1F77C0huW88Y22e",
+        "type": "check",
+        "name": "Скрывающие заклинания: Рывок и Засада",
+        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+        "sort": 100000,
+        "activation": {
+          "type": "bonus",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": "",
+              "scaling": {}
+            }
+          ],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "XQ1Pp5je8eX3dVS0"
+          },
+          {
+            "_id": "hMD60lFQc1jEhJjP"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "check": {
+          "ability": "dex",
+          "associated": [
+            "ste"
+          ],
+          "bonus": "",
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "visible": true
+        },
+        "flags": {
+          "spikependium": {
+            "cunningHide": true,
+            "spellTrickEscape": true
+          }
+        }
+      },
+      "gbEIQk8rNggbpkKq": {
+        "_id": "gbEIQk8rNggbpkKq",
+        "type": "check",
+        "name": "Засада действием",
+        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+        "sort": 200000,
+        "activation": {
+          "type": "action",
+          "value": 1,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [
+          {
+            "_id": "XQ1Pp5je8eX3dVS0"
+          }
+        ],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "check": {
+          "ability": "dex",
+          "associated": [
+            "ste"
+          ],
+          "bonus": "",
+          "dc": {
+            "calculation": "",
+            "formula": "15"
+          },
+          "visible": true
+        },
+        "flags": {
+          "spikependium": {
+            "cunningHide": true
+          }
+        }
+      },
+      "IPe0DLYiorLXTAKF": {
+        "_id": "IPe0DLYiorLXTAKF",
+        "type": "utility",
+        "name": "Подлое сотворение: подтвердить конец хода",
+        "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+        "sort": 300000,
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "",
+          "override": true
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "",
+          "value": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "concentration": false
+        },
+        "effects": [],
+        "range": {
+          "value": "",
+          "units": "self",
+          "special": "",
+          "override": true
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft"
+          },
+          "affects": {
+            "count": "1",
+            "type": "self",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": true
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "visibility": {
+          "identifier": "",
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "flags": {
+          "spikependium": {
+            "spellTrickResolve": true
+          }
+        }
+      }
+    },
+    "properties": [],
+    "advancement": [
+      {
+        "_id": "Ouo1o1ZNBdREdDtD",
+        "type": "AbilityScoreImprovement",
+        "configuration": {
+          "points": 1,
+          "fixed": {
+            "str": 0,
+            "dex": 0,
+            "con": 0,
+            "int": 0,
+            "wis": 0,
+            "cha": 0
+          },
+          "cap": 1,
+          "locked": [],
+          "recommendation": null,
+          "max": 20
+        },
+        "value": {},
+        "level": 0,
+        "title": "Интеллект, Мудрость или Харизма +1 (максимум 20)",
+        "hint": ""
+      }
+    ],
+    "enchant": {}
+  },
+  "effects": [
+    {
+      "_id": "XQ1Pp5je8eX3dVS0",
+      "name": "Засада: Невидимость при скрытности",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "Сл обнаружения равна результату Скрытности. Громкий звук, успешное обнаружение и другие окончания Засады разрешает Мастер. Сотворение с Вербальным компонентом или атака обычно заканчивают эту Невидимость; Подлое сотворение позволяет сохранить её с проверкой укрытия в конце собственного хода.",
+      "origin": null,
+      "statuses": [
+        "invisible"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "hideTemplate": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!wkLJXJAnKaWIzau1.XQ1Pp5je8eX3dVS0"
+    },
+    {
+      "_id": "hMD60lFQc1jEhJjP",
+      "name": "Скрывающие заклинания: Рывок",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "До конца текущего хода Рывок даёт дополнительное перемещение, равное вашей Скорости после всех модификаторов. Саму Скорость он не изменяет. Дистанцию и стоимость пути измеряет штатная линейка; другие Рывки учитывайте вместе с этим.",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "spellTrickDashTemplate": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!wkLJXJAnKaWIzau1.hMD60lFQc1jEhJjP"
+    },
+    {
+      "_id": "dIBHP7ASPlqOYQP3",
+      "name": "Подлое сотворение",
+      "img": "icons/svg/upgrade.svg",
+      "type": "base",
+      "system": {
+        "changes": []
+      },
+      "disabled": false,
+      "transfer": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "origin": null,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "spikependium": {
+          "spellTrickSneaky": true
+        }
+      },
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "folder": null,
+      "_stats": {
+        "compendiumSource": null,
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "14.367",
+        "systemId": "dnd5e",
+        "systemVersion": "6.0.6",
+        "createdTime": 1760054400000,
+        "modifiedTime": 1760054400000,
+        "lastModifiedBy": null
+      },
+      "_key": "!items.effects!wkLJXJAnKaWIzau1.dIBHP7ASPlqOYQP3"
+    }
+  ],
+  "folder": "6UtLiolDyU9n3JG3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "spikependium": {
+      "key": "feat:au-spell-trickster"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "14.367",
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "createdTime": 1760054400000,
+    "modifiedTime": 1760054400000,
+    "lastModifiedBy": null
+  },
+  "_key": "!items!wkLJXJAnKaWIzau1"
+}

@@ -12,7 +12,7 @@ Exact method bodies; localization/formatting and host services are supplied by t
 */
 
 // Unchanged pinned DamageRoll class; host dice terms and services are injected.
-export function nativeAlchemistDamageRoll(BasicRoll, {DiceTerm, NumericTerm, OperatorTerm, ParentheticalTerm, RollTerm, Roll}) {
+export function nativeAlchemistDamageRoll(BasicRoll, {DiceTerm, NumericTerm, OperatorTerm, ParentheticalTerm, RollTerm, Roll, areKeysPressed=()=>false}) {
 const DamageRollConfigurationDialog = null;
 class DamageRoll extends BasicRoll {
   /**

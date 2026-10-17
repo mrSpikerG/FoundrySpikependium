@@ -69,6 +69,13 @@ function setup() {
   return { actor, activity, combat, combatant, another, config, message, apply, use, player, gm };
 }
 let s = setup(); assert.equal(reactionAvailable(s.actor), true);
+// Forward delegates to a real spell; its outer wrapper and linked resource pass must not take another reaction.
+const forwarded=setup(), forward={...forwarded.activity,type:"forward",id:"free"}, prepareForward=forwarded.activity._prepareUsageUpdates;
+forwarded.activity._prepareUsageUpdates=async c=>{const u=await prepareForward.call(forwarded.activity,c);return u&&prepareReactionUpdates(forward,c,u);};
+assert.ok(await reactionUse.call(forward,()=>forwarded.use(),forwarded.config));
+assert.equal(writes.length,1);assert.equal(forwarded.message.data.system.deltas.actor.filter(d=>d.keyPath.endsWith(".spent")).length,1);
+assert.equal(await reactionUse.call(forward,()=>forwarded.use(),forwarded.config),undefined);
+s=setup();
 await s.use(); assert.equal(s.actor.system.spells.spell1.value, 2); assert.equal(reactionAvailable(s.actor), false); assert.equal(s.actor.effects.length, 1);
 const id = s.actor.flags.spikependium.reactionId, effect = s.actor.effects.get(id);
 assert.equal(effect.duration.expiry, "targetStart"); assert.equal(effect.system.magical, false); assert.equal(effect.start.time, 100);
